@@ -1,0 +1,903 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+  "content_id": "e527096f-7d79-41a5-8e18-26b124ecf141",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "7.1 Constitution"
+              },
+              {
+                "id": "statutory-provisions",
+                "level": 4,
+                "text": "7.2 Statutory provisions"
+              },
+              {
+                "id": "caselaw",
+                "level": 4,
+                "text": "7.3 Indian caselaw"
+              }
+            ],
+            "id": "legal-context",
+            "level": 3,
+            "text": "7. Legal context"
+          },
+          {
+            "headers": [
+              {
+                "id": "global-equality",
+                "level": 4,
+                "text": "8.1 Global equality and inclusivity rankings"
+              },
+              {
+                "id": "marriage",
+                "level": 4,
+                "text": "8.2 Marriage, divorce and inheritance"
+              },
+              {
+                "id": "political-participation",
+                "level": 4,
+                "text": "8.3 Political participation"
+              },
+              {
+                "id": "economic-participation",
+                "level": 4,
+                "text": "8.4 Economic participation"
+              },
+              {
+                "id": "education",
+                "level": 4,
+                "text": "8.5 Education"
+              },
+              {
+                "id": "access-to-healthcare",
+                "level": 4,
+                "text": "8.6 Access to healthcare"
+              }
+            ],
+            "id": "social-economic-political",
+            "level": 3,
+            "text": "8. Social, economic and political status"
+          },
+          {
+            "headers": [
+              {
+                "id": "demography",
+                "level": 4,
+                "text": "9.1 Demography and geography"
+              },
+              {
+                "id": "cultural-context",
+                "level": 4,
+                "text": "9.2 Cultural context and societal attitudes"
+              },
+              {
+                "id": "freedom-of-movement",
+                "level": 4,
+                "text": "9.3 Freedom of movement"
+              },
+              {
+                "id": "single-women",
+                "level": 4,
+                "text": "9.4 Single women"
+              },
+              {
+                "id": "lgbti-women",
+                "level": 4,
+                "text": "9.5 LGBTI+ women"
+              }
+            ],
+            "id": "women-in-society",
+            "level": 3,
+            "text": "9. Position of women in society"
+          },
+          {
+            "headers": [
+              {
+                "id": "forms-of-violence-and-prevalence",
+                "level": 4,
+                "text": "10.1 Forms of violence and prevalence"
+              },
+              {
+                "id": "domestic-violence",
+                "level": 4,
+                "text": "10.2 Domestic and dowry-related violence"
+              },
+              {
+                "id": "rape-sexual-violence",
+                "level": 4,
+                "text": "10.3 Rape and sexual violence"
+              },
+              {
+                "id": "fgm",
+                "level": 4,
+                "text": "10.4 Female Genital Mutilation (FGM)"
+              },
+              {
+                "id": "forced-child-marriage",
+                "level": 4,
+                "text": "10.5 Forced and child marriage"
+              },
+              {
+                "id": "honour-crimes",
+                "level": 4,
+                "text": "10.6 'Honour' crimes and femicide"
+              },
+              {
+                "id": "violence-dalits-women",
+                "level": 4,
+                "text": "10.7 Violence against Dalits and women from tribal communities"
+              },
+              {
+                "id": "other-forms-of-violence-discrimination-and-harassment",
+                "level": 4,
+                "text": "10.8 Other forms of violence, discrimination and harassment"
+              }
+            ],
+            "id": "sexual-violence",
+            "level": 3,
+            "text": "10. Sexual and gender-based violence"
+          },
+          {
+            "headers": [
+              {
+                "id": "government-statements-attitudes-and-policies",
+                "level": 4,
+                "text": "11.1 Government statements, attitudes and policies"
+              },
+              {
+                "id": "reporting-violence",
+                "level": 4,
+                "text": "11.2 Reporting violence and police response"
+              },
+              {
+                "id": "crime-statistics",
+                "level": 4,
+                "text": "11.3 Crime statistics"
+              },
+              {
+                "id": "prosecution",
+                "level": 4,
+                "text": "11.4 Prosecution, appeals and legal redress"
+              },
+              {
+                "id": "state-support",
+                "level": 4,
+                "text": "11.5 State support"
+              },
+              {
+                "id": "social-welfare-schemes",
+                "level": 4,
+                "text": "11.6 Social welfare schemes"
+              }
+            ],
+            "id": "state-treatment",
+            "level": 3,
+            "text": "11. State treatment and attitudes"
+          },
+          {
+            "id": "non-state-assistance",
+            "level": 3,
+            "text": "12. Non-state assistance available to women"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "aks-foundation",
+                "level": 4,
+                "text": "Aks Foundation"
+              },
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "apni-law",
+                "level": 4,
+                "text": "APNI Law"
+              },
+              {
+                "id": "article-14",
+                "level": 4,
+                "text": "Article 14"
+              },
+              {
+                "id": "australian-broadcasting-network-abc",
+                "level": 4,
+                "text": "Australian Broadcasting Network (ABC)"
+              },
+              {
+                "id": "australian-department-of-foreign-affairs-and-trade-dfat",
+                "level": 4,
+                "text": "Australian Department of Foreign Affairs and Trade (DFAT)"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News"
+              },
+              {
+                "id": "bertelsmann-stiftung-transformation-index-bti",
+                "level": 4,
+                "text": "Bertelsmann Stiftung, Transformation Index (BTI)"
+              },
+              {
+                "id": "the-borgen-project",
+                "level": 4,
+                "text": "The Borgen Project"
+              },
+              {
+                "id": "carnegie-endowment-for-international-peace-ceip",
+                "level": 4,
+                "text": "Carnegie Endowment for International Peace (CEIP)"
+              },
+              {
+                "id": "cbs-news",
+                "level": 4,
+                "text": "CBS News"
+              },
+              {
+                "id": "centre-for-social-research-csr",
+                "level": 4,
+                "text": "Centre for Social Research (CSR)"
+              },
+              {
+                "id": "changing-transport",
+                "level": 4,
+                "text": "Changing Transport"
+              },
+              {
+                "id": "cia-world-factbook",
+                "level": 4,
+                "text": "CIA World Factbook"
+              },
+              {
+                "id": "civicus",
+                "level": 4,
+                "text": "CIVICUS"
+              },
+              {
+                "id": "drishti",
+                "level": 4,
+                "text": "Drishti"
+              },
+              {
+                "id": "etnow",
+                "level": 4,
+                "text": "ETNow"
+              },
+              {
+                "id": "etv-bharat",
+                "level": 4,
+                "text": "ETV Bharat"
+              },
+              {
+                "id": "fair-observer",
+                "level": 4,
+                "text": "Fair Observer"
+              },
+              {
+                "id": "feminism-in-india",
+                "level": 4,
+                "text": "Feminism in India"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House"
+              },
+              {
+                "id": "georgetown-institute-for-women-peace-and-security-and-the-peace-research-institute-oslo-giwps--prio",
+                "level": 4,
+                "text": "Georgetown Institute for Women, Peace and Security and the Peace Research Institute Oslo (GIWPS & PRIO)"
+              },
+              {
+                "id": "girls-not-brides",
+                "level": 4,
+                "text": "Girls Not Brides"
+              },
+              {
+                "id": "graceslist",
+                "level": 4,
+                "text": "GracesList"
+              },
+              {
+                "id": "government-of-india-goi",
+                "level": 4,
+                "text": "Government of India (GoI)"
+              },
+              {
+                "id": "guria",
+                "level": 4,
+                "text": "Guria"
+              },
+              {
+                "id": "highland-post",
+                "level": 4,
+                "text": "Highland Post"
+              },
+              {
+                "id": "human-rights-watch-hrw",
+                "level": 4,
+                "text": "Human Rights Watch (HRW)"
+              },
+              {
+                "id": "hindustan-times",
+                "level": 4,
+                "text": "Hindustan Times"
+              },
+              {
+                "id": "the-hindu",
+                "level": 4,
+                "text": "The Hindu"
+              },
+              {
+                "id": "ias-express",
+                "level": 4,
+                "text": "IAS Express"
+              },
+              {
+                "id": "indiaspend",
+                "level": 4,
+                "text": "IndiaSpend"
+              },
+              {
+                "id": "india-times",
+                "level": 4,
+                "text": "India Times"
+              },
+              {
+                "id": "india-today",
+                "level": 4,
+                "text": "India Today"
+              },
+              {
+                "id": "india-today-group",
+                "level": 4,
+                "text": "India Today Group"
+              },
+              {
+                "id": "insights-ias",
+                "level": 4,
+                "text": "Insights IAS"
+              },
+              {
+                "id": "ipc-laws",
+                "level": 4,
+                "text": "IPC Laws"
+              },
+              {
+                "id": "ispos",
+                "level": 4,
+                "text": "ISPOS"
+              },
+              {
+                "id": "international-journal-for-multidisciplinary-research-ijmfr",
+                "level": 4,
+                "text": "International Journal for Multidisciplinary Research (IJMFR)"
+              },
+              {
+                "id": "jagori",
+                "level": 4,
+                "text": "Jagori"
+              },
+              {
+                "id": "kharkwal-m-and-altafk",
+                "level": 4,
+                "text": "Kharkwal, M and Altaf,K"
+              },
+              {
+                "id": "kpmg",
+                "level": 4,
+                "text": "KPMG"
+              },
+              {
+                "id": "law-notes",
+                "level": 4,
+                "text": "LAW Notes"
+              },
+              {
+                "id": "lawful-legal",
+                "level": 4,
+                "text": "Lawful Legal"
+              },
+              {
+                "id": "leaders-in-law",
+                "level": 4,
+                "text": "Leaders in Law"
+              },
+              {
+                "id": "london-school-of-economics-lse",
+                "level": 4,
+                "text": "London School of Economics (LSE)"
+              },
+              {
+                "id": "mangat-s--a-kgill",
+                "level": 4,
+                "text": "Mangat S & A K.Gill"
+              },
+              {
+                "id": "migrant-women-press",
+                "level": 4,
+                "text": "Migrant Women Press"
+              },
+              {
+                "id": "ministry-for-women-and-child-development-mwcd",
+                "level": 4,
+                "text": "Ministry for Women and Child Development (MWCD)"
+              },
+              {
+                "id": "my-choices-foundation",
+                "level": 4,
+                "text": "My Choices Foundation"
+              },
+              {
+                "id": "nari-samata-manch",
+                "level": 4,
+                "text": "Nari Samata Manch"
+              },
+              {
+                "id": "national-crime-records-bureau-ncrb",
+                "level": 4,
+                "text": "National Crime Records Bureau (NCRB)"
+              },
+              {
+                "id": "national-family-health-survey-nfhs-5",
+                "level": 4,
+                "text": "National Family Health Survey (NFHS-5)"
+              },
+              {
+                "id": "ndtv",
+                "level": 4,
+                "text": "NDTV"
+              },
+              {
+                "id": "niti-aayog",
+                "level": 4,
+                "text": "NITI Aayog"
+              },
+              {
+                "id": "the-new-indian-express",
+                "level": 4,
+                "text": "The New Indian Express"
+              },
+              {
+                "id": "the-new-york-times",
+                "level": 4,
+                "text": "The New York Times"
+              },
+              {
+                "id": "observer-research-foundation-orf",
+                "level": 4,
+                "text": "Observer Research Foundation (ORF)"
+              },
+              {
+                "id": "the-orchid-project",
+                "level": 4,
+                "text": "The Orchid Project"
+              },
+              {
+                "id": "osac",
+                "level": 4,
+                "text": "OSAC"
+              },
+              {
+                "id": "pemachandran-p",
+                "level": 4,
+                "text": "Pemachandran P"
+              },
+              {
+                "id": "pew-research-centre",
+                "level": 4,
+                "text": "Pew Research Centre"
+              },
+              {
+                "id": "population-census",
+                "level": 4,
+                "text": "Population Census"
+              },
+              {
+                "id": "population-matters",
+                "level": 4,
+                "text": "Population Matters"
+              },
+              {
+                "id": "rekha",
+                "level": 4,
+                "text": "Rekha"
+              },
+              {
+                "id": "reuters",
+                "level": 4,
+                "text": "Reuters"
+              },
+              {
+                "id": "sarkari-yojana",
+                "level": 4,
+                "text": "Sarkari Yojana"
+              },
+              {
+                "id": "shetty-and-others",
+                "level": 4,
+                "text": "Shetty and others"
+              },
+              {
+                "id": "state-bank-india-sbi",
+                "level": 4,
+                "text": "State Bank India (SBI)"
+              },
+              {
+                "id": "stylist",
+                "level": 4,
+                "text": "Stylist"
+              },
+              {
+                "id": "supreme-court-observer-sco",
+                "level": 4,
+                "text": "Supreme Court Observer (SCO)"
+              },
+              {
+                "id": "swayam",
+                "level": 4,
+                "text": "Swayam"
+              },
+              {
+                "id": "the-times-network",
+                "level": 4,
+                "text": "The Times Network"
+              },
+              {
+                "id": "times-of-india",
+                "level": 4,
+                "text": "Times of India"
+              },
+              {
+                "id": "the-tribune",
+                "level": 4,
+                "text": "The Tribune"
+              },
+              {
+                "id": "un-human-rights-commission-unhrc",
+                "level": 4,
+                "text": "UN Human Rights Commission (UNHRC)"
+              },
+              {
+                "id": "un-india",
+                "level": 4,
+                "text": "UN India"
+              },
+              {
+                "id": "un-women",
+                "level": 4,
+                "text": "UN Women"
+              },
+              {
+                "id": "us-state-department-ussd",
+                "level": 4,
+                "text": "US State Department (USSD)"
+              },
+              {
+                "id": "voa-news",
+                "level": 4,
+                "text": "VoA News"
+              },
+              {
+                "id": "world-bank",
+                "level": 4,
+                "text": "World Bank"
+              },
+              {
+                "id": "world-economic-forum-wef",
+                "level": 4,
+                "text": "World Economic Forum (WEF)"
+              },
+              {
+                "id": "world-health-organisation-who",
+                "level": 4,
+                "text": "World Health Organisation (WHO)"
+              },
+              {
+                "id": "xecom",
+                "level": 4,
+                "text": "Xe.com"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "amnesty-international-1",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "anderson-s",
+                "level": 4,
+                "text": "Anderson, S."
+              },
+              {
+                "id": "kurian-oomen-c",
+                "level": 4,
+                "text": "Kurian, Oomen, C."
+              },
+              {
+                "id": "rosenberg-rebecca-and-jeffrey-edmeades",
+                "level": 4,
+                "text": "Rosenberg, Rebecca and Jeffrey Edmeades"
+              },
+              {
+                "id": "thorat-a-khalid-n-srivastav-n-hathi-p-spears-d-coffey-d",
+                "level": 4,
+                "text": "Thorat A, Khalid N, Srivastav N, Hathi P, Spears D, Coffey D."
+              },
+              {
+                "id": "times-of-india-1",
+                "level": 4,
+                "text": "Times of India"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-12-18T17:22:13.000+00:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-08-28T11:16:12+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+        "base_path": "/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+        "content_id": "e527096f-7d79-41a5-8e18-26b124ecf141",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T17:22:13Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: women fearing gender-based violence, India, August 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/india-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/india-country-policy-and-information-notes",
+        "base_path": "/government/publications/india-country-policy-and-information-notes",
+        "content_id": "fea42b12-186c-49b5-b6ac-c68ee50dd60f",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T17:22:13Z",
+        "schema_name": "publication",
+        "title": "India: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/india-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-12-18T17:22:13+00:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1766078533.631-10.13.21.29-3048",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: women fearing gender-based violence, India, August 2025 (accessible)",
+  "updated_at": "2026-04-29T15:31:28+01:00",
+  "withdrawn_notice": {}
+}

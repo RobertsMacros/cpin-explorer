@@ -1,0 +1,756 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-ghana-march-2025-accessible",
+  "content_id": "46f1df98-9f8a-4a69-a274-3798040036b8",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "exclusion",
+            "level": 3,
+            "text": "1.2 Exclusion"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "2. Protection"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "international-human-rights-instruments",
+                "level": 4,
+                "text": "3.1 International human rights instruments"
+              },
+              {
+                "id": "legal-system",
+                "level": 4,
+                "text": "3.2 Legal system"
+              },
+              {
+                "id": "constitution-and-criminal-law",
+                "level": 4,
+                "text": "3.3 Constitution and criminal law"
+              }
+            ],
+            "id": "legal-framework",
+            "level": 3,
+            "text": "3. Legal framework"
+          },
+          {
+            "headers": [
+              {
+                "id": "ghana-police-service",
+                "level": 4,
+                "text": "4.1 Ghana Police Service"
+              },
+              {
+                "id": "armed-forces",
+                "level": 4,
+                "text": "4.2 Armed Forces of Ghana"
+              },
+              {
+                "id": "national-intelligence-bureau",
+                "level": 4,
+                "text": "4.3 National Intelligence Bureau"
+              },
+              {
+                "id": "economic-and-organised-crime-office",
+                "level": 4,
+                "text": "4.4 Economic and Organised Crime Office"
+              }
+            ],
+            "id": "structure-security",
+            "level": 3,
+            "text": "4. Structure and roles of the security forces"
+          },
+          {
+            "headers": [
+              {
+                "id": "general-effectiveness",
+                "level": 4,
+                "text": "5.1 General effectiveness"
+              }
+            ],
+            "id": "capability-security-forces",
+            "level": 3,
+            "text": "5. Capability of the security forces"
+          },
+          {
+            "headers": [
+              {
+                "id": "operational-independence",
+                "level": 4,
+                "text": "5.3 Operational independence"
+              },
+              {
+                "id": "corruption-and-links-with-other-illegality",
+                "level": 4,
+                "text": "5.4 Corruption and links with other illegality"
+              },
+              {
+                "id": "accessibility-law-enforcement",
+                "level": 4,
+                "text": "5.5 Accessibility of law enforcement"
+              },
+              {
+                "id": "effectiveness-against-extremism-and-localised-violence-in-northern-ghana",
+                "level": 4,
+                "text": "5.6 Effectiveness against extremism and localised violence in northern Ghana"
+              },
+              {
+                "id": "gender-based-violence",
+                "level": 4,
+                "text": "5.7 Response to gender-based violence"
+              },
+              {
+                "id": "efforts-to-combat-organised-crime",
+                "level": 4,
+                "text": "5.8 Efforts to combat organised crime"
+              },
+              {
+                "id": "attacks-media-journalists",
+                "level": 4,
+                "text": "5.9 Response to attacks on media houses and journalists"
+              },
+              {
+                "id": "effectiveness-during-elections",
+                "level": 4,
+                "text": "5.10 Effectiveness during elections"
+              }
+            ],
+            "id": "resources",
+            "level": 3,
+            "text": "5.2 Resources"
+          },
+          {
+            "headers": [
+              {
+                "id": "freedom-assembly",
+                "level": 4,
+                "text": "6.1 Freedom of assembly"
+              },
+              {
+                "id": "freedom-of-expression",
+                "level": 4,
+                "text": "6.2 Freedom of expression"
+              },
+              {
+                "id": "arbitrary-arrest",
+                "level": 4,
+                "text": "6.3 Arbitrary arrest and detention without charge"
+              },
+              {
+                "id": "torture",
+                "level": 4,
+                "text": "6.4 Ill-treatment and torture"
+              },
+              {
+                "id": "deaths-custody",
+                "level": 4,
+                "text": "6.5 Deaths in custody"
+              },
+              {
+                "id": "enforced-disappearances",
+                "level": 4,
+                "text": "6.6 Enforced disappearances"
+              },
+              {
+                "id": "extrajudicial-killings",
+                "level": 4,
+                "text": "6.7 Extrajudicial killings"
+              }
+            ],
+            "id": "human-rights-violations",
+            "level": 3,
+            "text": "6. Human rights violations by the security forces"
+          },
+          {
+            "headers": [
+              {
+                "id": "organisation",
+                "level": 4,
+                "text": "7.1 Organisation"
+              },
+              {
+                "id": "effectiveness",
+                "level": 4,
+                "text": "7.2 Effectiveness"
+              },
+              {
+                "id": "independence",
+                "level": 4,
+                "text": "7.3 Independence"
+              },
+              {
+                "id": "Attorney-General",
+                "level": 4,
+                "text": "7.4 Independence of the Attorney-General"
+              },
+              {
+                "id": "appointment-of-judicial-officers",
+                "level": 4,
+                "text": "7.5 Appointment of judicial officers"
+              },
+              {
+                "id": "corruption",
+                "level": 4,
+                "text": "7.6 Corruption"
+              },
+              {
+                "id": "pre-trial-detention",
+                "level": 4,
+                "text": "7.7 Pre-trial detention"
+              },
+              {
+                "id": "trial-proceedings",
+                "level": 4,
+                "text": "7.8 Trial proceedings"
+              },
+              {
+                "id": "prison-population",
+                "level": 4,
+                "text": "7.9 Prison population"
+              },
+              {
+                "id": "death-penalty",
+                "level": 4,
+                "text": "7.10 Death penalty"
+              },
+              {
+                "id": "legal-aid",
+                "level": 4,
+                "text": "7.11 Lawyers, paralegals and legal aid"
+              },
+              {
+                "id": "witness-protection",
+                "level": 4,
+                "text": "7.12 Witness protection"
+              },
+              {
+                "id": "alternative-dispute",
+                "level": 4,
+                "text": "7.13 Alternative dispute resolution (ADR)"
+              },
+              {
+                "id": "informal-conflict-resolution",
+                "level": 4,
+                "text": "7.14 Informal conflict resolution"
+              },
+              {
+                "id": "accessibility",
+                "level": 4,
+                "text": "7.15  Accessibility"
+              }
+            ],
+            "id": "judicial-system",
+            "level": 3,
+            "text": "7. Judicial system"
+          },
+          {
+            "headers": [
+              {
+                "id": "police",
+                "level": 4,
+                "text": "8.1 Police"
+              },
+              {
+                "id": "armed-forces",
+                "level": 4,
+                "text": "8.2 Armed forces"
+              },
+              {
+                "id": "judge-lawyers",
+                "level": 4,
+                "text": "8.3 Judge and lawyers"
+              },
+              {
+                "id": "CHRAJ",
+                "level": 4,
+                "text": "8.4 Commission for Human Rights and Administrative Justice (CHRAJ)"
+              },
+              {
+                "id": "other-corruption-bodies",
+                "level": 4,
+                "text": "8.5 Other corruption bodies"
+              }
+            ],
+            "id": "oversight",
+            "level": 3,
+            "text": "8. Oversight and accountability"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "annex-a-accord-correspondence",
+        "level": 2,
+        "text": "Annex A: ACCORD correspondence"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "newscom",
+                "level": 4,
+                "text": "3News.com"
+              },
+              {
+                "id": "afrobarometer",
+                "level": 4,
+                "text": "Afrobarometer"
+              },
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News"
+              },
+              {
+                "id": "business--financial-times",
+                "level": 4,
+                "text": "Business & Financial Times"
+              },
+              {
+                "id": "centre-for-social-and-development-reform",
+                "level": 4,
+                "text": "Centre for Social and Development Reform,"
+              },
+              {
+                "id": "citi-newsroom",
+                "level": 4,
+                "text": "Citi Newsroom"
+              },
+              {
+                "id": "clingendael",
+                "level": 4,
+                "text": "Clingendael"
+              },
+              {
+                "id": "daily-mail-ghana",
+                "level": 4,
+                "text": "Daily Mail Ghana"
+              },
+              {
+                "id": "danish-institute-for-international-studies",
+                "level": 4,
+                "text": "Danish Institute for international Studies"
+              },
+              {
+                "id": "dennislaw-news",
+                "level": 4,
+                "text": "Dennislaw News"
+              },
+              {
+                "id": "enact",
+                "level": 4,
+                "text": "ENACT"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "georgetown-institute-for-women-peace-and-security",
+                    "level": 5,
+                    "text": "Georgetown Institute for Women, Peace and Security"
+                  }
+                ],
+                "id": "fund-for-peace",
+                "level": 4,
+                "text": "Fund for Peace"
+              },
+              {
+                "id": "german-federal-office-for-migration-and-refugees-bundesamt-fr-migration-und-flchtlinge-bamf",
+                "level": 4,
+                "text": "German Federal Office for Migration and Refugees (Bundesamt für Migration und Flüchtlinge, BAMF),"
+              },
+              {
+                "id": "geshub",
+                "level": 4,
+                "text": "GESHub"
+              },
+              {
+                "id": "ghana-legal-information-institute",
+                "level": 4,
+                "text": "Ghana Legal Information Institute"
+              },
+              {
+                "id": "ghana-news-agency",
+                "level": 4,
+                "text": "Ghana News Agency"
+              },
+              {
+                "id": "ghana-statistical-service",
+                "level": 4,
+                "text": "Ghana Statistical Service"
+              },
+              {
+                "id": "ghanaweb",
+                "level": 4,
+                "text": "GhanaWeb"
+              },
+              {
+                "id": "graphic-online",
+                "level": 4,
+                "text": "Graphic Online"
+              },
+              {
+                "id": "the-high-street-journal",
+                "level": 4,
+                "text": "The High Street Journal"
+              },
+              {
+                "id": "institute-for-security-studies",
+                "level": 4,
+                "text": "Institute for Security Studies"
+              },
+              {
+                "id": "the-law-platform",
+                "level": 4,
+                "text": "The Law Platform"
+              },
+              {
+                "id": "lawyer-monthly",
+                "level": 4,
+                "text": "Lawyer Monthly"
+              },
+              {
+                "id": "legal-resources-centre",
+                "level": 4,
+                "text": "Legal Resources Centre"
+              },
+              {
+                "id": "media-foundation-for-west-africa",
+                "level": 4,
+                "text": "Media Foundation for West Africa"
+              },
+              {
+                "id": "modern-ghana",
+                "level": 4,
+                "text": "Modern Ghana"
+              },
+              {
+                "id": "myjoyonline",
+                "level": 4,
+                "text": "MyJoyOnline"
+              },
+              {
+                "id": "news-ghana",
+                "level": 4,
+                "text": "News Ghana"
+              },
+              {
+                "id": "open-government-partnership",
+                "level": 4,
+                "text": "Open Government Partnership"
+              },
+              {
+                "id": "plateforme-de-protection-des-lanceurs-dalerte-africains-african-whistleblower-protection-platform",
+                "level": 4,
+                "text": "Plateforme de Protection des Lanceurs d'Alerte Africains (African whistleblower protection platform),"
+              },
+              {
+                "id": "republic-of-ghana-judiciary",
+                "level": 4,
+                "text": "Republic of Ghana Judiciary"
+              },
+              {
+                "id": "reuters",
+                "level": 4,
+                "text": "Reuters"
+              },
+              {
+                "id": "star-ghana-foundation",
+                "level": 4,
+                "text": "STAR Ghana Foundation"
+              },
+              {
+                "id": "tbd-marketing",
+                "level": 4,
+                "text": "TBD Marketing"
+              },
+              {
+                "id": "uk-office-for-national-statistics",
+                "level": 4,
+                "text": "UK Office for National Statistics"
+              },
+              {
+                "id": "us-central-intelligence-agency-the-world-factbook",
+                "level": 4,
+                "text": "US Central Intelligence Agency, The World Factbook"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "us-state-department-ussd",
+                    "level": 5,
+                    "text": "US State Department (USSD)"
+                  }
+                ],
+                "id": "us-overseas-security-advisory-council",
+                "level": 4,
+                "text": "US Overseas Security Advisory Council"
+              },
+              {
+                "id": "west-africa-centre-for-counter-extremism",
+                "level": 4,
+                "text": "West Africa Centre for Counter-Extremism"
+              },
+              {
+                "id": "wipo-lex",
+                "level": 4,
+                "text": "WIPO Lex"
+              },
+              {
+                "id": "world-justice-project",
+                "level": 4,
+                "text": "World Justice Project"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "yencomgh",
+                    "level": 5,
+                    "text": "YEN.com.gh"
+                  }
+                ],
+                "id": "world-prison-brief",
+                "level": 4,
+                "text": "World Prison Brief"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-03-31T15:15:05.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-03-31T15:15:06+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-ghana-march-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-ghana-march-2025-accessible",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-ghana-march-2025-accessible",
+        "content_id": "46f1df98-9f8a-4a69-a274-3798040036b8",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: actors of protection, Ghana, March 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-ghana-march-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes",
+        "content_id": "2c7b8d9f-3914-4cea-9a74-00d06f39bb5b",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "publication",
+        "title": "Ghana: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-03-31T15:15:05+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: actors of protection, Ghana, March 2025 (accessible)",
+  "updated_at": "2026-04-29T15:29:24+01:00",
+  "withdrawn_notice": {}
+}

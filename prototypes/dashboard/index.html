@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CPIN Extractor</title>
+<meta name="description" content="Home Office country policy and information notes, mirrored verbatim, with every edition on record.">
+<link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" href="../../assets/roberts-macros/image.png">
+<link rel="stylesheet" href="../shared/theme.css">
+<link rel="stylesheet" href="dashboard.css">
+<script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="CPIN Extractor home">
+    <img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="30" height="30">
+    <span class="brand-name">CPIN EXTRACTOR</span>
+  </a>
+  <label class="search">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
+    <input id="q" type="search" placeholder="Search countries and topics" autocomplete="off" spellcheck="false" aria-label="Search countries and note topics">
+    <kbd class="search-kbd">⌘K</kbd>
+  </label>
+  <a class="btn saved-link" href="../saved/index.html" title="Highlights you have saved">SAVED <span id="savedCount" class="numeral"></span></a>
+  <div class="sync" title="When the scraper last checked GOV.UK"><span class="live-dot" aria-hidden="true"></span><span id="sync">Loading…</span></div>
+  <button class="btn theme-btn" id="theme" type="button">AUTO</button>
+</header>
+
+<main class="layout">
+  <section class="stage" aria-label="Globe of countries with notes">
+    <div class="globe-wrap" id="globeWrap">
+      <canvas id="globe" aria-hidden="true"></canvas>
+      <div class="pins" id="pins"></div>
+    </div>
+    <p class="legend">
+      <span><i class="key key--recent"></i>Updated in the last 30 days</span>
+      <span><i class="key"></i>Other countries</span>
+      <span class="legend-hint">Drag to turn · Click a country</span>
+    </p>
+  </section>
+  <aside class="panel" id="panel" aria-live="polite"></aside>
+</main>
+
+<footer class="foot">
+  <span>Source: <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">Home Office, GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office; always check the current edition on GOV.UK.</span>
+  <span class="foot-rm">Roberts Macros: no macro too micro.</span>
+</footer>
+<noscript><p class="noscript">This page needs JavaScript for the globe. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,412 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/lebanon-country-policy-and-information-notes",
+  "content_id": "55acd427-3a3d-4736-88c6-58a0f9b17e14",
+  "description": "Guidance used by UK Visas and Immigration to make decisions in asylum and human rights applications.",
+  "details": {
+    "attachments": [
+      {
+        "attachment_type": "html",
+        "command_paper_number": "",
+        "hoc_paper_number": "",
+        "id": "9277901",
+        "isbn": "",
+        "title": "Country bulletin: security situation, Lebanon, May 2026",
+        "unique_reference": "LBN-001-05-26 ",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "/government/publications/lebanon-country-policy-and-information-notes/country-bulletin-security-situation-lebanon-may-2026"
+      },
+      {
+        "accessible": false,
+        "alternative_format_contact_email": "alternativeformats@homeoffice.gov.uk",
+        "assets": [
+          {
+            "asset_manager_id": "69fca0922a6137e93226b85c",
+            "filename": "LBN_Country_Bulletin_Security_situation.pdf"
+          }
+        ],
+        "attachment_type": "file",
+        "command_paper_number": "",
+        "content_type": "application/pdf",
+        "file_size": 856358,
+        "filename": "LBN_Country_Bulletin_Security_situation.pdf",
+        "hoc_paper_number": "",
+        "id": "9277900",
+        "isbn": "",
+        "number_of_pages": 43,
+        "title": "Country bulletin: security situation, Lebanon, May 2026",
+        "unique_reference": "LBN-001-05-26 ",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "https://assets.publishing.service.gov.uk/media/69fca0922a6137e93226b85c/LBN_Country_Bulletin_Security_situation.pdf"
+      },
+      {
+        "attachment_type": "html",
+        "command_paper_number": "",
+        "hoc_paper_number": "",
+        "id": "9277897",
+        "isbn": "",
+        "title": "Country policy and information note: Palestinians in Lebanon, Lebanon, March 2024",
+        "unique_reference": "",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024"
+      },
+      {
+        "accessible": true,
+        "alternative_format_contact_email": "alternativeformats@homeoffice.gov.uk",
+        "assets": [
+          {
+            "asset_manager_id": "65e8912162ff48001a87b2bc",
+            "filename": "LBN+CPIN+Palestinians.pdf"
+          }
+        ],
+        "attachment_type": "file",
+        "command_paper_number": "",
+        "content_type": "application/pdf",
+        "file_size": 814961,
+        "filename": "LBN+CPIN+Palestinians.pdf",
+        "hoc_paper_number": "",
+        "id": "9277898",
+        "isbn": "",
+        "number_of_pages": 86,
+        "title": "Country policy and information note: Palestinians in Lebanon, Lebanon, March 2024",
+        "unique_reference": "",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "https://assets.publishing.service.gov.uk/media/65e8912162ff48001a87b2bc/LBN+CPIN+Palestinians.pdf"
+      }
+    ],
+    "body": "<div class=\"govspeak\"><p>Country policy and information notes (previously known as country information and guidance reports) are used by UK Visas and Immigration officials to make decisions in asylum and human rights applications.</p>\n\n<p>The notes also give information on asylum seekers’ countries of origin.</p>\n\n</div>",
+    "change_history": [
+      {
+        "note": "Published the country bulletin: security situation, Lebanon, May 2026.",
+        "public_timestamp": "2026-05-08T10:14:25Z"
+      },
+      {
+        "note": "Updated country information and assessment.",
+        "public_timestamp": "2024-03-06T16:37:30Z"
+      },
+      {
+        "note": "First published.",
+        "public_timestamp": "2018-06-21T23:00:00Z"
+      }
+    ],
+    "document_type_label": "Guidance",
+    "emphasised_organisations": [
+      "04148522-b0c1-4137-b687-5f3c3bdd561a"
+    ],
+    "featured_attachments": [
+      "9277901",
+      "9277900",
+      "9277897",
+      "9277898"
+    ],
+    "first_public_at": "2018-06-22T00:00:00.000+01:00",
+    "political": false,
+    "tags": {
+      "browse_pages": []
+    }
+  },
+  "document_type": "guidance",
+  "first_published_at": "2018-06-22T00:00:00+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes",
+        "base_path": "/government/publications/lebanon-country-policy-and-information-notes",
+        "content_id": "55acd427-3a3d-4736-88c6-58a0f9b17e14",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-05-08T10:14:25Z",
+        "schema_name": "publication",
+        "title": "Lebanon: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "children": [
+      {
+        "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+        "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+        "base_path": "/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+        "content_id": "2ff9ea91-ab3f-4556-b2cf-1e0aa0df1059",
+        "document_type": "html_publication",
+        "links": {
+          "parent": [
+            {
+              "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "base_path": "/government/publications/lebanon-country-policy-and-information-notes",
+              "content_id": "55acd427-3a3d-4736-88c6-58a0f9b17e14",
+              "document_type": "guidance",
+              "links": {},
+              "locale": "en",
+              "public_updated_at": "2026-05-08T10:14:25Z",
+              "schema_name": "publication",
+              "title": "Lebanon: country policy and information notes",
+              "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "public_updated_at": "2026-05-08T10:14:25Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: Palestinians in Lebanon, Lebanon, March 2024",
+        "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+        "withdrawn": false
+      },
+      {
+        "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes/country-bulletin-security-situation-lebanon-may-2026",
+        "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes/country-bulletin-security-situation-lebanon-may-2026",
+        "base_path": "/government/publications/lebanon-country-policy-and-information-notes/country-bulletin-security-situation-lebanon-may-2026",
+        "content_id": "44fb089d-0817-4890-8b13-a329a30d58a5",
+        "document_type": "html_publication",
+        "links": {
+          "parent": [
+            {
+              "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "base_path": "/government/publications/lebanon-country-policy-and-information-notes",
+              "content_id": "55acd427-3a3d-4736-88c6-58a0f9b17e14",
+              "document_type": "guidance",
+              "links": {},
+              "locale": "en",
+              "public_updated_at": "2026-05-08T10:14:25Z",
+              "schema_name": "publication",
+              "title": "Lebanon: country policy and information notes",
+              "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "public_updated_at": "2026-05-08T10:14:25Z",
+        "schema_name": "html_publication",
+        "title": "Country bulletin: security situation, Lebanon, May 2026",
+        "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-bulletin-security-situation-lebanon-may-2026",
+        "withdrawn": false
+      }
+    ],
+    "document_collections": [
+      {
+        "api_path": "/api/content/government/collections/country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/collections/country-policy-and-information-notes",
+        "base_path": "/government/collections/country-policy-and-information-notes",
+        "content_id": "9dd8fe16-5560-4dce-a6c1-2e81e3b379a3",
+        "document_type": "document_collection",
+        "links": {
+          "documents": [
+            {
+              "api_path": "/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "api_url": "https://www.gov.uk/api/content/government/publications/lebanon-country-policy-and-information-notes",
+              "base_path": "/government/publications/lebanon-country-policy-and-information-notes",
+              "content_id": "55acd427-3a3d-4736-88c6-58a0f9b17e14",
+              "document_type": "guidance",
+              "links": {},
+              "locale": "en",
+              "public_updated_at": "2026-05-08T10:14:25Z",
+              "schema_name": "publication",
+              "title": "Lebanon: country policy and information notes",
+              "web_url": "https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "public_updated_at": "2026-06-05T14:56:08Z",
+        "schema_name": "document_collection",
+        "title": "Country policy and information notes",
+        "web_url": "https://www.gov.uk/government/collections/country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "original_primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "taxons": [
+      {
+        "api_path": "/api/content/entering-staying-uk/refugees-asylum-human-rights",
+        "api_url": "https://www.gov.uk/api/content/entering-staying-uk/refugees-asylum-human-rights",
+        "base_path": "/entering-staying-uk/refugees-asylum-human-rights",
+        "content_id": "08a8a69f-2825-4fe2-a4cf-c83458a5629e",
+        "description": "",
+        "details": {
+          "internal_name": "Refugee, asylum and human rights",
+          "notes_for_editors": "",
+          "visible_to_departmental_editors": false
+        },
+        "document_type": "taxon",
+        "links": {
+          "parent_taxons": [
+            {
+              "api_path": "/api/content/entering-staying-uk",
+              "api_url": "https://www.gov.uk/api/content/entering-staying-uk",
+              "base_path": "/entering-staying-uk",
+              "content_id": "ba3a9702-da22-487f-86c1-8334a730e559",
+              "details": {
+                "internal_name": "Entering and staying in the UK",
+                "notes_for_editors": "",
+                "visible_to_departmental_editors": true
+              },
+              "document_type": "taxon",
+              "links": {
+                "root_taxon": [
+                  {
+                    "api_path": "/api/content/",
+                    "api_url": "https://www.gov.uk/api/content/",
+                    "base_path": "/",
+                    "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                    "document_type": "homepage",
+                    "links": {},
+                    "locale": "en",
+                    "public_updated_at": "2026-02-18T13:00:23Z",
+                    "schema_name": "homepage",
+                    "title": "GOV.UK homepage",
+                    "web_url": "https://www.gov.uk/",
+                    "withdrawn": false
+                  }
+                ]
+              },
+              "locale": "en",
+              "phase": "live",
+              "public_updated_at": "2018-07-11T08:58:32Z",
+              "schema_name": "taxon",
+              "title": "Entering and staying in the UK",
+              "web_url": "https://www.gov.uk/entering-staying-uk",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "phase": "live",
+        "public_updated_at": "2018-07-11T08:58:33Z",
+        "schema_name": "taxon",
+        "title": "Refugees, asylum and human rights",
+        "web_url": "https://www.gov.uk/entering-staying-uk/refugees-asylum-human-rights",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-05-08T11:14:25+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1778235265.596-10.13.20.227-2662",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "publication",
+  "title": "Lebanon: country policy and information notes",
+  "updated_at": "2026-07-14T11:42:11+01:00",
+  "withdrawn_notice": {}
+}

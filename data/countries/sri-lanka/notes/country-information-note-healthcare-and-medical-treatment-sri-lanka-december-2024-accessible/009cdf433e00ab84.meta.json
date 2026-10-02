@@ -1,0 +1,680 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+  "content_id": "eba9e6b7-154f-4cfe-80e4-32b005e47ed6",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "health-indicators-regional-comparisons-and-long-term-progress",
+                "level": 4,
+                "text": "1.1             Health indicators, regional comparisons, and long-term progress"
+              },
+              {
+                "id": "challenges",
+                "level": 4,
+                "text": "1.2             Challenges"
+              },
+              {
+                "id": "financial_crisis",
+                "level": 4,
+                "text": "1.3             Financial crisis – impact and recovery"
+              }
+            ],
+            "id": "healthcare-context",
+            "level": 3,
+            "text": "1.                 Healthcare context"
+          },
+          {
+            "headers": [
+              {
+                "id": "governance",
+                "level": 4,
+                "text": "2.1             Governance"
+              },
+              {
+                "id": "structure",
+                "level": 4,
+                "text": "2.2             Structure"
+              },
+              {
+                "id": "affordability-of-public-healthcare",
+                "level": 4,
+                "text": "2.3             Affordability of public healthcare"
+              },
+              {
+                "id": "public_private",
+                "level": 4,
+                "text": "2.4             Public versus private sector healthcare"
+              },
+              {
+                "id": "western_trad",
+                "level": 4,
+                "text": "2.5             Western versus traditional medicine"
+              }
+            ],
+            "id": "healthcare-system",
+            "level": 3,
+            "text": "2.                 Healthcare system"
+          },
+          {
+            "headers": [
+              {
+                "id": "facilities",
+                "level": 4,
+                "text": "3.2             Facilities"
+              },
+              {
+                "id": "services",
+                "level": 4,
+                "text": "3.3             Services"
+              },
+              {
+                "id": "admissions-and-beds",
+                "level": 4,
+                "text": "3.4             Admissions and beds"
+              },
+              {
+                "id": "personnel",
+                "level": 4,
+                "text": "3.5             Personnel"
+              },
+              {
+                "id": "geographical-accessibility-and-variation",
+                "level": 4,
+                "text": "3.6             Geographical accessibility and variation"
+              }
+            ],
+            "id": "facilities_services",
+            "level": 3,
+            "text": "3.                 Facilities, services, and capacity"
+          },
+          {
+            "headers": [
+              {
+                "id": "governance-1",
+                "level": 4,
+                "text": "4.1             Governance"
+              },
+              {
+                "id": "supply",
+                "level": 4,
+                "text": "4.2             Supply"
+              },
+              {
+                "id": "affordability",
+                "level": 4,
+                "text": "4.3             Availability and affordability of medication"
+              }
+            ],
+            "id": "pharmaceutical-sector",
+            "level": 3,
+            "text": "4.                 Pharmaceutical sector"
+          },
+          {
+            "headers": [
+              {
+                "id": "governance-and-policy",
+                "level": 4,
+                "text": "5.1             Governance and policy"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "preliminary-care",
+                    "level": 5,
+                    "text": "Preliminary care"
+                  },
+                  {
+                    "id": "outpatient",
+                    "level": 5,
+                    "text": "Outpatient"
+                  },
+                  {
+                    "id": "inpatient",
+                    "level": 5,
+                    "text": "Inpatient"
+                  },
+                  {
+                    "id": "specialised-care",
+                    "level": 5,
+                    "text": "Specialised care"
+                  },
+                  {
+                    "id": "other",
+                    "level": 5,
+                    "text": "Other"
+                  }
+                ],
+                "id": "structure-facilities-and-services",
+                "level": 4,
+                "text": "5.2             Structure, facilities, and services"
+              },
+              {
+                "id": "capacity",
+                "level": 4,
+                "text": "5.3             Capacity"
+              },
+              {
+                "id": "personnel-1",
+                "level": 4,
+                "text": "5.4             Personnel"
+              },
+              {
+                "id": "suicide-and-self-harm",
+                "level": 4,
+                "text": "5.5             Suicide and self-harm"
+              },
+              {
+                "id": "drug-and-alcohol-rehabilitation",
+                "level": 4,
+                "text": "5.6             Drug and alcohol rehabilitation"
+              },
+              {
+                "id": "child-and-adolescent-mental-health",
+                "level": 4,
+                "text": "5.7             Child and adolescent mental health"
+              },
+              {
+                "id": "mental-health-ngos",
+                "level": 4,
+                "text": "5.8             Mental health NGOs"
+              }
+            ],
+            "id": "mental_healthcare",
+            "level": 3,
+            "text": "5.                 Mental healthcare"
+          },
+          {
+            "headers": [
+              {
+                "headers": [
+                  {
+                    "id": "western--apeksha-cancer-institute-maharagama",
+                    "level": 5,
+                    "text": "Western  Apeksha Cancer Institute Maharagama"
+                  },
+                  {
+                    "id": "southern--teaching-hospital-karapitya",
+                    "level": 5,
+                    "text": "Southern  Teaching Hospital Karapitya"
+                  },
+                  {
+                    "id": "eastern--teaching-hospital-batticaloa",
+                    "level": 5,
+                    "text": "Eastern  Teaching Hospital Batticaloa"
+                  },
+                  {
+                    "id": "northern--base-hospital-thellipalai",
+                    "level": 5,
+                    "text": "Northern  Base Hospital Thellipalai"
+                  },
+                  {
+                    "id": "north-central--teaching-hospital-anuradhapura",
+                    "level": 5,
+                    "text": "North Central  Teaching Hospital Anuradhapura"
+                  },
+                  {
+                    "id": "northwestern--provincial-general-hospital-kurunegala",
+                    "level": 5,
+                    "text": "Northwestern  Provincial General Hospital Kurunegala"
+                  },
+                  {
+                    "id": "central--teaching-hospital-kandy",
+                    "level": 5,
+                    "text": "Central  Teaching Hospital Kandy"
+                  },
+                  {
+                    "id": "sabaragamuwa--teaching-hospital-ratnapura",
+                    "level": 5,
+                    "text": "Sabaragamuwa  Teaching Hospital Ratnapura"
+                  },
+                  {
+                    "id": "uva--provincial-general-hospital-badulla",
+                    "level": 5,
+                    "text": "Uva  Provincial General Hospital Badulla"
+                  }
+                ],
+                "id": "Cancer_General",
+                "level": 4,
+                "text": "6.1             Cancer (General)"
+              },
+              {
+                "id": "cancer-children",
+                "level": 4,
+                "text": "6.2             Cancer (children)"
+              },
+              {
+                "id": "colorectal-cancer-crc",
+                "level": 4,
+                "text": "6.3             Colorectal cancer (CRC)"
+              },
+              {
+                "id": "chronic-kidney-disease-ckd",
+                "level": 4,
+                "text": "6.4             Chronic kidney disease (CKD)"
+              },
+              {
+                "id": "communicable-diseases",
+                "level": 4,
+                "text": "6.5             Communicable Diseases"
+              },
+              {
+                "id": "cardiovascular-diseases",
+                "level": 4,
+                "text": "6.6             Cardiovascular diseases"
+              },
+              {
+                "id": "dengue-fever",
+                "level": 4,
+                "text": "6.7             Dengue fever"
+              },
+              {
+                "id": "diabetes",
+                "level": 4,
+                "text": "6.8             Diabetes"
+              },
+              {
+                "id": "dental-disease-and-conditions",
+                "level": 4,
+                "text": "6.9             Dental disease and conditions"
+              },
+              {
+                "id": "ear-nose-and-throat-ent-audiology-and-speech-therapy",
+                "level": 4,
+                "text": "6.10          Ear, nose, and throat (ENT), audiology and speech therapy"
+              },
+              {
+                "id": "gastroenterological-conditions",
+                "level": 4,
+                "text": "6.11          Gastroenterological conditions"
+              },
+              {
+                "id": "geriatric-care",
+                "level": 4,
+                "text": "6.12          Geriatric care"
+              },
+              {
+                "id": "gynaecological-conditions",
+                "level": 4,
+                "text": "6.13          Gynaecological conditions"
+              },
+              {
+                "id": "hepatitis-liver-disease-and-transplants",
+                "level": 4,
+                "text": "6.14          Hepatitis, liver disease and transplants"
+              },
+              {
+                "id": "hivaids-and-sexually-transmitted-diseases-std",
+                "level": 4,
+                "text": "6.15          HIV/AIDS and sexually transmitted diseases (STD)"
+              },
+              {
+                "id": "musculoskeletal-conditions",
+                "level": 4,
+                "text": "6.16          Musculoskeletal conditions"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "western--national-hospital-of-sri-lanka-colombo",
+                    "level": 5,
+                    "text": "Western  National Hospital of Sri Lanka Colombo"
+                  },
+                  {
+                    "id": "southern--teaching-hospital-karapitiya",
+                    "level": 5,
+                    "text": "Southern  Teaching Hospital, Karapitiya"
+                  },
+                  {
+                    "id": "central--national-hospital---kandy",
+                    "level": 5,
+                    "text": "Central  National Hospital - Kandy"
+                  },
+                  {
+                    "id": "northwestern--teaching-hospital-kurunegala",
+                    "level": 5,
+                    "text": "Northwestern  Teaching Hospital Kurunegala"
+                  },
+                  {
+                    "id": "sabaragamuwa--teaching-hospital-kegalle",
+                    "level": 5,
+                    "text": "Sabaragamuwa  Teaching Hospital Kegalle"
+                  },
+                  {
+                    "id": "north-central--anuradhapura-teaching-hospital",
+                    "level": 5,
+                    "text": "North Central  Anuradhapura Teaching Hospital"
+                  },
+                  {
+                    "id": "eastern--district-general-hospital-ampara",
+                    "level": 5,
+                    "text": "Eastern  District General Hospital Ampara"
+                  },
+                  {
+                    "id": "northern--teaching-hospital-jaffna",
+                    "level": 5,
+                    "text": "Northern  Teaching Hospital Jaffna"
+                  },
+                  {
+                    "id": "uva--provincial-general-hospital--badulla",
+                    "level": 5,
+                    "text": "Uva  Provincial General Hospital – Badulla"
+                  }
+                ],
+                "id": "neurological-conditions",
+                "level": 4,
+                "text": "6.17          Neurological conditions"
+              },
+              {
+                "id": "paediatrics",
+                "level": 4,
+                "text": "6.18          Paediatrics"
+              },
+              {
+                "id": "Palliative_care",
+                "level": 4,
+                "text": "6.19          Palliative care"
+              },
+              {
+                "id": "reproductive-healthcare-and-obstetrics",
+                "level": 4,
+                "text": "6.20          Reproductive healthcare and obstetrics"
+              },
+              {
+                "id": "tuberculosis-tb",
+                "level": 4,
+                "text": "6.21          Tuberculosis (TB)"
+              }
+            ],
+            "id": "physical-health",
+            "level": 3,
+            "text": "6.                 Physical health"
+          }
+        ],
+        "id": "Country_information_2",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "Research_methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "Terms_of_Reference_1",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "alcohol-and-drug-information-centre-adic",
+                "level": 4,
+                "text": "Alcohol and Drug Information Centre (ADIC),"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty international,"
+              },
+              {
+                "id": "arambepola-c-jayakody-s",
+                "level": 4,
+                "text": "Arambepola, C; Jayakody, S,"
+              },
+              {
+                "id": "google-maps",
+                "level": 4,
+                "text": "Google Maps,"
+              },
+              {
+                "id": "government-of-sri-lanka",
+                "level": 4,
+                "text": "Government of Sri Lanka,"
+              },
+              {
+                "id": "international-federation-of-red-cross-ifrc",
+                "level": 4,
+                "text": "International Federation of Red Cross (IFRC),"
+              },
+              {
+                "id": "ministry-of-health-moh-sri-lanka",
+                "level": 4,
+                "text": "Ministry of Health (MoH) Sri Lanka,"
+              },
+              {
+                "id": "the-morning",
+                "level": 4,
+                "text": "The Morning,"
+              },
+              {
+                "id": "national-cancer-control-programme",
+                "level": 4,
+                "text": "National Cancer Control Programme,"
+              },
+              {
+                "id": "national-council-for-mental-health-ncmh",
+                "level": 4,
+                "text": "National Council for Mental Health (NCMH),"
+              },
+              {
+                "id": "national-medicine-regulatory-authority-nmra",
+                "level": 4,
+                "text": "National Medicine Regulatory Authority (NMRA),"
+              },
+              {
+                "id": "sri-jayewardenepura-general-hospital",
+                "level": 4,
+                "text": "Sri Jayewardenepura General Hospital,"
+              },
+              {
+                "id": "sri-lanka-medical-association-slma",
+                "level": 4,
+                "text": "Sri Lanka Medical Association (SLMA),"
+              },
+              {
+                "id": "state-pharmaceuticals-corporation-spc",
+                "level": 4,
+                "text": "State Pharmaceuticals Corporation (SPC),"
+              },
+              {
+                "id": "the-sunday-times",
+                "level": 4,
+                "text": "The Sunday Times,"
+              },
+              {
+                "id": "unicef",
+                "level": 4,
+                "text": "UNICEF,"
+              },
+              {
+                "id": "westminster-foundation-for-democracy-wfd",
+                "level": 4,
+                "text": "Westminster Foundation for Democracy (WFD),"
+              },
+              {
+                "id": "the-world-bank",
+                "level": 4,
+                "text": "The World Bank,"
+              },
+              {
+                "id": "world-health-organization-who",
+                "level": 4,
+                "text": "World Health Organization (WHO),"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-09-02T13:59:22.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2024-12-27T16:48:10+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/sri-lanka-country-policy-and-information-notes/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/sri-lanka-country-policy-and-information-notes/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+        "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+        "content_id": "eba9e6b7-154f-4cfe-80e4-32b005e47ed6",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-09-02T12:59:22Z",
+        "schema_name": "html_publication",
+        "title": "Country information note: healthcare and medical treatment, Sri Lanka, December 2024 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/sri-lanka-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/sri-lanka-country-policy-and-information-notes",
+        "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes",
+        "content_id": "2e7ccd7e-7294-43cf-9576-145e06dd9b3d",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-09-02T12:59:22Z",
+        "schema_name": "publication",
+        "title": "Sri Lanka: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-09-02T13:59:22+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country information note: healthcare and medical treatment, Sri Lanka, December 2024 (accessible)",
+  "updated_at": "2026-04-29T15:31:31+01:00",
+  "withdrawn_notice": {}
+}

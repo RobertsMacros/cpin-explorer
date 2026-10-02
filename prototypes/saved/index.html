@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Saved highlights · CPIN Extractor</title>
+<meta name="description" content="Passages saved from Home Office country notes, each with a citation, the sources it cites and your private notes.">
+<link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/png" href="../../assets/roberts-macros/image.png">
+<link rel="stylesheet" href="../shared/theme.css">
+<link rel="stylesheet" href="../reader/reader.css">
+<link rel="stylesheet" href="saved.css">
+<script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<script type="module" src="saved.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../dashboard/index.html" aria-label="CPIN Extractor home">
+    <img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="30" height="30">
+    <span class="brand-name">CPIN EXTRACTOR</span>
+  </a>
+  <span class="top-crumb">Saved highlights</span>
+  <button class="btn theme-btn" id="theme" type="button">AUTO</button>
+</header>
+
+<main class="sv" id="main">
+  <section class="sv-hero" id="hero" aria-label="Saved highlights"></section>
+  <div class="sv-tools" id="tools" hidden>
+    <div class="sv-tools-in">
+      <span class="eyebrow">Citation style</span>
+      <div class="seg" role="radiogroup" aria-label="Citation style" data-value="oscola" id="styleSeg"><span class="seg-thumb" aria-hidden="true"></span>
+        <button type="button" role="radio" data-style="oscola" aria-checked="true">OSCOLA</button>
+        <button type="button" role="radio" data-style="tribunal" aria-checked="false">Tribunal</button></div>
+      <span class="sv-tools-gap"></span>
+      <button type="button" class="btn btn--primary" id="copyAll">Copy all citations</button>
+      <button type="button" class="btn" id="dlMd">Download .md</button>
+      <button type="button" class="btn" id="dlJson">Download .json</button>
+    </div>
+  </div>
+  <div id="groups" aria-live="polite"></div>
+</main>
+
+<footer class="foot">
+  <span>Source: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
+  <span class="foot-rm">Roberts Macros: no macro too micro.</span>
+</footer>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<noscript><p class="noscript">This page needs JavaScript to show highlights saved in this browser.</p></noscript>
+</body>
+</html>

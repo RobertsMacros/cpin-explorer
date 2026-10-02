@@ -1,0 +1,491 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/libya-country-policy-and-information-notes/country-policy-and-information-note-security-situation-libya-april-2025-accessible",
+  "content_id": "3740049b-0361-4ba0-97a0-e4fc9fcb2e49",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "risk-of-indiscriminate-violence",
+            "level": 3,
+            "text": "3. Risk of indiscriminate violence"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.  Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-country-information",
+            "level": 3,
+            "text": "About country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "geographical-classifications",
+                "level": 4,
+                "text": "7.1 Geographical classifications"
+              },
+              {
+                "id": "maps",
+                "level": 4,
+                "text": "7.2 Maps"
+              },
+              {
+                "id": "demography",
+                "level": 4,
+                "text": "7.3 Demography"
+              }
+            ],
+            "id": "geography-and-demography",
+            "level": 3,
+            "text": "7. Geography and demography"
+          },
+          {
+            "id": "conflict-background",
+            "level": 3,
+            "text": "8. Conflict background and political context"
+          },
+          {
+            "headers": [
+              {
+                "headers": [
+                  {
+                    "id": "battles",
+                    "level": 5,
+                    "text": "‘Battles"
+                  },
+                  {
+                    "id": "protests",
+                    "level": 5,
+                    "text": "‘Protests"
+                  },
+                  {
+                    "id": "riots",
+                    "level": 5,
+                    "text": "‘Riots"
+                  },
+                  {
+                    "id": "explosionsremote-violence",
+                    "level": 5,
+                    "text": "‘Explosions/Remote violence"
+                  },
+                  {
+                    "id": "violence-against-civilians",
+                    "level": 5,
+                    "text": "‘Violence against civilians"
+                  },
+                  {
+                    "id": "strategic-developments",
+                    "level": 5,
+                    "text": "‘Strategic developments"
+                  }
+                ],
+                "id": "sources",
+                "level": 4,
+                "text": "9.1 Sources"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "the-haftars-and-libyas-east",
+                    "level": 5,
+                    "text": "‘The Haftars and Libya’s east"
+                  },
+                  {
+                    "id": "militias-and-sporadic-violence-in-libyas-west",
+                    "level": 5,
+                    "text": "‘Militias and sporadic violence in Libya’s west"
+                  }
+                ],
+                "id": "actors",
+                "level": 4,
+                "text": "9.2 Actors"
+              },
+              {
+                "id": "violence-by-region",
+                "level": 4,
+                "text": "9.3 Violence by region: December 2022 - December 2024"
+              },
+              {
+                "id": "a-western-region",
+                "level": 4,
+                "text": "a. Western Region"
+              },
+              {
+                "id": "b-eastern-region",
+                "level": 4,
+                "text": "b. Eastern region"
+              },
+              {
+                "id": "c-southern-region",
+                "level": 4,
+                "text": "c. Southern region"
+              },
+              {
+                "id": "statistics",
+                "level": 4,
+                "text": "9.4 Statistics"
+              },
+              {
+                "id": "a-overview",
+                "level": 4,
+                "text": "a. Overview"
+              },
+              {
+                "id": "libya-events-and-fatalities-1-january-2018-to-31-december-2024",
+                "level": 4,
+                "text": "Libya: events and fatalities 1 January 2018 to 31 December 2024"
+              },
+              {
+                "id": "western-region",
+                "level": 4,
+                "text": "b. Western region"
+              },
+              {
+                "id": "eastern-region",
+                "level": 4,
+                "text": "c. Eastern region"
+              },
+              {
+                "id": "southern-region",
+                "level": 4,
+                "text": "d. Southern region"
+              },
+              {
+                "id": "land-mines",
+                "level": 4,
+                "text": "9.5 Land mines and unexploded ordnance"
+              },
+              {
+                "id": "control-of-territory",
+                "level": 4,
+                "text": "9.6 Control of territory"
+              },
+              {
+                "id": "displacement",
+                "level": 4,
+                "text": "9.7 Displacement"
+              },
+              {
+                "id": "displacement-1",
+                "level": 4,
+                "text": "Displacement:"
+              },
+              {
+                "id": "solutions",
+                "level": 4,
+                "text": "Solutions"
+              }
+            ],
+            "id": "security-situation",
+            "level": 3,
+            "text": "9. Security situation"
+          },
+          {
+            "id": "human-rights-abuses",
+            "level": 3,
+            "text": "10. Human rights abuses"
+          },
+          {
+            "id": "law-and-order",
+            "level": 3,
+            "text": "11. Law and order"
+          },
+          {
+            "id": "freedom-of-movement",
+            "level": 3,
+            "text": "12. Freedom of movement"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "amnesty-international-ai",
+                "level": 4,
+                "text": "Amnesty International (AI)"
+              },
+              {
+                "id": "armed-conflict-location--event-data-project-acled",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data Project (ACLED)"
+              },
+              {
+                "id": "brookings-institution",
+                "level": 4,
+                "text": "Brookings Institution"
+              },
+              {
+                "id": "centre-for-preventive-action",
+                "level": 4,
+                "text": "Centre for Preventive Action"
+              },
+              {
+                "id": "enact-enhancing-africas-ability-to-counter-transnational-crime",
+                "level": 4,
+                "text": "ENACT (Enhancing Africa’s ability to Counter Transnational Crime),"
+              },
+              {
+                "id": "mine-action-review-mar",
+                "level": 4,
+                "text": "Mine Action Review (MAR)"
+              },
+              {
+                "id": "reach",
+                "level": 4,
+                "text": "REACH"
+              },
+              {
+                "id": "united-nations-support-mission-in-libya",
+                "level": 4,
+                "text": "United Nations Support Mission in Libya"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-04-22T16:03:41.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-04-22T16:03:43+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/libya-country-policy-and-information-notes/country-policy-and-information-note-security-situation-libya-april-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/libya-country-policy-and-information-notes/country-policy-and-information-note-security-situation-libya-april-2025-accessible",
+        "base_path": "/government/publications/libya-country-policy-and-information-notes/country-policy-and-information-note-security-situation-libya-april-2025-accessible",
+        "content_id": "3740049b-0361-4ba0-97a0-e4fc9fcb2e49",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-04-22T15:03:41Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: security situation, Libya, April 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/libya-country-policy-and-information-notes/country-policy-and-information-note-security-situation-libya-april-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/libya-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/libya-country-policy-and-information-notes",
+        "base_path": "/government/publications/libya-country-policy-and-information-notes",
+        "content_id": "5661465e-6e6f-4540-b39b-8d0aaa2afc31",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-04-22T15:03:41Z",
+        "schema_name": "publication",
+        "title": "Libya: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/libya-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-04-22T16:03:41+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: security situation, Libya, April 2025 (accessible)",
+  "updated_at": "2026-04-29T15:29:19+01:00",
+  "withdrawn_notice": {}
+}

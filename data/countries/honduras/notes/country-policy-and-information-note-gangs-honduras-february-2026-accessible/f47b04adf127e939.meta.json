@@ -1,0 +1,877 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/honduras-country-policy-and-information-notes/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+  "content_id": "eded4e24-39d3-4c18-ab0a-90f0e9cbbc64",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "geography-and-map",
+                "level": 4,
+                "text": "7.1 Geography and map"
+              },
+              {
+                "id": "population-and-demography",
+                "level": 4,
+                "text": "7.2 Population and demography"
+              }
+            ],
+            "id": "geography",
+            "level": 3,
+            "text": "7. Geography and population"
+          },
+          {
+            "headers": [
+              {
+                "id": "definitions",
+                "level": 4,
+                "text": "8.1 Definitions"
+              },
+              {
+                "id": "types-ocgs",
+                "level": 4,
+                "text": "8.2 Types of OCGs"
+              },
+              {
+                "id": "number-ocgs",
+                "level": 4,
+                "text": "8.3 Number of OCGs and members"
+              },
+              {
+                "id": "location-ocgs",
+                "level": 4,
+                "text": "8.4 Location of OCGs"
+              },
+              {
+                "id": "mara-salvatrucha",
+                "level": 4,
+                "text": "8.5 Mara Salvatrucha (MS-13) and Barrio 18 (18th Street)"
+              },
+              {
+                "id": "other-ocgs",
+                "level": 4,
+                "text": "8.6 Other OCGs"
+              }
+            ],
+            "id": "organised-criminal-groups-ocgs-including-gangs",
+            "level": 3,
+            "text": "8.Organised Criminal Groups (OCGs), including gangs"
+          },
+          {
+            "id": "gangs-in-prison",
+            "level": 3,
+            "text": "9. Gangs in prison"
+          },
+          {
+            "headers": [
+              {
+                "id": "violence-homicides",
+                "level": 4,
+                "text": "10.1 Violence and homicides"
+              },
+              {
+                "id": "extortion",
+                "level": 4,
+                "text": "10.2 Extortion"
+              },
+              {
+                "id": "territorial-control",
+                "level": 4,
+                "text": "10.3 Territorial control"
+              },
+              {
+                "id": "drug-trafficking",
+                "level": 4,
+                "text": "10.4 Drug trafficking"
+              }
+            ],
+            "id": "ocg-activities",
+            "level": 3,
+            "text": "10. OCG activities"
+          },
+          {
+            "headers": [
+              {
+                "id": "recruitment-membership",
+                "level": 4,
+                "text": "11.1 Recruitment and membership profile"
+              },
+              {
+                "id": "women-in-gangs",
+                "level": 4,
+                "text": "11.2 Women in gangs"
+              },
+              {
+                "id": "leaving-gangs",
+                "level": 4,
+                "text": "11.3 Leaving gangs"
+              }
+            ],
+            "id": "recruitment-and-leaving-gangs",
+            "level": 3,
+            "text": "11. Recruitment and leaving gangs"
+          },
+          {
+            "headers": [
+              {
+                "id": "current-former-members",
+                "level": 4,
+                "text": "12.1 Current and former gang members"
+              },
+              {
+                "id": "lgbti-persons",
+                "level": 4,
+                "text": "12.2 LGBTI persons"
+              },
+              {
+                "id": "environmental-activists",
+                "level": 4,
+                "text": "12.3 Environmental activists"
+              },
+              {
+                "id": "journalists",
+                "level": 4,
+                "text": "12.4 Journalists and human rights defenders"
+              },
+              {
+                "id": "informants",
+                "level": 4,
+                "text": "12.5 Informants, witnesses and those resisting gangs"
+              },
+              {
+                "id": "transportation",
+                "level": 4,
+                "text": "12.6 Transportation sector workers and other extorted businesses"
+              },
+              {
+                "id": "women-girls",
+                "level": 4,
+                "text": "12.7 Women and girls"
+              },
+              {
+                "id": "children",
+                "level": 4,
+                "text": "12.8 Children and young people"
+              }
+            ],
+            "id": "targets",
+            "level": 3,
+            "text": "12. Targets of violence"
+          },
+          {
+            "id": "idps",
+            "level": 3,
+            "text": "13. Internally displaced persons (IDPs)"
+          },
+          {
+            "id": "tracking",
+            "level": 3,
+            "text": "14. Tracking of persons by gangs"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview-state-of-emergency",
+                "level": 4,
+                "text": "15.1 Overview of state of emergency"
+              },
+              {
+                "id": "arrest-detention-statistics",
+                "level": 4,
+                "text": "15.2 Arrest and detention statistics"
+              },
+              {
+                "id": "impact-emergency",
+                "level": 4,
+                "text": "15.3 Impact of state of emergency"
+              }
+            ],
+            "id": "state-of-emergency",
+            "level": 3,
+            "text": "15. State of emergency"
+          },
+          {
+            "headers": [
+              {
+                "id": "anti-gang-laws",
+                "level": 4,
+                "text": "16.1 Anti-gang laws"
+              },
+              {
+                "id": "policy-initiatives",
+                "level": 4,
+                "text": "16.2 Policy initiatives"
+              },
+              {
+                "id": "police",
+                "level": 4,
+                "text": "16.3 Police"
+              },
+              {
+                "id": "judiciary",
+                "level": 4,
+                "text": "16.4 Judiciary"
+              },
+              {
+                "id": "oversight",
+                "level": 4,
+                "text": "16.5 Oversight and accountability"
+              },
+              {
+                "id": "witness-victim-protection",
+                "level": 4,
+                "text": "16.6 Witness and victim protection"
+              }
+            ],
+            "id": "state-protection",
+            "level": 3,
+            "text": "16. State protection"
+          },
+          {
+            "id": "ngo-support",
+            "level": 3,
+            "text": "17. NGO support"
+          },
+          {
+            "id": "corruption",
+            "level": 3,
+            "text": "18. Corruption"
+          },
+          {
+            "id": "freedom-movement",
+            "level": 3,
+            "text": "19. Freedom of movement"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "american-institutes-for-research-air",
+                "level": 4,
+                "text": "American Institutes for Research (AIR)"
+              },
+              {
+                "id": "american-institutes-for-research-air-and-the-kimberly-green-latin-american-and-caribbean-center-of-florida-international-university-airfiu",
+                "level": 4,
+                "text": "American Institutes for Research (AIR) and the Kimberly Green Latin American and Caribbean Center of Florida International University (AIR/FIU)"
+              },
+              {
+                "id": "americas-quarterly",
+                "level": 4,
+                "text": "Americas Quarterly"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "armed-conflict-location--event-data-acled",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data (ACLED)"
+              },
+              {
+                "id": "association-for-a-more-just-society-asj",
+                "level": 4,
+                "text": "Association for a More Just Society (ASJ)"
+              },
+              {
+                "id": "austrian-centre-for-country-of-origin-and-asylum-research-and-documentations-accord",
+                "level": 4,
+                "text": "Austrian Centre for Country of Origin and Asylum Research and Documentation’s (ACCORD)"
+              },
+              {
+                "id": "bertelsmann-stiftungs-transformation-index-bti",
+                "level": 4,
+                "text": "Bertelsmann Stiftung’s Transformation Index (BTI)"
+              },
+              {
+                "id": "citypopulationde",
+                "level": 4,
+                "text": "Citypopulation.de"
+              },
+              {
+                "id": "civicus-monitor",
+                "level": 4,
+                "text": "Civicus Monitor"
+              },
+              {
+                "id": "committee-to-protect-journalists-cpj",
+                "level": 4,
+                "text": "Committee to Protect Journalists (CPJ)"
+              },
+              {
+                "id": "comprehensive-regional-protection-and-solutions-framework-mirps",
+                "level": 4,
+                "text": "Comprehensive Regional Protection and Solutions Framework (MIRPS)"
+              },
+              {
+                "id": "contra-corriente",
+                "level": 4,
+                "text": "Contra Corriente"
+              },
+              {
+                "id": "criteriohn",
+                "level": 4,
+                "text": "Criterio.hn"
+              },
+              {
+                "id": "el-faro",
+                "level": 4,
+                "text": "El Faro"
+              },
+              {
+                "id": "el-pais",
+                "level": 4,
+                "text": "El Pais"
+              },
+              {
+                "id": "encyclopaedia-britannica",
+                "level": 4,
+                "text": "Encyclopaedia Britannica"
+              },
+              {
+                "id": "fm-global-barometers",
+                "level": 4,
+                "text": "F&M Global Barometers"
+              },
+              {
+                "id": "forbes",
+                "level": 4,
+                "text": "Forbes"
+              },
+              {
+                "id": "france24",
+                "level": 4,
+                "text": "France24"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House"
+              },
+              {
+                "id": "global-initiative-against-transnational-organized-crime-gi-toc",
+                "level": 4,
+                "text": "Global Initiative Against Transnational Organized Crime (GI-TOC)"
+              },
+              {
+                "id": "global-organized-crime-index",
+                "level": 4,
+                "text": "Global Organized Crime Index"
+              },
+              {
+                "id": "hondudiario",
+                "level": 4,
+                "text": "Hondudiario"
+              },
+              {
+                "id": "honduras-national-institute-of-statistics",
+                "level": 4,
+                "text": "Honduras National Institute of Statistics"
+              },
+              {
+                "id": "honduran-national-police",
+                "level": 4,
+                "text": "Honduran National Police"
+              },
+              {
+                "id": "human-rights-watch-hrw",
+                "level": 4,
+                "text": "Human Rights Watch (HRW)"
+              },
+              {
+                "id": "immigration-and-refugee-board-of-canada-irb",
+                "level": 4,
+                "text": "Immigration and Refugee Board of Canada (IRB)"
+              },
+              {
+                "id": "insight-crime",
+                "level": 4,
+                "text": "InSight Crime"
+              },
+              {
+                "id": "inter-american-commission-on-human-rights-iachr",
+                "level": 4,
+                "text": "Inter-American Commission on Human Rights (IACHR)"
+              },
+              {
+                "id": "internal-displacement-monitoring-center-idmc",
+                "level": 4,
+                "text": "Internal Displacement Monitoring Center (IDMC)"
+              },
+              {
+                "id": "international-crisis-group",
+                "level": 4,
+                "text": "International Crisis Group"
+              },
+              {
+                "id": "la-prensa",
+                "level": 4,
+                "text": "La Prensa"
+              },
+              {
+                "id": "la-tribuna",
+                "level": 4,
+                "text": "La Tribuna"
+              },
+              {
+                "id": "le-vote-international",
+                "level": 4,
+                "text": "Le Vote International"
+              },
+              {
+                "id": "merriam-webster",
+                "level": 4,
+                "text": "Merriam-Webster"
+              },
+              {
+                "id": "migration--asylum-lab",
+                "level": 4,
+                "text": "Migration & Asylum Lab"
+              },
+              {
+                "id": "minority-rights-group",
+                "level": 4,
+                "text": "Minority Rights Group"
+              },
+              {
+                "id": "national-human-rights-commission-in-honduras-conadeh",
+                "level": 4,
+                "text": "National Human Rights Commission in Honduras (CONADEH)"
+              },
+              {
+                "id": "norwegian-refugee-council",
+                "level": 4,
+                "text": "Norwegian Refugee Council"
+              },
+              {
+                "id": "orion-policy-institute",
+                "level": 4,
+                "text": "Orion Policy Institute"
+              },
+              {
+                "id": "pastoral-de-movilidad-humana",
+                "level": 4,
+                "text": "Pastoral de Movilidad Humana"
+              },
+              {
+                "id": "peace-brigades-international-pbi-usa",
+                "level": 4,
+                "text": "Peace Brigades International (PBI) USA"
+              },
+              {
+                "id": "riley-sentinel",
+                "level": 4,
+                "text": "Riley Sentinel"
+              },
+              {
+                "id": "swissinfoch",
+                "level": 4,
+                "text": "Swissinfo.ch"
+              },
+              {
+                "id": "the-economist",
+                "level": 4,
+                "text": "The Economist"
+              },
+              {
+                "id": "the-intercept",
+                "level": 4,
+                "text": "The Intercept"
+              },
+              {
+                "id": "the-new-humanitarian",
+                "level": 4,
+                "text": "The New Humanitarian"
+              },
+              {
+                "id": "the-rio-times",
+                "level": 4,
+                "text": "The Rio Times"
+              },
+              {
+                "id": "the-tico-times",
+                "level": 4,
+                "text": "The Tico Times"
+              },
+              {
+                "id": "united-nations-un",
+                "level": 4,
+                "text": "United Nations (UN)"
+              },
+              {
+                "id": "united-nations-data",
+                "level": 4,
+                "text": "United Nations data"
+              },
+              {
+                "id": "united-nations-educational-scientific-and-cultural-organization-unesco",
+                "level": 4,
+                "text": "United Nations Educational, Scientific and Cultural Organization (UNESCO)"
+              },
+              {
+                "id": "united-nations-un-general-assembly",
+                "level": 4,
+                "text": "United Nations (UN) General Assembly"
+              },
+              {
+                "id": "united-nations-high-commissioner-for-refugees-unhcr",
+                "level": 4,
+                "text": "United Nations High Commissioner for Refugees (UNHCR)"
+              },
+              {
+                "id": "united-nations-human-rights-council",
+                "level": 4,
+                "text": "United Nations Human Rights Council"
+              },
+              {
+                "id": "united-nations-office-of-the-high-commissioner-for-human-rights-un-ohchr",
+                "level": 4,
+                "text": "United Nations Office of the High Commissioner for Human Rights (UN OHCHR)"
+              },
+              {
+                "id": "united-nations-office-on-drugs-and-crime-unodc",
+                "level": 4,
+                "text": "United Nations Office on Drugs and Crime (UNODC)"
+              },
+              {
+                "id": "united-states-agency-for-international-development-usaid",
+                "level": 4,
+                "text": "United States Agency for International Development (USAID)"
+              },
+              {
+                "id": "united-states-congressional-research-service-us-crs",
+                "level": 4,
+                "text": "United States Congressional Research Service (US CRS)"
+              },
+              {
+                "id": "united-states-state-department-ussd",
+                "level": 4,
+                "text": "United States State Department (USSD)"
+              },
+              {
+                "id": "united-states-state-department-overseas-security-advisory-council-ussd-osac",
+                "level": 4,
+                "text": "United States State Department Overseas Security Advisory Council (USSD OSAC)"
+              },
+              {
+                "id": "world-bank",
+                "level": 4,
+                "text": "World Bank"
+              },
+              {
+                "id": "xecom",
+                "level": 4,
+                "text": "Xe.com"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "amnesty-international-1",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "armed-conflict-location--event-data-acled-1",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data (ACLED)"
+              },
+              {
+                "id": "contra-corriente-1",
+                "level": 4,
+                "text": "Contra Corriente"
+              },
+              {
+                "id": "criteriohn-1",
+                "level": 4,
+                "text": "Criterio.hn"
+              },
+              {
+                "id": "deutsche-welle",
+                "level": 4,
+                "text": "Deutsche Welle"
+              },
+              {
+                "id": "el-heraldo",
+                "level": 4,
+                "text": "El Heraldo"
+              },
+              {
+                "id": "insight-crime-1",
+                "level": 4,
+                "text": "InSight Crime"
+              },
+              {
+                "id": "proceso-digital",
+                "level": 4,
+                "text": "Proceso Digital"
+              },
+              {
+                "id": "united-nations-office-of-the-high-commissioner-for-human-rights-un-ohchr-1",
+                "level": 4,
+                "text": "United Nations Office of the High Commissioner for Human Rights (UN OHCHR)"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-03-03T13:35:28.000+00:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-03-03T13:35:30+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/honduras-country-policy-and-information-notes/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/honduras-country-policy-and-information-notes/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+        "base_path": "/government/publications/honduras-country-policy-and-information-notes/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+        "content_id": "eded4e24-39d3-4c18-ab0a-90f0e9cbbc64",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-03-03T13:35:28Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: gangs, Honduras, February 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/honduras-country-policy-and-information-notes/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2019-to-2022-johnson-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2019-to-2022-johnson-conservative-government",
+        "base_path": "/government/2019-to-2022-johnson-conservative-government",
+        "content_id": "4ed901ec-c8ce-42d5-a2aa-6d7f462480df",
+        "details": {
+          "current": false,
+          "ended_on": "2022-09-06T00:00:00+00:00",
+          "started_on": "2019-07-24T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2019 to 2022 Johnson Conservative government",
+        "web_url": "https://www.gov.uk/government/2019-to-2022-johnson-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/honduras-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/honduras-country-policy-and-information-notes",
+        "base_path": "/government/publications/honduras-country-policy-and-information-notes",
+        "content_id": "d42483d7-c70c-4489-aa04-d332a700d7ea",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-03-03T13:35:28Z",
+        "schema_name": "publication",
+        "title": "Honduras: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/honduras-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-03-03T13:35:28+00:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1772544928.929-10.13.22.162-2450",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: gangs, Honduras, February 2026 (accessible)",
+  "updated_at": "2026-04-29T15:31:32+01:00",
+  "withdrawn_notice": {}
+}

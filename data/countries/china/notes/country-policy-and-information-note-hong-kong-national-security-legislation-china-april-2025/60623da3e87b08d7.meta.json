@@ -1,0 +1,474 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+  "content_id": "169eee1c-ac22-4976-86e8-83ce7310fb51",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1.  Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "national-security-law",
+                "level": 4,
+                "text": "7.1 The National Security Law"
+              },
+              {
+                "id": "security-ordinance",
+                "level": 4,
+                "text": "7.2 The Safeguarding National Security Ordinance (SNSO)"
+              },
+              {
+                "id": "law-enforcement-powers",
+                "level": 4,
+                "text": "7.3 Law enforcement powers"
+              },
+              {
+                "id": "application-of-bail",
+                "level": 4,
+                "text": "7.4 Application of bail"
+              },
+              {
+                "id": "judiciary",
+                "level": 4,
+                "text": "7.5 Judiciary"
+              },
+              {
+                "id": "retrospective",
+                "level": 4,
+                "text": "7.6 Retrospective application of the National Security Law"
+              }
+            ],
+            "id": "legal-context",
+            "level": 3,
+            "text": "7. Legal context"
+          },
+          {
+            "headers": [
+              {
+                "id": "arrests-activists",
+                "level": 4,
+                "text": "8.1 Arrests of activists"
+              },
+              {
+                "id": "prosecution",
+                "level": 4,
+                "text": "8.2 Prosecution and appeal"
+              },
+              {
+                "id": "treatment-family",
+                "level": 4,
+                "text": "8.3 Treatment of family members of persons of interest"
+              },
+              {
+                "id": "transnational-application",
+                "level": 4,
+                "text": "8.4 Transnational application"
+              }
+            ],
+            "id": "application-of-law",
+            "level": 3,
+            "text": "8. Application of the law"
+          },
+          {
+            "headers": [
+              {
+                "id": "press-freedom",
+                "level": 4,
+                "text": "9.1 Press freedom and arrests of journalists"
+              },
+              {
+                "id": "academic-freedom",
+                "level": 4,
+                "text": "9.2 Academic freedom"
+              },
+              {
+                "id": "pro-democracy-groups",
+                "level": 4,
+                "text": "9.3 Pro-democracy groups and NGOs"
+              }
+            ],
+            "id": "freedom-of-expression",
+            "level": 3,
+            "text": "9. Freedom of expression"
+          },
+          {
+            "headers": [
+              {
+                "id": "unofficial-primary",
+                "level": 4,
+                "text": "10.1 Unofficial primary elections 2020 and resulting criminal trials"
+              },
+              {
+                "id": "changes-to-the-legco-and-district-council-election-system",
+                "level": 4,
+                "text": "10.2 Changes to the LegCo and District Council election system"
+              }
+            ],
+            "id": "political-rights",
+            "level": 3,
+            "text": "10. Political rights"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News"
+              },
+              {
+                "id": "china-daily",
+                "level": 4,
+                "text": "China Daily"
+              },
+              {
+                "id": "chinafile",
+                "level": 4,
+                "text": "ChinaFile"
+              },
+              {
+                "id": "the-committee-to-protect-journalists-cpj",
+                "level": 4,
+                "text": "The Committee to Protect Journalists (CPJ)"
+              },
+              {
+                "id": "the-congressional-executive-commission-on-china-cecc",
+                "level": 4,
+                "text": "The Congressional-Executive Commission on China (CECC)"
+              },
+              {
+                "id": "council-on-geostrategy",
+                "level": 4,
+                "text": "Council on Geostrategy"
+              },
+              {
+                "id": "the-friedrich-alexander-universitt-institute-of-political-science-fau",
+                "level": 4,
+                "text": "The Friedrich-Alexander-Universität Institute of Political Science (FAU)"
+              },
+              {
+                "id": "the-government-of-the-hong-kong-special-administrative-region-gazette",
+                "level": 4,
+                "text": "The Government of the Hong Kong Special Administrative Region Gazette"
+              },
+              {
+                "id": "the-government-of-the-hong-kong-special-administrative-region",
+                "level": 4,
+                "text": "The Government of the Hong Kong Special Administrative Region"
+              },
+              {
+                "id": "the-guardian",
+                "level": 4,
+                "text": "The Guardian"
+              },
+              {
+                "id": "hong-kong-free-press",
+                "level": 4,
+                "text": "Hong Kong Free Press"
+              },
+              {
+                "id": "human-rights-watch",
+                "level": 4,
+                "text": "Human Rights Watch"
+              },
+              {
+                "id": "media-bias-fact-check-mbfc",
+                "level": 4,
+                "text": "Media Bias Fact Check (MBFC)"
+              },
+              {
+                "id": "radio-free-asia-rfa",
+                "level": 4,
+                "text": "Radio Free Asia (RFA)"
+              },
+              {
+                "id": "reporters-without-borders-rsf",
+                "level": 4,
+                "text": "Reporters without Borders (RSF)"
+              },
+              {
+                "id": "reuters",
+                "level": 4,
+                "text": "Reuters"
+              },
+              {
+                "id": "sky-news",
+                "level": 4,
+                "text": "Sky News"
+              },
+              {
+                "id": "university-world-news",
+                "level": 4,
+                "text": "University World News"
+              },
+              {
+                "id": "the-un-office-of-the-high-commissioner-for-human-rights-ochcr",
+                "level": 4,
+                "text": "The UN Office of the High Commissioner for Human Rights (OCHCR)"
+              },
+              {
+                "id": "xecom",
+                "level": 4,
+                "text": "XE.com"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-09-01T15:41:42.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-05-08T14:16:42+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+        "api_url": "https://www.gov.uk/api/content/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+        "base_path": "/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+        "content_id": "169eee1c-ac22-4976-86e8-83ce7310fb51",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-09-01T14:41:42Z",
+        "schema_name": "html_publication",
+        "title": " Country policy and information note: Hong Kong national security legislation, China, April 2025",
+        "web_url": "https://www.gov.uk/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/china-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/china-country-policy-and-information-notes",
+        "base_path": "/government/publications/china-country-policy-and-information-notes",
+        "content_id": "090fe8fa-d8d7-4c94-bb8e-d1ee82620469",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-09-01T14:41:42Z",
+        "schema_name": "publication",
+        "title": "China: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/china-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-09-01T15:41:42+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1788786616.976-10.13.22.105-3187",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": " Country policy and information note: Hong Kong national security legislation, China, April 2025",
+  "updated_at": "2026-09-07T14:10:21+01:00",
+  "withdrawn_notice": {}
+}

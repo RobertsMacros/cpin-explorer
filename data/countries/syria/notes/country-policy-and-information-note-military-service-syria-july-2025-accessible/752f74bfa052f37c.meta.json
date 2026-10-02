@@ -1,0 +1,509 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+  "content_id": "be8617c3-8fc9-479d-baa2-57452a6ed974",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "general-approach-to-claims-based-on-compulsory-military-service",
+                "level": 4,
+                "text": "3.1 General approach to claims based on (compulsory) military service"
+              },
+              {
+                "id": "risk-based-on-conditions-of-compulsory-military-service",
+                "level": 4,
+                "text": "3.2 Risk based on conditions of (compulsory) military service"
+              },
+              {
+                "id": "risk-based-on-desertion-or-evasion",
+                "level": 4,
+                "text": "3.3 Risk based on desertion or evasion"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "id": "fall-of-assad-regime",
+            "level": 3,
+            "text": "7. Fall of Assad regime"
+          },
+          {
+            "headers": [
+              {
+                "id": "military-service-under-assad-regime",
+                "level": 4,
+                "text": "8.1 Military service under Assad regime"
+              },
+              {
+                "id": "abolition-of-military-service-under-hts",
+                "level": 4,
+                "text": "8.2 Abolition of military service under HTS"
+              }
+            ],
+            "id": "military-conscription",
+            "level": 3,
+            "text": "8. Military conscription"
+          },
+          {
+            "headers": [
+              {
+                "id": "reconciliation-process",
+                "level": 4,
+                "text": "9.1 Reconciliation process"
+              },
+              {
+                "id": "arrests-former-security-personnel",
+                "level": 4,
+                "text": "9.2 Arrests of former security force personnel"
+              }
+            ],
+            "id": "amnesty-to-former-soldiers",
+            "level": 3,
+            "text": "9. Amnesty to former soldiers"
+          },
+          {
+            "id": "revocation-of-travel-bans",
+            "level": 3,
+            "text": "10. Revocation of travel bans"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "africanews",
+                "level": 4,
+                "text": "Africanews"
+              },
+              {
+                "id": "al-arabiya",
+                "level": 4,
+                "text": "Al Arabiya"
+              },
+              {
+                "id": "al-hiwar-tv",
+                "level": 4,
+                "text": "Al-Hiwar TV"
+              },
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "arab-news",
+                "level": 4,
+                "text": "Arab News"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News"
+              },
+              {
+                "id": "campbell-a",
+                "level": 4,
+                "text": "Campbell A"
+              },
+              {
+                "id": "carnegie-endowment-for-international-peace",
+                "level": 4,
+                "text": "Carnegie Endowment for International Peace"
+              },
+              {
+                "id": "danish-immigration-service",
+                "level": 4,
+                "text": "Danish Immigration Service"
+              },
+              {
+                "id": "european-union-agency-for-asylum-euaa",
+                "level": 4,
+                "text": "European Union Agency for Asylum (EUAA)"
+              },
+              {
+                "id": "france-24",
+                "level": 4,
+                "text": "France 24"
+              },
+              {
+                "id": "lorient-today",
+                "level": 4,
+                "text": "L’Orient Today"
+              },
+              {
+                "id": "middle-east-media-research-institute-memri",
+                "level": 4,
+                "text": "Middle East Media Research Institute (MEMRI)"
+              },
+              {
+                "id": "middle-east-monitor-memo",
+                "level": 4,
+                "text": "Middle East Monitor (MEMO)"
+              },
+              {
+                "id": "the-new-arab",
+                "level": 4,
+                "text": "The New Arab"
+              },
+              {
+                "id": "new-lines-magazine",
+                "level": 4,
+                "text": "New Lines Magazine"
+              },
+              {
+                "id": "rudaw",
+                "level": 4,
+                "text": "Rudaw"
+              },
+              {
+                "id": "sana",
+                "level": 4,
+                "text": "SANA"
+              },
+              {
+                "id": "shafaq-news",
+                "level": 4,
+                "text": "Shafaq News"
+              },
+              {
+                "id": "sky-news",
+                "level": 4,
+                "text": "Sky News"
+              },
+              {
+                "id": "syrian-network-for-human-rights-snhr",
+                "level": 4,
+                "text": "Syrian Network for Human Rights (SNHR)"
+              },
+              {
+                "id": "syrian-observatory-for-human-rights-sohr",
+                "level": 4,
+                "text": "Syrian Observatory for Human Rights (SOHR)"
+              },
+              {
+                "id": "the-telegraph",
+                "level": 4,
+                "text": "The Telegraph"
+              },
+              {
+                "id": "trt-world",
+                "level": 4,
+                "text": "TRT World"
+              },
+              {
+                "id": "unhcr",
+                "level": 4,
+                "text": "UNHCR"
+              },
+              {
+                "id": "voice-of-america-voa",
+                "level": 4,
+                "text": "Voice of America (VoA)"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "danish-immigration-service-country-of-origin-information-coi-ffm-report",
+                "level": 4,
+                "text": "Danish Immigration Service, Country of Origin Information (COI) FFM Report"
+              },
+              {
+                "id": "france24",
+                "level": 4,
+                "text": "France24"
+              },
+              {
+                "id": "the-guardian",
+                "level": 4,
+                "text": "The Guardian"
+              },
+              {
+                "id": "house-of-commons-library",
+                "level": 4,
+                "text": "House of Commons Library"
+              },
+              {
+                "id": "international-crisis-group-icg",
+                "level": 4,
+                "text": "International Crisis Group (ICG)"
+              },
+              {
+                "id": "middle-east-monitor-memo-1",
+                "level": 4,
+                "text": "Middle East Monitor (MEMO)"
+              },
+              {
+                "id": "the-national",
+                "level": 4,
+                "text": "The National"
+              },
+              {
+                "id": "new-lines-magazine-1",
+                "level": 4,
+                "text": "New Lines Magazine"
+              },
+              {
+                "id": "odi-global",
+                "level": 4,
+                "text": "ODI Global"
+              },
+              {
+                "id": "unhcr-1",
+                "level": 4,
+                "text": "UNHCR"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-07-24T10:39:38.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-09-16T17:54:37+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+        "content_id": "be8617c3-8fc9-479d-baa2-57452a6ed974",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: military service, Syria, July 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes",
+        "content_id": "f8c99638-27ab-44ae-858b-6987ac1a3ba3",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "publication",
+        "title": "Syria: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-24T10:39:38+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789055922.839-10.13.22.105-2571",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: military service, Syria, July 2025 (accessible)",
+  "updated_at": "2026-09-10T16:58:50+01:00",
+  "withdrawn_notice": {}
+}

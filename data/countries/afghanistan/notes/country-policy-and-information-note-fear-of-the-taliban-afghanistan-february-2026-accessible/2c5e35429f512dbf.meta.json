@@ -1,0 +1,534 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+  "content_id": "de2dc7eb-6ddb-444d-a4de-d8b7579a0d6f",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1               Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2               Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1.                  Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2.                  Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview-of-groups-who-are-likely-to-be-at-risk",
+                "level": 4,
+                "text": "3.1               Overview of groups who are likely to be at risk"
+              },
+              {
+                "id": "overview-of-groups-who-are-unlikely-to-be-at-risk",
+                "level": 4,
+                "text": "3.2               Overview of groups who are unlikely to be at risk"
+              },
+              {
+                "id": "former-government-officials-civilian-and-security-personnel-people-linked-to-international-forces-and-their-relatives",
+                "level": 4,
+                "text": "3.3               Former government officials (civilian and security personnel), people linked to international forces, and their relatives"
+              },
+              {
+                "id": "former-judges-lawyers-and-prosecutors",
+                "level": 4,
+                "text": "3.4               Former judges, lawyers and prosecutors"
+              },
+              {
+                "id": "journalists-media-workers-opposition-groups-and-critics-of-the-taliban",
+                "level": 4,
+                "text": "3.5               Journalists, media workers, opposition groups and critics of the Taliban"
+              },
+              {
+                "id": "ethnic-and-religious-minority-groups",
+                "level": 4,
+                "text": "3.6               Ethnic and religious minority groups"
+              },
+              {
+                "id": "women-and-girls",
+                "level": 4,
+                "text": "3.7               Women and girls"
+              },
+              {
+                "id": "lgbt-people",
+                "level": 4,
+                "text": "3.8               LGBT+ people"
+              },
+              {
+                "id": "people-claiming-to-be-westernised-and-returnees",
+                "level": 4,
+                "text": "3.9               People claiming to be ‘Westernised’, and returnees"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3.                  Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4.                  Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5.                  Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.                  Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "taliban-de-facto-government",
+                "level": 4,
+                "text": "7.1               Taliban (de facto) government"
+              },
+              {
+                "id": "taliban-military-strength",
+                "level": 4,
+                "text": "7.2               Taliban military strength"
+              },
+              {
+                "id": "territorial-control",
+                "level": 4,
+                "text": "7.3               Territorial control"
+              }
+            ],
+            "id": "structure-and-governance",
+            "level": 3,
+            "text": "7.                  Structure and governance"
+          },
+          {
+            "headers": [
+              {
+                "id": "legal-framework",
+                "level": 4,
+                "text": "8.1               Legal framework"
+              },
+              {
+                "id": "judiciary-justice-and-protection",
+                "level": 4,
+                "text": "8.2               Judiciary, justice and protection"
+              },
+              {
+                "id": "law-on-the-promotion-of-virtue-and-prevention-of-vice-pvpv-and-its-enforcement",
+                "level": 4,
+                "text": "8.3               Law on the Promotion of Virtue and Prevention of Vice (PVPV) and its enforcement"
+              },
+              {
+                "id": "informal-justice-systems",
+                "level": 4,
+                "text": "8.4               Informal justice systems"
+              }
+            ],
+            "id": "rule-of-law-and-justice-system",
+            "level": 3,
+            "text": "8.                  Rule of law and justice system"
+          },
+          {
+            "headers": [
+              {
+                "id": "limits-on-reporting",
+                "level": 4,
+                "text": "9.1               Limits on reporting"
+              },
+              {
+                "id": "treatment-of-journalists-and-media-workers",
+                "level": 4,
+                "text": "9.2               Treatment of journalists and media workers"
+              }
+            ],
+            "id": "media-freedom",
+            "level": 3,
+            "text": "9.                  Media freedom"
+          },
+          {
+            "headers": [
+              {
+                "id": "implementation-of-the-general-amnesty",
+                "level": 4,
+                "text": "10.1           Implementation of the general amnesty"
+              },
+              {
+                "id": "personal-disputes-and-revenge",
+                "level": 4,
+                "text": "10.2           Personal disputes and revenge"
+              },
+              {
+                "id": "former-government-officials-civilian-and-security-personnel",
+                "level": 4,
+                "text": "10.3           Former government officials (civilian and security personnel)"
+              },
+              {
+                "id": "family-members-of-former-civilian-and-security-personnel",
+                "level": 4,
+                "text": "10.4           Family members of former civilian and security personnel"
+              },
+              {
+                "id": "people-associated-with-international-forces",
+                "level": 4,
+                "text": "10.5           People associated with international forces"
+              },
+              {
+                "id": "former-judges-lawyers-and-prosecutors-1",
+                "level": 4,
+                "text": "10.6           Former judges, lawyers and prosecutors"
+              }
+            ],
+            "id": "people-associated-with-the-former-government-security-forces-and-allies",
+            "level": 3,
+            "text": "10.               People associated with the former government, security forces and allies"
+          },
+          {
+            "headers": [
+              {
+                "id": "political-opponents-and-critics",
+                "level": 4,
+                "text": "11.1           Political opponents and critics"
+              },
+              {
+                "id": "people-affiliated-with-armed-resistance-groups",
+                "level": 4,
+                "text": "11.2           People affiliated with armed resistance groups"
+              }
+            ],
+            "id": "opposition-groups-and-critics-of-the-taliban",
+            "level": 3,
+            "text": "11.               Opposition groups and critics of the Taliban"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview",
+                "level": 4,
+                "text": "12.1           Overview"
+              },
+              {
+                "id": "non-practising-muslims",
+                "level": 4,
+                "text": "12.2           Non-practising Muslims"
+              },
+              {
+                "id": "converts-from-islam-to-another-faith",
+                "level": 4,
+                "text": "12.3           Converts from Islam to another faith"
+              },
+              {
+                "id": "shia-muslims-including-ismailis-and-ethnic-hazaras",
+                "level": 4,
+                "text": "12.4           Shia Muslims, including Ismailis and ethnic Hazaras"
+              },
+              {
+                "id": "christians",
+                "level": 4,
+                "text": "12.5           Christians"
+              },
+              {
+                "id": "hindus-and-sikhs",
+                "level": 4,
+                "text": "12.6           Hindus and Sikhs"
+              },
+              {
+                "id": "tajiks-uzbeks-and-turkmen",
+                "level": 4,
+                "text": "12.7           Tajiks, Uzbeks and Turkmen"
+              }
+            ],
+            "id": "ethnic-and-religious-minorities",
+            "level": 3,
+            "text": "12.               Ethnic and religious minorities"
+          },
+          {
+            "headers": [
+              {
+                "id": "situation-overview",
+                "level": 4,
+                "text": "13.1           Situation overview"
+              }
+            ],
+            "id": "women-and-girls-1",
+            "level": 3,
+            "text": "13.               Women and girls"
+          },
+          {
+            "id": "lgbt-people-1",
+            "level": 3,
+            "text": "14.               LGBT+ people"
+          },
+          {
+            "headers": [
+              {
+                "id": "concept-of-being-westernised",
+                "level": 4,
+                "text": "15.1           Concept of being ‘Westernised’"
+              },
+              {
+                "id": "clothing-and-appearance",
+                "level": 4,
+                "text": "15.2           Clothing and appearance"
+              },
+              {
+                "id": "taliban-reactions-to-people-being-westernised",
+                "level": 4,
+                "text": "15.3           Taliban reactions to people being ‘Westernised’"
+              }
+            ],
+            "id": "people-perceived-as-westernised",
+            "level": 3,
+            "text": "15.               People perceived as ‘Westernised’"
+          },
+          {
+            "headers": [
+              {
+                "id": "number-and-profile-of-returnees",
+                "level": 4,
+                "text": "16.1           Number and profile of returnees"
+              },
+              {
+                "id": "treatment-on-entry-at-kabul-international-airport",
+                "level": 4,
+                "text": "16.2           Treatment on entry at Kabul International Airport"
+              },
+              {
+                "id": "general-situation-for-returnees",
+                "level": 4,
+                "text": "16.3           General situation for returnees"
+              }
+            ],
+            "id": "returnees",
+            "level": 3,
+            "text": "16.               Returnees"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-05-15T14:10:54.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-03-02T10:50:51+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+        "base_path": "/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+        "content_id": "de2dc7eb-6ddb-444d-a4de-d8b7579a0d6f",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-05-15T13:10:54Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: fear of the Taliban, Afghanistan, February 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/afghanistan-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/afghanistan-country-policy-and-information-notes",
+        "base_path": "/government/publications/afghanistan-country-policy-and-information-notes",
+        "content_id": "b2366470-ef00-43ae-91f6-cd3b22340c7e",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-05-15T13:10:54Z",
+        "schema_name": "publication",
+        "title": "Afghanistan: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/afghanistan-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-05-15T14:10:54+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789055517.883-10.13.22.105-2591",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: fear of the Taliban, Afghanistan, February 2026 (accessible)",
+  "updated_at": "2026-09-10T16:52:00+01:00",
+  "withdrawn_notice": {}
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Run the pipeline from the repo's own source, without relying on the editable install's .pth
+# file (macOS keeps marking it hidden, and Python 3.13+ skips hidden .pth files).
+here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+PYTHONPATH="$here/src${PYTHONPATH:+:$PYTHONPATH}" exec "$here/.venv/bin/python" -m cpin "$@"

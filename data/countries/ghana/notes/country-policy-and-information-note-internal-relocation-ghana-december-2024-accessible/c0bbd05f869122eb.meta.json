@@ -1,0 +1,656 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+  "content_id": "f30dd65b-2e6d-43c7-af81-b7e4d153379e",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1.  Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "2. Internal relocation"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "size-and-capital",
+                "level": 4,
+                "text": "3.1 Size and capital"
+              },
+              {
+                "id": "geographic-regions",
+                "level": 4,
+                "text": "Geographic regions"
+              },
+              {
+                "id": "administrative-divisions",
+                "level": 4,
+                "text": "3.3 Administrative divisions"
+              },
+              {
+                "id": "distances-by-road-between-major-cities",
+                "level": 4,
+                "text": "3.4 Distances by road between major cities"
+              }
+            ],
+            "id": "geography",
+            "level": 3,
+            "text": "3. Geography"
+          },
+          {
+            "headers": [
+              {
+                "id": "population",
+                "level": 4,
+                "text": "4.1 Population"
+              },
+              {
+                "id": "population-density",
+                "level": 4,
+                "text": "4.2 Population density"
+              },
+              {
+                "id": "age-distribution",
+                "level": 4,
+                "text": "4.3 Age distribution"
+              },
+              {
+                "id": "ethnic-groups",
+                "level": 4,
+                "text": "4.4 Ethnic groups"
+              },
+              {
+                "id": "language",
+                "level": 4,
+                "text": "4.5 Language"
+              },
+              {
+                "id": "religion",
+                "level": 4,
+                "text": "4.6 Religion"
+              }
+            ],
+            "id": "demography",
+            "level": 3,
+            "text": "4. Demography"
+          },
+          {
+            "headers": [
+              {
+                "id": "outlook",
+                "level": 4,
+                "text": "5.1 Economic indicators and outlook"
+              },
+              {
+                "id": "economic-activities-in-major-cities",
+                "level": 4,
+                "text": "5.2 Economic activities in major cities"
+              },
+              {
+                "id": "poverty-inequality",
+                "level": 4,
+                "text": "5.3 Monetary poverty and inequality"
+              },
+              {
+                "id": "development-and-developmental-disparities",
+                "level": 4,
+                "text": "5.4Development and developmental disparities"
+              }
+            ],
+            "id": "socioeconomic-conditions",
+            "level": 3,
+            "text": "5. Socioeconomic conditions"
+          },
+          {
+            "headers": [
+              {
+                "id": "labour-force-participation-and-unemployment",
+                "level": 4,
+                "text": "6.1 Labour force participation and unemployment"
+              },
+              {
+                "id": "types-of-occupation",
+                "level": 4,
+                "text": "6.2 Types of occupation"
+              },
+              {
+                "id": "inequalities-women-minorities",
+                "level": 4,
+                "text": "6.3 Inequalities for women and minority groups"
+              },
+              {
+                "id": "earnings-and-in-work-poverty",
+                "level": 4,
+                "text": "6.4 Earnings and in-work poverty"
+              },
+              {
+                "id": "job-seeking-assistance",
+                "level": 4,
+                "text": "6.5 Job-seeking assistance"
+              }
+            ],
+            "id": "employment",
+            "level": 3,
+            "text": "6. Employment"
+          },
+          {
+            "headers": [
+              {
+                "id": "social-support--protection-provided-by-the-state",
+                "level": 4,
+                "text": "7.1 Social support / protection provided by the state"
+              },
+              {
+                "id": "other-social-support--protection",
+                "level": 4,
+                "text": "7.2 Other social support / protection"
+              }
+            ],
+            "id": "social-support",
+            "level": 3,
+            "text": "7. Social support / protection"
+          },
+          {
+            "headers": [
+              {
+                "id": "food-security-and-malnutrition",
+                "level": 4,
+                "text": "8.1 Food security and malnutrition"
+              },
+              {
+                "id": "inequalities-access-farmland",
+                "level": 4,
+                "text": "8.2 Inequalities in access to farmland"
+              }
+            ],
+            "id": "food-security",
+            "level": 3,
+            "text": "8. Food security"
+          },
+          {
+            "headers": [
+              {
+                "id": "housing",
+                "level": 4,
+                "text": "9.1 Housing"
+              },
+              {
+                "id": "ownership-registration-and-forced-eviction",
+                "level": 4,
+                "text": "9.2 Ownership, registration and forced eviction"
+              },
+              {
+                "id": "supply-affordability",
+                "level": 4,
+                "text": "9.3 Supply and affordability"
+              },
+              {
+                "id": "access-and-inequalities",
+                "level": 4,
+                "text": "9.4 Access and inequalities"
+              },
+              {
+                "id": "conditions-in-accras-informal-settlements",
+                "level": 4,
+                "text": "9.5 Conditions in Accra’s informal settlements"
+              },
+              {
+                "id": "electricity",
+                "level": 4,
+                "text": "9.6 Electricity"
+              },
+              {
+                "id": "water-sanitation-and-hygiene-wash",
+                "level": 4,
+                "text": "9.7  Water, Sanitation and Hygiene (WASH)"
+              },
+              {
+                "id": "total",
+                "level": 4,
+                "text": "Total"
+              },
+              {
+                "id": "urban",
+                "level": 4,
+                "text": "Urban"
+              },
+              {
+                "id": "rural",
+                "level": 4,
+                "text": "Rural"
+              }
+            ],
+            "id": "housing-living-conditions",
+            "level": 3,
+            "text": "9. Housing and living conditions"
+          },
+          {
+            "headers": [
+              {
+                "id": "healthcare-system-and-facilities",
+                "level": 4,
+                "text": "10. Healthcare system and facilities"
+              },
+              {
+                "id": "access-to-healthcare",
+                "level": 4,
+                "text": "10.2 Access to healthcare"
+              }
+            ],
+            "id": "healthcare",
+            "level": 3,
+            "text": "10. Healthcare"
+          },
+          {
+            "headers": [
+              {
+                "id": "education-system",
+                "level": 4,
+                "text": "11.1 Education system and funding"
+              },
+              {
+                "id": "school-attendance-by-region",
+                "level": 4,
+                "text": "11.2 School attendance by region"
+              },
+              {
+                "id": "educational-institutions",
+                "level": 4,
+                "text": "11.3. Educational institutions"
+              },
+              {
+                "id": "access-for-girls-and-disadvantaged-students",
+                "level": 4,
+                "text": "11.4 Access for girls and disadvantaged students"
+              }
+            ],
+            "id": "education",
+            "level": 3,
+            "text": "11. Education"
+          },
+          {
+            "headers": [
+              {
+                "id": "relations-tensions-and-insecurity",
+                "level": 4,
+                "text": "12.1 Relations, tensions and insecurity"
+              },
+              {
+                "id": "crime",
+                "level": 4,
+                "text": "12.2  Crime"
+              }
+            ],
+            "id": "insecurity-crime",
+            "level": 3,
+            "text": "12. Insecurity and crime"
+          },
+          {
+            "id": "freedom-of-movement",
+            "level": 3,
+            "text": "13. Freedom of movement"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "agra",
+                "level": 4,
+                "text": "AGRA"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "armed-conflict-location--event-data-acled",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data (ACLED)"
+              },
+              {
+                "id": "bureau-of-public-safety",
+                "level": 4,
+                "text": "Bureau of Public Safety"
+              },
+              {
+                "id": "centre-for-affordable-housing-finance-in-africa",
+                "level": 4,
+                "text": "Centre for Affordable Housing Finance in Africa"
+              },
+              {
+                "id": "care-international",
+                "level": 4,
+                "text": "CARE International"
+              },
+              {
+                "id": "citinewsroomcom",
+                "level": 4,
+                "text": "CitiNewsroom.com"
+              },
+              {
+                "id": "deloitte",
+                "level": 4,
+                "text": "Deloitte"
+              },
+              {
+                "id": "enact",
+                "level": 4,
+                "text": "ENACT"
+              },
+              {
+                "id": "encyclopaedia-britannica-editors",
+                "level": 4,
+                "text": "Encyclopaedia Britannica, Editors"
+              },
+              {
+                "id": "fund-for-peace",
+                "level": 4,
+                "text": "Fund For Peace"
+              },
+              {
+                "id": "ghana-compact",
+                "level": 4,
+                "text": "Ghana Compact"
+              },
+              {
+                "id": "ghana-news-agency",
+                "level": 4,
+                "text": "Ghana News Agency"
+              },
+              {
+                "id": "ghana-statistical-service",
+                "level": 4,
+                "text": "Ghana Statistical Service"
+              },
+              {
+                "id": "google-maps",
+                "level": 4,
+                "text": "Google Maps"
+              },
+              {
+                "id": "ilostat",
+                "level": 4,
+                "text": "ILOSTAT"
+              },
+              {
+                "id": "institute-for-economics-and-peace",
+                "level": 4,
+                "text": "Institute for Economics and Peace"
+              },
+              {
+                "id": "managingghanacom",
+                "level": 4,
+                "text": "Managingghana.com"
+              },
+              {
+                "id": "minority-rights-group",
+                "level": 4,
+                "text": "Minority Rights Group"
+              },
+              {
+                "id": "united-nations-development-programme",
+                "level": 4,
+                "text": "United Nations Development Programme"
+              },
+              {
+                "id": "united-states-agency-for-international-development-usaid",
+                "level": 4,
+                "text": "United States Agency for International Development (USAID)"
+              },
+              {
+                "id": "us-central-intelligence-agency",
+                "level": 4,
+                "text": "US Central Intelligence Agency"
+              },
+              {
+                "id": "us-commission-on-international-religious-freedom-uscirf",
+                "level": 4,
+                "text": "US Commission on International Religious Freedom (USCIRF)"
+              },
+              {
+                "id": "us-state-department-ussd",
+                "level": 4,
+                "text": "US State Department (USSD)"
+              },
+              {
+                "id": "world-bank",
+                "level": 4,
+                "text": "World Bank"
+              },
+              {
+                "id": "world-bank-blogs",
+                "level": 4,
+                "text": "World Bank Blogs"
+              },
+              {
+                "id": "world-bank-databank",
+                "level": 4,
+                "text": "World Bank DataBank"
+              },
+              {
+                "id": "yencomgh",
+                "level": 4,
+                "text": "YEN.com.gh"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-03-31T15:15:05.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2024-12-30T15:17:03+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+        "content_id": "f30dd65b-2e6d-43c7-af81-b7e4d153379e",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "html_publication",
+        "title": " Country policy and information note: internal relocation, Ghana, December 2024 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes",
+        "content_id": "2c7b8d9f-3914-4cea-9a74-00d06f39bb5b",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "publication",
+        "title": "Ghana: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-03-31T15:15:05+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": " Country policy and information note: internal relocation, Ghana, December 2024 (accessible)",
+  "updated_at": "2026-04-29T15:31:33+01:00",
+  "withdrawn_notice": {}
+}

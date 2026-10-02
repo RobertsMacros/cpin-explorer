@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# Mirrored PDFs are large and reproducible from data/pdfs/manifest.json; they go to R2, not git.
+data/pdfs/files/
+
+# Atomic-write temp files
+.tmp-*
+
+# Mirrored images, like PDFs, go to R2 rather than git.
+data/images/files/
+
+# Derived by ./cpin export (large: every edition of every comparable report).
+prototypes/data/

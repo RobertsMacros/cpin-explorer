@@ -1,0 +1,560 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+  "content_id": "c7b00ef8-3239-4231-919f-1087c9b06b5b",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1            Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2            Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1.               Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2.               Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "general---religious-groups-including-islam",
+                "level": 4,
+                "text": "3.1            General - religious groups including Islam"
+              },
+              {
+                "id": "muslims-in-xinjiang",
+                "level": 4,
+                "text": "3.2            Muslims in Xinjiang"
+              },
+              {
+                "id": "uyghurs-outside-of-xinjiang-and-non-uyghur-muslims",
+                "level": 4,
+                "text": "3.3            Uyghurs outside of Xinjiang and non-Uyghur Muslims"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3.               Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4.               Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5.               Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.               Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "religious-demography",
+                "level": 4,
+                "text": "7.1            Religious demography"
+              },
+              {
+                "id": "muslims",
+                "level": 4,
+                "text": "7.2            Muslims"
+              },
+              {
+                "id": "xinjiang",
+                "level": 4,
+                "text": "7.3            Xinjiang"
+              }
+            ],
+            "id": "religion-in-china",
+            "level": 3,
+            "text": "7.               Religion in China"
+          },
+          {
+            "headers": [
+              {
+                "id": "international-conventions",
+                "level": 4,
+                "text": "8.1            International conventions"
+              },
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "8.2            Constitution"
+              },
+              {
+                "id": "regulation-on-religious-affairs-rra",
+                "level": 4,
+                "text": "8.3            Regulation on Religious Affairs (RRA)"
+              },
+              {
+                "id": "registered-religious-groups",
+                "level": 4,
+                "text": "8.4            Registered religious groups"
+              },
+              {
+                "id": "unregistered-religious-groups",
+                "level": 4,
+                "text": "8.5            Unregistered religious groups"
+              }
+            ],
+            "id": "legal-framework",
+            "level": 3,
+            "text": "8.               Legal framework"
+          },
+          {
+            "headers": [
+              {
+                "id": "regional-law-and-regulations",
+                "level": 4,
+                "text": "9.1            Regional law and regulations"
+              },
+              {
+                "id": "government-messaging",
+                "level": 4,
+                "text": "9.2            Government messaging"
+              },
+              {
+                "id": "restrictions-on-muslims-and-islamic-culture",
+                "level": 4,
+                "text": "9.3            Restrictions on Muslims and Islamic culture"
+              },
+              {
+                "id": "surveillance",
+                "level": 4,
+                "text": "9.4            Surveillance"
+              },
+              {
+                "id": "mosques-and-islamic-spaces",
+                "level": 4,
+                "text": "9.5            Mosques and Islamic spaces"
+              },
+              {
+                "id": "birth-control-and-forced-sterilisation",
+                "level": 4,
+                "text": "9.6            Birth control and forced sterilisation"
+              },
+              {
+                "id": "arrests-and-prosecutions",
+                "level": 4,
+                "text": "9.7            Arrests and prosecutions"
+              },
+              {
+                "id": "internment-and-imprisonment",
+                "level": 4,
+                "text": "9.8            Internment and imprisonment"
+              },
+              {
+                "id": "forced-labour",
+                "level": 4,
+                "text": "9.9            Forced labour"
+              },
+              {
+                "id": "families-of-those-detained-abroad",
+                "level": 4,
+                "text": "9.10         Families of those detained abroad"
+              }
+            ],
+            "id": "state-treatment-of-muslims-in-xinjiang-province",
+            "level": 3,
+            "text": "9.               State treatment of Muslims in Xinjiang province"
+          },
+          {
+            "headers": [
+              {
+                "id": "policies",
+                "level": 4,
+                "text": "10.1         Policies"
+              },
+              {
+                "id": "restrictions-on-muslims-and-islamic-culture-1",
+                "level": 4,
+                "text": "10.2         Restrictions on Muslims and Islamic culture"
+              },
+              {
+                "id": "mosques-and-islamic-spaces-1",
+                "level": 4,
+                "text": "10.3         Mosques and Islamic spaces"
+              },
+              {
+                "id": "detention-of-hui-cultural-intellectual-and-legal-figures",
+                "level": 4,
+                "text": "10.4         Detention of Hui cultural, intellectual and legal figures"
+              },
+              {
+                "id": "labour-transfers",
+                "level": 4,
+                "text": "10.5         Labour transfers"
+              },
+              {
+                "id": "discrimination",
+                "level": 4,
+                "text": "10.6         Discrimination"
+              }
+            ],
+            "id": "state-treatment-of-muslims-outside-of-xinjiang",
+            "level": 3,
+            "text": "10.            State treatment of Muslims outside of Xinjiang"
+          },
+          {
+            "headers": [
+              {
+                "id": "internal-movement-and-restrictions",
+                "level": 4,
+                "text": "11.1         Internal movement and restrictions"
+              },
+              {
+                "id": "entry-and-exit",
+                "level": 4,
+                "text": "11.2         Entry and exit"
+              },
+              {
+                "id": "restrictions-of-those-outside-of-china",
+                "level": 4,
+                "text": "11.3         Restrictions of those outside of China"
+              }
+            ],
+            "id": "freedom-of-movement",
+            "level": 3,
+            "text": "11.            Freedom of movement"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "australian-strategic-policy-institute-aspi",
+                "level": 4,
+                "text": "Australian Strategic Policy Institute (ASPI),"
+              },
+              {
+                "id": "center-for-east-turkistan-national-interest-cetni",
+                "level": 4,
+                "text": "Center For East Turkistan National Interest (CETNI),"
+              },
+              {
+                "id": "chinese-human-rights-defenders-chrd",
+                "level": 4,
+                "text": "Chinese Human Rights Defenders (CHRD),"
+              },
+              {
+                "id": "congressional-executive-commission-on-china-cecc",
+                "level": 4,
+                "text": "Congressional Executive Commission on China (CECC),"
+              },
+              {
+                "id": "council-on-foreign-relations",
+                "level": 4,
+                "text": "Council on Foreign Relations,"
+              },
+              {
+                "id": "deutsche-welle-dw",
+                "level": 4,
+                "text": "Deutsche Welle (DW),"
+              },
+              {
+                "id": "the-diplomat",
+                "level": 4,
+                "text": "The Diplomat,"
+              },
+              {
+                "id": "human-rights-watch-hrw",
+                "level": 4,
+                "text": "Human Rights Watch (HRW),"
+              },
+              {
+                "id": "online-spiritual-atlas-of-the-global-east-osage",
+                "level": 4,
+                "text": "Online Spiritual Atlas of the Global East (OSAGE),"
+              },
+              {
+                "id": "pew-research-center",
+                "level": 4,
+                "text": "Pew Research Center,"
+              },
+              {
+                "id": "the-rights-practice",
+                "level": 4,
+                "text": "The Rights Practice,"
+              },
+              {
+                "id": "simon-skjodt-center-for-the-prevention-of-genocide-at-the-united-states-holocaust-memorial-museum",
+                "level": 4,
+                "text": "Simon-Skjodt Center for the Prevention of Genocide at the United States Holocaust Memorial Museum,"
+              },
+              {
+                "id": "un-office-of-the-high-commissioner-for-human-rights-ohchr",
+                "level": 4,
+                "text": "UN Office of the High Commissioner for Human Rights (OHCHR),"
+              },
+              {
+                "id": "us-state-department-ussd",
+                "level": 4,
+                "text": "US State Department (USSD),"
+              },
+              {
+                "id": "uyghur-human-rights-project-uhrp",
+                "level": 4,
+                "text": "Uyghur Human Rights Project (UHRP),"
+              },
+              {
+                "id": "uyghur-tribunal",
+                "level": 4,
+                "text": "Uyghur Tribunal,"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "ap-news",
+                "level": 4,
+                "text": "AP News,"
+              },
+              {
+                "id": "bitter-winter",
+                "level": 4,
+                "text": "Bitter Winter,"
+              },
+              {
+                "id": "international-consortium-of-investigative-journalists-icij",
+                "level": 4,
+                "text": "International Consortium of Investigative Journalists (ICIJ),"
+              },
+              {
+                "id": "radio-free-asia",
+                "level": 4,
+                "text": "Radio Free Asia,"
+              },
+              {
+                "id": "us-commission-on-international-religious-freedom-uscirf",
+                "level": 4,
+                "text": "US Commission on International Religious Freedom (USCIRF),"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-09-01T15:41:42.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2022-07-12T14:55:23+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+        "base_path": "/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+        "content_id": "c7b00ef8-3239-4231-919f-1087c9b06b5b",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-09-01T14:41:42Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: Muslims (including Uyghurs in Xinjiang), July 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/china-country-policy-and-information-notes/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/china-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/china-country-policy-and-information-notes",
+        "base_path": "/government/publications/china-country-policy-and-information-notes",
+        "content_id": "090fe8fa-d8d7-4c94-bb8e-d1ee82620469",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-09-01T14:41:42Z",
+        "schema_name": "publication",
+        "title": "China: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/china-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-09-01T15:41:42+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1788786616.976-10.13.22.105-3187",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: Muslims (including Uyghurs in Xinjiang), July 2025 (accessible)",
+  "updated_at": "2026-09-07T14:10:20+01:00",
+  "withdrawn_notice": {}
+}

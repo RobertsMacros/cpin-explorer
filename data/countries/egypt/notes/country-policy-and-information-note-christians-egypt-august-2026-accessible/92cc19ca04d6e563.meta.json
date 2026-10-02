@@ -1,0 +1,434 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+  "content_id": "b7db2528-c570-4a4d-9bea-4c957d146ad1",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "exclusion",
+            "level": 3,
+            "text": "2. Exclusion"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "3. Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "4. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "5. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "6. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "7. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "terminology",
+                "level": 4,
+                "text": "8.1 Terminology"
+              },
+              {
+                "id": "christian-community",
+                "level": 4,
+                "text": "8.2 Christian community"
+              },
+              {
+                "id": "demography",
+                "level": 4,
+                "text": "8.3 Demography"
+              }
+            ],
+            "id": "background",
+            "level": 3,
+            "text": "8. Background"
+          },
+          {
+            "headers": [
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "9.1 Constitution"
+              },
+              {
+                "id": "blasphemy-laws",
+                "level": 4,
+                "text": "9.2 Blasphemy laws"
+              },
+              {
+                "id": "conversion",
+                "level": 4,
+                "text": "9.3 Christian conversion and proselytising laws"
+              },
+              {
+                "id": "anti-discrimination-laws",
+                "level": 4,
+                "text": "9.4 Anti-discrimination laws"
+              },
+              {
+                "id": "hate-speech",
+                "level": 4,
+                "text": "9.5 Hate speech"
+              },
+              {
+                "id": "personal-status",
+                "level": 4,
+                "text": "9.6 Personal status and custody laws"
+              },
+              {
+                "id": "identity-cards",
+                "level": 4,
+                "text": "9.7 Identity cards"
+              },
+              {
+                "id": "building-law",
+                "level": 4,
+                "text": "9.8 Church building law"
+              }
+            ],
+            "id": "legal-framework",
+            "level": 3,
+            "text": "9. Legal framework"
+          },
+          {
+            "headers": [
+              {
+                "id": "state-attitude",
+                "level": 4,
+                "text": "10.1 State attitude"
+              },
+              {
+                "id": "state-policies",
+                "level": 4,
+                "text": "10.2 State policies and initiatives"
+              },
+              {
+                "id": "christians-in-public-life",
+                "level": 4,
+                "text": "10.3 Christians in public life"
+              },
+              {
+                "id": "arrests",
+                "level": 4,
+                "text": "10.4 Arrests, prosecutions and treatment in detention"
+              },
+              {
+                "id": "christian-converts",
+                "level": 4,
+                "text": "10.5 Christian converts"
+              },
+              {
+                "id": "church-building-law-practice",
+                "level": 4,
+                "text": "10.6 Church building law in practice"
+              },
+              {
+                "id": "state-media-and-social-media",
+                "level": 4,
+                "text": "10.7.5 State media and social media"
+              }
+            ],
+            "id": "state-treatment",
+            "level": 3,
+            "text": "10. State treatment"
+          },
+          {
+            "headers": [
+              {
+                "id": "societal-violence",
+                "level": 4,
+                "text": "11.1 Societal violence and discrimination"
+              },
+              {
+                "id": "hate-speech-1",
+                "level": 4,
+                "text": "11.2 Hate speech"
+              },
+              {
+                "id": "converts-from-islam",
+                "level": 4,
+                "text": "11.3 Converts from Islam"
+              },
+              {
+                "id": "interfaith-relationships",
+                "level": 4,
+                "text": "11.4 Interfaith relationships"
+              },
+              {
+                "id": "treatment-christian-women",
+                "level": 4,
+                "text": "11.5 Treatment of Christian women, disappearance, forced conversion and trafficking"
+              },
+              {
+                "id": "employment",
+                "level": 4,
+                "text": "11.6 Employment"
+              },
+              {
+                "id": "education",
+                "level": 4,
+                "text": "11.7 Education"
+              }
+            ],
+            "id": "societal-treatment",
+            "level": 3,
+            "text": "11. Societal treatment"
+          },
+          {
+            "headers": [
+              {
+                "id": "state-response",
+                "level": 4,
+                "text": "12.1 State response"
+              },
+              {
+                "id": "reconciliation-committees",
+                "level": 4,
+                "text": "12.2 Reconciliation committees"
+              }
+            ],
+            "id": "protection-1",
+            "level": 3,
+            "text": "12. Protection"
+          },
+          {
+            "headers": [
+              {
+                "id": "freedom-of-movement",
+                "level": 4,
+                "text": "13.1 Freedom of movement"
+              }
+            ],
+            "id": "internal-relocation-1",
+            "level": 3,
+            "text": "13. Internal relocation"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-08-14T12:08:53.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-08-14T12:08:54+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+        "base_path": "/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+        "content_id": "b7db2528-c570-4a4d-9bea-4c957d146ad1",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-08-14T11:08:53Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: Christians, Egypt, August 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/egypt-country-policy-and-information-notes/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/egypt-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/egypt-country-policy-and-information-notes",
+        "base_path": "/government/publications/egypt-country-policy-and-information-notes",
+        "content_id": "cf448642-6373-47e4-9d18-6b4c7a7a6fcf",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-08-14T11:08:53Z",
+        "schema_name": "publication",
+        "title": "Egypt: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/egypt-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-08-14T12:08:53+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1786705733.334-10.13.22.75-2431",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: Christians, Egypt, August 2026 (accessible)",
+  "updated_at": "2026-08-14T12:08:54+01:00",
+  "withdrawn_notice": {}
+}

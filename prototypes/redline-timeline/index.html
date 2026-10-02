@@ -1,0 +1,2143 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>CPIN Extractor — Revision timeline prototype</title>
+<!--
+  CPIN Extractor · revision slider + redline view toggle.
+  Real mode: index.html?country=<slug>&series=<key> (optionally &view=sbs) loads the verbatim GOV.UK
+  editions exported by `./cpin export` from ../data/series/ and compares pairs in a module Web Worker
+  (redline-worker.js, engine in ../shared/redline-diff.js). Note text is never altered; only image
+  sources are swapped for the mirrored copies at render time. Without a query the page shows the
+  synthetic "Ruritania" sample (all sample text is invented) and a chooser of real notes.
+  No CDN, no libraries: styles build on ../shared/theme.css (COBE look; Geist fonts self-hosted
+  in ../vendor/fonts/).
+  Branding: RM mark from Roberts-Macros-assets @ 95e38faf099249376af855cf509967aa2e93ac0c
+  (copied into ../../assets/roberts-macros/, see SOURCE.txt there).
+-->
+<script>
+  // Apply a stored theme before first paint so there is no flash.
+  try { var t = localStorage.getItem('cpinx-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="icon" href="../../assets/roberts-macros/image.png">
+<link rel="stylesheet" href="../shared/theme.css">
+<style>
+/* ===================================================================
+   Colour, type and motion tokens, the dark theme, and the .tag / .eyebrow /
+   .btn / kbd / .pop-in helpers come from ../shared/theme.css (the COBE look:
+   white page, one electric blue, square corners, Geist Sans for reading,
+   Geist Pixel and Geist Mono for chrome). This block adds layout tokens and
+   the prototype's own components only. No border-radius anywhere except the
+   round slider knobs.
+   =================================================================== */
+
+/* ===================================================================
+   1. Layout tokens
+   =================================================================== */
+:root {
+  --tb-h: 3.5rem;
+  --measure: 70ch;
+  --gutter: clamp(1rem, 2.4vw, 2.5rem);
+  --doc-fs: 1.05rem;
+  --doc-lh: 1.65;
+  /* Reading-column gutter, left to right: [number] gap [change bar] gap [text].
+     Numbers and bars live in separate fixed columns so they can never touch. */
+  --num-w: 3.9rem;      /* room for "10.12.13" */
+  --num-gap: .85rem;
+  --bar-w: 3px;
+  --bar-gap: .85rem;
+  --g-bar: calc(var(--bar-w) + var(--bar-gap));
+  --g-full: calc(var(--num-w) + var(--num-gap) + var(--bar-w) + var(--bar-gap));
+  --fns-pad: 1.7rem;
+  --hatch: color-mix(in oklab, var(--ink) 8%, transparent);
+  --shadow-pop: 0 16px 36px -18px rgb(16 24 40 / .34);
+  --rm-filter: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --rm-filter: brightness(1.85) saturate(.85); --shadow-pop: 0 16px 36px -14px rgb(0 0 0 / .75); }
+}
+:root[data-theme="dark"] { --rm-filter: brightness(1.85) saturate(.85); --shadow-pop: 0 16px 36px -14px rgb(0 0 0 / .75); }
+
+/* ===================================================================
+   2. Base
+   =================================================================== */
+html {
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--tb-h) + 1.5rem);
+  background: var(--bg);
+}
+body { overflow-x: hidden; }
+:focus { outline: none; }
+button { font: inherit; color: inherit; border-radius: 0; }
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.wrap { max-width: 124rem; margin: 0 auto; padding-inline: var(--gutter); }
+.spacer { flex: 1; }
+/* Hold the start frame during the stagger delay only; afterwards leave no filter or transform behind
+   (a lingering one would disturb the sticky toolbar's backdrop blur). */
+.pop-in { animation-fill-mode: backwards; }
+.pop-in.d1 { animation-delay: 60ms; }
+.pop-in.d2 { animation-delay: 120ms; }
+.pop-in.d3 { animation-delay: 180ms; }
+
+/* ===================================================================
+   3. App bar, buttons, notice
+   =================================================================== */
+.appbar { border-bottom: 1px solid var(--line); background: var(--bg); }
+.appbar .wrap { display: flex; align-items: center; gap: .9rem; min-height: 3.6rem; }
+.brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--ink); }
+.brand:hover { text-decoration: none; }
+.rm {
+  /* Crop the transparent padding round the RM mark (mark spans 354–1174 × 230–624 of 1536 × 1024). */
+  --w: 2.1rem;
+  position: relative; display: block; flex: none;
+  width: var(--w); height: calc(var(--w) * 394 / 820); overflow: hidden;
+}
+.rm img {
+  position: absolute; display: block;
+  width: calc(var(--w) * 1536 / 820); height: auto;
+  left: calc(var(--w) * -354 / 820); top: calc(var(--w) * -230 / 820);
+  filter: var(--rm-filter);
+}
+.brand-name { font-family: var(--font-pixel); font-size: .92rem; letter-spacing: .08em; text-transform: uppercase; line-height: 1; }
+.crumb { font-family: var(--font-mono); color: var(--ink-3); font-size: .74rem; padding-left: .9rem; border-left: 1px solid var(--line); }
+
+.btn {
+  white-space: nowrap; -webkit-tap-highlight-color: transparent;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease), opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn:disabled:hover { border-color: var(--line-strong); color: var(--ink); }
+.btn svg { width: 1.05em; height: 1.05em; flex: none; }
+.btn kbd { margin-left: .1rem; }
+
+.notice {
+  display: flex; gap: .75rem; align-items: center;
+  margin: 1rem 0 0; padding: .55rem .8rem;
+  border: 1px solid var(--line); background: var(--bg); color: var(--ink-2);
+  font-size: .8rem; line-height: 1.45;
+}
+.notice strong { color: var(--ink); font-weight: 600; }
+.notice .tag { flex: none; }
+
+/* ===================================================================
+   4. Timeline panel + revision slider
+   =================================================================== */
+.panel { background: var(--surface); border: 1px solid var(--line); }
+.timeline { margin: 1rem 0 0; padding: 1.15rem 1.3rem .9rem; }
+.tl-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(22rem, 36rem); gap: 1rem 2.6rem; align-items: start; }
+.tl-title { min-width: 0; }
+.tl-side { display: flex; flex-direction: column; gap: .9rem; min-width: 0; }
+.tl-side .tl-actions { justify-content: flex-end; }
+.tl-title .eyebrow { margin-bottom: .7rem; }
+.asat { display: flex; align-items: center; gap: .85rem; margin: 0; }
+.asat-label {
+  min-width: 4.7em; justify-content: center; font-size: .66rem;
+  transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+.asat-label.is-from { background: var(--surface); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+.asat .roller {
+  font-family: var(--font-pixel); font-size: clamp(2rem, 1.2rem + 1.7vw, 3.2rem); line-height: 1;
+  letter-spacing: .03em; text-transform: uppercase; color: var(--ink);
+}
+.tl-sub { margin: .6rem 0 0; color: var(--ink-2); font-size: .84rem; }
+.tl-sub b { font-family: var(--font-mono); font-weight: 500; font-size: .94em; color: var(--ink); }
+.tl-sub .note { color: var(--ink-3); }
+.tl-actions { display: flex; gap: .6rem; align-items: center; }
+.tl-hint { font-family: var(--font-mono); color: var(--ink-3); font-size: .72rem; display: flex; gap: .35rem; align-items: center; flex-wrap: wrap; }
+.play .i-pause { display: none; }
+.play[aria-pressed="true"] .i-play { display: none; }
+.play[aria-pressed="true"] .i-pause { display: block; }
+.play[aria-pressed="true"] { border-color: var(--blue); color: var(--blue); background: var(--blue-wash); }
+
+.rs { position: relative; margin-top: 1rem; padding: 0 1.4rem; user-select: none; -webkit-user-select: none; }
+.rs-inner { position: relative; --xa: 0; --xb: 1; height: 7.6rem; touch-action: pan-y; cursor: pointer; }
+/* The baseline sits at y = 5.4rem; bars stand on it, knobs and nodes are centred on it. */
+.rs-plot { position: absolute; left: 0; right: 0; top: 1.5rem; height: 3.9rem; }
+.rs-year { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1px solid var(--line); }
+.rs-year span {
+  position: absolute; top: -.1rem; left: .35rem; font-family: var(--font-pixel); font-size: .62rem;
+  letter-spacing: .06em; color: var(--ink-3); line-height: 1;
+}
+.rs-today { border-left: 1px dashed var(--blue-line); }
+.rs-today span { color: var(--blue); text-transform: uppercase; }
+.rs-range { /* the selected span: a blue progress bar along the baseline */
+  position: absolute; top: 1.5rem; height: calc(3.9rem + 1.5px);
+  left: calc(var(--xa) * 100%); width: calc((var(--xb) - var(--xa)) * 100%);
+  background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--blue) 11%, transparent));
+  border-bottom: 3px solid var(--blue);
+  pointer-events: none;
+}
+.rs-bar {
+  position: absolute; bottom: 2px; width: .6rem; margin-left: -.3rem;
+  height: max(.3rem, calc(var(--h) * 2.6rem));
+  border: 0; padding: 0; border-radius: 0;
+  background: color-mix(in oklab, var(--blue) 20%, var(--surface)); cursor: pointer;
+  transition: background-color var(--t) var(--ease), outline-color var(--t-fast) var(--ease), height var(--t-slow) var(--ease);
+  outline: 1px solid transparent; outline-offset: 2px;
+}
+.rs-bar.first { background: transparent; border: 1px dashed var(--blue-line); }
+.rs-bar.is-base { background: color-mix(in oklab, var(--blue) 55%, var(--surface)); }
+.rs-bar.in-range { background: var(--blue); }
+.rs-bar:hover { outline-color: var(--blue); }
+.rs-bar::after { /* tooltip: a blue COBE tag that pops in; line 2 is the edition's change sentence */
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + .55rem); z-index: 3;
+  transform: translate(-50%, .3rem) scale(.97); filter: blur(3px); opacity: 0;
+  white-space: pre-line; width: max-content; max-width: 23rem; text-align: left; pointer-events: none;
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: 0; line-height: 1.4;
+  padding: .42em .6em .38em; background: var(--blue); color: var(--blue-ink);
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+.rs-bar:hover::after, .rs-bar.tip::after { opacity: 1; transform: translate(-50%, 0); filter: none; }
+.rs-bar.edge-l::after { left: -.3rem; transform: translate(0, .3rem) scale(.97); }
+.rs-bar.edge-l:hover::after, .rs-bar.edge-l.tip::after { transform: none; }
+.rs-bar.edge-r::after { left: auto; right: -.3rem; transform: translate(0, .3rem) scale(.97); }
+.rs-bar.edge-r:hover::after, .rs-bar.edge-r.tip::after { transform: none; }
+main { overflow-x: clip; }
+.rs-base { position: absolute; left: 0; right: 0; top: calc(5.4rem - 1px); height: 2px; background: var(--line); }
+.rs-node {
+  position: absolute; top: 5.4rem; width: .5rem; height: .5rem; margin: -.25rem 0 0 -.25rem;
+  background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+  transition: background-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.rs-node.is-base { box-shadow: inset 0 0 0 1.5px var(--blue); }
+.rs-node.in-range { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue); }
+.rs-label {
+  position: absolute; top: 6.1rem; transform: translateX(-50%); text-align: center; white-space: nowrap;
+  font-family: var(--font-mono); font-size: .62rem; line-height: 1.3; letter-spacing: .02em;
+  color: var(--ink-3); cursor: pointer; transition: color var(--t) var(--ease);
+}
+.rs-label b { display: block; font-family: var(--font-pixel); font-weight: 400; font-size: .76rem; letter-spacing: .05em; color: var(--ink-2); margin-bottom: .1rem; }
+.rs-label.in-range b, .rs-label.is-base b { color: var(--blue); }
+.rs-label { transition: color var(--t) var(--ease), opacity var(--t) var(--ease); }
+.rs-label.crowded { opacity: 0; pointer-events: none; }
+
+.rs-handle {
+  position: absolute; top: 0; height: 6.05rem; width: 2.9rem; margin-left: -1.45rem;
+  left: calc(var(--x) * 100%);
+  touch-action: none; cursor: grab; z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+.rs-handle.old { --x: var(--xa); --hc: var(--blue-line); }
+.rs-handle.new { --x: var(--xb); --hc: var(--blue); }
+.rs-handle::before { /* the pole, from the flag down to the knob */
+  content: ""; position: absolute; left: 50%; top: 0; height: 5.4rem; width: 2px; margin-left: -1px;
+  background: var(--hc);
+}
+.rs-handle .knob {
+  position: absolute; left: 50%; top: 5.4rem; width: 1.05rem; height: 1.05rem; margin: -.525rem 0 0 -.525rem;
+  border-radius: 50%; border: 2px solid var(--blue); background: var(--surface);
+  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+.rs-handle.new .knob { background: var(--blue); }
+.rs-handle .flag { position: absolute; top: 0; font-size: .62rem; transition: transform var(--t-fast) var(--ease); }
+.rs-handle.old .flag { right: calc(50% - 1px); background: var(--surface); }
+.rs-handle.new .flag { left: calc(50% - 1px); }
+.rs-handle:hover .knob, .rs-handle.is-dragging .knob { transform: scale(1.15); box-shadow: 0 0 0 .4rem color-mix(in oklab, var(--blue) 16%, transparent); }
+.rs-handle.is-dragging { cursor: grabbing; }
+.rs-handle:focus-visible { outline: none; }
+.rs-handle:focus-visible .knob { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus); }
+.rs-handle:focus-visible .flag { outline: 2px solid var(--focus); outline-offset: 2px; }
+.rs.is-dragging .rs-inner { cursor: grabbing; }
+
+/* "What changed": the new edition's own change statement (verbatim, primary) and a computed line
+   from the diff (secondary, always shown). Old and new captions share one grid cell and crossfade. */
+.wc { display: grid; margin: .95rem 0 0; max-width: 64rem; }
+.wc-in { grid-area: 1 / 1; min-width: 0; }
+.wc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; margin: 0 0 .45rem; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }
+.wc-meta .tag { font-size: .6rem; }
+.wc-meta b { color: var(--ink); font-weight: 500; }
+.wc-note { color: var(--ink-3); }
+.wc-text { margin: 0; font-size: clamp(1.12rem, .96rem + .42vw, 1.45rem); line-height: 1.34; letter-spacing: -.012em; font-weight: 500; color: var(--ink); text-wrap: pretty; }
+.wc-text q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+.wc-text.none { color: var(--ink-3); font-weight: 400; }
+.wc-calc { margin: .5rem 0 0; display: flex; flex-wrap: wrap; gap: .3rem .55rem; align-items: baseline; font-family: var(--font-mono); font-size: .76rem; line-height: 1.5; color: var(--ink-2); }
+.wc-calc .tag { font-size: .55rem; transform: translateY(-.08em); }
+.wc-calc .ni { color: var(--ins); } .wc-calc .nd { color: var(--del); }
+.tag--calc { background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
+
+/* Change log: every edition, newest first, with its sentence; the slider and Play highlight it. */
+.clog .eyebrow { margin: 0 0 .5rem; font-size: .64rem; }
+.clog ol {
+  list-style: none; margin: 0; padding: 0; max-height: 11.2rem; overflow: auto; overscroll-behavior: contain;
+  border-top: 1px solid var(--line); scrollbar-width: thin; position: relative;
+}
+.clog li { margin: 0; }
+.clog button {
+  display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); gap: .12rem .7rem; width: 100%; text-align: left;
+  padding: .5rem .6rem .5rem .65rem; border: 0; border-bottom: 1px solid var(--line); border-left: 2px solid transparent;
+  background: none; cursor: pointer;
+  transition: background-color var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.clog button:hover { background: var(--sunken); }
+.clog button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.clog .cl-v { grid-row: 1 / span 2; font-family: var(--font-pixel); font-size: .78rem; letter-spacing: .05em; color: var(--ink-2); padding-top: .12rem; transition: color var(--t) var(--ease); }
+.clog .cl-m { display: flex; flex-wrap: wrap; gap: .2rem .45rem; align-items: center; font-family: var(--font-mono); font-size: .66rem; color: var(--ink-3); }
+.clog .cl-m .tag { font-size: .5rem; }
+.clog .cl-t {
+  font-size: .82rem; line-height: 1.4; color: var(--ink-2);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  transition: color var(--t) var(--ease);
+}
+.clog .cl-t.none { color: var(--ink-3); font-style: normal; }
+.clog li.in-range button { border-left-color: var(--blue-line); }
+.clog li.in-range .cl-v, .clog li.is-old .cl-v { color: var(--blue); }
+.clog li.is-new button { border-left-color: var(--blue); background: var(--blue-wash); }
+.clog li.is-new .cl-t { color: var(--ink); }
+
+/* Rolling digits ("number flow") */
+.roller { display: inline-flex; align-items: baseline; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.slot {
+  display: inline-block; height: 1.32em; line-height: 1.32em; overflow: hidden; vertical-align: bottom;
+  transition: width .32s var(--ease);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+}
+.slot .col { display: block; transform: translateY(calc(var(--i, 0) * -1.32em)); transition: transform .34s var(--ease); }
+.slot .col > span { display: block; height: 1.32em; white-space: pre; width: max-content; }
+.slot.fixed { -webkit-mask-image: none; mask-image: none; }
+.roller.instant .slot, .roller.instant .slot .col { transition: none; }
+
+/* ===================================================================
+   5. Sticky diff toolbar
+   =================================================================== */
+.toolbar {
+  position: sticky; top: 0; z-index: 20; margin-top: 1rem;
+  background: color-mix(in oklab, var(--bg) 96%, transparent);
+  -webkit-backdrop-filter: saturate(1.2) blur(16px); backdrop-filter: saturate(1.2) blur(16px);
+  border-block: 1px solid var(--line);
+  view-transition-name: toolbar;
+}
+.toolbar .wrap { display: flex; align-items: center; gap: .8rem 1.1rem; min-height: 3.5rem; padding-block: .5rem; flex-wrap: wrap; }
+.pair { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink-3); white-space: nowrap; }
+.pair svg { width: .9rem; height: .9rem; }
+.tag.ver { text-transform: none; }
+
+.seg {
+  position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; margin: 0; padding: 0; min-width: 0;
+  border: 1px solid var(--line-strong); background: var(--surface);
+}
+.seg legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label {
+  position: relative; z-index: 1; display: inline-flex; align-items: center; gap: .45rem; justify-content: center;
+  min-height: 2.3rem; padding: 0 .9rem;
+  font-family: var(--font-mono); font-size: .78rem; color: var(--ink-2); cursor: pointer; white-space: nowrap;
+  transition: color var(--t) var(--ease);
+}
+.seg label svg { width: 1rem; height: 1rem; flex: none; }
+.seg input:not(:checked):not(:disabled) + label:hover { color: var(--blue); }
+.seg input:checked + label { color: var(--blue-ink); }
+.seg input:focus-visible + label { outline: 2px solid var(--focus); outline-offset: 2px; }
+.seg input:disabled + label { color: var(--ink-3); cursor: not-allowed; opacity: .6; }
+.seg-thumb {
+  position: absolute; z-index: 0; top: 0; bottom: 0; left: 0; width: 50%;
+  background: var(--blue);
+  transition: transform var(--t) var(--ease);
+}
+.seg[data-mode="sbs"] .seg-thumb { transform: translateX(100%); }
+/* While a view transition runs, its overlay would swallow clicks (e.g. a quick second toggle). */
+::view-transition { pointer-events: none; }
+.seg-note { font-family: var(--font-mono); font-size: .7rem; color: var(--ink-3); max-width: 15rem; line-height: 1.35; display: none; }
+.is-narrow .seg-note { display: block; }
+
+.stats { display: inline-flex; align-items: baseline; gap: .45rem; font-family: var(--font-mono); font-size: .78rem; color: var(--ink-2); white-space: nowrap; }
+.stat { display: inline-flex; align-items: baseline; font-weight: 500; padding: .08rem .35rem; }
+.stat.ins { color: var(--ins); background: var(--ins-wash); text-decoration: underline; text-decoration-color: var(--ins); text-underline-offset: .2em; }
+.stat.del { color: var(--del); background: var(--del-wash); text-decoration: line-through; text-decoration-color: var(--del); }
+.stats .dot { color: var(--ink-3); }
+.nav { display: inline-flex; align-items: center; gap: .45rem; margin-left: auto; }
+.nav .pos { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-3); min-width: 8.6em; text-align: right; }
+.legend { display: inline-flex; gap: .5rem; align-items: center; font-family: var(--font-mono); font-size: .72rem; }
+
+/* ===================================================================
+   6. Layout: contents | document | change minimap
+   =================================================================== */
+.layout {
+  display: grid; gap: 2.5rem; align-items: start;
+  grid-template-columns: 14rem minmax(0, 1fr) 3.4rem;
+  padding-block: 1.8rem 6rem;
+}
+.toc, .minimap { position: sticky; top: calc(var(--tb-h) + 1.4rem); }
+.toc { font-size: .8rem; max-height: calc(100vh - var(--tb-h) - 3rem); overflow: auto; padding-right: .3rem; }
+.toc .eyebrow { margin: 0 0 .7rem; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.toc li { margin: 0; }
+.toc a {
+  display: flex; align-items: center; gap: .5rem; padding: .34rem .6rem; margin-left: -1px;
+  border-left: 2px solid transparent; color: var(--ink-2); line-height: 1.3;
+  transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+}
+.toc a:hover { color: var(--ink); background: var(--sunken); text-decoration: none; }
+.toc a.is-active { color: var(--blue); border-left-color: var(--blue); background: var(--blue-wash); }
+.toc li.l3 a { padding-left: 1.25rem; font-size: .77rem; }
+.toc .cnt {
+  margin-left: auto; min-width: 1.45rem; text-align: center;
+  font-family: var(--font-pixel); font-size: .62rem; line-height: 1; letter-spacing: .04em;
+  padding: .32em .4em .28em; background: var(--blue); color: var(--blue-ink);
+}
+.toc .rm-sec { text-decoration: line-through; text-decoration-color: var(--del); }
+.minimap { height: calc(100vh - var(--tb-h) - 3rem); }
+.mm-cap { font-family: var(--font-pixel); font-size: .56rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); text-align: center; margin-bottom: .5rem; }
+.mm-track { position: relative; height: 100%; width: 100%; background: var(--sunken); border: 1px solid var(--line); overflow: hidden; }
+.mm-view { position: absolute; left: 0; right: 0; background: var(--blue-wash); border-block: 1px solid var(--blue-line); pointer-events: none; transition: top .12s linear, height .12s linear; }
+.mm-mark {
+  position: absolute; left: .75rem; right: .75rem; min-height: 4px; border: 0; padding: 0; border-radius: 0; cursor: pointer; opacity: .8;
+  outline: 2px solid transparent; outline-offset: 2px;
+  transition: opacity var(--t) var(--ease), outline-color var(--t) var(--ease);
+}
+.mm-mark:hover, .mm-mark.is-current { opacity: 1; }
+.mm-mark.add { background: var(--ins); }
+.mm-mark.del { background: repeating-linear-gradient(135deg, var(--del) 0 2px, transparent 2px 4px); box-shadow: inset 0 0 0 1px var(--del); }
+.mm-mark.mod { background: var(--blue); }
+.mm-mark.is-current { outline-color: var(--blue); }
+
+/* ===================================================================
+   7. Document + redline
+   =================================================================== */
+.docwrap { min-width: 0; }
+.doc {
+  margin: 0 auto; max-width: calc(var(--measure) + var(--g-full)); padding-left: var(--g-full);
+  font-family: var(--font-text); font-size: var(--doc-fs); line-height: var(--doc-lh); color: var(--ink); letter-spacing: 0;
+  transition: max-width .4s var(--ease);
+}
+.doc.sbs-mode { max-width: none; padding-left: 0; }
+.doc a { text-decoration: underline; text-decoration-color: var(--blue-line); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.doc a:hover { text-decoration-color: currentColor; }
+.doc-head { margin-bottom: 2rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 1rem 2rem; align-items: end; }
+.doc-head .eyebrow { margin: 0 0 .75rem; }
+.doc-head h1 { margin: 0; font-size: 2.05rem; line-height: 1.12; letter-spacing: -.028em; font-weight: 600; text-wrap: balance; }
+.vbox {
+  font-family: var(--font-mono); font-size: .74rem; line-height: 1.5; color: var(--ink-2);
+  border: 1px solid var(--line-strong); padding: .6rem .8rem .55rem; background: var(--surface); min-width: 10rem;
+}
+.vbox .v { display: flex; width: max-content; margin-bottom: .45rem; font-size: .66rem; }
+.vbox .was { display: block; color: var(--ink-3); }
+.doc h2 { font-size: 1.42rem; line-height: 1.25; font-weight: 600; letter-spacing: -.02em; margin: 2.6rem 0 .9rem; }
+.doc h3 { font-size: 1.1rem; line-height: 1.35; font-weight: 600; letter-spacing: -.01em; margin: 1.9rem 0 .6rem; }
+.doc p { margin: 0 0 1rem; }
+.doc .np { position: relative; }
+/* Paragraph numbers: right-aligned in their own column, clear of the change bar. */
+.pnum {
+  position: absolute; top: .08rem; left: calc(-1 * var(--g-full)); width: var(--num-w);
+  display: flex; flex-direction: column; align-items: flex-end; text-align: right;
+  font-family: var(--font-mono); font-size: .72rem; line-height: calc(var(--doc-fs) * var(--doc-lh));
+  color: var(--ink-3); font-variant-numeric: tabular-nums; letter-spacing: 0; white-space: nowrap;
+}
+.pnum ins, .pnum del { line-height: 1.5; }
+.doc ul { margin: 0 0 1rem; padding-left: 1.3rem; list-style: square; }
+.doc li { margin: .3rem 0; padding-left: .25rem; }
+.doc ul > li::marker { color: var(--blue); }
+.doc blockquote { margin: 1.2rem 0 1.4rem; padding: .1rem 0 .1rem 1.2rem; border-left: 2px solid var(--line-strong); color: var(--ink-2); }
+.doc blockquote p { margin: 0 0 .45rem; }
+.doc blockquote footer { font-family: var(--font-mono); font-size: .74rem; color: var(--ink-3); }
+.doc sup { line-height: 0; font-size: .66em; font-family: var(--font-mono); font-weight: 500; }
+.doc sup a { text-decoration: none; padding: 0 .1em; }
+.doc a.ext::after { content: "\2197"; font-family: var(--font-mono); font-size: .72em; margin-left: .12em; text-decoration: none; display: inline-block; opacity: .7; }
+.tbl { margin: 1.3rem 0 1.5rem; }
+.tbl figcaption { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); margin-bottom: .55rem; }
+.tbl-scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+.doc table { border-collapse: collapse; width: 100%; font-size: .86rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.doc th, .doc td { text-align: left; padding: .5rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.doc th { font-family: var(--font-pixel); font-weight: 400; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); background: var(--sunken); }
+.doc tr:last-child td { border-bottom: 0; }
+.fns { font-size: .86rem; line-height: 1.55; color: var(--ink-2); padding-left: var(--fns-pad); margin: 0; }
+.fns li { margin: .35rem 0; padding-left: .2rem; }
+.fns li::marker { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-3); }
+
+/* Inline redline: never colour alone — strike-through for deletions, underline for insertions. */
+ins, del { padding: .02em .1em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+ins { background: var(--ins-wash); color: var(--ins); text-decoration: underline; text-decoration-color: var(--ins); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+del { background: var(--del-wash); color: var(--del); text-decoration: line-through; text-decoration-color: var(--del); text-decoration-thickness: .08em; }
+del + ins { margin-left: .12em; }
+a ins, a del { color: inherit; }
+ins::before, ins::after, del::before, del::after {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(100%); white-space: nowrap;
+}
+ins::before { content: " [inserted: "; } ins::after { content: " ] "; }
+del::before { content: " [deleted: "; } del::after { content: " ] "; }
+
+/* Block-level change bars (legal-style): changed = blue, added = solid blue, removed = dotted red. */
+.chg { position: relative; scroll-margin-block: calc(var(--tb-h) + 2rem); transition: box-shadow var(--t) var(--ease), background-color var(--t) var(--ease); }
+.doc .chg::before {
+  content: ""; position: absolute; left: calc(-1 * (var(--g-bar) + var(--ind, 0rem))); top: .25em; bottom: .25em; width: var(--bar-w);
+  background: var(--bar, var(--blue));
+}
+.chg.is-mod { --bar: var(--blue); }
+.chg.is-added { --bar: var(--ins); }
+.chg.is-removed { --bar: repeating-linear-gradient(to bottom, var(--del) 0 3px, transparent 3px 6px); }
+.doc .fns > li.chg::before { left: calc(-1 * (var(--fns-pad) + var(--g-bar))); } /* past the footnote markers */
+/* Added / Removed / link changed: square pixel tags. */
+.badge { margin-left: .45rem; vertical-align: .16em; font-size: .58rem; }
+.tag--ins { background: var(--ins); color: var(--bg); }
+.tag--del { background: var(--del); color: var(--bg); }
+.chg.is-current { background: var(--blue-wash); box-shadow: 0 0 0 .5rem var(--blue-wash), 0 0 0 calc(.5rem + 1px) var(--blue-line); }
+.chg.pulse { animation: pulse 1s var(--ease) 1; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 .5rem var(--blue-wash), 0 0 0 calc(.5rem + 1px) var(--blue), 0 0 0 .5rem color-mix(in oklab, var(--blue) 24%, transparent); }
+  100% { box-shadow: 0 0 0 .5rem var(--blue-wash), 0 0 0 calc(.5rem + 1px) var(--blue-line), 0 0 0 1.5rem transparent; }
+}
+
+/* Link-changed marker */
+.lc { position: relative; margin-left: .35rem; vertical-align: .14em; font-size: .58rem; cursor: help; }
+.lc svg { width: 1.05em; height: 1.05em; }
+.lc-tip {
+  position: absolute; z-index: 30; bottom: calc(100% + .55rem); left: 50%; width: max-content; max-width: min(26rem, 86vw);
+  transform: translate(calc(-50% + var(--shift, 0px)), .3rem) scale(.98); filter: blur(4px); opacity: 0; pointer-events: none;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line-strong); box-shadow: var(--shadow-pop);
+  padding: .6rem .75rem; font-family: var(--font-text); font-size: .78rem; font-weight: 400; letter-spacing: 0; text-transform: none;
+  line-height: 1.45; white-space: normal; text-align: left;
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+.lc-tip b { display: block; font-family: var(--font-pixel); font-weight: 400; font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: .35rem; }
+.lc-tip del, .lc-tip ins { font-family: var(--font-mono); font-size: .92em; word-break: break-all; }
+.lc-tip .arrow { color: var(--ink-3); margin: 0 .25rem; }
+.lc:hover .lc-tip, .lc:focus .lc-tip, .lc:focus-within .lc-tip { opacity: 1; transform: translate(calc(-50% + var(--shift, 0px)), 0); filter: none; }
+
+/* Side-by-side: each cell keeps the same gutter, [number] gap [bar] gap [text]. */
+.sbs { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; }
+.sbs-head {
+  position: sticky; top: var(--tb-h); z-index: 5; grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem;
+  background: var(--bg);
+  padding: .6rem 0; border-bottom: 1px solid var(--line); margin-bottom: 1rem;
+  font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2);
+}
+.sbs-head > span { display: flex; align-items: center; gap: .55rem; padding-left: var(--g-full); min-width: 0; white-space: nowrap; }
+.sbs-head b { color: var(--ink); font-weight: 500; }
+.sbs-row { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; margin-bottom: 1rem; }
+.sbs-row:has(> .sbs-cell > h2) { margin-top: 1.9rem; }
+.sbs-row:has(> .sbs-cell > h3) { margin-top: 1.2rem; }
+.sbs-cell { position: relative; min-width: 0; max-width: calc(64ch + var(--g-full)); padding-left: var(--g-full); }
+.sbs-cell > :first-child { margin-top: 0; }
+.sbs-cell > :last-child { margin-bottom: 0; }
+.sbs-row.chg { padding-block: .45rem; }
+.doc .sbs-row.chg::before { content: none; }
+.sbs-row.chg > .sbs-cell:not(.empty)::before {
+  content: ""; position: absolute; left: calc(var(--num-w) + var(--num-gap)); top: .25em; bottom: .25em; width: var(--bar-w);
+  background: var(--bar, var(--blue));
+}
+.sbs-row > .sbs-cell.empty { background: repeating-linear-gradient(135deg, var(--hatch) 0 6px, transparent 6px 12px); background-clip: content-box; min-height: 1.6rem; }
+
+/* ===================================================================
+   7b. Real notes: verbatim GOV.UK govspeak bodies
+   =================================================================== */
+/* Long documents: top-level chunks skip rendering while off screen. Each chunk reaches into the
+   gutter (padding) so change bars and paragraph numbers are inside its paint box, and is always its
+   own formatting context so toggling containment never moves anything. */
+.doc .cv {
+  display: flow-root; content-visibility: auto;
+  margin: -.6rem -.75rem -.6rem calc(-1 * var(--g-full)); padding: .6rem .75rem .6rem var(--g-full);
+}
+.doc .cv.warm, .doc .cv:hover, .doc .cv:focus-within { content-visibility: visible; }
+.doc .sbs-row { content-visibility: auto; }
+.doc .sbs-row.warm, .doc .sbs-row:hover, .doc .sbs-row:focus-within { content-visibility: visible; }
+.doc .rl-anon { margin: 0 0 1rem; }
+.doc h4 { font-size: 1.02rem; line-height: 1.4; font-weight: 600; margin: 1.6rem 0 .5rem; }
+.doc h5, .doc h6 { font-size: .95rem; font-weight: 600; margin: 1.3rem 0 .4rem; }
+.doc.real ul, .doc.real ol { margin: 0 0 1rem; padding-left: 1.4rem; }
+.doc.real li { padding-left: 0; margin: .3rem 0; }
+.doc.real li > p { margin: 0 0 .4rem; }
+.doc.real li > p:last-child { margin-bottom: 0; }
+.doc ol > li::marker { font-family: var(--font-mono); font-size: .8em; color: var(--ink-3); }
+.doc.real blockquote { margin: 1.2rem 0 1.4rem; padding: .1rem 0 .1rem 1.2rem; border-left: 2px solid var(--line-strong); color: var(--ink-2); }
+.doc dd { margin-left: 1.4rem; }
+.doc .info-notice, .doc .call-to-action, .doc .help-notice {
+  margin: 0 0 1.4rem; padding: .55rem .9rem; border: 1px solid var(--line); background: var(--sunken);
+  font-family: var(--font-mono); font-size: .8rem; line-height: 1.5; color: var(--ink-2);
+}
+.doc .info-notice p, .doc .call-to-action p { margin: 0; }
+.doc .info-notice p + p, .doc .call-to-action p + p { margin-top: .4rem; }
+.doc .address { margin: 0 0 1.2rem; padding: .55rem .9rem; border: 1px solid var(--line); font-size: .92rem; }
+.doc .address p { margin: 0; }
+.doc .footnotes { margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.doc .footnotes::before { content: "Footnotes"; display: block; margin-bottom: .8rem; font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+.doc .footnotes ol { font-size: .86rem; line-height: 1.55; color: var(--ink-2); }
+.doc .footnotes li > p { margin: 0; }
+.doc .footnotes a[role="doc-backlink"], .doc .footnotes .reversefootnote { text-decoration: none; }
+.doc.real .tbl-scroll { margin: 1.2rem 0 1.5rem; }
+.doc.real table th { text-transform: none; letter-spacing: .04em; font-size: .7rem; }
+.doc.real table p { margin: 0 0 .4rem; }
+.doc.real table p:last-child { margin: 0; }
+/* Table rows: the change bar sits in the first cell; the current row is washed blue. */
+.doc tr.chg > :first-child { position: relative; }
+.doc tr.chg > :first-child::before {
+  content: ""; position: absolute; left: .25rem; top: .45em; bottom: .45em; width: var(--bar-w); background: var(--bar, var(--blue));
+}
+.doc tr.chg.is-current { box-shadow: none; background: none; }
+.doc tr.chg.is-current > * { background: var(--blue-wash); }
+.doc tr.chg.pulse { animation: none; }
+/* Figures: charts and maps are drawn for white paper, so they keep a white plate in dark mode too. */
+.doc figure.image, .doc.real figure { margin: 1.4rem 0 1.6rem; }
+.doc figure img { display: block; max-width: 100%; height: auto; background: #fff; padding: .5rem; border: 1px solid var(--line); }
+.doc figure figcaption { margin-top: .5rem; font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); }
+.doc figure figcaption p { margin: 0; }
+.doc ins:has(> img), .doc del:has(> img) { display: inline-block; padding: 0; background: none; }
+.doc del img { opacity: .5; outline: 2px dashed var(--del); outline-offset: 2px; }
+.doc ins img { outline: 2px solid var(--ins); outline-offset: 2px; }
+/* Paragraph numbers that lead the verbatim text hang in the number column (text order unchanged). */
+.doc p.np { position: relative; }
+.doc .pn {
+  position: absolute; top: .08rem; left: calc(-1 * var(--g-full)); width: var(--num-w);
+  display: flex; flex-direction: column; align-items: flex-end; text-align: right;
+  font-family: var(--font-mono); font-size: .72rem; line-height: calc(var(--doc-fs) * var(--doc-lh));
+  color: var(--ink-3); font-variant-numeric: tabular-nums; letter-spacing: 0; white-space: nowrap;
+}
+.doc .pn ins, .doc .pn del { line-height: 1.5; }
+.doc .sbs-row[data-h="2"] { margin-top: 1.9rem; }
+.doc .sbs-row[data-h="3"] { margin-top: 1.2rem; }
+.doc .sbs-cell > .tbl-scroll:first-child { margin-top: 0; }
+.doc .sbs-cell > .footnotes { margin: 0; padding: 0; border: 0; }
+.doc .sbs-cell > .footnotes::before { content: none; }
+.doc .sbs-cell > ul, .doc .sbs-cell > ol, .doc .sbs-cell > .footnotes > ol { margin: 0; }
+
+/* Edition provenance in the document header */
+.prov { margin: 0; display: grid; gap: .45rem; font-family: var(--font-mono); font-size: .74rem; line-height: 1.45; color: var(--ink-2); }
+.prov > div { display: grid; grid-template-columns: 3.4rem 1fr; gap: .6rem; align-items: baseline; }
+.prov dt { margin: 0; }
+.prov dt .tag { font-size: .6rem; }
+.prov dd { margin: 0; }
+.prov b { color: var(--ink); font-weight: 500; }
+.prov .sep { color: var(--ink-3); margin: 0 .3rem; }
+.prov a { white-space: nowrap; }
+.doc-head.real { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; }
+.doc-head.real .prov { padding-top: .2rem; }
+.back { font-family: var(--font-mono); font-size: .74rem; color: var(--blue); padding-left: .9rem; border-left: 1px solid var(--line); white-space: nowrap; }
+
+/* Comparing… state: the old redline dims, a thin blue bar fills under the toolbar. */
+.doc { transition: max-width .4s var(--ease), opacity var(--t) var(--ease), filter var(--t) var(--ease); }
+.doc.is-busy { opacity: .42; filter: saturate(.6); }
+.busy-bar {
+  position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--blue);
+  transform-origin: 0 50%; transform: scaleX(var(--f, 0)); opacity: 0;
+  transition: transform .35s var(--ease), opacity .3s var(--ease);
+  pointer-events: none;
+}
+.toolbar.is-busy .busy-bar { opacity: 1; }
+.loading { padding: 3rem 0; font-family: var(--font-mono); font-size: .8rem; color: var(--ink-3); }
+.loading .tag { margin-right: .6rem; }
+.load-error { margin: 2rem 0; padding: 1rem 1.1rem; border: 1px solid var(--line-strong); font-size: .9rem; }
+
+/* Sample mode: a quiet chooser for real notes */
+.chooser { display: inline-flex; align-items: center; gap: .5rem; margin-left: auto; flex: none; }
+.chooser select {
+  font: inherit; font-family: var(--font-mono); font-size: .74rem; color: var(--ink); max-width: 22rem;
+  border: 1px solid var(--line-strong); border-radius: 0; background: var(--surface); padding: .3rem .5rem; cursor: pointer;
+}
+.chooser select:hover { border-color: var(--blue); }
+
+/* ===================================================================
+   8. Motion
+   =================================================================== */
+::view-transition-old(root) { animation: vt-out .3s var(--ease) both; }
+::view-transition-new(root) { animation: vt-in .3s var(--ease) both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; filter: blur(3px); } }
+::view-transition-group(toolbar) { animation: none; }
+::view-transition-old(toolbar) { display: none; }
+::view-transition-new(toolbar) { animation: none; }
+.theme-fade, .theme-fade * { transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease) !important; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0s !important; animation-duration: 0s !important; animation-iteration-count: 1 !important; }
+  .pop-in { animation-delay: 0s !important; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}
+
+/* ===================================================================
+   9. Responsive
+   =================================================================== */
+@media (max-width: 1399px) {
+  .layout { grid-template-columns: minmax(0, 1fr) 3rem; }
+  .toc { display: none; }
+}
+@media (max-width: 1100px) {
+  .legend { display: none; }
+  .tl-head { grid-template-columns: minmax(0, 1fr); }
+  .tl-side .tl-actions { justify-content: flex-start; }
+  .clog ol { max-height: 11rem; }
+}
+@media (max-width: 899px) {
+  :root { --bar-gap: .8rem; }
+  .layout { grid-template-columns: minmax(0, 1fr); padding-top: 1.3rem; }
+  .minimap { display: none; }
+  /* Phones: no room for a number column. The bar keeps its own strip at the left and the
+     number leads the paragraph text, so the two stay a full gap apart. */
+  .doc { padding-left: var(--g-bar); max-width: none; }
+  .pnum, .doc .pn { position: static; display: inline; width: auto; margin-right: .55rem; line-height: inherit; }
+  .doc .cv { margin-left: calc(-1 * var(--g-bar)); padding-left: var(--g-bar); }
+  .back { padding-left: 0; border-left: 0; }
+  .crumb { display: none; }
+  .nav { margin-left: 0; width: 100%; justify-content: space-between; }
+  .nav .btn, .btn { min-height: max(44px, 2.75rem); min-width: max(44px, 2.75rem); }
+  .nav .pos { text-align: left; order: -1; }
+  .seg label { min-height: max(44px, 2.75rem); min-width: 44px; }
+  .seg-note { display: block; flex-basis: 100%; max-width: none; margin-top: -.4rem; }
+  .doc-head { grid-template-columns: 1fr; }
+  .doc-head h1 { font-size: 1.65rem; }
+}
+@media (max-width: 599px) {
+  :root { --doc-fs: 1.02rem; }
+  .timeline { padding: .9rem .8rem .7rem; }
+  .rs { padding: 0 .9rem; }
+  .rs-label .d { display: none; }
+  .rs-year span { font-size: .56rem; left: .2rem; }
+  .rs-today span { display: none; }
+  .tl-hint { display: none; }
+  .kbd-hint { display: none; }
+  .btn .lbl { display: none; }
+  .play .lbl { display: inline; }
+  .seg label .lbl-long { display: none; }
+  .seg label { padding: 0 .8rem; }
+  .notice { align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<header class="appbar">
+  <div class="wrap">
+    <a class="brand" href="#top" id="top">
+      <span class="rm"><img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="1536" height="1024"></span>
+      <span class="brand-name">CPIN Extractor</span>
+    </a>
+    <span class="crumb" id="crumb">Prototype · revision timeline &amp; redline</span>
+    <span class="spacer"></span>
+    <button class="btn" id="themeBtn" type="button" aria-label="Colour theme: follow system">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3.5" y="3.5" width="13" height="13"/><path d="M10 3.5h6.5v13H10z" fill="currentColor"/></svg>
+      <span class="lbl" id="themeLbl">Auto</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="notice pop-in" role="note" id="notice">
+      <span class="tag tag--muted" aria-hidden="true">Sample</span>
+      <span><strong>Illustrative sample text — not Home Office content.</strong> “Ruritania” is fictional; every sentence, figure, date and source below is invented for this prototype.</span>
+      <label class="chooser" id="chooser" hidden><span class="sr-only">Open a real note</span><select id="chooserSel"><option value="">Open a real note…</option></select></label>
+    </div>
+
+    <section class="panel timeline pop-in d1" aria-labelledby="tlTitle">
+      <div class="tl-head">
+        <div class="tl-title">
+          <h2 class="eyebrow" id="tlTitle">Version history · drag the handles to compare</h2>
+          <p class="asat"><span class="asat-label tag" id="asatLabel">As at</span><span class="roller" id="asat" aria-hidden="true"></span><span class="sr-only" id="asatSr" aria-live="polite"></span></p>
+          <div class="wc" id="wc" aria-live="polite" aria-atomic="true"></div>
+          <p class="tl-sub" id="cmpDesc"></p>
+        </div>
+        <div class="tl-side">
+        <div class="tl-actions">
+          <span class="tl-hint"><kbd>←</kbd><kbd>→</kbd> move · <kbd>Home</kbd><kbd>End</kbd></span>
+          <button class="btn play" id="playBtn" type="button" aria-pressed="false">
+            <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.5 4.5v11l9-5.5z" fill="currentColor"/></svg>
+            <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="4.5" width="3" height="11" fill="currentColor"/><rect x="11.5" y="4.5" width="3" height="11" fill="currentColor"/></svg>
+            <span class="lbl" id="playLbl">Play history</span>
+          </button>
+        </div>
+        <div class="clog" id="clogWrap" hidden>
+          <h3 class="eyebrow" id="clogTitle">Change log · newest first</h3>
+          <ol id="clog" aria-labelledby="clogTitle"></ol>
+        </div>
+        </div>
+      </div>
+      <div class="rs" id="rs">
+        <div class="rs-inner" id="rsInner">
+          <div class="rs-plot" id="rsPlot"></div>
+          <div class="rs-range" aria-hidden="true"></div>
+          <div class="rs-base" aria-hidden="true"></div>
+          <div id="rsNodes" aria-hidden="true"></div>
+          <div class="rs-handle old" id="hOld" role="slider" tabindex="0" aria-label="Old version (compare from)" aria-valuemin="1" aria-valuemax="6" aria-valuenow="1"><span class="flag tag tag--outline">Old</span><span class="knob"></span></div>
+          <div class="rs-handle new" id="hNew" role="slider" tabindex="0" aria-label="New version (as at)" aria-valuemin="1" aria-valuemax="6" aria-valuenow="2"><span class="flag tag">New</span><span class="knob"></span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toolbar pop-in d2" id="toolbar">
+    <span class="busy-bar" id="busyBar" aria-hidden="true"></span>
+    <div class="wrap">
+      <span class="pair" id="pair"></span>
+      <fieldset class="seg" id="seg" data-mode="inline" role="radiogroup" aria-label="Diff view">
+        <legend>Diff view</legend>
+        <span class="seg-thumb" aria-hidden="true"></span>
+        <input type="radio" name="mode" id="mInline" value="inline" checked>
+        <label for="mInline"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h8"/></svg>Inline</label>
+        <input type="radio" name="mode" id="mSbs" value="sbs">
+        <label for="mSbs"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="14" height="12"/><path d="M10 4v12"/></svg><span class="lbl-long">Side-by-side</span><span class="sr-only">Side-by-side</span></label>
+      </fieldset>
+      <span class="seg-note" id="segNote">Side-by-side needs a wider screen; showing inline.</span>
+      <span class="stats" id="stats" aria-hidden="true">
+        <span class="stat ins">+<span class="roller" id="rIns"></span></span>
+        <span class="stat del">−<span class="roller" id="rDel"></span></span>
+        <span>words</span><span class="dot">·</span>
+        <span><span class="roller" id="rChg"></span> <span id="chgWord">changes</span></span>
+      </span>
+      <span class="sr-only" id="statsSr" aria-live="polite"></span>
+      <span class="legend" aria-hidden="true"><ins>inserted</ins><del>deleted</del></span>
+      <span class="nav">
+        <span class="pos" id="pos" aria-live="polite"></span>
+        <button class="btn" id="prevBtn" type="button" aria-keyshortcuts="k" title="Previous change (k)">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12.5l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lbl">Previous</span><kbd class="kbd-hint">k</kbd>
+        </button>
+        <button class="btn" id="nextBtn" type="button" aria-keyshortcuts="j" title="Next change (j)">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 7.5l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lbl">Next change</span><kbd class="kbd-hint">j</kbd>
+        </button>
+      </span>
+    </div>
+  </div>
+
+  <div class="wrap layout pop-in d3" id="layout">
+    <nav class="toc" aria-label="On this page"><p class="eyebrow">On this page</p><ol id="toc"></ol></nav>
+    <div class="docwrap"><article class="doc" id="doc" aria-live="off"></article></div>
+    <aside class="minimap" aria-hidden="true"><div class="mm-cap">Changes</div><div class="mm-track" id="mm"><div class="mm-view" id="mmView"></div></div></aside>
+  </div>
+</main>
+
+<script>
+'use strict';
+/* Two modes:
+   - real:   ?country=<slug>&series=<key> loads ../data/series/<slug>/<key with ':' → '--'>.json
+             (verbatim GOV.UK bodies, oldest first) and diffs pairs in a module Web Worker
+             (../shared/redline-diff.js).
+   - sample: no query → the synthetic "Ruritania" demo below, plus a chooser for real notes. */
+const QS = new URLSearchParams(location.search);
+const REAL = QS.has('country') && QS.has('series');
+const REAL_COUNTRY = REAL ? QS.get('country') : null, REAL_SERIES = REAL ? QS.get('series') : null;
+const START_VIEW = QS.get('view') === 'sbs' ? 'sbs' : 'inline';   // optional deep link: &view=sbs
+/* =====================================================================
+   SYNTHETIC SAMPLE DATA — invented placeholder prose about a fictional
+   country. Not Home Office content. Real versions come from the scraper.
+   ===================================================================== */
+const fr = n => `<sup class="fnref"><a href="#fn-${n}" aria-label="Footnote ${n}">${n}</a></sup>`;
+const ext = (href, text) => `<a class="ext" href="${href}" target="_blank" rel="noopener">${text}</a>`;
+const H2 = (id, html) => ({ t: 'h2', id, html });
+const H3 = (id, html) => ({ t: 'h3', id, html });
+const P = (num, html) => ({ t: 'p', id: 'p-' + num, num, html });
+const PU = (id, html) => ({ t: 'p', id, html });
+const UL = (id, items) => ({ t: 'ul', id, items: items.map(([id, html]) => ({ id, html })) });
+const Q = (id, html, cite) => ({ t: 'quote', id, html, cite });
+const TB = (id, caption, head, rows) => ({ t: 'table', id, caption, head, rows: rows.map(([id, ...cells]) => ({ id, cells })) });
+const FN = (n, html) => ({ t: 'fn', id: 'fn-' + n, n, html });
+
+const EMG = 'Example Monitoring Group (fictional)';
+const V1 = [
+  H2('s-exec', 'Executive summary'),
+  PU('exec-1', 'This sample note describes a fictional situation in Ruritania, a country invented for this prototype. The text is placeholder prose used only to show how changes between versions will be displayed.'),
+  PU('exec-2', 'In general, a person in the sample group is <strong>unlikely</strong> to face the example risk described here. Each claim must be considered on its individual facts.'),
+  H2('s-assess', 'Assessment'),
+  H3('s-1', '1. Introduction'),
+  P('1.1.1', 'This section sets out placeholder guidance for readers handling claims based on an example theme. It should be read alongside the <a href="#s-3">country information</a> in this note.'),
+  P('1.1.2', 'Readers should also consult the general guidance listed in the <a class="gov" href="https://www.gov.uk/government/collections/country-policy-and-information-notes">collection of country notes</a> on GOV.UK.'),
+  H3('s-2', '2. Consideration of issues'),
+  P('2.1.1', 'Credibility: the example assessment considers whether an account is internally consistent, detailed and plausible, using the sample factors below:'),
+  UL('list-factors', [
+    ['f-a', 'the person’s stated connection to the sample group;'],
+    ['f-b', 'the length of time spent in the example region;'],
+    ['f-c', 'whether the person has a visible placeholder profile;'],
+    ['f-d', 'any previous contact with the fictional authorities.']
+  ]),
+  P('2.2.1', 'Risk: the sample sources indicate that members of the group may experience <em>occasional</em> difficulties, but these do not generally reach the threshold used in this illustration.' + fr(1)),
+  Q('q-1', 'Reports of incidents were sporadic and concentrated in the northern example districts, with no clear pattern of targeting.', EMG + ', ' + ext('https://example.org/emg/annual-review-2018', 'Annual review') + fr(2)),
+  P('2.3.1', 'Internal relocation: in this example, relocation to another region is generally treated as reasonable, subject to the circumstances of the individual case. See also <a href="#s-4">state treatment</a>.'),
+  P('2.4.1', 'Certification: where a sample claim is refused, it is unlikely to be certifiable under the placeholder provisions referred to in this illustration.'),
+  H2('s-ci', 'Country information'),
+  H3('s-3', '3. Background'),
+  P('3.1.1', 'Ruritania is a fictional state used here as a stand-in. Its example population is estimated at 4.2 million, according to the ' + ext('https://example.org/census/2017', 'sample census') + '.' + fr(3)),
+  TB('t-1', 'Table 1: Reported incidents (illustrative figures only)', ['Year', 'Reported incidents', 'Source'], [
+    ['r-2016', '2016', '41', 'EMG review'],
+    ['r-2017', '2017', '37', 'EMG review'],
+    ['r-2018', '2018', '52', 'EMG review']
+  ]),
+  H3('s-4', '4. State treatment'),
+  P('4.1.1', 'Sample sources describe the authorities’ approach to the group as broadly tolerant, although local practice reportedly varies between districts.'),
+  H2('s-fn', 'Footnotes'),
+  FN(1, EMG + ', ' + ext('https://example.org/emg/annual-review-2018', 'Annual review') + ', section 2. Accessed 4 January 2019.'),
+  FN(2, EMG + ', ' + ext('https://example.org/emg/annual-review-2018', 'Annual review') + ', page 14. Accessed 4 January 2019.'),
+  FN(3, 'Sample Statistics Office (fictional), ' + ext('https://example.org/census/2017', 'Census summary') + '. Accessed 9 January 2019.')
+];
+
+/* Patch helpers: each later version is the previous one plus a few edits. */
+function locate(doc, id) {
+  for (const arr of [doc, ...doc.flatMap(b => [b.items, b.rows].filter(Boolean))]) {
+    const i = arr.findIndex(x => x.id === id);
+    if (i > -1) return { arr, i, node: arr[i] };
+  }
+  throw new Error('No block ' + id);
+}
+const set = (d, id, v) => { const { node } = locate(d, id); typeof v === 'string' ? (node.html = v) : Object.assign(node, v); };
+const after = (d, id, ...nodes) => { const { arr, i } = locate(d, id); arr.splice(i + 1, 0, ...nodes); };
+const rm = (d, id) => { const { arr, i } = locate(d, id); arr.splice(i, 1); };
+const row = (id, ...cells) => ({ id, cells });
+const li = (id, html) => ({ id, html });
+
+let VERSIONS = [
+  { v: '1.0', date: '2019-02-12', note: 'First published (sample)', apply: () => {} },
+  { v: '2.0', date: '2020-09-03', note: 'Sample refresh of sources and figures', apply: d => {
+    set(d, 'exec-2', 'In general, a person in the sample group is <strong>unlikely</strong> to face the example risk described here, although some local variation has been reported. Each claim must be considered on its individual facts.');
+    set(d, 'p-2.2.1', 'Risk: the sample sources indicate that members of the group may experience <em>periodic</em> difficulties, but these do not generally reach the threshold used in this illustration.' + fr(1));
+    set(d, 'q-1', { html: 'Reports of incidents remained sporadic and were concentrated in the northern and western example districts, with no clear pattern of targeting.', cite: EMG + ', ' + ext('https://example.org/emg/annual-review-2019', 'Annual review') + fr(2) });
+    set(d, 'p-3.1.1', 'Ruritania is a fictional state used here as a stand-in. Its example population is estimated at 4.4 million, according to the ' + ext('https://example.org/census/2017', 'sample census') + '.' + fr(3));
+    after(d, 'r-2018', row('r-2019', '2019', '48', 'EMG review'));
+    set(d, 'fn-1', EMG + ', ' + ext('https://example.org/emg/annual-review-2019', 'Annual review') + ', section 2. Accessed 2 June 2020.');
+    set(d, 'fn-2', EMG + ', ' + ext('https://example.org/emg/annual-review-2019', 'Annual review') + ', page 16. Accessed 2 June 2020.');
+  } },
+  { v: '3.0', date: '2022-03-15', note: 'Sample restructure: new section on movement', apply: d => {
+    set(d, 'f-b', 'the length and nature of time spent in the example region;');
+    after(d, 'p-2.3.1', P('2.3.2', 'Readers should note that travel between example regions was temporarily restricted during 2021. In this illustration those restrictions have since been lifted.' + fr(4)));
+    after(d, 'r-2019', row('r-2020', '2020', '29', 'EMG review'), row('r-2021', '2021', '33', 'EMG review'));
+    set(d, 'p-4.1.1', 'Sample sources describe the authorities’ approach to the group as generally tolerant, although local practice reportedly varies between districts.');
+    after(d, 'p-4.1.1', H3('s-5', '5. Freedom of movement'), P('5.1.1', 'Sample sources report that internal travel is generally possible, with routine checkpoints on major example routes.'));
+    after(d, 'fn-3', FN(4, 'Sample Transport Bulletin (fictional), ' + ext('https://example.org/transport/bulletin-2021', 'Bulletin 7') + '. Accessed 20 January 2022.'));
+  } },
+  { v: '3.1', date: '2023-01-09', note: 'Minor sample corrections', apply: d => {
+    set(d, 'p-2.1.1', 'Credibility: the example assessment considers whether an account is internally consistent, sufficiently detailed and plausible, using the sample factors below:');
+    set(d, 'r-2021', { cells: ['2021', '35', 'EMG review (corrected)'] });
+    set(d, 'fn-3', 'Sample Statistics Office (fictional), ' + ext('https://example.org/census/2017', 'Census summary') + '. Accessed 6 December 2022.');
+  } },
+  { v: '4.0', date: '2024-05-21', note: 'Sample update to assessment and country information', apply: d => {
+    set(d, 'exec-2', 'In general, a person in the sample group is <strong>unlikely</strong> to face the example risk described here, although some local variation has been reported in the northern districts since 2022. Each claim must be considered on its individual facts.');
+    set(d, 'p-1.1.1', 'This section sets out illustrative guidance for readers handling claims based on an example theme. It should be read alongside the <a href="#s-3">country information</a> and the <a href="#s-fn">sources</a> in this note.');
+    set(d, 'f-c', 'whether the person has a visible placeholder profile.');
+    rm(d, 'f-d');
+    set(d, 'p-2.2.1', 'Risk: the sample sources indicate that members of the group may experience <em>periodic</em> and, in some districts, more frequent difficulties, but these do not, in most cases, reach the threshold used in this illustration.' + fr(1));
+    set(d, 'q-1', { cite: EMG + ', ' + ext('https://example.org/emg/annual-review-2023', 'Annual review') + fr(2) });
+    after(d, 'p-2.3.2', P('2.3.3', 'In this example, relocation may be unreasonable for a person with no sample support network in the proposed area. Each case should be assessed on its own facts.'));
+    set(d, 'p-3.1.1', 'Ruritania is a fictional state used here as a stand-in. Its example population is estimated at 4.6 million, according to the ' + ext('https://example.org/census/2023', 'sample census') + '.' + fr(3));
+    after(d, 'r-2021', row('r-2022', '2022', '47', 'EMG review'), row('r-2023', '2023', '61', 'EMG review'));
+    set(d, 'p-4.1.1', 'Sample sources describe the authorities’ approach to the group as generally tolerant. However, two example sources published in 2023 describe stricter local practice in the northern districts.' + fr(5));
+    set(d, 'fn-2', EMG + ', ' + ext('https://example.org/emg/annual-review-2023', 'Annual review') + ', page 22. Accessed 3 April 2024.');
+    after(d, 'fn-4', FN(5, 'Example Rights Forum (fictional), ' + ext('https://example.org/erf/district-survey-2023', 'District survey') + '. Accessed 3 April 2024.'));
+  } },
+  { v: '5.0', date: '2026-01-14', note: 'Sample review: movement restrictions removed', apply: d => {
+    set(d, 'exec-1', 'This sample note summarises a fictional situation in Ruritania, a country invented for this prototype. The text is placeholder prose used only to show how changes between versions will be displayed.');
+    set(d, 'f-c', 'whether the person has a visible placeholder profile;');
+    after(d, 'f-c', li('f-e', 'whether the person has relatives in the example region.'));
+    rm(d, 'p-2.3.2');
+    set(d, 'p-2.4.1', 'Certification: where a sample claim is refused, it may be certifiable only in limited circumstances under the placeholder provisions referred to in this illustration.');
+    after(d, 'r-2023', row('r-2024', '2024', '58', 'EMG review'), row('r-2025', '2025', '44', 'EMG review'));
+    set(d, 'p-5.1.1', 'Sample sources report that internal travel is generally possible. Routine checkpoints on major example routes were reduced during 2025.');
+    rm(d, 'fn-4');
+  } }
+];
+(function build() {
+  let cur = V1;
+  VERSIONS.forEach((ver, i) => {
+    cur = JSON.parse(JSON.stringify(cur));
+    ver.apply(cur);
+    ver.blocks = cur;
+    ver.t = Date.parse(ver.date + 'T12:00:00Z');
+  });
+})();
+let AXIS = { start: Date.parse('2019-01-01T00:00:00Z'), end: Date.parse('2026-12-31T00:00:00Z'), today: Date.parse('2026-10-02T12:00:00Z') };
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTHS_LONG = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const fmtDate = t => { const d = new Date(t); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const fmtLong = t => { const d = new Date(t); return `${d.getUTCDate()} ${MONTHS_LONG[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const fmtMonth = t => { const d = new Date(t); return `${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const fmtMonthLong = t => { const d = new Date(t); return `${MONTHS_LONG[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+/* An edition's date at its own precision: archived editions often only know the month. */
+const vDate = v => (v.prec === 'month' ? fmtMonth(v.t) : fmtDate(v.t));
+const vDateLong = v => (v.prec === 'month' ? fmtMonthLong(v.t) : fmtLong(v.t));
+/* =====================================================================
+   Word-level diff that keeps inline markup (links, emphasis, footnote refs)
+   ===================================================================== */
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const TOK = /[\p{L}\p{N}’'\-.]*[\p{L}\p{N}]|\s+|[^\s]/gu;
+const isWS = s => /^\s+$/.test(s);
+const isWord = s => /[\p{L}\p{N}]/u.test(s);
+
+/* LCS over two key arrays (common prefix/suffix trimmed first). */
+function lcs(a, b) {
+  let s = 0; while (s < a.length && s < b.length && a[s] === b[s]) s++;
+  let ea = a.length, eb = b.length; while (ea > s && eb > s && a[ea - 1] === b[eb - 1]) { ea--; eb--; }
+  const n = ea - s, m = eb - s, W = m + 1, L = new Uint32Array((n + 1) * W);
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+    L[i * W + j] = a[s + i] === b[s + j] ? L[(i + 1) * W + j + 1] + 1 : Math.max(L[(i + 1) * W + j], L[i * W + j + 1]);
+  const ops = []; for (let k = 0; k < s; k++) ops.push(['eq', k, k]);
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (a[s + i] === b[s + j]) { ops.push(['eq', s + i, s + j]); i++; j++; }
+    else if (L[(i + 1) * W + j] >= L[i * W + j + 1]) { ops.push(['del', s + i, -1]); i++; }
+    else { ops.push(['ins', -1, s + j]); j++; }
+  }
+  while (i < n) ops.push(['del', s + i++, -1]);
+  while (j < m) ops.push(['ins', -1, s + j++]);
+  for (let k = 0; k < a.length - ea; k++) ops.push(['eq', ea + k, eb + k]);
+  return ops;
+}
+
+/* Flatten inline HTML into word tokens, each carrying its wrapper stack (ctx). */
+const tpl = document.createElement('template');
+function tokenize(html) {
+  tpl.innerHTML = html || '';
+  const out = [];
+  (function walk(node, ctx) {
+    for (const ch of node.childNodes) {
+      if (ch.nodeType === 3) {
+        for (const p of ch.data.match(TOK) || []) out.push({ text: p, ctx });
+      } else if (ch.nodeType === 1) {
+        const w = { tag: ch.tagName.toLowerCase(), attrs: [...ch.attributes].map(a => [a.name, a.value]), href: ch.getAttribute('href') };
+        w.shape = w.tag + '.' + (ch.getAttribute('class') || '');
+        walk(ch, ctx.concat(w));
+      }
+    }
+  })(tpl.content, []);
+  for (const t of out) t.key = t.ctx.map(w => w.shape).join('>') + '|' + (isWS(t.text) ? ' ' : t.text);
+  return out;
+}
+const trivialEq = toks => toks.every(t => isWS(t.text) || !isWord(t.text)) ||
+  (toks.length <= 3 && toks.filter(t => isWord(t.text)).length === 1 && toks.find(t => isWord(t.text)).text.length <= 3);
+
+/* Diff two inline HTML fragments. null on either side = whole insert / delete. */
+function diffInline(hA, hB) {
+  const res = { items: [], ins: 0, del: 0, linkChanges: 0 };
+  if (hA == null || hB == null) {
+    const st = hA == null ? 'ins' : 'del';
+    for (const t of tokenize(hA == null ? hB : hA)) { res.items.push({ text: t.text, ctxA: t.ctx, ctxB: t.ctx, st }); if (isWord(t.text)) res[st]++; }
+    return finish(res);
+  }
+  const A = tokenize(hA), B = tokenize(hB);
+  const runs = [];
+  for (const [op, i, j] of lcs(A.map(t => t.key), B.map(t => t.key))) {
+    const eq = op === 'eq'; let r = runs[runs.length - 1];
+    if (!r || r.eq !== eq) runs.push(r = { eq, a: [], b: [] });
+    if (op !== 'ins') r.a.push(A[i]);
+    if (op !== 'del') r.b.push(B[j]);
+  }
+  // Semantic clean-up: absorb whitespace / tiny words stranded between two changes.
+  for (let k = 1; k < runs.length - 1; k++) if (runs[k].eq && !runs[k - 1].eq && !runs[k + 1].eq && trivialEq(runs[k].b)) runs[k].eq = false;
+  const merged = [];
+  for (const r of runs) { const p = merged[merged.length - 1]; if (p && !p.eq && !r.eq) { p.a.push(...r.a); p.b.push(...r.b); } else merged.push(r); }
+  const wmap = new Map();
+  for (const r of merged) {
+    if (r.eq) {
+      r.b.forEach((tb, x) => {
+        const ta = r.a[x];
+        ta.ctx.forEach((wa, d) => {
+          const wb = tb.ctx[d]; wmap.set(wa, wb);
+          if (wa.tag === 'a' && wa.href !== wb.href && !wb.changedFrom) { wb.changedFrom = wa.href; res.linkChanges++; }
+        });
+        res.items.push({ text: tb.text, ctxA: ta.ctx, ctxB: tb.ctx, st: 'eq' });
+      });
+      continue;
+    }
+    // Keep leading/trailing whitespace of pure insertions/deletions unstyled.
+    const side = r.a.length ? r.a : r.b, pure = !r.a.length || !r.b.length;
+    let lead = [], trail = [];
+    if (pure) { while (side.length && isWS(side[0].text)) lead.push(side.shift()); while (side.length && isWS(side[side.length - 1].text)) trail.unshift(side.pop()); }
+    for (const t of lead) res.items.push({ text: t.text, ctxA: t.ctx, ctxB: t.ctx, st: 'eq' });
+    for (const t of r.a) { res.items.push({ text: t.text, ctxA: t.ctx, ctxB: t.ctx, st: 'del' }); if (isWord(t.text)) res.del++; }
+    for (const t of r.b) { res.items.push({ text: t.text, ctxA: t.ctx, ctxB: t.ctx, st: 'ins' }); if (isWord(t.text)) res.ins++; }
+    for (const t of trail) res.items.push({ text: t.text, ctxA: t.ctx, ctxB: t.ctx, st: 'eq' });
+  }
+  res.wmap = wmap;
+  return finish(res);
+}
+function finish(res) {
+  res.changed = res.items.some(i => i.st !== 'eq' && !isWS(i.text)) || res.linkChanges > 0;
+  res.html = mode => renderItems(res, mode);
+  return res;
+}
+const LINK_ICON = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.5 9.5l3-3M7 4.5l1-1a2.5 2.5 0 0 1 3.5 3.5l-1 1M9 11.5l-1 1A2.5 2.5 0 0 1 4.5 9l1-1" stroke-linecap="round"/></svg>';
+const shortUrl = u => String(u || '').replace(/^https?:\/\//, '').replace(/^www\./, '');
+function linkMarker(w) {
+  return `<span class="lc tag tag--outline" tabindex="0" aria-label="Link target changed from ${esc(shortUrl(w.changedFrom))} to ${esc(shortUrl(w.href))}">${LINK_ICON}link changed` +
+    `<span class="lc-tip" role="tooltip" aria-hidden="true"><b>Link target changed</b><del>${esc(shortUrl(w.changedFrom))}</del><span class="arrow">→</span><ins>${esc(shortUrl(w.href))}</ins></span></span>`;
+}
+/* mode: 'inline' (both), 'old' (eq + del), 'new' (eq + ins). <ins>/<del> always sit innermost, so HTML stays balanced. */
+function renderItems(res, mode) {
+  let html = '', open = [], run = null;
+  const marked = new Set();
+  const closeRun = () => { if (run) { html += `</${run}>`; run = null; } };
+  const closeTo = n => {
+    closeRun();
+    while (open.length > n) {
+      const w = open.pop(); html += `</${w.tag}>`;
+      if (mode !== 'old' && w.changedFrom && !marked.has(w)) { marked.add(w); html += linkMarker(w); }
+    }
+  };
+  for (const it of res.items) {
+    if ((mode === 'old' && it.st === 'ins') || (mode === 'new' && it.st === 'del')) continue;
+    let ctx = mode === 'old' ? it.ctxA : it.ctxB;
+    if (mode === 'inline' && it.st === 'del' && res.wmap) ctx = it.ctxA.map(w => res.wmap.get(w) || w);
+    let k = 0; while (k < open.length && k < ctx.length && open[k] === ctx[k]) k++;
+    if (k < open.length) closeTo(k);
+    if (open.length < ctx.length) {
+      closeRun();
+      for (let i = open.length; i < ctx.length; i++) { const w = ctx[i]; html += `<${w.tag}${w.attrs.map(([n, v]) => ` ${n}="${esc(v)}"`).join('')}>`; open.push(w); }
+    }
+    const want = it.st === 'eq' ? null : it.st;
+    if (want !== run) { closeRun(); if (want) { html += `<${want}>`; run = want; } }
+    html += esc(it.text);
+  }
+  closeTo(0);
+  return html;
+}
+
+/* Block-level alignment by stable ids, then per-block inline diffs. */
+function diffList(A, B, fn) {
+  return lcs(A.map(x => x.id), B.map(x => x.id)).map(([op, i, j]) => fn(op === 'ins' ? null : A[i], op === 'del' ? null : B[j]));
+}
+function diffBlock(a, b) {
+  const blk = b || a, st0 = !a ? 'add' : !b ? 'del' : null;
+  const r = { t: blk.t, id: blk.id, num: blk.num, n: blk.n, ins: 0, del: 0, changed: false };
+  const D = (x, y) => { const d = diffInline(x, y); r.ins += d.ins; r.del += d.del; if (d.changed) r.changed = true; return d; };
+  const A = a || {}, B = b || {};
+  if (blk.t === 'ul') {
+    r.items = diffList(A.items || [], B.items || [], (x, y) => ({ st: !x ? 'add' : !y ? 'del' : 'eq', d: D(x && x.html, y && y.html) }));
+  } else if (blk.t === 'table') {
+    r.caption = D(a && a.caption, b && b.caption); r.head = blk.head;
+    r.rows = diffList(A.rows || [], B.rows || [], (x, y) => ({
+      st: !x ? 'add' : !y ? 'del' : 'eq',
+      cells: blk.head.map((_, c) => D(x && x.cells[c], y && y.cells[c]))
+    }));
+  } else {
+    r.d = D(a && a.html, b && b.html);
+    if (blk.t === 'quote') r.cite = D(a && a.cite, b && b.cite);
+    if (blk.t === 'p' && a && b && a.num !== b.num) { r.numOld = a.num; r.changed = true; }
+  }
+  r.st = st0 || (r.changed ? 'mod' : 'eq');
+  return r;
+}
+function diffVersions(ia, ib) {
+  const key = ia + ':' + ib;
+  if (diffVersions.cache[key]) return diffVersions.cache[key];
+  const rows = diffList(VERSIONS[ia].blocks, VERSIONS[ib].blocks, diffBlock);
+  // Group into navigable hunks: consecutive whole-block adds/removes form one hunk.
+  let h = -1, prev = null;
+  for (const r of rows) {
+    if (r.st === 'eq') { prev = null; continue; }
+    const structural = r.st !== 'mod';
+    if (!(prev && prev.structural && structural && r.t !== 'fn' && prev.t !== 'fn')) h++;
+    r.hunk = h; r.structural = structural; prev = r;
+  }
+  const out = { rows, hunks: h + 1, ins: rows.reduce((s, r) => s + r.ins, 0), del: rows.reduce((s, r) => s + r.del, 0) };
+  return (diffVersions.cache[key] = out);
+}
+diffVersions.cache = {};
+/* =====================================================================
+   App
+   ===================================================================== */
+const $ = id => document.getElementById(id);
+const RMQ = matchMedia('(prefers-reduced-motion: reduce)');
+/* Things pop in (fade, slight scale, de-blur), as on the COBE site. */
+const popIn = (el, duration, from = 0) => el.animate(
+  [{ opacity: from, transform: 'translateY(.3rem) scale(.992)', filter: 'blur(3px)' }, { opacity: 1, transform: 'none', filter: 'blur(0px)' }],
+  { duration, easing: 'cubic-bezier(.2,.8,.2,1)' });
+const NARROW = matchMedia('(max-width: 899px)');
+const reduced = () => RMQ.matches;
+let N = VERSIONS.length;
+const state = { a: 3, b: 4, mode: START_VIEW, cur: -1, playing: false, xa: 0, xb: 1, active: 'b' };
+/* Versions sit at their dates. Editions dated alike (two captures of one version) are nudged apart so
+   both stay grabbable; the date scale is piecewise linear between versions, so a handle at rest always
+   reads its own edition's date, and the year lines follow the same scale. */
+const span = () => AXIS.end - AXIS.start;
+function layoutVersions() {
+  N = VERSIONS.length;
+  VERSIONS.forEach(v => (v.x = (v.t - AXIS.start) / span()));
+  const gap = N > 1 ? Math.min(0.06, 0.9 / (N - 1)) : 0;
+  for (let i = 1; i < N; i++) VERSIONS[i].x = Math.max(VERSIONS[i].x, VERSIONS[i - 1].x + gap);
+  if (N && VERSIONS[N - 1].x > 1) {
+    VERSIONS[N - 1].x = 1;
+    for (let i = N - 2; i >= 0; i--) VERSIONS[i].x = Math.min(VERSIONS[i].x, VERSIONS[i + 1].x - gap);
+  }
+}
+function tOf(x) {
+  const f = VERSIONS[0], l = VERSIONS[N - 1];
+  if (x <= f.x) return f.t + (x - f.x) * span();
+  if (x >= l.x) return l.t + (x - l.x) * span();
+  for (let i = 0; i < N - 1; i++) {
+    const p = VERSIONS[i], q = VERSIONS[i + 1];
+    if (x <= q.x) return q.x === p.x ? q.t : p.t + (q.t - p.t) * (x - p.x) / (q.x - p.x);
+  }
+  return l.t;
+}
+function xOf(t) {
+  const f = VERSIONS[0], l = VERSIONS[N - 1];
+  if (t <= f.t) return f.x + (t - f.t) / span();
+  if (t >= l.t) return l.x + (t - l.t) / span();
+  for (let i = 0; i < N - 1; i++) {
+    const p = VERSIONS[i], q = VERSIONS[i + 1];
+    if (t <= q.t) return q.t === p.t ? p.x : p.x + (q.x - p.x) * (t - p.t) / (q.t - p.t);
+  }
+  return l.x;
+}
+layoutVersions();
+
+/* ---------- Rolling digits ("number flow") ---------- */
+class Slot {
+  constructor(parent, values) {
+    this.values = values; this.el = document.createElement('span'); this.el.className = 'slot';
+    this.col = document.createElement('span'); this.col.className = 'col';
+    this.col.innerHTML = values.map(v => `<span>${v === '' ? ' ' : esc(v)}</span>`).join('');
+    this.el.appendChild(this.col); parent.appendChild(this.el); this.widths = null; this.i = -1;
+  }
+  measure() {
+    const fs = parseFloat(getComputedStyle(this.el).fontSize) || 16;
+    const ws = [...this.col.children].map((c, k) => (this.values[k] === '' ? 0 : c.getBoundingClientRect().width / fs));
+    if (ws.some(w => w > 0)) this.widths = ws;
+  }
+  set(i) {
+    if (!this.widths) this.measure();
+    if (i === this.i) return; this.i = i;
+    this.col.style.setProperty('--i', i);
+    if (this.widths) this.el.style.width = this.widths[i] + 'em';
+  }
+}
+class NumberRoller {
+  constructor(el, digits) {
+    this.el = el; this.slots = [];
+    for (let k = 0; k < digits; k++) this.slots.push(new Slot(el, ['', ...'0123456789']));
+  }
+  set(n, instant) {
+    const s = String(Math.max(0, Math.round(n))).padStart(this.slots.length, ' ');
+    this.el.classList.toggle('instant', !!instant || reduced());
+    this.slots.forEach((sl, k) => sl.set(s[k] === ' ' ? 0 : +s[k] + 1));
+  }
+}
+class DateRoller {
+  constructor(el) {
+    this.el = el; const D = '0123456789'.split('');
+    this.d1 = new Slot(el, ['', '1', '2', '3']); this.d2 = new Slot(el, ['', ...D]);
+    this.sp = new Slot(el, ['', ' ']); this.sp.el.classList.add('fixed');
+    this.m = new Slot(el, MONTHS);
+    el.appendChild(document.createTextNode(' '));
+    this.y = [0, 1, 2, 3].map(() => new Slot(el, D));
+  }
+  /* monthOnly: the edition is dated to the month only, so the day digits roll away (width eases to 0). */
+  set(t, instant, monthOnly) {
+    const d = new Date(t), day = d.getUTCDate(), yr = String(d.getUTCFullYear());
+    this.el.classList.toggle('instant', !!instant || reduced());
+    this.d1.set(monthOnly ? 0 : Math.floor(day / 10)); this.d2.set(monthOnly ? 0 : day % 10 + 1);
+    this.sp.set(monthOnly ? 0 : 1); this.m.set(d.getUTCMonth());
+    this.y.forEach((s, k) => s.set(+yr[k]));
+  }
+}
+const asat = new DateRoller($('asat'));
+const rIns = new NumberRoller($('rIns'), 6), rDel = new NumberRoller($('rDel'), 6), rChg = new NumberRoller($('rChg'), 4);
+
+/* ---------- Document rendering ---------- */
+const BLOCK_NAME = { h2: 'Heading', h3: 'Heading', p: 'Paragraph', ul: 'List', quote: 'Quotation', table: 'Table', fn: 'Footnote' };
+function hunkLabel(r) {
+  const what = r.t === 'p' && r.num ? `Paragraph ${r.num}` : r.t === 'fn' ? `Footnote ${r.n}` : BLOCK_NAME[r.t];
+  return `${what} ${r.st === 'add' ? 'added' : r.st === 'del' ? 'removed' : 'changed'}`;
+}
+function chgAttrs(r, extra) {
+  const cls = [extra || ''];
+  if (r.st !== 'eq') cls.push('chg', r.st === 'add' ? 'is-added' : r.st === 'del' ? 'is-removed' : 'is-mod');
+  const c = cls.join(' ').trim();
+  return (c ? ` class="${c}"` : '') + (r.st !== 'eq' ? ` data-chg="${r.hunk}" data-label="${esc(hunkLabel(r))}"` : '');
+}
+const badge = (st, mode) => st === 'add' && mode !== 'old' ? '<span class="badge tag tag--ins">Added</span>' : st === 'del' && mode !== 'new' ? '<span class="badge tag tag--del">Removed</span>' : '';
+/* Render one aligned block for a given mode. withId: give anchors ids (only once per page). */
+function blockInner(r, mode, withId) {
+  const idA = withId && (r.st !== 'del') ? ` id="${r.id}"` : '';
+  switch (r.t) {
+    case 'h2': case 'h3': return { tag: r.t, attrs: idA, html: r.d.html(mode) + badge(r.st, mode) };
+    case 'p': {
+      let num = '';
+      if (r.num) num = `<span class="pnum">${r.numOld && mode === 'inline' ? `<del>${r.numOld}</del> <ins>${r.num}</ins>` : mode === 'old' && r.numOld ? r.numOld : r.num}</span>`;
+      return { tag: 'p', attrs: r.num ? ' data-np' : '', cls: r.num ? 'np' : '', html: num + r.d.html(mode) + badge(r.st, mode) };
+    }
+    case 'quote': return { tag: 'blockquote', html: `<p>${r.d.html(mode)}</p><footer>— ${r.cite.html(mode)}</footer>` };
+    case 'ul': return { tag: 'ul', html: r.items.filter(it => !(mode === 'old' && it.st === 'add') && !(mode === 'new' && it.st === 'del'))
+      .map(it => `<li${it.st === 'add' ? ' class="item-added"' : it.st === 'del' ? ' class="item-removed"' : ''}>${it.d.html(mode)}${badge(it.st, mode)}</li>`).join('') };
+    case 'table': {
+      const rows = r.rows.filter(x => !(mode === 'old' && x.st === 'add') && !(mode === 'new' && x.st === 'del'))
+        .map(x => `<tr>${x.cells.map(c => `<td>${c.html(mode)}</td>`).join('')}</tr>`).join('');
+      return { tag: 'figure', cls: 'tbl', html: `<figcaption>${r.caption.html(mode)}</figcaption><div class="tbl-scroll" tabindex="0" role="region" aria-label="Table, scrolls horizontally"><table><thead><tr>${r.head.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>` };
+    }
+    case 'fn': return { tag: 'li', attrs: (withId && r.st !== 'del' ? ` id="${r.id}"` : '') + ` value="${r.n}"`, html: r.d.html(mode) + badge(r.st, mode) };
+  }
+}
+const wrapEl = (o, r) => { const cls = [o.cls || '']; return `<${o.tag}${o.attrs || ''}${chgAttrs(r, cls.join(' '))}>${o.html}</${o.tag}>`; };
+
+function docHead(da) {
+  const A = VERSIONS[state.a], B = VERSIONS[state.b];
+  return `<header class="doc-head"><div><p class="eyebrow">Country policy and information note · sample</p><h1>Ruritania (fictional): example theme</h1></div>
+    <div class="vbox" aria-label="Version ${B.v}, ${fmtMonth(B.t)}, compared with version ${A.v}"><span class="v tag">Version ${B.v}</span>${fmtLong(B.t).replace(/^\d+ /, '')}<span class="was"><del>Version ${A.v} · ${fmtMonth(A.t)}</del></span></div></header>`;
+}
+function renderInlineDoc(diff) {
+  let html = docHead(), inFns = false;
+  for (const r of diff.rows) {
+    if (r.t === 'fn' && !inFns) { html += '<ol class="fns">'; inFns = true; }
+    if (r.t !== 'fn' && inFns) { html += '</ol>'; inFns = false; }
+    html += wrapEl(blockInner(r, 'inline', true), r);
+  }
+  if (inFns) html += '</ol>';
+  return html;
+}
+function renderSbsDoc(diff) {
+  const A = VERSIONS[state.a], B = VERSIONS[state.b];
+  let html = docHead() + `<div class="sbs"><div class="sbs-head"><span><span class="tag tag--outline">Old</span><b>Version ${A.v}</b> · ${fmtDate(A.t)}</span><span><span class="tag">New</span><b>Version ${B.v}</b> · ${fmtDate(B.t)}</span></div>`;
+  const cell = (r, mode) => {
+    if ((mode === 'old' && r.st === 'add') || (mode === 'new' && r.st === 'del')) return '<div class="sbs-cell empty"></div>';
+    const o = blockInner(r, mode, mode === 'new');
+    const el = `<${o.tag}${o.attrs || ''}${o.cls ? ` class="${o.cls}"` : ''}>${o.html}</${o.tag}>`;
+    return `<div class="sbs-cell ${mode}">${r.t === 'fn' ? `<ol class="fns">${el}</ol>` : el}</div>`;
+  };
+  for (const r of diff.rows) html += `<div${chgAttrs(r, 'sbs-row')}>${cell(r, 'old')}${cell(r, 'new')}</div>`;
+  return html + '</div>';
+}
+const effectiveMode = () => (NARROW.matches ? 'inline' : state.mode);
+
+function renderDoc() {
+  if (REAL) return renderRealDoc();
+  const diff = diffVersions(state.a, state.b), doc = $('doc'), mode = effectiveMode();
+  doc.classList.toggle('sbs-mode', mode === 'sbs');
+  doc.innerHTML = mode === 'sbs' ? renderSbsDoc(diff) : renderInlineDoc(diff);
+  state.diff = diff;
+  if (state.cur >= diff.hunks) state.cur = -1;
+  indexHunks(); renderToc(diff); renderStats(diff); buildMinimap(); markCurrent(false);
+}
+
+/* ---------- Real notes: header, provenance, worker-rendered redline ---------- */
+const REALDOC = { meta: null, result: null, pair: '' };
+const capFirst = s => (s ? s[0].toUpperCase() + s.slice(1) : s);
+const EXT = '<span aria-hidden="true"> ↗</span>';
+function provenance(v) {
+  const r = v.raw, sep = '<span class="sep">·</span>';
+  const ver = r.version ? `Version ${esc(r.version)}` : 'Version not stated';
+  const pub = r.published ? `Published ${r.published_precision === 'month' ? fmtMonth(Date.parse(r.published)) : fmtDate(Date.parse(r.published))}` : 'Publication date not stated';
+  let html = `<b>${ver}</b>${sep}${pub}`;
+  if (r.source === 'wayback') {
+    if (r.captured_at) html += `${sep}Archived copy captured ${fmtDate(Date.parse(r.captured_at))}`;
+    if (r.archive_url) html += `${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Internet Archive${EXT}</a>`;
+  } else if (r.govuk_url) {
+    html += `${sep}<a href="${esc(r.govuk_url)}" target="_blank" rel="noopener">GOV.UK${EXT}</a>`;
+  } else if (r.archive_url) {
+    html += `${sep}Superseded on GOV.UK${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Internet Archive${EXT}</a>`;
+  }
+  return html;
+}
+function docHeadReal() {
+  const m = REALDOC.meta, A = VERSIONS[state.a], B = VERSIONS[state.b];
+  return `<header class="doc-head real"><div><p class="eyebrow">${esc(m.country_name)} · ${esc(m.kind || 'Note')}</p><h1>${esc(capFirst(m.topic || m.key))}</h1></div>
+    <dl class="prov" aria-label="Editions compared">
+      <div><dt><span class="tag tag--outline">Old</span></dt><dd>${provenance(A)}</dd></div>
+      <div><dt><span class="tag">New</span></dt><dd>${provenance(B)}</dd></div>
+    </dl></header>`;
+}
+function sbsHeadReal() {
+  const A = VERSIONS[state.a], B = VERSIONS[state.b];
+  const lab = v => `<b>Version ${esc(v.raw.version || '—')}</b> · ${vDate(v)}${v.raw.source === 'wayback' ? ' · archived copy' : ''}`;
+  return `<div class="sbs-head"><span><span class="tag tag--outline">Old</span>${lab(A)}</span><span><span class="tag">New</span>${lab(B)}</span></div>`;
+}
+/* Paint a worker result. Synchronous: used after a diff arrives and when switching Inline / Side-by-side. */
+function paintReal(res) {
+  const doc = $('doc'), mode = effectiveMode();
+  doc.classList.add('real');
+  doc.classList.toggle('sbs-mode', mode === 'sbs');
+  doc.innerHTML = docHeadReal() + (mode === 'sbs' ? `<div class="sbs">${sbsHeadReal()}${res.sbsHtml}</div>` : res.inlineHtml);
+  state.diff = { hunks: res.stats.changes, ins: res.stats.ins, del: res.stats.del, res };
+  if (state.cur >= state.diff.hunks) state.cur = -1;
+  indexHunks(); renderTocReal(res); renderStats(state.diff); buildMinimap(); markCurrent(false); warmChunks();
+}
+function renderRealDoc() {
+  if (REALDOC.result && REALDOC.pair === state.a + ':' + state.b) paintReal(REALDOC.result);
+}
+let realTok = 0;
+/* Request the current pair from the worker (cached results return at once), then glide it in. */
+async function loadPair(fade) {
+  const a = state.a, b = state.b, tok = ++realTok, doc = $('doc');
+  let res = engine.cached(a, b);
+  if (!res) {
+    setBusy(true, 0, 'Comparing');
+    try {
+      res = await engine.diff(a, b, { priority: true, onProgress: (phase, f) => { if (tok === realTok) setBusy(true, f, phase); } });
+    } catch (err) {
+      if (tok === realTok) { setBusy(false); showLoadError('The comparison failed: ' + (err && err.message || err)); }
+      return;
+    }
+    if (tok !== realTok) return; // the handles moved on while this ran
+    setBusy(false);
+  }
+  REALDOC.result = res; REALDOC.pair = a + ':' + b;
+  paintReal(res);
+  if (fade && !reduced()) popIn(doc, 300, .25);
+}
+function setBusy(on, f = 0, phase = '') {
+  const tb = $('toolbar'), doc = $('doc');
+  tb.classList.toggle('is-busy', on); doc.classList.toggle('is-busy', on);
+  doc.setAttribute('aria-busy', on ? 'true' : 'false');
+  $('busyBar').style.setProperty('--f', on ? Math.max(.04, Math.min(1, f)).toFixed(3) : 1);
+  if (on) $('pos').textContent = `${phase || 'Comparing'}… ${Math.round(Math.max(0, Math.min(1, f)) * 100)}%`;
+}
+function showLoadError(msg) {
+  $('doc').innerHTML = `<div class="load-error" role="alert"><p class="eyebrow">Could not load</p><p>${esc(msg)}</p><p><a href="../dashboard/index.html${REAL_COUNTRY ? '#' + encodeURIComponent(REAL_COUNTRY) : ''}">← Back to the dashboard</a></p></div>`;
+  $('pos').textContent = '';
+}
+function renderTocReal(res) {
+  let html = '';
+  for (const s of res.toc) {
+    if (s.level > 3) continue;
+    const c = s.count;
+    const text = esc(s.text);
+    html += s.st === 'del'
+      ? `<li class="l${s.level}"><a class="rm-sec" tabindex="-1" aria-disabled="true"><span>${text}</span>${c ? `<span class="cnt" aria-label="${c} changes">${c}</span>` : ''}</a></li>`
+      : `<li class="l${s.level}"><a href="#${encodeURIComponent(s.id)}" data-sec="${esc(s.id)}"><span>${text}</span>${c ? `<span class="cnt" aria-label="${c} changes">${c}</span>` : ''}</a></li>`;
+  }
+  $('toc').innerHTML = html;
+}
+
+/* ---------- Diff engine: module worker with a priority queue; main-thread fallback ---------- */
+const ENGINE_BUILD = '2026-10-02.3';   // bump when ../shared/redline-diff.js changes (cache-buster)
+const engine = {
+  worker: null, fallback: null, bodies: null, images: null, seq: 0, queue: [], current: null, results: new Map(), MAX: 10,
+  key: (a, b) => a + ':' + b,
+  cached(a, b) { const k = this.key(a, b), r = this.results.get(k); if (r) { this.results.delete(k); this.results.set(k, r); } return r || null; },
+  store(a, b, r) { this.results.set(this.key(a, b), r); while (this.results.size > this.MAX) this.results.delete(this.results.keys().next().value); },
+  init(bodies, images) {
+    this.bodies = bodies; this.images = images;
+    try {
+      this.worker = new Worker('redline-worker.js?v=' + ENGINE_BUILD, { type: 'module' });
+      this.worker.onmessage = e => this.onMessage(e.data);
+      this.worker.onerror = e => { e.preventDefault && e.preventDefault(); this.toFallback(); };
+      this.worker.postMessage({ type: 'init', bodies, images });
+    } catch (err) { this.toFallback(); }
+  },
+  toFallback() {
+    if (this.worker) { try { this.worker.terminate(); } catch (e) {} this.worker = null; }
+    if (!this.fallback) this.fallback = import('../shared/redline-diff.js?v=' + ENGINE_BUILD);
+    const cur = this.current; this.current = null;
+    if (cur) this.queue.unshift(cur);
+    this.pump();
+  },
+  diff(a, b, { priority = false, onProgress = null } = {}) {
+    const hit = this.cached(a, b);
+    if (hit) return Promise.resolve(hit);
+    const k = this.key(a, b);
+    // Join a job already queued or running for this pair.
+    const same = (this.current && this.current.k === k) ? this.current : this.queue.find(j => j.k === k);
+    if (same) {
+      if (onProgress) same.listeners.push(onProgress);
+      if (priority && same !== this.current) { this.queue.splice(this.queue.indexOf(same), 1); this.queue.unshift(same); }
+      return same.promise;
+    }
+    const job = { id: ++this.seq, a, b, k, listeners: onProgress ? [onProgress] : [] };
+    job.promise = new Promise((res, rej) => { job.resolve = res; job.reject = rej; });
+    if (priority) this.queue.unshift(job); else this.queue.push(job);
+    this.pump();
+    return job.promise;
+  },
+  pump() {
+    if (this.current || !this.queue.length) return;
+    const job = (this.current = this.queue.shift());
+    if (this.worker) { this.worker.postMessage({ type: 'diff', id: job.id, a: job.a, b: job.b }); return; }
+    // Fallback: same engine on the main thread (e.g. a browser without module workers).
+    (this.fallback || (this.fallback = import('../shared/redline-diff.js?v=' + ENGINE_BUILD))).then(mod => new Promise(r => setTimeout(r, 30)).then(() => {
+      const t0 = performance.now();
+      const res = mod.summarise(mod.diffBodies(this.bodies[job.a], this.bodies[job.b], { images: this.images }));
+      res.stats.ms.worker = Math.round(performance.now() - t0);
+      this.onMessage({ type: 'result', id: job.id, a: job.a, b: job.b, result: res });
+    })).catch(err => this.onMessage({ type: 'error', id: job.id, message: String(err) }));
+  },
+  onMessage(m) {
+    const job = this.current;
+    if (!job || m.id !== job.id) return;
+    if (m.type === 'progress') { job.listeners.forEach(fn => fn(m.phase, m.f)); return; }
+    this.current = null;
+    if (m.type === 'result') { this.store(job.a, job.b, m.result); job.resolve(m.result); this.onResult && this.onResult(job.a, job.b, m.result); }
+    else job.reject(new Error(m.message));
+    this.pump();
+  }
+};
+function renderStats(diff) {
+  rIns.set(diff.ins, state.booting); rDel.set(diff.del, state.booting); rChg.set(diff.hunks, state.booting);
+  $('chgWord').textContent = diff.hunks === 1 ? 'change' : 'changes';
+  $('statsSr').textContent = `${diff.ins} words inserted, ${diff.del} words deleted, ${diff.hunks} ${diff.hunks === 1 ? 'change' : 'changes'}.`;
+  const A = VERSIONS[state.a], B = VERSIONS[state.b];
+  const arrow = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  $('pair').innerHTML = `<span class="tag tag--outline ver" title="${vDate(A)}">v${esc(A.v)}</span>${arrow}<span class="tag ver" title="${vDate(B)}">v${esc(B.v)}</span><span class="sr-only">Comparing version ${esc(A.v)} with version ${esc(B.v)}</span>`;
+}
+function renderToc(diff) {
+  let html = '', cur = null; const counts = new Map(), seen = new Set();
+  for (const r of diff.rows) {
+    if (r.t === 'h2' || r.t === 'h3') { cur = r; }
+    if (r.st !== 'eq' && cur && !seen.has(r.hunk + ':' + cur.id)) { seen.add(r.hunk + ':' + cur.id); counts.set(cur.id, (counts.get(cur.id) || 0) + 1); }
+  }
+  for (const r of diff.rows) if (r.t === 'h2' || r.t === 'h3') {
+    const text = r.d.items.map(i => i.text).join('').trim(), c = counts.get(r.id);
+    html += `<li class="l${r.t[1]}"><a href="#${r.id}"${r.st === 'del' ? ' class="rm-sec" tabindex="-1"' : ''} data-sec="${r.id}"><span>${esc(text)}</span>${c ? `<span class="cnt" aria-label="${c} changes">${c}</span>` : ''}</a></li>`;
+  }
+  $('toc').innerHTML = html;
+}
+
+/* ---------- Minimap ---------- */
+/* One pass over the rendered document: hunk index -> its elements (long notes have hundreds). */
+let HUNKS = new Map();
+function indexHunks() {
+  HUNKS = new Map();
+  for (const el of $('doc').querySelectorAll('[data-chg]')) {
+    const k = +el.dataset.chg; let list = HUNKS.get(k);
+    if (!list) HUNKS.set(k, (list = []));
+    list.push(el);
+  }
+}
+function hunkEls(k) { return HUNKS.get(k) || []; }
+function buildMinimap() {
+  const mm = $('mm'); mm.querySelectorAll('.mm-mark').forEach(m => m.remove());
+  if (getComputedStyle(mm.parentNode).display === 'none') return;
+  const doc = $('doc'), dTop = doc.getBoundingClientRect().top, H = doc.scrollHeight || 1;
+  const frag = document.createDocumentFragment();
+  for (let k = 0; k < (state.diff ? state.diff.hunks : 0); k++) {
+    const els = hunkEls(k); if (!els.length) continue;
+    const top = els[0].getBoundingClientRect().top - dTop, bottom = els[els.length - 1].getBoundingClientRect().bottom - dTop;
+    const sts = new Set(els.map(e => e.classList.contains('is-added') ? 'add' : e.classList.contains('is-removed') ? 'del' : 'mod'));
+    const b = document.createElement('button');
+    b.className = 'mm-mark ' + (sts.size === 1 ? [...sts][0] : 'mod'); b.tabIndex = -1; b.dataset.k = k;
+    b.style.top = (top / H * 100) + '%'; b.style.height = Math.max(0.35, (bottom - top) / H * 100) + '%';
+    b.title = `Change ${k + 1}: ${els[0].dataset.label}`;
+    frag.appendChild(b);
+  }
+  mm.appendChild(frag);
+  paintMinimapView(); markCurrent(false);
+}
+$('mm').addEventListener('click', e => { const b = e.target.closest('.mm-mark'); if (b) goTo(+b.dataset.k); });
+function paintMinimapView() {
+  const doc = $('doc'), r = doc.getBoundingClientRect(), H = doc.scrollHeight || 1, v = $('mmView');
+  const tb = $('toolbar').offsetHeight, top = Math.max(0, (tb - r.top) / H), bot = Math.min(1, (innerHeight - r.top) / H);
+  v.style.top = (top * 100) + '%'; v.style.height = Math.max(0, (bot - top) * 100) + '%';
+  // Scroll-spy for contents
+  let active = null;
+  for (const a of $('toc').querySelectorAll('a[data-sec]')) { const h = document.getElementById(a.dataset.sec); if (h && h.getBoundingClientRect().top < tb + innerHeight * 0.25) active = a; }
+  $('toc').querySelectorAll('a.is-active').forEach(a => a !== active && a.classList.remove('is-active'));
+  if (active) active.classList.add('is-active');
+}
+let scrollRaf = 0;
+addEventListener('scroll', () => { if (!scrollRaf) scrollRaf = requestAnimationFrame(() => { scrollRaf = 0; paintMinimapView(); }); }, { passive: true });
+
+/* ---------- Change navigation ---------- */
+function markCurrent(pulse) {
+  const doc = $('doc'), n = state.diff ? state.diff.hunks : 0;
+  doc.querySelectorAll('.chg.is-current').forEach(e => { if (+e.dataset.chg !== state.cur) e.classList.remove('is-current', 'pulse'); });
+  $('mm').querySelectorAll('.mm-mark').forEach(m => m.classList.toggle('is-current', +m.dataset.k === state.cur));
+  const els = state.cur > -1 ? hunkEls(state.cur) : [];
+  els.forEach(e => e.classList.add('is-current'));
+  $('pos').textContent = state.cur > -1 ? `Change ${state.cur + 1} of ${n}` : n ? `${n} to review` : 'No changes';
+  $('prevBtn').disabled = state.cur <= 0;
+  $('nextBtn').disabled = n === 0 || state.cur >= n - 1;
+  if (pulse && els.length && !reduced()) {
+    els.forEach(e => { e.classList.remove('pulse'); void e.offsetWidth; });
+    const fire = () => els.forEach(e => e.classList.add('pulse'));
+    const r = els[0].getBoundingClientRect();
+    if (r.top > $('toolbar').offsetHeight && r.bottom < innerHeight) fire();
+    else {
+      let done = false; const go = () => { if (!done) { done = true; fire(); } };
+      if ('onscrollend' in window) addEventListener('scrollend', go, { once: true });
+      setTimeout(go, 750);
+    }
+  }
+}
+function goTo(k) {
+  const n = state.diff ? state.diff.hunks : 0; if (!n) return;
+  state.cur = Math.max(0, Math.min(n - 1, k));
+  const els = hunkEls(state.cur); if (!els.length) return;
+  const first = els[0], last = els[els.length - 1];
+  const h = last.getBoundingClientRect().bottom - first.getBoundingClientRect().top;
+  const room = innerHeight - $('toolbar').offsetHeight;
+  const block = h > room * 0.8 ? 'start' : 'center';
+  first.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block });
+  markCurrent(true);
+  settleOn(first, block);
+}
+/* Long notes render lazily (content-visibility), so a smooth scroll can land a little off once the
+   blocks it passed have laid out. When the scroll ends, glide the rest of the way (never a jump). */
+let settleTok = 0;
+function settleOn(el, block) {
+  const tok = ++settleTok;
+  let done = false;
+  const check = () => {
+    if (done || tok !== settleTok) return; done = true;
+    const r = el.getBoundingClientRect(), tb = $('toolbar').offsetHeight;
+    const want = block === 'start' ? tb + 24 : (tb + innerHeight) / 2 - r.height / 2;
+    const delta = r.top - want;
+    if (Math.abs(delta) > 40) scrollBy({ top: delta, behavior: reduced() ? 'auto' : 'smooth' });
+  };
+  if ('onscrollend' in window) addEventListener('scrollend', check, { once: true });
+  setTimeout(check, 1100);
+}
+const next = () => goTo(state.cur + 1), prev = () => { if (state.cur > 0) goTo(state.cur - 1); };
+$('nextBtn').addEventListener('click', next);
+$('prevBtn').addEventListener('click', prev);
+addEventListener('keydown', e => {
+  if (e.metaKey || e.ctrlKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable) return;
+  if (e.key === 'j') { e.preventDefault(); next(); }
+  else if (e.key === 'k') { e.preventDefault(); prev(); }
+});
+/* Keep link-changed tooltips inside the viewport. */
+document.addEventListener('pointerover', e => { const lc = e.target.closest && e.target.closest('.lc'); if (lc) placeTip(lc); });
+document.addEventListener('focusin', e => { if (e.target.classList && e.target.classList.contains('lc')) placeTip(e.target); });
+function placeTip(lc) {
+  const tip = lc.querySelector('.lc-tip'); tip.style.setProperty('--shift', '0px');
+  const r = tip.getBoundingClientRect(), pad = 12;
+  const shift = r.left < pad ? pad - r.left : r.right > innerWidth - pad ? innerWidth - pad - r.right : 0;
+  tip.style.setProperty('--shift', shift + 'px');
+}
+
+/* ---------- Revision slider ---------- */
+const inner = $('rsInner'), hOld = $('hOld'), hNew = $('hNew');
+/* Bar height = words changed against the previous version (sqrt scale keeps small edits visible).
+   Sample mode computes them at once; real mode fills them in as background comparisons finish,
+   and the bars ease up to their heights. */
+const SIZES = [];
+function barH(i) {
+  if (!i) return 0.55;
+  const known = SIZES.filter(Number.isFinite), max = Math.max(1, ...known);
+  return SIZES[i] == null ? 0.16 : Math.max(0.04, Math.sqrt(SIZES[i] / max));
+}
+function tipOf(i) {
+  const v = VERSIONS[i], base = `v${v.v} · ${vDate(v)}`;
+  const cap = REAL && v.raw.source === 'wayback' && v.raw.captured_at ? ` · archived ${fmtDate(Date.parse(v.raw.captured_at))}` : '';
+  let line1;
+  if (!i) line1 = base + cap + (REAL ? ' · earliest edition held' : ' · first published');
+  else if (SIZES[i] == null) line1 = base + cap + ' · comparing…';
+  else line1 = `${base}${cap} · ${SIZES[i] ? SIZES[i].toLocaleString('en-GB') + ' words changed' : 'no text changes'}`;
+  const st = statementOf(i);
+  return line1 + '\n' + (st ? `“${trunc(st.text, 140)}” (${st.src})` : 'No change statement.');
+}
+function labelDate(v, i) {
+  const p = VERSIONS[i - 1], d = fmtMonth(v.t);
+  if (REAL && p && p.v === v.v && fmtMonth(p.t) === d && v.raw.captured_at) return 'cap. ' + fmtMonth(Date.parse(v.raw.captured_at));
+  return d;
+}
+function buildSlider() {
+  if (!REAL) for (let i = 1; i < N; i++) SIZES[i] = (d => d.ins + d.del)(diffVersions(i - 1, i));
+  let plot = '';
+  const y0 = new Date(AXIS.start).getUTCFullYear(), y1 = new Date(AXIS.end).getUTCFullYear();
+  for (let y = y0; y <= y1; y++) {
+    const x = xOf(Date.UTC(y, 0, 1));
+    if (x >= -0.001 && x <= 1.001) plot += `<div class="rs-year" style="left:${x * 100}%"><span>${y}</span></div>`;
+  }
+  const xt = xOf(AXIS.today);
+  if (xt >= 0 && xt <= 1.001) plot += `<div class="rs-year rs-today" style="left:${xt * 100}%"><span>Today</span></div>`;
+  VERSIONS.forEach((v, i) => {
+    plot += `<button type="button" class="rs-bar${i ? '' : ' first'}${v.x < .15 ? ' edge-l' : v.x > .85 ? ' edge-r' : ''}" data-i="${i}" tabindex="-1" aria-hidden="true" style="left:${v.x * 100}%;--h:${barH(i).toFixed(3)}" data-tip="${esc(tipOf(i))}"></button>`;
+  });
+  $('rsPlot').innerHTML = plot;
+  $('rsNodes').innerHTML = VERSIONS.map((v, i) => `<span class="rs-node" data-i="${i}" style="left:${v.x * 100}%"></span><span class="rs-label" data-i="${i}" style="left:${v.x * 100}%"><b>v${esc(v.v)}</b><span class="d">${labelDate(v, i)}</span></span>`).join('');
+}
+inner.addEventListener('pointerover', e => {
+  const t = e.target.closest('.rs-label, .rs-node'); if (!t) return;
+  const bar = inner.querySelector(`.rs-bar[data-i="${t.dataset.i}"]`); if (bar) bar.classList.add('tip');
+});
+inner.addEventListener('pointerout', e => {
+  const t = e.target.closest('.rs-label, .rs-node'); if (!t) return;
+  const bar = inner.querySelector(`.rs-bar[data-i="${t.dataset.i}"]`); if (bar) bar.classList.remove('tip');
+});
+/* Editions dated close together (or a phone-width slider) would print labels on top of each other:
+   keep the OLD and NEW labels, then any others that fit, fading the rest. */
+function cullLabels() {
+  const labels = [...inner.querySelectorAll('.rs-label')];
+  if (!labels.length) return;
+  const rects = labels.map(l => { l.classList.remove('crowded'); return l.getBoundingClientRect(); });
+  const order = labels.map((l, k) => k).sort((x, y) => {
+    const px = +labels[x].dataset.i === state.b || +labels[x].dataset.i === state.a ? 0 : 1;
+    const py = +labels[y].dataset.i === state.b || +labels[y].dataset.i === state.a ? 0 : 1;
+    return px - py || y - x;   // the pair first, then newest first
+  });
+  const kept = [];
+  for (const k of order) {
+    const r = rects[k];
+    if (kept.some(q => r.left < q.right + 6 && r.right > q.left - 6)) labels[k].classList.add('crowded');
+    else kept.push(r);
+  }
+}
+addEventListener('resize', () => requestAnimationFrame(cullLabels));
+function updateBars() {
+  inner.querySelectorAll('.rs-bar').forEach(b => { const i = +b.dataset.i; b.style.setProperty('--h', barH(i).toFixed(3)); b.dataset.tip = tipOf(i); });
+}
+/* ---------- What changed: one sentence per edition ---------- */
+/* The note's own statement ("Changes from last version of this note", verbatim) comes first; failing
+   that, GOV.UK's change note for the edition (verbatim). Beneath it, always, a computed line from the
+   diff against the previous held edition, labelled as such. Nothing is paraphrased. */
+const SUMMARY = [];   // per edition i: { stats, toc } of the diff (i-1 -> i), kept small and outside the LRU
+const fmtN = n => Number(n || 0).toLocaleString('en-GB');
+const trunc = (t, n) => (t.length > n ? t.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : t);
+function statementOf(i) {
+  const v = VERSIONS[i];
+  if (!REAL) return v.note ? { text: v.note, src: 'Sample note' } : null;
+  const r = v.raw;
+  if (r.change_statement) return { text: r.change_statement, src: 'Home Office', short: 'Home Office', why: 'Verbatim from the note: “Changes from last version of this note”' };
+  const g = (r.govuk_change_notes || []).slice().sort((x, y) => Math.abs(Date.parse(x.date) - v.t) - Math.abs(Date.parse(y.date) - v.t));
+  if (g.length && g[0].note) return { text: g[0].note, src: 'GOV.UK change note', short: 'GOV.UK note', why: `Verbatim GOV.UK change note, ${fmtDate(Date.parse(g[0].date))}` };
+  return null;
+}
+const parseVer = t => { const m = /^(\d+)(?:\.(\d+))?/.exec(String(t || '')); return m ? { major: +m[1], minor: +(m[2] || 0) } : null; };
+/* "v3.0 not held": the previous edition held is not the immediately preceding version number. */
+function notHeld(i) {
+  if (!REAL) return '';
+  const c = parseVer(VERSIONS[i].raw.version);
+  if (!c) return '';
+  if (i === 0) return c.major > 1 || c.minor > 0 ? 'earlier editions not held' : '';
+  const p = parseVer(VERSIONS[i - 1].raw.version);
+  if (!p) return '';
+  const miss = [];
+  if (c.major === p.major) for (let n = p.minor + 1; n < c.minor; n++) miss.push(`v${c.major}.${n}`);
+  else if (c.major > p.major) for (let m = p.major + 1; m < c.major; m++) miss.push(`v${m}.0`);
+  if (!miss.length) return '';
+  return (miss.length > 3 ? `${miss[0]}–${miss[miss.length - 1]}` : miss.join(', ')) + ' not held';
+}
+function sampleSummary(i) {
+  const d = diffVersions(i - 1, i), toc = [], seen = new Set();
+  let cur = null;
+  for (const r of d.rows) {
+    if (r.t === 'h2' || r.t === 'h3') { cur = { text: r.d.items.map(x => x.text).join('').trim(), count: 0, st: r.st, level: +r.t[1] }; toc.push(cur); }
+    if (r.st !== 'eq' && cur && !seen.has(r.hunk + ':' + toc.length)) { seen.add(r.hunk + ':' + toc.length); cur.count++; }
+  }
+  return { stats: { changes: d.hunks, ins: d.ins, del: d.del }, toc };
+}
+/* Computed line: the sections of the new edition with most changes, and the word totals. */
+const BACK_MATTER = /^\s*(bibliography|sources (cited|consulted)|version control|terms of reference|research methodology|annex|feedback)/i;
+function computedLine(i) {
+  if (i === 0) return { html: 'Earliest edition held: there is no earlier edition here to compare it with.' };
+  const sum = REAL ? SUMMARY[i] : sampleSummary(i);
+  const prev = `v${esc(VERSIONS[i - 1].v)}`;
+  if (!sum) return { html: `Comparing with ${prev}…`, pending: true };
+  const st = sum.stats;
+  if (!st.changes) return { html: `No text changes found against ${prev}.` };
+  // Rank the new edition's sections by number of changes; back matter (bibliography, version control,
+  // terms of reference, methodology) is mostly source lists, so it is left out of the ranking.
+  let back = false;
+  const secs = sum.toc.map((t, k) => {
+    if (t.level <= 2) back = BACK_MATTER.test(t.text);
+    return { ...t, k, back };
+  }).filter(t => t.count > 0 && t.st !== 'del' && !t.back)
+    .sort((x, y) => y.count - x.count || x.k - y.k).slice(0, 3);
+  const parts = secs.map((t, k) => `${esc(trunc(t.text, 52))} (${t.count}${k ? '' : t.count === 1 ? ' change' : ' changes'})`);
+  const words = `<span class="ni">+${fmtN(st.ins)}</span> <span class="nd">−${fmtN(st.del)}</span> words`;
+  const notes = st.noteChanges ? `${fmtN(st.noteChanges)} footnote ${st.noteChanges === 1 ? 'change' : 'changes'} · ` : '';
+  return { html: (parts.length ? `Most changed: ${parts.join(', ')} · ` : '') + notes + words + ` <span class="wc-note">vs ${prev}</span>` };
+}
+function captionHtml(i, calc) {
+  const v = VERSIONS[i], st = statementOf(i), gap = notHeld(i);
+  let meta = `<span class="tag">What changed</span><span><b>v${esc(v.v)}</b> · ${vDate(v)}</span>`;
+  if (st) meta += `<span class="tag tag--outline" title="${esc(st.why || st.src)}">${esc(st.src)}</span>`;
+  if (gap) meta += `<span class="wc-note">${esc(gap)}</span>`;
+  const text = st ? `<p class="wc-text"><q>${esc(st.text)}</q></p>` : '<p class="wc-text none">No change statement for this edition.</p>';
+  return `<div class="wc-in"><p class="wc-meta">${meta}</p>${text}<p class="wc-calc"><span class="tag tag--calc">Computed</span><span>${calc.html}</span></p></div>`;
+}
+let wcKey = '', wcIdx = -1;
+const EASE = 'cubic-bezier(.2,.8,.2,1)';
+function updateCaption(i) {
+  if (i == null || !VERSIONS[i]) return;
+  const calc = computedLine(i), key = i + '|' + calc.html;
+  if (key === wcKey) return;
+  wcKey = key; wcIdx = i;
+  const box = $('wc'), tmp = document.createElement('div');
+  tmp.innerHTML = captionHtml(i, calc);
+  const nu = tmp.firstElementChild;
+  // Drop anything still fading out, then crossfade old -> new in the same grid cell (blur + opacity).
+  box.querySelectorAll('.wc-in.out').forEach(e => e.remove());
+  const old = box.querySelector('.wc-in');
+  box.appendChild(nu);
+  if (calc.pending && REAL) engine.diff(i - 1, i).then(() => { if (wcIdx === i) updateCaption(i); }).catch(() => {});
+  if (!old) return;
+  if (reduced()) { old.remove(); return; }
+  old.classList.add('out');
+  nu.animate([{ opacity: 0, filter: 'blur(4px)' }, { opacity: 1, filter: 'blur(0px)' }], { duration: 260, delay: 40, easing: EASE, fill: 'backwards' });
+  const settle = () => {
+    if (!old.isConnected) return;
+    const h0 = box.offsetHeight; old.remove(); const h1 = box.offsetHeight;
+    // The caption box eases to its new height instead of snapping.
+    if (Math.abs(h1 - h0) > 1 && document.visibilityState === 'visible') box.animate([{ height: h0 + 'px' }, { height: h1 + 'px' }], { duration: 240, easing: EASE });
+  };
+  old.animate([{ opacity: 1, filter: 'blur(0px)' }, { opacity: 0, filter: 'blur(4px)' }], { duration: 230, easing: EASE, fill: 'forwards' }).finished.then(settle, settle);
+  setTimeout(settle, 600); // animations pause in background tabs; never leave the old caption behind
+}
+/* Reading time for Play: a caption stays up long enough to be read (about 2.5 to 5 seconds). */
+function dwellFor(i) {
+  const st = statementOf(i), n = (st ? st.text.length : 24) + 40;
+  return Math.max(2500, Math.min(5000, 1400 + n * 13));
+}
+function buildChangeLog() {
+  const list = $('clog');
+  list.innerHTML = VERSIONS.map((v, i) => i).reverse().map(i => {
+    const v = VERSIONS[i], st = statementOf(i), gap = notHeld(i);
+    const meta = `<span>${vDate(v)}</span>${st ? `<span class="tag tag--outline">${esc(st.short || st.src)}</span>` : ''}<span class="cl-n" data-i="${i}">${SIZES[i] != null && i ? (SIZES[i] ? fmtN(SIZES[i]) + ' words changed' : 'no text changes') : ''}</span>${gap ? `<span>${esc(gap)}</span>` : ''}`;
+    const text = st ? `<span class="cl-t">${esc(st.text)}</span>` : '<span class="cl-t none">No change statement.</span>';
+    const label = `Version ${v.v}, ${vDateLong(v)}${st ? ': ' + st.text : ''}. Show what changed in this edition.`;
+    return `<li data-i="${i}"><button type="button" aria-label="${esc(label)}"><span class="cl-v">v${esc(v.v)}</span><span class="cl-m">${meta}</span>${text}</button></li>`;
+  }).join('');
+  $('clogWrap').hidden = N < 2;
+}
+function updateChangeLogSizes() {
+  $('clog').querySelectorAll('.cl-n').forEach(el => { const i = +el.dataset.i; el.textContent = SIZES[i] != null && i ? (SIZES[i] ? fmtN(SIZES[i]) + ' words changed' : 'no text changes') : ''; });
+}
+let clogB = -1;
+function paintChangeLog(ia, ib) {
+  const list = $('clog');
+  list.querySelectorAll('li').forEach(li => {
+    const i = +li.dataset.i;
+    li.classList.toggle('in-range', i > ia && i <= ib); li.classList.toggle('is-new', i === ib); li.classList.toggle('is-old', i === ia);
+  });
+  if (ib === clogB) return;
+  clogB = ib;
+  const item = list.querySelector(`li[data-i="${ib}"]`);
+  if (!item) return;
+  const top = item.offsetTop, bottom = top + item.offsetHeight;   // the list is position: relative
+  if (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight) {
+    list.scrollTo({ top: Math.max(0, top - (list.clientHeight - item.offsetHeight) / 2), behavior: reduced() ? 'auto' : 'smooth' });
+  }
+}
+/* Pick an edition in the change log: compare it with the edition before it (glides, no snap). */
+async function selectEdition(i) {
+  stopPlay();
+  if (i === 0) { if (state.b > 0) { state.active = 'a'; await glide('a', 0, 320); commit(); } return; }
+  state.active = 'b';
+  if (i > state.b) { await glide('b', i, 320); await glide('a', i - 1, 320); }
+  else { await glide('a', i - 1, 320); await glide('b', i, 320); }
+  commit();
+}
+$('clog').addEventListener('click', e => { const li = e.target.closest('li[data-i]'); if (li) selectEdition(+li.dataset.i); });
+
+function nearest(x, lo, hi) {
+  let best = lo, bd = Infinity;
+  for (let i = lo; i <= hi; i++) { const d = Math.abs(VERSIONS[i].x - x); if (d < bd) { bd = d; best = i; } }
+  return best;
+}
+/* Live paint: positions, range, readout, labels. ia/ib = the versions currently nearest the handles. */
+function paintSlider(ia, ib, instantReadout) {
+  inner.style.setProperty('--xa', state.xa); inner.style.setProperty('--xb', state.xb);
+  const active = state.active === 'a' ? state.xa : state.xb, near = VERSIONS[state.active === 'a' ? ia : ib];
+  asat.set(tOf(active), instantReadout, near.prec === 'month');
+  $('asatLabel').textContent = state.active === 'a' ? 'From' : 'As at';
+  $('asatLabel').classList.toggle('is-from', state.active === 'a');
+  inner.querySelectorAll('.rs-bar, .rs-node, .rs-label').forEach(el => {
+    const i = +el.dataset.i; el.classList.toggle('in-range', i > ia && i <= ib); el.classList.toggle('is-base', i === ia);
+  });
+  const A = VERSIONS[ia], B = VERSIONS[ib], spans = ib - ia;
+  $('cmpDesc').innerHTML = `Comparing <b>v${esc(A.v)}</b> (${vDate(A)}) with <b>v${esc(B.v)}</b> (${vDate(B)})${spans > 1 ? ` <span class="note">· spans ${spans} editions; see the change log</span>` : ''} <span class="note">· ${esc(B.note)}</span>`;
+  updateCaption(ib); paintChangeLog(ia, ib);
+}
+function syncAria() {
+  const A = VERSIONS[state.a], B = VERSIONS[state.b];
+  hOld.setAttribute('aria-valuenow', state.a + 1); hOld.setAttribute('aria-valuetext', `Version ${A.v}, ${vDateLong(A)}`);
+  hNew.setAttribute('aria-valuenow', state.b + 1); hNew.setAttribute('aria-valuetext', `Version ${B.v}, ${vDateLong(B)}`);
+  hOld.setAttribute('aria-valuemax', N); hNew.setAttribute('aria-valuemax', N);
+  $('asatSr').textContent = `Comparing version ${A.v} (${vDateLong(A)}) with version ${B.v} (${vDateLong(B)}).`;
+}
+const easeOut = t => 1 - Math.pow(1 - t, 3);
+const anims = { a: 0, b: 0 };
+/* Glide a handle to a version (eased, no snap). Resolves when settled. */
+function glide(which, idx, dur = 260) {
+  return new Promise(res => {
+    cancelAnimationFrame(anims[which]);
+    const key = which === 'a' ? 'xa' : 'xb', from = state[key], to = VERSIONS[idx].x;
+    if (which === 'a') state.a = idx; else state.b = idx;
+    if (reduced() || Math.abs(to - from) < 1e-6 || dur === 0) { state[key] = to; paintSlider(state.a, state.b); return res(); }
+    const t0 = performance.now(), gen = (glide.gen[which] = (glide.gen[which] || 0) + 1);
+    let done = false;
+    const finish = () => { if (done || glide.gen[which] !== gen) return; done = true; cancelAnimationFrame(anims[which]); state[key] = to; paintSlider(state.a, state.b); res(); };
+    const step = now => {
+      if (done || glide.gen[which] !== gen) return;
+      const p = Math.min(1, (now - t0) / dur);
+      state[key] = from + (to - from) * easeOut(p);
+      paintSlider(state.a, state.b);
+      if (p < 1) anims[which] = requestAnimationFrame(step); else finish();
+    };
+    anims[which] = requestAnimationFrame(step);
+    setTimeout(finish, dur + 150); // background tabs pause rAF: always settle
+  });
+}
+glide.gen = {};
+let lastPair = '';
+function commit(fade = true) {
+  syncAria(); cullLabels();
+  const pair = state.a + ':' + state.b;
+  if (pair === lastPair) return Promise.resolve();
+  lastPair = pair; state.cur = -1;
+  if (REAL) return loadPair(fade);
+  renderDoc();
+  if (fade && !reduced()) popIn($('doc'), 300, .25);
+  return Promise.resolve();
+}
+async function moveTo(which, idx, dur) {
+  state.active = which;
+  idx = which === 'a' ? Math.max(0, Math.min(state.b - 1, idx)) : Math.max(state.a + 1, Math.min(N - 1, idx));
+  await glide(which, idx, dur);
+  commit();
+}
+function trackX(clientX) { const r = inner.getBoundingClientRect(); return Math.max(0, Math.min(1, (clientX - r.left) / r.width)); }
+
+/* Dragging (pointer events: mouse, pen, touch). */
+function startDrag(which, e) {
+  stopPlay();
+  const el = which === 'a' ? hOld : hNew, key = which === 'a' ? 'xa' : 'xb';
+  cancelAnimationFrame(anims[which]); glide.gen[which] = (glide.gen[which] || 0) + 1;
+  state.active = which; el.focus({ preventScroll: true });
+  el.setPointerCapture(e.pointerId); el.classList.add('is-dragging'); $('rs').classList.add('is-dragging');
+  const r = el.getBoundingClientRect(), offset = e.clientX - (r.left + r.width / 2);
+  const lo = which === 'a' ? VERSIONS[0].x : VERSIONS[state.a + 1].x, hi = which === 'a' ? VERSIONS[state.b - 1].x : VERSIONS[N - 1].x;
+  const move = ev => {
+    state[key] = Math.max(lo, Math.min(hi, trackX(ev.clientX - offset)));
+    const ia = which === 'a' ? nearest(state.xa, 0, state.b - 1) : state.a, ib = which === 'b' ? nearest(state.xb, state.a + 1, N - 1) : state.b;
+    paintSlider(ia, ib);
+  };
+  const up = () => {
+    el.removeEventListener('pointermove', move); el.removeEventListener('pointerup', up); el.removeEventListener('pointercancel', up);
+    el.classList.remove('is-dragging'); $('rs').classList.remove('is-dragging');
+    const idx = which === 'a' ? nearest(state.xa, 0, state.b - 1) : nearest(state.xb, state.a + 1, N - 1);
+    moveTo(which, idx, 260);
+  };
+  el.addEventListener('pointermove', move); el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up);
+  e.preventDefault();
+}
+hOld.addEventListener('pointerdown', e => { if (e.button === 0) { e.stopPropagation(); startDrag('a', e); } });
+hNew.addEventListener('pointerdown', e => { if (e.button === 0) { e.stopPropagation(); startDrag('b', e); } });
+/* Click on the strip (or a bar): move whichever handle is closer, then glide. */
+inner.addEventListener('click', e => {
+  if (e.target.closest('.rs-handle')) return;
+  stopPlay();
+  const x = trackX(e.clientX), bar = e.target.closest('.rs-bar');
+  const i = bar ? +bar.dataset.i : nearest(x, 0, N - 1);
+  let which;
+  if (i <= state.a) which = 'a'; else if (i >= state.b) which = 'b';
+  else which = Math.abs(VERSIONS[i].x - state.xa) < Math.abs(VERSIONS[i].x - state.xb) ? 'a' : 'b';
+  if (which === 'a' && i >= state.b) return; if (which === 'b' && i <= state.a) return;
+  moveTo(which, i, 300);
+});
+function sliderKey(which, e) {
+  const cur = which === 'a' ? state.a : state.b; let idx = null;
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowDown' || e.key === 'PageDown') idx = cur - 1;
+  else if (e.key === 'ArrowRight' || e.key === 'ArrowUp' || e.key === 'PageUp') idx = cur + 1;
+  else if (e.key === 'Home') idx = which === 'a' ? 0 : state.a + 1;
+  else if (e.key === 'End') idx = which === 'a' ? state.b - 1 : N - 1;
+  if (idx === null) return;
+  e.preventDefault(); stopPlay(); moveTo(which, idx, 260);
+}
+hOld.addEventListener('keydown', e => sliderKey('a', e));
+hNew.addEventListener('keydown', e => sliderKey('b', e));
+hOld.addEventListener('focus', () => { state.active = 'a'; paintSlider(state.a, state.b); });
+hNew.addEventListener('focus', () => { state.active = 'b'; paintSlider(state.a, state.b); });
+hOld.addEventListener('blur', () => { if (state.active === 'a' && !state.playing) { state.active = 'b'; paintSlider(state.a, state.b); } });
+
+/* Play: sweep through each consecutive pair of versions. */
+let playToken = 0;
+const wait = (ms, tok) => new Promise(r => setTimeout(() => r(tok === playToken), ms));
+function stopPlay() {
+  if (!state.playing) return;
+  state.playing = false; playToken++;
+  $('playBtn').setAttribute('aria-pressed', 'false'); $('playLbl').textContent = 'Play history';
+}
+async function play() {
+  if (state.playing) return stopPlay();
+  state.playing = true; const tok = ++playToken;
+  $('playBtn').setAttribute('aria-pressed', 'true'); $('playLbl').textContent = 'Pause';
+  let start = state.b >= N - 1 ? 0 : state.a;
+  const dur = reduced() ? 0 : 650;
+  for (let i = start; i < N - 1; i++) {
+    state.active = 'b';
+    if (i + 1 > state.b) { await glide('b', i + 1, dur); await glide('a', i, dur); }
+    else { await glide('a', i, dur); await glide('b', i + 1, dur); }
+    if (tok !== playToken) { commit(); return; } // paused mid-glide: the document still follows the handles
+    await commit();
+    if (tok !== playToken) return;
+    if (!(await wait(dwellFor(i + 1), tok))) return;
+  }
+  stopPlay();
+}
+$('playBtn').addEventListener('click', play);
+
+/* ---------- Inline | Side-by-side ---------- */
+/* Keep the reader's place across Inline <-> Side-by-side: anchor on the first block row in view
+   (data-r is the same aligned row in both renderings; sample mode falls back to ids / change ids). */
+function captureAnchor() {
+  const tb = $('toolbar').offsetHeight, doc = $('doc');
+  const els = REAL ? doc.querySelectorAll('[data-r]') : doc.querySelectorAll('[data-chg], h2, h3, p, li, figure');
+  // Binary search for the first element whose bottom is below the toolbar (document order ~ vertical order).
+  let lo = 0, hi = els.length - 1, found = -1;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (els[mid].getBoundingClientRect().bottom > tb + 8) { found = mid; hi = mid - 1; } else lo = mid + 1;
+  }
+  if (found < 0) return null;
+  const el = els[found], top = el.getBoundingClientRect().top;
+  if (REAL) return { key: `[data-r="${el.dataset.r}"]`, top };
+  return { key: el.dataset.chg != null ? `[data-chg="${el.dataset.chg}"]` : el.id ? '#' + CSS.escape(el.id) : null, top };
+}
+function restoreAnchor(a) {
+  if (!a || !a.key) return;
+  const el = $('doc').querySelector(a.key); if (!el) return;
+  const html = document.documentElement, prevSB = html.style.scrollBehavior; html.style.scrollBehavior = 'auto';
+  scrollBy(0, el.getBoundingClientRect().top - a.top);
+  html.style.scrollBehavior = prevSB;
+}
+/* View Transitions, with rejections handled (rapid toggling skips earlier transitions). */
+function safeVT(fn) {
+  const t = document.startViewTransition(fn);
+  [t.ready, t.finished, t.updateCallbackDone].forEach(p => p && p.catch(() => {}));
+  return t;
+}
+const canVT = () => !!document.startViewTransition && document.visibilityState === 'visible';
+function swapView(fn) {
+  if (reduced()) return fn();
+  if (canVT()) return safeVT(fn);
+  const doc = $('doc');
+  let ran = false;
+  const run = () => {
+    if (ran) return; ran = true;
+    fn(); doc.getAnimations().forEach(a => a.cancel());
+    popIn(doc, 260, 0);
+  };
+  doc.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 130, easing: 'ease-in', fill: 'forwards' }).finished.then(run, run);
+  setTimeout(run, 220);
+}
+function applyModeUI() {
+  const narrow = NARROW.matches;
+  $('seg').dataset.mode = effectiveMode();
+  $('mSbs').disabled = narrow;
+  (effectiveMode() === 'sbs' ? $('mSbs') : $('mInline')).checked = true;
+  document.body.classList.toggle('is-narrow', narrow && state.mode === 'sbs');
+}
+function setMode(m) {
+  if (m === state.mode) return;
+  state.mode = m; applyModeUI();
+  swapView(() => { const a = captureAnchor(); renderDoc(); restoreAnchor(a); });
+}
+document.querySelectorAll('input[name="mode"]').forEach(r => r.addEventListener('change', () => setMode(r.value)));
+NARROW.addEventListener('change', () => { applyModeUI(); swapView(() => { const a = captureAnchor(); renderDoc(); restoreAnchor(a); }); });
+
+/* ---------- Theme ---------- */
+const THEMES = ['auto', 'light', 'dark'];
+function applyThemeLabel() {
+  const t = document.documentElement.dataset.theme || 'auto';
+  $('themeLbl').textContent = t[0].toUpperCase() + t.slice(1);
+  $('themeBtn').setAttribute('aria-label', `Colour theme: ${t === 'auto' ? 'follow system' : t}. Activate to change.`);
+}
+let themeCur = document.documentElement.dataset.theme || 'auto';
+$('themeBtn').addEventListener('click', () => {
+  const nxt = (themeCur = THEMES[(THEMES.indexOf(themeCur) + 1) % 3]);
+  const apply = () => {
+    if (nxt === 'auto') delete document.documentElement.dataset.theme; else document.documentElement.dataset.theme = nxt;
+    try { nxt === 'auto' ? localStorage.removeItem('cpinx-theme') : localStorage.setItem('cpinx-theme', nxt); } catch (e) {}
+    applyThemeLabel();
+  };
+  if (reduced()) return apply();
+  if (canVT()) return safeVT(apply);
+  document.documentElement.classList.add('theme-fade'); apply();
+  setTimeout(() => document.documentElement.classList.remove('theme-fade'), 350);
+});
+
+/* ---------- Init ---------- */
+function measureToolbar() { document.documentElement.style.setProperty('--tb-h', $('toolbar').offsetHeight + 'px'); }
+new ResizeObserver(measureToolbar).observe($('toolbar'));
+/* The minimap follows the document's real height (blocks lay out lazily), debounced. */
+let mmTimer = 0;
+function scheduleMinimap() { clearTimeout(mmTimer); mmTimer = setTimeout(buildMinimap, 140); }
+new ResizeObserver(scheduleMinimap).observe($('doc'));
+/* Lay out each off-screen chunk once, in idle time, so content-visibility remembers its true height:
+   the minimap and "next change" scrolling are then exact. Nothing visible changes. */
+let warmTok = 0;
+function warmChunks() {
+  const tok = ++warmTok, els = [...$('doc').querySelectorAll('.cv, .sbs-row')];
+  if (!els.length || !CSS.supports('content-visibility', 'auto')) return;
+  const per = els[0].classList.contains('cv') ? 4 : 40;
+  const idle = window.requestIdleCallback ? fn => requestIdleCallback(fn, { timeout: 400 }) : fn => setTimeout(fn, 60);
+  let i = 0;
+  const step = () => {
+    if (tok !== warmTok) return;
+    const batch = els.slice(i, i + per); i += per;
+    batch.forEach(e => e.classList.add('warm'));
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      batch.forEach(e => e.classList.remove('warm'));
+      if (tok !== warmTok) return;
+      if (i < els.length) idle(step); else scheduleMinimap();
+    }));
+  };
+  idle(step);
+}
+/* Rollers cache glyph widths, so re-measure after a resize and once the Geist fonts have loaded. */
+function remeasureRollers(instant) {
+  const rollers = [asat, rIns, rDel, rChg];
+  if (instant) rollers.forEach(r => r.el.classList.add('instant'));
+  rollers.forEach(r => (r.slots || [r.d1, r.d2, r.sp, r.m, ...r.y]).forEach(s => { s.widths = null; const i = s.i; s.i = -1; s.set(i); }));
+}
+addEventListener('resize', () => remeasureRollers(false));
+if (document.fonts && document.fonts.load) {
+  Promise.all(['1em "Geist"', '1em "Geist Mono"', '1em "Geist Pixel"'].map(f => document.fonts.load(f).catch(() => {})))
+    .then(() => { remeasureRollers(true); measureToolbar(); buildMinimap(); cullLabels(); });
+}
+function startSlider() {
+  buildSlider(); buildChangeLog();
+  state.xa = VERSIONS[state.a].x; state.xb = VERSIONS[state.b].x;
+  applyThemeLabel(); applyModeUI();
+  state.booting = true;
+  paintSlider(state.a, state.b, true);
+  const done = commit(false);
+  state.booting = false;
+  measureToolbar();
+  return done;
+}
+
+/* Sample mode: the Ruritania demo, plus a chooser that opens real notes from the dashboard's list. */
+async function bootSample() {
+  startSlider();
+  try {
+    const data = await fetch('../dashboard/data.json').then(r => (r.ok ? r.json() : Promise.reject(r.status)));
+    const seen = new Set(), opts = [];
+    for (const c of data.countries || []) for (const n of c.notes || []) {
+      if (!n.compare_url || !n.series || (n.editions || 0) < 2) continue;
+      const k = c.slug + '|' + n.series; if (seen.has(k)) continue; seen.add(k);
+      opts.push(`<option value="?country=${encodeURIComponent(c.slug)}&amp;series=${encodeURIComponent(n.series)}">${esc(c.name)} · ${esc(capFirst(n.topic || n.series))} (${n.editions})</option>`);
+    }
+    if (opts.length) { $('chooserSel').insertAdjacentHTML('beforeend', opts.join('')); $('chooser').hidden = false; }
+  } catch (e) { /* no dashboard data: the demo stands alone */ }
+  $('chooserSel').addEventListener('change', e => { if (e.target.value) location.search = e.target.value.replace(/&amp;/g, '&'); });
+}
+
+/* Real mode: load the series, lay out its editions by date, default to the two newest. */
+async function bootReal() {
+  const country = REAL_COUNTRY, series = REAL_SERIES;
+  const crumb = $('crumb'), back = document.createElement('a');
+  back.className = 'back'; back.id = 'crumb';
+  back.href = '../dashboard/index.html#' + encodeURIComponent(country || '');
+  back.textContent = '← ' + capFirst(String(country || '').replace(/-/g, ' '));
+  crumb.replaceWith(back);
+  $('notice').innerHTML = `<span class="tag tag--outline" aria-hidden="true">Verbatim</span><span><strong>Text is verbatim from GOV.UK</strong> (Source: Home Office, GOV.UK · Crown copyright, Open Government Licence v3.0). Marks show differences between the two editions selected. Archived editions are copies captured by the Internet Archive.</span>`;
+  $('doc').innerHTML = `<p class="loading"><span class="tag">Loading</span>Fetching editions…</p>`;
+  $('cmpDesc').textContent = '';
+  applyThemeLabel(); applyModeUI();
+  if (!/^[a-z0-9-]+$/.test(country || '') || !/^[a-z0-9:_-]+$/i.test(series || '')) return showLoadError('That address does not name a note series.');
+  let data;
+  try {
+    const url = `../data/series/${country}/${series.replace(/:/g, '--')}.json`;
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`${r.status} ${r.statusText} for ${url}`);
+    data = await r.json();
+  } catch (err) { return showLoadError(`The editions for this note could not be loaded (${err.message || err}).`); }
+  const vs = (data.versions || []).filter(v => v && typeof v.body === 'string');
+  if (!vs.length) return showLoadError('No editions are held for this note.');
+  REALDOC.meta = data;
+  back.textContent = '← ' + (data.country_name || back.textContent.slice(2));
+  document.title = `${data.country_name} · ${capFirst(data.topic || data.key)} — CPIN Extractor`;
+  VERSIONS = vs.map(r => ({ v: r.version || '—', t: Date.parse(r.date || r.published || r.first_seen), prec: r.published ? r.published_precision : null, note: r.title, raw: r }));
+  const yr = t => new Date(t).getUTCFullYear(), now = Date.now();
+  AXIS = { start: Date.UTC(yr(VERSIONS[0].t), 0, 1), end: Date.UTC(Math.max(yr(VERSIONS[VERSIONS.length - 1].t), yr(now)), 11, 31), today: now };
+  layoutVersions();
+  state.b = N - 1; state.a = Math.max(0, N - 2);
+  engine.onResult = (a, b, r) => {
+    if (b !== a + 1) return;
+    SIZES[b] = r.stats.ins + r.stats.del;
+    SUMMARY[b] = { stats: r.stats, toc: r.toc.map(({ text, count, st, level }) => ({ text, count, st, level })) };
+    updateBars(); updateChangeLogSizes();
+    if (wcIdx === b) updateCaption(b);
+  };
+  engine.init(vs.map(v => v.body), data.images || {});
+  if (N < 2) {
+    $('rs').hidden = true; document.querySelector('.tl-actions').hidden = true;
+    $('cmpDesc').textContent = 'Only one edition is held for this note, so there is nothing to compare yet.';
+  }
+  await startSlider();
+  // Warm the cache in the background: each edition against the one before (sizes the bars, readies Play).
+  for (let i = N - 1; i >= 1; i--) engine.diff(i - 1, i).catch(() => {});
+}
+if (REAL) bootReal(); else bootSample();
+</script>
+</body>
+</html>

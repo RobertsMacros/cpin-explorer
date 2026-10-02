@@ -1,0 +1,569 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+  "content_id": "c30e6ad6-18f6-4f74-a1c0-6853c0861b0a",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility, and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "risk-from-the-state",
+                "level": 4,
+                "text": "3.1 Risk from the state"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3.Risk"
+          },
+          {
+            "id": "risk-from-non-state-actors",
+            "level": 3,
+            "text": "3.2 Risk from non-state actors"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "political-environment",
+                "level": 4,
+                "text": "7.1 Political environment"
+              }
+            ],
+            "id": "historical-context",
+            "level": 3,
+            "text": "7. Historical context"
+          },
+          {
+            "id": "political-system",
+            "level": 3,
+            "text": "8. Political system"
+          },
+          {
+            "headers": [
+              {
+                "id": "role-of-auxiliary-organisations",
+                "level": 4,
+                "text": "9.1 Role of auxiliary organisations"
+              },
+              {
+                "id": "awami-league-al-and-auxiliary-organisations",
+                "level": 4,
+                "text": "9.2 Awami League (AL) and auxiliary organisations"
+              },
+              {
+                "id": "BNP-auxiliary",
+                "level": 4,
+                "text": "9.3 Bangladesh Nationalist Party (BNP) and auxiliary organisations"
+              },
+              {
+                "id": "Jel-auxiliary",
+                "level": 4,
+                "text": "9.4 Jamaat-e-Islami (JI or JeI) and auxiliary organisations"
+              }
+            ],
+            "id": "political-parties",
+            "level": 3,
+            "text": "9. Political parties"
+          },
+          {
+            "headers": [
+              {
+                "id": "job-quota-system",
+                "level": 4,
+                "text": "10.1 Job quota system"
+              }
+            ],
+            "id": "protests",
+            "level": 3,
+            "text": "10. Protests against the job quota system"
+          },
+          {
+            "headers": [
+              {
+                "id": "violence-fatalities",
+                "level": 4,
+                "text": "10.3 Violence and fatalities"
+              },
+              {
+                "id": "arrests-and-detentions",
+                "level": 4,
+                "text": "10.4 Arrests and detentions"
+              }
+            ],
+            "id": "anti-quota-protests",
+            "level": 3,
+            "text": "10.2 Anti-quota protests"
+          },
+          {
+            "headers": [
+              {
+                "id": "resignation-of-sheikh-hasina-and-downfall-of-the-awami-league",
+                "level": 4,
+                "text": "11.1 Resignation of Sheikh Hasina and downfall of the Awami League"
+              },
+              {
+                "id": "formation-of-the-interim-government",
+                "level": 4,
+                "text": "11.2 Formation of the interim government"
+              },
+              {
+                "id": "interim-government-mandate",
+                "level": 4,
+                "text": "11.3 Interim government's mandate"
+              },
+              {
+                "id": "elections",
+                "level": 4,
+                "text": "11.4 Elections"
+              }
+            ],
+            "id": "political-impact-of-the-protests",
+            "level": 3,
+            "text": "11. Political impact of the protests"
+          },
+          {
+            "headers": [
+              {
+                "id": "status-Awami-League",
+                "level": 4,
+                "text": "12.1 Status and activities of the Awami League and affiliates"
+              },
+              {
+                "id": "arrests-Awami-League-members",
+                "level": 4,
+                "text": "12.2 Arrests of Awami League members and affiliates"
+              },
+              {
+                "id": "violence-against-Awami",
+                "level": 4,
+                "text": "12.3 Violence against Awami League members and affiliates"
+              },
+              {
+                "id": "BNP",
+                "level": 4,
+                "text": "12.4 Bangladesh Nationalist Party"
+              },
+              {
+                "id": "Jamaat-e-Islami",
+                "level": 4,
+                "text": "12.5 Jamaat-e-Islami"
+              }
+            ],
+            "id": "treatment-post-august",
+            "level": 3,
+            "text": "12. Treatment of political groups post August 2024"
+          },
+          {
+            "headers": [
+              {
+                "id": "under-interim-government",
+                "level": 4,
+                "text": "13.2 Under the interim government"
+              },
+              {
+                "id": "reform-of-security-forces-judiciary",
+                "level": 4,
+                "text": "13.3 Reform of security forces and judiciary"
+              },
+              {
+                "id": "accountability-for-corruption-and-abuses",
+                "level": 4,
+                "text": "13.4 Accountability for corruption and abuses"
+              }
+            ],
+            "id": "law-and-order",
+            "level": 3,
+            "text": "13. Law and order"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "ap-news-associated-press",
+                "level": 4,
+                "text": "AP News (Associated Press)"
+              },
+              {
+                "id": "armed-conflict-location--event-data-project-acled",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data Project (ACLED)"
+              },
+              {
+                "id": "bangla-mirror",
+                "level": 4,
+                "text": "Bangla Mirror"
+              },
+              {
+                "id": "bbc",
+                "level": 4,
+                "text": "BBC"
+              },
+              {
+                "id": "bdnews24",
+                "level": 4,
+                "text": "Bdnews24"
+              },
+              {
+                "id": "the-business-standard",
+                "level": 4,
+                "text": "The Business Standard"
+              },
+              {
+                "id": "civicus",
+                "level": 4,
+                "text": "CIVICUS"
+              },
+              {
+                "id": "daily-star",
+                "level": 4,
+                "text": "Daily Star"
+              },
+              {
+                "id": "deutsche-welle-dw",
+                "level": 4,
+                "text": "Deutsche Welle (DW)"
+              },
+              {
+                "id": "dhaka-tribune",
+                "level": 4,
+                "text": "Dhaka Tribune"
+              },
+              {
+                "id": "the-diplomat",
+                "level": 4,
+                "text": "The Diplomat"
+              },
+              {
+                "id": "federal-office-for-migration-and-refugees-germany-bamf",
+                "level": 4,
+                "text": "Federal Office for Migration and Refugees (Germany) (BAMF)"
+              },
+              {
+                "id": "foreign-and-commonwealth-development-office-fcdo",
+                "level": 4,
+                "text": "Foreign and Commonwealth Development Office (FCDO)"
+              },
+              {
+                "id": "foreign-policy-research-institute-fripi",
+                "level": 4,
+                "text": "Foreign Policy Research Institute (FRIPI)"
+              },
+              {
+                "id": "the-guardian",
+                "level": 4,
+                "text": "The Guardian"
+              },
+              {
+                "id": "human-rights-watch-hrw",
+                "level": 4,
+                "text": "Human Rights Watch (HRW)"
+              },
+              {
+                "id": "independent",
+                "level": 4,
+                "text": "Independent"
+              },
+              {
+                "id": "international-crisis-group-icg",
+                "level": 4,
+                "text": "International Crisis Group (ICG)"
+              },
+              {
+                "id": "jurist-news",
+                "level": 4,
+                "text": "Jurist news"
+              },
+              {
+                "id": "justice-makers-bangladesh-in-france-jmbf",
+                "level": 4,
+                "text": "Justice Makers Bangladesh in France (JMBF)"
+              },
+              {
+                "id": "new-age",
+                "level": 4,
+                "text": "New Age"
+              },
+              {
+                "id": "the-print",
+                "level": 4,
+                "text": "The Print"
+              },
+              {
+                "id": "prothom-alo",
+                "level": 4,
+                "text": "Prothom Alo"
+              },
+              {
+                "id": "reuters",
+                "level": 4,
+                "text": "Reuters"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "armed-conflict-location--event-data-project-acled-1",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data Project (ACLED)"
+              },
+              {
+                "id": "the-daily-star",
+                "level": 4,
+                "text": "The Daily Star"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-04-28T11:33:17.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2024-12-20T12:15:07+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+        "base_path": "/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+        "content_id": "c30e6ad6-18f6-4f74-a1c0-6853c0861b0a",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-04-28T10:33:17Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: political situation, Bangladesh, December 2024 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/bangladesh-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/bangladesh-country-policy-and-information-notes",
+        "base_path": "/government/publications/bangladesh-country-policy-and-information-notes",
+        "content_id": "0f130ebe-541f-459c-bf46-463f06e7d56c",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-04-28T10:33:17Z",
+        "schema_name": "publication",
+        "title": "Bangladesh: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-04-28T11:33:17+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1777372397.474-10.13.22.12-2446",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: political situation, Bangladesh, December 2024 (accessible)",
+  "updated_at": "2026-04-29T15:31:13+01:00",
+  "withdrawn_notice": {}
+}

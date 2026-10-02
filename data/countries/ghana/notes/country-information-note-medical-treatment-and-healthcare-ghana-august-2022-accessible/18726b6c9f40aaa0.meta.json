@@ -1,0 +1,609 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+  "content_id": "aaa93062-4da5-44ab-9161-dc29f4636cb9",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "headers": [
+          {
+            "id": "purpose",
+            "level": 3,
+            "text": "Purpose"
+          },
+          {
+            "id": "country-of-origin-information",
+            "level": 3,
+            "text": "Country of origin information"
+          },
+          {
+            "id": "feedback",
+            "level": 3,
+            "text": "Feedback"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "preface",
+        "level": 2,
+        "text": "Preface"
+      },
+      {
+        "id": "Country_information_1",
+        "level": 2,
+        "text": "Healthcare context"
+      },
+      {
+        "headers": [
+          {
+            "id": "medcoi",
+            "level": 3,
+            "text": "1.1 MedCOI"
+          },
+          {
+            "id": "costs-and-currency",
+            "level": 3,
+            "text": "1.2 Costs and currency"
+          }
+        ],
+        "id": "sources-and-prices",
+        "level": 2,
+        "text": "1. Sources and prices"
+      },
+      {
+        "headers": [
+          {
+            "id": "organisation-and-provision",
+            "level": 3,
+            "text": "2.1 Organisation and provision"
+          },
+          {
+            "id": "the-ghana-health-service",
+            "level": 3,
+            "text": "2.2 The Ghana Health Service"
+          },
+          {
+            "id": "national-health-insurance-scheme-nhis",
+            "level": 3,
+            "text": "2.3 National health insurance scheme (NHIS)"
+          },
+          {
+            "id": "facilities-and-personnel",
+            "level": 3,
+            "text": "2.4 Facilities and personnel"
+          },
+          {
+            "id": "private-medical-insurance",
+            "level": 3,
+            "text": "2.5 Private medical insurance"
+          },
+          {
+            "id": "Private_and_public",
+            "level": 3,
+            "text": "2.6 Paediatric healthcare"
+          },
+          {
+            "id": "emergency-healthcare",
+            "level": 3,
+            "text": "2.7 Emergency healthcare"
+          }
+        ],
+        "id": "healthcare-system",
+        "level": 2,
+        "text": "2. Healthcare system"
+      },
+      {
+        "id": "medical-conditions",
+        "level": 2,
+        "text": "Medical conditions"
+      },
+      {
+        "id": "covid-19",
+        "level": 2,
+        "text": "3. COVID-19"
+      },
+      {
+        "headers": [
+          {
+            "id": "general",
+            "level": 3,
+            "text": "4.1 General"
+          },
+          {
+            "id": "breast-cancer",
+            "level": 3,
+            "text": "4.2 Breast cancer"
+          },
+          {
+            "id": "prostate-cancer",
+            "level": 3,
+            "text": "4.3 Prostate cancer"
+          },
+          {
+            "id": "liver-cancer",
+            "level": 3,
+            "text": "4.4 Liver cancer"
+          },
+          {
+            "id": "radiotherapy",
+            "level": 3,
+            "text": "4.5 Radiotherapy"
+          },
+          {
+            "id": "chemotherapy",
+            "level": 3,
+            "text": "4.6 Chemotherapy"
+          },
+          {
+            "id": "Child_cancer_treatment",
+            "level": 3,
+            "text": "4.7 Child cancer"
+          }
+        ],
+        "id": "cancer",
+        "level": 2,
+        "text": "4. Cancer"
+      },
+      {
+        "headers": [
+          {
+            "id": "cardiology-and-high-blood-pressure",
+            "level": 3,
+            "text": "5.1 Cardiology and high blood pressure"
+          },
+          {
+            "id": "heart-diseases-and-heart-surgery",
+            "level": 3,
+            "text": "5.2 Heart diseases and heart surgery"
+          },
+          {
+            "id": "Paediatric_heart_surgery",
+            "level": 3,
+            "text": "5.3 Paediatric heart surgery"
+          },
+          {
+            "id": "brain-aneurysm-surgery",
+            "level": 3,
+            "text": "5.4 Brain aneurysm surgery"
+          }
+        ],
+        "id": "cardiovascular-disease",
+        "level": 2,
+        "text": "5. Cardiovascular disease"
+      },
+      {
+        "id": "dental-treatment-and-conditions",
+        "level": 2,
+        "text": "6. Dental treatment and conditions"
+      },
+      {
+        "id": "diabetes",
+        "level": 2,
+        "text": "7. Diabetes"
+      },
+      {
+        "id": "ear-nose-and-throat-conditions-ent",
+        "level": 2,
+        "text": "8. Ear, nose and throat conditions (ENT)"
+      },
+      {
+        "id": "endocrinological-conditions-including-thyroid-diseases",
+        "level": 2,
+        "text": "9. Endocrinological conditions, including thyroid diseases"
+      },
+      {
+        "id": "epilepsy-and-neurological-conditions",
+        "level": 2,
+        "text": "10. Epilepsy and neurological conditions"
+      },
+      {
+        "id": "eye-conditions-and-diseases",
+        "level": 2,
+        "text": "11. Eye conditions and diseases"
+      },
+      {
+        "id": "gastroenterological-conditions",
+        "level": 2,
+        "text": "12. Gastroenterological conditions"
+      },
+      {
+        "id": "gynaecological-conditions",
+        "level": 2,
+        "text": "13. Gynaecological conditions"
+      },
+      {
+        "id": "haematological-conditions-including-sickle-cell-anaemia",
+        "level": 2,
+        "text": "14. Haematological conditions including sickle cell anaemia"
+      },
+      {
+        "id": "hivaids",
+        "level": 2,
+        "text": "15. HIV/AIDS"
+      },
+      {
+        "id": "homecare-for-the-elderly",
+        "level": 2,
+        "text": "16. Homecare for the elderly"
+      },
+      {
+        "id": "kidney-diseases",
+        "level": 2,
+        "text": "17. Kidney diseases"
+      },
+      {
+        "id": "liver-diseases",
+        "level": 2,
+        "text": "18. Liver diseases"
+      },
+      {
+        "id": "musculoskeletal-conditions",
+        "level": 2,
+        "text": "19. Musculoskeletal conditions"
+      },
+      {
+        "headers": [
+          {
+            "id": "mental-healthcare-services-and-personnel",
+            "level": 3,
+            "text": "20.1 Mental healthcare services and personnel"
+          },
+          {
+            "id": "cost-of-treatment",
+            "level": 3,
+            "text": "20.2 Cost of treatment"
+          },
+          {
+            "id": "medicinesdrugs",
+            "level": 3,
+            "text": "20.3 Medicines/drugs"
+          }
+        ],
+        "id": "mental-healthcare",
+        "level": 2,
+        "text": "20. Mental healthcare"
+      },
+      {
+        "id": "palliative-care",
+        "level": 2,
+        "text": "21. Palliative care"
+      },
+      {
+        "id": "tuberculosis-tb-and-other-lung-diseases",
+        "level": 2,
+        "text": "22. Tuberculosis (TB) and other lung diseases"
+      },
+      {
+        "id": "availability-of-painkiller-medication",
+        "level": 2,
+        "text": "23. Availability of painkiller medication"
+      },
+      {
+        "id": "availability-of-antibiotic-medication",
+        "level": 2,
+        "text": "24. Availability of antibiotic medication"
+      },
+      {
+        "headers": [
+          {
+            "id": "a",
+            "level": 3,
+            "text": "A"
+          },
+          {
+            "id": "b",
+            "level": 3,
+            "text": "B"
+          },
+          {
+            "id": "c",
+            "level": 3,
+            "text": "C"
+          },
+          {
+            "id": "d",
+            "level": 3,
+            "text": "D"
+          },
+          {
+            "id": "e",
+            "level": 3,
+            "text": "E"
+          },
+          {
+            "id": "f",
+            "level": 3,
+            "text": "F"
+          },
+          {
+            "id": "g",
+            "level": 3,
+            "text": "G"
+          },
+          {
+            "id": "h",
+            "level": 3,
+            "text": "H"
+          },
+          {
+            "id": "i",
+            "level": 3,
+            "text": "I"
+          },
+          {
+            "id": "k",
+            "level": 3,
+            "text": "K"
+          },
+          {
+            "id": "l",
+            "level": 3,
+            "text": "L"
+          },
+          {
+            "id": "m",
+            "level": 3,
+            "text": "M"
+          },
+          {
+            "id": "n",
+            "level": 3,
+            "text": "N"
+          },
+          {
+            "id": "o",
+            "level": 3,
+            "text": "O"
+          },
+          {
+            "id": "p",
+            "level": 3,
+            "text": "P"
+          },
+          {
+            "id": "q",
+            "level": 3,
+            "text": "Q"
+          },
+          {
+            "id": "r",
+            "level": 3,
+            "text": "R"
+          },
+          {
+            "id": "s",
+            "level": 3,
+            "text": "S"
+          },
+          {
+            "id": "t",
+            "level": 3,
+            "text": "T"
+          },
+          {
+            "id": "u",
+            "level": 3,
+            "text": "U"
+          },
+          {
+            "id": "v",
+            "level": 3,
+            "text": "V"
+          },
+          {
+            "id": "w",
+            "level": 3,
+            "text": "W"
+          },
+          {
+            "id": "z",
+            "level": 3,
+            "text": "Z"
+          }
+        ],
+        "id": "annex-a-list-of-available-medication-according-to-medcoi",
+        "level": 2,
+        "text": "Annex A: List of available medication according to MedCOI"
+      },
+      {
+        "id": "Version_control_and",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "aetna",
+                "level": 4,
+                "text": "Aetna,"
+              },
+              {
+                "id": "conversation-the",
+                "level": 4,
+                "text": "Conversation, The"
+              },
+              {
+                "id": "korle-bu-teaching-hospital-accra",
+                "level": 4,
+                "text": "Korle Bu Teaching Hospital (Accra),"
+              },
+              {
+                "id": "republic-of-ghana-ministry-of-health",
+                "level": 4,
+                "text": "Republic of Ghana, Ministry of Health,"
+              },
+              {
+                "id": "xe-currency-converter",
+                "level": 4,
+                "text": "XE Currency Converter,"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          }
+        ],
+        "id": "version-control",
+        "level": 2,
+        "text": "Version control"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-03-31T15:15:05.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2022-08-30T14:00:23+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+        "content_id": "aaa93062-4da5-44ab-9161-dc29f4636cb9",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "html_publication",
+        "title": "Country information note: medical treatment and healthcare, Ghana, August 2022 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/ghana-country-policy-and-information-notes",
+        "base_path": "/government/publications/ghana-country-policy-and-information-notes",
+        "content_id": "2c7b8d9f-3914-4cea-9a74-00d06f39bb5b",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-03-31T14:15:05Z",
+        "schema_name": "publication",
+        "title": "Ghana: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/ghana-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-03-31T15:15:05+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country information note: medical treatment and healthcare, Ghana, August 2022 (accessible)",
+  "updated_at": "2026-04-29T15:31:03+01:00",
+  "withdrawn_notice": {}
+}

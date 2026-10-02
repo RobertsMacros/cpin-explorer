@@ -1,0 +1,590 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+  "content_id": "54a6aed9-7b5c-4c8f-a3c3-83d28d373667",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "About",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "risk-from-the-state",
+                "level": 4,
+                "text": "3.1 Risk from the state"
+              },
+              {
+                "id": "risk-from-non-state-actors",
+                "level": 4,
+                "text": "3.2 Risk from non-state actors"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "Legal_and_constitutional",
+                "level": 4,
+                "text": "7.1 Legal and constitutional framework, including anti-discrimination legislation"
+              },
+              {
+                "id": "Human_rights_monitoring",
+                "level": 4,
+                "text": "7.2 Human rights monitoring bodies"
+              }
+            ],
+            "id": "legal-provisions-and-monitoring-bodies",
+            "level": 3,
+            "text": "7. Legal provisions and monitoring bodies"
+          },
+          {
+            "headers": [
+              {
+                "id": "map-areas-of-majority-kurdish-settlement",
+                "level": 4,
+                "text": "8.1 Map: areas of majority Kurdish settlement"
+              },
+              {
+                "id": "timeline-of-key-events-with-an-impact-on-kurdish-issues",
+                "level": 4,
+                "text": "8.2 Timeline of key events with an impact on Kurdish issues"
+              },
+              {
+                "id": "Background_and_recent",
+                "level": 4,
+                "text": "8.3 Background and recent history"
+              },
+              {
+                "id": "Demography",
+                "level": 4,
+                "text": "8.4 Demography"
+              },
+              {
+                "id": "Nationality",
+                "level": 4,
+                "text": "8.5 Nationality"
+              },
+              {
+                "id": "Religion",
+                "level": 4,
+                "text": "8.6 Religion"
+              },
+              {
+                "id": "Likelihood_of_being",
+                "level": 4,
+                "text": "8.7 Likelihood of being identified as a Kurdish person"
+              },
+              {
+                "id": "Kurdish_political_views",
+                "level": 4,
+                "text": "8.8 Kurdish political views"
+              }
+            ],
+            "id": "kurdish-population",
+            "level": 3,
+            "text": "8. Kurdish population"
+          },
+          {
+            "headers": [
+              {
+                "id": "Kurdish_language",
+                "level": 4,
+                "text": "9.1 Kurdish language"
+              },
+              {
+                "id": "Kurdish_language_in",
+                "level": 4,
+                "text": "9.2 Kurdish language in education and culture"
+              },
+              {
+                "id": "Attitude_to_education",
+                "level": 4,
+                "text": "9.3 Attitude to education"
+              },
+              {
+                "id": "Employment",
+                "level": 4,
+                "text": "9.4 Employment"
+              },
+              {
+                "id": "Accommodation",
+                "level": 4,
+                "text": "9.5 Accommodation"
+              },
+              {
+                "id": "medical-care",
+                "level": 4,
+                "text": "9.6 Medical care"
+              },
+              {
+                "id": "Women",
+                "level": 4,
+                "text": "9.7 Women"
+              },
+              {
+                "id": "Societal_discrimination",
+                "level": 4,
+                "text": "9.8 Societal discrimination"
+              }
+            ],
+            "id": "Daily_life",
+            "level": 3,
+            "text": "9. Daily life"
+          },
+          {
+            "headers": [
+              {
+                "id": "Kurds_in_public",
+                "level": 4,
+                "text": "10.1 Kurds in public life"
+              },
+              {
+                "id": "Conflation_with_the",
+                "level": 4,
+                "text": "10.2 Conflation with the PKK"
+              },
+              {
+                "id": "approach-of-the-government-and-others-in-authority",
+                "level": 4,
+                "text": "10.3 Approach of the government and others in authority"
+              },
+              {
+                "id": "Freedom_of_assembly",
+                "level": 4,
+                "text": "10.4 Freedom of assembly"
+              },
+              {
+                "id": "Newroz_celebrations",
+                "level": 4,
+                "text": "10.5 Newroz celebrations"
+              },
+              {
+                "id": "Journalists_and_publishing",
+                "level": 4,
+                "text": "10.6 Journalists and publishing"
+              },
+              {
+                "id": "Civil_society_and",
+                "level": 4,
+                "text": "10.7 Civil society and cultural rights"
+              },
+              {
+                "id": "Government_human_rights",
+                "level": 4,
+                "text": "10.8 Government human rights violations"
+              },
+              {
+                "id": "Internally_displaced_persons",
+                "level": 4,
+                "text": "10.9 Internally displaced persons (IDPs)"
+              },
+              {
+                "id": "Curfews",
+                "level": 4,
+                "text": "10.10 Curfews"
+              },
+              {
+                "id": "numbers-detained-in-connection-with-counter-terrorism",
+                "level": 4,
+                "text": "10.11 Numbers detained in connection with counter-terrorism"
+              },
+              {
+                "id": "Treatment_in_detention",
+                "level": 4,
+                "text": "10.12 Treatment in detention"
+              },
+              {
+                "id": "conditions-of-release-from-detention",
+                "level": 4,
+                "text": "10.13 Conditions of release from detention"
+              },
+              {
+                "id": "Judicial_system",
+                "level": 4,
+                "text": "10.14 Judicial system"
+              },
+              {
+                "id": "military-service",
+                "level": 4,
+                "text": "10.15 Military service"
+              }
+            ],
+            "id": "state-treatment-of-kurds",
+            "level": 3,
+            "text": "10. State treatment of Kurds"
+          }
+        ],
+        "id": "Country_information_2",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "Research_methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "Terms_of_Reference_1",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera,"
+              },
+              {
+                "id": "al-monitor",
+                "level": 4,
+                "text": "Al-Monitor,"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News,"
+              },
+              {
+                "id": "bianet",
+                "level": 4,
+                "text": "Bianet,"
+              },
+              {
+                "id": "borgen-magazine",
+                "level": 4,
+                "text": "BORGEN Magazine,"
+              },
+              {
+                "id": "cia-world-factbook",
+                "level": 4,
+                "text": "CIA World Factbook,"
+              },
+              {
+                "id": "congressional-research-service-crs",
+                "level": 4,
+                "text": "Congressional Research Service (CRS),"
+              },
+              {
+                "id": "council-on-foreign-relations-cfr",
+                "level": 4,
+                "text": "Council on Foreign Relations (CFR),"
+              },
+              {
+                "id": "ecoinet",
+                "level": 4,
+                "text": "ECOI.net,"
+              },
+              {
+                "id": "encyclopaedia-britannica",
+                "level": 4,
+                "text": "Encyclopaedia Britannica,"
+              },
+              {
+                "id": "european-roma-rights-center-errc",
+                "level": 4,
+                "text": "European Roma Rights Center (ERRC),"
+              },
+              {
+                "id": "foreign-policy",
+                "level": 4,
+                "text": "Foreign Policy,"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House,"
+              },
+              {
+                "id": "gazete-duvar",
+                "level": 4,
+                "text": "Gazete Duvar,"
+              },
+              {
+                "id": "human-rights-foundation-of-turkey-hrft",
+                "level": 4,
+                "text": "Human Rights Foundation of Turkey (HRFT),"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "international-center-for-not-for-profit-law-icnl",
+                "level": 4,
+                "text": "International Center for Not-for-Profit Law (ICNL),"
+              },
+              {
+                "id": "minority-rights-group-international-mrgi",
+                "level": 4,
+                "text": "Minority Rights Group International (MRGI),"
+              },
+              {
+                "id": "stockholm-center-for-freedom-scf",
+                "level": 4,
+                "text": "Stockholm Center for Freedom (SCF),"
+              },
+              {
+                "id": "the-kurdish-project",
+                "level": 4,
+                "text": "The Kurdish Project,"
+              },
+              {
+                "id": "turkish-minute",
+                "level": 4,
+                "text": "Turkish Minute,"
+              },
+              {
+                "id": "us-department-of-state-ussd",
+                "level": 4,
+                "text": "US Department of State (USSD),"
+              }
+            ],
+            "id": "human-rights-watch-hrw",
+            "level": 3,
+            "text": "Human Rights Watch (HRW),"
+          },
+          {
+            "headers": [
+              {
+                "id": "bbc-news-1",
+                "level": 4,
+                "text": "BBC News,"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-08-08T15:27:00.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2023-10-19T15:53:58+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+        "base_path": "/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+        "content_id": "54a6aed9-7b5c-4c8f-a3c3-83d28d373667",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-08-08T14:27:00Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: Kurds, Turkey, July 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/turkey-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/turkey-country-policy-and-information-notes",
+        "base_path": "/government/publications/turkey-country-policy-and-information-notes",
+        "content_id": "7f0e20dc-e66d-4da5-848f-1434821c99d3",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-08-08T14:27:00Z",
+        "schema_name": "publication",
+        "title": "Turkey: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-08-08T15:27:00+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: Kurds, Turkey, July 2025 (accessible)",
+  "updated_at": "2026-04-29T15:29:30+01:00",
+  "withdrawn_notice": {}
+}

@@ -1,0 +1,90 @@
+{
+  "about": "Maps each GOV.UK country slug to its ISO 3166-1 numeric code (the id in prototypes/vendor/countries-gbr.json, built from Natural Earth's UK point-of-view borders) and a marker position [lat, lon]. Marker positions are set by hand: computed centroids are wrong for France (overseas territories), Russia and island states.",
+  "countries": {
+    "afghanistan": {"iso_n3": "004", "iso_a2": "af", "marker": [34.5, 66.0]},
+    "albania": {"iso_n3": "008", "iso_a2": "al", "marker": [41.2, 20.0]},
+    "algeria": {"iso_n3": "012", "iso_a2": "dz", "marker": [28.0, 2.6]},
+    "bangladesh": {"iso_n3": "050", "iso_a2": "bd", "marker": [23.7, 90.3]},
+    "brazil": {"iso_n3": "076", "iso_a2": "br", "marker": [-10.8, -52.9]},
+    "burma": {"iso_n3": "104", "iso_a2": "mm", "marker": [21.0, 96.0]},
+    "chad": {"iso_n3": "148", "iso_a2": "td", "marker": [15.4, 18.7]},
+    "china": {"iso_n3": "156", "iso_a2": "cn", "marker": [35.0, 103.0]},
+    "colombia": {"iso_n3": "170", "iso_a2": "co", "marker": [4.1, -73.0]},
+    "democratic-republic-of-the-congo": {"iso_n3": "180", "iso_a2": "cd", "marker": [-2.9, 23.6]},
+    "egypt": {"iso_n3": "818", "iso_a2": "eg", "marker": [26.6, 30.0]},
+    "el-salvador": {"iso_n3": "222", "iso_a2": "sv", "marker": [13.7, -88.9]},
+    "eritrea": {"iso_n3": "232", "iso_a2": "er", "marker": [15.4, 38.9]},
+    "ethiopia": {"iso_n3": "231", "iso_a2": "et", "marker": [8.6, 39.6]},
+    "france": {"iso_n3": "250", "iso_a2": "fr", "marker": [46.6, 2.5], "caveat": "Notes on France concern it as a safe third country, not as a country of origin."},
+    "gambia": {"iso_n3": "270", "iso_a2": "gm", "marker": [13.45, -15.4]},
+    "georgia": {"iso_n3": "268", "iso_a2": "ge", "marker": [42.2, 43.5]},
+    "ghana": {"iso_n3": "288", "iso_a2": "gh", "marker": [7.9, -1.0]},
+    "honduras": {"iso_n3": "340", "iso_a2": "hn", "marker": [14.8, -86.6]},
+    "india": {"iso_n3": "356", "iso_a2": "in", "marker": [22.9, 79.0]},
+    "iran": {"iso_n3": "364", "iso_a2": "ir", "marker": [32.6, 54.3]},
+    "iraq": {"iso_n3": "368", "iso_a2": "iq", "marker": [33.0, 43.7]},
+    "jamaica": {"iso_n3": "388", "iso_a2": "jm", "marker": [18.1, -77.3]},
+    "kenya": {"iso_n3": "404", "iso_a2": "ke", "marker": [0.2, 37.9]},
+    "kuwait": {"iso_n3": "414", "iso_a2": "kw", "marker": [29.3, 47.6]},
+    "lebanon": {"iso_n3": "422", "iso_a2": "lb", "marker": [33.9, 35.9]},
+    "libya": {"iso_n3": "434", "iso_a2": "ly", "marker": [27.0, 17.0]},
+    "malaysia": {"iso_n3": "458", "iso_a2": "my", "marker": [3.6, 102.0]},
+    "namibia": {"iso_n3": "516", "iso_a2": "na", "marker": [-22.6, 17.2]},
+    "nepal": {"iso_n3": "524", "iso_a2": "np", "marker": [28.3, 84.1]},
+    "nigeria": {"iso_n3": "566", "iso_a2": "ng", "marker": [9.1, 8.1]},
+    "pakistan": {"iso_n3": "586", "iso_a2": "pk", "marker": [30.0, 69.4]},
+    "palestine": {"iso_n3": "275", "iso_a2": "ps", "marker": [31.9, 35.2]},
+    "philippines": {"iso_n3": "608", "iso_a2": "ph", "marker": [15.8, 120.9]},
+    "russia": {"iso_n3": "643", "iso_a2": "ru", "marker": [58.0, 60.0]},
+    "somalia": {"iso_n3": "706", "iso_a2": "so", "marker": [5.2, 46.2]},
+    "sri-lanka": {"iso_n3": "144", "iso_a2": "lk", "marker": [7.9, 80.7]},
+    "sudan": {"iso_n3": "729", "iso_a2": "sd", "marker": [15.6, 30.2]},
+    "syria": {"iso_n3": "760", "iso_a2": "sy", "marker": [35.0, 38.5]},
+    "trinidad-and-tobago": {"iso_n3": "780", "iso_a2": "tt", "marker": [10.45, -61.3]},
+    "turkey": {"iso_n3": "792", "iso_a2": "tr", "marker": [39.0, 35.2]},
+    "uganda": {"iso_n3": "800", "iso_a2": "ug", "marker": [1.4, 32.3]},
+    "ukraine": {"iso_n3": "804", "iso_a2": "ua", "marker": [49.0, 31.4]},
+    "uzbekistan": {"iso_n3": "860", "iso_a2": "uz", "marker": [41.4, 64.6]},
+    "vietnam": {"iso_n3": "704", "iso_a2": "vn", "marker": [16.0, 107.8]},
+    "yemen": {"iso_n3": "887", "iso_a2": "ye", "marker": [15.6, 48.0]},
+    "zimbabwe": {"iso_n3": "716", "iso_a2": "zw", "marker": [-19.0, 29.8]}
+  },
+  "feature_aliases": {},
+  "boundary_patches": [
+    {
+      "slug": "syria",
+      "name": "Golan Heights",
+      "why": "Natural Earth's UK point-of-view borders leave the Golan Heights unassigned; the UK regards it as Syrian territory under Israeli occupation.",
+      "ring": [
+        [
+          35.62,
+          32.7
+        ],
+        [
+          35.85,
+          32.7
+        ],
+        [
+          35.95,
+          33.0
+        ],
+        [
+          35.85,
+          33.3
+        ],
+        [
+          35.7,
+          33.3
+        ],
+        [
+          35.62,
+          32.95
+        ],
+        [
+          35.62,
+          32.7
+        ]
+      ]
+    }
+  ]
+}

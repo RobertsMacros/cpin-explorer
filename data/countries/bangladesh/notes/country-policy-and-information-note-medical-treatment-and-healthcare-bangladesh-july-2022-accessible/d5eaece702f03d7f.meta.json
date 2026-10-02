@@ -1,0 +1,361 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+  "content_id": "0891d199-1eeb-4fe4-9998-d3c7362386ea",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "headers": [
+          {
+            "id": "purpose",
+            "level": 3,
+            "text": "Purpose"
+          },
+          {
+            "id": "country-of-origin-information",
+            "level": 3,
+            "text": "Country of origin information"
+          },
+          {
+            "id": "feedback",
+            "level": 3,
+            "text": "Feedback"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "preface",
+        "level": 2,
+        "text": "Preface"
+      },
+      {
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "headers": [
+          {
+            "id": "medcoi",
+            "level": 3,
+            "text": "1.1 MedCOI"
+          }
+        ],
+        "id": "sources-and-prices",
+        "level": 2,
+        "text": "1. Sources and prices"
+      },
+      {
+        "headers": [
+          {
+            "id": "general-information",
+            "level": 3,
+            "text": "2.1 General information"
+          },
+          {
+            "id": "public-state-sector",
+            "level": 3,
+            "text": "2.2 Public (State) sector"
+          },
+          {
+            "id": "private-sector",
+            "level": 3,
+            "text": "2.3 Private sector"
+          },
+          {
+            "id": "NGOs",
+            "level": 3,
+            "text": "2.4 NGOs (non-governmental organisations)"
+          },
+          {
+            "id": "informal-sector",
+            "level": 3,
+            "text": "2.5 ‘Informal’ sector"
+          },
+          {
+            "id": "covid-19",
+            "level": 3,
+            "text": "2.6 COVID-19"
+          },
+          {
+            "id": "pharmaceuticals",
+            "level": 3,
+            "text": "2.7 Pharmaceuticals"
+          }
+        ],
+        "id": "structure-of-the-healthcare-system",
+        "level": 2,
+        "text": "2. Structure of the healthcare system"
+      },
+      {
+        "id": "cost-and-access-to-medical-treatment-and-drugs",
+        "level": 2,
+        "text": "3. Cost and access to medical treatment and drugs"
+      },
+      {
+        "headers": [
+          {
+            "id": "oncology-treatment",
+            "level": 3,
+            "text": "4.1 Oncology treatment"
+          },
+          {
+            "id": "breast-cancer",
+            "level": 3,
+            "text": "4.2 Breast cancer"
+          },
+          {
+            "id": "other-cancers",
+            "level": 3,
+            "text": "4.3 Other cancers"
+          }
+        ],
+        "id": "cancer-oncology",
+        "level": 2,
+        "text": "4. Cancer (oncology)"
+      },
+      {
+        "id": "cardiology-heart-conditions",
+        "level": 2,
+        "text": "5. Cardiology (heart conditions)"
+      },
+      {
+        "id": "diabetes",
+        "level": 2,
+        "text": "6. Diabetes"
+      },
+      {
+        "id": "eye-treatment-ophthalmology",
+        "level": 2,
+        "text": "7. Eye treatment (ophthalmology)"
+      },
+      {
+        "id": "hepatitis-b",
+        "level": 2,
+        "text": "8. Hepatitis B"
+      },
+      {
+        "id": "hivaids",
+        "level": 2,
+        "text": "9. HIV/AIDS"
+      },
+      {
+        "id": "mental-health",
+        "level": 2,
+        "text": "10. Mental health"
+      },
+      {
+        "id": "mosquito-borne-diseases-including-kala-azar-and-malaria",
+        "level": 2,
+        "text": "11. Mosquito-borne diseases, including Kala-azar and malaria"
+      },
+      {
+        "id": "neurology-including-epilepsy",
+        "level": 2,
+        "text": "12. Neurology, including epilepsy"
+      },
+      {
+        "id": "obstetrics",
+        "level": 2,
+        "text": "13. Obstetrics"
+      },
+      {
+        "id": "paediatrics",
+        "level": 2,
+        "text": "14. Paediatrics"
+      },
+      {
+        "id": "palliative-care",
+        "level": 2,
+        "text": "15. Palliative care"
+      },
+      {
+        "id": "orthopaedics",
+        "level": 2,
+        "text": "16. Orthopaedics"
+      },
+      {
+        "id": "renal-kidney-failure-and-dialysis",
+        "level": 2,
+        "text": "17. Renal (kidney) failure and dialysis"
+      },
+      {
+        "id": "tuberculosis",
+        "level": 2,
+        "text": "18. Tuberculosis"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          }
+        ],
+        "id": "version-control",
+        "level": 2,
+        "text": "Version control"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-04-28T11:33:17.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2022-07-25T17:36:29+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+        "base_path": "/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+        "content_id": "0891d199-1eeb-4fe4-9998-d3c7362386ea",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-04-28T10:33:17Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: medical treatment and healthcare, Bangladesh, July 2022 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/bangladesh-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/bangladesh-country-policy-and-information-notes",
+        "base_path": "/government/publications/bangladesh-country-policy-and-information-notes",
+        "content_id": "0f130ebe-541f-459c-bf46-463f06e7d56c",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-04-28T10:33:17Z",
+        "schema_name": "publication",
+        "title": "Bangladesh: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/bangladesh-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-04-28T11:33:17+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1777372397.474-10.13.22.12-2446",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: medical treatment and healthcare, Bangladesh, July 2022 (accessible)",
+  "updated_at": "2026-04-29T15:28:59+01:00",
+  "withdrawn_notice": {}
+}

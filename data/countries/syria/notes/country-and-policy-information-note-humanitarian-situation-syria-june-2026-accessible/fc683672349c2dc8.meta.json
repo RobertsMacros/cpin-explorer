@@ -1,0 +1,533 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/syria-country-policy-and-information-notes/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+  "content_id": "a65f2bd0-3450-41d5-b6e1-9e9bfebaa444",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "Risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "basic-indicators",
+                "level": 4,
+                "text": "7.1 Basic indicators"
+              },
+              {
+                "id": "Economy",
+                "level": 4,
+                "text": "7.2 Economy"
+              },
+              {
+                "id": "Salaries_and_income",
+                "level": 4,
+                "text": "7.3 Salaries and cost of living"
+              },
+              {
+                "id": "Employment",
+                "level": 4,
+                "text": "7.4 Employment"
+              }
+            ],
+            "id": "socio-economic-situation",
+            "level": 3,
+            "text": "7. Socio-economic situation"
+          },
+          {
+            "headers": [
+              {
+                "id": "background",
+                "level": 4,
+                "text": "8.1 Background"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "minimal",
+                    "level": 5,
+                    "text": "1. Minimal"
+                  },
+                  {
+                    "id": "stressed",
+                    "level": 5,
+                    "text": "2.  Stressed"
+                  },
+                  {
+                    "id": "severe",
+                    "level": 5,
+                    "text": "3. Severe"
+                  },
+                  {
+                    "id": "extreme",
+                    "level": 5,
+                    "text": "4. Extreme"
+                  },
+                  {
+                    "id": "catastrophic",
+                    "level": 5,
+                    "text": "5. Catastrophic"
+                  }
+                ],
+                "id": "number-and-location-of-people-in-need",
+                "level": 4,
+                "text": "8.2 Number and location of people in need"
+              },
+              {
+                "id": "vulnerable-groups",
+                "level": 4,
+                "text": "8.3 Vulnerable groups"
+              }
+            ],
+            "id": "Overview_of_humanitarian",
+            "level": 3,
+            "text": "8. Overview of humanitarian situation"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview",
+                "level": 4,
+                "text": "9.1 Overview"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "qualitative-severity-catiegories-adopted-for-the-assessment-and-the-corresponding-definitions-applied-to-community-level-housing-damage",
+                    "level": 5,
+                    "text": "Qualitative severity catiegories adopted for the assessment and the corresponding definitions applied to community-level housing damage"
+                  }
+                ],
+                "id": "condition-of-housing",
+                "level": 4,
+                "text": "9.2 Condition of housing"
+              },
+              {
+                "id": "HLP_rights",
+                "level": 4,
+                "text": "9.3 Housing, land and property (HLP) rights"
+              }
+            ],
+            "id": "Housing",
+            "level": 3,
+            "text": "9. Housing"
+          },
+          {
+            "id": "Renting",
+            "level": 3,
+            "text": "9.4 Renting"
+          },
+          {
+            "headers": [
+              {
+                "headers": [
+                  {
+                    "id": "table-3-description-of-the-overall-wfp-food-security-classifications",
+                    "level": 5,
+                    "text": "Table 3: Description of the overall WFP food security classifications"
+                  },
+                  {
+                    "id": "phase-1-minimal",
+                    "level": 5,
+                    "text": "Phase 1: Minimal"
+                  },
+                  {
+                    "id": "phase-2-stressed",
+                    "level": 5,
+                    "text": "Phase 2: Stressed"
+                  },
+                  {
+                    "id": "phase-3-crisis",
+                    "level": 5,
+                    "text": "Phase 3: Crisis"
+                  },
+                  {
+                    "id": "phase-4-emergency",
+                    "level": 5,
+                    "text": "Phase 4: Emergency"
+                  },
+                  {
+                    "id": "phase-5-famine",
+                    "level": 5,
+                    "text": "Phase 5: Famine"
+                  }
+                ],
+                "id": "overview-1",
+                "level": 4,
+                "text": "10.1 Overview"
+              },
+              {
+                "id": "by-governorate",
+                "level": 4,
+                "text": "10.2 By governorate"
+              }
+            ],
+            "id": "Food_security",
+            "level": 3,
+            "text": "10. Food security"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview-2",
+                "level": 4,
+                "text": "11.1 Overview"
+              },
+              {
+                "id": "key-issues",
+                "level": 4,
+                "text": "11.2 Key issues"
+              },
+              {
+                "id": "severity-of-needs-by-area",
+                "level": 4,
+                "text": "11.3 Severity of needs by area"
+              },
+              {
+                "id": "access-to-healthcare",
+                "level": 4,
+                "text": "11.4 Access to healthcare"
+              }
+            ],
+            "id": "Health",
+            "level": 3,
+            "text": "11. Health"
+          },
+          {
+            "headers": [
+              {
+                "headers": [
+                  {
+                    "id": "access-to-improved-water-sources",
+                    "level": 5,
+                    "text": "Access to improved water sources"
+                  }
+                ],
+                "id": "overview-3",
+                "level": 4,
+                "text": "12.1 Overview"
+              },
+              {
+                "id": "severity-of-needs-by-area-1",
+                "level": 4,
+                "text": "12.2 Severity of needs by area"
+              }
+            ],
+            "id": "WASH",
+            "level": 3,
+            "text": "12. Water, Sanitation and Hygiene (WASH)"
+          },
+          {
+            "headers": [
+              {
+                "id": "numbers-and-recent-movements",
+                "level": 4,
+                "text": "13.1 Numbers and recent movements"
+              },
+              {
+                "id": "conditions-in-idp-camps",
+                "level": 4,
+                "text": "13.2 Conditions in IDP camps"
+              },
+              {
+                "id": "issues-faced-by-idps-living-outside-of-camps",
+                "level": 4,
+                "text": "13.3 Issues faced by IDPs living outside of camps"
+              }
+            ],
+            "id": "Internally_displaced_persons",
+            "level": 3,
+            "text": "13. Internally displaced persons (IDPs)"
+          },
+          {
+            "id": "Returnees",
+            "level": 3,
+            "text": "14. Returnees"
+          },
+          {
+            "headers": [
+              {
+                "id": "numbers-of-people-receiving-aid",
+                "level": 4,
+                "text": "15.1 Numbers of people receiving aid"
+              },
+              {
+                "id": "survey-findings-on-aid-access",
+                "level": 4,
+                "text": "15.2 Survey findings on aid access"
+              },
+              {
+                "id": "food-security-assistance",
+                "level": 4,
+                "text": "15.3 Food security assistance"
+              },
+              {
+                "id": "groups-with-reduced-access",
+                "level": 4,
+                "text": "15.4 Groups with reduced access"
+              },
+              {
+                "id": "funding-constraints",
+                "level": 4,
+                "text": "15.5 Funding constraints"
+              },
+              {
+                "id": "assistance-specifically-designated-for-returnees",
+                "level": 4,
+                "text": "15.6 Assistance specifically designated for returnees"
+              }
+            ],
+            "id": "Access_to_humanitarian",
+            "level": 3,
+            "text": "15. Access to humanitarian aid"
+          }
+        ],
+        "id": "Country_information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "ToR",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-07-24T10:39:38.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-07-24T10:39:39+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+        "content_id": "a65f2bd0-3450-41d5-b6e1-9e9bfebaa444",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "html_publication",
+        "title": "Country and policy information note: humanitarian situation, Syria, June 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes",
+        "content_id": "f8c99638-27ab-44ae-858b-6987ac1a3ba3",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "publication",
+        "title": "Syria: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-24T10:39:38+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789055922.839-10.13.22.105-2571",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country and policy information note: humanitarian situation, Syria, June 2026 (accessible)",
+  "updated_at": "2026-09-10T16:58:44+01:00",
+  "withdrawn_notice": {}
+}

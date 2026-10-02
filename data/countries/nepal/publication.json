@@ -1,0 +1,371 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/nepal-country-policy-and-information-notes",
+  "content_id": "6faaf3a4-85a9-4d20-9411-be63eef024a7",
+  "description": "Guidance used by UK Visas and Immigration to make decisions in asylum and human rights applications. ",
+  "details": {
+    "attachments": [
+      {
+        "attachment_type": "html",
+        "command_paper_number": "",
+        "hoc_paper_number": "",
+        "id": "9299192",
+        "isbn": "",
+        "title": "Country policy and information note: political affiliation, Nepal, May 2026 (accessible)",
+        "unique_reference": "",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible"
+      },
+      {
+        "accessible": true,
+        "alternative_format_contact_email": "alternativeformats@homeoffice.gov.uk",
+        "assets": [
+          {
+            "asset_manager_id": "6a0c6cf3279ebb7d24f8f4e9",
+            "filename": "NPL_CPIN_Political_affiliation.pdf"
+          }
+        ],
+        "attachment_type": "file",
+        "command_paper_number": "",
+        "content_type": "application/pdf",
+        "file_size": 722422,
+        "filename": "NPL_CPIN_Political_affiliation.pdf",
+        "hoc_paper_number": "",
+        "id": "9299169",
+        "isbn": "",
+        "number_of_pages": 50,
+        "title": "Country policy and information note: political affiliation, Nepal, May 2026",
+        "unique_reference": "",
+        "unnumbered_command_paper": false,
+        "unnumbered_hoc_paper": false,
+        "url": "https://assets.publishing.service.gov.uk/media/6a0c6cf3279ebb7d24f8f4e9/NPL_CPIN_Political_affiliation.pdf"
+      }
+    ],
+    "body": "<div class=\"govspeak\"><p>Country policy and information notes (previously known as country information and guidance reports) are used by UK Visas and Immigration officials to make decisions in asylum and human rights applications.</p>\n\n<p>The notes also give information on asylum seekers’ countries of origin.</p>\n</div>",
+    "change_history": [
+      {
+        "note": "Published an updated county policy and information note on political affiliation. ",
+        "public_timestamp": "2026-05-21T10:15:55Z"
+      },
+      {
+        "note": "Publication has been archived.",
+        "public_timestamp": "2019-05-08T08:02:00Z"
+      },
+      {
+        "note": "First published.",
+        "public_timestamp": "2019-05-07T23:00:00Z"
+      },
+      {
+        "note": "Added information on political affiliation.",
+        "public_timestamp": "2019-05-07T23:00:00Z"
+      }
+    ],
+    "document_type_label": "Guidance",
+    "emphasised_organisations": [
+      "04148522-b0c1-4137-b687-5f3c3bdd561a"
+    ],
+    "featured_attachments": [
+      "9299192",
+      "9299169"
+    ],
+    "first_public_at": "2019-05-08T00:00:00.000+01:00",
+    "political": false,
+    "tags": {
+      "browse_pages": []
+    }
+  },
+  "document_type": "guidance",
+  "first_published_at": "2019-05-08T00:00:00+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/nepal-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/nepal-country-policy-and-information-notes",
+        "base_path": "/government/publications/nepal-country-policy-and-information-notes",
+        "content_id": "6faaf3a4-85a9-4d20-9411-be63eef024a7",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-05-21T10:15:55Z",
+        "schema_name": "publication",
+        "title": "Nepal: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/nepal-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "children": [
+      {
+        "api_path": "/api/content/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+        "base_path": "/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+        "content_id": "37b40651-5531-4cbe-bdaf-8d209196d71b",
+        "document_type": "html_publication",
+        "links": {
+          "parent": [
+            {
+              "api_path": "/api/content/government/publications/nepal-country-policy-and-information-notes",
+              "api_url": "https://www.gov.uk/api/content/government/publications/nepal-country-policy-and-information-notes",
+              "base_path": "/government/publications/nepal-country-policy-and-information-notes",
+              "content_id": "6faaf3a4-85a9-4d20-9411-be63eef024a7",
+              "document_type": "guidance",
+              "links": {},
+              "locale": "en",
+              "public_updated_at": "2026-05-21T10:15:55Z",
+              "schema_name": "publication",
+              "title": "Nepal: country policy and information notes",
+              "web_url": "https://www.gov.uk/government/publications/nepal-country-policy-and-information-notes",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "public_updated_at": "2026-05-21T10:15:55Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: political affiliation, Nepal, May 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/nepal-country-policy-and-information-notes/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "document_collections": [
+      {
+        "api_path": "/api/content/government/collections/country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/collections/country-policy-and-information-notes",
+        "base_path": "/government/collections/country-policy-and-information-notes",
+        "content_id": "9dd8fe16-5560-4dce-a6c1-2e81e3b379a3",
+        "document_type": "document_collection",
+        "links": {
+          "documents": [
+            {
+              "api_path": "/api/content/government/publications/nepal-country-policy-and-information-notes",
+              "api_url": "https://www.gov.uk/api/content/government/publications/nepal-country-policy-and-information-notes",
+              "base_path": "/government/publications/nepal-country-policy-and-information-notes",
+              "content_id": "6faaf3a4-85a9-4d20-9411-be63eef024a7",
+              "document_type": "guidance",
+              "links": {},
+              "locale": "en",
+              "public_updated_at": "2026-05-21T10:15:55Z",
+              "schema_name": "publication",
+              "title": "Nepal: country policy and information notes",
+              "web_url": "https://www.gov.uk/government/publications/nepal-country-policy-and-information-notes",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "public_updated_at": "2026-06-05T14:56:08Z",
+        "schema_name": "document_collection",
+        "title": "Country policy and information notes",
+        "web_url": "https://www.gov.uk/government/collections/country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "original_primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "taxons": [
+      {
+        "api_path": "/api/content/entering-staying-uk/asylum-refugee-human-rights-claims",
+        "api_url": "https://www.gov.uk/api/content/entering-staying-uk/asylum-refugee-human-rights-claims",
+        "base_path": "/entering-staying-uk/asylum-refugee-human-rights-claims",
+        "content_id": "1f7c6bfc-30cd-4cbd-8995-c91bc4a101a4",
+        "description": "",
+        "details": {
+          "internal_name": "Refugee, asylum and human rights claims",
+          "notes_for_editors": "",
+          "visible_to_departmental_editors": false
+        },
+        "document_type": "taxon",
+        "links": {
+          "parent_taxons": [
+            {
+              "api_path": "/api/content/entering-staying-uk/refugees-asylum-human-rights",
+              "api_url": "https://www.gov.uk/api/content/entering-staying-uk/refugees-asylum-human-rights",
+              "base_path": "/entering-staying-uk/refugees-asylum-human-rights",
+              "content_id": "08a8a69f-2825-4fe2-a4cf-c83458a5629e",
+              "description": "",
+              "details": {
+                "internal_name": "Refugee, asylum and human rights",
+                "notes_for_editors": "",
+                "visible_to_departmental_editors": false
+              },
+              "document_type": "taxon",
+              "links": {
+                "parent_taxons": [
+                  {
+                    "api_path": "/api/content/entering-staying-uk",
+                    "api_url": "https://www.gov.uk/api/content/entering-staying-uk",
+                    "base_path": "/entering-staying-uk",
+                    "content_id": "ba3a9702-da22-487f-86c1-8334a730e559",
+                    "details": {
+                      "internal_name": "Entering and staying in the UK",
+                      "notes_for_editors": "",
+                      "visible_to_departmental_editors": true
+                    },
+                    "document_type": "taxon",
+                    "links": {
+                      "root_taxon": [
+                        {
+                          "api_path": "/api/content/",
+                          "api_url": "https://www.gov.uk/api/content/",
+                          "base_path": "/",
+                          "content_id": "f3bbdec2-0e62-4520-a7fd-6ffd5d36e03a",
+                          "document_type": "homepage",
+                          "links": {},
+                          "locale": "en",
+                          "public_updated_at": "2026-02-18T13:00:23Z",
+                          "schema_name": "homepage",
+                          "title": "GOV.UK homepage",
+                          "web_url": "https://www.gov.uk/",
+                          "withdrawn": false
+                        }
+                      ]
+                    },
+                    "locale": "en",
+                    "phase": "live",
+                    "public_updated_at": "2018-07-11T08:58:32Z",
+                    "schema_name": "taxon",
+                    "title": "Entering and staying in the UK",
+                    "web_url": "https://www.gov.uk/entering-staying-uk",
+                    "withdrawn": false
+                  }
+                ]
+              },
+              "locale": "en",
+              "phase": "live",
+              "public_updated_at": "2018-07-11T08:58:33Z",
+              "schema_name": "taxon",
+              "title": "Refugees, asylum and human rights",
+              "web_url": "https://www.gov.uk/entering-staying-uk/refugees-asylum-human-rights",
+              "withdrawn": false
+            }
+          ]
+        },
+        "locale": "en",
+        "phase": "live",
+        "public_updated_at": "2018-07-11T08:58:32Z",
+        "schema_name": "taxon",
+        "title": "Refugee, asylum and human rights claims",
+        "web_url": "https://www.gov.uk/entering-staying-uk/asylum-refugee-human-rights-claims",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-05-21T11:15:55+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1779358555.554-10.13.21.239-2406",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "publication",
+  "title": "Nepal: country policy and information notes",
+  "updated_at": "2026-07-14T11:42:11+01:00",
+  "withdrawn_notice": {}
+}

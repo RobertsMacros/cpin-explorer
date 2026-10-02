@@ -1,0 +1,27 @@
+[project]
+name = "cpin-extractor"
+version = "0.1.0"
+description = "Verbatim, versioned mirror of Home Office Country Policy and Information Notes (CPINs)"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28",
+    "lxml>=5.3",
+    "pymupdf>=1.25",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+cpin = "cpin.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,681 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+  "content_id": "18a4ab46-2f78-423f-b62d-974c7713874e",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "headers": [
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "credibility",
+            "level": 3,
+            "text": "1.1 Credibility"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "2. Protection"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "differences-in-laws-between-federal-iraq-and-the-kri",
+                "level": 4,
+                "text": "3.1 Differences in laws between federal Iraq and the KRI"
+              },
+              {
+                "id": "constitution-laws",
+                "level": 4,
+                "text": "3.2 Constitution and laws"
+              },
+              {
+                "id": "criminal-law",
+                "level": 4,
+                "text": "3.3 Criminal law"
+              },
+              {
+                "id": "anti-terrorism-laws",
+                "level": 4,
+                "text": "3.4 Anti-terrorism laws"
+              }
+            ],
+            "id": "legal-context",
+            "level": 3,
+            "text": "3. Legal context"
+          },
+          {
+            "headers": [
+              {
+                "id": "general",
+                "level": 4,
+                "text": "4.1 General"
+              },
+              {
+                "id": "federal-iraq",
+                "level": 4,
+                "text": "4.2 Federal Iraq"
+              },
+              {
+                "id": "kri",
+                "level": 4,
+                "text": "4.3 KRI"
+              }
+            ],
+            "id": "overview-of-state-protection",
+            "level": 3,
+            "text": "4. Overview of state protection"
+          },
+          {
+            "headers": [
+              {
+                "id": "structure-and-composition",
+                "level": 4,
+                "text": "5.1 Structure and composition"
+              },
+              {
+                "id": "iraqi-armed-forces",
+                "level": 4,
+                "text": "5.2 Iraqi Armed Forces"
+              },
+              {
+                "id": "police",
+                "level": 4,
+                "text": "5.3 Police"
+              },
+              {
+                "id": "popular-mobilisation-forces-pmf",
+                "level": 4,
+                "text": "5.4 Popular Mobilisation Forces (PMF)"
+              },
+              {
+                "id": "tribal-mobilisation",
+                "level": 4,
+                "text": "5.5. Tribal mobilisation"
+              },
+              {
+                "id": "counter-terrorism-service",
+                "level": 4,
+                "text": "5.6 Counter-Terrorism Service"
+              }
+            ],
+            "id": "security-forces-iraq",
+            "level": 3,
+            "text": "5. Security forces in federal Iraq"
+          },
+          {
+            "headers": [
+              {
+                "id": "structure-and-composition-1",
+                "level": 4,
+                "text": "6.1 Structure and composition"
+              },
+              {
+                "id": "peshmerga-armed-forces",
+                "level": 4,
+                "text": "6.2  Peshmerga (armed forces)"
+              },
+              {
+                "id": "police-1",
+                "level": 4,
+                "text": "6.3 Police"
+              },
+              {
+                "id": "asayish-security-and-intelligence-agency",
+                "level": 4,
+                "text": "6.4 Asayish (security and intelligence agency)"
+              }
+            ],
+            "id": "security-forces-KRI",
+            "level": 3,
+            "text": "6. Security forces in the KRI"
+          },
+          {
+            "id": "types-crime",
+            "level": 3,
+            "text": "7. Types and rates of crime"
+          },
+          {
+            "headers": [
+              {
+                "id": "general-1",
+                "level": 4,
+                "text": "8.1 General"
+              },
+              {
+                "id": "effectiveness-of-security-forces-in-federal-iraq",
+                "level": 4,
+                "text": "8.2 Effectiveness of security forces in Federal Iraq"
+              },
+              {
+                "id": "effectiveness-of-security-forces-in-the-kri",
+                "level": 4,
+                "text": "8.3 Effectiveness of security forces in the KRI"
+              }
+            ],
+            "id": "effectiveness-security-forces",
+            "level": 3,
+            "text": "8. Effectiveness of security forces"
+          },
+          {
+            "headers": [
+              {
+                "id": "general-2",
+                "level": 4,
+                "text": "9.1 General"
+              },
+              {
+                "id": "federal-iraq-1",
+                "level": 4,
+                "text": "9.2 Federal Iraq"
+              },
+              {
+                "id": "accountability-in-federal-iraq",
+                "level": 4,
+                "text": "9.3 Accountability in federal Iraq"
+              },
+              {
+                "id": "kri-1",
+                "level": 4,
+                "text": "9.4 KRI"
+              },
+              {
+                "id": "accountability-in-the-kri",
+                "level": 4,
+                "text": "9.5 Accountability in the KRI"
+              }
+            ],
+            "id": "abuses-security-forces",
+            "level": 3,
+            "text": "9. Human rights abuses by security forces"
+          },
+          {
+            "headers": [
+              {
+                "id": "overview",
+                "level": 4,
+                "text": "10.1 Overview"
+              },
+              {
+                "id": "judiciary",
+                "level": 4,
+                "text": "10.2 Judiciary"
+              },
+              {
+                "id": "prison-conditions",
+                "level": 4,
+                "text": "10.3 Prison conditions"
+              },
+              {
+                "id": "trials-representation",
+                "level": 4,
+                "text": "10.4 Trials and legal representation"
+              },
+              {
+                "id": "death-penalty",
+                "level": 4,
+                "text": "10.5 Death penalty"
+              }
+            ],
+            "id": "state-justice-system",
+            "level": 3,
+            "text": "10. State justice system"
+          },
+          {
+            "headers": [
+              {
+                "id": "tribal-laws-codes-and-dispute-resolution-mechanisms",
+                "level": 4,
+                "text": "11.1 Tribal laws, codes, and dispute resolution mechanisms"
+              },
+              {
+                "id": "tribal-justice-vs-state-justice",
+                "level": 4,
+                "text": "11.2 Tribal justice vs state justice"
+              },
+              {
+                "id": "tribal-justice-in-the-kri",
+                "level": 4,
+                "text": "11.3 Tribal justice in the KRI"
+              }
+            ],
+            "id": "tribal-justice",
+            "level": 3,
+            "text": "11. Tribal justice"
+          },
+          {
+            "headers": [
+              {
+                "id": "prevalence",
+                "level": 4,
+                "text": "12.1 Prevalence"
+              },
+              {
+                "id": "accountability",
+                "level": 4,
+                "text": "12.2 Accountability"
+              }
+            ],
+            "id": "corruption",
+            "level": 3,
+            "text": "12. Corruption"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "arab-gulf-states-institute-in-washington",
+                "level": 4,
+                "text": "Arab Gulf States Institute in Washington"
+              },
+              {
+                "id": "australian-government-department-of-foreign-affairs-and-trade",
+                "level": 4,
+                "text": "Australian Government, Department of Foreign Affairs and Trade"
+              },
+              {
+                "id": "bertelsmann-transformation-index",
+                "level": 4,
+                "text": "Bertelsmann Transformation Index"
+              },
+              {
+                "id": "britannica",
+                "level": 4,
+                "text": "Britannica"
+              },
+              {
+                "id": "british-broadcasting-corporation",
+                "level": 4,
+                "text": "British Broadcasting Corporation"
+              },
+              {
+                "id": "centre-franais-de-recherche-sur-lirak",
+                "level": 4,
+                "text": "Centre Français de Recherche sur L’Irak"
+              },
+              {
+                "id": "central-intelligence-agency",
+                "level": 4,
+                "text": "Central Intelligence Agency"
+              },
+              {
+                "id": "chatham-house",
+                "level": 4,
+                "text": "Chatham House"
+              },
+              {
+                "id": "emirates-policy-center",
+                "level": 4,
+                "text": "Emirates Policy Center"
+              },
+              {
+                "id": "european-country-of-origin-information-network",
+                "level": 4,
+                "text": "European Country of Origin Information Network"
+              },
+              {
+                "id": "european-union-agency-for-asylum",
+                "level": 4,
+                "text": "European Union Agency for Asylum"
+              },
+              {
+                "id": "foreign-policy-research-institute",
+                "level": 4,
+                "text": "Foreign Policy Research Institute"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House"
+              },
+              {
+                "id": "global-initiative-against-transnational-organized-crime",
+                "level": 4,
+                "text": "Global Initiative against Transnational Organized Crime"
+              },
+              {
+                "id": "global-public-policy-institute",
+                "level": 4,
+                "text": "Global Public Policy Institute"
+              },
+              {
+                "id": "gulf-international-forum",
+                "level": 4,
+                "text": "Gulf International Forum"
+              },
+              {
+                "id": "human-rights-watch",
+                "level": 4,
+                "text": "Human Rights Watch"
+              },
+              {
+                "id": "kurdistan-center-for-international-law",
+                "level": 4,
+                "text": "Kurdistan Center for International Law"
+              },
+              {
+                "id": "kurdistan-24",
+                "level": 4,
+                "text": "Kurdistan 24"
+              },
+              {
+                "id": "linkedin",
+                "level": 4,
+                "text": "LinkedIn"
+              },
+              {
+                "id": "london-school-of-economics-middle-east-centre",
+                "level": 4,
+                "text": "London School of Economics Middle East Centre"
+              },
+              {
+                "id": "maamoon-mohammed-academic-journal-of-nawroz-university-vol-9-no-3",
+                "level": 4,
+                "text": "Maamoon Mohammed, Academic Journal of Nawroz University, Vol 9 No. 3"
+              },
+              {
+                "id": "overseas-security-advisory-council",
+                "level": 4,
+                "text": "Overseas Security Advisory Council"
+              },
+              {
+                "id": "rudaw",
+                "level": 4,
+                "text": "Rudaw"
+              },
+              {
+                "id": "shafaq-news",
+                "level": 4,
+                "text": "Shafaq News"
+              },
+              {
+                "id": "times-higher-education",
+                "level": 4,
+                "text": "Times Higher Education"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "united-nations-assistance-mission-for-iraq",
+                    "level": 5,
+                    "text": "United Nations Assistance Mission for Iraq"
+                  }
+                ],
+                "id": "transparency-international",
+                "level": 4,
+                "text": "Transparency International"
+              },
+              {
+                "id": "united-nations-development-programme",
+                "level": 4,
+                "text": "United Nations Development Programme"
+              },
+              {
+                "id": "united-nations-high-commissioner-for-refugees",
+                "level": 4,
+                "text": "United Nations High Commissioner for Refugees"
+              },
+              {
+                "id": "united-nations-office-of-the-high-commissioner-of-human-rights",
+                "level": 4,
+                "text": "United Nations Office of the High Commissioner of Human Rights"
+              },
+              {
+                "id": "united-nations-sustainable-development-group",
+                "level": 4,
+                "text": "United Nations Sustainable Development Group"
+              },
+              {
+                "id": "united-states-department-of-defense",
+                "level": 4,
+                "text": "United States Department of Defense"
+              },
+              {
+                "id": "united-states-department-of-state",
+                "level": 4,
+                "text": "United States Department of State"
+              },
+              {
+                "id": "united-states-embassy-in-the-united-kingdom",
+                "level": 4,
+                "text": "United States Embassy in the United Kingdom,"
+              },
+              {
+                "id": "water-peace-and-security",
+                "level": 4,
+                "text": "Water, Peace and Security"
+              },
+              {
+                "id": "xecom",
+                "level": 4,
+                "text": "Xe.com"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-07-24T13:35:25.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2025-09-10T11:46:07+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+        "base_path": "/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+        "content_id": "18a4ab46-2f78-423f-b62d-974c7713874e",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T12:35:25Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: actors of protection, Iraq, September 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/iraq-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/iraq-country-policy-and-information-notes",
+        "base_path": "/government/publications/iraq-country-policy-and-information-notes",
+        "content_id": "397160cb-3bb4-4175-ae06-9f776412d7cd",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T12:35:25Z",
+        "schema_name": "publication",
+        "title": "Iraq: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-24T13:35:25+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789055384.693-10.13.22.105-2549",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: actors of protection, Iraq, September 2025 (accessible)",
+  "updated_at": "2026-09-10T16:49:46+01:00",
+  "withdrawn_notice": {}
+}

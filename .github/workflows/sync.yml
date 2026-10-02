@@ -1,0 +1,66 @@
+# Scheduled scrape. Inactive until the repo is pushed to GitHub.
+# Daily quick sync costs one request (a 304) when nothing has changed; the weekly full sync
+# re-fetches every note to catch silent in-place edits.
+name: sync
+
+on:
+  schedule:
+    - cron: "17 6 * * *"      # daily 06:17 UTC, quick
+    - cron: "47 5 * * 0"      # Sundays 05:47 UTC, full
+  workflow_dispatch:
+    inputs:
+      full:
+        description: Re-fetch every note
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+
+      - name: Sync
+        id: sync
+        continue-on-error: true          # commit what succeeded, then fail the job below
+        run: |
+          if [ "${{ github.event.schedule }}" = "47 5 * * 0" ] || [ "${{ inputs.full }}" = "true" ]; then
+            python -m cpin sync --full
+          else
+            python -m cpin sync
+          fi
+
+      # TODO(R2): upload new files from data/pdfs/files/ to the R2 bucket once it exists.
+
+      - name: Verify
+        run: python -m cpin verify
+
+      - name: Commit data changes
+        run: |
+          git config user.name "cpin-extractor bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          # A quiet day only appends to runs.jsonl; don't make a commit for that alone.
+          if git diff --cached --name-only | grep -qv '^data/runs.jsonl$'; then
+            git commit -m "data: sync $(date -u +%F)"
+            git push
+          else
+            echo "No content changes."
+          fi
+
+      - name: Fail if the sync had errors
+        if: steps.sync.outcome == 'failure'
+        run: exit 1

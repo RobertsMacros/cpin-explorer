@@ -1,0 +1,496 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/albania-country-policy-and-information-notes/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+  "content_id": "b9a67fcc-f35d-4a58-b328-289a7698e81f",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1 Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "7.1 Constitution of the Republic of Albania"
+              },
+              {
+                "id": "international-law",
+                "level": 4,
+                "text": "7.2 International law and instruments"
+              },
+              {
+                "id": "domestic-legislation",
+                "level": 4,
+                "text": "7.3 Domestic legislation"
+              },
+              {
+                "id": "criminal-code",
+                "level": 4,
+                "text": "7.4 Criminal Code of the Republic of Albania"
+              },
+              {
+                "id": "family-law",
+                "level": 4,
+                "text": "7.5 Family law"
+              }
+            ],
+            "id": "legal-framework",
+            "level": 3,
+            "text": "7. Legal framework"
+          },
+          {
+            "headers": [
+              {
+                "id": "demography-and-geography",
+                "level": 4,
+                "text": "8.1 Demography and geography"
+              },
+              {
+                "id": "cultural-social-attitudes",
+                "level": 4,
+                "text": "8.2 Cultural and social attitudes"
+              },
+              {
+                "id": "attitudes",
+                "level": 4,
+                "text": "8.3 Attitudes to gender-based violence"
+              },
+              {
+                "id": "single-divorced",
+                "level": 4,
+                "text": "8.4 Single and divorced women and mothers"
+              },
+              {
+                "id": "freedom-of-movement",
+                "level": 4,
+                "text": "8.5 Freedom of movement"
+              }
+            ],
+            "id": "women-society",
+            "level": 3,
+            "text": "8. Position of women in society"
+          },
+          {
+            "headers": [
+              {
+                "id": "global-equalityinclusivity-ranking",
+                "level": 4,
+                "text": "9.1 Global equality/inclusivity ranking"
+              },
+              {
+                "id": "education",
+                "level": 4,
+                "text": "9.2 Education"
+              },
+              {
+                "id": "employment-economic-participation",
+                "level": 4,
+                "text": "9.3 Employment and economic participation"
+              },
+              {
+                "id": "political-public-participation",
+                "level": 4,
+                "text": "9.4 Political/public participation and representation"
+              }
+            ],
+            "id": "socio-economic-indicators",
+            "level": 3,
+            "text": "9. Socio-economic indicators"
+          },
+          {
+            "headers": [
+              {
+                "id": "forms-of-violence",
+                "level": 4,
+                "text": "10.1 Forms of violence and overall prevalence"
+              },
+              {
+                "id": "domestic-violence",
+                "level": 4,
+                "text": "10.2 Domestic violence, including intimate partner violence"
+              },
+              {
+                "id": "femicide",
+                "level": 4,
+                "text": "10.3 Femicide"
+              },
+              {
+                "id": "other-forms-of-violence",
+                "level": 4,
+                "text": "10.4 Other forms of violence"
+              },
+              {
+                "id": "data-collection",
+                "level": 4,
+                "text": "10.5 Data collection"
+              }
+            ],
+            "id": "prevalence-of-gender-based-violence",
+            "level": 3,
+            "text": "10. Prevalence of gender-based violence"
+          },
+          {
+            "headers": [
+              {
+                "id": "government-attitudes-policies-and-funding",
+                "level": 4,
+                "text": "11.1 Government attitudes, policies and funding"
+              },
+              {
+                "id": "co-ordinated-referral-mechanism",
+                "level": 4,
+                "text": "11.2 Co-ordinated referral mechanism"
+              },
+              {
+                "id": "Training-professionals",
+                "level": 4,
+                "text": "11.3 Training of professionals"
+              },
+              {
+                "id": "police-response",
+                "level": 4,
+                "text": "11.4 Police response"
+              },
+              {
+                "id": "protection-orders",
+                "level": 4,
+                "text": "11.5 Protection orders"
+              },
+              {
+                "id": "prosecution",
+                "level": 4,
+                "text": "11.6 Prosecution"
+              },
+              {
+                "id": "legal-assistance",
+                "level": 4,
+                "text": "11.7 Legal assistance, legal aid and access to justice"
+              },
+              {
+                "id": "rehabilitation",
+                "level": 4,
+                "text": "11.8 Rehabilitation of perpetrators"
+              },
+              {
+                "id": "hotline",
+                "level": 4,
+                "text": "11.9 Hotline and app"
+              }
+            ],
+            "id": "state-protection",
+            "level": 3,
+            "text": "11. State protection"
+          },
+          {
+            "headers": [
+              {
+                "id": "availability-of-social-care-services",
+                "level": 4,
+                "text": "12.1 Availability of social care services"
+              },
+              {
+                "id": "shelters",
+                "level": 4,
+                "text": "12.2 Shelters"
+              },
+              {
+                "id": "centres-for-victims-of-domestic-and-sexual-violence",
+                "level": 4,
+                "text": "12.3 Centres for victims of domestic and sexual violence"
+              },
+              {
+                "id": "ngo",
+                "level": 4,
+                "text": "12.4 Non-governmental assistance"
+              },
+              {
+                "id": "healthcare",
+                "level": 4,
+                "text": "12.5 Healthcare"
+              },
+              {
+                "id": "education-1",
+                "level": 4,
+                "text": "12.6 Education"
+              },
+              {
+                "id": "employment",
+                "level": 4,
+                "text": "12.7 Employment"
+              },
+              {
+                "id": "financial-support",
+                "level": 4,
+                "text": "12.8 Financial support"
+              },
+              {
+                "id": "housing",
+                "level": 4,
+                "text": "12.9 Housing"
+              },
+              {
+                "id": "awareness-raising",
+                "level": 4,
+                "text": "12.10 Awareness-raising"
+              }
+            ],
+            "id": "assistance-and-reintegration",
+            "level": 3,
+            "text": "12. Assistance and reintegration"
+          },
+          {
+            "id": "avenues-of-redress",
+            "level": 3,
+            "text": "13. Avenues of redress"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-08-20T17:32:27.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-04-07T10:44:12+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/albania-country-policy-and-information-notes/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/albania-country-policy-and-information-notes/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+        "base_path": "/government/publications/albania-country-policy-and-information-notes/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+        "content_id": "b9a67fcc-f35d-4a58-b328-289a7698e81f",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-08-20T16:32:27Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: gender-based violence, Albania, April 2026 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/albania-country-policy-and-information-notes/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/albania-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/albania-country-policy-and-information-notes",
+        "base_path": "/government/publications/albania-country-policy-and-information-notes",
+        "content_id": "4a5761b1-f9e4-4d89-99ef-52cfd1997a92",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-08-20T16:32:27Z",
+        "schema_name": "publication",
+        "title": "Albania: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/albania-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-08-20T17:32:27+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1787243547.771-10.13.20.197-2684",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: gender-based violence, Albania, April 2026 (accessible)",
+  "updated_at": "2026-08-20T17:32:29+01:00",
+  "withdrawn_notice": {}
+}

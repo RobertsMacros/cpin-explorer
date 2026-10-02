@@ -1,0 +1,124 @@
+/* CPIN Extractor theme, after the COBE site (cobe.vercel.app): white page, one electric blue,
+   square corners, blue label tags with white pixel lettering, thin blue rules, soft motion.
+   Reading text uses Geist Sans; Geist Pixel and Geist Mono carry labels, numbers and chrome. */
+
+@font-face { font-family: "Geist"; src: url("../vendor/fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("../vendor/fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Pixel"; src: url("../vendor/fonts/GeistPixel-Square.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Geist Pixel Line"; src: url("../vendor/fonts/GeistPixel-Line.woff2") format("woff2"); font-display: swap; }
+
+:root {
+  --font-text: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-pixel: "Geist Pixel", "Geist Mono", ui-monospace, monospace;
+  --font-display: "Geist Pixel Line", "Geist Pixel", ui-monospace, monospace;
+
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --sunken: #f6f7f9;
+  --ink: #171d24;                          /* COBE body: lab(13 -1.8 -7) */
+  --ink-2: #66717c;                        /* COBE secondary: lab(48 -2 -7) */
+  --ink-3: #9aa3ad;
+  --line: #e4e7eb;
+  --line-strong: #cfd4da;
+  --blue: #2a3cf5;
+  --blue: lab(36 55.64 -107.68);           /* COBE's blue */
+  --blue-ink: #ffffff;
+  --blue-wash: color-mix(in oklab, var(--blue) 7%, var(--bg));
+  --blue-line: color-mix(in oklab, var(--blue) 35%, var(--bg));
+
+  /* Redline: never colour alone. Insertions are COBE blue and underlined; deletions red and struck through. */
+  --ins: var(--blue);
+  --ins-wash: color-mix(in oklab, var(--blue) 10%, var(--bg));
+  --del: #c2262e;
+  --del-wash: color-mix(in oklab, #e0434b 12%, var(--bg));
+
+  --focus: var(--blue);
+  --ease: cubic-bezier(.2, .8, .2, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --t-fast: 160ms;
+  --t: 280ms;
+  --t-slow: 520ms;
+
+  /* Fluid sizing: 16px on a 1080p laptop, ~21px on a 4K monitor, 15px on a phone. */
+  font-size: clamp(15px, 0.42vw + 8.6px, 22px);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0c10; --surface: #10131a; --sunken: #151922;
+    --ink: #e7eaf0; --ink-2: #9aa4b2; --ink-3: #6b7480;
+    --line: #232834; --line-strong: #323949;
+    --blue: #6b7cff; --blue: lab(58 38 -82);
+    --ins: var(--blue); --ins-wash: color-mix(in oklab, var(--blue) 22%, var(--bg));
+    --del: #ff7b81; --del-wash: color-mix(in oklab, #e0434b 22%, var(--bg));
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a0c10; --surface: #10131a; --sunken: #151922;
+  --ink: #e7eaf0; --ink-2: #9aa4b2; --ink-3: #6b7480;
+  --line: #232834; --line-strong: #323949;
+  --blue: #6b7cff; --blue: lab(58 38 -82);
+  --ins: var(--blue); --ins-wash: color-mix(in oklab, var(--blue) 22%, var(--bg));
+  --del: #ff7b81; --del-wash: color-mix(in oklab, #e0434b 22%, var(--bg));
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-text); line-height: 1.55; letter-spacing: .005em;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: .2em; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+::selection { background: color-mix(in oklab, var(--blue) 22%, transparent); }
+
+/* --- Components --------------------------------------------------------------------------- */
+
+/* Blue label tag, as on the COBE globe ("TOKYO"). */
+.tag {
+  display: inline-flex; align-items: center; gap: .4em;
+  font-family: var(--font-pixel); font-size: .72rem; line-height: 1; letter-spacing: .06em;
+  text-transform: uppercase; white-space: nowrap;
+  padding: .38em .55em .34em; background: var(--blue); color: var(--blue-ink);
+}
+.tag--outline { background: var(--bg); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+.tag--muted { background: var(--sunken); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+
+/* Small uppercase section label ("USAGE"). */
+.eyebrow {
+  font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-2); margin: 0;
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45em;
+  min-height: 2.4rem; padding: 0 .85rem; border: 1px solid var(--line-strong); border-radius: 0;
+  background: var(--surface); color: var(--ink); cursor: pointer;
+  font-family: var(--font-mono); font-size: .8rem; letter-spacing: .02em;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+.btn--primary { background: var(--blue); border-color: var(--blue); color: var(--blue-ink); }
+.btn--primary:hover { color: var(--blue-ink); filter: brightness(1.08); }
+kbd {
+  font-family: var(--font-mono); font-size: .7em; padding: .1em .4em; border: 1px solid var(--line-strong);
+  color: var(--ink-2); background: var(--sunken);
+}
+
+/* Big pixel numerals (counts, the odometer date). */
+.numeral { font-family: var(--font-pixel); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: .08em; color: var(--blue); }
+
+/* Entrance: things pop in (scale, fade and de-blur), never jump. */
+@keyframes pop-in { from { opacity: 0; transform: translateY(.35rem) scale(.985); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+.pop-in { animation: pop-in var(--t) var(--ease) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+}

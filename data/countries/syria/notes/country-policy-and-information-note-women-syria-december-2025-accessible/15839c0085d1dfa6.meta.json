@@ -1,0 +1,1038 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-women-syria-december-2025-accessible",
+  "content_id": "99782e5f-1791-465d-9af2-dc293071d6a3",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "headers": [
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2 Exclusion"
+              }
+            ],
+            "id": "credibility",
+            "level": 3,
+            "text": "1.1 Credibility"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "risk-from-the-state",
+                "level": 4,
+                "text": "3.1 Risk from the state"
+              },
+              {
+                "id": "risk-from-non-state-actors",
+                "level": 4,
+                "text": "3.2 Risk from non-state actors"
+              },
+              {
+                "id": "risk-humanitarian-situation-and-living-conditions",
+                "level": 4,
+                "text": "3.3 Risk: Humanitarian situation and living conditions"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "headers": [
+              {
+                "id": "protection-from-gbv-in-government-controlled-areas",
+                "level": 4,
+                "text": "4.1 Protection from GBV in Government-controlled areas"
+              },
+              {
+                "id": "protection-from-gbv-in-daanes-controlled-areas",
+                "level": 4,
+                "text": "4.2 Protection from GBV in DAANES-controlled areas"
+              }
+            ],
+            "id": "protection-from-gender-based-violence",
+            "level": 3,
+            "text": "4. Protection from gender-based violence"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6. Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "7.1 Constitution"
+              },
+              {
+                "id": "penal-code",
+                "level": 4,
+                "text": "7.2 Penal code"
+              },
+              {
+                "id": "nationality",
+                "level": 4,
+                "text": "7.3 Nationality and citizenship laws"
+              },
+              {
+                "id": "other-laws",
+                "level": 4,
+                "text": "7.4 Other relevant laws"
+              },
+              {
+                "id": "laws-in-daanes-controlled-areas",
+                "level": 4,
+                "text": "7.5 Laws in DAANES-controlled areas"
+              }
+            ],
+            "id": "legal-context",
+            "level": 3,
+            "text": "7. Legal context"
+          },
+          {
+            "headers": [
+              {
+                "id": "expectations",
+                "level": 4,
+                "text": "8.1 Women's roles and societal expectations"
+              },
+              {
+                "id": "difference-by-area",
+                "level": 4,
+                "text": "8.2 Differences by area, community and socio-economic status"
+              },
+              {
+                "id": "impact-of-conflict",
+                "level": 4,
+                "text": "8.3 Impact of conflict on women since 2011"
+              }
+            ],
+            "id": "societal-and-cultural-norms-and-attitudes",
+            "level": 3,
+            "text": "8. Societal and cultural norms and attitudes"
+          },
+          {
+            "id": "impact-of-conflict-on-women-since-2011-1",
+            "level": 3,
+            "text": "9. Impact of conflict on women since 2011"
+          },
+          {
+            "headers": [
+              {
+                "id": "statements-officials",
+                "level": 4,
+                "text": "10.1 Statements by officials and ministers"
+              },
+              {
+                "id": "women-in-power",
+                "level": 4,
+                "text": "10.2 Women in positions of power"
+              },
+              {
+                "id": "dress-codes",
+                "level": 4,
+                "text": "10.3 Dress codes and gender segregation"
+              },
+              {
+                "id": "treatment-by-police",
+                "level": 4,
+                "text": "10.4 Treatment by police and security forces"
+              }
+            ],
+            "id": "new-governments-attitude-towards-womens-rights",
+            "level": 3,
+            "text": "10. New government's attitude towards women's rights"
+          },
+          {
+            "headers": [
+              {
+                "id": "gender-equality-ideology-and-womens-institutions",
+                "level": 4,
+                "text": "11.1 Gender equality ideology and women's institutions"
+              },
+              {
+                "id": "women-power-daanes",
+                "level": 4,
+                "text": "11.2 Women in positions of power in the DAANES"
+              }
+            ],
+            "id": "daanes-women",
+            "level": 3,
+            "text": "11. DAANES's attitude towards women's rights"
+          },
+          {
+            "headers": [
+              {
+                "id": "limitations",
+                "level": 4,
+                "text": "12.1 Note on limitations"
+              },
+              {
+                "id": "type-GBV",
+                "level": 4,
+                "text": "12.2 Prevalence and types of GBV"
+              },
+              {
+                "id": "kidnappings-alawite",
+                "level": 4,
+                "text": "12.3 Kidnappings of Alawite and Druze women and girls"
+              },
+              {
+                "id": "risk-camps",
+                "level": 4,
+                "text": "12.4 Risk of GBV in IDP camps"
+              },
+              {
+                "id": "honour-crimes",
+                "level": 4,
+                "text": "12.5 'Honour' crimes and violence committed by family members"
+              },
+              {
+                "id": "forced-marriage",
+                "level": 4,
+                "text": "12.6 Forced marriage"
+              },
+              {
+                "id": "harassment-non-state",
+                "level": 4,
+                "text": "12.7 Harassment of women by non-state actors"
+              }
+            ],
+            "id": "gender-based-violence-gbv-and-harassment",
+            "level": 3,
+            "text": "12. Gender-based violence (GBV) and harassment"
+          },
+          {
+            "headers": [
+              {
+                "id": "laws-protecting-women-from-gbv",
+                "level": 4,
+                "text": "13.1 Laws protecting women from GBV"
+              },
+              {
+                "id": "obstacles-to-reporting",
+                "level": 4,
+                "text": "13.2 Obstacles to reporting GBV"
+              },
+              {
+                "id": "police-response",
+                "level": 4,
+                "text": "13.3 Police response to GBV incidents"
+              },
+              {
+                "id": "daanes-response",
+                "level": 4,
+                "text": "13.4 DAANES authorities' response to GBV incidents"
+              },
+              {
+                "id": "shelters",
+                "level": 4,
+                "text": "13.5 Shelters, safe spaces and support"
+              },
+              {
+                "id": "dispute-resolution",
+                "level": 4,
+                "text": "13.6 Support and dispute resolution mechanisms in DAANES-controlled areas"
+              }
+            ],
+            "id": "protection-from-gender-based-violence-1",
+            "level": 3,
+            "text": "13. Protection from gender-based violence"
+          },
+          {
+            "headers": [
+              {
+                "id": "internally-displaced",
+                "level": 4,
+                "text": "14.1 Internally displaced women"
+              },
+              {
+                "id": "female-heads-household",
+                "level": 4,
+                "text": "14.2 Female heads of household"
+              },
+              {
+                "id": "widows",
+                "level": 4,
+                "text": "14.3 Widowed and divorced women"
+              },
+              {
+                "id": "lone-women",
+                "level": 4,
+                "text": "14.4 Lone women"
+              }
+            ],
+            "id": "vulnerable-groups",
+            "level": 3,
+            "text": "14. Groups with heightened vulnerability"
+          },
+          {
+            "headers": [
+              {
+                "id": "comparison-to-men",
+                "level": 4,
+                "text": "15.1 Comparison to men"
+              },
+              {
+                "id": "food",
+                "level": 4,
+                "text": "15.2 Food and essential items"
+              },
+              {
+                "id": "housing",
+                "level": 4,
+                "text": "15.3 Housing"
+              },
+              {
+                "id": "employment",
+                "level": 4,
+                "text": "15.4 Employment and support"
+              },
+              {
+                "id": "humanitarian-support",
+                "level": 4,
+                "text": "15.5 Humanitarian support"
+              },
+              {
+                "id": "healthcare",
+                "level": 4,
+                "text": "15.6 Healthcare"
+              }
+            ],
+            "id": "access-to-food-and-essential-items-employment-housing-and-medical-services",
+            "level": 3,
+            "text": "15. Access to food and essential items, employment, housing, and medical services"
+          },
+          {
+            "id": "freedom-of-movement",
+            "level": 3,
+            "text": "16. Freedom of movement"
+          }
+        ],
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera"
+              },
+              {
+                "id": "amnesty-international",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "assistance-coordination-unit-acu",
+                "level": 4,
+                "text": "Assistance Coordination Unit (ACU)"
+              },
+              {
+                "id": "bbc-monitoring",
+                "level": 4,
+                "text": "BBC Monitoring"
+              },
+              {
+                "id": "care",
+                "level": 4,
+                "text": "CARE"
+              },
+              {
+                "id": "christian-solidarity-international",
+                "level": 4,
+                "text": "Christian Solidarity International"
+              },
+              {
+                "id": "constitutionnet",
+                "level": 4,
+                "text": "ConstitutionNet"
+              },
+              {
+                "id": "the-conversation",
+                "level": 4,
+                "text": "The Conversation"
+              },
+              {
+                "id": "co-operation-in-mesopotamia",
+                "level": 4,
+                "text": "Co-operation in Mesopotamia"
+              },
+              {
+                "id": "danish-immigration-service-dis-and-swedish-migration-agency-sma",
+                "level": 4,
+                "text": "Danish Immigration Service (DIS) and Swedish Migration Agency (SMA)"
+              },
+              {
+                "id": "danish-refugee-council-drc-international-medical-corps-imc-norwegian-refugee-council-nrc-and-oxfam",
+                "level": 4,
+                "text": "Danish Refugee Council (DRC), International Medical Corps (IMC), Norwegian Refugee Council (NRC) and Oxfam"
+              },
+              {
+                "id": "danish-refugee-council-drc-oxfam-and-intersos",
+                "level": 4,
+                "text": "Danish Refugee Council (DRC), Oxfam and Intersos"
+              },
+              {
+                "id": "etana",
+                "level": 4,
+                "text": "ETANA"
+              },
+              {
+                "id": "euromed-feminist-initiative",
+                "level": 4,
+                "text": "EuroMed Feminist Initiative"
+              },
+              {
+                "id": "european-asylum-support-office-easo",
+                "level": 4,
+                "text": "European Asylum Support Office (EASO)"
+              },
+              {
+                "id": "european-union-agency-for-asylum-euaa",
+                "level": 4,
+                "text": "European Union Agency for Asylum (EUAA)"
+              },
+              {
+                "id": "france-24",
+                "level": 4,
+                "text": "France 24"
+              },
+              {
+                "id": "freedom-house",
+                "level": 4,
+                "text": "Freedom House"
+              },
+              {
+                "id": "gender-campus",
+                "level": 4,
+                "text": "Gender Campus"
+              },
+              {
+                "id": "giz",
+                "level": 4,
+                "text": "GIZ"
+              },
+              {
+                "id": "global-protection-cluster-gpc",
+                "level": 4,
+                "text": "Global Protection Cluster (GPC)"
+              },
+              {
+                "id": "goal-international-rescue-committee-irc-mercy-corps-solidarits-international",
+                "level": 4,
+                "text": "GOAL, International Rescue Committee (IRC), Mercy Corps, Solidarités International"
+              },
+              {
+                "id": "grasso-d",
+                "level": 4,
+                "text": "Grasso, D"
+              },
+              {
+                "id": "the-guardian",
+                "level": 4,
+                "text": "The Guardian"
+              },
+              {
+                "id": "gulf-centre-for-human-rights-gchr",
+                "level": 4,
+                "text": "Gulf Centre for Human Rights (GCHR)"
+              },
+              {
+                "id": "house-of-commons-library",
+                "level": 4,
+                "text": "House of Commons Library"
+              },
+              {
+                "id": "human-rights-first-hrf",
+                "level": 4,
+                "text": "Human Rights First (HRF)"
+              },
+              {
+                "id": "human-rights-watch",
+                "level": 4,
+                "text": "Human Rights Watch"
+              },
+              {
+                "id": "international-crisis-group-icg",
+                "level": 4,
+                "text": "International Crisis Group (ICG)"
+              },
+              {
+                "id": "international-humanitarian-relief-ihr",
+                "level": 4,
+                "text": "International Humanitarian Relief (IHR)"
+              },
+              {
+                "id": "international-labour-organization-ilo",
+                "level": 4,
+                "text": "International Labour Organization (ILO)"
+              },
+              {
+                "id": "international-medical-corps-imc",
+                "level": 4,
+                "text": "International Medical Corps (IMC)"
+              },
+              {
+                "id": "international-university-college-of-turin",
+                "level": 4,
+                "text": "International University College of Turin"
+              },
+              {
+                "id": "jinha",
+                "level": 4,
+                "text": "Jinha"
+              },
+              {
+                "id": "maat",
+                "level": 4,
+                "text": "Maat"
+              },
+              {
+                "id": "medya-news",
+                "level": 4,
+                "text": "Medya News"
+              },
+              {
+                "id": "netherlands-ministry-of-foreign-affairs-mfa",
+                "level": 4,
+                "text": "Netherlands Ministry of Foreign Affairs (MFA)"
+              },
+              {
+                "id": "the-new-arab",
+                "level": 4,
+                "text": "The New Arab"
+              },
+              {
+                "id": "new-lines-institute",
+                "level": 4,
+                "text": "New Lines Institute"
+              },
+              {
+                "id": "new-lines-magazine",
+                "level": 4,
+                "text": "New Lines Magazine"
+              },
+              {
+                "id": "north-west-syria-protection-cluster-and-united-nations-high-commissioner-for-refugees-unhcr",
+                "level": 4,
+                "text": "North-West Syria Protection Cluster and United Nations High Commissioner for Refugees (UNHCR)"
+              },
+              {
+                "id": "norwegian-refugee-council-nrc",
+                "level": 4,
+                "text": "Norwegian Refugee Council (NRC)"
+              },
+              {
+                "id": "rojava-information-center",
+                "level": 4,
+                "text": "Rojava Information Center"
+              },
+              {
+                "id": "syria-direct",
+                "level": 4,
+                "text": "Syria Direct"
+              },
+              {
+                "id": "syrian-arab-red-crescent-sarc",
+                "level": 4,
+                "text": "Syrian Arab Red Crescent (SARC)"
+              },
+              {
+                "id": "syrian-feminist-lobby",
+                "level": 4,
+                "text": "Syrian Feminist Lobby"
+              },
+              {
+                "id": "syrian-observatory-for-human-rights-sohr",
+                "level": 4,
+                "text": "Syrian Observatory for Human Rights (SOHR)"
+              },
+              {
+                "id": "syrians-for-truth-and-justice-stj",
+                "level": 4,
+                "text": "Syrians for Truth and Justice (STJ)"
+              },
+              {
+                "id": "syrian-network-for-human-rights-and-loyola-law-school",
+                "level": 4,
+                "text": "Syrian Network for Human Rights and Loyola Law School"
+              },
+              {
+                "id": "synergy-association-for-victims",
+                "level": 4,
+                "text": "Synergy Association for Victims"
+              },
+              {
+                "id": "truthout",
+                "level": 4,
+                "text": "Truthout"
+              },
+              {
+                "id": "truthout-1",
+                "level": 4,
+                "text": "Truthout"
+              },
+              {
+                "id": "united-nations-high-commissioner-for-refugees-unhcr",
+                "level": 4,
+                "text": "United Nations High Commissioner for Refugees (UNHCR)"
+              },
+              {
+                "id": "united-nations-office-for-the-coordination-of-humanitarian-affairs-unocha",
+                "level": 4,
+                "text": "United Nations Office for the Coordination of Humanitarian Affairs (UNOCHA)"
+              },
+              {
+                "id": "united-nations-office-for-the-high-commissioner-of-human-rights-ohchr",
+                "level": 4,
+                "text": "United Nations Office for the High Commissioner of Human Rights (OHCHR)"
+              },
+              {
+                "id": "united-nations-population-fund-unfpa",
+                "level": 4,
+                "text": "United Nations Population Fund (UNFPA)"
+              },
+              {
+                "id": "united-nations-special-rapporteur-on-human-rights-defenders-srhrd",
+                "level": 4,
+                "text": "United Nations Special Rapporteur on Human Rights Defenders (SRHRD)"
+              },
+              {
+                "id": "un-ponte-per",
+                "level": 4,
+                "text": "Un Ponte Per"
+              },
+              {
+                "id": "usa-for-unfpa",
+                "level": 4,
+                "text": "USA for UNFPA"
+              },
+              {
+                "id": "women-defend-rojava",
+                "level": 4,
+                "text": "Women Defend Rojava"
+              },
+              {
+                "id": "world-bank",
+                "level": 4,
+                "text": "World Bank"
+              },
+              {
+                "id": "world-health-organisation-who",
+                "level": 4,
+                "text": "World Health Organisation (WHO)"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "acaps",
+                "level": 4,
+                "text": "ACAPS"
+              },
+              {
+                "id": "adalaty-centre",
+                "level": 4,
+                "text": "Adalaty Centre"
+              },
+              {
+                "id": "amnesty-international-1",
+                "level": 4,
+                "text": "Amnesty International"
+              },
+              {
+                "id": "austrian-centre-for-country-of-origin-and-asylum-research-and-documentation",
+                "level": 4,
+                "text": "Austrian Centre for Country of Origin and Asylum Research and Documentation"
+              },
+              {
+                "id": "austrian-federal-office-for-immigration-and-asylum-country-of-origin-information-unit",
+                "level": 4,
+                "text": "Austrian Federal Office for Immigration and Asylum Country of Origin Information Unit"
+              },
+              {
+                "id": "bbc-news",
+                "level": 4,
+                "text": "BBC News"
+              },
+              {
+                "id": "the-borgen-project",
+                "level": 4,
+                "text": "The Borgen Project"
+              },
+              {
+                "id": "care-1",
+                "level": 4,
+                "text": "CARE"
+              },
+              {
+                "id": "the-conversation-1",
+                "level": 4,
+                "text": "The Conversation"
+              },
+              {
+                "id": "co-operation-in-mesopotamia-1",
+                "level": 4,
+                "text": "Co-operation in Mesopotamia"
+              },
+              {
+                "id": "doz-and-un-ponte-per",
+                "level": 4,
+                "text": "DOZ and Un Ponte Per"
+              },
+              {
+                "id": "enab-baladi",
+                "level": 4,
+                "text": "Enab Baladi"
+              },
+              {
+                "id": "feminist-eye",
+                "level": 4,
+                "text": "Feminist Eye"
+              },
+              {
+                "id": "global-protection-cluster",
+                "level": 4,
+                "text": "Global Protection Cluster"
+              },
+              {
+                "id": "hawar-news-agency",
+                "level": 4,
+                "text": "Hawar News Agency"
+              },
+              {
+                "id": "impact",
+                "level": 4,
+                "text": "IMPACT"
+              },
+              {
+                "id": "international-crisis-group",
+                "level": 4,
+                "text": "International Crisis Group"
+              },
+              {
+                "id": "international-feminist-journal-of-politics",
+                "level": 4,
+                "text": "International Feminist Journal of Politics"
+              },
+              {
+                "id": "international-medical-corps",
+                "level": 4,
+                "text": "International Medical Corps"
+              },
+              {
+                "id": "jinha-1",
+                "level": 4,
+                "text": "Jinha"
+              },
+              {
+                "id": "opendemocracy",
+                "level": 4,
+                "text": "openDemocracy"
+              },
+              {
+                "id": "piccardi-eleonora-gea",
+                "level": 4,
+                "text": "Piccardi, Eleonora Gea"
+              },
+              {
+                "id": "provost-ren",
+                "level": 4,
+                "text": "Provost, René"
+              },
+              {
+                "id": "reach",
+                "level": 4,
+                "text": "REACH"
+              },
+              {
+                "id": "refugees-international",
+                "level": 4,
+                "text": "Refugees International"
+              },
+              {
+                "id": "syriacpress",
+                "level": 4,
+                "text": "SyriacPress"
+              },
+              {
+                "id": "syrian-future-movement",
+                "level": 4,
+                "text": "Syrian Future Movement"
+              },
+              {
+                "id": "syrian-network-for-human-rights",
+                "level": 4,
+                "text": "Syrian Network for Human Rights"
+              },
+              {
+                "id": "united-nations-high-commissioner-for-refugees",
+                "level": 4,
+                "text": "United Nations High Commissioner for Refugees"
+              },
+              {
+                "id": "united-nations-population-fund-unfpa-1",
+                "level": 4,
+                "text": "United Nations Population Fund (UNFPA)"
+              },
+              {
+                "id": "united-states-department-of-state",
+                "level": 4,
+                "text": "United States Department of State"
+              },
+              {
+                "id": "un-ponte-per-1",
+                "level": 4,
+                "text": "Un Ponte Per"
+              },
+              {
+                "id": "wilson-center",
+                "level": 4,
+                "text": "Wilson Center"
+              },
+              {
+                "id": "women-defend-rojava-1",
+                "level": 4,
+                "text": "Women Defend Rojava"
+              },
+              {
+                "id": "women-now-for-development",
+                "level": 4,
+                "text": "Women Now for Development"
+              },
+              {
+                "id": "worldcrunch",
+                "level": 4,
+                "text": "Worldcrunch"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-07-24T10:39:38.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2026-01-06T12:36:38+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-women-syria-december-2025-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-women-syria-december-2025-accessible",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-women-syria-december-2025-accessible",
+        "content_id": "99782e5f-1791-465d-9af2-dc293071d6a3",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: women, Syria, December 2025 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-women-syria-december-2025-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/syria-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/syria-country-policy-and-information-notes",
+        "base_path": "/government/publications/syria-country-policy-and-information-notes",
+        "content_id": "f8c99638-27ab-44ae-858b-6987ac1a3ba3",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-07-24T09:39:38Z",
+        "schema_name": "publication",
+        "title": "Syria: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/syria-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-07-24T10:39:38+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789055922.839-10.13.22.105-2571",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: women, Syria, December 2025 (accessible)",
+  "updated_at": "2026-09-10T16:58:47+01:00",
+  "withdrawn_notice": {}
+}

@@ -1,0 +1,93 @@
+"""Best-effort backfill of older note editions from the Internet Archive.
+
+GOV.UK keeps only the current edition of each note: a replaced edition's URL redirects to the
+country page. Earlier editions survive only where the Wayback Machine captured them. Every
+version recovered here is stored with source='wayback', the capture time and the archive URL, so
+the site can label it as an archived copy. Archive pages are rendered HTML, so the body is the
+page's govspeak element re-serialised: its text is verbatim, its markup is not byte-identical to
+the Content API's.
+"""
+from dataclasses import asdict
+from urllib.parse import quote, urlsplit
+
+from lxml import html as lxml_html
+
+from .http import PoliteClient
+from .store import Store, now_iso
+from .sync import RunReport
+
+CDX = "https://web.archive.org/cdx/search/cdx"
+
+
+def cdx_url(base_path: str) -> str:
+    prefix = quote(f"www.gov.uk{base_path}/*", safe="/*")
+    return (f"{CDX}?url={prefix}&output=json&fl=timestamp,original,digest"
+            "&filter=statuscode:200&collapse=digest&limit=5000")
+
+
+def _iso(timestamp: str) -> str:
+    t = timestamp.ljust(14, "0")
+    return f"{t[0:4]}-{t[4:6]}-{t[6:8]}T{t[8:10]}:{t[10:12]}:{t[12:14]}Z"
+
+
+def extract_body(page_html: str) -> tuple[str | None, str | None]:
+    """Return (govspeak body HTML, page title) from a rendered GOV.UK HTML publication page."""
+    root = lxml_html.document_fromstring(page_html)
+    candidates = root.xpath("//div[contains(@class, 'govspeak')]")
+    h1 = root.xpath("//h1")
+    title = " ".join(h1[0].text_content().split()) if h1 else None
+    if not candidates:
+        return None, title
+    # Most text wins; when a wrapper and its inner govspeak hold the same text, take the inner one.
+    best = max(candidates, key=lambda el: (len(el.text_content()), len(list(el.iterancestors()))))
+    return lxml_html.tostring(best, encoding="unicode"), title
+
+
+def backfill(client: PoliteClient, store: Store, *, only: set[str] | None = None, log=print) -> RunReport:
+    report = RunReport(kind="backfill", mode="wayback", started=now_iso())
+    state = store.load_state()
+    for slug, country in sorted(state["countries"].items()):
+        if only and slug not in only:
+            continue
+        r = client.get(cdx_url(country["base_path"]))
+        if not r.ok:
+            report.errors.append({"country": slug, "url": r.url, "status": r.status, "error": r.error})
+            log(f"  {slug}: archive index unavailable ({r.status})")
+            continue
+        rows = r.json()[1:] if r.content.strip() else []
+        report.countries_checked.append(slug)
+        new_here = 0
+        for timestamp, original, digest in rows:
+            parts = urlsplit(original)
+            path = parts.path.rstrip("/")
+            if parts.query or path == country["base_path"].rstrip("/") or path.lower().endswith((".pdf", ".csv")):
+                continue
+            note = path.rsplit("/", 1)[-1]
+            index = store.load_note(slug, note)
+            if index and digest in index.get("wayback_digests", []):
+                continue                 # this exact capture was processed on an earlier run
+            page = client.get(f"https://web.archive.org/web/{timestamp}id_/{original}", follow=True)
+            if not page.ok:
+                report.errors.append({"country": slug, "note": note, "url": page.url, "status": page.status, "error": page.error})
+                continue
+            body, title = extract_body(page.text)
+            if not body:
+                report.errors.append({"country": slug, "note": note, "url": page.url, "status": 200, "error": "no govspeak body"})
+                continue
+            capture = {"captured_at": _iso(timestamp), "archive_url": f"https://web.archive.org/web/{timestamp}/{original}",
+                       "digest": digest}
+            record, is_new = store.record_version(
+                slug, note, body=body, meta={"source": "wayback", **capture, "original_url": original, "title": title},
+                seen_at=report.started, source="wayback", title=title or note, base_path=path, capture=capture)
+            index = store.load_note(slug, note)
+            index.setdefault("wayback_digests", []).append(digest)
+            store.save_note(slug, note, index)
+            report.notes_checked += 1
+            if is_new:
+                new_here += 1
+                report.new_versions.append({"country": slug, "note": note, "title": record["title"],
+                                            "sha256": record["sha256"], "captured_at": capture["captured_at"]})
+        log(f"  {slug}: {len(rows)} captures, {new_here} new versions")
+    report.finished = now_iso()
+    store.append_run(asdict(report))
+    return report

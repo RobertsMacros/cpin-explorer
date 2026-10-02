@@ -1,0 +1,464 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+  "content_id": "8eb98f32-9a57-418d-8dcf-78d754cdc9c1",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1. Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2. Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1. Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2. Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "risk-from-the-state",
+                "level": 4,
+                "text": "3.1. Risk from the state"
+              },
+              {
+                "id": "risk-from-non-state-actors",
+                "level": 4,
+                "text": "3.2. Risk from non-state actors"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3. Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4. Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5. Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.  Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "geography",
+                "level": 4,
+                "text": "7.1. Geography"
+              },
+              {
+                "id": "bookmark17",
+                "level": 4,
+                "text": "7.2. Demography"
+              }
+            ],
+            "id": "geography-and-demography",
+            "level": 3,
+            "text": "7. Geography and demography"
+          },
+          {
+            "headers": [
+              {
+                "id": "constitution",
+                "level": 4,
+                "text": "8.1. Constitution"
+              },
+              {
+                "id": "bookmark31",
+                "level": 4,
+                "text": "8.2. Statutory laws"
+              },
+              {
+                "headers": [
+                  {
+                    "id": "bookmark55",
+                    "level": 5,
+                    "text": "8.4. Penal Code (Amendment) Bill (2023)"
+                  },
+                  {
+                    "id": "gender-equality-bill",
+                    "level": 5,
+                    "text": "8.5. Gender Equality Bill"
+                  }
+                ],
+                "id": "bookmark43",
+                "level": 4,
+                "text": "8.3. Other legal provisions affecting LGBTI people"
+              }
+            ],
+            "id": "legal-context",
+            "level": 3,
+            "text": "8.  Legal context"
+          },
+          {
+            "headers": [
+              {
+                "id": "bookmark92",
+                "level": 4,
+                "text": "9.1. Official views on sexual orientation and gender identity"
+              }
+            ],
+            "id": "bookmark73",
+            "level": 3,
+            "text": "9.  State attitudes and treatment"
+          },
+          {
+            "headers": [
+              {
+                "id": "bookmark110",
+                "level": 4,
+                "text": "9.3. Treatment of trans people, lesbians, and bisexual women"
+              },
+              {
+                "id": "bookmark127",
+                "level": 4,
+                "text": "9.4. Prosecutions"
+              },
+              {
+                "id": "bookmark133",
+                "level": 4,
+                "text": "9.5. Statistics on arrests and prosecutions"
+              },
+              {
+                "id": "bookmark150",
+                "level": 4,
+                "text": "9.6. Protection"
+              },
+              {
+                "id": "bookmark159",
+                "level": 4,
+                "text": "9.7. Ombudsman/complaints’ mechanism(s)"
+              }
+            ],
+            "id": "bookmark91",
+            "level": 3,
+            "text": "9.2. Treatment of LGBTI people"
+          },
+          {
+            "headers": [
+              {
+                "id": "bookmark167",
+                "level": 4,
+                "text": "10.1. Societal attitudes"
+              },
+              {
+                "id": "bookmark178",
+                "level": 4,
+                "text": "10.2. Religious attitudes"
+              }
+            ],
+            "id": "societal-norms",
+            "level": 3,
+            "text": "10.  Societal norms"
+          },
+          {
+            "headers": [
+              {
+                "id": "bookmark187",
+                "level": 4,
+                "text": "11.1. Treatment of LGBTI people"
+              },
+              {
+                "id": "bookmark197",
+                "level": 4,
+                "text": "11.2. Treatment of lesbian and bisexual women"
+              },
+              {
+                "id": "bookmark200",
+                "level": 4,
+                "text": "11.3. Treatment of trans and intersex people"
+              },
+              {
+                "id": "bookmark207",
+                "level": 4,
+                "text": "11.4. Conversion therapy"
+              }
+            ],
+            "id": "bookmark186",
+            "level": 3,
+            "text": "11. Societal treatment"
+          },
+          {
+            "headers": [
+              {
+                "id": "general",
+                "level": 4,
+                "text": "12.1. General"
+              },
+              {
+                "id": "bookmark224",
+                "level": 4,
+                "text": "12.2. Healthcare"
+              },
+              {
+                "id": "bookmark239",
+                "level": 4,
+                "text": "12.3. Employment"
+              },
+              {
+                "id": "housing",
+                "level": 4,
+                "text": "12.4. Housing"
+              }
+            ],
+            "id": "bookmark216",
+            "level": 3,
+            "text": "12. Access to services"
+          },
+          {
+            "headers": [
+              {
+                "id": "bookmark244",
+                "level": 4,
+                "text": "13.1. Existing organisations"
+              },
+              {
+                "id": "state-treatment",
+                "level": 4,
+                "text": "13.2. State treatment"
+              },
+              {
+                "id": "bookmark256",
+                "level": 4,
+                "text": "13.3. Gay ‘scene’ or ‘community’"
+              }
+            ],
+            "id": "bookmark243",
+            "level": 3,
+            "text": "13.  LGBT groups, civil society and human rights NGO’s"
+          }
+        ],
+        "id": "bookmark14",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "bookmark267",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "bookmark269",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "bookmark270",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-09-02T13:59:22.000+01:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2021-12-07T17:06:25+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+        "api_url": "https://www.gov.uk/api/content/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+        "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+        "content_id": "8eb98f32-9a57-418d-8dcf-78d754cdc9c1",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-09-02T12:59:22Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: sexual orientation and gender identity, Sri Lanka, September 2024 (accessible version)",
+        "web_url": "https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/sri-lanka-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/sri-lanka-country-policy-and-information-notes",
+        "base_path": "/government/publications/sri-lanka-country-policy-and-information-notes",
+        "content_id": "2e7ccd7e-7294-43cf-9576-145e06dd9b3d",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-09-02T12:59:22Z",
+        "schema_name": "publication",
+        "title": "Sri Lanka: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-09-02T13:59:22+01:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1763996290.565-10.13.22.247-2506",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: sexual orientation and gender identity, Sri Lanka, September 2024 (accessible version)",
+  "updated_at": "2026-04-29T15:30:52+01:00",
+  "withdrawn_notice": {}
+}

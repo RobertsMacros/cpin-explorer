@@ -1,0 +1,565 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible",
+  "content_id": "57ed7814-856f-4cc2-a6ab-809065008377",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "id": "other-points-to-note",
+            "level": 3,
+            "text": "Other points to note"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2.               Convention reason(s)"
+          },
+          {
+            "id": "risk",
+            "level": 3,
+            "text": "3.               Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4.               Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5.               Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.               Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-country-information",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "history",
+                "level": 4,
+                "text": "7.1            History"
+              },
+              {
+                "id": "military-coup-and-subsequent-military-rule",
+                "level": 4,
+                "text": "7.2            2021 military coup and subsequent military rule"
+              }
+            ],
+            "id": "Political_history",
+            "level": 3,
+            "text": "7.               Political context"
+          },
+          {
+            "headers": [
+              {
+                "id": "Size_and_number",
+                "level": 4,
+                "text": "8.1            Size and number of events"
+              },
+              {
+                "id": "protest-symbols-in-2021",
+                "level": 4,
+                "text": "8.2            Protest symbols in 2021"
+              },
+              {
+                "id": "nature-of-protests-in-2022",
+                "level": 4,
+                "text": "8.3            Nature of protests in 2022"
+              },
+              {
+                "id": "five-point-consensus-5pc",
+                "level": 4,
+                "text": "8.4            Five-Point Consensus (5PC)"
+              }
+            ],
+            "id": "Protests_in_2021",
+            "level": 3,
+            "text": "8.               Protests in 2021 and 2022"
+          },
+          {
+            "headers": [
+              {
+                "id": "legal-context",
+                "level": 4,
+                "text": "9.1            Legal context"
+              },
+              {
+                "id": "Civil_Disobedience_Movement",
+                "level": 4,
+                "text": "9.2            Civil Disobedience Movement (CDM)"
+              },
+              {
+                "id": "National_Unity_Government",
+                "level": 4,
+                "text": "9.3            National Unity Government (NUG)"
+              }
+            ],
+            "id": "political-groups--civil-movements",
+            "level": 3,
+            "text": "9.               Political groups / civil movements"
+          },
+          {
+            "headers": [
+              {
+                "id": "Ethnic_Armed_Organisations_1",
+                "level": 4,
+                "text": "10.1         Ethnic Armed Organisations (EAOs)"
+              },
+              {
+                "id": "post-coup-armed-resistance-groups",
+                "level": 4,
+                "text": "10.2         Post-coup armed resistance groups"
+              }
+            ],
+            "id": "Armed_Groups",
+            "level": 3,
+            "text": "10.            Armed Groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "Military_response_to_1",
+                "level": 4,
+                "text": "11.1         Protestors and activists"
+              },
+              {
+                "id": "Human_rights_defenders",
+                "level": 4,
+                "text": "11.2         Journalists, writers and media workers"
+              },
+              {
+                "id": "Political_opposition_leaders",
+                "level": 4,
+                "text": "11.3         Political opposition leaders, members, supporters"
+              },
+              {
+                "id": "harassment-and-violence-against-civilians",
+                "level": 4,
+                "text": "11.4         Harassment and violence against civilians"
+              },
+              {
+                "id": "Surveillance",
+                "level": 4,
+                "text": "11.5         Surveillance"
+              }
+            ],
+            "id": "Military_response_to",
+            "level": 3,
+            "text": "11.            Military response to opposition"
+          },
+          {
+            "headers": [
+              {
+                "id": "Number_and_treatment",
+                "level": 4,
+                "text": "12.1         Profiles of those arrested / imprisoned"
+              },
+              {
+                "id": "Definition_and_numbers",
+                "level": 4,
+                "text": "12.2         Numbers"
+              },
+              {
+                "id": "Profiles_of_those",
+                "level": 4,
+                "text": "12.3         Treatment of political prisoners"
+              },
+              {
+                "id": "Treatment_of_female",
+                "level": 4,
+                "text": "12.4         Women and LGBTI persons"
+              },
+              {
+                "id": "judicial-process",
+                "level": 4,
+                "text": "12.5         Judicial process"
+              },
+              {
+                "id": "Amnesty",
+                "level": 4,
+                "text": "12.6         Amnesty"
+              },
+              {
+                "id": "avenues-of-redress",
+                "level": 4,
+                "text": "12.7         Avenues of redress"
+              }
+            ],
+            "id": "Political_prisoners",
+            "level": 3,
+            "text": "12.            Political prisoners"
+          },
+          {
+            "headers": [
+              {
+                "id": "Legal_rights",
+                "level": 4,
+                "text": "13.1         Legal rights"
+              },
+              {
+                "id": "repression-of-free-speech",
+                "level": 4,
+                "text": "13.2         Repression of free speech"
+              },
+              {
+                "id": "Internet_and_social",
+                "level": 4,
+                "text": "13.3         Internet and social media"
+              }
+            ],
+            "id": "Freedom_of_speech",
+            "level": 3,
+            "text": "13.            Freedom of speech and media"
+          },
+          {
+            "headers": [
+              {
+                "id": "diaspora-in-the-uk",
+                "level": 4,
+                "text": "14.1         Diaspora in the UK"
+              },
+              {
+                "id": "overseas-intelligence-gathering-and-monitoring-by-military-junta",
+                "level": 4,
+                "text": "14.2         Overseas intelligence-gathering and monitoring by military junta"
+              }
+            ],
+            "id": "Sur_place_activity",
+            "level": 3,
+            "text": "14.            Sur place activity"
+          }
+        ],
+        "id": "Country_information_2",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "Research_methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "Terms_of_Reference_1",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "al-jazeera",
+                "level": 4,
+                "text": "Al Jazeera,"
+              },
+              {
+                "id": "amnesty-international-ai",
+                "level": 4,
+                "text": "Amnesty International (AI),"
+              },
+              {
+                "id": "armed-conflict-location--event-data-project-acled",
+                "level": 4,
+                "text": "Armed Conflict Location & Event Data Project (ACLED),"
+              },
+              {
+                "id": "assistance-association-for-political-prisoners-aapp",
+                "level": 4,
+                "text": "Assistance Association for Political Prisoners (AAPP),"
+              },
+              {
+                "id": "associated-press",
+                "level": 4,
+                "text": "Associated Press,"
+              },
+              {
+                "id": "bbc",
+                "level": 4,
+                "text": "BBC,"
+              },
+              {
+                "id": "council-on-foreign-relations-cfr",
+                "level": 4,
+                "text": "Council on Foreign Relations (CFR),"
+              },
+              {
+                "id": "the-diplomat",
+                "level": 4,
+                "text": "The Diplomat,"
+              },
+              {
+                "id": "foreign-policy-fp",
+                "level": 4,
+                "text": "Foreign Policy (FP),"
+              },
+              {
+                "id": "freedom-house-fh",
+                "level": 4,
+                "text": "Freedom House (FH),"
+              },
+              {
+                "id": "the-guardian",
+                "level": 4,
+                "text": "The Guardian,"
+              },
+              {
+                "id": "human-rights-watch-hrw",
+                "level": 4,
+                "text": "Human Rights Watch (HRW),"
+              },
+              {
+                "id": "institute-of-southeast-asian-studies-iseas",
+                "level": 4,
+                "text": "Institute of Southeast Asian Studies (ISEAS),"
+              },
+              {
+                "id": "the-irrawaddy",
+                "level": 4,
+                "text": "The Irrawaddy,"
+              },
+              {
+                "id": "malay-mail",
+                "level": 4,
+                "text": "Malay Mail,"
+              },
+              {
+                "id": "modern-diplomacy",
+                "level": 4,
+                "text": "Modern Diplomacy,"
+              },
+              {
+                "id": "myanmar-now",
+                "level": 4,
+                "text": "Myanmar Now,"
+              },
+              {
+                "id": "progressive-voice-myanmar-pvm",
+                "level": 4,
+                "text": "Progressive Voice Myanmar (PVM),"
+              },
+              {
+                "id": "radio-free-asia-rfa",
+                "level": 4,
+                "text": "Radio Free Asia (RFA),"
+              },
+              {
+                "id": "reuters",
+                "level": 4,
+                "text": "Reuters,"
+              },
+              {
+                "id": "the-star",
+                "level": 4,
+                "text": "The Star,"
+              },
+              {
+                "id": "twittercom",
+                "level": 4,
+                "text": "Twitter.com"
+              },
+              {
+                "id": "un-office-of-the-united-nations-high-commissioner-for-human-rights-ohchr",
+                "level": 4,
+                "text": "UN Office of the United Nations High Commissioner for Human Rights (OHCHR),"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-01-08T15:56:37.000+00:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2022-07-28T16:30:25+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible",
+        "base_path": "/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible",
+        "content_id": "57ed7814-856f-4cc2-a6ab-809065008377",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-01-08T15:56:37Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: critics of the military regime, Myanmar (Burma), June 2023 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/burma-country-policy-and-information-notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/burma-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/burma-country-policy-and-information-notes",
+        "base_path": "/government/publications/burma-country-policy-and-information-notes",
+        "content_id": "af1a69d6-e811-4da0-8f97-9b841540b25a",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-01-08T15:56:37Z",
+        "schema_name": "publication",
+        "title": "Myanmar (Burma): country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/burma-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-01-08T15:56:37+00:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1767887797.554-10.13.20.207-2426",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: critics of the military regime, Myanmar (Burma), June 2023 (accessible)",
+  "updated_at": "2026-04-29T15:29:31+01:00",
+  "withdrawn_notice": {}
+}

@@ -1,0 +1,639 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+  "content_id": "7bfb40c2-98a4-4248-9a4c-db3f8ddbad65",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "executive-summary",
+        "level": 2,
+        "text": "Executive summary"
+      },
+      {
+        "headers": [
+          {
+            "id": "about-the-assessment",
+            "level": 3,
+            "text": "About the assessment"
+          },
+          {
+            "headers": [
+              {
+                "id": "credibility",
+                "level": 4,
+                "text": "1.1             Credibility"
+              },
+              {
+                "id": "exclusion",
+                "level": 4,
+                "text": "1.2             Exclusion"
+              }
+            ],
+            "id": "material-facts-credibility-and-other-checksreferrals",
+            "level": 3,
+            "text": "1.                 Material facts, credibility and other checks/referrals"
+          },
+          {
+            "id": "convention-reasons",
+            "level": 3,
+            "text": "2.                 Convention reason(s)"
+          },
+          {
+            "headers": [
+              {
+                "id": "ethnic-groups",
+                "level": 4,
+                "text": "3.1             Ethnic groups"
+              },
+              {
+                "id": "chinese-hoahan",
+                "level": 4,
+                "text": "3.2             Chinese (Hoa/Han)"
+              },
+              {
+                "id": "montagnards-or-degar",
+                "level": 4,
+                "text": "3.3             Montagnards (or Degar)"
+              },
+              {
+                "id": "hmong",
+                "level": 4,
+                "text": "3.4             Hmong"
+              },
+              {
+                "id": "khmer-krom",
+                "level": 4,
+                "text": "3.5             Khmer Krom"
+              },
+              {
+                "id": "religious-groups",
+                "level": 4,
+                "text": "3.6             Religious groups"
+              },
+              {
+                "id": "registered-religious-groups",
+                "level": 4,
+                "text": "3.7             Registered religious groups"
+              },
+              {
+                "id": "unregistered-religious-groups",
+                "level": 4,
+                "text": "3.8             Unregistered religious groups"
+              },
+              {
+                "id": "Buddhists",
+                "level": 4,
+                "text": "3.9             Buddhists"
+              },
+              {
+                "id": "catholics",
+                "level": 4,
+                "text": "3.10          Catholics"
+              },
+              {
+                "id": "protestants",
+                "level": 4,
+                "text": "3.11          Protestants"
+              },
+              {
+                "id": "cao-dai",
+                "level": 4,
+                "text": "3.12          Cao Dai"
+              }
+            ],
+            "id": "risk",
+            "level": 3,
+            "text": "3.                 Risk"
+          },
+          {
+            "id": "protection",
+            "level": 3,
+            "text": "4.                 Protection"
+          },
+          {
+            "id": "internal-relocation",
+            "level": 3,
+            "text": "5.                 Internal relocation"
+          },
+          {
+            "id": "certification",
+            "level": 3,
+            "text": "6.                 Certification"
+          }
+        ],
+        "id": "assessment",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "headers": [
+          {
+            "id": "About_the_country",
+            "level": 3,
+            "text": "About the country information"
+          },
+          {
+            "headers": [
+              {
+                "id": "Demography_and_geography",
+                "level": 4,
+                "text": "7.1             Demography and geography"
+              },
+              {
+                "id": "Chinese_Hoa_or",
+                "level": 4,
+                "text": "7.2             Chinese (Hoa or Han)"
+              },
+              {
+                "id": "montagnards-or-degar-1",
+                "level": 4,
+                "text": "7.3             Montagnards (or Degar)"
+              },
+              {
+                "id": "hmong-1",
+                "level": 4,
+                "text": "7.4             Hmong"
+              },
+              {
+                "id": "khmer-krom-1",
+                "level": 4,
+                "text": "7.5             Khmer Krom"
+              },
+              {
+                "id": "Poverty_and_access",
+                "level": 4,
+                "text": "7.6             Poverty and access to services"
+              }
+            ],
+            "id": "ethnic-groups-1",
+            "level": 3,
+            "text": "7.                 Ethnic groups"
+          },
+          {
+            "id": "Legal_status_of",
+            "level": 3,
+            "text": "8.                 Legal status of ethnic groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "Government_policies",
+                "level": 4,
+                "text": "9.1             Government policies"
+              },
+              {
+                "id": "Documentation",
+                "level": 4,
+                "text": "9.2             Documentation"
+              },
+              {
+                "id": "state-harassment-discrimination-and-detention",
+                "level": 4,
+                "text": "9.3             State harassment, discrimination and detention"
+              },
+              {
+                "id": "societal-treatment",
+                "level": 4,
+                "text": "9.4             Societal treatment"
+              }
+            ],
+            "id": "treatment-of-ethnic-groups",
+            "level": 3,
+            "text": "9.                 Treatment of ethnic groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "chinese-hoa-or-han-1",
+                "level": 4,
+                "text": "10.1          Chinese (Hoa or Han)"
+              },
+              {
+                "id": "Montagnards_or_Degar",
+                "level": 4,
+                "text": "10.2          Montagnards (or Degar)"
+              },
+              {
+                "id": "Hmong",
+                "level": 4,
+                "text": "10.3          Hmong"
+              },
+              {
+                "id": "Khmer_Krom",
+                "level": 4,
+                "text": "10.4          Khmer Krom"
+              }
+            ],
+            "id": "State_treatment_of",
+            "level": 3,
+            "text": "10.             State treatment of specific ethnic groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "Religious_demography",
+                "level": 4,
+                "text": "11.1          Religious demography"
+              },
+              {
+                "id": "buddhists-1",
+                "level": 4,
+                "text": "11.2          Buddhists"
+              },
+              {
+                "id": "Catholics",
+                "level": 4,
+                "text": "11.3          Catholics"
+              },
+              {
+                "id": "Protestants",
+                "level": 4,
+                "text": "11.4          Protestants"
+              },
+              {
+                "id": "Cao_Daoists",
+                "level": 4,
+                "text": "11.5          Cao Daoists"
+              },
+              {
+                "id": "other-religions",
+                "level": 4,
+                "text": "11.6          Other religions"
+              }
+            ],
+            "id": "religious-groups-1",
+            "level": 3,
+            "text": "11.             Religious groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "Constitution",
+                "level": 4,
+                "text": "12.1          Constitution"
+              },
+              {
+                "id": "religious-laws-and-regulations",
+                "level": 4,
+                "text": "12.2          Religious laws and regulations"
+              },
+              {
+                "id": "Registration_process",
+                "level": 4,
+                "text": "12.3          Registration process"
+              }
+            ],
+            "id": "law-on-belief-and-religion",
+            "level": 3,
+            "text": "12.             Law on belief and religion"
+          },
+          {
+            "headers": [
+              {
+                "id": "state-attitude-towards-religious-groups",
+                "level": 4,
+                "text": "13.1          State attitude towards religious groups"
+              },
+              {
+                "id": "Treatment_of_unregistered",
+                "level": 4,
+                "text": "13.2          Treatment of unregistered groups"
+              },
+              {
+                "id": "religion-among-ethnic-minority-groups",
+                "level": 4,
+                "text": "13.3          Religion among ethnic minority groups"
+              }
+            ],
+            "id": "Religious_activities_of",
+            "level": 3,
+            "text": "13.             Treatment of religious groups"
+          },
+          {
+            "headers": [
+              {
+                "id": "buddhists-2",
+                "level": 4,
+                "text": "14.1          Buddhists"
+              },
+              {
+                "id": "catholics-2",
+                "level": 4,
+                "text": "14.2          Catholics"
+              },
+              {
+                "id": "protestants-2",
+                "level": 4,
+                "text": "14.3          Protestants"
+              },
+              {
+                "id": "caodaists",
+                "level": 4,
+                "text": "14.4          Caodaists"
+              }
+            ],
+            "id": "state-treatment-of-specific-religious-groups",
+            "level": 3,
+            "text": "14.             State treatment of specific religious groups"
+          }
+        ],
+        "id": "Country_information_2",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "id": "Research_methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "Terms_of_Reference_1",
+        "level": 2,
+        "text": "Terms of Reference"
+      },
+      {
+        "headers": [
+          {
+            "headers": [
+              {
+                "id": "boat-people-sos-bpsos",
+                "level": 4,
+                "text": "Boat People SOS (BPSOS),"
+              },
+              {
+                "id": "bertelsmann-stiftung-bti",
+                "level": 4,
+                "text": "Bertelsmann Stiftung (BTI),"
+              },
+              {
+                "id": "campaign-to-abolish-torture-in-vietnam-cat-vn",
+                "level": 4,
+                "text": "Campaign to Abolish Torture in Vietnam (CAT-VN),"
+              },
+              {
+                "id": "children-of-the-mekong",
+                "level": 4,
+                "text": "Children of the Mekong,"
+              },
+              {
+                "id": "csw",
+                "level": 4,
+                "text": "CSW,"
+              },
+              {
+                "id": "the-88-project",
+                "level": 4,
+                "text": "The 88 Project,"
+              },
+              {
+                "id": "international-work-group-for-indigenous-affairs-iwgia",
+                "level": 4,
+                "text": "International Work Group for Indigenous Affairs (IWGIA),"
+              },
+              {
+                "id": "joshua-project",
+                "level": 4,
+                "text": "Joshua Project,"
+              },
+              {
+                "id": "the-khmerpost-usa-llc",
+                "level": 4,
+                "text": "The KhmerPost USA LLC,"
+              },
+              {
+                "id": "minority-rights-group",
+                "level": 4,
+                "text": "Minority Rights Group"
+              },
+              {
+                "id": "open-development-vietnam",
+                "level": 4,
+                "text": "Open Development Vietnam,"
+              },
+              {
+                "id": "open-doors",
+                "level": 4,
+                "text": "Open Doors,"
+              },
+              {
+                "id": "radio-free-asia-rfa",
+                "level": 4,
+                "text": "Radio Free Asia (RFA),"
+              },
+              {
+                "id": "unrepresented-nations--peoples-organization-unpo",
+                "level": 4,
+                "text": "Unrepresented Nations & Peoples Organization (UNPO)"
+              },
+              {
+                "id": "us-commission-on-international-religious-freedom-uscirf",
+                "level": 4,
+                "text": "US Commission on International Religious Freedom (USCIRF),"
+              },
+              {
+                "id": "us-state-department-ussd",
+                "level": 4,
+                "text": "US State Department (USSD),"
+              },
+              {
+                "id": "vietnam-human-rights-network-vhrn",
+                "level": 4,
+                "text": "Vietnam Human Rights Network (VHRN),"
+              },
+              {
+                "id": "vietnamvn",
+                "level": 4,
+                "text": "Vietnam.vn,"
+              }
+            ],
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          },
+          {
+            "headers": [
+              {
+                "id": "open-development-vietnam-1",
+                "level": 4,
+                "text": "Open Development Vietnam,"
+              },
+              {
+                "id": "radio-free-asia-rfa-1",
+                "level": 4,
+                "text": "Radio Free Asia (RFA),"
+              },
+              {
+                "id": "un-cerd",
+                "level": 4,
+                "text": "UN CERD,"
+              }
+            ],
+            "id": "sources-consulted-but-not-cited",
+            "level": 3,
+            "text": "Sources consulted but not cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control-and-feedback",
+        "level": 2,
+        "text": "Version control and feedback"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2026-03-12T16:20:01.000+00:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2022-02-09T16:01:38+00:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+        "api_url": "https://www.gov.uk/api/content/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+        "base_path": "/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+        "content_id": "7bfb40c2-98a4-4248-9a4c-db3f8ddbad65",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-03-12T16:20:01Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: ethnic and religious groups, Vietnam, December 2024 (accessible version)",
+        "web_url": "https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/vietnam-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/vietnam-country-policy-and-information-notes",
+        "base_path": "/government/publications/vietnam-country-policy-and-information-notes",
+        "content_id": "2f2a1b9a-c606-4b41-a504-ec2385be07cd",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2026-03-12T16:20:01Z",
+        "schema_name": "publication",
+        "title": "Vietnam: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2026-03-12T16:20:01+00:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1789056821.611-10.13.22.105-2576",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: ethnic and religious groups, Vietnam, December 2024 (accessible version)",
+  "updated_at": "2026-09-10T17:13:45+01:00",
+  "withdrawn_notice": {}
+}

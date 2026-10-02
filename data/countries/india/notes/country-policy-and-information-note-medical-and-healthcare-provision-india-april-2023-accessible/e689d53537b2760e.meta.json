@@ -1,0 +1,487 @@
+{
+  "analytics_identifier": null,
+  "base_path": "/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+  "content_id": "fbfd0118-91b4-4b0b-81cc-6792b7a7387e",
+  "description": null,
+  "details": {
+    "first_published_version": false,
+    "headers": [
+      {
+        "id": "Country_information_1",
+        "level": 2,
+        "text": "Assessment"
+      },
+      {
+        "id": "country-information",
+        "level": 2,
+        "text": "Country information"
+      },
+      {
+        "headers": [
+          {
+            "id": "role-of-the-national-and-state-governments",
+            "level": 3,
+            "text": "1.1             Role of the national and state governments"
+          },
+          {
+            "id": "public-sector",
+            "level": 3,
+            "text": "1.2             Public sector"
+          },
+          {
+            "id": "patient-access-to-public-sector-healthcare",
+            "level": 3,
+            "text": "1.3             Patient access to public sector healthcare"
+          },
+          {
+            "id": "private-sector",
+            "level": 3,
+            "text": "1.4             Private sector"
+          },
+          {
+            "id": "Rural_urban_facilities",
+            "level": 3,
+            "text": "1.5             Rural/urban facilities"
+          },
+          {
+            "id": "traditional-and-complementary-medicine",
+            "level": 3,
+            "text": "1.6             Traditional and complementary medicine"
+          },
+          {
+            "id": "healthcare-services-provided-by-ngos",
+            "level": 3,
+            "text": "1.7             Healthcare services provided by NGOs"
+          },
+          {
+            "id": "infrastructure-and-staffing",
+            "level": 3,
+            "text": "1.8             Infrastructure and staffing"
+          },
+          {
+            "id": "pharmaceutical-sector",
+            "level": 3,
+            "text": "1.9             Pharmaceutical sector"
+          },
+          {
+            "id": "availability-of-drugs-and-medication",
+            "level": 3,
+            "text": "1.10          Availability of drugs and medication"
+          },
+          {
+            "id": "accessibility-of-drugs-and-medication",
+            "level": 3,
+            "text": "1.11          Accessibility of drugs and medication"
+          },
+          {
+            "id": "national-and-state-publicly-financed-health-insurance-schemes",
+            "level": 3,
+            "text": "1.12          National and state publicly-financed health insurance schemes"
+          },
+          {
+            "id": "private-medical-insurance-schemes",
+            "level": 3,
+            "text": "1.13          Private medical insurance schemes"
+          },
+          {
+            "id": "emergency-healthcare",
+            "level": 3,
+            "text": "1.14          Emergency healthcare"
+          }
+        ],
+        "id": "healthcare-system",
+        "level": 2,
+        "text": "1.                 Healthcare system"
+      },
+      {
+        "id": "covid-19",
+        "level": 2,
+        "text": "2.                 Covid-19"
+      },
+      {
+        "headers": [
+          {
+            "id": "prevalence-and-types",
+            "level": 3,
+            "text": "3.1             Prevalence and types"
+          },
+          {
+            "id": "available-treatment",
+            "level": 3,
+            "text": "3.2             Available treatment"
+          },
+          {
+            "id": "access-to-treatment",
+            "level": 3,
+            "text": "3.3             Access to treatment"
+          },
+          {
+            "id": "cost-of-cancer-treatment",
+            "level": 3,
+            "text": "3.4             Cost of cancer treatment"
+          },
+          {
+            "id": "state-and-ngo-support-in-accessing-treatment",
+            "level": 3,
+            "text": "3.5             State and NGO support in accessing treatment"
+          }
+        ],
+        "id": "cancer-oncology",
+        "level": 2,
+        "text": "3.                 Cancer (oncology)"
+      },
+      {
+        "headers": [
+          {
+            "id": "hypertension-high-blood-pressure",
+            "level": 3,
+            "text": "4.1             Hypertension (high blood pressure)"
+          },
+          {
+            "id": "heart-disease-and-failure",
+            "level": 3,
+            "text": "4.2             Heart disease and failure"
+          }
+        ],
+        "id": "cardiology-heart-conditions",
+        "level": 2,
+        "text": "4.                 Cardiology (heart conditions)"
+      },
+      {
+        "id": "dental-diseases-and-conditions",
+        "level": 2,
+        "text": "5.                 Dental diseases and conditions"
+      },
+      {
+        "id": "diabetes",
+        "level": 2,
+        "text": "6.                 Diabetes"
+      },
+      {
+        "id": "ear-nose-and-throat-diseases",
+        "level": 2,
+        "text": "7.                 Ear, nose and throat diseases"
+      },
+      {
+        "id": "EyeTreatment",
+        "level": 2,
+        "text": "8.                 Eye diseases and treatment"
+      },
+      {
+        "id": "gastroenterological-conditions",
+        "level": 2,
+        "text": "9.                 Gastroenterological conditions"
+      },
+      {
+        "headers": [
+          {
+            "id": "legal-provisions",
+            "level": 3,
+            "text": "10.1          Legal provisions"
+          },
+          {
+            "id": "residential-care",
+            "level": 3,
+            "text": "10.2         Residential care"
+          },
+          {
+            "id": "medical-care",
+            "level": 3,
+            "text": "10.3          Medical care"
+          }
+        ],
+        "id": "geriatric-care",
+        "level": 2,
+        "text": "10.             Geriatric care"
+      },
+      {
+        "id": "haematology",
+        "level": 2,
+        "text": "11.             Haematology"
+      },
+      {
+        "id": "hivaids",
+        "level": 2,
+        "text": "12.             HIV/AIDs"
+      },
+      {
+        "id": "kidney-diseases-transplants-and-availability-of-dialysis",
+        "level": 2,
+        "text": "13.             Kidney diseases, transplants and availability of dialysis"
+      },
+      {
+        "id": "liver-diseases-and-liver-transplants",
+        "level": 2,
+        "text": "14.             Liver diseases and liver transplants"
+      },
+      {
+        "headers": [
+          {
+            "id": "availability-of-mental-health-care-facilities",
+            "level": 3,
+            "text": "15.1          Availability of mental health care facilities"
+          },
+          {
+            "id": "national-legal-and-policy-framework",
+            "level": 3,
+            "text": "15.2          National legal and policy framework"
+          },
+          {
+            "id": "available-medication",
+            "level": 3,
+            "text": "15.3          Available medication"
+          },
+          {
+            "id": "stigma",
+            "level": 3,
+            "text": "15.4          Stigma"
+          },
+          {
+            "id": "mental-health-helplines",
+            "level": 3,
+            "text": "15.5          Mental health helplines"
+          }
+        ],
+        "id": "Mental_health",
+        "level": 2,
+        "text": "15.             Mental health"
+      },
+      {
+        "id": "malaria",
+        "level": 2,
+        "text": "16.             Malaria"
+      },
+      {
+        "id": "musculoskeletal-joints-bones-muscles-conditions-and-physiotherapy",
+        "level": 2,
+        "text": "17.             Musculoskeletal (joints, bones, muscles) conditions and physiotherapy"
+      },
+      {
+        "headers": [
+          {
+            "id": "neurosurgery",
+            "level": 3,
+            "text": "18.2          Neurosurgery"
+          }
+        ],
+        "id": "neurological-conditions",
+        "level": 2,
+        "text": "18.             Neurological conditions"
+      },
+      {
+        "id": "obstetrics-and-gynaecology",
+        "level": 2,
+        "text": "19.             Obstetrics and gynaecology"
+      },
+      {
+        "headers": [
+          {
+            "id": "paediatric-medical-treatment",
+            "level": 3,
+            "text": "20.1          Paediatric medical treatment"
+          }
+        ],
+        "id": "paediatric-care",
+        "level": 2,
+        "text": "20.             Paediatric care"
+      },
+      {
+        "id": "palliative-care",
+        "level": 2,
+        "text": "21.             Palliative care"
+      },
+      {
+        "id": "speech-hearing-and-language-therapy",
+        "level": 2,
+        "text": "22.             Speech, hearing and language therapy"
+      },
+      {
+        "id": "tuberculosis-tb-and-other-lung-diseases",
+        "level": 2,
+        "text": "23.             Tuberculosis (TB) and other lung diseases"
+      },
+      {
+        "id": "research-methodology",
+        "level": 2,
+        "text": "Research methodology"
+      },
+      {
+        "id": "terms-of-reference",
+        "level": 2,
+        "text": "Terms of reference"
+      },
+      {
+        "headers": [
+          {
+            "id": "sources-cited",
+            "level": 3,
+            "text": "Sources cited"
+          }
+        ],
+        "id": "Bibliography",
+        "level": 2,
+        "text": "Bibliography"
+      },
+      {
+        "id": "sources-consulted-but-not-cited",
+        "level": 2,
+        "text": "Sources consulted but not cited"
+      },
+      {
+        "headers": [
+          {
+            "id": "clearance",
+            "level": 3,
+            "text": "Clearance"
+          },
+          {
+            "id": "changes-from-last-version-of-this-note",
+            "level": 3,
+            "text": "Changes from last version of this note"
+          },
+          {
+            "id": "feedback-to-the-home-office",
+            "level": 3,
+            "text": "Feedback to the Home Office"
+          },
+          {
+            "id": "independent-advisory-group-on-country-information",
+            "level": 3,
+            "text": "Independent Advisory Group on Country Information"
+          }
+        ],
+        "id": "version-control",
+        "level": 2,
+        "text": "Version control"
+      }
+    ],
+    "political": false,
+    "public_timestamp": "2025-12-18T17:22:13.000+00:00"
+  },
+  "document_type": "html_publication",
+  "first_published_at": "2023-05-11T12:08:53+01:00",
+  "links": {
+    "available_translations": [
+      {
+        "api_path": "/api/content/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+        "api_url": "https://www.gov.uk/api/content/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+        "base_path": "/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+        "content_id": "fbfd0118-91b4-4b0b-81cc-6792b7a7387e",
+        "document_type": "html_publication",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T17:22:13Z",
+        "schema_name": "html_publication",
+        "title": "Country policy and information note: medical and healthcare provision, India, April 2023 (accessible)",
+        "web_url": "https://www.gov.uk/government/publications/india-country-policy-and-information-notes/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+        "withdrawn": false
+      }
+    ],
+    "government": [
+      {
+        "api_path": "/api/content/government/2016-to-2019-may-conservative-government",
+        "api_url": "https://www.gov.uk/api/content/government/2016-to-2019-may-conservative-government",
+        "base_path": "/government/2016-to-2019-may-conservative-government",
+        "content_id": "2255f51d-aff3-4854-8f66-8e4021d29f08",
+        "details": {
+          "current": false,
+          "ended_on": "2016-07-24T00:00:00+00:00",
+          "started_on": "2016-07-13T00:00:00+00:00"
+        },
+        "document_type": "government",
+        "links": {},
+        "locale": "en",
+        "title": "2016 to 2019 May Conservative government",
+        "web_url": "https://www.gov.uk/government/2016-to-2019-may-conservative-government"
+      }
+    ],
+    "organisations": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ],
+    "parent": [
+      {
+        "api_path": "/api/content/government/publications/india-country-policy-and-information-notes",
+        "api_url": "https://www.gov.uk/api/content/government/publications/india-country-policy-and-information-notes",
+        "base_path": "/government/publications/india-country-policy-and-information-notes",
+        "content_id": "fea42b12-186c-49b5-b6ac-c68ee50dd60f",
+        "document_type": "guidance",
+        "links": {},
+        "locale": "en",
+        "public_updated_at": "2025-12-18T17:22:13Z",
+        "schema_name": "publication",
+        "title": "India: country policy and information notes",
+        "web_url": "https://www.gov.uk/government/publications/india-country-policy-and-information-notes",
+        "withdrawn": false
+      }
+    ],
+    "primary_publishing_organisation": [
+      {
+        "analytics_identifier": "OT554",
+        "api_path": "/api/content/government/organisations/uk-visas-and-immigration",
+        "api_url": "https://www.gov.uk/api/content/government/organisations/uk-visas-and-immigration",
+        "base_path": "/government/organisations/uk-visas-and-immigration",
+        "content_id": "04148522-b0c1-4137-b687-5f3c3bdd561a",
+        "details": {
+          "acronym": "UKVI",
+          "brand": "home-office",
+          "default_news_image": null,
+          "logo": {
+            "crest": "ho",
+            "formatted_title": "UK Visas and Immigration"
+          },
+          "organisation_govuk_status": {
+            "status": "live",
+            "updated_at": null,
+            "url": null
+          }
+        },
+        "document_type": "organisation",
+        "links": {},
+        "locale": "en",
+        "schema_name": "organisation",
+        "title": "UK Visas and Immigration",
+        "web_url": "https://www.gov.uk/government/organisations/uk-visas-and-immigration",
+        "withdrawn": false
+      }
+    ]
+  },
+  "locale": "en",
+  "phase": "live",
+  "public_updated_at": "2025-12-18T17:22:13+00:00",
+  "publishing_app": "whitehall",
+  "publishing_request_id": "21-1766078533.631-10.13.21.29-3048",
+  "publishing_scheduled_at": null,
+  "rendering_app": "frontend",
+  "scheduled_publishing_delay_seconds": null,
+  "schema_name": "html_publication",
+  "title": "Country policy and information note: medical and healthcare provision, India, April 2023 (accessible)",
+  "updated_at": "2026-04-29T15:31:39+01:00",
+  "withdrawn_notice": {}
+}

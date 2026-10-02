@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-02T13:57:06Z",
+  "integrity": {
+    "bodies_ok": 275,
+    "pdfs_ok": 175,
+    "images_ok": 408,
+    "problems": []
+  },
+  "complete": {
+    "counts": {
+      "countries": 47,
+      "notes_listed": 164,
+      "notes_stored": 164,
+      "pdfs_listed": 175,
+      "pdfs_mirrored": 175,
+      "pdfs_on_this_disk": 175,
+      "pdf_only_countries": 2,
+      "images_used": 408,
+      "images_mirrored": 408
+    },
+    "problems": []
+  },
+  "links": {
+    "govuk": 3981,
+    "external": 48883,
+    "footnote": 62874,
+    "mailto": 288,
+    "anchor": 5964
+  },
+  "ok": true
+}

@@ -1,0 +1,22 @@
+{
+  "name": "cpin-extractor-web",
+  "private": true,
+  "type": "module",
+  "description": "Front-end toolchain: vendors COBE, map data and fonts into the prototypes (no CDN at runtime).",
+  "scripts": {
+    "vendor": "node build-vendor.mjs",
+    "test": "node --test test/*.test.mjs",
+    "borders": "node build-borders.mjs"
+  },
+  "dependencies": {
+    "cobe": "2.0.1",
+    "d3-geo": "3.1.1",
+    "flag-icons": "^7.5.0",
+    "geist": "1.7.2",
+    "topojson-client": "3.1.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "mapshaper": "^0.7.72"
+  }
+}
