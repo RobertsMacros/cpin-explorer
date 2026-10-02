@@ -7,6 +7,39 @@
   "current_sha256": "c3c5d82203d5bf23ab0d184f2662ceae8a34742fa15fbc7b1c277acaad120a30",
   "versions": [
     {
+      "sha256": "c1a3b25541a6255db81a188eb82a960ef6f67c20473f316da7ad3a484b7cd043",
+      "text_sha256": "e8a5803450ed9b629a87b59b186909311303194e5c08e64fc883329021fd4132",
+      "source": "wayback",
+      "title": "Country policy and information note: Palestinians in Lebanon, Lebanon, March 2024",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 384727,
+      "captures": [
+        {
+          "captured_at": "2024-03-06T17:17:54Z",
+          "archive_url": "https://web.archive.org/web/20240306171754/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "NS4PUUJEUWIJ267KBQMHRR2Y2OEH5FNZ"
+        },
+        {
+          "captured_at": "2024-03-09T21:13:08Z",
+          "archive_url": "https://web.archive.org/web/20240309211308/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "FF7HUEJ54V3O36T6TED2AJEBYOL3UDIF"
+        },
+        {
+          "captured_at": "2024-12-11T05:00:40Z",
+          "archive_url": "https://web.archive.org/web/20241211050040/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "RD4MYSZQBGKLZHV3PY4P75H75YGE6IRD"
+        },
+        {
+          "captured_at": "2024-12-19T08:44:47Z",
+          "archive_url": "https://web.archive.org/web/20241219084447/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "SID7MHLTMJGK4PM5O4G25SSNNAGSJK2O"
+        }
+      ]
+    },
+    {
       "sha256": "c3c5d82203d5bf23ab0d184f2662ceae8a34742fa15fbc7b1c277acaad120a30",
       "text_sha256": "fea42ee37b41dda339ce718d377e3c21a1f9023efd7b04af55dfc5a36956e2af",
       "source": "live",
@@ -15,7 +48,27 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "2.0",
-      "bytes": 371294
+      "bytes": 371294,
+      "captures": [
+        {
+          "captured_at": "2026-03-28T19:44:05Z",
+          "archive_url": "https://web.archive.org/web/20260328194405/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "LPHI67T6BMAWM6GGHNTWOSW7NXHD7M56"
+        },
+        {
+          "captured_at": "2026-04-19T11:41:00Z",
+          "archive_url": "https://web.archive.org/web/20260419114100/https://www.gov.uk/government/publications/lebanon-country-policy-and-information-notes/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+          "digest": "J6UDYAENINGZSCUTJV3DXXPRHQLEEUDS"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "NS4PUUJEUWIJ267KBQMHRR2Y2OEH5FNZ",
+    "FF7HUEJ54V3O36T6TED2AJEBYOL3UDIF",
+    "RD4MYSZQBGKLZHV3PY4P75H75YGE6IRD",
+    "SID7MHLTMJGK4PM5O4G25SSNNAGSJK2O",
+    "LPHI67T6BMAWM6GGHNTWOSW7NXHD7M56",
+    "J6UDYAENINGZSCUTJV3DXXPRHQLEEUDS"
   ]
 }

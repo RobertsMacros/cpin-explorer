@@ -7,6 +7,34 @@
   "current_sha256": "4730e38e39f7c7966a6242d912599023ee4bfff66a156e106252f88b53d57d3b",
   "versions": [
     {
+      "sha256": "7cd59f79ba3ac4b9eceddc42324dad7e44e61a143bc15620da7004ff0deda384",
+      "text_sha256": "a5fca0a383b52a4bdec5f99e4bf90588814c245af05799248fbc6b680d3fdd5e",
+      "source": "wayback",
+      "title": "Country policy and information note: internal relocation, July 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "3.0",
+      "bytes": 656855,
+      "captures": [
+        {
+          "captured_at": "2024-07-20T17:37:58Z",
+          "archive_url": "https://web.archive.org/web/20240720173758/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+          "digest": "COJTD2D34APD2YIOBCRDMZJWUPYKNNTC"
+        },
+        {
+          "captured_at": "2024-09-12T15:29:35Z",
+          "archive_url": "https://web.archive.org/web/20240912152935/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+          "digest": "EZSIST7X7FC7HRFR3OEYM7FTK7XG6ITO"
+        },
+        {
+          "captured_at": "2024-09-30T14:01:57Z",
+          "archive_url": "https://web.archive.org/web/20240930140157/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+          "digest": "NG6AZNAKISB6TQXT64WFC7LAVT5H2HZV"
+        }
+      ]
+    },
+    {
       "sha256": "4730e38e39f7c7966a6242d912599023ee4bfff66a156e106252f88b53d57d3b",
       "text_sha256": "c05b89d655edce23cb7675502676ed2247f2a4d0b7453262fcc71d2ee33883a9",
       "source": "live",
@@ -15,7 +43,26 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 628451
+      "bytes": 628451,
+      "captures": [
+        {
+          "captured_at": "2026-04-13T21:40:04Z",
+          "archive_url": "https://web.archive.org/web/20260413214004/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+          "digest": "TBWTFEJMXBYV7EAB3NJDK5RCMNPQ6NTH"
+        },
+        {
+          "captured_at": "2026-04-19T10:08:25Z",
+          "archive_url": "https://web.archive.org/web/20260419100825/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+          "digest": "VLJTBUA2J5GD7WAMBZUUSPQCM3UHVA6Y"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "COJTD2D34APD2YIOBCRDMZJWUPYKNNTC",
+    "EZSIST7X7FC7HRFR3OEYM7FTK7XG6ITO",
+    "NG6AZNAKISB6TQXT64WFC7LAVT5H2HZV",
+    "TBWTFEJMXBYV7EAB3NJDK5RCMNPQ6NTH",
+    "VLJTBUA2J5GD7WAMBZUUSPQCM3UHVA6Y"
   ]
 }

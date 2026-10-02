@@ -169,7 +169,7 @@ async function boot() {
   H.onHighlightsChange(sync);
   readyResolve();
   await document.fonts?.ready;
-  routeHash({ initial: true });
+  if (!findFromQuery()) routeHash({ initial: true });
 }
 
 function synthesiseNote(index) {
@@ -226,7 +226,7 @@ function renderHead() {
   $("#head").innerHTML = `
     <a class="btn back" href="../dashboard/index.html#${esc(c.slug)}" style="--i:0">← ${esc(c.name)}</a>
     <div class="note-hero" style="--i:1">
-      ${c.iso_a2 ? `<canvas class="dotflag dotflag--hero" data-flag="${esc(c.iso_a2)}" data-cols="24" data-reveal aria-hidden="true"></canvas>` : ""}
+      ${c.iso_a2 ? `<canvas class="dotflag dotflag--hero" data-flag="${esc(c.iso_a2)}" data-cols="24" data-reveal data-interactive aria-hidden="true"></canvas>` : ""}
       <div><p class="eyebrow">${esc(c.name)} · ${esc(n.kind)}</p>
         <h1 class="note-title">${esc(topic)}</h1>
         <p class="note-verbatim" title="Title as published on GOV.UK">${esc(title)}</p></div>
@@ -1090,6 +1090,47 @@ findInput.addEventListener("keydown", (e) => {
 });
 $("#findPrev").addEventListener("click", () => stepFind(-1));
 $("#findNext").addEventListener("click", () => stepFind(1));
+
+/* --- ?q=<query>: opened from a search result. Fill find-in-note with the query and glide to its first
+   match at or after the section in the address (#heading-id). Search matches words, not phrases, so if
+   the whole query is not in the note, the longest run of its words that is (soonest after that point)
+   is used instead: "internal relocation Kabul" -> "internal relocation". */
+const QUERY_STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "are", "was", "not", "but"]);
+function findFromQuery() {
+  const q = H.normWs((params.get("q") || "").replace(/^\s*"(.+)"\s*$/, "$1"));
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (q.length < 2 || id.startsWith("h=")) return false;                // a saved highlight's link wins
+  const el = id ? document.getElementById(id) : null;
+  const from = el && S.root.contains(el) ? (S.ix.firstTextAt(el) ?? 0) : 0;
+  const { norm, map } = foldedText();
+  const nextAt = (term) => {                                            // first match at or after `from`
+    const t = fold(term);
+    for (let i = norm.indexOf(t); i >= 0; i = norm.indexOf(t, i + 1)) if (map[i] >= from) return map[i];
+    return norm.includes(t) ? Infinity : -1;                            // only earlier in the note
+  };
+  const words = q.split(" ").slice(0, 8);
+  let term = null;
+  for (const anywhere of [false, true]) {
+    for (let len = words.length; len >= 1 && !term; len--) {
+      let best = null;
+      for (let i = 0; i + len <= words.length; i++) {
+        const t = words.slice(i, i + len).join(" ");
+        if (len === 1 && (t.length < 3 || QUERY_STOP.has(t.toLowerCase()))) continue;
+        const at = nextAt(t);
+        if (at >= 0 && (anywhere || at !== Infinity) && (!best || at < best[1])) best = [t, at];
+      }
+      term = best?.[0] || null;
+    }
+    if (term) break;
+  }
+  term ||= q;
+  findInput.value = term;
+  runFind(term, { jump: false });
+  if (!F.hits.length) { if (el && S.root.contains(el)) goToElement(el); return true; }
+  const k = F.hits.findIndex(([a]) => a >= from);
+  goFind(k < 0 ? 0 : k);
+  return true;
+}
 
 /* ================================================================== chrome: theme, keys, sheet, progress */
 

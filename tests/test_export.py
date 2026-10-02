@@ -51,4 +51,22 @@ def test_report_with_two_editions_gets_a_series_file_with_verbatim_bodies(site, 
 def test_kind_labels_absorb_govuk_typos():
     assert kind_label("country police and information note") == "CPIN"
     assert kind_label("country and policy information note") == "CPIN"
-    assert kind_label("report of a fact-finding mission") == "Fact-finding mission"
+    assert kind_label("report of a fact-finding mission") == "Report of a fact-finding mission"
+
+
+def test_reports_group_editions_from_different_urls(site, client, store, tmp_path):
+    govuk(site)
+    sync(client, store)
+    # An older edition of the same report, at a URL GOV.UK has since retired, recovered from the archive.
+    store.record_version("kenya", "country-policy-and-information-note-actors-of-protection-kenya-may-2022-accessible",
+                         body=BODY.replace("able to offer", "unable to offer"), meta={}, seen_at="2026-10-02T00:00:00Z",
+                         source="wayback", title="Country policy and information note: actors of protection, Kenya, May 2022",
+                         base_path="/government/publications/kenya/old",
+                         capture={"captured_at": "2022-06-01T00:00:00Z", "archive_url": "https://web.archive.org/x", "digest": "D"})
+    data = build_dashboard(store, CONFIG, series_out=tmp_path / "series")
+    (kenya,) = data["countries"]
+    (report,) = kenya["reports"]
+    assert (report["key"], report["status"], report["editions"]) == ("note:actors-protection", "live", 2)
+    assert report["latest"]["version"] == "2.0" and report["read_url"].endswith("series=note:actors-protection")
+    assert len(kenya["notes"]) == 2                       # both URLs still listed for search and links
+    assert data["note_paths"]["/government/publications/kenya/old"]["series"] == "note:actors-protection"

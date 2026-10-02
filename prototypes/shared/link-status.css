@@ -1,0 +1,13 @@
+/* Link status tags after cited sources (link-status.js). COBE style: square, pixel lettering. */
+.linkstatus {
+  display: inline-flex; align-items: center; gap: .35em; margin-left: .3em; vertical-align: .12em;
+  padding: .12em .4em .1em; font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .06em;
+  text-transform: uppercase; line-height: 1.2; white-space: nowrap;
+}
+.linkstatus--dead { background: var(--del-wash); color: var(--del); box-shadow: inset 0 0 0 1px var(--del); }
+.linkstatus--moved { background: var(--bg); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+.linkstatus--unverified { background: var(--sunken); color: var(--ink-3); box-shadow: inset 0 0 0 1px var(--line); }
+.linkstatus-alt { color: inherit; text-decoration: underline; text-underline-offset: .2em; text-transform: none; font-family: var(--font-mono); letter-spacing: 0; }
+a[data-link-status="broken"], a[data-link-status="server-error"], a[data-link-status="unreachable"] {
+  text-decoration-style: dotted; text-decoration-color: var(--del);
+}

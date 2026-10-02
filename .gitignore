@@ -16,3 +16,12 @@ data/images/files/
 
 # Derived by ./cpin export (large: every edition of every comparable report).
 prototypes/data/
+
+# Rewritten by every `cpin verify` (timestamped); derived, so not committed.
+data/verify-report.json
+
+# Full-text search index (Pagefind), rebuilt by `cd web && npm run search-index`.
+prototypes/search/pagefind/
+
+# Word lock files
+~$*

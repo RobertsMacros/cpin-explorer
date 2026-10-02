@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPIN Explorer: flags</title>
+<link rel="stylesheet" href="../shared/theme.css">
+<style>
+  body { padding: 2.5rem clamp(1rem, 4vw, 4rem); max-width: 80rem; margin: 0 auto; }
+  h1 { font-family: var(--font-display); font-weight: 400; color: var(--blue); letter-spacing: .08em; font-size: 2.4rem; margin: .2rem 0 .4rem; }
+  p.intro { color: var(--ink-2); margin: 0 0 2.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 3rem 2.5rem; }
+  figure { margin: 0; display: grid; gap: .8rem; justify-items: start; }
+  canvas.dotflag { display: block; width: 14rem; aspect-ratio: 4 / 3; height: auto; cursor: crosshair; }
+  figcaption { font-family: var(--font-pixel); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+  .tuner { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.2rem 2rem; align-items: end;
+    border: 1px solid var(--blue); padding: 1.1rem 1.3rem 1.2rem; margin: 0 0 2.8rem; }
+  .tuner label { display: grid; gap: .45rem; }
+  .tuner .eyebrow { display: flex; justify-content: space-between; }
+  .tuner output { font-family: var(--font-pixel); color: var(--blue); }
+  .tuner input[type=range] { width: 100%; accent-color: var(--blue); }
+  .tuner .values { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: center;
+    font-family: var(--font-mono); font-size: .8rem; color: var(--ink-2); }
+</style>
+<script type="module">
+  import { DEFAULT_SCATTER, hydrateFlags, scatterSettings, setScatterSettings } from "../shared/dot-flag.js";
+  hydrateFlags(document);
+  // Tuning sliders: changes apply at once and are remembered in this browser, so the flags on the
+  // dashboard and reader pages use them too.
+  const values = document.querySelector("#values");
+  const show = () => {
+    for (const key of Object.keys(DEFAULT_SCATTER)) {
+      document.querySelector(`#${key}`).value = scatterSettings[key];
+      document.querySelector(`#${key}-out`).textContent = Number(scatterSettings[key]).toFixed(2);
+    }
+    values.textContent = Object.keys(DEFAULT_SCATTER).map((k) => `${k} ${Number(scatterSettings[k]).toFixed(2)}`).join(" · ");
+  };
+  for (const key of Object.keys(DEFAULT_SCATTER)) {
+    document.querySelector(`#${key}`).addEventListener("input", (e) => { setScatterSettings({ [key]: Number(e.target.value) }); show(); });
+  }
+  document.querySelector("#reset").addEventListener("click", () => { setScatterSettings({ ...DEFAULT_SCATTER }); show(); });
+  show();
+  // ?test: push the pointer into the first flag so a screenshot can show the scatter.
+  if (new URLSearchParams(location.search).has("test")) {
+    setTimeout(() => {
+      const c = document.querySelector("canvas.dotflag"), b = c.getBoundingClientRect();
+      const at = (x, y, type) => c.dispatchEvent(new PointerEvent(type, { clientX: b.left + x, clientY: b.top + y, bubbles: true }));
+      at(b.width * 0.45, b.height * 0.5, "pointerenter"); at(b.width * 0.45, b.height * 0.5, "pointermove");
+    }, 2600);
+  }
+</script>
+</head>
+<body>
+<p class="eyebrow">CPIN Explorer · flags</p>
+<h1>FLAGS</h1>
+<p class="intro">Move the pointer over a flag: the dots scatter away from it, ripple out from where you enter, and spring back when you leave.</p>
+<div class="tuner" aria-label="Tune the flag animation">
+  <label><span class="eyebrow">Strength <output id="strength-out"></output></span>
+    <input id="strength" type="range" min="0" max="1.5" step="0.05"></label>
+  <label><span class="eyebrow">Reach <output id="reach-out"></output></span>
+    <input id="reach" type="range" min="0.1" max="0.6" step="0.02"></label>
+  <label><span class="eyebrow">Bounce <output id="bounce-out"></output></span>
+    <input id="bounce" type="range" min="0" max="1" step="0.05"></label>
+  <div class="values"><span>Current settings:</span><span id="values"></span>
+    <button class="btn" id="reset" type="button">Reset to defaults</button></div>
+</div>
+<div class="grid">
+  <figure><canvas class="dotflag" data-flag="ir" data-cols="24" data-reveal data-interactive></canvas><figcaption>Iran</figcaption></figure>
+  <figure><canvas class="dotflag" data-flag="af" data-cols="24" data-reveal data-interactive></canvas><figcaption>Afghanistan</figcaption></figure>
+  <figure><canvas class="dotflag" data-flag="ke" data-cols="24" data-reveal data-interactive></canvas><figcaption>Kenya</figcaption></figure>
+  <figure><canvas class="dotflag" data-flag="sy" data-cols="24" data-reveal data-interactive></canvas><figcaption>Syria</figcaption></figure>
+  <figure><canvas class="dotflag" data-flag="br" data-cols="24" data-reveal data-interactive></canvas><figcaption>Brazil</figcaption></figure>
+  <figure><canvas class="dotflag" data-flag="np" data-cols="24" data-reveal data-interactive></canvas><figcaption>Nepal</figcaption></figure>
+</div>
+</body>
+</html>

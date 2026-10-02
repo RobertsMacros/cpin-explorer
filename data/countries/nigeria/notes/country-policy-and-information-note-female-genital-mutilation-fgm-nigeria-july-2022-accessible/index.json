@@ -7,6 +7,57 @@
   "current_sha256": "a87067e818aa555350f211fee1e78ca1a067c2dfada90090424161547c445b64",
   "versions": [
     {
+      "sha256": "585d915413227753262e24627dd50cc58818920f86881df0a75a1cd75c0d4838",
+      "text_sha256": "b883df8a554fdf8d5e326a32f73251f20e95e92967e2e8af18fdc4d4ec47452d",
+      "source": "wayback",
+      "title": "Country policy and information note: female genital mutilation (FGM), Nigeria, July 2022 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "3.0",
+      "bytes": 237464,
+      "captures": [
+        {
+          "captured_at": "2022-08-12T14:37:11Z",
+          "archive_url": "https://web.archive.org/web/20220812143711/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "NHNQH64WD3MQNJF2TGIN27SRBDNNKM74"
+        },
+        {
+          "captured_at": "2022-08-25T19:21:12Z",
+          "archive_url": "https://web.archive.org/web/20220825192112/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "GUS2FN4JGUK6UXQN2J62UIFDYBCGRFOW"
+        }
+      ]
+    },
+    {
+      "sha256": "c543fb5ed0a9901e4cd649ab996f3fdfe750bed55e9517e577eaeeca073e6605",
+      "text_sha256": "ac07e3b718127750ee00d3dc8b45d0edbbdf1fa84f898f6e9a8835a91bbd981d",
+      "source": "wayback",
+      "title": "Country policy and information note: female genital mutilation (FGM), Nigeria, July 2022 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "3.0",
+      "bytes": 237351,
+      "captures": [
+        {
+          "captured_at": "2024-07-20T17:37:59Z",
+          "archive_url": "https://web.archive.org/web/20240720173759/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "JXNDHMH75MSX33R4IANKZZS3LFMUXIGF"
+        },
+        {
+          "captured_at": "2024-08-07T05:24:30Z",
+          "archive_url": "https://web.archive.org/web/20240807052430/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "AHY6GUB6F6M3IRPFQ24H44ARCQK5WWKW"
+        },
+        {
+          "captured_at": "2024-10-01T13:56:18Z",
+          "archive_url": "https://web.archive.org/web/20241001135618/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "GBTRA4VUS7PGEWCTV5GXVEEU6HRO6PSN"
+        }
+      ]
+    },
+    {
       "sha256": "a87067e818aa555350f211fee1e78ca1a067c2dfada90090424161547c445b64",
       "text_sha256": "58f1737c7db920b639228bab5f9455a431b8f9c8d01befc59392aae432427c24",
       "source": "live",
@@ -15,7 +66,28 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 228647
+      "bytes": 228647,
+      "captures": [
+        {
+          "captured_at": "2025-01-17T09:09:32Z",
+          "archive_url": "https://web.archive.org/web/20250117090932/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "2DMJI6VE2YSZKQVNJSES4LOYKUO4S3C6"
+        },
+        {
+          "captured_at": "2026-04-15T09:39:58Z",
+          "archive_url": "https://web.archive.org/web/20260415093958/https://www.gov.uk/government/publications/nigeria-country-policy-and-information-notes/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+          "digest": "CLDRD6OVBWVFB4HWXDNPVXC2I774T3Q2"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "NHNQH64WD3MQNJF2TGIN27SRBDNNKM74",
+    "GUS2FN4JGUK6UXQN2J62UIFDYBCGRFOW",
+    "JXNDHMH75MSX33R4IANKZZS3LFMUXIGF",
+    "AHY6GUB6F6M3IRPFQ24H44ARCQK5WWKW",
+    "GBTRA4VUS7PGEWCTV5GXVEEU6HRO6PSN",
+    "2DMJI6VE2YSZKQVNJSES4LOYKUO4S3C6",
+    "CLDRD6OVBWVFB4HWXDNPVXC2I774T3Q2"
   ]
 }

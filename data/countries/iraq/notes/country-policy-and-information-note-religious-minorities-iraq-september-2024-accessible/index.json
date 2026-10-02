@@ -7,6 +7,24 @@
   "current_sha256": "b5881d43598d53d06ba5b987b3d1cc40a9c2705a8388bb9e96b6d92715e7b2c1",
   "versions": [
     {
+      "sha256": "0d9481804429c027dc157d553392abd5140820c3d4a9a6dc59158cb17361d762",
+      "text_sha256": "5a94de2ac93131454dd8564581e6ef2947872f48b15889cd346d389ab4731141",
+      "source": "wayback",
+      "title": "Country policy and information note: religious minorities, Iraq, September 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "4.0",
+      "bytes": 379136,
+      "captures": [
+        {
+          "captured_at": "2025-01-18T05:34:52Z",
+          "archive_url": "https://web.archive.org/web/20250118053452/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "6PL3VPYVDW6IT2DKENMUK7YWTC7FOFQC"
+        }
+      ]
+    },
+    {
       "sha256": "b5881d43598d53d06ba5b987b3d1cc40a9c2705a8388bb9e96b6d92715e7b2c1",
       "text_sha256": "86e349461e370b449fb2df97ce65a33140e6074161e2bde1576550c7e1ae6a13",
       "source": "live",
@@ -15,7 +33,42 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "4.0",
-      "bytes": 365681
+      "bytes": 365681,
+      "captures": [
+        {
+          "captured_at": "2025-03-25T21:40:17Z",
+          "archive_url": "https://web.archive.org/web/20250325214017/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "HF7BICY2T7NLQFMIT65FYCWUXP3SBHOQ"
+        },
+        {
+          "captured_at": "2025-03-28T04:01:31Z",
+          "archive_url": "https://web.archive.org/web/20250328040131/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "NXFKG2ANVT5UNIZ5MARYSN6SRVSJ74YD"
+        },
+        {
+          "captured_at": "2025-07-25T14:59:45Z",
+          "archive_url": "https://web.archive.org/web/20250725145945/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "GLU4JY3JHOC2X2SAUWN6JGV4OKRQGPCE"
+        },
+        {
+          "captured_at": "2025-11-16T03:07:37Z",
+          "archive_url": "https://web.archive.org/web/20251116030737/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "OSBY2WDIP5SB443WADGAD4GJJ6WYYJVF"
+        },
+        {
+          "captured_at": "2026-03-04T21:04:52Z",
+          "archive_url": "https://web.archive.org/web/20260304210452/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-religious-minorities-iraq-september-2024-accessible",
+          "digest": "LJGQCNRNIASHLLPYTX4KK4B5YR6QKFWY"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "6PL3VPYVDW6IT2DKENMUK7YWTC7FOFQC",
+    "HF7BICY2T7NLQFMIT65FYCWUXP3SBHOQ",
+    "NXFKG2ANVT5UNIZ5MARYSN6SRVSJ74YD",
+    "GLU4JY3JHOC2X2SAUWN6JGV4OKRQGPCE",
+    "OSBY2WDIP5SB443WADGAD4GJJ6WYYJVF",
+    "LJGQCNRNIASHLLPYTX4KK4B5YR6QKFWY"
   ]
 }

@@ -1,0 +1,142 @@
+{
+  "format": "cpin-highlights-v1",
+  "exported_at": "2026-10-02T12:00:00.000Z",
+  "highlights": [
+    {
+      "id": "hsample1",
+      "country": "iran",
+      "countryName": "Iran",
+      "iso": "ir",
+      "note": "country-policy-and-information-note-military-service-iran-august-2026-accessible",
+      "title": "Country policy and information note: military service, Iran, August 2026 (accessible)",
+      "kind": "CPIN",
+      "topic": "military service",
+      "version": "4.0",
+      "editionSha": "83755408bda958a3953e726942df58d36938463bf928ede1df315fdca47c2592",
+      "month": "2026-08",
+      "url": "https://www.gov.uk/government/publications/iran-country-policy-and-information-notes/country-policy-and-information-note-military-service-iran-august-2026-accessible",
+      "archived": false,
+      "capturedAt": null,
+      "quote": "Under articles 107 and 110 of the Constitution of the Islamic Republic of Iran, the Supreme Leader has ultimate command of the Armed Forces.[footnote 12]",
+      "prefix": ". Armed forces structure\n\n9.1.1 ",
+      "suffix": "\n\n9.1.2 On 30 January 2023, Fore",
+      "pos": {
+        "start": 27640,
+        "end": 27793
+      },
+      "para": "9.1.1",
+      "section": "9. Armed forces structure",
+      "sources": [
+        {
+          "n": 12,
+          "text": "Iran Data Portal, The Constitution … (pages 23), 2/3 December 1979, amended 28 July",
+          "url": "https://irandataportal.syr.edu/wp-content/uploads/constitution-english-1368.pdf"
+        }
+      ],
+      "comment": "Supreme Leader commands the armed forces: relevant to imputed political opinion if the appellant deserts.",
+      "check": "current",
+      "createdAt": "2026-09-29T09:41:00Z"
+    },
+    {
+      "id": "hsample2",
+      "country": "iran",
+      "countryName": "Iran",
+      "iso": "ir",
+      "note": "country-policy-and-information-note-military-service-iran-august-2026-accessible",
+      "title": "Country policy and information note: military service, Iran, August 2026 (accessible)",
+      "kind": "CPIN",
+      "topic": "military service",
+      "version": "4.0",
+      "editionSha": "83755408bda958a3953e726942df58d36938463bf928ede1df315fdca47c2592",
+      "month": "2026-08",
+      "url": "https://www.gov.uk/government/publications/iran-country-policy-and-information-notes/country-policy-and-information-note-military-service-iran-august-2026-accessible",
+      "archived": false,
+      "capturedAt": null,
+      "quote": "Military service is compulsory for all males aged between 18 and 49. It lasts for between 14 and 24 months (see Eligibility and Duration).",
+      "prefix": "uirements and exemptions\n\n4.2.1 ",
+      "suffix": "\n\n4.2.2 Conscientious objection ",
+      "pos": {
+        "start": 9580,
+        "end": 9718
+      },
+      "para": "4.2.1",
+      "section": "4. Risk",
+      "sources": [],
+      "comment": "",
+      "check": "current",
+      "createdAt": "2026-09-29T09:44:00Z"
+    },
+    {
+      "id": "hsample3",
+      "country": "iran",
+      "countryName": "Iran",
+      "iso": "ir",
+      "note": "country-policy-and-information-note-illegal-exit-iran-may-2022-accessible",
+      "title": "Country policy and information note: illegal exit, Iran, May 2022 (accessible)",
+      "kind": "CPIN",
+      "topic": "illegal exit",
+      "version": "6.0",
+      "editionSha": "16b54949999624476fe7bf05071a20712f1671533846487a5bb84c500ac5e8ef",
+      "month": "2022-05",
+      "url": "https://www.gov.uk/government/publications/iran-country-policy-and-information-notes/country-policy-and-information-note-illegal-exit-iran-may-2022-accessible",
+      "archived": false,
+      "capturedAt": null,
+      "quote": "Leaving the country without a valid passport can be punished with a fine, a prison sentence or both. In practice, if a person left Iran illegally and is not wanted by the authorities for any other reason, only a fine is issued (see Treatment of returnees).",
+      "prefix": "nts to facilitate exit).\n\n2.4.5 ",
+      "suffix": "\n\n2.4.6 In the country guidance ",
+      "pos": {
+        "start": 9943,
+        "end": 10199
+      },
+      "para": "2.4.5",
+      "section": "2.4 Risk",
+      "sources": [],
+      "comment": "Check the v7.0 wording before relying on this.",
+      "check": "changed",
+      "createdAt": "2025-06-10T14:05:00Z",
+      "current": {
+        "sha": "604f83fca25141a22c2e84cfaf61bb6aeba0349711467184cf57c9efea347534",
+        "version": "7.0"
+      },
+      "archivedCopy": {
+        "url": "https://web.archive.org/web/20250329184654/https://www.gov.uk/government/publications/iran-country-policy-and-information-notes/country-policy-and-information-note-illegal-exit-iran-may-2022-accessible",
+        "capturedAt": "2025-03-29T18:46:54Z"
+      }
+    },
+    {
+      "id": "hsample4",
+      "country": "afghanistan",
+      "countryName": "Afghanistan",
+      "iso": "af",
+      "note": "country-policy-and-information-note-humanitarian-situation-afghanistan-april-2026-accessible",
+      "title": "Country policy and information note: humanitarian situation, Afghanistan, April 2026 (accessible)",
+      "kind": "CPIN",
+      "topic": "humanitarian situation",
+      "version": "4.0",
+      "editionSha": "537945e737aed705f1807f1051abc48b693f72445c83913fd8fe7cc0611b7974",
+      "month": "2026-04",
+      "url": "https://www.gov.uk/government/publications/afghanistan-country-policy-and-information-notes/country-policy-and-information-note-humanitarian-situation-afghanistan-april-2026-accessible",
+      "archived": false,
+      "capturedAt": null,
+      "quote": "The HNRP 2026 reported that at least 422 primary health care facilities, including Mobile Health and Nutrition Teams (MHNT), closed during 2025 due to funding shortfalls, affecting access to services for an estimated 3.3 million people.[footnote 70]",
+      "prefix": "otnote 68] [footnote 69]\n\n8.4.2 ",
+      "suffix": "\n\n8.4.3 For further information ",
+      "pos": {
+        "start": 48435,
+        "end": 48684
+      },
+      "para": "8.4.2",
+      "section": "8. Humanitarian situation",
+      "sources": [
+        {
+          "n": 70,
+          "text": "OCHA, Afghanistan: HNRP 2026 (page 52), 30 December 2025",
+          "url": "https://reliefweb.int/attachments/0a995c74-1bea-401b-be47-bbe697adae9c/AFG_Humanitarian_Needs_and_Response%20Plan_2026.pdf"
+        }
+      ],
+      "comment": "",
+      "check": "current",
+      "createdAt": "2026-09-30T16:20:00Z"
+    }
+  ]
+}

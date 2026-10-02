@@ -1,4 +1,4 @@
-from cpin.changes import change_statement, matching_change_notes, valid_from
+from cpin.changes import change_statement, change_statement_html, matching_change_notes, valid_from
 
 VERSION_CONTROL = """<div class="govspeak"><h2 id="version-control">Version control and feedback</h2>
 <p>Clearance: Below is information on when this note was cleared:</p>
@@ -20,6 +20,20 @@ def test_statement_stops_at_the_footnotes():
     body = ('<h3>Changes from last version of this note</h3><p>Updated COI as per the Terms of Reference.</p>'
             '<div class="footnotes"><ol><li><p>Ashley Jackson, Negotiating Survival</p></li></ol></div>')
     assert change_statement(body) == "Updated COI as per the Terms of Reference."
+
+
+SUDAN_LIKE = """<h3 id="changes-from-last-version-of-this-note">Changes from last version of this note</h3>
+<p>Updated COI, changed assessment on areas that are now relatively secure.</p><p>“15c” generally met in …</p>
+<table><thead><tr><th scope="col">State</th><th scope="col">previous CPIN</th><th scope="col">current CPIN</th></tr></thead>
+<tbody><tr><th scope="row">Al Jazirah</th><td>Yes</td><td>No</td></tr></tbody></table>
+<h3 id="feedback-to-the-home-office">Feedback to the Home Office</h3>"""
+
+
+def test_tables_stay_out_of_the_caption_but_in_the_html():
+    assert change_statement(SUDAN_LIKE) == ("Updated COI, changed assessment on areas that are now relatively secure. "
+                                            "“15c” generally met in …")
+    html = change_statement_html(SUDAN_LIKE)
+    assert "<table>" in html and '<th scope="row">Al Jazirah</th>' in html and "Feedback" not in html
 
 
 def test_bold_paragraph_heading_and_missing_statement():

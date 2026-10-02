@@ -90,6 +90,7 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
 # http://localhost:8781/prototypes/redline-timeline/?country=afghanistan&series=note:fear-taliban
 #                                                                                 compare editions
 # http://localhost:8781/prototypes/saved/                                       saved highlights
+# http://localhost:8781/prototypes/search/?q=internal%20relocation              full-text search
 ```
 
 - **Reader:** the latest edition, verbatim, with contents, find-in-note, mirrored images and links
@@ -104,6 +105,16 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
   (`prototypes/shared/redline-diff.js`).
 - `./cpin export` also writes `prototypes/data/series/` (every edition of each report with 2+ editions;
   gitignored, regenerate it).
+- **Search:** full-text search across every live note, or within one country's notes, with
+  [Pagefind](https://pagefind.app) (MIT) running in the browser. `cd web && npm run search-index` writes
+  one record per h2/h3 section of each live note's current edition (`src/cpin/search_records.py` →
+  `prototypes/data/search-records.jsonl`; body text only, footnote markers removed, no footnote list,
+  bibliography or version control), then builds the index into `prototypes/search/pagefind/` (gitignored;
+  rebuild after each export). On 2 October 2026: 3,945 records from 164 notes, an 18 MB index in about
+  4,200 files, built in about a minute. The dashboard's ⌘K box adds an "In the text" group (scoped to the
+  selected country, or everywhere), each country has a box for its own notes, and
+  `prototypes/search/?q=&country=&kind=` lists every hit grouped by note with filters. A hit opens the
+  reader at its section with `&q=`, which fills find-in-note and glides to the first match.
 
 The look follows the COBE site: white, one electric blue, Geist Sans for reading and Geist Pixel /
 Geist Mono for labels and numbers, all self-hosted (`prototypes/vendor/`, built by `web/build-vendor.mjs`).

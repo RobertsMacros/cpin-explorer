@@ -8,7 +8,7 @@ import re
 from pathlib import Path
 
 from . import config
-from .changes import change_statement, matching_change_notes, valid_from
+from .changes import change_statement, change_statement_html, matching_change_notes, valid_from
 from .govuk import file_attachments, html_attachments, note_slug
 from .pdfs import is_pdf
 from .store import Store, now_iso, to_utc, version_date
@@ -22,7 +22,7 @@ KIND_LABELS = [
     (r"country (?:policy|police) and information note|country and policy information note", "CPIN"),
     (r"country information note", "Country information note"),
     (r"country bulletin", "Country bulletin"),
-    (r"fact-finding mission", "Fact-finding mission"),
+    (r"fact-finding mission", "Report of a fact-finding mission"),      # the Home Office's own term
     (r"country information and guidance", "Country information and guidance (legacy)"),
 ]
 
@@ -58,6 +58,7 @@ def _edition(store: Store, country: str, name: str, note: str, index: dict, v: d
         "published_precision": precision,
         "valid_from": valid,                                    # from the note's own version control
         "change_statement": change_statement(body),             # verbatim, from 'Changes from last version'
+        "change_statement_html": change_statement_html(body),   # the same section with any tables, verbatim
         "captured_at": captured,
         "first_seen": v["first_seen"],
         "date": published or captured or v["first_seen"],
@@ -91,8 +92,44 @@ def build_series(store: Store, country: str, name: str, key: str, members: list,
     images = {url: f"../../data/images/files/{entry['sha256']}{entry.get('ext', '')}"
               for url, entry in image_files.items()
               if any(url in e["body"] for e in collapsed)}
+    live = [index for _, index in members if index.get("status") == "live"]
     return {"country": country, "country_name": name, "key": key, "topic": latest.topic,
-            "kind": kind_label(latest.kind), "versions": collapsed, "images": images}
+            "kind": kind_label(latest.kind), "status": "live" if live else members[0][1].get("status", "archived"),
+            "history": topic_history(history or [], topic_words),
+            "versions": collapsed, "images": images}
+
+
+def topic_history(history: list, topic_words: set[str]) -> list:
+    """GOV.UK change notes (verbatim) that mention most of a report's topic words, newest first."""
+    hits = []
+    for h in history:
+        words = set(re.findall(r"[a-z0-9]+", h["note"].lower()))
+        if topic_words and len(topic_words & words) / len(topic_words) >= 0.6:
+            hits.append(h)
+    return hits
+
+
+def report_summary(country: str, series: dict, pdf_url: str | None) -> dict:
+    """One entry per report for the country view: the latest edition and what changed in it."""
+    latest = series["versions"][-1]
+    live_editions = [e for e in series["versions"] if e["current"]]
+    current = live_editions[-1] if live_editions else latest
+    return {
+        "key": series["key"],
+        "topic": series["topic"],
+        "kind": series["kind"],
+        "status": series["status"],
+        "editions": len(series["versions"]),
+        "earliest": series["versions"][0]["date"],
+        "latest": {"version": current["version"], "published": current["published"],
+                   "published_precision": current["published_precision"], "note": current["note"],
+                   "govuk_url": current["govuk_url"], "archive_url": current["archive_url"], "pdf_url": pdf_url},
+        "latest_change": ({"version": current["version"], "statement": current["change_statement"],
+                           "has_table": bool(current["change_statement_html"] and "<table" in current["change_statement_html"])}
+                          if current["change_statement"] else None),
+        "history_count": len(series["history"]),
+        "read_url": f"../reader/index.html?country={country}&series={series['key']}",
+    }
 
 
 def _note_entry(store: Store, country: str, name: str, note: str, index: dict, pdf_url: str | None,
@@ -131,6 +168,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
     image_files = store.load_image_manifest()
     mapping = countries_config["countries"]
     countries, recent = [], []
+    note_paths: dict[str, dict] = {}         # GOV.UK path of any note we hold -> where it lives here
     for slug, known in sorted(state["countries"].items(), key=lambda kv: kv[1]["name"]):
         publication = store.load_publication(slug) or {}
         pairs = pair_pdfs(publication) if publication else {}
@@ -141,16 +179,21 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
                    for h in publication.get("details", {}).get("change_history", [])]
         history.sort(key=lambda h: h["date"] or "", reverse=True)
         groups: dict[str, list] = {}
+        reports = []
         for note, index in store.notes_for(slug):
             groups.setdefault(series_key(parse_note_title(index["title"], known["name"])), []).append((note, index))
         for key, members in groups.items():
             series = build_series(store, slug, known["name"], key, members, image_files, history)
-            if series_out and len(series["versions"]) > 1:
+            if series_out:                       # every report, so every report has a timeline
                 path = Path(series_out) / series_path(slug, key)
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text(json.dumps(series, ensure_ascii=False, separators=(",", ":")), "utf-8")
+            pdf = next((live_by_url.get(note) for note, index in members if index.get("status") == "live"), None)
+            reports.append(report_summary(slug, series, pdf))
             for note, index in members:
                 notes.append(_note_entry(store, slug, known["name"], note, index, live_by_url.get(note), series))
+                note_paths[index["base_path"]] = {"country": slug, "series": key, "note": note,
+                                                  "status": index.get("status")}
         for a in file_attachments(publication):        # PDF-only notes (no HTML edition)
             if is_pdf(a) and a["url"] not in paired_pdfs and not html_attachments(publication):
                 parsed = parse_note_title(a.get("title", ""), known["name"])
@@ -162,6 +205,13 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
                               "archived_editions": 0, "earliest": entry.get("first_seen"),
                               "govuk_url": config.GOVUK + known["base_path"], "archive_url": None,
                               "pdf_url": a["url"]})
+                reports.append({"key": f"pdf:{a['url'].rsplit('/', 1)[-1]}", "topic": parsed.topic, "kind": kind_label(parsed.kind),
+                                "status": "live", "pdf_only": True, "editions": 1, "earliest": entry.get("first_seen"),
+                                "latest": {"version": None, "published": to_utc(publication.get("public_updated_at")),
+                                           "published_precision": "day", "note": None, "pdf_url": a["url"],
+                                           "govuk_url": config.GOVUK + known["base_path"], "archive_url": None},
+                                "latest_change": None, "history_count": 0, "read_url": None})
+        reports.sort(key=lambda r: (r["status"] != "live", -(int((r["latest"]["published"] or "0")[:10].replace("-", "")))))
         order = {"live": 0, "removed": 1, "archived": 2}
         notes.sort(key=lambda n: (order.get(n["status"], 3), -(int((n["updated"] or "0")[:10].replace("-", "")))))
         cfg = mapping.get(slug, {})
@@ -174,6 +224,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
             "caveat": cfg.get("caveat"),
             "updated": to_utc(known.get("public_updated_at")),
             "govuk_url": config.GOVUK + known["base_path"],
+            "reports": reports,
             "notes": notes,
             "history": history,
         })
@@ -195,6 +246,8 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
         },
         "countries": countries,
         "recent_changes": recent[:60],
+        "note_paths": note_paths,
+        "country_paths": {c["govuk_url"].removeprefix(config.GOVUK): c["slug"] for c in countries},
         "feature_aliases": countries_config.get("feature_aliases", {}),
         "boundary_patches": countries_config.get("boundary_patches", []),
     }

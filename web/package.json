@@ -6,7 +6,10 @@
   "scripts": {
     "vendor": "node build-vendor.mjs",
     "test": "node --test test/*.test.mjs",
-    "borders": "node build-borders.mjs"
+    "borders": "node build-borders.mjs",
+    "search-index": "PYTHONPATH=../src ../.venv/bin/python -m cpin.search_records && node build-search.mjs",
+    "docx": "node build-docx.mjs",
+    "docx-samples": "node build-docx.mjs --samples"
   },
   "dependencies": {
     "cobe": "2.0.1",
@@ -16,7 +19,9 @@
     "topojson-client": "3.1.0"
   },
   "devDependencies": {
+    "docx": "^9.8.1",
     "esbuild": "0.28.2",
-    "mapshaper": "^0.7.72"
+    "mapshaper": "^0.7.72",
+    "pagefind": "1.5.2"
   }
 }

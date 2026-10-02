@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPIN Explorer: fonts</title>
+<link rel="stylesheet" href="../shared/theme.css">
+<style>
+  body { padding: 2.5rem clamp(1rem, 4vw, 4rem) 4rem; max-width: 92rem; margin: 0 auto; }
+  h1 { font-family: var(--font-display); font-weight: 400; color: var(--blue); letter-spacing: .08em; font-size: 2.6rem; margin: .2rem 0 .4rem; }
+  .intro { color: var(--ink-2); max-width: 46rem; margin: 0 0 2.5rem; }
+  .fonts { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); border: 1px solid var(--line); margin-bottom: 3rem; }
+  .font { padding: 1.4rem 1.5rem 1.6rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .font .big { font-size: 2.2rem; line-height: 1.1; margin: .6rem 0 .8rem; color: var(--ink); }
+  .font p { margin: .2rem 0; color: var(--ink-2); font-size: .92rem; }
+  .used { margin-top: .7rem !important; font-size: .82rem !important; }
+  .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.4rem; }
+  .option { border: 1px solid var(--line); }
+  .option.recommended { border-color: var(--blue); }
+  .option-head { display: flex; justify-content: space-between; align-items: center; padding: .6rem .9rem; background: var(--sunken); border-bottom: 1px solid var(--line); }
+  .recommended .option-head { background: var(--blue); color: var(--blue-ink); }
+  .recommended .option-head .eyebrow { color: var(--blue-ink); }
+  .mock { padding: 1.2rem 1.2rem 1.4rem; display: grid; gap: .8rem; }
+  .m-brand { font-size: .78rem; letter-spacing: .16em; }
+  .m-eyebrow { font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
+  .m-title { font-size: 2.3rem; line-height: 1; color: var(--blue); letter-spacing: .06em; text-transform: uppercase; }
+  .m-meta { font-size: .74rem; color: var(--ink-2); }
+  .m-tags { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .m-tag { display: inline-flex; padding: .36em .55em .32em; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; background: var(--blue); color: var(--blue-ink); }
+  .m-tag.o { background: none; color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+  .m-date { font-size: 2rem; line-height: 1; }
+  .m-body { font-size: .98rem; line-height: 1.65; margin: 0; }
+  .m-num { color: var(--ink-3); font-size: .78rem; margin-right: .5rem; }
+  /* Font assignments per option */
+  .f-sans { font-family: var(--font-text); }
+  .f-mono { font-family: var(--font-mono); }
+  .f-pixel { font-family: var(--font-pixel); }
+  .f-line { font-family: var(--font-display); }
+  .note { margin-top: 2.5rem; color: var(--ink-2); font-size: .9rem; max-width: 50rem; }
+</style>
+</head>
+<body>
+<p class="eyebrow">CPIN Explorer · type</p>
+<h1>FONTS</h1>
+<p class="intro">The four fonts the prototypes use today, then three ways to simplify. All are from the free Geist family (made by Vercel, the company behind the COBE site), so they match COBE's look. They are stored with the app, so nothing loads from elsewhere.</p>
+
+<div class="fonts">
+  <div class="font"><span class="tag">1 · Geist Sans</span>
+    <div class="big f-sans">Country notes</div>
+    <p class="f-sans">A clean modern sans-serif. Easy to read at length.</p>
+    <p class="used f-sans">Used today for the text of every note and most of the interface.</p></div>
+  <div class="font"><span class="tag">2 · Geist Mono</span>
+    <div class="big f-mono">v8.0 · 26 Aug</div>
+    <p class="f-mono">Monospaced: every character is the same width, like a typewriter.</p>
+    <p class="used f-mono">Used today for dates, buttons, links and small details.</p></div>
+  <div class="font"><span class="tag">3 · Geist Pixel</span>
+    <div class="big f-pixel">IRAN 14</div>
+    <p class="f-pixel">Built from square pixels, like an old screen.</p>
+    <p class="used f-pixel">Used today for labels, tags and big numbers.</p></div>
+  <div class="font"><span class="tag">4 · Geist Pixel Line</span>
+    <div class="big f-line">COUNTRY NOTES</div>
+    <p class="f-sans">Pixel letters drawn as thin parallel lines, like the big 'COBE' word on the COBE site.</p>
+    <p class="used f-sans">Used today for big titles: country names and the main heading.</p></div>
+</div>
+
+<p class="eyebrow" style="margin-bottom:1rem">The same screen in each option</p>
+<div class="options">
+  <section class="option recommended">
+    <div class="option-head"><span class="eyebrow">A · Two fonts (recommended)</span><span class="eyebrow">Sans + Pixel</span></div>
+    <div class="mock">
+      <div class="m-brand f-pixel">CPIN EXPLORER</div>
+      <div class="m-eyebrow f-pixel">Country · CPIN</div>
+      <div class="m-title f-pixel">Iran</div>
+      <div class="m-meta f-sans">Version 8.0 · Published 26 Aug 2026 · GOV.UK ↗</div>
+      <div class="m-tags f-pixel"><span class="m-tag">Iran 14</span><span class="m-tag o">What changed in v8.0</span></div>
+      <div class="m-date f-pixel">21 MAY 2024</div>
+      <p class="m-body f-sans"><span class="m-num">9.1.1</span>Sample text of a note, set as it would be read. This paragraph shows how a long passage sits on the page.</p>
+    </div>
+  </section>
+  <section class="option">
+    <div class="option-head"><span class="eyebrow">B · Three fonts</span><span class="eyebrow">Sans + Pixel + Mono</span></div>
+    <div class="mock">
+      <div class="m-brand f-pixel">CPIN EXPLORER</div>
+      <div class="m-eyebrow f-pixel">Country · CPIN</div>
+      <div class="m-title f-pixel">Iran</div>
+      <div class="m-meta f-mono">Version 8.0 · Published 26 Aug 2026 · GOV.UK ↗</div>
+      <div class="m-tags f-pixel"><span class="m-tag">Iran 14</span><span class="m-tag o">What changed in v8.0</span></div>
+      <div class="m-date f-pixel">21 MAY 2024</div>
+      <p class="m-body f-sans"><span class="m-num f-mono">9.1.1</span>Sample text of a note, set as it would be read. This paragraph shows how a long passage sits on the page.</p>
+    </div>
+  </section>
+  <section class="option">
+    <div class="option-head"><span class="eyebrow">C · One font</span><span class="eyebrow">Sans only</span></div>
+    <div class="mock">
+      <div class="m-brand f-sans" style="font-weight:600">CPIN EXPLORER</div>
+      <div class="m-eyebrow f-sans">Country · CPIN</div>
+      <div class="m-title f-sans" style="font-weight:600;letter-spacing:0">Iran</div>
+      <div class="m-meta f-sans">Version 8.0 · Published 26 Aug 2026 · GOV.UK ↗</div>
+      <div class="m-tags f-sans"><span class="m-tag">Iran 14</span><span class="m-tag o">What changed in v8.0</span></div>
+      <div class="m-date f-sans" style="font-weight:600">21 May 2024</div>
+      <p class="m-body f-sans"><span class="m-num">9.1.1</span>Sample text of a note, set as it would be read. This paragraph shows how a long passage sits on the page.</p>
+    </div>
+  </section>
+  <section class="option">
+    <div class="option-head"><span class="eyebrow">Today · Four fonts</span><span class="eyebrow">for comparison</span></div>
+    <div class="mock">
+      <div class="m-brand f-pixel">CPIN EXPLORER</div>
+      <div class="m-eyebrow f-pixel">Country · CPIN</div>
+      <div class="m-title f-line">Iran</div>
+      <div class="m-meta f-mono">Version 8.0 · Published 26 Aug 2026 · GOV.UK ↗</div>
+      <div class="m-tags f-pixel"><span class="m-tag">Iran 14</span><span class="m-tag o">What changed in v8.0</span></div>
+      <div class="m-date f-pixel">21 MAY 2024</div>
+      <p class="m-body f-sans"><span class="m-num f-mono">9.1.1</span>Sample text of a note, set as it would be read. This paragraph shows how a long passage sits on the page.</p>
+    </div>
+  </section>
+</div>
+<p class="eyebrow" style="margin:3rem 0 1rem">Body text: what other sites use</p>
+<div class="options">
+  <section class="option recommended">
+    <div class="option-head"><span class="eyebrow">Geist Sans (today)</span><span class="eyebrow">free · ours</span></div>
+    <div class="mock"><p class="m-body f-sans"><span class="m-num">3.4.1</span>Sample text of a note, set as it would be read over many pages. A person who would face a real risk in one area may be able to relocate to another, depending on the facts of the case.</p></div>
+  </section>
+  <section class="option">
+    <div class="option-head"><span class="eyebrow">Georgia (Polygon)</span><span class="eyebrow">free · built in</span></div>
+    <div class="mock"><p class="m-body" style="font-family: Georgia, 'Times New Roman', serif; font-size: 1.04rem"><span class="m-num f-sans">3.4.1</span>Sample text of a note, set as it would be read over many pages. A person who would face a real risk in one area may be able to relocate to another, depending on the facts of the case.</p></div>
+  </section>
+  <section class="option">
+    <div class="option-head"><span class="eyebrow">Mono body (Variant-style)</span><span class="eyebrow">Geist Mono stand-in</span></div>
+    <div class="mock"><p class="m-body f-mono" style="font-size:.9rem; line-height:1.7"><span class="m-num">3.4.1</span>Sample text of a note, set as it would be read over many pages. A person who would face a real risk in one area may be able to relocate to another, depending on the facts of the case.</p></div>
+  </section>
+</div>
+<p class="note">Variant (variant.fund) uses ABC Camera Plain for text and ABC Camera Plain Mono for captions: commercial fonts from Dinamo, so they cannot be shown here without a licence. Their plain style is close to Geist Sans. Polygon now sets articles in Georgia, with Montserrat headings and Roboto for interface text.</p>
+<p class="note">Sample text is illustrative, not Home Office content. Whichever you choose, the text of the notes themselves stays in Geist Sans, because pixel fonts are tiring over long passages.</p>
+</body>
+</html>

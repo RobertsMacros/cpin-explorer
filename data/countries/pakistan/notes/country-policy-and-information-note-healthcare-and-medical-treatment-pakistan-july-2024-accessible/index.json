@@ -7,6 +7,24 @@
   "current_sha256": "d7f5351add60277c4727c42febf79a301a99f7d6241b90ace895d6386dcc0df1",
   "versions": [
     {
+      "sha256": "6300a254fa9c5b5d031bad912b5d759bd32e311ffc9211af38ec02ab236399d6",
+      "text_sha256": "8df91e58c931d12736d423e6ed7e213088e7cfebf8ec04ac92022f52ce000b2f",
+      "source": "wayback",
+      "title": "Country policy and information note: healthcare and medical treatment, Pakistan, July 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "3.0",
+      "bytes": 230136,
+      "captures": [
+        {
+          "captured_at": "2024-07-16T07:24:17Z",
+          "archive_url": "https://web.archive.org/web/20240716072417/https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-healthcare-and-medical-treatment-pakistan-july-2024-accessible",
+          "digest": "ZERIUGW3LFDKZISDDZC4F6BREQCOLVDH"
+        }
+      ]
+    },
+    {
       "sha256": "d7f5351add60277c4727c42febf79a301a99f7d6241b90ace895d6386dcc0df1",
       "text_sha256": "b7a3614c593d599ddac0f81ef716b1fca15099f65b229d6d99a8591b6d165925",
       "source": "live",
@@ -15,7 +33,30 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 219699
+      "bytes": 219699,
+      "captures": [
+        {
+          "captured_at": "2025-02-27T06:47:30Z",
+          "archive_url": "https://web.archive.org/web/20250227064730/https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-healthcare-and-medical-treatment-pakistan-july-2024-accessible",
+          "digest": "S4OWW2EX2MLHULC4IF3CD6N3YYCBV4M3"
+        },
+        {
+          "captured_at": "2026-01-29T11:36:52Z",
+          "archive_url": "https://web.archive.org/web/20260129113652/https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-healthcare-and-medical-treatment-pakistan-july-2024-accessible",
+          "digest": "OWWKEQQDIOI3ONNK2GQCNGWULQOSDMGY"
+        },
+        {
+          "captured_at": "2026-09-26T03:03:45Z",
+          "archive_url": "https://web.archive.org/web/20260926030345/https://www.gov.uk/government/publications/pakistan-country-policy-and-information-notes/country-policy-and-information-note-healthcare-and-medical-treatment-pakistan-july-2024-accessible",
+          "digest": "ZDMIV2YPNMZONWQ65FK3QJD7XZI5QAGC"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "ZERIUGW3LFDKZISDDZC4F6BREQCOLVDH",
+    "S4OWW2EX2MLHULC4IF3CD6N3YYCBV4M3",
+    "OWWKEQQDIOI3ONNK2GQCNGWULQOSDMGY",
+    "ZDMIV2YPNMZONWQ65FK3QJD7XZI5QAGC"
   ]
 }

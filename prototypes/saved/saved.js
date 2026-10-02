@@ -1,7 +1,7 @@
 // CPIN Extractor · saved highlights across every note, grouped by country and note, each with its
 // citation (OSCOLA or tribunal), the sources it cites, a private note and a staleness check against
 // the edition now held. Records live in this browser (localStorage "cpin-highlights-v1").
-import { hydrateFlags } from "../shared/dot-flag.js";
+import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
   capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteWithCitation, STYLE_NAMES,
@@ -14,6 +14,15 @@ const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const STYLE_KEY = "cpin-cite-style";
 let style = (() => { try { return localStorage.getItem(STYLE_KEY) === "tribunal" ? "tribunal" : "oscola"; } catch { return "oscola"; } })();
 let data = null;
+const params = new URLSearchParams(location.search);
+const TEST = params.get("test") === "export";        // headless checks of Export to Word (see the end)
+const testErrors = [];
+if (TEST) {
+  addEventListener("error", (e) => testErrors.push(String(e.message || e)));
+  addEventListener("unhandledrejection", (e) => testErrors.push(String(e.reason?.stack || e.reason)));
+  const consoleError = console.error.bind(console);
+  console.error = (...args) => { testErrors.push(args.map((a) => String(a?.stack || a)).join(" ")); consoleError(...args); };
+}
 const checking = new Set();          // "country|note" being checked against the edition now held
 let quiet = 0;                       // our own writes: don't re-render on them
 
@@ -220,7 +229,9 @@ $("#copyAll").addEventListener("click", () => {
     .then((ok) => copied(ok, `${plural(cites.length, "citation")} (${STYLE_NAMES[style]})`));
 });
 function download(name, type, body) {
-  const url = URL.createObjectURL(new Blob([body], { type }));
+  const blob = body instanceof Blob ? body : new Blob([body], { type });
+  if (TEST) { (window.__cpinDownloads ||= []).push({ name, type, blob }); return; }   // ?test: keep it for the check below
+  const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url; a.download = name;
   document.body.append(a); a.click(); a.remove();
@@ -229,6 +240,124 @@ function download(name, type, body) {
 const stamp = () => new Date().toISOString().slice(0, 10);
 $("#dlMd").addEventListener("click", () => download(`cpin-highlights-${stamp()}.md`, "text/markdown;charset=utf-8", H.exportMarkdown(H.loadHighlights(), { style })));
 $("#dlJson").addEventListener("click", () => download(`cpin-highlights-${stamp()}.json`, "application/json", H.exportJson(H.loadHighlights())));
+
+/* ------------------------------------------------------------------ export to Word */
+
+// The docx library (prototypes/vendor/docx.js, ~450 KB), the builder and the fonts Word embeds are
+// fetched on the first export only, so the page itself stays light.
+let wordKit = null;
+const fetchBytes = async (url) => {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
+  return new Uint8Array(await response.arrayBuffer());
+};
+const canvasPng = (canvas) => new Promise((resolve, reject) => canvas.toBlob((blob) =>
+  blob ? blob.arrayBuffer().then((buf) => resolve(new Uint8Array(buf)), reject) : reject(new Error("canvas.toBlob failed")), "image/png"));
+
+function loadWordKit() {
+  wordKit ??= (async () => {
+    const [docx, builder] = await Promise.all([import("../vendor/docx.js"), import("../shared/citations-docx.js")]);
+    const fonts = Object.fromEntries(await Promise.all(builder.fontFilesFor().map(async (f) =>
+      [f.file, await fetchBytes(`../vendor/fonts/${f.file}`).catch((e) => { console.warn("Word export: font not loaded, falling back to Office fonts", e); return null; })])));
+    const logo = await rmMark().catch((e) => { console.warn("Word export: no RM mark", e); return null; });
+    return { docx, builder, fonts, logo };
+  })().catch((error) => { wordKit = null; throw error; });
+  return wordKit;
+}
+
+/** The RM mark at 384 × 256 (the original is 1536 × 1024 and 400 KB); the builder crops its padding. */
+async function rmMark() {
+  const bitmap = await createImageBitmap(new Blob([await fetchBytes("../../assets/roberts-macros/image.png")], { type: "image/png" }));
+  const canvas = document.createElement("canvas");
+  canvas.width = 384; canvas.height = 256;
+  canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  return canvasPng(canvas);
+}
+
+/** Each country's dotted flag as a PNG, drawn for paper: white dots keep the light theme's pale fill. */
+async function flagPngs(records) {
+  const out = {};
+  for (const slug of new Set(records.map((r) => r.country))) {
+    const iso = data?.countries.find((c) => c.slug === slug)?.iso_a2 || records.find((r) => r.country === slug && r.iso)?.iso;
+    if (!iso) continue;
+    try {
+      const canvas = document.createElement("canvas");
+      canvas.dataset.flagWidth = "96";
+      await drawDotFlag(canvas, iso, { cols: 24 });
+      const ctx = canvas.getContext("2d");
+      const img = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < img.data.length; i += 4) {
+        if (img.data[i + 3] && img.data[i] > 235 && img.data[i + 1] > 235 && img.data[i + 2] > 235) img.data.set([226, 230, 236], i);
+      }
+      ctx.putImageData(img, 0, 0);
+      out[slug] = { data: await canvasPng(canvas), width: canvas.width, height: canvas.height };
+    } catch (e) { console.warn("Word export: no flag for", slug, e); }
+  }
+  return out;
+}
+
+let exporting = false;
+async function exportWord(mode) {
+  const recs = H.loadHighlights();
+  if (!recs.length || exporting) return;
+  exporting = true;
+  const btn = $("#dlDocx");
+  btn.setAttribute("aria-busy", "true");
+  btn.firstChild.textContent = "Preparing Word file… ";
+  try {
+    const kit = await loadWordKit();
+    const now = new Date();
+    const blob = await kit.builder.buildCitationsDocx(kit.docx, recs, {
+      mode, style, accessed: now, fonts: kit.fonts, logo: kit.logo, flags: await flagPngs(recs),
+      noteInfo: (country, note) => noteInfo(country, note).n, output: "blob",
+    });
+    const name = kit.builder.docxFileName(mode, now);
+    download(name, kit.builder.DOCX_MIME, blob);
+    toast(`Downloaded ${name}`);
+  } catch (error) {
+    console.error("Word export failed", error);
+    toast("Couldn’t make the Word file. Try again, or download .md instead.");
+  } finally {
+    exporting = false;
+    btn.removeAttribute("aria-busy");
+    btn.firstChild.textContent = "Export to Word ";
+  }
+}
+
+(function wordMenu() {
+  const btn = $("#dlDocx"), menu = $("#docxMenu");
+  const items = () => [...menu.querySelectorAll("[role=menuitem]")];
+  let closing = 0;
+  const open = () => {
+    clearTimeout(closing);
+    menu.classList.remove("out");
+    menu.hidden = false;
+    btn.setAttribute("aria-expanded", "true");
+    items()[0].focus();
+  };
+  const close = ({ focus = false } = {}) => {
+    if (menu.hidden) return;
+    btn.setAttribute("aria-expanded", "false");
+    menu.classList.add("out");
+    closing = setTimeout(() => { menu.hidden = true; menu.classList.remove("out"); }, reduced.matches ? 0 : 170);
+    if (focus) btn.focus();
+  };
+  btn.addEventListener("click", () => (btn.getAttribute("aria-expanded") === "true" ? close() : open()));
+  menu.addEventListener("click", (e) => {
+    const item = e.target.closest("[data-docx]");
+    if (!item) return;
+    close({ focus: true });
+    exportWord(item.dataset.docx);
+  });
+  menu.addEventListener("keydown", (e) => {
+    const list = items(), i = list.indexOf(document.activeElement);
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); list[(i + (e.key === "ArrowDown" ? 1 : list.length - 1)) % list.length].focus(); }
+    else if (e.key === "Home" || e.key === "End") { e.preventDefault(); list[e.key === "Home" ? 0 : list.length - 1].focus(); }
+    else if (e.key === "Escape") { e.preventDefault(); close({ focus: true }); }
+    else if (e.key === "Tab") close();
+  });
+  document.addEventListener("pointerdown", (e) => { if (!e.target.closest(".sv-export")) close(); });
+})();
 
 /* ------------------------------------------------------------------ staleness */
 
@@ -329,12 +458,58 @@ function focusHash() {
   li.scrollIntoView({ block: "center", behavior: reduced.matches ? "auto" : "smooth" });
 }
 
+/* ------------------------------------------------------------------ ?test=export (headless checks) */
+
+// ?test=export&seed=samples/sample-highlights.json loads sample highlights into memory (this browser's
+// saved highlights are not touched), then exports both Word files through the menu and writes what it
+// got into <output id="exportTest">: name, size and whether each is a zip, plus a data: URL.
+
+async function seedForTest() {
+  const seed = params.get("seed");
+  if (!seed || !/^samples\/[\w.-]+\.json$/.test(seed)) return;
+  const memory = new Map();
+  H.useStorage({ getItem: (k) => memory.get(k) ?? null, setItem: (k, v) => memory.set(k, String(v)) });
+  H.saveHighlights((await fetchJson(seed)).highlights || []);
+}
+
+async function exportTest() {
+  const out = document.createElement("output");
+  out.id = "exportTest";
+  out.hidden = true;
+  document.body.append(out);
+  const report = { highlights: H.loadHighlights().length, files: [] };
+  try {
+    for (const mode of ["full", "citations"]) {
+      while (exporting) await new Promise((r) => setTimeout(r, 50));
+      const before = window.__cpinDownloads?.length || 0;
+      $("#dlDocx").click();
+      $(`#docxMenu [data-docx="${mode}"]`).click();
+      for (let t = 0; (window.__cpinDownloads?.length || 0) === before; t++) {
+        if (t > 300) throw new Error(`no file from ${mode}`);
+        await new Promise((r) => setTimeout(r, 100));
+      }
+      const { name, type, blob } = window.__cpinDownloads.at(-1);
+      const head = new Uint8Array(await blob.slice(0, 2).arrayBuffer());
+      const dataUrl = await new Promise((resolve) => { const fr = new FileReader(); fr.onload = () => resolve(fr.result); fr.readAsDataURL(blob); });
+      report.files.push({ mode, name, type, size: blob.size, zip: head[0] === 0x50 && head[1] === 0x4b, dataUrl });
+    }
+  } catch (error) { report.error = String(error?.stack || error); }
+  report.errors = testErrors;
+  out.textContent = JSON.stringify(report);
+  document.documentElement.dataset.exportTest = report.error || testErrors.length ? "failed" : "done";
+  scrollTo(0, 0);
+  $("#dlDocx").click();                                     // leave the menu open for a screenshot
+  $("#dlDocx").blur();
+}
+
 async function boot() {
+  if (TEST) await seedForTest().catch((e) => console.error("test seed failed", e));
   data = await fetchJson(paths.data).catch(() => null);
   render();
   focusHash();
   H.onHighlightsChange(() => { if (!quiet) render(); });
   await checkAll();
   window.__cpinSavedReady = true;
+  if (TEST) await exportTest();
 }
 boot();

@@ -35,6 +35,18 @@ def cmd_sync(args, store):
     return 1 if report.errors else 0
 
 
+def cmd_links(args, store):
+    from pathlib import Path
+
+    from .linkcheck import check_links, export_link_status
+    summary = check_links(store, max_age_days=args.max_age, limit=args.limit, countries=set(args.country) or None,
+                          log=lambda m: print(m, flush=True))
+    print("links:", " · ".join(f"{k} {v}" for k, v in sorted(summary.items())))
+    n = export_link_status(store, Path(args.out))
+    print(f"wrote link status for {n} countries to {args.out}/")
+    return 0
+
+
 def cmd_images(args, store):
     from .images import current_image_refs, mirror_images
     from .store import now_iso
@@ -152,6 +164,12 @@ def main(argv=None):
     p.set_defaults(func=cmd_sync)
     p = sub.add_parser("images", help="mirror every image the current notes embed")
     p.set_defaults(func=cmd_images)
+    p = sub.add_parser("links", help="check the sources the notes cite (new links, and any not checked recently)")
+    p.add_argument("--max-age", type=int, default=30, help="re-check links last checked more than this many days ago")
+    p.add_argument("--limit", type=int, default=None, help="check at most this many links")
+    p.add_argument("--country", action="append", default=[])
+    p.add_argument("--out", default="prototypes/data/links", help="per-country status files for the reader")
+    p.set_defaults(func=cmd_links)
     p = sub.add_parser("backfill", help="recover older editions from the Internet Archive")
     p.add_argument("--country", action="append", default=[])
     p.set_defaults(func=cmd_backfill)

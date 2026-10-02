@@ -15,7 +15,23 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": null,
-      "bytes": 79588
+      "bytes": 79588,
+      "captures": [
+        {
+          "captured_at": "2026-07-30T20:57:35Z",
+          "archive_url": "https://web.archive.org/web/20260730205735/https://www.gov.uk/government/publications/palestine-country-policy-and-information-notes/country-bulletin-security-situation-in-gaza-palestine-june-2026-accessible",
+          "digest": "KH5JE47KR4YWOMWXVMDR6JZTMZJS5ZM5"
+        },
+        {
+          "captured_at": "2026-08-07T21:46:56Z",
+          "archive_url": "https://web.archive.org/web/20260807214656/https://www.gov.uk/government/publications/palestine-country-policy-and-information-notes/country-bulletin-security-situation-in-gaza-palestine-june-2026-accessible",
+          "digest": "4PQSKWGKT6XWMRNUXE67UDTZSATK47AL"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "KH5JE47KR4YWOMWXVMDR6JZTMZJS5ZM5",
+    "4PQSKWGKT6XWMRNUXE67UDTZSATK47AL"
   ]
 }

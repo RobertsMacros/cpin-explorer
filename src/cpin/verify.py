@@ -232,6 +232,25 @@ def check_pdfs(store: Store) -> dict:
     return {"summary": summary, "rows": rows, "problems": problems}
 
 
+def check_anchors(store: Store) -> dict:
+    """Every in-page link (#section, #fn:12, #fnref:12) in a current note points at an element that exists."""
+    problems, checked = [], 0
+    for country, note, index in store.iter_notes():
+        if index.get("status") != "live":
+            continue
+        root = lxml_html.fragment_fromstring(store.read_body(country, note, index["current_sha256"]), create_parent="div")
+        ids = {el.get("id") for el in root.iter() if isinstance(el.tag, str) and el.get("id")}
+        ids |= {el.get("name") for el in root.iter("a") if el.get("name")}
+        for a in root.iter("a"):
+            href = a.get("href") or ""
+            if href.startswith("#") and len(href) > 1:
+                checked += 1
+                if href[1:] not in ids:
+                    problems.append({"country": country, "note": note, "href": href, "text": " ".join(a.text_content().split())[:60],
+                                     "problem": "in-page link target missing"})
+    return {"checked": checked, "problems": problems}
+
+
 def link_summary(store: Store) -> dict:
     kinds = Counter()
     for country, note, index in store.iter_notes():
@@ -243,7 +262,7 @@ def link_summary(store: Store) -> dict:
 
 def run(store: Store, client=None, *, live: bool = False, pdf: bool = False) -> dict:
     report = {"at": now_iso(), "integrity": check_integrity(store), "complete": check_complete(store),
-              "links": link_summary(store)}
+              "links": link_summary(store), "anchors": check_anchors(store)}
     if live and client is not None:
         report["live"] = check_live(client, store)
     if pdf:

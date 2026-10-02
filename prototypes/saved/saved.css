@@ -26,6 +26,25 @@
 .sv-tools-gap { flex: 1; }
 .sv-tools .btn { min-height: 2.2rem; font-size: .76rem; }
 
+/* Export to Word: a button with a two-item menu (the docx library loads only when one is chosen) */
+.sv-export { position: relative; display: inline-flex; }
+.sv-export > .btn[aria-expanded="true"] { border-color: var(--blue); color: var(--blue); }
+.sv-export > .btn[aria-busy="true"] { cursor: progress; color: var(--ink-2); }
+.sv-export .caret { font-size: .7em; transition: transform var(--t) var(--ease); }
+.sv-export > .btn[aria-expanded="true"] .caret { transform: rotate(180deg); }
+.sv-menu { position: absolute; top: calc(100% + .35rem); left: 0; z-index: 30; min-width: 19rem; display: grid;
+  background: var(--surface); border: 1px solid var(--line-strong); box-shadow: 0 14px 34px -16px color-mix(in oklab, var(--ink) 35%, transparent);
+  transform-origin: top left; animation: pop-in var(--t) var(--ease) both; }
+.sv-menu[hidden] { display: none; }
+.sv-menu.out { animation: menu-out var(--t-fast) var(--ease) both; pointer-events: none; }
+@keyframes menu-out { to { opacity: 0; transform: translateY(-.25rem) scale(.985); filter: blur(2px); } }
+.sv-menu button { display: grid; gap: .2rem; padding: .75rem .9rem; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease); }
+.sv-menu button:last-child { border-bottom: 0; }
+.sv-menu button:hover, .sv-menu button:focus-visible { background: var(--blue-wash); color: var(--blue); outline: none; }
+.sv-menu b { font-family: var(--font-mono); font-size: .78rem; font-weight: 500; letter-spacing: .02em; }
+.sv-menu small { font-size: .74rem; line-height: 1.4; color: var(--ink-2); }
+
 /* Country and note groups */
 .sv-country { margin-top: 2.8rem; animation: pop-in var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms); }
 .sv-country-head { display: flex; align-items: center; gap: 1rem; padding-bottom: .9rem; border-bottom: 1px solid var(--blue); }
@@ -92,6 +111,8 @@
   .sv-item { padding: .9rem .9rem 1rem; }
   .sv-tools-gap { display: none; }
   .sv-tools .btn { flex: 1 1 auto; }
+  .sv-export { flex: 1 1 auto; }
+  .sv-menu { right: 0; min-width: 0; }
   .sv-actions .btn-del { margin-left: 0; }
   .sv-country-head canvas.dotflag { width: 2.8rem; }
   .sv-stats .numeral { font-size: 1.6rem; }

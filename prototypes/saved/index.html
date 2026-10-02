@@ -34,6 +34,13 @@
         <button type="button" role="radio" data-style="tribunal" aria-checked="false">Tribunal</button></div>
       <span class="sv-tools-gap"></span>
       <button type="button" class="btn btn--primary" id="copyAll">Copy all citations</button>
+      <div class="sv-export">
+        <button type="button" class="btn" id="dlDocx" aria-haspopup="menu" aria-expanded="false" aria-controls="docxMenu">Export to Word <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="sv-menu" id="docxMenu" role="menu" aria-label="Export to Word" hidden>
+          <button type="button" role="menuitem" data-docx="full"><b>Highlights and citations (.docx)</b><small>Quotes, citations, sources and your notes, with contents</small></button>
+          <button type="button" role="menuitem" data-docx="citations"><b>Citations only (.docx)</b><small>A numbered list, for skeleton arguments</small></button>
+        </div>
+      </div>
       <button type="button" class="btn" id="dlMd">Download .md</button>
       <button type="button" class="btn" id="dlJson">Download .json</button>
     </div>

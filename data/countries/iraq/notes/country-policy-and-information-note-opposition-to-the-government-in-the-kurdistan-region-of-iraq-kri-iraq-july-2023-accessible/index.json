@@ -7,6 +7,29 @@
   "current_sha256": "760227c18ba875e35dffa20225c387b85ee92df55911a5220ff10b1df27fe70a",
   "versions": [
     {
+      "sha256": "6b69dee605dacee356038baabcd54736089136d2b444ab1480ccced607dc237d",
+      "text_sha256": "0a235af6c550f92bfa402b1acdf004c369279849e876cca9fd783c40472d859d",
+      "source": "wayback",
+      "title": "Country policy and information note: opposition to the government in the Kurdistan Region of Iraq (KRI), Iraq, July 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "3.0",
+      "bytes": 273950,
+      "captures": [
+        {
+          "captured_at": "2023-11-01T03:56:55Z",
+          "archive_url": "https://web.archive.org/web/20231101035655/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+          "digest": "G6LW7DW3NGW74PCY5IBKDMDJT353V6LE"
+        },
+        {
+          "captured_at": "2024-06-15T19:41:47Z",
+          "archive_url": "https://web.archive.org/web/20240615194147/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+          "digest": "CNS7NZ6IFELSFTAD5DTV5AA6R2332GSQ"
+        }
+      ]
+    },
+    {
       "sha256": "760227c18ba875e35dffa20225c387b85ee92df55911a5220ff10b1df27fe70a",
       "text_sha256": "94f16d1aed2d3b720262b81450c67ff3f02ebf72bfe6d387da093d2653c28271",
       "source": "live",
@@ -15,7 +38,25 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 265531
+      "bytes": 265531,
+      "captures": [
+        {
+          "captured_at": "2025-07-27T15:21:05Z",
+          "archive_url": "https://web.archive.org/web/20250727152105/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+          "digest": "YQWANP53TVWC7GNIREU3WTNIHGV7Z6LO"
+        },
+        {
+          "captured_at": "2025-09-02T10:36:50Z",
+          "archive_url": "https://web.archive.org/web/20250902103650/https://www.gov.uk/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+          "digest": "NPEQV4LY4HJAPS7FWEFV3H3IWGONMJOL"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "G6LW7DW3NGW74PCY5IBKDMDJT353V6LE",
+    "CNS7NZ6IFELSFTAD5DTV5AA6R2332GSQ",
+    "YQWANP53TVWC7GNIREU3WTNIHGV7Z6LO",
+    "NPEQV4LY4HJAPS7FWEFV3H3IWGONMJOL"
   ]
 }

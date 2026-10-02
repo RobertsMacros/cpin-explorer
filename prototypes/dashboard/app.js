@@ -21,8 +21,8 @@ const fmtDateTime = (iso) => iso ? `${fmtDate(iso)} · ${new Date(iso).toISOStri
 const fmtMonth = (ym) => (ym ? `${MONTHS[Number(ym.slice(5, 7)) - 1]} ${ym.slice(0, 4)}` : "");
 const daysAgo = (iso) => (Date.now() - Date.parse(iso)) / 864e5;
 const plural = (n, word) => `${n} ${word}${n === 1 ? "" : "S"}`;
-const flagCanvas = (c, cols, cls = "", reveal = false) => (c.iso_a2
-  ? `<canvas class="dotflag ${cls}" data-flag="${c.iso_a2}" data-cols="${cols}"${reveal ? " data-reveal" : ""} aria-hidden="true"></canvas>`
+const flagCanvas = (c, cols, cls = "", reveal = false, interactive = false) => (c.iso_a2
+  ? `<canvas class="dotflag ${cls}" data-flag="${c.iso_a2}" data-cols="${cols}"${reveal ? " data-reveal" : ""}${interactive ? " data-interactive" : ""} aria-hidden="true"></canvas>`
   : "");
 
 const [data, topo] = await Promise.all([fetchJson("data.json"), fetchJson("../vendor/countries-gbr.json")]);
@@ -42,6 +42,7 @@ new ResizeObserver(() => { size = Math.round(wrap.getBoundingClientRect().width)
 let { phi, theta } = focus([24, 38]);                       // start over Africa and the Middle East
 let vPhi = 0, dragging = false, moved = 0, lastX = 0, lastY = 0, lastInteract = 0, flight = null;
 let selected = null, hovered = null, query = "", filterKind = "all";
+let scopeAll = false, notesShown = 8, countryQuery = "";     // search: scope toggle, note titles shown, country box
 
 const isDark = () => {
   const t = document.documentElement.dataset.theme;
@@ -231,6 +232,8 @@ function select(slug, { fly = true, record = true } = {}) {
   if (slug && !bySlug.has(slug)) return;
   selected = slug;
   filterKind = "all";
+  scopeAll = false;
+  countryQuery = "";
   for (const p of pins) p.el.classList.toggle("is-selected", p.c.slug === slug);
   globe.update({ markers: markers() });
   if (slug && fly) flyTo(bySlug.get(slug).marker);
@@ -246,9 +249,12 @@ addEventListener("hashchange", () => select(location.hash.slice(1) || null, { re
 let lastView = "";
 function render() {
   const view = query.trim() ? "search" : selected ? `country:${selected}` : "overview";
+  // While typing, the text hits stay put (dimmed) until the new ones arrive, rather than blinking out.
+  const keepText = view === "search" && lastView === "search" ? $("#textHits", panel) : null;
   panel.classList.toggle("no-anim", view === "search" && lastView === "search");
   lastView = view;
   panel.innerHTML = view === "search" ? searchView() : selected ? countryView(bySlug.get(selected)) : overview();
+  if (keepText) $("#textHits", panel)?.replaceWith(keepText);
   [...panel.children].forEach((el, i) => el.style.setProperty("--i", i));
   panel.querySelectorAll(".odo").forEach(odometer);
   hydrateFlags(panel);
@@ -256,7 +262,7 @@ function render() {
 
 const stat = (n, label) => `<div class="stat"><span class="numeral odo" data-value="${n}">${n}</span><span class="eyebrow">${esc(label)}</span></div>`;
 const changeRow = (h) => `<li class="change"><time class="change-date" datetime="${esc(h.date)}">${fmtDate(h.date)}</time>
-  <div class="change-body"><button class="tag tag--outline linkish" data-slug="${h.country}">${flagCanvas(bySlug.get(h.country), 8, "dotflag--tag")}${esc(h.name)}</button><p>${esc(h.note)}</p></div></li>`;
+  <div class="change-body"><button class="country-link linkish" data-slug="${h.country}">${flagCanvas(bySlug.get(h.country), 8, "dotflag--tag")}${esc(h.name)}</button><p>${esc(h.note)}</p></div></li>`;
 
 function overview() {
   const t = data.totals;
@@ -316,13 +322,14 @@ function countryView(c) {
   return `
     <button class="btn back" data-action="back">← All countries</button>
     <div class="country-head">
-      ${flagCanvas(c, 24, "dotflag--hero", true)}
+      ${flagCanvas(c, 24, "dotflag--hero", true, true)}
       <div><p class="eyebrow">Country</p><h1 class="country-title">${esc(c.name)}</h1></div>
     </div>
     <p class="meta-line"><span>UPDATED ${fmtDate(c.updated)}</span><span>${plural(live.length, "NOTE")}</span>
       ${archived ? `<span>${plural(archived, "ARCHIVED EDITION")}</span>` : ""}
       <a href="${esc(c.govuk_url)}" target="_blank" rel="noopener">GOV.UK PAGE ↗</a></p>
     ${c.caveat ? `<p class="caveat">${esc(c.caveat)}</p>` : ""}
+    ${countrySearchHtml(c)}
     ${filters}
     <div class="notes">${notesList(c)}</div>
     <section class="section" style="margin-top:2.6rem">
@@ -336,16 +343,152 @@ const highlight = (text, words) => words.reduce((out, w) =>
 function searchView() {
   const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const match = (s) => words.every((w) => s.toLowerCase().includes(w));
+  const scope = textScope();
   const cs = countries.filter((c) => match(c.name));
-  const ns = countries.flatMap((c) => c.notes.filter((n) => n.status === "live" && match(`${n.topic} ${n.kind} ${c.name}`)).map((n) => ({ c, n })));
+  const ns = countries.filter((c) => !scope || c.slug === scope)
+    .flatMap((c) => c.notes.filter((n) => n.status === "live" && match(`${n.topic} ${n.kind} ${c.name}`)).map((n) => ({ c, n })));
+  const more = ns.length > notesShown
+    ? `<button class="more" type="button" data-action="more-notes">Show all ${ns.length} note titles</button>` : "";
   return `
     <p class="eyebrow">Search</p>
     <h1 class="hero-title">“${esc(query.trim())}”</h1>
+    ${scopeHtml()}
     <div class="results-group"><div class="section-head"><h2 class="eyebrow">Countries</h2><span class="eyebrow">${cs.length}</span></div>
-      ${cs.map((c) => `<button class="hit" data-slug="${c.slug}">${flagCanvas(c, 8, "dotflag--row")}${highlight(c.name, words)}<small>${plural(liveNotes(c).length, "NOTE")} · UPDATED ${fmtDate(c.updated)}</small></button>`).join("") || `<p class="empty">No countries match.</p>`}</div>
+      ${cs.map((c) => `<button class="hit" data-slug="${c.slug}">${flagCanvas(c, 8, "dotflag--row")}<span>${highlight(c.name, words)}</span><small>${plural(liveNotes(c).length, "NOTE")} · UPDATED ${fmtDate(c.updated)}</small></button>`).join("") || `<p class="empty">No countries match.</p>`}</div>
     <div class="results-group"><div class="section-head"><h2 class="eyebrow">Notes</h2><span class="eyebrow">${ns.length}</span></div>
-      ${ns.slice(0, 80).map(({ c, n }) => `<button class="hit" data-slug="${c.slug}">${highlight(n.topic || n.title, words)}<small>${esc(c.name.toUpperCase())} · ${esc(n.kind.toUpperCase())}${n.month ? ` · ${fmtMonth(n.month)}` : ""}</small></button>`).join("") || `<p class="empty">No note titles match.</p>`}</div>
-    <p class="source-note">Searches country names and note titles. Full-text search inside the notes comes with the reader.</p>`;
+      ${ns.slice(0, notesShown).map(({ c, n }) => `<button class="hit" data-slug="${c.slug}"><span class="hit-text">${highlight(n.topic || n.title, words)}</span><small>${esc(c.name.toUpperCase())} · ${esc(n.kind.toUpperCase())}${n.month ? ` · ${fmtMonth(n.month)}` : ""}</small></button>`).join("") || `<p class="empty">No note titles match.</p>`}${more}</div>
+    <div class="results-group text-hits" id="textHits">${textGroupHtml()}</div>
+    <p class="source-note">Countries and Notes match names and titles. In the text searches every section of the live notes, word for word as stored.</p>`;
+}
+
+/* --- Full-text search: a Pagefind index of every section of the live notes, built by
+   `npm run search-index` into ../search/pagefind/ and loaded the first time a search box is used. -- */
+let pagefindP = null;
+function loadPagefind() {
+  pagefindP ??= import("../search/pagefind/pagefind.js")
+    .then(async (pf) => { await pf.options({ excerptLength: 22 }); await pf.init(); return pf; })
+    .catch((error) => { console.warn("Full-text index not available:", error); return null; });
+  return pagefindP;
+}
+/** Pagefind excerpts: text with <mark>s around the matched words. Rebuilt, so only the marks survive. */
+function excerptHtml(html) {
+  const t = document.createElement("template");
+  t.innerHTML = html || "";
+  return [...t.content.childNodes].map((n) => (n.nodeName === "MARK" ? `<mark>${esc(n.textContent)}</mark>` : esc(n.textContent))).join("");
+}
+const readerHref = (m, q) => `../reader/index.html?country=${encodeURIComponent(m.slug)}&note=${encodeURIComponent(m.note)}`
+  + `${q ? `&q=${encodeURIComponent(q)}` : ""}${m.anchor ? `#${encodeURIComponent(m.anchor)}` : ""}`;
+const searchHref = (q, slug) => `../search/index.html?q=${encodeURIComponent(q)}${slug ? `&country=${encodeURIComponent(slug)}` : ""}`;
+const possessive = (name) => (/s$/i.test(name) ? `${name}’` : `${name}’s`);
+function textHitHtml(h, q, { country = true, i = 0 } = {}) {
+  const m = h.meta, c = bySlug.get(m.slug) || { name: m.country, iso_a2: m.iso_a2 };
+  return `<a class="thit" href="${esc(readerHref(m, q))}" data-hover="${esc(m.slug)}" style="--i:${i}">
+    <span class="thit-top">${country ? `<span class="tag tag--outline">${flagCanvas(c, 8, "dotflag--tag")}${esc(c.name)}</span>` : ""}<span class="thit-topic">${esc(m.title)}</span></span>
+    ${m.section ? `<span class="thit-section">${esc(m.section)}</span>` : ""}
+    <span class="thit-excerpt">${excerptHtml(h.excerpt)}</span></a>`;
+}
+/** Swap a box's contents, gliding its height from old to new (no jump in what follows it). */
+function swapContent(el, html) {
+  const from = el.offsetHeight;
+  el.innerHTML = html;
+  const to = el.offsetHeight;
+  if (!reduced.matches && Math.abs(from - to) > 1) {
+    el.animate([{ height: `${from}px`, overflow: "hidden" }, { height: `${to}px`, overflow: "hidden" }], { duration: 320, easing: "cubic-bezier(.2,.8,.2,1)" });
+  }
+  hydrateFlags(el);
+}
+
+// ⌘K search: "In the text", scoped to the selected country unless "Everywhere" is chosen.
+const TEXT_LIMIT = 6;
+let textRes = { key: "", q: "", status: "idle", hits: [], total: 0 };
+const textScope = () => (selected && !scopeAll ? selected : null);
+const textKey = () => `${textScope() || "*"}|${query.trim()}`;
+function scopeHtml() {
+  if (!selected) return "";
+  const c = bySlug.get(selected);
+  return `<div class="scope" role="radiogroup" aria-label="Where to search">
+    <button type="button" role="radio" data-scope="country" aria-checked="${!scopeAll}">${flagCanvas(c, 8, "dotflag--tag")}In ${esc(c.name)}</button>
+    <button type="button" role="radio" data-scope="all" aria-checked="${scopeAll}">Everywhere</button></div>`;
+}
+function textGroupHtml() {
+  const q = query.trim(), scope = textScope(), fresh = textRes.key === textKey();
+  const where = scope ? ` in ${bySlug.get(scope).name}` : "";
+  let body;
+  if (q.length < 2) body = `<p class="empty">Type two or more letters to search inside the notes.</p>`;
+  else if (textRes.status === "missing" || textRes.status === "error") body = `<p class="empty">The full-text index is not available here. Build it with <code>npm run search-index</code> in <code>web/</code>.</p>`;
+  else if (!fresh) body = `<p class="empty searching">Searching the text${esc(where)}…</p>`;
+  else if (!textRes.hits.length) body = `<p class="empty">No passages${esc(where)} contain “${esc(q)}”.</p>`;
+  else body = `<div class="thits">${textRes.hits.map((h, i) => textHitHtml(h, textRes.q, { i })).join("")}</div>`;
+  const all = fresh && textRes.total > 0 ? `<a class="all-results" href="${esc(searchHref(q, scope))}">All ${textRes.total} results${esc(where)} →</a>` : "";
+  return `<div class="section-head"><h2 class="eyebrow">In the text</h2><span class="eyebrow">${fresh && textRes.status === "done" ? textRes.total : "…"}</span></div>${body}${all}`;
+}
+async function runTextSearch() {
+  const q = query.trim(), key = textKey(), scope = textScope();
+  if (q.length < 2) { const box = $("#textHits", panel); if (box) swapContent(box, textGroupHtml()); return; }
+  $("#textHits", panel)?.classList.add("is-busy");
+  const pf = await loadPagefind();
+  if (key !== textKey()) return;
+  try {
+    if (!pf) throw new Error("no index");
+    const filters = { type: "text", ...(scope ? { country: bySlug.get(scope).name } : {}) };
+    const res = await pf.debouncedSearch(q, { filters }, 150);
+    if (!res || key !== textKey()) return;                       // superseded by a later keystroke
+    const hits = await Promise.all(res.results.slice(0, TEXT_LIMIT).map((r) => r.data()));
+    if (key !== textKey()) return;
+    textRes = { key, q, status: "done", hits, total: res.results.length };
+  } catch (error) {
+    textRes = { key, q, status: pf ? "error" : "missing", hits: [], total: 0 };
+    if (pf) console.warn(error);
+  }
+  const box = $("#textHits", panel);
+  if (!box) return;
+  box.classList.remove("is-busy");
+  box.classList.add("is-fresh");
+  swapContent(box, textGroupHtml());
+}
+
+// Country view: a box that searches the text of that country's notes, with hits inline.
+let countryRes = { key: "", status: "idle", hits: [], total: 0 };
+const countryKey = () => `${selected}|${countryQuery.trim()}`;
+function countrySearchHtml(c) {
+  return `<div class="csearch">
+    <label class="csearch-box"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
+      <input id="cq" type="search" value="${esc(countryQuery)}" placeholder="Search ${esc(possessive(c.name))} notes" aria-label="Search the text of ${esc(possessive(c.name))} notes" autocomplete="off" spellcheck="false">
+      <span class="csearch-count numeral" id="cqCount" aria-live="polite"></span></label>
+    <div class="csearch-results" id="cqHits"></div></div>`;
+}
+function countryResultsHtml() {
+  const c = bySlug.get(selected), q = countryQuery.trim();
+  if (q.length < 2 || countryRes.key !== countryKey()) return "";
+  if (countryRes.status !== "done") return `<p class="empty">The full-text index is not available here. Build it with <code>npm run search-index</code> in <code>web/</code>.</p>`;
+  if (!countryRes.hits.length) return `<p class="empty">No passages in ${esc(possessive(c.name))} notes contain “${esc(q)}”.</p>`;
+  return `<div class="thits">${countryRes.hits.map((h, i) => textHitHtml(h, q, { country: false, i })).join("")}</div>
+    <a class="all-results" href="${esc(searchHref(q, selected))}">All ${countryRes.total} results in ${esc(c.name)} →</a>`;
+}
+async function runCountrySearch() {
+  const c = bySlug.get(selected), q = countryQuery.trim(), key = countryKey();
+  const box = $("#cqHits", panel);
+  if (!c || !box) return;
+  if (q.length < 2) {
+    countryRes = { key, status: "idle", hits: [], total: 0 };
+    $("#cqCount", panel).textContent = "";
+    return swapContent(box, "");
+  }
+  box.classList.add("is-busy");
+  const pf = await loadPagefind();
+  try {
+    if (!pf) throw new Error("no index");
+    const res = await pf.debouncedSearch(q, { filters: { type: "text", country: c.name } }, 150);
+    if (!res || key !== countryKey()) return;
+    const hits = await Promise.all(res.results.slice(0, 5).map((r) => r.data()));
+    if (key !== countryKey()) return;
+    countryRes = { key, status: "done", hits, total: res.results.length };
+  } catch (error) {
+    countryRes = { key, status: "error", hits: [], total: 0 };
+  }
+  box.classList.remove("is-busy");
+  $("#cqCount", panel).textContent = countryRes.status === "done" ? countryRes.total : "";
+  swapContent(box, countryResultsHtml());
 }
 
 function odometer(el) {
@@ -360,9 +503,17 @@ function odometer(el) {
 }
 
 panel.addEventListener("click", (e) => {
-  const t = e.target.closest("[data-action],[data-kind],[data-slug]");
+  const t = e.target.closest("[data-action],[data-kind],[data-slug],[data-scope]");
   if (!t) return;
   if (t.dataset.action === "back") return select(null);
+  if (t.dataset.action === "more-notes") { notesShown = Infinity; render(); return; }
+  if (t.dataset.scope) {
+    scopeAll = t.dataset.scope === "all";
+    render();
+    runTextSearch();
+    q.focus({ preventScroll: true });
+    return;
+  }
   if (t.dataset.kind) {
     filterKind = t.dataset.kind;
     panel.querySelectorAll(".filter").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.kind === filterKind)));
@@ -374,17 +525,41 @@ panel.addEventListener("click", (e) => {
     select(t.dataset.slug);
   }
 });
-panel.addEventListener("pointerover", (e) => { const t = e.target.closest("[data-slug]"); if (t) setHover(t.dataset.slug); });
-panel.addEventListener("pointerout", (e) => { if (e.target.closest("[data-slug]")) setHover(null); });
+panel.addEventListener("pointerover", (e) => { const t = e.target.closest("[data-slug],[data-hover]"); if (t) setHover(t.dataset.slug || t.dataset.hover); });
+panel.addEventListener("pointerout", (e) => { if (e.target.closest("[data-slug],[data-hover]")) setHover(null); });
+// The country view's text search box.
+panel.addEventListener("focusin", (e) => { if (e.target.id === "cq") loadPagefind(); });
+panel.addEventListener("input", (e) => { if (e.target.id === "cq") { countryQuery = e.target.value; runCountrySearch(); } });
+panel.addEventListener("keydown", (e) => {
+  if (e.target.id === "cq") {
+    if (e.key === "Escape" && e.target.value) { e.preventDefault(); e.target.value = ""; countryQuery = ""; runCountrySearch(); }
+    if (e.key === "Enter") { const first = $("#cqHits .thit", panel); if (first) location.href = first.href; }
+    if (e.key === "ArrowDown") { const first = $("#cqHits .thit", panel); if (first) { e.preventDefault(); first.focus(); } }
+    return;
+  }
+  // Arrow keys move through search results.
+  const items = [...panel.querySelectorAll(".hit, .thit, .more, .all-results")];
+  const i = items.indexOf(document.activeElement);
+  if (i < 0 || (e.key !== "ArrowDown" && e.key !== "ArrowUp")) return;
+  e.preventDefault();
+  const next = items[i + (e.key === "ArrowDown" ? 1 : -1)];
+  if (next) { next.focus({ preventScroll: true }); next.scrollIntoView({ block: "nearest", behavior: reduced.matches ? "auto" : "smooth" }); }
+  else if (e.key === "ArrowUp") (document.activeElement.closest(".csearch") ? $("#cq", panel) : q).focus();
+});
 
 // --- Search, theme, header -------------------------------------------------------------------
 const q = $("#q");
-q.addEventListener("input", () => { query = q.value; render(); });
+q.addEventListener("focus", loadPagefind, { once: true });
+q.addEventListener("input", () => { query = q.value; notesShown = 8; render(); runTextSearch(); });
 q.addEventListener("keydown", (e) => {
   if (e.key === "Escape") { q.value = ""; query = ""; render(); q.blur(); }
   if (e.key === "Enter") {
     const first = panel.querySelector(".hit[data-slug]");
     if (first) { const slug = first.dataset.slug; q.value = ""; query = ""; select(slug); }
+  }
+  if (e.key === "ArrowDown" && query.trim()) {
+    const first = panel.querySelector(".hit, .thit");
+    if (first) { e.preventDefault(); first.focus({ preventScroll: true }); first.scrollIntoView({ block: "nearest", behavior: reduced.matches ? "auto" : "smooth" }); }
   }
 });
 addEventListener("keydown", (e) => {

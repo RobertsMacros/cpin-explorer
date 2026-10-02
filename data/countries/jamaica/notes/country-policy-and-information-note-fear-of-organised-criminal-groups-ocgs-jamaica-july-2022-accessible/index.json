@@ -7,6 +7,44 @@
   "current_sha256": "bff41793d411a7259a00df4f73c17de0c9d17adf40d1ddd0eb123c273e72def4",
   "versions": [
     {
+      "sha256": "6eb68dacd0e327a74fac4aa2ecd14653a8851ff104b10120755dc6d617f467de",
+      "text_sha256": "06e057a56b27fda282c4331680ecae077d10a623281b2223dc616990456b6820",
+      "source": "wayback",
+      "title": "Country policy and information note: fear of organised criminal groups (OCGs), Jamaica, July 2022 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "4.0",
+      "bytes": 372771,
+      "captures": [
+        {
+          "captured_at": "2022-08-04T09:30:37Z",
+          "archive_url": "https://web.archive.org/web/20220804093037/https://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "MJDLXUQNZFMYJIUU5NOKTOS2XI3YG6TV"
+        },
+        {
+          "captured_at": "2022-08-10T10:13:07Z",
+          "archive_url": "https://web.archive.org/web/20220810101307/https://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "NOVWXJ44QVTVV4X5Y6QMWD5Q56GRG4XA"
+        },
+        {
+          "captured_at": "2022-10-05T01:00:00Z",
+          "archive_url": "https://web.archive.org/web/20221005010000/https://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "DAYXES2M3XK7OW2CIQDPI2GWM2EIMGTE"
+        },
+        {
+          "captured_at": "2022-10-10T07:54:38Z",
+          "archive_url": "https://web.archive.org/web/20221010075438/https://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "IRSTCJKUITMDL4CYZMS5TYBAHXQVYIME"
+        },
+        {
+          "captured_at": "2023-11-19T19:58:42Z",
+          "archive_url": "https://web.archive.org/web/20231119195842/http://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "XZ3GGWYUELX2AHM6GM4XC367YU5GXOAS"
+        }
+      ]
+    },
+    {
       "sha256": "bff41793d411a7259a00df4f73c17de0c9d17adf40d1ddd0eb123c273e72def4",
       "text_sha256": "9ecefeb353d4a23421a9cca41737c40b48e76e159eaec38e164424a152f8f093",
       "source": "live",
@@ -16,6 +54,32 @@
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "4.0",
       "bytes": 358396
+    },
+    {
+      "sha256": "7dc2916df44127d3c381fd9e6c9fb4482b413c102680d65d55af7bda646cf245",
+      "text_sha256": "a777ab0848ec9c209de577e1d67fd5a382711ee87023d4e5d8d3c8318233c97a",
+      "source": "wayback",
+      "title": "Country policy and information note: fear of organised criminal groups (OCGs), Jamaica, July 2022 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "4.0",
+      "bytes": 374536,
+      "captures": [
+        {
+          "captured_at": "2024-11-13T11:21:09Z",
+          "archive_url": "https://web.archive.org/web/20241113112109/https://www.gov.uk/government/publications/jamaica-country-policy-and-information-notes/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+          "digest": "GRUITYQ4LI76RBB2JTAOVWP6PHM3XZPK"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "MJDLXUQNZFMYJIUU5NOKTOS2XI3YG6TV",
+    "NOVWXJ44QVTVV4X5Y6QMWD5Q56GRG4XA",
+    "DAYXES2M3XK7OW2CIQDPI2GWM2EIMGTE",
+    "IRSTCJKUITMDL4CYZMS5TYBAHXQVYIME",
+    "XZ3GGWYUELX2AHM6GM4XC367YU5GXOAS",
+    "GRUITYQ4LI76RBB2JTAOVWP6PHM3XZPK"
   ]
 }

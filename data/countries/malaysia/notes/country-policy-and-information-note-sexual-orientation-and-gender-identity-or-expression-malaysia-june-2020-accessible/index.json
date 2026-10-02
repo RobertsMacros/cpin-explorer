@@ -7,6 +7,54 @@
   "current_sha256": "858cd7318affcbab0c99768710621d7ed1adb36a4de86c37145432a9041a547b",
   "versions": [
     {
+      "sha256": "72ae1c3fabebb82826e9a2f4a573bff631d7c7fbb5d7b3bcbc34dd094cc9cfa4",
+      "text_sha256": "d0190eebdc5e7d468ccee94033e9fba6b61b95554e7fcf3bb84cac48f84452b2",
+      "source": "wayback",
+      "title": "Country policy and information note: sexual orientation and gender identity or expression, Malaysia, June 2020 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T16:11:51Z",
+      "last_seen": null,
+      "version_banner": "1.0",
+      "bytes": 255230,
+      "captures": [
+        {
+          "captured_at": "2022-09-22T16:01:05Z",
+          "archive_url": "https://web.archive.org/web/20220922160105/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "YIWYFAZLHKP37J5STBBV5RSSYXVV5RO2"
+        },
+        {
+          "captured_at": "2022-09-22T16:07:41Z",
+          "archive_url": "https://web.archive.org/web/20220922160741/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "WEAIBYMXYZNTZ4LNMVHT6SBODUJHFYH7"
+        },
+        {
+          "captured_at": "2022-09-27T14:39:48Z",
+          "archive_url": "https://web.archive.org/web/20220927143948/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "HALTQJINEOA2JBXDMC2UM3GHYN6PMAJK"
+        },
+        {
+          "captured_at": "2022-10-03T13:06:28Z",
+          "archive_url": "https://web.archive.org/web/20221003130628/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "GYI7YSHRP3ZQECP6ORKZGHTPHU3UXWPS"
+        },
+        {
+          "captured_at": "2023-07-24T14:49:09Z",
+          "archive_url": "https://web.archive.org/web/20230724144909/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "QB4PPI3EANC5KJHCW5EPX5L5FPH4PTCA"
+        },
+        {
+          "captured_at": "2023-07-24T15:07:17Z",
+          "archive_url": "https://web.archive.org/web/20230724150717/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "MNV76Y4KRBY7QXWUZIRDRDBPVRNI5QLO"
+        },
+        {
+          "captured_at": "2023-10-09T06:03:01Z",
+          "archive_url": "https://web.archive.org/web/20231009060301/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "7TW3GEFKLP3HTSCWJY64V3TFF2NJ3SJ4"
+        }
+      ]
+    },
+    {
       "sha256": "858cd7318affcbab0c99768710621d7ed1adb36a4de86c37145432a9041a547b",
       "text_sha256": "b2f0eae873ec48c2a3d60327b01e888785a4e761a31b621d5652c4cf08d3c152",
       "source": "live",
@@ -15,7 +63,24 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "2.0",
-      "bytes": 305690
+      "bytes": 305690,
+      "captures": [
+        {
+          "captured_at": "2025-06-26T09:30:00Z",
+          "archive_url": "https://web.archive.org/web/20250626093000/https://www.gov.uk/government/publications/malaysia-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+          "digest": "NDB3D33VAKC34OF2SCODOW33BKYZORHR"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "YIWYFAZLHKP37J5STBBV5RSSYXVV5RO2",
+    "WEAIBYMXYZNTZ4LNMVHT6SBODUJHFYH7",
+    "HALTQJINEOA2JBXDMC2UM3GHYN6PMAJK",
+    "GYI7YSHRP3ZQECP6ORKZGHTPHU3UXWPS",
+    "QB4PPI3EANC5KJHCW5EPX5L5FPH4PTCA",
+    "MNV76Y4KRBY7QXWUZIRDRDBPVRNI5QLO",
+    "7TW3GEFKLP3HTSCWJY64V3TFF2NJ3SJ4",
+    "NDB3D33VAKC34OF2SCODOW33BKYZORHR"
   ]
 }

@@ -44,8 +44,10 @@ cpin"). `./cpin` puts `src/` on the path directly. CI (Linux) uses `python -m cp
 10. **Motion must be smooth ("no snaps").** Everything eases and glides: no jumps, no
     scroll-snapping. Honour `prefers-reduced-motion`.
 11. **Look: the COBE site** (white, one electric blue, square corners, blue pixel-font label tags).
-    Tokens and fonts live in `prototypes/shared/theme.css`; reading text is Geist Sans, chrome is
-    Geist Pixel / Geist Mono. No serif, no beige ("looks like an AI artifact" was the complaint).
+    Tokens and fonts live in `prototypes/shared/theme.css`. Keep all four fonts exactly as they are
+    (owner's decision): Geist Sans (reading text), Geist Mono (dates, buttons, small details), Geist
+    Pixel (labels, tags, numbers), Geist Pixel Line (big titles such as country names). No serif, no
+    beige ("looks like an AI artifact" was the complaint).
 12. **Borders: Natural Earth UK point of view** (`web/build-borders.mjs`), not de facto borders.
     Map corrections belong in `config/countries.json`, with a reason, and a test in
     `web/test/country-locator.test.mjs`.

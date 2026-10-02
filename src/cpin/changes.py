@@ -30,23 +30,41 @@ def _is_heading(el) -> bool:
     return el.tag == "p" and len(strong) == 1 and _text(strong[0]) == _text(el)
 
 
-def change_statement(body_html: str) -> str | None:
-    """The 'Changes from last version of this note' text, verbatim, or None."""
+def _statement_blocks(body_html: str) -> list:
+    """The elements after the 'Changes from last version of this note' heading, up to the next one."""
     if not body_html or "ast version of this" not in body_html:
-        return None
+        return []
     root = lxml_html.fragment_fromstring(body_html, create_parent="div")
     for el in root.iter():
         if not isinstance(el.tag, str) or not _is_heading(el) or not _STATEMENT_RE.match(_text(el)):
             continue
-        parts = []
+        blocks = []
         for sib in el.itersiblings():
             if not isinstance(sib.tag, str) or _is_heading(sib) or sib.tag == "div":
                 break                      # next heading, the footnotes or a notice box
-            text = _text(sib)
-            if text:
-                parts.append(text)
-        return " ".join(parts) or None
-    return None
+            blocks.append(sib)
+        return blocks
+    return []
+
+
+def change_statement(body_html: str) -> str | None:
+    """The statement's prose, verbatim, for a one-line caption. Tables are left out of the caption
+    (they read as a jumble when flattened); change_statement_html keeps them."""
+    parts = [_text(b) for b in _statement_blocks(body_html) if b.tag != "table" and not b.xpath(".//table")]
+    return " ".join(p for p in parts if p) or None
+
+
+def change_statement_html(body_html: str) -> str | None:
+    """The whole statement as verbatim HTML (paragraphs, lists and tables), footnote markers removed."""
+    blocks = _statement_blocks(body_html)
+    if not blocks:
+        return None
+    html = []
+    for b in blocks:
+        for sup in b.xpath(".//sup[a[starts-with(@href, '#fn')]] | .//a[@role='doc-noteref']"):
+            sup.drop_tree()
+        html.append(lxml_html.tostring(b, encoding="unicode", with_tail=False).strip())
+    return "\n".join(html) or None
 
 
 def valid_from(body_html: str) -> str | None:
