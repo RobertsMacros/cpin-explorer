@@ -25,7 +25,9 @@
     <kbd class="search-kbd">⌘K</kbd>
   </label>
   <a class="btn saved-link" href="../saved/index.html" title="Highlights you have saved">SAVED <span id="savedCount" class="numeral"></span></a>
-  <div class="sync" title="When the scraper last checked GOV.UK"><span class="live-dot" aria-hidden="true"></span><span id="sync">Loading…</span></div>
+  <div class="sync" title="When the scraper last checked GOV.UK"><span class="live-dot" aria-hidden="true"></span><span id="sync">Loading…</span>
+    <button class="btn check-btn" id="checkBtn" type="button">CHECK FOR CHANGES</button></div>
+  <div class="check-pop" id="checkPop" hidden aria-live="polite"></div>
   <button class="btn theme-btn" id="theme" type="button">AUTO</button>
 </header>
 
@@ -33,7 +35,13 @@
   <section class="stage" aria-label="Globe of countries with notes">
     <div class="globe-wrap" id="globeWrap">
       <canvas id="globe" aria-hidden="true"></canvas>
+      <canvas id="globeGlow" class="globe-glow" aria-hidden="true"></canvas>
       <div class="pins" id="pins"></div>
+      <div class="zoom" id="zoomCtl" role="group" aria-label="Zoom">
+        <button class="btn zoom-btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
+        <button class="btn zoom-btn" type="button" data-zoom="out" aria-label="Zoom out">−</button>
+        <button class="btn zoom-btn" type="button" data-zoom="reset" aria-label="Reset zoom">⟲</button>
+      </div>
     </div>
     <p class="legend">
       <span><i class="key key--recent"></i>Updated in the last 30 days</span>
@@ -46,7 +54,7 @@
 
 <footer class="foot">
   <span>Source: <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">Home Office, GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office; always check the current edition on GOV.UK.</span>
-  <span class="foot-rm">Roberts Macros: no macro too micro.</span>
+  <span class="foot-rm"><img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="22" height="22">Roberts Macros: no macro too micro.</span>
 </footer>
 <noscript><p class="noscript">This page needs JavaScript for the globe. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
 </body>

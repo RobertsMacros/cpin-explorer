@@ -3,9 +3,14 @@
 // Data: data.json, written by `./cpin export` from the scraper's store.
 import { createGlobe, feature, geoBounds, geoContains } from "../vendor/globe-deps.js";
 import { makeCountryLocator } from "../shared/country-locator.js";
-import { hydrateFlags } from "../shared/dot-flag.js";
+import { hydrateFlags, sampleFlag } from "../shared/dot-flag.js";
+import { createCountryGlow } from "./country-glow.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import { focus, project, shortestTurn, unproject } from "../shared/globe-math.js";
+
+// The page places itself (globe at the top, or the chosen country's panel); the browser's own
+// restore would land after that, part-way down the previous page.
+if ("scrollRestoration" in history) history.scrollRestoration = "manual";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
@@ -34,12 +39,15 @@ const isRecent = (c) => c.updated && daysAgo(c.updated) <= 30;
 const countryAt = makeCountryLocator({ topo, data, feature, geoBounds, geoContains });
 
 // --- Globe -----------------------------------------------------------------------------------
-const canvas = $("#globe"), wrap = $("#globeWrap"), pinsEl = $("#pins"), panel = $("#panel");
-const dpr = Math.min(2, window.devicePixelRatio || 1);    // capped: 4K stays smooth
+const canvas = $("#globe"), overlay = $("#globeGlow"), wrap = $("#globeWrap"), pinsEl = $("#pins"), panel = $("#panel");
+const dpr = Math.min(1.5, window.devicePixelRatio || 1);  // capped: Retina and 4K stay smooth
 let size = Math.round(wrap.getBoundingClientRect().width) || 600;
 new ResizeObserver(() => { size = Math.round(wrap.getBoundingClientRect().width) || size; }).observe(wrap);
 
 let { phi, theta } = focus([24, 38]);                       // start over Africa and the Middle East
+let zoom = 1, zoomTarget = 1;
+const MIN_ZOOM = 1, MAX_ZOOM = 3.2;
+const clampZoom = (z) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z));
 let vPhi = 0, dragging = false, moved = 0, lastX = 0, lastY = 0, lastInteract = 0, flight = null;
 let selected = null, hovered = null, query = "", filterKind = "all";
 let scopeAll = false, notesShown = 8, countryQuery = "";     // search: scope toggle, note titles shown, country box
@@ -64,21 +72,36 @@ function markers() {
 }
 
 // COBE v2 draws one frame per update() and has no loop of its own, so we drive it, and skip
-// drawing entirely while the globe is still (a selected country, reduced motion).
+// drawing entirely while nothing moves (a selected country, reduced motion).
 const globe = createGlobe(canvas, {
   devicePixelRatio: dpr, width: size, height: size, phi, theta,   // width/height in CSS pixels
-  mapSamples: 20000, mapBaseBrightness: 0, markerElevation: 0.012, scale: 1, offset: [0, 0],
+  mapSamples: 16000, mapBaseBrightness: 0, markerElevation: 0.012, scale: zoom, offset: [0, 0],
   ...palette(), markers: markers(),
 });
-let drawn = { phi: NaN, theta: NaN, size };
+
+// The hovered (or selected) country lit up in its flag's colours, with its outline.
+const isoToSlug = new Map(countries.map((c) => [c.iso_n3, c.slug]));
+const shapes = new Map();
+for (const f of feature(topo, topo.objects.countries).features) {
+  const slug = data.feature_aliases?.[f.properties.name]?.slug ?? isoToSlug.get(f.id);
+  if (slug) { if (!shapes.has(slug)) shapes.set(slug, []); shapes.get(slug).push(f); }
+}
+const glow = createCountryGlow({ canvas: overlay, shapes, codeOf: (slug) => bySlug.get(slug)?.iso_a2,
+  sampleFlag, geoContains, geoBounds, isDark });
+
+let drawn = { phi: NaN, theta: NaN, size, zoom: NaN };
+let pinsDirty = true;
 function frame(now) {
   step(now);
-  if (phi !== drawn.phi || theta !== drawn.theta || size !== drawn.size) {
-    const u = { phi, theta };
+  const viewChanged = phi !== drawn.phi || theta !== drawn.theta || size !== drawn.size || zoom !== drawn.zoom;
+  if (viewChanged) {
+    const u = { phi, theta, scale: zoom };
     if (size !== drawn.size) { u.width = size; u.height = size; }     // resizing reallocates: only when needed
     globe.update(u);
-    drawn = { phi, theta, size };
   }
+  if (viewChanged || pinsDirty) { placePins(); pinsDirty = false; } // labels only move when the globe does
+  glow.draw({ phi, theta, scale: zoom }, size, dpr, viewChanged);
+  drawn = { phi, theta, size, zoom };
   requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
@@ -93,26 +116,27 @@ function step(now) {
     if (t >= 1) flight = null;
   } else if (!dragging) {
     if (Math.abs(vPhi) > 1e-4) { phi += vPhi; vPhi *= 0.93; }          // inertia after a drag
-    else if (!reduced.matches && !selected && now - lastInteract > 3500) phi += 0.0014;
+    else if (!reduced.matches && !selected && !hovered && now - lastInteract > 3500) phi += 0.0014 / zoom;
   }
-  placePins();
+  if (Math.abs(zoomTarget - zoom) > 0.0005) zoom += (zoomTarget - zoom) * (reduced.matches ? 1 : 0.16);
+  else zoom = zoomTarget;
 }
 function flyTo(latLon) {
-  const target = focus(latLon, { minTheta: -0.55, maxTheta: 0.7 });
+  const target = focus(latLon, { minTheta: -0.9, maxTheta: 1.0 });
   flight = { t0: performance.now(), dur: reduced.matches ? 1 : 1150, phi0: phi, dPhi: shortestTurn(phi, target.phi),
              theta0: theta, dTheta: target.theta - theta };
   vPhi = 0;
 }
 
-// Pins: a focusable button on every marker, carrying a COBE-style label tag with a dotted flag.
+// Pins: a focusable button on every marker, carrying a label with a dotted flag.
 const pins = countries.map((c) => {
   const el = document.createElement("button");
   el.type = "button";
   el.className = `pin${isRecent(c) ? " is-recent" : ""}`;
   el.dataset.slug = c.slug;
   el.dataset.place = "top";
-  el.setAttribute("aria-label", `${c.name}: ${liveNotes(c).length} notes`);
-  el.innerHTML = `<span class="tag pin-label">${flagCanvas(c, 8, "dotflag--tag")}<span>${esc(c.name)}</span><b>${liveNotes(c).length}</b></span>`;
+  el.setAttribute("aria-label", `${c.name}: ${c.reports?.length ?? liveNotes(c).length} reports`);
+  el.innerHTML = `<span class="tag pin-label">${flagCanvas(c, 8, "dotflag--tag")}<span>${esc(c.name)}</span><b>${c.reports?.filter((r) => r.status === "live").length ?? liveNotes(c).length}</b></span>`;
   pinsEl.append(el);
   return { c, el, label: el.firstElementChild, behind: null, labelled: false, place: "top",
            count: liveNotes(c).length, recent: isRecent(c), x: 0, y: 0, depth: 0, w: 0, h: 0 };
@@ -121,18 +145,20 @@ let labelOffset = 19;                     // px from a marker to its label's nea
 function measureLabels() {
   labelOffset = parseFloat(getComputedStyle(document.documentElement).fontSize) * 1.2;
   for (const p of pins) { p.w = p.label.offsetWidth; p.h = p.label.offsetHeight; }
+  pinsDirty = true;
 }
 document.fonts.ready.then(() => hydrateFlags(pinsEl)).then(measureLabels);
 new ResizeObserver(measureLabels).observe(document.documentElement);
 
 function placePins() {
-  const view = { phi, theta, elevation: 0.012 };
+  const view = { phi, theta, scale: zoom, elevation: 0.012 };
   for (const p of pins) {
     const r = project(p.c.marker, view);
     p.x = r.x * size; p.y = r.y * size; p.depth = r.depth;
+    const offCanvas = p.x < -20 || p.y < -20 || p.x > size + 20 || p.y > size + 20;   // zoomed past the edge
     p.el.style.transform = `translate3d(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px, 0)`;
-    p.el.style.setProperty("--vis", Math.max(0, Math.min(1, r.depth / 0.2)).toFixed(3));
-    const behind = r.depth <= 0.03;
+    p.el.style.setProperty("--vis", offCanvas ? "0" : Math.max(0, Math.min(1, r.depth / 0.2)).toFixed(3));
+    const behind = r.depth <= 0.03 || offCanvas;
     if (behind !== p.behind) {
       p.behind = behind;
       p.el.classList.toggle("is-behind", behind);
@@ -142,8 +168,9 @@ function placePins() {
   layoutLabels();
 }
 
-// As many labels as fit: highest priority first (selected, hovered, recently updated, most notes,
-// nearest the viewer), each trying its current side first so labels don't flicker, then the others.
+// As many labels as fit (up to a cap that grows with zoom): highest priority first (selected,
+// hovered, recently updated, most notes, nearest the viewer), each trying its current side first so
+// labels don't flicker, then the others.
 const SIDES = ["top", "right", "left", "bottom"];
 function labelRect(p, side) {
   const o = labelOffset, { w, h } = p;
@@ -157,13 +184,15 @@ const overlaps = (a, b, pad = 5) =>
 function layoutLabels() {
   const rank = (p) => (p.c.slug === selected ? 1e4 : 0) + (p.c.slug === hovered ? 5e3 : 0) + (p.recent ? 200 : 0)
     + p.count * 4 + p.depth * 60;
-  const candidates = pins.filter((p) => p.w && (p.depth > 0.28 || p.c.slug === selected || p.c.slug === hovered))
+  const cap = Math.round(20 * zoom);
+  const candidates = pins.filter((p) => p.w && !p.behind && (p.depth > 0.28 || p.c.slug === selected || p.c.slug === hovered))
     .sort((a, b) => rank(b) - rank(a));
   const placed = [], shown = new Set();
   for (const p of candidates) {
+    if (shown.size >= cap && p.c.slug !== selected && p.c.slug !== hovered) break;
     for (const side of [p.place, ...SIDES.filter((s) => s !== p.place)]) {
       const rect = labelRect(p, side);
-      if (rect[1] < -4 || rect[0] < -40 || rect[0] + rect[2] > size + 40) continue;
+      if (rect[1] < -4 || rect[1] + rect[3] > size + 4 || rect[0] < -40 || rect[0] + rect[2] > size + 40) continue;
       if (placed.some((q) => overlaps(q, rect))) continue;
       placed.push(rect);
       shown.add(p);
@@ -179,7 +208,7 @@ function layoutLabels() {
 
 function hitAt(e) {
   const r = canvas.getBoundingClientRect();
-  const latLon = unproject((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height, { phi, theta });
+  const latLon = unproject((e.clientX - r.left) / r.width, (e.clientY - r.top) / r.height, { phi, theta, scale: zoom });
   return latLon ? countryAt(latLon) : null;
 }
 function setHover(slug) {
@@ -187,6 +216,8 @@ function setHover(slug) {
   hovered = slug;
   for (const p of pins) p.el.classList.toggle("is-hover", p.c.slug === slug);
   canvas.classList.toggle("over-country", !!slug);
+  glow.set(hovered || selected);
+  pinsDirty = true;
 }
 let pendingHover = null;
 function queueHover(e) {
@@ -194,35 +225,68 @@ function queueHover(e) {
   pendingHover = e;
 }
 
+// Pointer: drag to turn (with inertia), click to select, pinch to zoom; wheel and buttons zoom too.
+const pointers = new Map();
+let pinch = null, wasPinch = false;
 canvas.addEventListener("pointerdown", (e) => {
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  try { canvas.setPointerCapture(e.pointerId); } catch {}
+  if (pointers.size === 2) {
+    const [a, b] = [...pointers.values()];
+    pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, z: zoomTarget };
+    wasPinch = true; dragging = false;
+    return;
+  }
+  wasPinch = false;
   dragging = true; moved = 0; vPhi = 0; flight = null;
   lastX = e.clientX; lastY = e.clientY; lastInteract = performance.now();
-  try { canvas.setPointerCapture(e.pointerId); } catch {}
   canvas.classList.add("dragging");
 });
 canvas.addEventListener("pointermove", (e) => {
+  if (pointers.has(e.pointerId)) pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pinch && pointers.size >= 2) {
+    const [a, b] = [...pointers.values()];
+    zoomTarget = clampZoom((pinch.z * Math.hypot(a.x - b.x, a.y - b.y)) / pinch.d);
+    return;
+  }
   if (!dragging) return queueHover(e);
-  const k = Math.PI / Math.max(size, 1);                 // a full drag across turns it half way round
+  const k = Math.PI / Math.max(size, 1) / zoom;          // a full drag across turns it half way round
   const dx = e.clientX - lastX, dy = e.clientY - lastY;
   lastX = e.clientX; lastY = e.clientY; moved += Math.abs(dx) + Math.abs(dy);
   phi += dx * k;
-  theta = Math.max(-0.9, Math.min(0.9, theta + dy * k));
+  theta = Math.max(-1.2, Math.min(1.2, theta + dy * k));
   vPhi = dx * k;
   lastInteract = performance.now();
   setHover(null);
 });
-canvas.addEventListener("pointerup", (e) => {
+function endPointer(e) {
+  pointers.delete(e.pointerId);
+  if (pointers.size < 2) pinch = null;
   if (!dragging) return;
   dragging = false;
   canvas.classList.remove("dragging");
-  if (moved < 6) {                                        // a click, not a drag
+  if (moved < 6 && !wasPinch && e.type === "pointerup") {   // a click, not a drag
     vPhi = 0;
     const slug = hitAt(e);
     if (slug) select(slug);
   }
-});
-canvas.addEventListener("pointercancel", () => { dragging = false; canvas.classList.remove("dragging"); });
+}
+canvas.addEventListener("pointerup", endPointer);
+canvas.addEventListener("pointercancel", endPointer);
 canvas.addEventListener("pointerleave", () => { if (!dragging) setHover(null); });
+wrap.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  zoomTarget = clampZoom(zoomTarget * Math.exp(-e.deltaY * 0.0016));
+  lastInteract = performance.now();
+}, { passive: false });
+$("#zoomCtl")?.addEventListener("click", (e) => {
+  const b = e.target.closest("[data-zoom]");
+  if (!b) return;
+  if (b.dataset.zoom === "in") zoomTarget = clampZoom(zoomTarget * 1.45);
+  else if (b.dataset.zoom === "out") zoomTarget = clampZoom(zoomTarget / 1.45);
+  else { zoomTarget = 1; if (selected) flyTo(bySlug.get(selected).marker); }
+  lastInteract = performance.now();
+});
 pinsEl.addEventListener("click", (e) => { const pin = e.target.closest(".pin"); if (pin) select(pin.dataset.slug); });
 pinsEl.addEventListener("pointerover", (e) => { const pin = e.target.closest(".pin"); if (pin) setHover(pin.dataset.slug); });
 pinsEl.addEventListener("pointerout", (e) => { if (e.target.closest(".pin")) setHover(null); });
@@ -236,6 +300,9 @@ function select(slug, { fly = true, record = true } = {}) {
   countryQuery = "";
   for (const p of pins) p.el.classList.toggle("is-selected", p.c.slug === slug);
   globe.update({ markers: markers() });
+  glow.set(hovered || slug);
+  pinsDirty = true;
+  try { slug ? localStorage.setItem("cpin-last-country", slug) : localStorage.removeItem("cpin-last-country"); } catch {}
   if (slug && fly) flyTo(bySlug.get(slug).marker);
   if (record) history.replaceState(null, "", slug ? `#${slug}` : location.pathname + location.search);
   render();
@@ -284,37 +351,62 @@ function overview() {
     </section>`;
 }
 
-function noteCard(n, i) {
-  const gone = n.status !== "live";
-  const status = n.status === "removed" ? `<span class="tag tag--muted">Removed from GOV.UK</span>`
-    : n.status === "archived" ? `<span class="tag tag--muted">Archived copy only</span>` : "";
-  const when = [n.month ? fmtMonth(n.month) : fmtDate(n.updated), n.version ? `V${esc(n.version)}` : ""].filter(Boolean).join(" · ");
-  const editions = n.editions > 1 ? `${n.editions} EDITIONS ON RECORD · EARLIEST ${n.earliest ? fmtDate(n.earliest) : "—"}` : "1 EDITION ON RECORD";
-  return `<article class="note${gone ? " is-gone" : ""}" style="--i:${i}" title="${esc(n.title)}">
-    <div class="note-top"><span class="tag ${gone ? "tag--muted" : "tag--outline"}">${esc(n.kind)}</span>
-      <span class="note-when">${when}</span>${n.pdf_only ? `<span class="tag tag--muted">PDF only</span>` : ""}${status}</div>
-    <h3 class="note-title">${esc(n.topic || n.title)}</h3>
-    ${n.latest_change ? `<p class="note-change"><span class="eyebrow">What changed${n.latest_change.version ? ` in v${esc(n.latest_change.version)}` : ""}</span> “${esc(n.latest_change.statement)}”</p>` : ""}
-    <div class="note-meta">${editions}</div>
+const TOPIC_FILLER = new Set(["a", "an", "and", "or", "the", "of", "in", "on", "for", "to", "with", "including", "issues", "provision", "treatment"]);
+const topicWords = (key) => new Set(key.split(":").pop().split("-").filter((w) => w && !TOPIC_FILLER.has(w)));
+/** The report a GOV.UK change note is about, if its words make that clear. */
+function reportForNote(c, note) {
+  const words = new Set(note.toLowerCase().match(/[a-z0-9]+/g) || []);
+  let best = null, bestScore = 0;
+  for (const r of c.reports || []) {
+    const t = topicWords(r.key);
+    if (!t.size) continue;
+    const score = [...t].filter((w) => words.has(w)).length / t.size;
+    if (score > bestScore) { best = r; bestScore = score; }
+  }
+  return bestScore >= 0.6 ? best : null;
+}
+
+function reportCard(r, i) {
+  const gone = r.status !== "live";
+  const L = r.latest || {};
+  const published = L.published ? (L.published_precision === "month" ? fmtMonth(L.published.slice(0, 7)) : fmtDate(L.published)) : "";
+  const when = [published, L.version ? `V${esc(L.version)}` : ""].filter(Boolean).join(" · ");
+  const status = r.status === "removed" ? `<span class="tag tag--muted">Removed from GOV.UK</span>`
+    : r.status === "archived" ? `<span class="tag tag--muted">Archived copy only</span>` : "";
+  const editions = r.editions > 1 ? `${r.editions} EDITIONS ON RECORD · SINCE ${fmtDate(r.earliest)}` : "1 EDITION ON RECORD";
+  const change = r.latest_change ? `<p class="note-change"><span class="eyebrow">What changed${r.latest_change.version ? ` in v${esc(r.latest_change.version)}` : ""}</span> “${esc(r.latest_change.statement)}”${r.latest_change.has_table ? ' <span class="note-more">+ a table in the report</span>' : ""}</p>` : "";
+  const primary = r.read_url
+    ? `<a class="btn btn--primary" href="${esc(r.read_url)}">${gone ? "Read the last edition" : "Read the latest guidance"}</a>`
+    : L.pdf_url ? `<a class="btn btn--primary" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">Open the PDF ↗</a>` : "";
+  return `<article class="note${gone ? " is-gone" : ""}" style="--i:${i}">
+    <div class="note-top"><span class="tag ${gone ? "tag--muted" : "tag--outline"}">${esc(r.kind)}</span>
+      <span class="note-when">${when}</span>${r.pdf_only ? `<span class="tag tag--muted">PDF only</span>` : ""}${status}</div>
+    <h3 class="note-title">${esc(r.topic)}</h3>
+    ${change}
+    <div class="note-meta">${editions}${r.history_count ? ` · ${plural(r.history_count, "GOV.UK UPDATE")}` : ""}</div>
     <div class="note-actions">
-      ${n.pdf_only ? "" : `<a class="btn btn--primary" href="../reader/index.html?country=${esc(currentSlug)}&note=${encodeURIComponent(n.id)}">Read</a>`}
-      ${n.govuk_url && !n.pdf_only ? `<a class="btn" href="${esc(n.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : ""}
-      ${n.pdf_url ? `<a class="btn" href="${esc(n.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
-      ${gone && n.archive_url ? `<a class="btn" href="${esc(n.archive_url)}" target="_blank" rel="noopener">Archived copy ↗</a>` : ""}
-      ${n.compare_url ? `<a class="btn" href="${esc(n.compare_url)}">Compare ${n.editions} editions</a>` : ""}
+      ${primary}
+      ${r.read_url ? `<a class="btn" href="${esc(r.read_url)}#history">History${r.editions > 1 ? " & changes" : ""}</a>` : ""}
+      ${L.govuk_url && !r.pdf_only ? `<a class="btn" href="${esc(L.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : ""}
+      ${L.pdf_url && r.read_url ? `<a class="btn" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
+      ${gone && L.archive_url ? `<a class="btn" href="${esc(L.archive_url)}" target="_blank" rel="noopener">Archived copy ↗</a>` : ""}
     </div></article>`;
 }
 let currentSlug = null;
 function notesList(c) {
   currentSlug = c.slug;
-  const shown = c.notes.filter((n) => filterKind === "all" || n.kind === filterKind);
-  return shown.map(noteCard).join("") || `<p class="empty">No notes of this kind.</p>`;
+  const reports = (c.reports || []).filter((r) => filterKind === "all" || r.kind === filterKind);
+  const live = reports.filter((r) => r.status === "live"), gone = reports.filter((r) => r.status !== "live");
+  return (live.map(reportCard).join("") || `<p class="empty">No current reports of this kind.</p>`)
+    + (gone.length ? `<details class="gone-reports"><summary class="eyebrow">No longer on GOV.UK · ${gone.length}</summary>
+        <div class="notes">${gone.map((r, i) => reportCard(r, i)).join("")}</div></details>` : "");
 }
 function countryView(c) {
-  const live = liveNotes(c);
+  const reports = c.reports || [];
+  const live = reports.filter((r) => r.status === "live");
   const archived = c.notes.reduce((sum, n) => sum + n.archived_editions, 0);
-  const kinds = [...new Set(c.notes.map((n) => n.kind))];
-  const count = (k) => (k === "all" ? c.notes.length : c.notes.filter((n) => n.kind === k).length);
+  const kinds = [...new Set(reports.map((r) => r.kind))];
+  const count = (k) => (k === "all" ? reports.length : reports.filter((r) => r.kind === k).length);
   const filters = kinds.length > 1
     ? `<div class="filters" role="group" aria-label="Filter notes by kind">${["all", ...kinds].map((k) =>
         `<button class="filter" data-kind="${esc(k)}" aria-pressed="${filterKind === k}">${k === "all" ? "All" : esc(k)} ${count(k)}</button>`).join("")}</div>`
@@ -325,7 +417,7 @@ function countryView(c) {
       ${flagCanvas(c, 24, "dotflag--hero", true, true)}
       <div><p class="eyebrow">Country</p><h1 class="country-title">${esc(c.name)}</h1></div>
     </div>
-    <p class="meta-line"><span>UPDATED ${fmtDate(c.updated)}</span><span>${plural(live.length, "NOTE")}</span>
+    <p class="meta-line"><span>UPDATED ${fmtDate(c.updated)}</span><span>${plural(live.length, "REPORT")}</span>
       ${archived ? `<span>${plural(archived, "ARCHIVED EDITION")}</span>` : ""}
       <a href="${esc(c.govuk_url)}" target="_blank" rel="noopener">GOV.UK PAGE ↗</a></p>
     ${c.caveat ? `<p class="caveat">${esc(c.caveat)}</p>` : ""}
@@ -333,8 +425,9 @@ function countryView(c) {
     ${filters}
     <div class="notes">${notesList(c)}</div>
     <section class="section" style="margin-top:2.6rem">
-      <div class="section-head"><h2 class="eyebrow">Change history</h2><span class="eyebrow">As published on GOV.UK</span></div>
-      <ol class="history">${c.history.map((h) => `<li><time datetime="${esc(h.date)}">${fmtDate(h.date)}</time><p>${esc(h.note)}</p></li>`).join("")}</ol>
+      <div class="section-head"><h2 class="eyebrow">Updates to ${esc(possessive(c.name))} page on GOV.UK</h2><span class="eyebrow">All reports · verbatim</span></div>
+      <p class="source-note" style="margin-top:0">GOV.UK keeps one change log for the whole country page. Where an entry clearly concerns one report, it links to it.</p>
+      <ol class="history">${c.history.map((h) => { const r = reportForNote(c, h.note); return `<li><time datetime="${esc(h.date)}">${fmtDate(h.date)}</time><p>${esc(h.note)}</p>${r?.read_url ? `<a class="history-link" href="${esc(r.read_url)}#history">${esc(r.topic)} →</a>` : ""}</li>`; }).join("")}</ol>
     </section>`;
 }
 
@@ -578,8 +671,15 @@ function applyTheme(mode) {
   try { localStorage.setItem("cpin-theme", mode); } catch {}
   themeBtn.textContent = mode.toUpperCase();
   themeBtn.setAttribute("aria-label", `Colour theme: ${mode}. Click to change.`);
+  // Switch instantly (no colour transitions on hundreds of elements), then redraw the dotted flags
+  // a few at a time: what is on screen first, the globe's labels just after.
+  const root = document.documentElement;
+  root.classList.add("theme-switching");
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove("theme-switching")));
   globe.update({ ...palette(), markers: markers() });
-  hydrateFlags(document, { force: true });
+  glow.refresh();
+  setTimeout(() => hydrateFlags(panel, { force: true }), 30);
+  setTimeout(() => hydrateFlags(pinsEl, { force: true }), 260);
 }
 themeBtn.addEventListener("click", () => applyTheme(MODES[(MODES.indexOf(currentMode()) + 1) % MODES.length]));
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { if (currentMode() === "auto") applyTheme("auto"); });
@@ -590,11 +690,50 @@ if (new URLSearchParams(location.search).has("debug")) {
   window.cpin = { countryAt, select, focusOn: (slug) => ({ ...focus(bySlug.get(slug).marker) }), state: () => ({ phi, theta, selected, size }) };
 }
 
-$("#sync").textContent = `CHECKED ${fmtDateTime(data.last_sync)}`;
+$("#sync").textContent = `ACCURATE AS OF ${fmtDateTime(data.last_sync)}`;
+
+// Check for changes: ask GOV.UK directly (its content API allows any web page to read it) whether
+// any country page has been updated since our last sync. Nothing is changed here; the daily sync
+// picks updates up.
+const checkBtn = $("#checkBtn"), checkPop = $("#checkPop");
+checkBtn?.addEventListener("click", async () => {
+  checkBtn.disabled = true;
+  checkBtn.textContent = "CHECKING…";
+  try {
+    const live = await fetchJson("https://www.gov.uk/api/content/government/collections/country-policy-and-information-notes");
+    const ours = new Map(countries.map((c) => [c.govuk_url.replace("https://www.gov.uk", ""), c]));
+    const newer = (live.links?.documents || []).filter((d) => {
+      const c = ours.get(d.base_path);
+      return !c || Date.parse(d.public_updated_at) > Date.parse(c.updated) + 60_000;
+    });
+    const now = new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+    checkPop.innerHTML = newer.length
+      ? `<p class="eyebrow">GOV.UK has ${plural(newer.length, "NEWER UPDATE")}</p><ul>${newer.map((d) => {
+          const c = ours.get(d.base_path);
+          return `<li>${c ? `<button class="country-link linkish" data-slug="${c.slug}">${esc(c.name)}</button>` : esc(d.title)}
+            <span>updated ${fmtDate(d.public_updated_at)}</span> <a href="https://www.gov.uk${esc(d.base_path)}" target="_blank" rel="noopener">GOV.UK ↗</a></li>`;
+        }).join("")}</ul><p class="source-note">The next daily sync will mirror these. Checked at ${now}.</p>`
+      : `<p class="eyebrow">Up to date</p><p>Every country page matches GOV.UK. Checked at ${now}.</p>`;
+  } catch {
+    checkPop.innerHTML = `<p class="eyebrow">Couldn't reach GOV.UK</p><p>Try again in a moment.</p>`;
+  }
+  checkPop.hidden = false;
+  checkBtn.disabled = false;
+  checkBtn.textContent = "CHECK FOR CHANGES";
+});
+checkPop?.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-slug]");
+  if (t) { checkPop.hidden = true; select(t.dataset.slug); }
+});
+addEventListener("pointerdown", (e) => {
+  if (checkPop && !checkPop.hidden && !e.target.closest("#checkPop, #checkBtn")) checkPop.hidden = true;
+});
 try {                                    // highlights are saved in this browser by the reader
   const saved = JSON.parse(localStorage.getItem("cpin-highlights-v1") || "[]");
   if (saved.length) $("#savedCount").textContent = saved.length;
 } catch {}
-const initial = location.hash.slice(1);
-if (bySlug.has(initial)) select(initial, { record: false });
+// Keep your place: reopen the country you were last looking at (the logo and back links come here).
+let initial = location.hash.slice(1);
+if (!bySlug.has(initial)) { try { initial = localStorage.getItem("cpin-last-country") || ""; } catch { initial = ""; } }
+if (bySlug.has(initial)) select(initial, { record: !location.hash });
 else render();

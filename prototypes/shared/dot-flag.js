@@ -57,6 +57,9 @@ async function sample(code, cols, rows) {
   return samples.get(key);
 }
 
+/** A flag's colours on a cols×rows grid ([r, g, b] or null where transparent), for other drawings. */
+export const sampleFlag = (code, cols, rows) => sample(code, cols, rows);
+
 const luminance = ([r, g, b]) => (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
 
 function isDark() {

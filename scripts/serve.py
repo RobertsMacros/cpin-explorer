@@ -15,10 +15,17 @@ class Server(http.server.ThreadingHTTPServer):
     daemon_threads = True
 
 
+class Handler(http.server.SimpleHTTPRequestHandler):
+    # Revalidate every time (a cheap 304 when nothing changed), so an edited script is never stale.
+    def end_headers(self):
+        self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
+
 def main():
     port = int(sys.argv[1]) if len(sys.argv) > 1 else 8781
     root = Path(__file__).resolve().parents[1]
-    handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(root))
+    handler = functools.partial(Handler, directory=str(root))
     with Server(("127.0.0.1", port), handler) as httpd:
         print(f"serving {root} at http://localhost:{port}/", flush=True)
         httpd.serve_forever()
