@@ -1,4 +1,4 @@
-// CPIN Extractor dashboard: a COBE globe of the countries the Home Office publishes notes on,
+// CPIN Explorer dashboard: a COBE globe of the countries the Home Office publishes notes on,
 // with each country's notes, GOV.UK's own change history and a search over countries and topics.
 // Data: data.json, written by `./cpin export` from the scraper's store.
 import { createGlobe, feature, geoBounds, geoContains } from "../vendor/globe-deps.js";

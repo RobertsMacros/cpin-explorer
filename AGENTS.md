@@ -1,4 +1,4 @@
-# cpin-extractor: rules for agents
+# cpin-explorer: rules for agents
 
 A verbatim, versioned mirror of the Home Office's Country Policy and Information Notes (CPINs) on
 GOV.UK, built in three parts: the scraper (`src/cpin/`, Python), the site (not built yet), and the
@@ -13,10 +13,11 @@ comparison layer (timeline and inline redlines). UK English throughout.
 ./cpin backfill              # older editions from the Internet Archive
 ./cpin status
 ```
-Setup: `python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"`. Locally, use `./cpin`
-rather than `python -m cpin`: on this Mac something keeps setting the Finder `hidden` flag on
-the editable install's `.pth` file, and Python 3.13+ skips hidden `.pth` files ("No module named
-cpin"). `./cpin` puts `src/` on the path directly. CI (Linux) uses `python -m cpin`.
+Setup: `python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"`, and `cd web && npm ci`.
+**Keep the repo out of iCloud-synced folders** (Documents, Desktop): with "Optimise Mac Storage", iCloud
+evicts files (including `.venv` and `node_modules`) and every read then hangs on a download; it also set a
+`hidden` flag on the editable install's `.pth` file, so Python 3.13+ ignored it ("No module named cpin").
+It now lives in `~/Developer/cpin-explorer`. `./cpin` (puts `src/` on the path itself) still works either way.
 
 ## Rules
 1. **Verbatim.** Stored note bodies are exactly what the Content API returned. Never rewrite,

@@ -1,4 +1,4 @@
-/* CPIN Extractor · redline worker (module worker).
+/* CPIN Explorer · redline worker (module worker).
    Holds the edition bodies of one series, parses each body once, and answers
    { type: 'diff', id, a, b } with the rendered redline for that pair. Results are cached per pair.
    Progress is posted while a comparison runs so the page can show a light progress state. */

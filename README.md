@@ -1,6 +1,6 @@
 <img src="assets/roberts-macros/image.png" alt="Roberts Macros" width="72" align="right">
 
-# CPIN Extractor
+# CPIN Explorer
 
 *Roberts Macros: no macro too micro.*
 

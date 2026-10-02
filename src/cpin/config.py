@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = ROOT / "data"
 
 # One honest User-Agent: no browser impersonation and no personal contact details.
-USER_AGENT = "cpin-extractor/0.1 (+https://github.com/RobertsMacros/cpin-extractor)"
+USER_AGENT = "cpin-explorer/0.1 (+https://github.com/RobertsMacros/cpin-explorer)"
 
 GOVUK = "https://www.gov.uk"
 CONTENT_API = GOVUK + "/api/content"

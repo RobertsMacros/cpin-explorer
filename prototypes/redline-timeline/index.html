@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>CPIN Extractor — Revision timeline prototype</title>
+<title>CPIN Explorer — Revision timeline prototype</title>
 <!--
-  CPIN Extractor · revision slider + redline view toggle.
+  CPIN Explorer · revision slider + redline view toggle.
   Real mode: index.html?country=<slug>&series=<key> (optionally &view=sbs) loads the verbatim GOV.UK
   editions exported by `./cpin export` from ../data/series/ and compares pairs in a module Web Worker
   (redline-worker.js, engine in ../shared/redline-diff.js). Note text is never altered; only image
@@ -703,7 +703,7 @@ del::before { content: " [deleted: "; } del::after { content: " ] "; }
   <div class="wrap">
     <a class="brand" href="#top" id="top">
       <span class="rm"><img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="1536" height="1024"></span>
-      <span class="brand-name">CPIN Extractor</span>
+      <span class="brand-name">CPIN Explorer</span>
     </a>
     <span class="crumb" id="crumb">Prototype · revision timeline &amp; redline</span>
     <span class="spacer"></span>
@@ -2115,7 +2115,7 @@ async function bootReal() {
   if (!vs.length) return showLoadError('No editions are held for this note.');
   REALDOC.meta = data;
   back.textContent = '← ' + (data.country_name || back.textContent.slice(2));
-  document.title = `${data.country_name} · ${capFirst(data.topic || data.key)} — CPIN Extractor`;
+  document.title = `${data.country_name} · ${capFirst(data.topic || data.key)} — CPIN Explorer`;
   VERSIONS = vs.map(r => ({ v: r.version || '—', t: Date.parse(r.date || r.published || r.first_seen), prec: r.published ? r.published_precision : null, note: r.title, raw: r }));
   const yr = t => new Date(t).getUTCFullYear(), now = Date.now();
   AXIS = { start: Date.UTC(yr(VERSIONS[0].t), 0, 1), end: Date.UTC(Math.max(yr(VERSIONS[VERSIONS.length - 1].t), yr(now)), 11, 31), today: now };

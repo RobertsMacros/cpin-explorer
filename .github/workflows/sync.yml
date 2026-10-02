@@ -50,7 +50,7 @@ jobs:
 
       - name: Commit data changes
         run: |
-          git config user.name "cpin-extractor bot"
+          git config user.name "cpin-explorer bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
           # A quiet day only appends to runs.jsonl; don't make a commit for that alone.

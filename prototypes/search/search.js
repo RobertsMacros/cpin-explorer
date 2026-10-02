@@ -1,4 +1,4 @@
-// CPIN Extractor search: the full text of every live note, section by section, filtered by country
+// CPIN Explorer search: the full text of every live note, section by section, filtered by country
 // and kind. The index is Pagefind's, built by `cd web && npm run search-index` into ./pagefind/ and run
 // in the browser: the page only fetches the index chunks a query needs. Results open in the reader at
 // the matching section, with the query carried over to its find-in-note (&q=).
@@ -74,7 +74,7 @@ function syncUrl() {
   if (state.kinds.size) p.set("kind", [...state.kinds].join(","));
   const qs = p.toString().replace(/%2C/g, ",");
   history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
-  document.title = state.q.trim() ? `“${state.q.trim()}” · Search · CPIN Extractor` : "Search · CPIN Extractor";
+  document.title = state.q.trim() ? `“${state.q.trim()}” · Search · CPIN Explorer` : "Search · CPIN Explorer";
 }
 
 /* ------------------------------------------------------------------ searching */

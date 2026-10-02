@@ -1,4 +1,4 @@
-/* CPIN Extractor · redline diff engine.
+/* CPIN Explorer · redline diff engine.
    Compares two verbatim GOV.UK "govspeak" note bodies and emits a redline.
    ES module, no dependencies, no DOM: runs in a browser, in a module Web Worker and in Node.
 

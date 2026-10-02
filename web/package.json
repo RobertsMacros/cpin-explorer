@@ -1,5 +1,5 @@
 {
-  "name": "cpin-extractor-web",
+  "name": "cpin-explorer-web",
   "private": true,
   "type": "module",
   "description": "Front-end toolchain: vendors COBE, map data and fonts into the prototypes (no CDN at runtime).",

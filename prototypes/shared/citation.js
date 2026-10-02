@@ -1,4 +1,4 @@
-// CPIN Extractor · citations for passages quoted from Home Office country notes.
+// CPIN Explorer · citations for passages quoted from Home Office country notes.
 // Pure functions, no DOM: they run in the browser and in Node (web/test/citation.test.mjs).
 //
 //   OSCOLA     Home Office, <i>Country Policy and Information Note: Military Service, Iran</i>

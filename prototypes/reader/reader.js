@@ -1,4 +1,4 @@
-// CPIN Extractor reader: the latest edition of one note, verbatim from GOV.UK, with saved highlights
+// CPIN Explorer reader: the latest edition of one note, verbatim from GOV.UK, with saved highlights
 // that carry a citation (OSCOLA or tribunal short form), the paragraph number and the sources cited.
 //
 //   index.html?country=<slug>&note=<note id>[#h=<highlight id> | #<heading id>]
@@ -205,7 +205,7 @@ function renderHead() {
   const published = e.public_updated_at ? `Published ${fmtDate(e.public_updated_at)}` : month ? `Published ${month.short}` : "";
   const cap = latestCapture(e);
   const successor = gone && n.series ? (c.notes || []).find((x) => x.series === n.series && x.status === "live" && x.id !== n.id) : null;
-  document.title = `${topic} · ${c.name} · CPIN Extractor`;
+  document.title = `${topic} · ${c.name} · CPIN Explorer`;
 
   const meta = [
     version ? `<span>Version <b>${esc(version)}</b></span>` : "",

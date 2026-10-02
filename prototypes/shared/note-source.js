@@ -1,4 +1,4 @@
-// CPIN Extractor · where a note's text comes from: its index.json, the edition to show, the verbatim
+// CPIN Explorer · where a note's text comes from: its index.json, the edition to show, the verbatim
 // body file and the URL a citation should point at. Edition logic is pure (Node-testable); the fetch
 // helpers need a browser (or Node's fetch).
 import { fetchJson } from "./fetch-json.js";

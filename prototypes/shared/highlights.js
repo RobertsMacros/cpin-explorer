@@ -1,4 +1,4 @@
-// CPIN Extractor · saved highlights: storage, anchoring and staleness.
+// CPIN Explorer · saved highlights: storage, anchoring and staleness.
 //
 // A highlight is anchored like a W3C TextQuoteSelector (the exact words plus ~32 characters either
 // side) with a text-position fallback, over the plain text of a note body (its textContent). It
@@ -259,7 +259,7 @@ const staleLine = (r) => r.check === "changed" ? `Changed since you saved it (v$
 
 /** Markdown export of every highlight, grouped by country and note. */
 export function exportMarkdown(records, { style = "oscola", accessed = new Date() } = {}) {
-  const out = [`# Saved highlights`, ``, `CPIN Extractor · exported ${longDate(accessed)} · ${STYLE_NAMES[style] || style} citations`, ``];
+  const out = [`# Saved highlights`, ``, `CPIN Explorer · exported ${longDate(accessed)} · ${STYLE_NAMES[style] || style} citations`, ``];
   for (const c of groupHighlights(records)) {
     out.push(`## ${c.countryName}`, ``);
     for (const n of c.notes) {

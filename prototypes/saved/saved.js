@@ -1,4 +1,4 @@
-// CPIN Extractor · saved highlights across every note, grouped by country and note, each with its
+// CPIN Explorer · saved highlights across every note, grouped by country and note, each with its
 // citation (OSCOLA or tribunal), the sources it cites, a private note and a staleness check against
 // the edition now held. Records live in this browser (localStorage "cpin-highlights-v1").
 import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
