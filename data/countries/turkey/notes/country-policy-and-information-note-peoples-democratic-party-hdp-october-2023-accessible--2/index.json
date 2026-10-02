@@ -7,6 +7,44 @@
   "current_sha256": "2b57e33bfc8908517d65e1440326bd698806dc8b0252517138b9687708a6c589",
   "versions": [
     {
+      "sha256": "2507500f07c93cabc24cb202ea95f668d6970f09b988ddd2abe282934cfb548d",
+      "text_sha256": "de0a314c287bcf91c69f9cb580de086b13408d76799fe576a4fd9b1058fe0f09",
+      "source": "wayback",
+      "title": "Country policy and information note: Peoples' Democratic Party (HDP), October 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "5.0",
+      "bytes": 195339,
+      "captures": [
+        {
+          "captured_at": "2023-10-25T15:21:57Z",
+          "archive_url": "https://web.archive.org/web/20231025152157/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "AHDP7NSJH3R5VLFFNTR4NBVA2CJFAXQE"
+        },
+        {
+          "captured_at": "2024-09-06T19:47:46Z",
+          "archive_url": "https://web.archive.org/web/20240906194746/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "2DNAKGBYOFJDZY3XAGVJD54U5V2QJMXY"
+        },
+        {
+          "captured_at": "2024-12-04T09:15:05Z",
+          "archive_url": "https://web.archive.org/web/20241204091505/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "5EOS2BZCMXJ42KIVEWIIIGMNRETZ7ACY"
+        },
+        {
+          "captured_at": "2024-12-31T17:43:38Z",
+          "archive_url": "https://web.archive.org/web/20241231174338/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "N36NMEWSI2QXOZ23F6DEAIQTYACK7GVE"
+        },
+        {
+          "captured_at": "2025-01-20T05:36:39Z",
+          "archive_url": "https://web.archive.org/web/20250120053639/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "JOJNOQN3Y4DUHUVAJPP5JP5FXGFJB7PD"
+        }
+      ]
+    },
+    {
       "sha256": "2b57e33bfc8908517d65e1440326bd698806dc8b0252517138b9687708a6c589",
       "text_sha256": "e7abaf10cfe509439e9f667951855d4180013980bc34bd8d46c8f3421508918a",
       "source": "live",
@@ -15,7 +53,28 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "5.0",
-      "bytes": 187957
+      "bytes": 187957,
+      "captures": [
+        {
+          "captured_at": "2025-08-05T08:31:36Z",
+          "archive_url": "https://web.archive.org/web/20250805083136/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "ATP7Z2SKY3DEODRTIETQMXO2VKEPWNOA"
+        },
+        {
+          "captured_at": "2026-04-11T02:56:15Z",
+          "archive_url": "https://web.archive.org/web/20260411025615/https://www.gov.uk/government/publications/turkey-country-policy-and-information-notes/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+          "digest": "47TS5LNSY32HVBGEZNS27YTX6CKGKTBY"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "AHDP7NSJH3R5VLFFNTR4NBVA2CJFAXQE",
+    "2DNAKGBYOFJDZY3XAGVJD54U5V2QJMXY",
+    "5EOS2BZCMXJ42KIVEWIIIGMNRETZ7ACY",
+    "N36NMEWSI2QXOZ23F6DEAIQTYACK7GVE",
+    "JOJNOQN3Y4DUHUVAJPP5JP5FXGFJB7PD",
+    "ATP7Z2SKY3DEODRTIETQMXO2VKEPWNOA",
+    "47TS5LNSY32HVBGEZNS27YTX6CKGKTBY"
   ]
 }

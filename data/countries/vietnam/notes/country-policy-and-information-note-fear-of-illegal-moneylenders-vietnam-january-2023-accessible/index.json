@@ -7,6 +7,52 @@
   "current_sha256": "dfae6893e4e2f093ca96d7bc24f9044cb428551f021da277e04850746b92a7aa",
   "versions": [
     {
+      "sha256": "52e74e6b99bf04aeb659237b733870408740db99be5626b416bcd26e02b2d71c",
+      "text_sha256": "9ded73cebe694d8af03654adb400044d9a5647b12c4949371d63ee87e4a99d45",
+      "source": "wayback",
+      "title": "Country policy and information note: fear of illegal moneylenders, Vietnam, January 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 141471,
+      "captures": [
+        {
+          "captured_at": "2023-01-17T16:31:58Z",
+          "archive_url": "https://web.archive.org/web/20230117163158/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "BPD3FTFOK3LARGRTD3VBMSKFB5DZQR2M"
+        },
+        {
+          "captured_at": "2023-01-20T05:54:39Z",
+          "archive_url": "https://web.archive.org/web/20230120055439/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "5KQQN3CKUTVWGBRIEXHWPWW64MIZJFQA"
+        },
+        {
+          "captured_at": "2023-01-22T15:05:41Z",
+          "archive_url": "https://web.archive.org/web/20230122150541/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "7ETLN6HSOGVAJIT52BATWAYLHUUJXLU7"
+        }
+      ]
+    },
+    {
+      "sha256": "eca9cc34a217fc815c328965c8e4dbce3aea9c4a0df6a46e49ce6734cc5108cd",
+      "text_sha256": "6c747856f0e33556d9c6d0f837a5d61c572f3bbf0a9b389444dd4302941a6513",
+      "source": "wayback",
+      "title": "Country policy and information note: fear of illegal moneylenders, Vietnam, January 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 139805,
+      "captures": [
+        {
+          "captured_at": "2024-12-31T19:48:10Z",
+          "archive_url": "https://web.archive.org/web/20241231194810/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "2D5FROVNGHIVHBYXHGOPYKF47FGPMY2L"
+        }
+      ]
+    },
+    {
       "sha256": "dfae6893e4e2f093ca96d7bc24f9044cb428551f021da277e04850746b92a7aa",
       "text_sha256": "6d60e23f3479fdf5679c669b0dda10f45bd3e5db9d5cc2d31043f5e0c03c89d2",
       "source": "live",
@@ -15,7 +61,27 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 133063
+      "bytes": 133063,
+      "captures": [
+        {
+          "captured_at": "2025-06-07T07:13:20Z",
+          "archive_url": "https://web.archive.org/web/20250607071320/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "G2KC2JC26UKZ7R3OQW67WMDQW6IQSR7V"
+        },
+        {
+          "captured_at": "2026-03-09T01:12:44Z",
+          "archive_url": "https://web.archive.org/web/20260309011244/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+          "digest": "LID2L53RZS7MEC64545VUFZQZBZCL2WZ"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "BPD3FTFOK3LARGRTD3VBMSKFB5DZQR2M",
+    "5KQQN3CKUTVWGBRIEXHWPWW64MIZJFQA",
+    "7ETLN6HSOGVAJIT52BATWAYLHUUJXLU7",
+    "2D5FROVNGHIVHBYXHGOPYKF47FGPMY2L",
+    "G2KC2JC26UKZ7R3OQW67WMDQW6IQSR7V",
+    "LID2L53RZS7MEC64545VUFZQZBZCL2WZ"
   ]
 }

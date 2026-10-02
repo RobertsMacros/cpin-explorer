@@ -7,6 +7,24 @@
   "current_sha256": "55297befb75b682bafceb3cb0790bb88e2e12b503955e3525770179eabe579c9",
   "versions": [
     {
+      "sha256": "b5cc4efde5c551c903e4a9265979fefbe12f8603b21239ab0434dbbc6bd7a14f",
+      "text_sha256": "2b52fc7fba5419e44b53d693770320ba9a1a3f489536be7916693ca2c2894125",
+      "source": "wayback",
+      "title": "Country policy and information note: criticism of the government, Syria, April 2026 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "1.0",
+      "bytes": 286842,
+      "captures": [
+        {
+          "captured_at": "2026-04-21T04:44:10Z",
+          "archive_url": "https://web.archive.org/web/20260421044410/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-criticism-of-the-government-syria-april-2026-accessible",
+          "digest": "2SNEBWVBV62B65BT5XBUQC3P6MV7DAES"
+        }
+      ]
+    },
+    {
       "sha256": "55297befb75b682bafceb3cb0790bb88e2e12b503955e3525770179eabe579c9",
       "text_sha256": "a692c82b403869ed58a6f0146ad70f644864582514f3b9d3b2bb3ac2e19cf3bb",
       "source": "live",
@@ -15,7 +33,18 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "1.0",
-      "bytes": 286852
+      "bytes": 286852,
+      "captures": [
+        {
+          "captured_at": "2026-07-28T15:45:25Z",
+          "archive_url": "https://web.archive.org/web/20260728154525/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-criticism-of-the-government-syria-april-2026-accessible",
+          "digest": "JG2XG3HYR3PJF6ITUBXBL6MZOMMEJL2X"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "2SNEBWVBV62B65BT5XBUQC3P6MV7DAES",
+    "JG2XG3HYR3PJF6ITUBXBL6MZOMMEJL2X"
   ]
 }

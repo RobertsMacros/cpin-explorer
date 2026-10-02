@@ -7,6 +7,44 @@
   "current_sha256": "43eabca1780b22600e938adcdadf048234d20a546acf075379670b92407dbcdd",
   "versions": [
     {
+      "sha256": "c66c2898dbc1f4ce19cd1f9b44fff2255f4bd8fbd2ee11dbd5cedbbcc8b01d62",
+      "text_sha256": "29141133809c0507c090ced42976a9fe173f05b99c12b7ff645d699b1360d03d",
+      "source": "wayback",
+      "title": "Country policy and information note: security situation, Ukraine, June 2022 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "1.0",
+      "bytes": 224668,
+      "captures": [
+        {
+          "captured_at": "2022-08-01T23:50:45Z",
+          "archive_url": "https://web.archive.org/web/20220801235045/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "O3YZQTPO7IP7UZZA45HLGNHHGOBC7GMB"
+        },
+        {
+          "captured_at": "2022-08-02T17:39:19Z",
+          "archive_url": "https://web.archive.org/web/20220802173919/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "A6GKS6BY3DBZA5FFMUDGGOACDGCCKLEJ"
+        },
+        {
+          "captured_at": "2022-08-07T03:03:20Z",
+          "archive_url": "https://web.archive.org/web/20220807030320/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "ESBQ7VHW3KRNUOMCSNNCWGNUGMNK4TSN"
+        },
+        {
+          "captured_at": "2024-05-03T12:57:48Z",
+          "archive_url": "https://web.archive.org/web/20240503125748/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "WFSTLHEHVDM64SIB7X7X44I6WE3MSAUX"
+        },
+        {
+          "captured_at": "2024-11-14T18:25:09Z",
+          "archive_url": "https://web.archive.org/web/20241114182509/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "SOVABILPFLXHF3IE4KY727KAKPP2IBUK"
+        }
+      ]
+    },
+    {
       "sha256": "43eabca1780b22600e938adcdadf048234d20a546acf075379670b92407dbcdd",
       "text_sha256": "476fd84975334ef7e7f93159fa42cadd51ee1084e43634473798114efb779cc3",
       "source": "live",
@@ -15,7 +53,46 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "1.0",
-      "bytes": 217634
+      "bytes": 217634,
+      "captures": [
+        {
+          "captured_at": "2025-02-10T01:32:37Z",
+          "archive_url": "https://web.archive.org/web/20250210013237/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "C63MSTCRBNKOP2ZZ2PNZHSSKUNEAHUMA"
+        },
+        {
+          "captured_at": "2025-07-01T18:08:50Z",
+          "archive_url": "https://web.archive.org/web/20250701180850/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "BYXXUCQWMSBIX45J65CLAXNQZN7NMUEC"
+        },
+        {
+          "captured_at": "2026-02-25T09:20:53Z",
+          "archive_url": "https://web.archive.org/web/20260225092053/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "OIZKAS7FJQQHU4GKJI6LJH4ZYNIZES2Z"
+        },
+        {
+          "captured_at": "2026-04-19T03:11:55Z",
+          "archive_url": "https://web.archive.org/web/20260419031155/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "YHXLN3PRB7WIKFMULT5OEXI5RIPN2SEX"
+        },
+        {
+          "captured_at": "2026-09-22T13:51:30Z",
+          "archive_url": "https://web.archive.org/web/20260922135130/https://www.gov.uk/government/publications/ukraine-country-policy-and-information-notes/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+          "digest": "UR6WENT4L6W4D4WSATSW4NQQJPH7ILRN"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "O3YZQTPO7IP7UZZA45HLGNHHGOBC7GMB",
+    "A6GKS6BY3DBZA5FFMUDGGOACDGCCKLEJ",
+    "ESBQ7VHW3KRNUOMCSNNCWGNUGMNK4TSN",
+    "WFSTLHEHVDM64SIB7X7X44I6WE3MSAUX",
+    "SOVABILPFLXHF3IE4KY727KAKPP2IBUK",
+    "C63MSTCRBNKOP2ZZ2PNZHSSKUNEAHUMA",
+    "BYXXUCQWMSBIX45J65CLAXNQZN7NMUEC",
+    "OIZKAS7FJQQHU4GKJI6LJH4ZYNIZES2Z",
+    "YHXLN3PRB7WIKFMULT5OEXI5RIPN2SEX",
+    "UR6WENT4L6W4D4WSATSW4NQQJPH7ILRN"
   ]
 }

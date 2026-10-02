@@ -7,6 +7,57 @@
   "current_sha256": "842c9804c4fb4d2db55e324ec8776b7de57fbaf0174c0faf073e6329c444c540",
   "versions": [
     {
+      "sha256": "45199fbdd108e16f57d3d059c8e22483bf01dfcc8359fc41129b78384e511c31",
+      "text_sha256": "35b2dba7d3eb329836a065ca384894b3d431f031fd803f07ae246734303ca6dc",
+      "source": "wayback",
+      "title": "Country policy and information note: unaccompanied children, Vietnam, July 2024 (accessible version)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 228453,
+      "captures": [
+        {
+          "captured_at": "2024-07-30T14:58:32Z",
+          "archive_url": "https://web.archive.org/web/20240730145832/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "BVU2DLMJOGZBW77JB4J6Z3BLNRCJX3N2"
+        },
+        {
+          "captured_at": "2024-08-09T23:27:05Z",
+          "archive_url": "https://web.archive.org/web/20240809232705/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "GE4HJCQQP3MQMLLJIRJML45GRTOZPERX"
+        }
+      ]
+    },
+    {
+      "sha256": "5b0916c73d039376dfd1c4a3271dc2eaf3d69dc290633ba40d1841c2972ee69e",
+      "text_sha256": "54f5bf01042d1ff7345aa10e6b5b0a2151308704846b3b83223944c76b46cc7b",
+      "source": "wayback",
+      "title": "Country policy and information note: unaccompanied children, Vietnam, July 2024 (accessible version)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 226314,
+      "captures": [
+        {
+          "captured_at": "2024-12-28T06:52:18Z",
+          "archive_url": "https://web.archive.org/web/20241228065218/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "SETGTFIGUEHGCUPOUBM424M7XHLL3TFA"
+        },
+        {
+          "captured_at": "2024-12-31T22:28:08Z",
+          "archive_url": "https://web.archive.org/web/20241231222808/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "N7424FDWFBKEUOXX62JI55H5E3EINIEX"
+        },
+        {
+          "captured_at": "2025-02-02T08:08:28Z",
+          "archive_url": "https://web.archive.org/web/20250202080828/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "EAWDMMXQRAYS52GGQAVB5ARKEWGSUGRO"
+        }
+      ]
+    },
+    {
       "sha256": "842c9804c4fb4d2db55e324ec8776b7de57fbaf0174c0faf073e6329c444c540",
       "text_sha256": "23c6007758d79787abc48675466515d99c6f3b740b330638124cbfa84963a5f4",
       "source": "live",
@@ -15,7 +66,28 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "3.0",
-      "bytes": 218198
+      "bytes": 218198,
+      "captures": [
+        {
+          "captured_at": "2025-04-07T12:27:05Z",
+          "archive_url": "https://web.archive.org/web/20250407122705/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "DLQXTXMWKQQK4U4BQ6TH4SRLH5XW5LA6"
+        },
+        {
+          "captured_at": "2025-06-07T07:13:20Z",
+          "archive_url": "https://web.archive.org/web/20250607071320/https://www.gov.uk/government/publications/vietnam-country-policy-and-information-notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+          "digest": "WVUR6SNZLCP6YWZXVDCBWX4PYMQQ4DJQ"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "BVU2DLMJOGZBW77JB4J6Z3BLNRCJX3N2",
+    "GE4HJCQQP3MQMLLJIRJML45GRTOZPERX",
+    "SETGTFIGUEHGCUPOUBM424M7XHLL3TFA",
+    "N7424FDWFBKEUOXX62JI55H5E3EINIEX",
+    "EAWDMMXQRAYS52GGQAVB5ARKEWGSUGRO",
+    "DLQXTXMWKQQK4U4BQ6TH4SRLH5XW5LA6",
+    "WVUR6SNZLCP6YWZXVDCBWX4PYMQQ4DJQ"
   ]
 }

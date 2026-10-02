@@ -7,6 +7,29 @@
   "current_sha256": "28fea0f44c6d088f214532ee8c39c132f4fe44cfa02425b29a8373a9b3306970",
   "versions": [
     {
+      "sha256": "860e49c8d24ab871ef77c876d16f0d85c75448edd3bd0fc5a1765f2a343bf0ed",
+      "text_sha256": "7cb1e5488552c7a927de0d50791e401462a2e9d929e25b4fbac1829e06288245",
+      "source": "wayback",
+      "title": "Country policy and information note: non-Arab Darfuris, October 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "7.0",
+      "bytes": 185331,
+      "captures": [
+        {
+          "captured_at": "2024-11-10T19:17:07Z",
+          "archive_url": "https://web.archive.org/web/20241110191707/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "IBOTFJGVTFEMD2K5KHMUUW7CQCOJQGBL"
+        },
+        {
+          "captured_at": "2025-01-20T11:15:54Z",
+          "archive_url": "https://web.archive.org/web/20250120111554/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "TBLF7GTGGEE4PM7R354EYS5MYKOBVRYQ"
+        }
+      ]
+    },
+    {
       "sha256": "28fea0f44c6d088f214532ee8c39c132f4fe44cfa02425b29a8373a9b3306970",
       "text_sha256": "ca188bf9f0c1d7e2f3bc1dbf9133e1e1bace7c6c2d9d5184b203b1d1f1ac0135",
       "source": "live",
@@ -15,7 +38,55 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "7.0",
-      "bytes": 178204
+      "bytes": 178204,
+      "captures": [
+        {
+          "captured_at": "2025-02-09T15:21:55Z",
+          "archive_url": "https://web.archive.org/web/20250209152155/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "VZQRYRNQMCWIDXIBJOG4RXNA5LWTG4QJ"
+        },
+        {
+          "captured_at": "2025-02-28T21:24:39Z",
+          "archive_url": "https://web.archive.org/web/20250228212439/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "4RWUH4SNTBUXZQGJ6ZRBBKM3L7DYZGRK"
+        },
+        {
+          "captured_at": "2025-12-06T07:49:10Z",
+          "archive_url": "https://web.archive.org/web/20251206074910/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "DXKKYA2ZMHZAA65KCFJUMNCNTCO4PF2R"
+        },
+        {
+          "captured_at": "2026-02-10T22:17:28Z",
+          "archive_url": "https://web.archive.org/web/20260210221728/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "L7TQM3EIRMMVZXMMUIQTUNKVJHP4ILME"
+        },
+        {
+          "captured_at": "2026-03-10T09:47:24Z",
+          "archive_url": "https://web.archive.org/web/20260310094724/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "RIUWAICY2ZACXGLS6O5ROPRHMWXJPW47"
+        },
+        {
+          "captured_at": "2026-07-26T14:45:21Z",
+          "archive_url": "https://web.archive.org/web/20260726144521/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "LH7NOIZNIUA4EXMMAOFA37AZMEOK33ON"
+        },
+        {
+          "captured_at": "2026-08-28T02:02:52Z",
+          "archive_url": "https://web.archive.org/web/20260828020252/https://www.gov.uk/government/publications/sudan-country-policy-and-information-notes/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+          "digest": "C4S72D4B3PXNOANZXUQSJKL55RX2BHN5"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "IBOTFJGVTFEMD2K5KHMUUW7CQCOJQGBL",
+    "TBLF7GTGGEE4PM7R354EYS5MYKOBVRYQ",
+    "VZQRYRNQMCWIDXIBJOG4RXNA5LWTG4QJ",
+    "4RWUH4SNTBUXZQGJ6ZRBBKM3L7DYZGRK",
+    "DXKKYA2ZMHZAA65KCFJUMNCNTCO4PF2R",
+    "L7TQM3EIRMMVZXMMUIQTUNKVJHP4ILME",
+    "RIUWAICY2ZACXGLS6O5ROPRHMWXJPW47",
+    "LH7NOIZNIUA4EXMMAOFA37AZMEOK33ON",
+    "C4S72D4B3PXNOANZXUQSJKL55RX2BHN5"
   ]
 }

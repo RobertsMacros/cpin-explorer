@@ -143,10 +143,11 @@ def cmd_export(args, store):
     from .export import export_dashboard
     data = export_dashboard(store, Path(args.out), series_out=Path(args.series_out))
     t = data["totals"]
+    written = len(list(Path(args.series_out).glob("*/*.json")))
     comparable = {(c["slug"], n["series"]) for c in data["countries"] for n in c["notes"] if n.get("compare_url")}
     print(f"wrote {args.out}: {t['countries']} countries, {t['notes']} live notes, "
           f"{t['archived_editions']} archived editions, {len(data['recent_changes'])} recent changes")
-    print(f"wrote {len(comparable)} comparable reports (2+ editions) to {args.series_out}/")
+    print(f"wrote {written} report histories to {args.series_out}/ ({len(comparable)} with 2+ editions to compare)")
     missing = [c["slug"] for c in data["countries"] if not c["iso_n3"]]
     if missing:
         print(f"  countries with no map entry in config/countries.json: {', '.join(missing)}")
@@ -181,7 +182,7 @@ def main(argv=None):
     p.set_defaults(func=cmd_status)
     p = sub.add_parser("export", help="write the data the site reads")
     p.add_argument("--out", default="prototypes/dashboard/data.json")
-    p.add_argument("--series-out", default="prototypes/data/series", help="one file per report with 2+ editions")
+    p.add_argument("--series-out", default="prototypes/data/series", help="one history file per report")
     p.set_defaults(func=cmd_export)
     p = sub.add_parser("series", help="group notes into series (editions of one report)")
     p.add_argument("--country", action="append", default=[])

@@ -15,7 +15,42 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "5.0",
-      "bytes": 134868
+      "bytes": 134868,
+      "captures": [
+        {
+          "captured_at": "2025-12-06T17:54:07Z",
+          "archive_url": "https://web.archive.org/web/20251206175407/https://www.gov.uk/government/publications/zimbabwe-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-gender-identity-and-expression-zimbabwe-july-2024-accessible",
+          "digest": "URCVFM3UW4LLWJ2SIBSUILXEPJY4NXIA"
+        }
+      ]
+    },
+    {
+      "sha256": "cb09401f5da2b8346292bdae83d6c5128ad8271acc0a953ac543b11cb1d85c46",
+      "text_sha256": "023d66b6a9fc01482d90f1e6df57a60eaf211962a3654b4f06c166431cb00293",
+      "source": "wayback",
+      "title": "Country policy and information note: sexual orientation, gender identity and expression, Zimbabwe, July 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "5.0",
+      "bytes": 140085,
+      "captures": [
+        {
+          "captured_at": "2024-07-16T06:36:38Z",
+          "archive_url": "https://web.archive.org/web/20240716063638/https://www.gov.uk/government/publications/zimbabwe-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-gender-identity-and-expression-zimbabwe-july-2024-accessible",
+          "digest": "3YBBPZVBL3S5CMJMETCEWPXCVMNGYX4Z"
+        },
+        {
+          "captured_at": "2024-07-19T04:04:41Z",
+          "archive_url": "https://web.archive.org/web/20240719040441/https://www.gov.uk/government/publications/zimbabwe-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-gender-identity-and-expression-zimbabwe-july-2024-accessible",
+          "digest": "5W2K3VSOIXFM6KGHET6F46Q2GREO3TUN"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "3YBBPZVBL3S5CMJMETCEWPXCVMNGYX4Z",
+    "5W2K3VSOIXFM6KGHET6F46Q2GREO3TUN",
+    "URCVFM3UW4LLWJ2SIBSUILXEPJY4NXIA"
   ]
 }

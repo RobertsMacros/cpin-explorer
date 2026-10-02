@@ -7,6 +7,34 @@
   "current_sha256": "aec3907c97c425d2333511bf6a2ba5c95d04f8672cf2f23af525f274b1c70e9a",
   "versions": [
     {
+      "sha256": "f56a908828dbc2720b49a7442df3da7338a01edffdd27b3ccaadcac282b7606f",
+      "text_sha256": "41161b58c298cb5dd42842d5b1b945ce246dc5323c93d5aba33950668d4cdcec",
+      "source": "wayback",
+      "title": "Country policy and information note: security situation, Syria, July 2025 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "2.0",
+      "bytes": 139363,
+      "captures": [
+        {
+          "captured_at": "2025-10-11T15:06:02Z",
+          "archive_url": "https://web.archive.org/web/20251011150602/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "NW4YMZSEPIBYLFTWI3TQS7ANWG6VN24I"
+        },
+        {
+          "captured_at": "2025-10-12T02:56:58Z",
+          "archive_url": "https://web.archive.org/web/20251012025658/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "FII2BLXIRPFT65YLT5SC5QJID4R27EMV"
+        },
+        {
+          "captured_at": "2025-10-16T23:16:43Z",
+          "archive_url": "https://web.archive.org/web/20251016231643/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "B6JGGZRZCZF4KGRBHSOSBUSPKK2TN7VY"
+        }
+      ]
+    },
+    {
       "sha256": "aec3907c97c425d2333511bf6a2ba5c95d04f8672cf2f23af525f274b1c70e9a",
       "text_sha256": "1ebe609c65b135ef355cd5cf13072da30603b9e5976e1b22afdcd786a5001c96",
       "source": "live",
@@ -15,7 +43,32 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "2.0",
-      "bytes": 139193
+      "bytes": 139193,
+      "captures": [
+        {
+          "captured_at": "2026-02-25T09:20:37Z",
+          "archive_url": "https://web.archive.org/web/20260225092037/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "5RO34K4Y2NHY2AVIVHG35DAP3QDAJQMS"
+        },
+        {
+          "captured_at": "2026-03-30T20:39:01Z",
+          "archive_url": "https://web.archive.org/web/20260330203901/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "7UZP4HKVQZGR2OEO57DKU3RRXFGI6BUO"
+        },
+        {
+          "captured_at": "2026-04-14T16:21:55Z",
+          "archive_url": "https://web.archive.org/web/20260414162155/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+          "digest": "QW22UGMZ76SBBGZ2APF5KKEUGDZLYHYD"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "NW4YMZSEPIBYLFTWI3TQS7ANWG6VN24I",
+    "FII2BLXIRPFT65YLT5SC5QJID4R27EMV",
+    "B6JGGZRZCZF4KGRBHSOSBUSPKK2TN7VY",
+    "5RO34K4Y2NHY2AVIVHG35DAP3QDAJQMS",
+    "7UZP4HKVQZGR2OEO57DKU3RRXFGI6BUO",
+    "QW22UGMZ76SBBGZ2APF5KKEUGDZLYHYD"
   ]
 }

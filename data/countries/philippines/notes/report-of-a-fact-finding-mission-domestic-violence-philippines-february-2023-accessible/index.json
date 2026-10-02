@@ -7,6 +7,47 @@
   "current_sha256": "cbf2c586e7d8bb3ca453c79a742b713cd833fc0ae9474c32775872e11688adbd",
   "versions": [
     {
+      "sha256": "ac6a4afc715ef5a1083aa3aaab72fbfefe5d22270b931dd1c424cf43fb4fd5ad",
+      "text_sha256": "4536d5329fa15769f7fd273e77ef04dfa35d6862a131486d822f9b47c6744fed",
+      "source": "wayback",
+      "title": "Report of a fact-finding mission: domestic violence, Philippines, February 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "1.0",
+      "bytes": 198975,
+      "captures": [
+        {
+          "captured_at": "2023-12-13T11:46:07Z",
+          "archive_url": "https://web.archive.org/web/20231213114607/https://www.gov.uk/government/publications/philippines-country-policy-and-information-notes/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+          "digest": "Q7M2WAY7QPV5P4ONIMTWBVGYMV42RAGK"
+        }
+      ]
+    },
+    {
+      "sha256": "443cdaeb24b00e92fcc26e2692a6d4ad15f7f457c01129bb95ccdb18f94c7282",
+      "text_sha256": "02850a2b299ce744aceaf54abf57fde37769764fae528ae5c29aa1292f233589",
+      "source": "wayback",
+      "title": "Report of a fact-finding mission: domestic violence, Philippines, February 2023 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "1.0",
+      "bytes": 199124,
+      "captures": [
+        {
+          "captured_at": "2024-07-16T15:40:06Z",
+          "archive_url": "https://web.archive.org/web/20240716154006/https://www.gov.uk/government/publications/philippines-country-policy-and-information-notes/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+          "digest": "KY2PESPZF5DTBYEQ3AQNRQVAPDGPM43V"
+        },
+        {
+          "captured_at": "2025-01-16T03:09:04Z",
+          "archive_url": "https://web.archive.org/web/20250116030904/https://www.gov.uk/government/publications/philippines-country-policy-and-information-notes/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+          "digest": "44IBYDJE4CEVFGOC2Q3WG4VSASEX2J4K"
+        }
+      ]
+    },
+    {
       "sha256": "cbf2c586e7d8bb3ca453c79a742b713cd833fc0ae9474c32775872e11688adbd",
       "text_sha256": "e6bf4946e8bc37d369967b29df7635c14ccb3d3c041a68e7a68264c6a7cf02df",
       "source": "live",
@@ -15,7 +56,26 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "1.0",
-      "bytes": 198674
+      "bytes": 198674,
+      "captures": [
+        {
+          "captured_at": "2025-08-05T14:15:17Z",
+          "archive_url": "https://web.archive.org/web/20250805141517/https://www.gov.uk/government/publications/philippines-country-policy-and-information-notes/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+          "digest": "PUOCYH5K6BWWWOV7LSROLUD7A5ILCTMB"
+        },
+        {
+          "captured_at": "2026-04-10T16:09:20Z",
+          "archive_url": "https://web.archive.org/web/20260410160920/https://www.gov.uk/government/publications/philippines-country-policy-and-information-notes/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+          "digest": "GBOLR2KEFOTF4SQZ4SRJDFQJRZN7WN72"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "Q7M2WAY7QPV5P4ONIMTWBVGYMV42RAGK",
+    "KY2PESPZF5DTBYEQ3AQNRQVAPDGPM43V",
+    "44IBYDJE4CEVFGOC2Q3WG4VSASEX2J4K",
+    "PUOCYH5K6BWWWOV7LSROLUD7A5ILCTMB",
+    "GBOLR2KEFOTF4SQZ4SRJDFQJRZN7WN72"
   ]
 }

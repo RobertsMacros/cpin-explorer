@@ -7,6 +7,39 @@
   "current_sha256": "88219eaa46581a04de5d86f1230df733d9bd4170801ee2f5bdc1913d2b8777a7",
   "versions": [
     {
+      "sha256": "80adccdf3d04046eec81325bec14c1fc622ab69ccf23175afde2191a76d9858e",
+      "text_sha256": "31df4cd732af588df2c46f7bc0072bc76f4220128ab1fa84dfb856139a80a07c",
+      "source": "wayback",
+      "title": "Country policy and information note: women fearing gender-based violence, Somalia, July 2024 (accessible)",
+      "public_updated_at": null,
+      "first_seen": "2026-10-02T18:51:14Z",
+      "last_seen": null,
+      "version_banner": "5.0",
+      "bytes": 138851,
+      "captures": [
+        {
+          "captured_at": "2024-07-16T20:42:07Z",
+          "archive_url": "https://web.archive.org/web/20240716204207/https://www.gov.uk/government/publications/somalia-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+          "digest": "ZFNK4HNDUKFHGHHWO6VZORGAPH653WF4"
+        },
+        {
+          "captured_at": "2024-09-20T14:39:29Z",
+          "archive_url": "https://web.archive.org/web/20240920143929/https://www.gov.uk/government/publications/somalia-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+          "digest": "PPUTN4JTOMZ2JOKWX4YMKAQHWDNTV3ZD"
+        },
+        {
+          "captured_at": "2025-02-19T13:12:20Z",
+          "archive_url": "https://web.archive.org/web/20250219131220/https://www.gov.uk/government/publications/somalia-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+          "digest": "N3PXCITAVT34A4BYU6ASSSNTTH462OLX"
+        },
+        {
+          "captured_at": "2025-09-18T06:34:38Z",
+          "archive_url": "https://web.archive.org/web/20250918063438/https://www.gov.uk/government/publications/somalia-country-policy-and-information-notes/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+          "digest": "J5K4DLLESAJ3AGVFGOLBQEPH6TEF77RH"
+        }
+      ]
+    },
+    {
       "sha256": "88219eaa46581a04de5d86f1230df733d9bd4170801ee2f5bdc1913d2b8777a7",
       "text_sha256": "4d9a686a47740de7c8d2ef260015bf6ca662b8c49cbdc31e9de35ddcd941812d",
       "source": "live",
@@ -17,5 +50,11 @@
       "version_banner": "5.0",
       "bytes": 133627
     }
+  ],
+  "wayback_digests": [
+    "ZFNK4HNDUKFHGHHWO6VZORGAPH653WF4",
+    "PPUTN4JTOMZ2JOKWX4YMKAQHWDNTV3ZD",
+    "N3PXCITAVT34A4BYU6ASSSNTTH462OLX",
+    "J5K4DLLESAJ3AGVFGOLBQEPH6TEF77RH"
   ]
 }

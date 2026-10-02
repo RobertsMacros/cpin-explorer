@@ -15,7 +15,23 @@
       "first_seen": "2026-10-02T12:09:19Z",
       "last_seen": "2026-10-02T12:09:19Z",
       "version_banner": "1.0",
-      "bytes": 200858
+      "bytes": 200858,
+      "captures": [
+        {
+          "captured_at": "2026-02-04T10:34:40Z",
+          "archive_url": "https://web.archive.org/web/20260204103440/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-syria-december-2025-accessible",
+          "digest": "GINOSX7RJLKFEPKR3CMWFUYUVLJOKKYA"
+        },
+        {
+          "captured_at": "2026-06-09T13:22:01Z",
+          "archive_url": "https://web.archive.org/web/20260609132201/https://www.gov.uk/government/publications/syria-country-policy-and-information-notes/country-policy-and-information-note-internal-relocation-syria-december-2025-accessible",
+          "digest": "RMTKH6SDV3QQ3QL3KOLWWVLWDUIHB3ZG"
+        }
+      ]
     }
+  ],
+  "wayback_digests": [
+    "GINOSX7RJLKFEPKR3CMWFUYUVLJOKKYA",
+    "RMTKH6SDV3QQ3QL3KOLWWVLWDUIHB3ZG"
   ]
 }
