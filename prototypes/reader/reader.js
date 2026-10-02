@@ -1,33 +1,60 @@
-// CPIN Explorer reader: the latest edition of one note, verbatim from GOV.UK, with saved highlights
-// that carry a citation (OSCOLA or tribunal short form), the paragraph number and the sources cited.
+// CPIN Explorer · the report page: one Home Office report (every edition we hold of one note), read
+// verbatim. The latest edition is shown clean by default; the history band above it puts every edition
+// and GOV.UK update on a timeline (drag, step or Play), each captioned with what changed; and the same
+// reading area can show a redline between the edition shown and the one before (or any two).
 //
-//   index.html?country=<slug>&note=<note id>[#h=<highlight id> | #<heading id>]
+//   index.html?country=<slug>&series=<key>                         the latest edition, clean
+//     &edition=<id>                                               an earlier edition (time travel)
+//     &changes=1[&from=<id>][&view=sbs]                           the redline, in place
+//     &q=<words>                                                  arrived from search: find in the text
+//     #h=<highlight id> | #<heading id>
+//   index.html?country=<slug>&note=<note id>                      older links: mapped to their report
 //
-// The body is the stored GOV.UK HTML. Rendering only changes presentation: mirrored image sources,
-// external links in a new tab, paragraph numbers hung in the margin, tables in a scroller, chunks for
-// content-visibility and <mark> elements for saved highlights. The words are never altered.
+// The words are never altered. Rendering only changes presentation: mirrored image sources, links that
+// open here or in a new tab, paragraph numbers hung in the margin, tables in a scroller, chunks for
+// content-visibility, <mark> elements for saved highlights and small tags after cited sources.
 import { hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
-  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, monthLabel, parseNoteTitle, quoteWithCitation,
-  STYLE_NAMES,
+  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, quoteWithCitation, STYLE_NAMES,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
+import { analyseBody, describePassage, parseBody } from "../shared/note-source.js";
+import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
+import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
 import {
-  analyseBody, describePassage, editionSource, fetchText, latestCapture, parseBody, paths, pickEdition,
-} from "../shared/note-source.js";
+  buildTimeline, captionSource, computedSummary, dwellFor, editionForStop, findParaRefs, leadingNumber, reportUrl,
+  resolveParaRef, seriesPath, versionsNotHeld,
+} from "../shared/report-history.js";
+import { DateRoller, HistorySlider, NumberRoller } from "../shared/timeline.js";
+import { RedlineEngine } from "../shared/redline-engine.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const params = new URLSearchParams(location.search);
 const COUNTRY = params.get("country") || "";
+let SERIES = params.get("series") || "";
 const NOTE = params.get("note") || "";
+const WANT = {
+  edition: params.get("edition") || "", changes: params.get("changes") === "1", from: params.get("from") || "",
+  view: params.get("view") === "sbs" ? "sbs" : "inline", q: params.get("q") || "",
+};
 const TEST = params.has("test");
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const coarse = matchMedia("(pointer: coarse)");
-const narrow = matchMedia("(max-width: 1199px)");
-const MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-const fmtDate = (iso) => { if (!iso) return ""; const d = new Date(iso); return `${String(d.getUTCDate()).padStart(2, "0")} ${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const narrow = matchMedia("(max-width: 899px)");
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const MON = MONTHS.map((m) => m.slice(0, 3));
+const asT = (x) => (typeof x === "number" ? x : Date.parse(x));
+const fmtDate = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${d.getUTCDate()} ${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const fmtLong = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
+const fmtMonth = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
 const fmtDateTime = (iso) => (iso ? `${fmtDate(iso)} · ${new Date(iso).toISOString().slice(11, 16)} UTC` : "");
+const fmtN = (n) => Number(n || 0).toLocaleString("en-GB");
+const stopDate = (s) => (s.prec === "month" ? fmtMonth(s.t) : fmtDate(s.t));
+const stopDateLong = (s) => (s.prec === "month" ? `${MONTHS[new Date(s.t).getUTCMonth()]} ${new Date(s.t).getUTCFullYear()}` : fmtLong(s.t));
+const vLabel = (e) => (e?.version ? `v${e.version}` : "edition");
+const truncate = (s, n) => (s.length > n ? `${s.slice(0, n - 1).replace(/\s+\S*$/, "")}…` : s);
+const idle = (fn, timeout = 400) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout }) : setTimeout(fn, 60));
 const ICON = {
   save: `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h8v11l-4-3-4 3z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>`,
   copy: `<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 10.5h-1v-8h8v1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>`,
@@ -56,27 +83,38 @@ addEventListener("storage", (e) => { if (e.key === STYLE_KEY && e.newValue) setS
 /* ================================================================== state */
 
 const S = {
-  data: null, country: null, note: null, index: null, edition: null, src: null, month: null,
-  root: null, ix: null, text: "", normalized: null,
-  anchors: [], sections: [], refs: [], fns: new Map(), headings: [],
+  data: null, country: null, report: null, series: null, tl: null, E: [], noteIds: new Set(),
+  mode: "read", view: WANT.view,               // read: one edition, clean; changes: a redline of two
+  pair: null,                                  // { a, b } edition indices shown as a redline
+  C: null,                                     // the clean edition: { e, root, A, ix, text, fresh }
+  V: null,                                     // what #doc shows: { kind, root, ix, sections, targets }
+  redline: null,                               // { a, b, res } painted
   marks: new Map(), checks: new Map(), pending: null, lastCopy: null, ready: false,
+  linkMap: null, links: null, fullSha: new Map(), sums: [], sizes: [],
+  playing: false, cur: -1, hunks: new Map(),
 };
 let readyResolve;
 const ready = new Promise((r) => { readyResolve = r; });
 
 /* ================================================================== text index */
 
-// Offsets into the article's textContent, so a highlight can be stored as plain text positions and
-// found again regardless of how the DOM is split up by marks.
+// Offsets into the text of the body as published, so a highlight can be stored as plain text positions
+// and found again however the DOM is split up by marks. Tags added for display (link status) are skipped.
+const SKIP_UI = (el) => el.classList.contains("linkstatus") || el.classList.contains("lc") || el.classList.contains("badge");
+function textWalker(root) {
+  return document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
+    acceptNode: (n) => (n.nodeType === Node.TEXT_NODE ? NodeFilter.FILTER_ACCEPT : SKIP_UI(n) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_SKIP),
+  });
+}
 class TextIndex {
-  constructor(root) { this.root = root; this.dirty = true; this.text = root.textContent; }
+  constructor(root) { this.root = root; this.dirty = true; }
   ensure() {
     if (!this.dirty) return this;
-    const nodes = [], starts = [];
+    const nodes = [], starts = [], parts = [];
     let off = 0;
-    const walker = document.createTreeWalker(this.root, NodeFilter.SHOW_TEXT);
-    for (let n = walker.nextNode(); n; n = walker.nextNode()) { nodes.push(n); starts.push(off); off += n.data.length; }
-    this.nodes = nodes; this.starts = starts; this.length = off;
+    const walker = textWalker(this.root);
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) { nodes.push(n); starts.push(off); parts.push(n.data); off += n.data.length; }
+    this.nodes = nodes; this.starts = starts; this.length = off; this.text = parts.join("");
     this.pos = new Map(nodes.map((n, i) => [n, i]));
     this.dirty = false;
     return this;
@@ -87,13 +125,12 @@ class TextIndex {
       const i = this.pos.get(container);
       if (i != null) return this.starts[i] + offset;
     }
-    // An element boundary: the start of the first text node at or after it (no long string building).
-    const walker = document.createTreeWalker(this.root, NodeFilter.SHOW_TEXT);
-    const ref = container.childNodes[offset] || null;
+    const walker = textWalker(this.root);
+    const ref = container.nodeType === Node.TEXT_NODE ? container : container.childNodes[offset] || null;
     let t = null;
     if (ref) {
       walker.currentNode = ref;
-      t = ref.nodeType === Node.TEXT_NODE ? ref : walker.nextNode();
+      t = ref.nodeType === Node.TEXT_NODE && this.pos.has(ref) ? ref : walker.nextNode();
     } else {
       walker.currentNode = container;
       do { t = walker.nextNode(); } while (t && container.contains(t));
@@ -101,7 +138,7 @@ class TextIndex {
     const i = t ? this.pos.get(t) : null;
     return i == null ? this.length : this.starts[i];
   }
-  nodeIndexAt(off) {                       // last node starting at or before off
+  nodeIndexAt(off) {
     let lo = 0, hi = this.starts.length - 1;
     while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (this.starts[mid] <= off) lo = mid; else hi = mid - 1; }
     return lo;
@@ -109,7 +146,6 @@ class TextIndex {
   point(off, isStart) {
     this.ensure();
     let i = this.nodeIndexAt(off);
-    // A start exactly at the end of a node belongs to the next one.
     while (isStart && i < this.nodes.length - 1 && off >= this.starts[i] + this.nodes[i].data.length) i++;
     return [this.nodes[i], Math.min(this.nodes[i].data.length, Math.max(0, off - this.starts[i]))];
   }
@@ -121,128 +157,528 @@ class TextIndex {
   }
   firstTextAt(el) {
     this.ensure();
-    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const walker = textWalker(el);
     for (let t = walker.nextNode(); t; t = walker.nextNode()) {
-      if (!t.data.trim()) continue;
+      if (!t.data.trim() || !this.pos.has(t)) continue;
       return this.starts[this.pos.get(t)] + (t.data.length - t.data.trimStart().length);
     }
     return null;
   }
 }
-const normalized = () => (S.normalized ??= H.normalizeWithMap(S.text));
+const normalizedClean = () => (S.C.normalized ??= H.normalizeWithMap(S.C.text));
+function viewIndex() { if (!S.V.ix) S.V.ix = new TextIndex(S.V.root); return S.V.ix.ensure(); }
 
 /* ================================================================== boot */
 
-boot().catch((error) => { console.error(error); fail("Something went wrong while opening this note.", String(error?.message || error)); });
+boot().catch((error) => { console.error(error); fail("Something went wrong while opening this report.", String(error?.message || error)); });
 
 async function boot() {
   wireChrome();
-  if (!/^[a-z0-9-]+$/.test(COUNTRY) || !/^[\w.()-]+$/.test(NOTE)) {
-    return fail("That address does not name a note.", "Open a note from the dashboard, or use reader/index.html?country=<country>&note=<note>.");
+  if (!/^[a-z0-9-]+$/.test(COUNTRY) || (!SERIES && !NOTE) || (SERIES && !/^[\w:.-]+$/.test(SERIES)) || (NOTE && !/^[\w.()-]+$/.test(NOTE))) {
+    return fail("That address does not name a report.", "Open a report from the dashboard, or use reader/index.html?country=<country>&series=<report>.");
   }
-  const dataP = fetchJson(paths.data);
-  const indexP = fetchJson(paths.index(COUNTRY, NOTE));
-  const manifestP = fetchJson(paths.manifest).catch(() => ({}));
-  S.data = await dataP.catch(() => null);
-  S.country = S.data?.countries.find((c) => c.slug === COUNTRY) || null;
-  S.note = S.country?.notes.find((n) => n.id === NOTE) || null;
-  try { S.index = await indexP; }
-  catch {
-    if (S.note?.pdf_url) return fail("This note is published as a PDF only.", "There is no HTML edition to read here.", S.note.pdf_url);
-    return fail("This note could not be found.", `No note “${NOTE}” is held for ${S.country?.name || COUNTRY}.`);
+  const dataP = fetchJson("../dashboard/data.json").catch(() => null);
+  const linksP = loadLinkStatus(COUNTRY);
+  let seriesP = SERIES ? fetchJson(seriesPath(COUNTRY, SERIES)) : null;
+  seriesP?.catch(() => {});
+  S.data = await dataP;
+  S.country = S.data?.countries?.find((c) => c.slug === COUNTRY)
+    || { slug: COUNTRY, name: capFirst(COUNTRY.replace(/-/g, " ")), iso_a2: null, notes: [], reports: [] };
+  const noteEntry = NOTE ? S.country.notes?.find((n) => n.id === NOTE) : null;
+  if (!SERIES) {
+    SERIES = noteEntry?.series || Object.values(S.data?.note_paths || {}).find((x) => x.country === COUNTRY && x.note === NOTE)?.series || "";
+    if (!SERIES) {
+      if (noteEntry?.pdf_url) return fail("This note is published as a PDF only.", "There is no HTML edition to read here.", noteEntry.pdf_url);
+      return fail("This note could not be found.", `No note “${NOTE}” is held for ${S.country.name}.`);
+    }
+    seriesP = fetchJson(seriesPath(COUNTRY, SERIES));
   }
-  S.edition = pickEdition(S.index);
-  if (!S.edition) return fail("No editions are held for this note yet.", "");
-  S.country ||= { slug: COUNTRY, name: capFirst(COUNTRY.replace(/-/g, " ")), iso_a2: null };
-  S.note ||= synthesiseNote(S.index);
-  S.src = editionSource(S.edition, { note: S.note, index: S.index });
-  S.month = S.note.month || (S.edition.public_updated_at || "").slice(0, 7) || (latestCapture(S.edition)?.captured_at || "").slice(0, 7) || null;
+  S.report = S.country.reports?.find((r) => r.key === SERIES) || null;
+  const pdf = S.report?.latest?.pdf_url || noteEntry?.pdf_url || null;
+  try { S.series = await seriesP; }
+  catch { return fail("This report could not be loaded.", `Its editions are not in the export yet (${seriesPath(COUNTRY, SERIES)}). Run ./cpin export.`, pdf); }
+  S.tl = buildTimeline(S.series);
+  S.E = S.tl.editions;
+  if (!S.E.length) return fail("No HTML edition of this report is held.", "It is published as a PDF only.", pdf);
+  S.noteIds = new Set([...S.series.versions.map((v) => v.note).filter(Boolean), ...(NOTE ? [NOTE] : [])]);
+
+  // Which edition to open: an explicit one, else the newest held under an older note's address, else the latest.
+  let e = S.tl.latest;
+  const byId = WANT.edition ? S.E.findIndex((x) => x.id === WANT.edition) : -1;
+  if (byId >= 0) e = byId;
+  else if (NOTE) {
+    const under = S.E.filter((x) => x.v.note === NOTE);
+    if (under.length && !under.some((x) => x.i === S.tl.latest)) e = under.at(-1).i;
+  }
   renderHead();
-  const [html, manifest] = await Promise.all([fetchText(paths.body(COUNTRY, NOTE, S.edition.sha256)), manifestP]);
-  renderBody(html, manifest || {});
-  applyAllHighlights();
-  renderToc();
-  renderSaved();
-  updateCounts();
+  buildHistory(e);
+  if (WANT.changes && S.E.length > 1) {
+    S.mode = "changes";
+    const from = S.E.findIndex((x) => x.id === WANT.from);
+    let b = e, a = from >= 0 && from < b ? from : b - 1;
+    if (a < 0) { a = 0; b = 1; }
+    showEdition(b, { initial: true, mount: false });                 // highlights and citations need the clean text
+    slider.setMode("compare", { a: stopOf(a), b: stopOf(b) });
+    slider.place(stopOf(a), stopOf(b));
+    await loadPair(a, b, { initial: true });
+  } else {
+    showEdition(e, { initial: true });
+  }
+  applyModeUI();
   S.ready = true;
   document.body.classList.remove("is-loading");
   H.onHighlightsChange(sync);
   readyResolve();
+  syncUrl();
+  linksP.then((map) => { S.linkMap = map || {}; decorateView(); });
+  idle(warmEngine, 300);
   await document.fonts?.ready;
+  rollers.forEach((r) => r.remeasure(true));
+  measureBars();
+  slider.cull();
   if (!findFromQuery()) routeHash({ initial: true });
-}
-
-function synthesiseNote(index) {
-  const title = index.title || NOTE;
-  const kind = /^country bulletin/i.test(title) ? "Country bulletin" : /^country information note/i.test(title) ? "Country information note" : "CPIN";
-  const p = parseNoteTitle({ title, kind, countryName: S.country?.name });
-  return { id: NOTE, title, kind, topic: p.topic, month: null, status: index.status, version: S.edition?.version_banner,
-    editions: index.versions?.length || 1, compare_url: null,
-    govuk_url: index.status === "live" && index.base_path ? `https://www.gov.uk${index.base_path}` : null, pdf_url: null };
 }
 
 function fail(title, detail, pdf) {
   document.body.classList.remove("is-loading");
   const doc = $("#doc");
   doc.removeAttribute("aria-busy");
-  doc.innerHTML = `<div class="load-error pop-in"><span class="tag">Reader</span><h2>${esc(title)}</h2>${detail ? `<p>${esc(detail)}</p>` : ""}
+  doc.innerHTML = `<div class="load-error pop-in"><span class="tag">Report</span><h2>${esc(title)}</h2>${detail ? `<p>${esc(detail)}</p>` : ""}
     <p><a class="btn" href="../dashboard/index.html${COUNTRY ? `#${esc(COUNTRY)}` : ""}">← Back to the dashboard</a>
     ${pdf ? ` <a class="btn btn--primary" href="${esc(pdf)}" target="_blank" rel="noopener">Open the PDF ↗</a>` : ""}</p></div>`;
   $("#toc").innerHTML = "";
+  $("#bar").hidden = true;
   readyResolve?.();
 }
 
 /* ================================================================== head */
 
+const isLatest = (e) => e === S.tl.latest;
+const gone = () => S.series.status === "removed" || S.series.status === "archived";
+/** When an Internet Archive copy was captured: the timestamp in its address (so a citation's date and link
+ *  always agree), else the capture time recorded for the edition. */
+function capturedAt(v) {
+  const m = /\/web\/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(v.archive_url || "");
+  return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}Z` : v.captured_at || null;
+}
+/** Where an edition can be read, for links and citations: GOV.UK while it is the live edition, else its archived copy. */
+function editionSource(E) {
+  const v = E.v;
+  if (v.source === "live" && v.current && !gone() && v.govuk_url) return { url: v.govuk_url, archived: false, capturedAt: null };
+  if (v.archive_url) return { url: v.archive_url, archived: true, capturedAt: capturedAt(v) };
+  return { url: v.govuk_url || S.report?.latest?.govuk_url || "", archived: false, capturedAt: null };
+}
+const shownEdition = () => (S.mode === "changes" && S.pair ? S.pair.b : S.pendingE ?? S.C?.e ?? S.tl.latest);
+
 function renderHead() {
-  const c = S.country, n = S.note, e = S.edition, idx = S.index;
-  const gone = !idx.current_sha256 || idx.status === "archived" || idx.status === "removed";
-  const parsed = parseNoteTitle({ title: e.title || idx.title, kind: n.kind, topic: n.topic, countryName: c.name });
-  const topic = capFirst(n.topic || parsed.topic || idx.title);
-  const title = e.title || idx.title || n.title;
-  const version = e.version_banner || n.version;
-  const month = monthLabel(parsed.month) || monthLabel(n.month);
-  const published = e.public_updated_at ? `Published ${fmtDate(e.public_updated_at)}` : month ? `Published ${month.short}` : "";
-  const cap = latestCapture(e);
-  const successor = gone && n.series ? (c.notes || []).find((x) => x.series === n.series && x.status === "live" && x.id !== n.id) : null;
+  const c = S.country, s = S.series;
+  const topic = capFirst(s.topic || S.report?.topic || s.key);
   document.title = `${topic} · ${c.name} · CPIN Explorer`;
-
-  const meta = [
-    version ? `<span>Version <b>${esc(version)}</b></span>` : "",
-    published ? `<span>${esc(published)}</span>` : "",
-    !gone && n.govuk_url ? `<a href="${esc(n.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : "",
-    gone && S.src.url ? `<a href="${esc(S.src.url)}" target="_blank" rel="noopener">Archived copy ↗</a>` : "",
-    n.pdf_url ? `<a href="${esc(n.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : "",
-  ].filter(Boolean).join("");
-  const compare = n.editions > 1 && n.compare_url ? `<a class="btn btn--primary" href="${esc(n.compare_url)}">Compare ${n.editions} editions</a>` : "";
-  const checked = e.last_seen || S.data?.last_sync;
-  const notice = gone
-    ? `<p class="notice notice--gone"><span class="tag">${idx.status === "removed" ? "Removed" : "Archived"}</span><span><strong>No longer on GOV.UK.</strong>
-        This is the latest edition held${cap ? `: an <a href="${esc(cap.archive_url)}" target="_blank" rel="noopener">archived copy (Internet Archive, captured ${esc(fmtDate(cap.captured_at))}) ↗</a>` : ""}.
-        The text is verbatim from that copy.${successor ? ` A newer edition is on GOV.UK: <a href="${esc(paths.reader(c.slug, successor.id))}">read ${esc(successor.month ? monthLabel(successor.month).long : "the current edition")}${successor.version ? ` (version ${esc(successor.version)})` : ""} →</a>` : ""}</span></p>`
-    : `<p class="notice"><span class="tag tag--outline">Verbatim</span><span>Text is verbatim from GOV.UK as at the last check${checked ? ` (${esc(fmtDateTime(checked))})` : ""}.
-        Select any passage to save it with a citation.</span></p>`;
-
+  $("#brand").href = `../dashboard/index.html#${encodeURIComponent(c.slug)}`;
+  const status = gone()
+    ? `<p class="notice notice--gone"><span class="tag">${s.status === "removed" ? "Removed" : "Archived"}</span><span><strong>No longer on GOV.UK.</strong>
+        The Home Office has withdrawn this report. Every edition below is the text as it was published, from copies held here or captured by the Internet Archive; none of it is current guidance.</span></p>`
+    : `<p class="notice"><span class="tag tag--outline">Verbatim</span><span>Text is verbatim from GOV.UK as at the last check${S.data?.last_sync ? ` (${esc(fmtDateTime(S.data.last_sync))})` : ""}.
+        Select any passage to save it with a citation to the edition shown.</span></p>`;
   $("#head").innerHTML = `
     <a class="btn back" href="../dashboard/index.html#${esc(c.slug)}" style="--i:0">← ${esc(c.name)}</a>
-    <div class="note-hero" style="--i:1">
+    <div class="mh-row" style="--i:1">
       ${c.iso_a2 ? `<canvas class="dotflag dotflag--hero" data-flag="${esc(c.iso_a2)}" data-cols="24" data-reveal data-interactive aria-hidden="true"></canvas>` : ""}
-      <div><p class="eyebrow">${esc(c.name)} · ${esc(n.kind)}</p>
-        <h1 class="note-title">${esc(topic)}</h1>
-        <p class="note-verbatim" title="Title as published on GOV.UK">${esc(title)}</p></div>
+      <div class="mh-id"><p class="eyebrow">${esc(c.name)} · ${esc(s.kind || "Report")}</p>
+        <h1 class="report-title">${esc(topic)}</h1>
+        <p class="note-verbatim" id="verbatim" title="Title as published on GOV.UK"></p>
+        <p class="meta-line" id="metaLine"></p>
+        <p class="sources-line" id="sourcesLine" hidden></p></div>
+      <div class="mh-cta"><button class="btn btn--primary latest-btn" id="latestBtn" type="button">${gone() ? "Read the last edition" : "Read the latest guidance"}</button></div>
     </div>
-    <div class="note-meta" style="--i:2"><p class="meta-line">${meta}</p>${compare}</div>
-    <div style="--i:3">${notice}</div>`;
-  // The flag is sampled from its SVG: do that once the note's text is up, not while it is loading.
-  Promise.all([document.fonts?.ready, ready]).then(() => (window.requestIdleCallback || setTimeout)(() => hydrateFlags($("#head")), { timeout: 300 }));
+    <div class="mh-notice" style="--i:2">${status}</div>`;
+  $("#latestBtn").addEventListener("click", () => readLatest());
+  Promise.all([document.fonts?.ready, ready]).then(() => idle(() => hydrateFlags($("#head")), 300));
 }
 
-/* ================================================================== body */
+/** The parts of the head that follow the edition shown. */
+function updateHead() {
+  const e = shownEdition(), E = S.E[e], v = E.v;
+  const src = editionSource(E);
+  const pdf = isLatest(e) ? (S.report?.latest?.pdf_url || S.country.notes?.find((n) => n.id === v.note)?.pdf_url) : null;
+  const published = v.published ? `${v.published_precision === "month" ? fmtMonth(v.published) : fmtDate(v.published)}` : "";
+  const meta = [
+    `<span>Version <b>${esc(E.version || "—")}</b></span>`,
+    published ? `<span>Published ${esc(published)}</span>` : "",
+    src.archived ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">Archived copy${src.capturedAt ? ` · ${esc(fmtDate(src.capturedAt))}` : ""} ↗</a>`
+      : src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : "",
+    pdf ? `<a href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : "",
+  ].filter(Boolean).join("");
+  const line = $("#metaLine"), verb = $("#verbatim");
+  if (line.innerHTML !== meta) { line.innerHTML = meta; swapIn(line); }
+  const title = v.title && !/^[a-z0-9-]+$/.test(v.title) ? v.title : (S.country.notes?.find((n) => n.id === v.note)?.title || v.title || "");
+  if (verb.textContent !== title) { verb.textContent = title; swapIn(verb); }
+  const home = S.mode === "read" && isLatest(e) && S.slider?.b === stopOf(S.tl.latest);
+  const btn = $("#latestBtn");
+  btn.classList.toggle("is-here", home);
+  btn.setAttribute("aria-disabled", String(home));
+  btn.title = home ? `You are reading the ${gone() ? "last edition" : "latest guidance"}` : "Back to the latest edition, without changes marked";
+}
+function swapIn(el) {
+  if (reduced.matches || !S.ready) return;
+  el.animate([{ opacity: 0, filter: "blur(3px)" }, { opacity: 1, filter: "blur(0)" }], { duration: 260, easing: "cubic-bezier(.2,.8,.2,1)" });
+}
+
+/* ================================================================== history band */
+
+let slider = null, asat = null;
+const rollers = [];
+const stopOf = (e) => S.E[e].k;
+
+function buildHistory(e) {
+  const tl = S.tl, eds = tl.editions.length, ups = tl.events.length;
+  // Stops for the slider: labels, dates and tooltips.
+  tl.stops.forEach((s) => {
+    if (s.kind === "edition") {
+      const prev = S.E[s.i - 1];
+      s.label = vLabel(s);
+      s.sub = prev && prev.version === s.version && fmtMonth(prev.t) === fmtMonth(s.t) && capturedAt(s.v) ? `cap. ${fmtMonth(capturedAt(s.v))}` : fmtMonth(s.t);
+      s.first = s.i === 0;
+      s.h = s.i === 0 ? 0.55 : 0.16;
+    } else {
+      s.label = ""; s.sub = fmtMonth(s.t);
+    }
+    s.long = stopDateLong(s);
+    s.tip = tipOf(s);
+  });
+  $("#histCount").textContent = `${eds} ${eds === 1 ? "edition" : "editions"} held${ups ? ` · ${ups} more GOV.UK ${ups === 1 ? "update" : "updates"}` : ""}`;
+  asat = new DateRoller($("#asat"));
+  rollers.push(asat);
+  slider = S.slider = new HistorySlider($("#rs"), {
+    onPaint: paintHistory,
+    onCommit: commitStop,
+    onUser: () => stopPlay(),
+    labels: { asAt: "As at", old: "Old", new: "New" },
+  });
+  slider.setStops(tl.stops, { today: Date.now() });
+  slider.setMode("read", { b: stopOf(e) });
+  slider.place(null, stopOf(e));
+  buildChangeLog();
+  $("#history").hidden = false;
+  $("#playBtn").disabled = tl.stops.length < 2;
+  $("#playBtn").addEventListener("click", () => play());
+  $("#histToggle").addEventListener("click", () => setHistoryOpen(document.documentElement.classList.contains("hist-closed")));
+  setHistoryOpen(!document.documentElement.classList.contains("hist-closed"), { instant: true });
+  $("#clog").addEventListener("click", (ev) => { const li = ev.target.closest("li[data-k]"); if (li && !li.classList.contains("is-off")) pickStop(+li.dataset.k); });
+}
+
+function setHistoryOpen(open, { instant = false } = {}) {
+  const root = document.documentElement;
+  root.classList.toggle("hist-closed", !open);
+  if (instant) { root.classList.add("hist-instant"); requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove("hist-instant"))); }
+  $("#histToggle").setAttribute("aria-expanded", String(open));
+  $("#histToggle .lbl").textContent = open ? "Hide" : "Show";
+  $("#histBody").inert = !open;
+  try { localStorage.setItem("cpin-history-open", open ? "1" : "0"); } catch {}
+  if (open) requestAnimationFrame(() => slider?.cull());
+}
+
+/** What changed, for a stop: verbatim statement (or GOV.UK note) as a fragment with references linked. */
+function statementNode(stop) {
+  const box = document.createElement("div");
+  box.className = "wc-text";
+  if (stop.kind === "update") {
+    const p = document.createElement("p");
+    p.append(`“${stop.note}”`);
+    box.append(p);
+  } else {
+    const src = captionSource(stop);
+    if (!src) { box.classList.add("none"); box.textContent = "No change statement for this edition."; return box; }
+    if (src.kind === "home-office") box.append(cleanStatement(src.html || `<p>${esc(src.text)}</p>`));
+    else for (const g of src.notes) {
+      const p = document.createElement("p");
+      p.append(`“${g.note}”`);
+      const d = document.createElement("span");
+      d.className = "wc-date"; d.textContent = ` · ${fmtDate(g.date)}`;
+      p.append(d);
+      box.append(p);
+    }
+  }
+  linkRefs(box);
+  return box;
+}
+const STATEMENT_TAGS = new Set(["P", "UL", "OL", "LI", "TABLE", "THEAD", "TBODY", "TFOOT", "TR", "TH", "TD", "CAPTION", "ABBR", "A", "STRONG", "EM", "B", "I", "BR", "SUP", "SUB", "SPAN", "BLOCKQUOTE", "CODE", "DIV"]);
+const STATEMENT_ATTRS = new Set(["href", "title", "scope", "colspan", "rowspan"]);
+/** The Home Office's change statement as published (paragraphs, lists, tables), minus anything executable. */
+function cleanStatement(html) {
+  const { fragment } = parseBody(html);
+  for (const el of [...fragment.querySelectorAll("*")]) {
+    if (!STATEMENT_TAGS.has(el.tagName)) { el.replaceWith(...el.childNodes); continue; }
+    for (const a of [...el.attributes]) if (!STATEMENT_ATTRS.has(a.name)) el.removeAttribute(a.name);
+    if (el.tagName === "A") { el.target = "_blank"; el.rel = "noopener"; }
+  }
+  for (const t of fragment.querySelectorAll("table")) {
+    const w = document.createElement("div");
+    w.className = "wc-tbl";
+    w.tabIndex = 0;
+    w.setAttribute("role", "region");
+    w.setAttribute("aria-label", "Table from the change statement");
+    t.before(w); w.append(t);
+  }
+  return fragment;
+}
+/** Section and paragraph numbers in a caption become links into the text shown. */
+function linkRefs(root) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+  const todo = [];
+  for (let t = walker.nextNode(); t; t = walker.nextNode()) if (!t.parentElement.closest("a")) { const refs = findParaRefs(t.data); if (refs.length) todo.push([t, refs]); }
+  for (const [t, refs] of todo) {
+    const frag = document.createDocumentFragment();
+    let at = 0;
+    for (const r of refs) {
+      frag.append(t.data.slice(at, r.start));
+      const a = document.createElement("a");
+      a.href = "#"; a.className = "ref"; a.dataset.ref = r.num; a.dataset.kind = r.kind;
+      a.title = `Go to ${r.kind} ${r.num} in the text`;
+      a.textContent = t.data.slice(r.start, r.end);
+      frag.append(a);
+      at = r.end;
+    }
+    frag.append(t.data.slice(at));
+    t.replaceWith(frag);
+  }
+}
+function computedHtml(stop) {
+  if (stop.kind === "update") {
+    const held = stop.inForce == null ? S.E[0] : S.E[stop.inForce];
+    return { html: stop.inForce == null
+      ? `This edition is not held, so its text cannot be shown. The earliest edition held is ${esc(vLabel(held))} (${esc(stopDate(held))}).`
+      : `No new edition of this report is held from this update; ${esc(vLabel(held))} (${esc(stopDate(held))}) is shown.`, tag: "Not held" };
+  }
+  const i = stop.i;
+  if (i === 0) return { html: S.E.length > 1 ? "Earliest edition held: there is no earlier edition here to compare it with." : "The only edition held: there is no earlier edition here to compare it with." };
+  const c = computedSummary(S.sums[i]);
+  const prev = vLabel(S.E[i - 1]);
+  if (!c) return { html: `Comparing with ${esc(prev)}…`, pending: true };
+  if (!c.changes) return { html: `No text changes found against ${esc(prev)}.` };
+  const parts = c.secs.map((t, k) => `<a href="#" class="ref" data-sec="${esc(t.id || "")}" data-sec-text="${esc(t.text)}" title="Go to this section">${esc(truncate(t.text, 52))}</a> (${t.count}${k ? "" : t.count === 1 ? " change" : " changes"})`);
+  const notes = c.noteChanges ? `${fmtN(c.noteChanges)} footnote ${c.noteChanges === 1 ? "change" : "changes"} · ` : "";
+  return { html: `${parts.length ? `Most changed: ${parts.join(", ")} · ` : ""}${notes}<span class="ni">+${fmtN(c.ins)}</span> <span class="nd">−${fmtN(c.del)}</span> words <span class="wc-note">vs ${esc(prev)}</span>` };
+}
+function captionNode(stop, calc = computedHtml(stop)) {
+  const wrap = document.createElement("div");
+  wrap.className = "wc-in";
+  const meta = document.createElement("p");
+  meta.className = "wc-meta";
+  if (stop.kind === "edition") {
+    const src = captionSource(stop), gap = versionsNotHeld(S.E[stop.i - 1]?.version ?? undefined, stop.version);
+    meta.innerHTML = `<span class="tag">What changed</span><span>in <b>${esc(vLabel(stop))}</b> · ${esc(stopDate(stop))}</span>${
+      src ? `<span class="tag tag--outline" title="${esc(src.kind === "home-office" ? "Verbatim from the note: “Changes from last version of this note”" : "Verbatim GOV.UK change note")}">${esc(src.label)}</span>` : ""}${
+      stop.v.source === "wayback" ? `<span class="wc-note">archived copy${capturedAt(stop.v) ? `, captured ${esc(fmtDate(capturedAt(stop.v)))}` : ""}</span>` : ""}${
+      gap ? `<span class="wc-note">${esc(gap)}</span>` : ""}`;
+  } else {
+    meta.innerHTML = `<span class="tag">GOV.UK update</span><span>${esc(stopDate(stop))}</span><span class="tag tag--outline" title="Verbatim GOV.UK change note">GOV.UK change note</span>`;
+  }
+  const line = document.createElement("p");
+  line.className = "wc-calc";
+  line.innerHTML = `<span class="tag ${calc.tag ? "tag--muted" : "tag--calc"}">${esc(calc.tag || "Computed")}</span><span>${calc.html}</span>`;
+  wrap.append(meta, statementNode(stop), line);
+  wrap.dataset.key = `${stop.k}|${calc.html}`;
+  return { node: wrap, pending: calc.pending };
+}
+const captionChars = (stop) => (stop.kind === "update" ? stop.note : captionSource(stop)?.text || captionSource(stop)?.notes?.map((g) => g.note).join(" ") || "").length;
+let wcKey = "", wcStop = -1;
+const EASE = "cubic-bezier(.2,.8,.2,1)";
+function updateCaption(k, { force = false } = {}) {
+  const stop = S.tl.stops[k];
+  if (!stop) return;
+  const calc = computedHtml(stop);
+  if (!force && `${stop.k}|${calc.html}` === wcKey) return;          // called every frame while a handle moves
+  const { node, pending } = captionNode(stop, calc);
+  wcKey = node.dataset.key; wcStop = k;
+  const box = $("#wc");
+  box.querySelectorAll(".wc-in.out").forEach((x) => x.remove());
+  const old = box.querySelector(".wc-in");
+  box.append(node);
+  if (pending && S.engine) S.engine.diff(stop.i - 1, stop.i).then(() => { if (wcStop === k) updateCaption(k); }).catch(() => {});
+  if (!old) return;
+  if (reduced.matches || !S.ready) { old.remove(); return; }
+  old.classList.add("out");
+  node.animate([{ opacity: 0, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)" }], { duration: 260, delay: 40, easing: EASE, fill: "backwards" });
+  const settle = () => {
+    if (!old.isConnected) return;
+    const h0 = box.offsetHeight; old.remove(); const h1 = box.offsetHeight;
+    if (Math.abs(h1 - h0) > 1 && document.visibilityState === "visible") box.animate([{ height: `${h0}px` }, { height: `${h1}px` }], { duration: 240, easing: EASE });
+  };
+  old.animate([{ opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(4px)" }], { duration: 230, easing: EASE, fill: "forwards" }).finished.then(settle, settle);
+  setTimeout(settle, 600);
+}
+function tipOf(s) {
+  if (s.kind === "update") return `${stopDate(s)} · GOV.UK update · edition not held\n“${truncate(s.note, 140)}”`;
+  const i = s.i;
+  const cap = s.v.source === "wayback" && capturedAt(s.v) ? ` · archived ${fmtDate(capturedAt(s.v))}` : "";
+  const size = i === 0 ? (S.E.length > 1 ? " · earliest edition held" : " · only edition held")
+    : S.sizes[i] == null ? " · comparing…" : S.sizes[i] ? ` · ${fmtN(S.sizes[i])} words changed` : " · no text changes";
+  const src = captionSource(s);
+  const said = src?.kind === "home-office" ? `“${truncate(src.text || "", 140)}” (Home Office)` : src?.notes?.length ? `“${truncate(src.notes[0].note, 140)}” (GOV.UK)` : "No change statement.";
+  return `${vLabel(s)} · ${stopDate(s)}${cap}${size}\n${said}`;
+}
+function buildChangeLog() {
+  const items = S.tl.stops.slice().reverse().map((s) => {
+    const k = s.k;
+    if (s.kind === "update") {
+      return `<li data-k="${k}" class="is-ev"><button type="button" aria-label="${esc(`GOV.UK update, ${s.long}: ${s.note}. Edition not held.`)}"><span class="cl-v" aria-hidden="true">◇</span>
+        <span class="cl-m"><span>${esc(stopDate(s))}</span><span class="tag tag--muted">Not held</span></span><span class="cl-t">${esc(s.note)}</span></button></li>`;
+    }
+    const src = captionSource(s), gap = versionsNotHeld(S.E[s.i - 1]?.version ?? undefined, s.version);
+    const text = src?.kind === "home-office" ? src.text : src?.notes?.[0]?.note || "";
+    return `<li data-k="${k}"><button type="button" aria-label="${esc(`${vLabel(s)}, ${s.long}${text ? `: ${text}` : ""}. Show this edition.`)}"><span class="cl-v">${esc(vLabel(s))}</span>
+      <span class="cl-m"><span>${esc(stopDate(s))}</span>${src ? `<span class="tag tag--outline">${src.kind === "home-office" ? "Home Office" : "GOV.UK"}</span>` : ""}${
+        s.v.source === "wayback" ? "<span>archived copy</span>" : ""}<span class="cl-n" data-i="${s.i}"></span>${gap ? `<span>${esc(gap)}</span>` : ""}</span>
+      ${text ? `<span class="cl-t">${esc(text)}</span>` : `<span class="cl-t none">No change statement.</span>`}</button></li>`;
+  });
+  $("#clog").innerHTML = items.join("");
+  updateChangeLogSizes();
+}
+function updateChangeLogSizes() {
+  $("#clog").querySelectorAll(".cl-n").forEach((el) => {
+    const i = +el.dataset.i;
+    el.textContent = i && S.sizes[i] != null ? (S.sizes[i] ? `${fmtN(S.sizes[i])} words changed` : "no text changes") : "";
+  });
+}
+let clogB = -1;
+function paintChangeLog(a, b) {
+  const list = $("#clog");
+  list.querySelectorAll("li").forEach((li) => {
+    const k = +li.dataset.k;
+    li.classList.toggle("in-range", S.mode === "changes" && k > a && k <= b);
+    li.classList.toggle("is-new", k === b);
+    li.classList.toggle("is-old", S.mode === "changes" && k === a);
+    li.classList.toggle("is-off", S.mode === "changes" && li.classList.contains("is-ev"));
+  });
+  if (b === clogB) return;
+  clogB = b;
+  const item = list.querySelector(`li[data-k="${b}"]`);
+  if (!item || list.clientHeight === 0) return;
+  const top = item.offsetTop, bottom = top + item.offsetHeight;
+  if (top < list.scrollTop || bottom > list.scrollTop + list.clientHeight) {
+    list.scrollTo({ top: Math.max(0, top - (list.clientHeight - item.offsetHeight) / 2), behavior: reduced.matches ? "auto" : "smooth" });
+  }
+}
+
+/** Every frame while a handle moves: the rolling date, the caption, the change log. */
+function paintHistory({ a, b, active, t, stop, instant }) {
+  if (!stop) return;
+  asat.set(t, instant || !S.ready, stop.prec === "month");
+  const from = active === "a";
+  $("#asatLabel").textContent = from ? "From" : "As at";
+  $("#asatLabel").classList.toggle("is-from", from);
+  // The caption, change log and spoken summary follow once a stop has been nearest for a moment, so a
+  // handle sweeping past several stops (Play restarting, a long drag) does not churn through captions.
+  clearTimeout(captionTimer);
+  const settle = () => {
+    const B = S.tl.stops[b];
+    $("#asatSr").textContent = B ? `${S.mode === "changes" && S.tl.stops[a] ? `Comparing ${vLabel(S.tl.stops[a])} with ` : "As at "}${B.label ? `${B.label}, ` : ""}${B.long}.` : "";
+    $("#histMini").textContent = B ? `As at ${stopDate(B)}${B.label ? ` · ${B.label}` : ""}` : "";
+    updateCaption(from ? a : b);
+    paintChangeLog(a, b);
+  };
+  if (instant || !S.ready || wcKey === "") settle(); else captionTimer = setTimeout(settle, 90);
+}
+let captionTimer = 0;
+
+/** A handle came to rest on a stop. */
+function commitStop({ a, b }) {
+  if (S.mode === "read") {
+    const e = editionForStop(S.tl.stops[b], S.tl);
+    if (S.playing) schedulePlayRender(e);
+    else if (!S.C || S.C.e !== e || S.V.kind !== "clean") showEdition(e);
+    else afterShow();
+  } else {
+    const A = S.tl.stops[a], B = S.tl.stops[b];
+    if (A?.kind === "edition" && B?.kind === "edition") loadPair(A.i, B.i);
+  }
+}
+
+/** Pick a stop from the change log: show it (reading) or compare it with the edition before (changes). */
+async function pickStop(k) {
+  stopPlay();
+  const s = S.tl.stops[k];
+  if (S.mode === "read") { await slider.moveTo("b", k, 320); return; }
+  if (s.kind !== "edition") return;
+  if (s.i === 0) { await slider.glide("b", stopOf(1), 320); await slider.glide("a", k, 320); slider.commit(true); return; }
+  const prev = stopOf(s.i - 1);
+  if (k > slider.b) { await slider.glide("b", k, 320); await slider.glide("a", prev, 320); }
+  else { await slider.glide("a", prev, 320); await slider.glide("b", k, 320); }
+  slider.commit(true);
+}
+
+/* ---- Play ------------------------------------------------------------------------------------- */
+let playToken = 0, playRender = null;
+const wait = (ms, tok) => new Promise((r) => setTimeout(() => r(tok === playToken), ms));
+function stopPlay() {
+  if (!S.playing) return;
+  S.playing = false; playToken++;
+  $("#playBtn").setAttribute("aria-pressed", "false"); $("#playLbl").textContent = "Play history";
+  flushPlayRender();
+}
+/** While Play runs the text follows each stop once the caption has settled, in idle time, so nothing animating
+ *  stutters; while the text is off screen (watching the history) it waits until Play stops or the reader scrolls. */
+function schedulePlayRender(e) {
+  playRender = e;
+  S.pendingE = e;
+  updateHead(); updateBar(); updateEditionNote();
+  if ($("#doc").getBoundingClientRect().top > innerHeight + 200) {
+    if (!playScroll) { playScroll = () => { if ($("#doc").getBoundingClientRect().top < innerHeight + 200) flushPlayRender(); }; addEventListener("scroll", playScroll, { passive: true }); }
+    return;
+  }
+  setTimeout(() => idle(() => flushPlayRender(), 500), 380);
+}
+let playScroll = null;
+function flushPlayRender() {
+  if (playScroll) { removeEventListener("scroll", playScroll); playScroll = null; }
+  if (playRender == null) return;
+  const e = playRender; playRender = null; S.pendingE = null;
+  if (!S.C || S.C.e !== e || S.V.kind !== "clean") showEdition(e);
+  else afterShow();
+}
+async function play() {
+  if (S.playing) return stopPlay();
+  if (document.documentElement.classList.contains("hist-closed")) setHistoryOpen(true);
+  S.playing = true;
+  const tok = ++playToken;
+  $("#playBtn").setAttribute("aria-pressed", "true"); $("#playLbl").textContent = "Pause";
+  const dur = reduced.matches ? 0 : 650;
+  const stops = S.tl.stops, N = stops.length;
+  if (S.mode === "read") {
+    let k = slider.b >= N - 1 ? 0 : slider.b + 1;
+    for (; k < N; k++) {
+      slider.active = "b";
+      await slider.glide("b", k, dur);
+      if (tok !== playToken) { slider.commit(); return; }
+      slider.commit();
+      if (!(await wait(dwellFor(captionChars(stops[k])), tok))) return;
+    }
+  } else {
+    const eds = S.E.map((x) => x.k);
+    let j = slider.b >= eds.at(-1) ? 1 : Math.max(1, eds.indexOf(slider.b) + 1);
+    for (; j < eds.length; j++) {
+      slider.active = "b";
+      if (eds[j] > slider.b) { await slider.glide("b", eds[j], dur); await slider.glide("a", eds[j - 1], dur); }
+      else { await slider.glide("a", eds[j - 1], dur); await slider.glide("b", eds[j], dur); }
+      if (tok !== playToken) { slider.commit(); return; }
+      slider.commit();
+      await pairDone;
+      if (tok !== playToken) return;
+      if (!(await wait(dwellFor(captionChars(stops[eds[j]])), tok))) return;
+    }
+  }
+  stopPlay();
+}
+
+/* ================================================================== the clean edition */
 
 const BLOCKISH = new Set(["UL", "OL", "TABLE", "TBODY", "THEAD", "TFOOT", "TR", "DIV", "SECTION", "BLOCKQUOTE", "FIGURE"]);
 
-function renderBody(html, manifest) {
-  const { root } = parseBody(html);
+/** Build an edition's verbatim body, detached, ready to mount. */
+function buildClean(e) {
+  const E = S.E[e];
+  const { root } = parseBody(E.v.body);
   let gs = root;
   if (gs.nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
     const d = document.createElement("div");
@@ -250,42 +686,46 @@ function renderBody(html, manifest) {
     d.append(gs);
     gs = d;
   }
-  const fnBox = gs.querySelector(".footnotes");     // anchors for the contents (ids only, no text)
+  const fnBox = gs.querySelector(".footnotes");
   if (fnBox && !fnBox.id) fnBox.id = "footnotes";
   gs.querySelectorAll("h2, h3").forEach((h, i) => { if (!h.id) h.id = `section-${i + 1}`; });
   const A = analyseBody(gs);                     // offsets into the verbatim text, before any presentation
-  presentation(gs, manifest, A);
+  internalLinks(gs);
+  presentation(gs, A);
   const doc = $("#doc");
-  // Chunk and size the chunks while the body is still detached: if it went in unchunked (or with no
-  // size estimates) the first layout would draw the whole note at once.
   const fs = parseFloat(getComputedStyle(doc).fontSize) || 17;
-  const width = Math.max(280, doc.clientWidth - parseFloat(getComputedStyle(doc).paddingLeft || 0));
+  const width = Math.max(280, (doc.clientWidth || 700) - parseFloat(getComputedStyle(doc).paddingLeft || 0));
   chunk(gs, { fs, width });
-  doc.replaceChildren(gs);
-  doc.removeAttribute("aria-busy");
-  S.root = gs;
-  S.ix = new TextIndex(gs).ensure();
-  S.text = S.ix.text;
-  if (S.text !== A.text) console.warn("reader: text changed during presentation");
-  S.A = A;
-  S.anchors = A.anchors; S.sections = A.sections; S.refs = A.refs; S.fns = A.fns;
+  const ix = new TextIndex(gs).ensure();
+  if (ix.text !== A.text) console.warn("reader: text changed during presentation");
+  return { e, root: gs, A, ix, text: ix.text, normalized: null, fresh: true, linkCounts: null };
+}
+
+function internalLinks(root) {
+  repairAnchors(root);
+  if (!S.data?.note_paths) return;
+  linkToHeldNotes(root, {
+    notePaths: S.data.note_paths, countryPaths: S.data.country_paths || {},
+    makeNoteUrl: (held, hash) => {
+      const latest = held.status === "live";
+      return `index.html?country=${encodeURIComponent(held.country)}&series=${encodeURIComponent(held.series).replace(/%3A/gi, ":")}${latest ? "" : `&note=${encodeURIComponent(held.note)}`}${hash || ""}`;
+    },
+    makeCountryUrl: (slug) => `../dashboard/index.html#${encodeURIComponent(slug)}`,
+  });
 }
 
 /** Presentation only: images from the mirror, links, paragraph numbers, table scrollers. */
-function presentation(gs, manifest, A) {
+function presentation(gs, A) {
+  const images = S.series.images || {};
   for (const img of gs.querySelectorAll("img")) {
     const src = img.getAttribute("src") || "";
-    const hit = manifest[src] || manifest[src.replace(/^\/\//, "https://")];
-    if (hit) { img.dataset.govuk = src; img.setAttribute("src", paths.image(hit)); }
-    img.loading = "lazy";
-    img.decoding = "async";
-    const done = () => img.classList.add("loaded");
-    img.addEventListener("load", done, { once: true });
-    img.addEventListener("error", done, { once: true });
+    const hit = images[src] || images[src.replace(/^\/\//, "https://")];
+    if (hit) { img.dataset.govuk = src; img.setAttribute("src", hit); }
+    imgLoad(img);
   }
   for (const a of gs.querySelectorAll("a[href]")) {
     const href = a.getAttribute("href");
-    if (href.startsWith("#")) continue;
+    if (href.startsWith("#") || a.dataset.govukHref) continue;
     a.target = "_blank";
     a.rel = "noopener";
     if (!a.closest("sup")) a.classList.add("ext");
@@ -296,7 +736,6 @@ function presentation(gs, manifest, A) {
     t.before(w);
     w.append(t);
   }
-
   // Paragraph numbers: "3.4.1 Text" -> the number hangs in the margin (same text, one extra span).
   for (const { el: p, num } of A.paras) {
     p.dataset.para = num;
@@ -314,6 +753,14 @@ function presentation(gs, manifest, A) {
     t.replaceWith(span);
     span.append(t);
   }
+}
+function imgLoad(img) {
+  img.loading = "lazy";
+  img.decoding = "async";
+  const done = () => img.classList.add("loaded");
+  if (img.complete && img.naturalWidth) done();
+  img.addEventListener("load", done, { once: true });
+  img.addEventListener("error", done, { once: true });
 }
 
 /** Group top-level blocks into chunks (a new one at each h2/h3) for content-visibility:auto, each with
@@ -335,9 +782,9 @@ function chunk(gs, { fs, width }) {
   }
   const perLine = Math.max(30, width / (fs * 0.5));
   const lineH = fs * 1.7;
-  for (const box of gs.children) {
+  for (const b of gs.children) {
     let h = 0;
-    for (const el of box.children) {
+    for (const el of b.children) {
       if (/^H[2-6]$/.test(el.tagName)) h += lineH * 1.6 + fs * 2.4;
       else if (el.matches(".footnotes")) h += el.querySelectorAll("li").length * fs * 0.86 * 1.55 * 2.2 + 80;
       else if (el.matches(".tbl-scroll, table")) h += el.querySelectorAll("tr").length * fs * 2.3 + 40;
@@ -347,53 +794,480 @@ function chunk(gs, { fs, width }) {
         h += Math.ceil((el.textContent || "").trim().length / perLine + items * 0.4) * lineH + fs * 1.05;
       }
     }
-    box.style.containIntrinsicSize = `auto ${Math.max(40, Math.round(h))}px`;
+    b.style.containIntrinsicSize = `auto ${Math.max(40, Math.round(h))}px`;
   }
 }
 
-/** Paragraph, section and footnote sources for a passage [s, e). */
-const describe = (s, e) => describePassage(S.A, s, e);
+/**
+ * Show edition e clean (time travel when it is not the latest). The reading place is kept: the same
+ * paragraph number or heading stays at the same height on screen.
+ */
+function showEdition(e, { initial = false, mount = true } = {}) {
+  closePop(); hideTool();
+  if (playRender != null && playRender !== e) { playRender = null; }
+  S.pendingE = null;
+  const anchor = !initial && mount ? captureAnchor() : null;
+  if (!S.C || S.C.e !== e) {
+    if (S.C) { for (const id of [...S.marks.keys()]) S.marks.delete(id); S.checks.clear(); }
+    S.C = buildClean(e);
+  }
+  if (!mount) { placeAllIfFresh(); return; }
+  mountClean();
+  restoreAnchor(anchor);
+  if (!initial && !reduced.matches) $("#doc").animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: 280, easing: EASE });
+}
+function placeAllIfFresh() {
+  if (!S.C.fresh) return;
+  S.C.fresh = false;
+  for (const rec of seriesRecords()) place(rec);
+}
+function mountClean() {
+  const doc = $("#doc");
+  doc.classList.remove("is-redline", "is-sbs");
+  $("#reader").classList.remove("is-sbs");
+  doc.replaceChildren(S.C.root);
+  doc.removeAttribute("aria-busy");
+  S.V = { kind: "clean", root: S.C.root, ix: S.C.ix, sections: S.C.A.sections, targets: null };
+  S.redline = null;
+  fullSha(S.E[S.C.e]);
+  placeAllIfFresh();
+  decorateView();
+  afterShow();
+}
+/** Everything that follows the text shown: contents, rail, head, bar, notes, find, address. */
+function afterShow() {
+  renderToc();
+  renderRail();
+  updateCounts();
+  updateHead();
+  updateBar();
+  updateEditionNote();
+  if (F.q) runFind(F.q, { jump: false });
+  if (S.ready) syncUrl();
+}
+
+/* ---- keeping the reader's place across editions and views -------------------------------------- */
+const PARA_EXCLUDE = "table, .footnotes, li, blockquote, .info-notice, .call-to-action, .application-notice, .sbs-cell.old";
+/** Text at the start of an element, leaving out deleted words (redline) and display tags. */
+function leadText(el, n = 48) {
+  let out = "";
+  const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
+    acceptNode: (x) => (x.nodeType === Node.TEXT_NODE ? NodeFilter.FILTER_ACCEPT : x.tagName === "DEL" || SKIP_UI(x) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_SKIP),
+  });
+  for (let t = w.nextNode(); t && out.length < n; t = w.nextNode()) out += t.data;
+  return out;
+}
+/** Numbered headings and paragraphs of the text shown, in document order: [{ num, kind, el, text }]. */
+function viewTargets() {
+  if (S.V.targets) return S.V.targets;
+  const out = [];
+  for (const el of S.V.root.querySelectorAll("h2, h3, h4, h5, h6, p")) {
+    if (el.closest(PARA_EXCLUDE) || el.closest("del")) continue;
+    const isH = el.tagName !== "P";
+    const lead = leadText(el);
+    const num = isH ? leadingNumber(lead, { heading: true }) : el.dataset.para || leadingNumber(lead);
+    if (!num && !isH) continue;
+    out.push({ num, kind: isH ? "h" : "p", el, text: isH ? el.textContent.replace(/\s+/g, " ").trim().toLowerCase() : "" });
+  }
+  return (S.V.targets = out);
+}
+function captureAnchor() {
+  if (!S.V?.root?.isConnected) return null;
+  const line = headOffset() + 8;
+  if (S.V.root.getBoundingClientRect().top > line) return null;      // still reading the head or the history
+  const ts = viewTargets();
+  if (!ts.length) return null;
+  let lo = 0, hi = ts.length - 1, found = 0;
+  while (lo <= hi) {
+    const mid = (lo + hi) >> 1;
+    if (ts[mid].el.getBoundingClientRect().top <= line) { found = mid; lo = mid + 1; } else hi = mid - 1;
+  }
+  const t = ts[found];
+  return { num: t.num, kind: t.kind, text: t.text, top: t.el.getBoundingClientRect().top };
+}
+function restoreAnchor(a) {
+  if (!a) return;
+  const ts = viewTargets();
+  const hit = ts.find((t) => t.kind === a.kind && (a.num ? t.num === a.num : t.text === a.text))
+    || (a.num ? ts.find((t) => t.num === a.num) : null);
+  if (!hit) return;
+  warm(hit.el);
+  const go = () => scrollTo({ top: Math.max(0, scrollY + hit.el.getBoundingClientRect().top - a.top), behavior: "instant" });
+  go();
+  requestAnimationFrame(go);
+}
+
+/* ================================================================== changes (redline) */
+
+function ensureEngine() {
+  if (S.engine) return S.engine;
+  const engine = S.engine = new RedlineEngine();
+  engine.onResult = (a, b, r) => {
+    if (b !== a + 1) return;
+    S.sizes[b] = r.stats.ins + r.stats.del;
+    S.sums[b] = { stats: r.stats, toc: r.toc.map(({ text, count, st, level, id }) => ({ text, count, st, level, id })) };
+    updateBars();
+    if (wcStop === S.E[b].k) updateCaption(wcStop, { force: true });
+  };
+  engine.init(S.E.map((x) => x.v.body), S.series.images || {});
+  return engine;
+}
+/** In the background: each edition against the one before (sizes the bars, readies captions and Play). */
+function warmEngine() {
+  if (S.E.length < 2) return;
+  const engine = ensureEngine();
+  for (let i = S.E.length - 1; i >= 1; i--) engine.diff(i - 1, i).catch(() => {});
+}
+function updateBars() {
+  const known = S.sizes.filter(Number.isFinite), max = Math.max(1, ...known);
+  for (const E of S.E) {
+    if (E.i === 0) continue;
+    E.h = S.sizes[E.i] == null ? 0.16 : Math.max(0.04, Math.sqrt(S.sizes[E.i] / max));
+    E.tip = tipOf(E);
+  }
+  slider.refresh();
+  updateChangeLogSizes();
+}
+
+let pairTok = 0, pairDone = Promise.resolve();
+/** Show the redline between editions a and b (computed in the worker; cached pairs return at once). */
+function loadPair(a, b, { initial = false } = {}) {
+  const tok = ++pairTok;
+  const run = (async () => {
+    closePop(); hideTool();
+    S.pair = { a, b };
+    updateHead(); updateBar();
+    const engine = ensureEngine();
+    let res = engine.cached(a, b);
+    if (!res) {
+      setBusy(true, 0, "Comparing");
+      try {
+        res = await engine.diff(a, b, { priority: true, onProgress: (phase, f) => { if (tok === pairTok) setBusy(true, f, phase); } });
+      } catch (err) {
+        if (tok === pairTok) { setBusy(false); toast(`The comparison failed: ${err?.message || err}`); }
+        return;
+      }
+      if (tok !== pairTok) return;
+      setBusy(false);
+    }
+    if (S.mode !== "changes") return;
+    const anchor = initial ? null : captureAnchor();
+    paintRedline(a, b, res);
+    restoreAnchor(anchor);
+    if (!initial && !reduced.matches) $("#doc").animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: 280, easing: EASE });
+  })();
+  pairDone = run;
+  return run;
+}
+function setBusy(on, f = 0, phase = "") {
+  $("#bar").classList.toggle("is-busy", on);
+  $("#doc").classList.toggle("is-busy", on);
+  $("#busyBar").style.setProperty("--f", on ? Math.max(0.04, Math.min(1, f)).toFixed(3) : 1);
+  if (on) $("#pos").textContent = `${phase || "Comparing"}… ${Math.round(Math.max(0, Math.min(1, f)) * 100)}%`;
+}
+const effectiveView = () => (narrow.matches ? "inline" : S.view);
+function sbsHead(a, b) {
+  const A = S.E[a], B = S.E[b];
+  const lab = (E) => `<b>${esc(vLabel(E))}</b> · ${esc(stopDate(E))}${E.v.source === "wayback" ? " · archived copy" : ""}`;
+  return `<div class="sbs-head"><span><span class="tag tag--outline">Old</span>${lab(A)}</span><span><span class="tag">New</span>${lab(B)}</span></div>`;
+}
+function paintRedline(a, b, res) {
+  const doc = $("#doc"), view = effectiveView();
+  const wrap = document.createElement("div");
+  wrap.className = `rl rl--${view}`;
+  wrap.innerHTML = view === "sbs" ? `<div class="sbs">${sbsHead(a, b)}${res.sbsHtml}</div>` : res.inlineHtml;
+  repairAnchors(wrap);
+  internalLinks(wrap);
+  wrap.querySelectorAll("img").forEach(imgLoad);
+  doc.classList.add("is-redline");
+  doc.classList.toggle("is-sbs", view === "sbs");
+  $("#reader").classList.toggle("is-sbs", view === "sbs");
+  doc.replaceChildren(wrap);
+  doc.removeAttribute("aria-busy");
+  S.redline = { a, b, res };
+  const sections = [];
+  for (const s of res.toc) {
+    if (s.level > 3) continue;
+    sections.push({ id: s.id, title: s.text, level: s.level, st: s.st, count: s.count,
+      el: s.st === "del" ? null : wrap.querySelector(`#${CSS.escape(s.id)}`), at: null });
+  }
+  S.V = { kind: "redline", root: wrap, ix: null, sections, targets: null };
+  S.hunks = new Map();
+  for (const el of wrap.querySelectorAll("[data-chg]")) {
+    const k = +el.dataset.chg;
+    if (!S.hunks.has(k)) S.hunks.set(k, []);
+    S.hunks.get(k).push(el);
+  }
+  if (S.cur >= res.stats.changes) S.cur = -1;
+  renderStats(res.stats);
+  decorateView();
+  afterShow();
+  markCurrent(false);
+}
+function renderStats(st) {
+  rIns.set(st.ins, !S.ready); rDel.set(st.del, !S.ready); rChg.set(st.changes, !S.ready);
+  $("#chgWord").textContent = st.changes === 1 ? "change" : "changes";
+  $("#statsSr").textContent = `${st.ins} words inserted, ${st.del} words deleted, ${st.changes} ${st.changes === 1 ? "change" : "changes"}.`;
+}
+function markCurrent(pulse) {
+  const n = S.redline?.res.stats.changes || 0;
+  $("#doc").querySelectorAll(".chg.is-current").forEach((x) => { if (+x.dataset.chg !== S.cur) x.classList.remove("is-current", "pulse"); });
+  const els = S.cur > -1 ? S.hunks.get(S.cur) || [] : [];
+  els.forEach((x) => x.classList.add("is-current"));
+  $("#pos").textContent = S.cur > -1 ? `Change ${S.cur + 1} of ${fmtN(n)}` : n ? `${fmtN(n)} to review` : "No changes";
+  $("#prevBtn").disabled = S.cur <= 0;
+  $("#nextBtn").disabled = n === 0 || S.cur >= n - 1;
+  document.querySelectorAll(".chg-list button.is-current").forEach((x) => x.classList.remove("is-current"));
+  document.querySelectorAll(`.chg-list button[data-k="${S.cur}"]`).forEach((x) => {
+    x.classList.add("is-current");
+    const list = x.closest(".rail, .sheet-body");
+    if (list && list.scrollHeight > list.clientHeight) {
+      const r = x.getBoundingClientRect(), lr = list.getBoundingClientRect();
+      if (r.top < lr.top + 40 || r.bottom > lr.bottom - 40) list.scrollBy({ top: r.top - lr.top - lr.height / 3, behavior: reduced.matches ? "auto" : "smooth" });
+    }
+  });
+  if (pulse && els.length && !reduced.matches) {
+    els.forEach((x) => { x.classList.remove("pulse"); void x.offsetWidth; x.classList.add("pulse"); });
+  }
+}
+function goToChange(k) {
+  const n = S.redline?.res.stats.changes || 0;
+  if (!n) return;
+  S.cur = Math.max(0, Math.min(n - 1, k));
+  const els = S.hunks.get(S.cur) || [];
+  markCurrent(false);
+  if (!els.length) return;
+  goToElement(els[0], { block: "center" }).then(() => markCurrent(true));
+}
+
+/** Show changes / Hide changes. */
+async function setMode(mode, { pair = null } = {}) {
+  if (mode === S.mode || (mode === "changes" && S.E.length < 2)) return;
+  stopPlay();
+  if (mode === "changes") {
+    S.mode = "changes";
+    let b = pair?.b ?? editionForStop(S.tl.stops[slider.b], S.tl), a = pair?.a ?? b - 1;
+    if (a < 0) { a = 0; b = 1; toast("This is the earliest edition held: comparing it with the next one."); }
+    applyModeUI();
+    slider.setMode("compare", { a: stopOf(a), b: slider.b });
+    slider.active = "b";
+    if (slider.b !== stopOf(b)) await slider.glide("b", stopOf(b), 320);
+    slider.lastPair = `${slider.a}:${slider.b}`;
+    slider.syncAria(); slider.cull();
+    await loadPair(a, b);
+  } else {
+    S.mode = "read";
+    pairTok++; setBusy(false);
+    const e = S.pair?.b ?? editionForStop(S.tl.stops[slider.b], S.tl);
+    S.pair = null;
+    applyModeUI();
+    slider.setMode("read", { b: stopOf(e) });
+    slider.lastPair = `${slider.a}:${slider.b}`;
+    slider.cull();
+    const anchor = captureAnchor();
+    if (!S.C || S.C.e !== e) S.C = buildClean(e);
+    mountClean();
+    restoreAnchor(anchor);
+    if (!reduced.matches) $("#doc").animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: 280, easing: EASE });
+  }
+}
+function applyModeUI() {
+  const on = S.mode === "changes";
+  const btn = $("#changesBtn");
+  btn.setAttribute("aria-checked", String(on));
+  $("#changesLbl").textContent = on ? "Hide changes" : "Show changes";
+  btn.disabled = S.E.length < 2;
+  btn.title = S.E.length < 2 ? "Only one edition is held, so there is nothing to compare yet" : on ? "Back to reading the edition, clean (c)" : "Mark what changed from the edition before (c)";
+  $("#bar").classList.toggle("is-changes", on);
+  document.body.classList.toggle("mode-changes", on);
+  const vs = $("#vseg"), view = effectiveView();
+  vs.dataset.value = view;
+  vs.querySelectorAll("button").forEach((b) => { b.setAttribute("aria-checked", String(b.dataset.view === view)); b.disabled = b.dataset.view === "sbs" && narrow.matches; });
+  $("#dockLbl").textContent = on ? "Changes" : "Saved";
+  $("#sheetTabSaved").textContent = on ? "Changes" : "Saved";
+  $("#rail").setAttribute("aria-label", on ? "Changes between the two editions" : "Saved from this report");
+}
+function setView(view) {
+  if (view === S.view && effectiveView() === view) return;
+  S.view = view;
+  applyModeUI();
+  if (S.mode === "changes" && S.redline) {
+    const anchor = captureAnchor();
+    paintRedline(S.redline.a, S.redline.b, S.redline.res);
+    restoreAnchor(anchor);
+  }
+  syncUrl();
+}
+
+/** Back to the default view: the latest edition, clean. */
+async function readLatest() {
+  stopPlay();
+  if (S.mode === "changes") await setMode("read");
+  const k = stopOf(S.tl.latest);
+  if (slider.b !== k) { slider.active = "b"; await slider.glide("b", k, 420); slider.commit(true); }
+  else if (!S.C || S.C.e !== S.tl.latest) showEdition(S.tl.latest);
+}
+
+/* ================================================================== the bar and the edition note */
+
+function updateBar() {
+  const chip = $("#edChip");
+  let html;
+  if (S.mode === "changes" && S.pair) {
+    const A = S.E[S.pair.a], B = S.E[S.pair.b];
+    const arrow = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    html = `<span class="tag tag--outline ver" title="${esc(stopDateLong(A))}">${esc(vLabel(A))}</span>${arrow}<span class="tag ver" title="${esc(stopDateLong(B))}">${esc(vLabel(B))}</span><span class="ed-when">${esc(stopDate(A))} → ${esc(stopDate(B))}</span><span class="sr-only">Changes from ${esc(vLabel(A))} to ${esc(vLabel(B))}</span>`;
+  } else {
+    const e = shownEdition(), E = S.E[e];
+    html = `<span class="tag ${isLatest(e) ? "" : "tag--muted"}">${isLatest(e) ? (gone() ? "Last edition" : "Latest") : "Earlier edition"}</span><b>${esc(vLabel(E))}</b><span class="ed-when">${esc(stopDate(E))}</span>`;
+  }
+  if (chip.innerHTML !== html) chip.innerHTML = html;
+  const home = S.mode === "read" && isLatest(shownEdition());
+  $("#latestMini").hidden = home;
+  $("#latestMini").firstChild.textContent = gone() ? "Last edition " : "Latest guidance ";
+}
+function updateEditionNote() {
+  const box = $("#editionNote");
+  let html = "";
+  const stop = S.tl.stops[slider.b];
+  if (S.mode === "changes" && S.pair) {
+    const A = S.E[S.pair.a], B = S.E[S.pair.b];
+    html = `<span class="tag tag--outline">Changes</span><span>From <b>${esc(vLabel(A))}</b> (${esc(stopDate(A))}) to <b>${esc(vLabel(B))}</b> (${esc(stopDate(B))}).
+      <ins>Inserted words</ins> are underlined, <del>deleted words</del> struck through; bars in the margin mark changed paragraphs.${S.pair.b - S.pair.a > 1 ? ` This spans ${S.pair.b - S.pair.a} editions.` : ""}</span>`;
+  } else if (stop?.kind === "update") {
+    const E = S.E[shownEdition()];
+    html = `<span class="tag tag--muted">Not held</span><span>GOV.UK updated this report on <b>${esc(stopDateLong(stop))}</b>, but that edition is not held here.
+      The text below is <b>${esc(vLabel(E))}</b> (${esc(stopDate(E))})${stop.inForce == null ? ", the earliest edition held" : ", the edition then in force"}.</span>`;
+  } else if (!isLatest(shownEdition())) {
+    const E = S.E[shownEdition()], src = editionSource(E);
+    html = `<span class="tag tag--muted">Earlier edition</span><span>You are reading <b>${esc(vLabel(E))}</b> (${esc(stopDateLong(E))}), ${gone() ? "not the last edition held" : "not the current guidance"}.${
+      src.archived ? ` An <a href="${esc(src.url)}" target="_blank" rel="noopener">Internet Archive copy${src.capturedAt ? ` captured ${esc(fmtDate(src.capturedAt))}` : ""} ↗</a> holds the same edition.` : ""}
+      <button class="linklike" type="button" data-act="latest">${gone() ? "Read the last edition" : "Read the latest guidance"} →</button></span>`;
+  }
+  if (!html) { box.hidden = true; box.innerHTML = ""; return; }
+  if (box.innerHTML !== html) { box.innerHTML = html; if (S.ready) swapIn(box); }
+  box.hidden = false;
+}
+
+/* ================================================================== link status and sources */
+
+function decorateView() {
+  if (!S.linkMap) return;
+  for (const root of new Set([S.C?.root, S.V?.root])) {
+    if (!root || root.dataset.linksDone) continue;
+    root.dataset.linksDone = "1";
+    const result = decorateLinks(root, S.linkMap);
+    if (root === S.C?.root) { S.C.linkCounts = result; S.C.ix.dirty = true; }
+    if (root === S.V?.root && S.V.ix) S.V.ix.dirty = true;
+  }
+  showSources(S.C?.linkCounts || null);
+}
+function showSources(result) {
+  const line = $("#sourcesLine");
+  if (!result || !result.counts.total) { line.hidden = true; return; }
+  const checked = result.counts.total - result.counts.unchecked;
+  const text = checked ? summaryLine(result) : `${fmtN(result.counts.total)} links · not checked yet`;
+  line.innerHTML = `<span class="tag tag--outline">Sources</span><span>${esc(text)}</span>${result.dead.length && S.V?.kind === "clean" ? ` <button class="linklike" type="button" data-act="next-dead">Next dead link ↓</button>` : ""}`;
+  line.hidden = false;
+}
+let deadIx = -1;
+function nextDead() {
+  const dead = S.C?.linkCounts?.dead || [];
+  if (!dead.length || S.V.kind !== "clean") return;
+  deadIx = (deadIx + 1) % dead.length;
+  const a = dead[deadIx].anchor;
+  goToElement(a, { block: "center" }).then(() => flash([a.closest("p, li, td") || a]));
+}
+
+/* ================================================================== references in captions */
+
+function goToRef(a) {
+  let els = [];
+  const label = a.dataset.ref ? `${capFirst(a.dataset.kind)} ${a.dataset.ref}` : `“${a.dataset.secText}”`;
+  if (a.dataset.ref) {
+    const ts = viewTargets();
+    const r = resolveParaRef(a.dataset.ref, a.dataset.kind, ts);
+    if (r) els = r.members.map((i) => ts[i].el);
+  } else {
+    const id = a.dataset.sec;
+    let el = id ? S.V.root.querySelector(`#${CSS.escape(id)}`) : null;
+    if (!el && a.dataset.secText) {
+      const want = a.dataset.secText.replace(/\s+/g, " ").trim().toLowerCase();
+      el = [...S.V.root.querySelectorAll("h2, h3, h4")].find((h) => h.textContent.replace(/\s+/g, " ").trim().toLowerCase() === want) || null;
+    }
+    if (el) els = [el];
+  }
+  if (!els.length) { toast(`${label} is not in the text shown.`); return; }
+  goToElement(els[0], { block: "start" }).then(() => flash(els));
+}
+function flash(els) {
+  els.forEach((x) => { warm(x); x.classList.remove("ref-flash"); void x.offsetWidth; x.classList.add("ref-flash"); });
+  setTimeout(() => els.forEach((x) => x.classList.remove("ref-flash")), 2600);
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a.ref");
+  if (!a) return;
+  e.preventDefault();
+  goToRef(a);
+});
 
 /* ================================================================== contents + scrollspy */
 
 let spy = null, activeSection = -1;
-function tocHtml(counts) {
-  if (!S.sections.length) return `<p class="eyebrow">On this page</p><p class="rail-empty">This note has no headings.</p>`;
-  return `<p class="eyebrow">On this page</p><ol class="toc-list"><span class="toc-ind" aria-hidden="true"></span>${S.sections.map((s, i) =>
-    `<li class="l${s.level}"><a href="#${esc(s.id)}" data-sec="${i}"${i === activeSection ? ' class="is-active" aria-current="true"' : ""}><span class="toc-label">${esc(s.title)}</span>${
-      counts[i] ? `<span class="cnt" title="${counts[i]} saved">${counts[i]}</span>` : ""}</a></li>`).join("")}</ol>`;
+function tocHtml() {
+  const secs = S.V?.sections || [];
+  const head = S.V?.kind === "redline" ? `<p class="eyebrow">Contents · changes per section</p>` : `<p class="eyebrow">On this page</p>`;
+  if (!secs.length) return `${head}<p class="rail-empty">This edition has no headings.</p>`;
+  const counts = S.V.kind === "clean" ? sectionCounts() : secs.map((s) => s.count);
+  return `${head}<ol class="toc-list"><span class="toc-ind" aria-hidden="true"></span>${secs.map((s, i) => {
+    const cnt = counts[i] ? `<span class="cnt" title="${counts[i]} ${S.V.kind === "clean" ? "saved" : counts[i] === 1 ? "change" : "changes"}">${counts[i]}</span>` : "";
+    if (s.st === "del") return `<li class="l${s.level}"><a class="rm-sec" aria-disabled="true" title="Removed in this edition"><span class="toc-label">${esc(s.title)}</span>${cnt}</a></li>`;
+    return `<li class="l${s.level}"><a href="#${esc(s.id)}" data-sec="${i}"${i === activeSection ? ' class="is-active" aria-current="true"' : ""}><span class="toc-label">${esc(s.title)}</span>${cnt}</a></li>`;
+  }).join("")}</ol>`;
 }
 function sectionCounts() {
   const counts = [];
+  const secs = S.V.sections;
   for (const [, chk] of S.checks) {
     if (!chk.match) continue;
     let k = -1;
-    for (let i = 0; i < S.sections.length && S.sections[i].at <= chk.match.start; i++) k = i;
+    for (let i = 0; i < secs.length && secs[i].at <= chk.match.start; i++) k = i;
     if (k >= 0) counts[k] = (counts[k] || 0) + 1;
   }
   return counts;
 }
 function renderToc() {
-  $("#toc").innerHTML = tocHtml(sectionCounts());
+  activeSection = -1;
+  $("#toc").innerHTML = tocHtml();
   if ($("#sheet").classList.contains("on") && sheetTab === "toc") renderSheet();
   moveIndicator();
-  if (!spy) startSpy();
+  if (!spy) startSpy(); else spyUpdate();
 }
-// Scrollspy: the section containing the text at the reading line (a quarter of the way down).
+/** Section offsets for the spy (redline sections are measured lazily). */
+function sectionAt(off) {
+  const secs = S.V.sections;
+  if (S.V.kind === "redline" && secs.some((s) => s.at == null)) {
+    const ix = viewIndex();
+    for (const s of secs) s.at = s.el ? ix.firstTextAt(s.el) ?? Infinity : Infinity;
+  }
+  let k = -1;
+  for (let i = 0; i < secs.length; i++) if (secs[i].at <= off) k = i;
+  return k;
+}
+let spyUpdate = () => {};
 function startSpy() {
   spy = true;
   let queued = false;
-  const update = () => {
+  spyUpdate = () => {
     queued = false;
+    if (!S.V) return;
     const y = headOffset() + (innerHeight - headOffset()) * 0.22;
     const off = offsetAtY(y);
     if (off == null) { setActive(scrollY < 40 ? -1 : activeSection); return; }
-    let k = -1;
-    for (let i = 0; i < S.sections.length && S.sections[i].at <= off; i++) k = i;
-    setActive(k);
+    setActive(sectionAt(off));
   };
-  addEventListener("scroll", () => { if (!queued) { queued = true; setTimeout(() => requestAnimationFrame(update), 60); } }, { passive: true });
-  update();
+  addEventListener("scroll", () => { if (!queued) { queued = true; setTimeout(() => requestAnimationFrame(spyUpdate), 60); } }, { passive: true });
+  spyUpdate();
 }
 function setActive(i) {
   if (i === activeSection || i == null) return;
@@ -414,7 +1288,6 @@ function moveIndicator() {
   ind.style.opacity = "1";
   ind.style.height = `${a.offsetHeight}px`;
   ind.style.transform = `translateY(${a.parentElement.offsetTop}px)`;
-  // Keep the active entry in view inside the contents column, gliding.
   const top = a.parentElement.offsetTop, bottom = top + a.offsetHeight;
   if (top < toc.scrollTop + 40 || bottom > toc.scrollTop + toc.clientHeight - 40) {
     toc.scrollTo({ top: top - toc.clientHeight / 3, behavior: reduced.matches ? "auto" : "smooth" });
@@ -425,15 +1298,15 @@ function moveIndicator() {
 
 let glide = null;
 const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
-const headOffset = () => $(".top").getBoundingClientRect().bottom + 18;
+const headOffset = () => $("#top").offsetHeight + ($("#bar").hidden ? 0 : $("#bar").offsetHeight) + 18;
 const maxScroll = () => document.documentElement.scrollHeight - innerHeight;
 const warmed = [];
 function warm(node) {
-  const box = node?.closest?.(".cv") || node?.parentElement?.closest(".cv");
+  const box = node?.closest?.(".cv, .sbs-row") || node?.parentElement?.closest(".cv, .sbs-row");
   if (!box || box.classList.contains("warm")) return;
   box.classList.add("warm");
   warmed.push(box);
-  while (warmed.length > 4) warmed.shift().classList.remove("warm");
+  while (warmed.length > 6) warmed.shift().classList.remove("warm");
 }
 /** Scroll smoothly to a target whose position may move while chunks render: the destination is
  *  re-measured every frame, then settled. Reduced motion: straight there. */
@@ -482,7 +1355,6 @@ function stopGlide() {
 }
 addEventListener("wheel", stopGlide, { passive: true });
 addEventListener("touchstart", stopGlide, { passive: true });
-
 function goToElement(el, opts = {}) {
   if (!el) return Promise.resolve();
   warm(el);
@@ -491,8 +1363,20 @@ function goToElement(el, opts = {}) {
 
 /* ================================================================== highlights in the text */
 
+const sameEdition = (rec, E) => !!rec.editionSha && String(rec.editionSha).slice(0, 16) === E.id;
+const seriesRecords = () => H.loadHighlights().filter((r) => r.country === COUNTRY && S.noteIds.has(r.note));
+/** The full sha256 of an edition (as the saved page knows it), from its note's index; the short id until then. */
+function fullSha(E) {
+  if (S.fullSha.has(E.id)) return S.fullSha.get(E.id);
+  S.fullSha.set(E.id, E.id);
+  fetchJson(`../../data/countries/${COUNTRY}/notes/${E.v.note}/index.json`).then((idx) => {
+    for (const v of idx.versions || []) if (v.sha256) S.fullSha.set(v.sha256.slice(0, 16), v.sha256);
+  }).catch(() => {});
+  return E.id;
+}
+
 function wrap(id, s, e, { fresh = false } = {}) {
-  const ix = S.ix.ensure();
+  const ix = S.C.ix.ensure();
   const segs = [];
   for (let i = ix.nodeIndexAt(s); i < ix.nodes.length && ix.starts[i] < e; i++) {
     const node = ix.nodes[i], ns = ix.starts[i];
@@ -522,7 +1406,6 @@ function wrap(id, s, e, { fresh = false } = {}) {
   ix.dirty = true;
   return marks;
 }
-
 function unwrap(id) {
   for (const m of S.marks.get(id) || []) {
     const parent = m.parentNode;
@@ -532,51 +1415,55 @@ function unwrap(id) {
     parent.normalize();
   }
   S.marks.delete(id);
-  S.ix.dirty = true;
+  S.C.ix.dirty = true;
 }
 
-/** Anchor a stored highlight in this edition, re-anchoring silently if the words moved. */
+/**
+ * Anchor a stored highlight in the edition shown. On the latest edition, a highlight made on an older
+ * one is re-anchored silently if its words are still there, or flagged as changed (and the record
+ * updated, as before). On an earlier edition nothing is written back: highlights are shown where their
+ * words occur, and the others are listed as not in this edition.
+ */
 function place(rec, { fresh = false } = {}) {
-  const res = H.checkHighlight(rec, { sha: S.edition.sha256, version: S.edition.version_banner, text: S.text, normalized: normalized() });
+  const E = S.E[S.C.e], latest = isLatest(S.C.e);
+  const sha = sameEdition(rec, E) ? rec.editionSha : fullSha(E);
+  const res = H.checkHighlight(rec, { sha, version: E.version, text: S.C.text, normalized: normalizedClean() });
+  if (!latest && res.status === "changed") res.status = "absent";
   S.checks.set(rec.id, res);
   if (res.match) wrap(rec.id, res.match.start, res.match.end, { fresh });
+  if (!latest) return;
   let patch = null;
   if (res.status === "still") {
-    const info = describe(res.match.start, res.match.end);
-    const cur = { sha: S.edition.sha256, version: S.edition.version_banner || null, title: S.edition.title || S.index.title, month: S.month,
-      para: info.para, section: info.section, url: S.src.url, archived: S.src.archived, capturedAt: S.src.capturedAt,
-      pos: { start: res.match.start, end: res.match.end } };
-    if (rec.check !== "still" || rec.current?.sha !== cur.sha || rec.current?.para !== cur.para) patch = { check: "still", current: cur };
+    const info = describe(res.match.start, res.match.end), src = editionSource(E);
+    const cur = { sha: fullSha(E), version: E.version || null, title: E.v.title, month: monthOf(E), para: info.para, section: info.section,
+      url: src.url, archived: src.archived, capturedAt: src.capturedAt, pos: { start: res.match.start, end: res.match.end } };
+    if (rec.check !== "still" || rec.current?.version !== cur.version || rec.current?.para !== cur.para || String(rec.current?.sha || "").slice(0, 16) !== E.id) patch = { check: "still", current: cur };
   } else if (res.status === "changed") {
-    const orig = S.index.versions.find((v) => v.sha256 === rec.editionSha);
-    const cap = latestCapture(orig);
-    if (rec.check !== "changed" || rec.current?.sha !== S.edition.sha256) {
-      patch = { check: "changed", current: { sha: S.edition.sha256, version: S.edition.version_banner || null },
-        archivedCopy: cap ? { url: cap.archive_url, capturedAt: cap.captured_at } : rec.archivedCopy || null };
+    const orig = S.E.find((x) => sameEdition(rec, x));
+    if (rec.check !== "changed" || String(rec.current?.sha || "").slice(0, 16) !== E.id) {
+      patch = { check: "changed", current: { sha: fullSha(E), version: E.version || null },
+        archivedCopy: orig?.v.archive_url ? { url: orig.v.archive_url, capturedAt: capturedAt(orig.v) } : rec.archivedCopy || null };
     }
   } else if (res.status === "current" && rec.check && rec.check !== "current") patch = { check: "current", current: null };
   if (patch) { S.patching = true; H.updateHighlight(rec.id, patch); S.patching = false; }
 }
-
-function applyAllHighlights() {
-  for (const rec of H.highlightsFor(COUNTRY, NOTE)) place(rec);
-}
+const monthOf = (E) => (E.v.published || E.v.valid_from || "").slice(0, 7) || null;
+const describe = (s, e) => describePassage(S.C.A, s, e);
 
 /** Bring the text in line with storage (another tab, undo, delete). */
 function sync() {
-  if (!S.ready || S.patching) return;
-  const recs = H.highlightsFor(COUNTRY, NOTE);
+  if (!S.ready || S.patching || !S.C) return;
+  const recs = seriesRecords();
   const ids = new Set(recs.map((r) => r.id));
   for (const id of [...S.checks.keys()]) {
     if (!ids.has(id)) { unwrap(id); S.checks.delete(id); if (popState?.id === id) closePop(); }
   }
   for (const rec of recs) if (!S.checks.has(rec.id)) place(rec, { fresh: true });
-  renderSaved();
-  renderToc();
+  renderRail();
+  if (S.V?.kind === "clean") renderToc();
   updateCounts();
-  if (F.q) runFind(F.q, { jump: false });
+  if (F.q && S.V?.kind === "clean") runFind(F.q, { jump: false });
 }
-
 const recById = (id) => H.loadHighlights().find((r) => r.id === id) || null;
 
 /* ================================================================== selection -> toolbar */
@@ -585,27 +1472,26 @@ const tool = $("#seltool");
 let pointerIsDown = false, programmatic = false;
 
 function selectionInfo() {
-  if (!S.ready) return null;
+  if (!S.ready || S.V?.kind !== "clean") return null;
   const sel = getSelection();
   if (!sel.rangeCount || sel.isCollapsed) return null;
-  const r = sel.getRangeAt(0), root = S.root;
+  const r = sel.getRangeAt(0), root = S.C.root;
   if (!r.intersectsNode(root)) return null;
-  const ix = S.ix.ensure();
+  const ix = S.C.ix.ensure();
   let s = root.contains(r.startContainer) ? ix.offsetOf(r.startContainer, r.startOffset) : 0;
   let e = root.contains(r.endContainer) ? ix.offsetOf(r.endContainer, r.endOffset) : ix.length;
-  [s, e] = H.snapToWords(S.text, s, e);
-  if (e - s < 2 || !S.text.slice(s, e).trim()) return null;
-  return { s, e, selector: H.makeSelector(S.text, s, e), ...describe(s, e), range: r };
+  [s, e] = H.snapToWords(S.C.text, s, e);
+  if (e - s < 2 || !S.C.text.slice(s, e).trim()) return null;
+  return { s, e, selector: H.makeSelector(S.C.text, s, e), ...describe(s, e), range: r };
 }
-
-/** The label on a saved passage: its paragraph(s), else its section, else just "Passage". */
 const pinTag = (para, section) => (para ? formatPinpoint(para) : section ? truncate(section, 26) : "Passage");
 const pinLabel = (info) => (info.para ? formatPinpoint(info.para) : info.section ? info.section : "No paragraph number");
 
 function showTool(info) {
   S.pending = info;
   const touch = coarse.matches;
-  tool.innerHTML = `<span class="st-pin" title="${esc(info.section || "")}">${esc(truncate(pinLabel(info), 30))}</span>
+  const E = S.E[S.C.e];
+  tool.innerHTML = `<span class="st-pin" title="${esc(info.section || "")}">${esc(truncate(pinLabel(info), 30))}${isLatest(S.C.e) ? "" : ` · ${esc(vLabel(E))}`}</span>
     <button type="button" data-act="save">${ICON.save}Save highlight</button>
     <button type="button" data-act="copy-both">${ICON.quote}Copy quote + citation</button>
     <button type="button" data-act="copy-cite">${ICON.copy}Copy citation</button>`;
@@ -637,8 +1523,6 @@ function hideTool() {
   S.pending = null;
   $("#dock").classList.remove("is-hidden");
 }
-const truncate = (s, n) => (s.length > n ? `${s.slice(0, n - 1)}…` : s);
-
 function checkSelection() {
   if (programmatic) return;
   const info = selectionInfo();
@@ -646,7 +1530,7 @@ function checkSelection() {
 }
 let selTimer = 0;
 document.addEventListener("pointerdown", (e) => {
-  if (tool.contains(e.target)) { e.preventDefault(); return; }   // keep the selection while clicking the toolbar
+  if (tool.contains(e.target)) { e.preventDefault(); return; }
   pointerIsDown = true;
   hideTool();
   if (popState && !$("#pop").contains(e.target) && !e.target.closest("mark.hl, .saved-open, sup a")) closePop();
@@ -664,29 +1548,30 @@ tool.addEventListener("click", (e) => {
   if (!b || !S.pending) return;
   const info = S.pending;
   if (b.dataset.act === "save") saveHighlight(info);
-  else if (b.dataset.act === "copy-both") { copyRich(quoteWithCitation(ctxFromInfo(info), citeStyle, info.sources)).then((ok) => toast(ok ? "Copied quote and citation" : "Your browser blocked the clipboard")); }
-  else if (b.dataset.act === "copy-cite") { copyRich(formatCitation(ctxFromInfo(info), citeStyle)).then((ok) => toast(ok ? `Copied ${STYLE_NAMES[citeStyle]} citation` : "Your browser blocked the clipboard")); }
+  else if (b.dataset.act === "copy-both") copyRich(quoteWithCitation(ctxFromInfo(info), citeStyle, info.sources)).then((ok) => toast(ok ? "Copied quote and citation" : "Your browser blocked the clipboard"));
+  else if (b.dataset.act === "copy-cite") copyRich(formatCitation(ctxFromInfo(info), citeStyle)).then((ok) => toast(ok ? `Copied ${STYLE_NAMES[citeStyle]} citation` : "Your browser blocked the clipboard"));
 });
 
+/** Citations always cite the edition shown: its version, month and where it can be read. */
 function ctxFromInfo(info) {
+  const E = S.E[S.C.e], src = editionSource(E);
   return {
-    title: S.edition.title || S.index.title, kind: S.note.kind, topic: S.note.topic, countryName: S.country.name,
-    version: S.edition.version_banner || null, month: S.month, para: info.para, section: info.section,
-    url: S.src.url, archived: S.src.archived, capturedAt: S.src.capturedAt, quote: info.selector.quote, accessed: new Date(),
+    title: E.v.title, kind: S.series.kind, topic: S.series.topic, countryName: S.country.name,
+    version: E.version || null, month: monthOf(E), para: info.para, section: info.section,
+    url: src.url, archived: src.archived, capturedAt: src.capturedAt, quote: info.selector.quote, accessed: new Date(),
   };
 }
-
 function saveHighlight(info) {
-  const sel = info.selector;
+  const sel = info.selector, E = S.E[S.C.e], src = editionSource(E);
   const rec = H.addHighlight({
-    country: COUNTRY, countryName: S.country.name, iso: S.country.iso_a2 || null, note: NOTE,
-    title: S.edition.title || S.index.title, kind: S.note.kind, topic: S.note.topic,
-    version: S.edition.version_banner || null, editionSha: S.edition.sha256, month: S.month,
-    url: S.src.url, archived: S.src.archived, capturedAt: S.src.capturedAt,
+    country: COUNTRY, countryName: S.country.name, iso: S.country.iso_a2 || null, note: E.v.note || NOTE,
+    title: E.v.title, kind: S.series.kind, topic: S.series.topic,
+    version: E.version || null, editionSha: fullSha(E), month: monthOf(E),
+    url: src.url, archived: src.archived, capturedAt: src.capturedAt,
     quote: sel.quote, prefix: sel.prefix, suffix: sel.suffix, pos: sel.pos,
     para: info.para, section: info.section, sources: info.sources, comment: "", check: "current",
   });
-  // addHighlight's change event has already placed it (sync); make sure it shows as new.
+  S.noteIds.add(rec.note);
   if (!S.marks.has(rec.id)) place(rec, { fresh: true });
   else S.marks.get(rec.id).forEach((m) => m.classList.add("is-new"));
   programmatic = true;
@@ -694,7 +1579,7 @@ function saveHighlight(info) {
   programmatic = false;
   hideTool();
   bump();
-  toast("Highlight saved", { action: "Open", onAction: () => openHighlight(rec.id) });
+  toast(`Highlight saved${isLatest(S.C.e) ? "" : ` (from ${vLabel(E)})`}`, { action: "Open", onAction: () => openHighlight(rec.id) });
   return rec;
 }
 
@@ -723,7 +1608,7 @@ async function copyRich({ text, html }) {
 /* ================================================================== popover */
 
 const pop = $("#pop");
-let popState = null;      // { kind: "hl" | "fn", id | n, anchor }
+let popState = null;
 
 function placePop(anchorRect, { scroll = false } = {}) {
   const sheet = innerWidth < 600 || coarse.matches;
@@ -732,14 +1617,14 @@ function placePop(anchorRect, { scroll = false } = {}) {
   const w = pop.offsetWidth, h = pop.offsetHeight, gap = 10, head = headOffset(), room = innerHeight - 64;
   const r = anchorRect;
   let left, top, glideBy = 0;
-  if (r.left > innerWidth * 0.62 && r.left - w - gap > 12) {      // anchored in the right-hand column: open beside it
+  if (r.left > innerWidth * 0.62 && r.left - w - gap > 12) {
     left = r.left - w - gap - 4;
     top = Math.max(head, Math.min(r.top, room - h));
   } else {
     left = r.left - 18;
-    if (r.bottom + gap + h <= room) top = r.bottom + gap;            // below the passage
-    else if (r.top - gap - h >= head) top = r.top - gap - h;         // above it
-    else {                                                           // neither: hang it below and glide up to it
+    if (r.bottom + gap + h <= room) top = r.bottom + gap;
+    else if (r.top - gap - h >= head) top = r.top - gap - h;
+    else {
       top = r.bottom + gap;
       glideBy = scroll ? Math.max(0, Math.min(top + h - room, r.top - head - 8)) : 0;
       if (!scroll) top = Math.max(head, Math.min(top, room - h));
@@ -769,16 +1654,19 @@ function closePop() {
 
 function statusHtml(rec) {
   const chk = S.checks.get(rec.id);
-  if (chk?.status === "changed" || rec.check === "changed") {
-    const to = rec.current?.version || S.edition.version_banner;
+  const latest = S.E[S.tl.latest];
+  if (chk?.status === "absent") return `<span class="badge badge--changed">Not in this edition (${esc(vLabel(S.E[S.C.e]))})</span>`;
+  if (chk?.status === "changed" || (rec.check === "changed" && isLatest(S.C?.e))) {
+    const to = rec.current?.version || latest.version;
+    const orig = S.E.find((x) => sameEdition(rec, x));
     return `<span class="badge badge--changed">Changed since you saved it (v${esc(rec.version || "?")} → v${esc(to || "?")})</span>${
-      S.note.compare_url ? ` <a class="badge-link" href="${esc(S.note.compare_url)}">Compare editions →</a>` : ""}`;
+      orig && orig.i !== S.tl.latest ? ` <button type="button" class="badge-link linklike" data-act="compare" data-from="${orig.i}">Show the changes →</button>` : ""}`;
   }
-  if (chk?.status === "still" || rec.check === "still") return `<span class="badge">Still in v${esc(S.edition.version_banner || rec.current?.version || "")}</span>`;
+  if (chk?.status === "still") return `<span class="badge">${isLatest(S.C.e) ? "Still" : "Also"} in ${esc(vLabel(S.E[S.C.e]))}</span>`;
   if (chk?.status === "unanchored") return `<span class="badge badge--changed">Could not be placed in the text</span>`;
+  if (chk?.status === "current" && !isLatest(S.C?.e)) return `<span class="badge">Saved from ${esc(vLabel(S.E[S.C.e]))}</span>`;
   return "";
 }
-
 function citationFor(rec) { return formatCitation(H.citeContext(rec), citeStyle); }
 
 function openHighlight(id, anchorEl, point) {
@@ -820,8 +1708,6 @@ function renderPopCitation(animate = true) {
   box.innerHTML = citationFor(rec).html;
   if (animate) { box.classList.remove("swap"); void box.offsetWidth; box.classList.add("swap"); }
 }
-/** Where a highlight's popover hangs: under the whole passage when it fits on screen, so the quote
- *  stays readable; otherwise under the line that was clicked. */
 function anchorRect(id, anchor, point) {
   const marks = S.marks.get(id) || [];
   if (!marks.length || !anchor?.matches?.("mark.hl")) return rectNear(anchor, point);
@@ -832,10 +1718,9 @@ function anchorRect(id, anchor, point) {
   const left = point ? Math.max(rects[0].left, point.x - 60) : rects[0].left;
   return new DOMRect(left, top, 1, bottom - top);
 }
-/** The line box of an anchor nearest a click point (multi-line marks), else its first rect. */
 function rectNear(el, point) {
   const rects = el ? [...el.getClientRects()].filter((r) => r.width || r.height) : [];
-  if (!rects.length) return new DOMRect(innerWidth / 2 - 180, innerHeight / 4, 360, 0);   // hidden anchor: mid-screen
+  if (!rects.length) return new DOMRect(innerWidth / 2 - 180, innerHeight / 4, 360, 0);
   if (point && rects.length > 1) {
     return rects.reduce((best, r) => (Math.abs(r.top + r.height / 2 - point.y) < Math.abs(best.top + best.height / 2 - point.y) ? r : best));
   }
@@ -849,7 +1734,7 @@ pop.addEventListener("input", (e) => {
   clearTimeout(commentTimer);
   commentTimer = setTimeout(() => {
     S.patching = true; H.updateHighlight(id, { comment: value }); S.patching = false;
-    renderSaved();
+    renderRail();
     const f = $("#popSaved"); if (f) { f.classList.add("on"); setTimeout(() => f.classList.remove("on"), 1200); }
   }, 350);
 });
@@ -861,7 +1746,7 @@ pop.addEventListener("click", (e) => {
   if (popState?.kind === "fn") {
     const n = popState.n;
     if (act === "goto-fn") { closePop(); return goToFootnote(n); }
-    if (act === "copy-fn") { const f = S.fns.get(n); copyRich({ text: `[${n}] ${f.text}`, html: `[${n}] ${f.url ? `<a href="${esc(f.url)}">${esc(f.text)}</a>` : esc(f.text)}` }).then((ok) => toast(ok ? "Copied source" : "Your browser blocked the clipboard")); }
+    if (act === "copy-fn") { const f = S.C.A.fns.get(n); copyRich({ text: `[${n}] ${f.text}`, html: `[${n}] ${f.url ? `<a href="${esc(f.url)}">${esc(f.text)}</a>` : esc(f.text)}` }).then((ok) => toast(ok ? "Copied source" : "Your browser blocked the clipboard")); }
     return;
   }
   const rec = recById(popState?.id);
@@ -870,18 +1755,25 @@ pop.addEventListener("click", (e) => {
   if (act === "copy-cite") copyRich(citationFor(rec)).then((ok) => toast(ok ? `Copied ${STYLE_NAMES[citeStyle]} citation` : "Your browser blocked the clipboard"));
   if (act === "delete") deleteHighlight(rec.id);
 });
-
+/** "Show the changes →" on a highlight whose words changed: the redline from its edition to the latest. */
+document.addEventListener("click", (e) => {
+  const b = e.target.closest('[data-act="compare"][data-from]');
+  if (!b) return;
+  closePop(); closeSheet();
+  const from = +b.dataset.from;
+  setMode("changes", { pair: { a: from, b: S.tl.latest } });
+});
 function deleteHighlight(id) {
   closePop();
-  const removed = H.removeHighlight(id);      // the change event unwraps it (sync)
+  const removed = H.removeHighlight(id);
   if (!removed) return;
   toast("Highlight deleted", { action: "Undo", onAction: () => H.restoreHighlight(removed) });
 }
 
 /* --- footnotes ----------------------------------------------------------------------------- */
 function openFootnote(n, anchor) {
-  const f = S.fns.get(n);
-  if (!f) return goToFootnote(n);
+  const f = S.C?.A.fns.get(n);
+  if (!f || S.V.kind !== "clean") return goToFootnote(n);
   popState = { kind: "fn", n };
   showPop(`
     <div class="pop-head"><span class="tag tag--outline">Footnote ${n}</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div>
@@ -896,7 +1788,7 @@ function sanitizeFootnote(html) {
   return t.innerHTML;
 }
 function goToFootnote(n) {
-  const li = document.getElementById(`fn:${n}`);
+  const li = S.V.root.querySelector(`[id="fn:${n}"]`) || document.getElementById(`fn:${n}`);
   if (!li) return;
   goToElement(li, { block: "center" }).then(() => {
     li.classList.add("is-target");
@@ -916,87 +1808,99 @@ $("#doc").addEventListener("click", (e) => {
   const back = e.target.closest('a[role="doc-backlink"], a.reversefootnote');
   if (back) {
     e.preventDefault();
-    const target = document.getElementById(back.getAttribute("href").slice(1));
+    const target = S.V.root.querySelector(`[id="${CSS.escape(back.getAttribute("href").slice(1))}"]`);
     if (target) goToElement(target, { block: "center" });
     return;
   }
   const internal = e.target.closest('a[href^="#"]');
   if (internal) {
-    const target = document.getElementById(decodeURIComponent(internal.getAttribute("href").slice(1)));
-    if (target) { e.preventDefault(); history.replaceState(null, "", `#${target.id}`); goToElement(target); }
+    let id = internal.getAttribute("href").slice(1);
+    try { id = decodeURIComponent(id); } catch {}
+    const target = S.V.root.querySelector(`[id="${CSS.escape(id)}"]`);
+    if (target) { e.preventDefault(); history.replaceState(null, "", `${location.pathname}${location.search}#${id}`); goToElement(target); }
     return;
   }
   const mark = e.target.closest("mark.hl");
-  if (mark && getSelection().isCollapsed && !e.target.closest("a")) {
-    const inner = e.target.closest("mark.hl");
-    openHighlight(inner.dataset.hid, inner, { x: e.clientX, y: e.clientY });
-  }
+  if (mark && getSelection().isCollapsed && !e.target.closest("a")) openHighlight(mark.dataset.hid, mark, { x: e.clientX, y: e.clientY });
 });
 $("#doc").addEventListener("keydown", (e) => {
   const mark = e.target.closest?.("mark.hl");
   if (mark && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openHighlight(mark.dataset.hid, mark); }
 });
-// Hovering a saved passage lights up its card, and the other way round.
 $("#doc").addEventListener("pointerover", (e) => {
   const m = e.target.closest("mark.hl");
   document.querySelectorAll(".saved-item.is-lit").forEach((x) => x.classList.remove("is-lit"));
   if (m) document.querySelectorAll(`.saved-item[data-hid="${CSS.escape(m.dataset.hid)}"]`).forEach((x) => x.classList.add("is-lit"));
 });
 
-/* ================================================================== saved list (rail + sheet) */
+/* ================================================================== the rail: saved passages, or the list of changes */
 
 function orderedRecords() {
   const at = (r) => S.checks.get(r.id)?.match?.start ?? r.pos?.start ?? 0;
-  return H.highlightsFor(COUNTRY, NOTE).sort((a, b) => at(a) - at(b));
+  return seriesRecords().sort((a, b) => at(a) - at(b));
 }
 function savedHtml() {
   const recs = orderedRecords();
   const items = recs.map((r, i) => {
     const pin = r.check === "still" && r.current ? r.current.para : r.para;
-    const changed = r.check === "changed";
-    return `<li class="saved-item${changed ? " is-changed" : ""}" data-hid="${esc(r.id)}" style="--i:${i}">
+    const chk = S.checks.get(r.id)?.status;
+    const off = chk === "absent" || (chk === "changed") || (r.check === "changed" && isLatest(S.C?.e));
+    const from = !sameEdition(r, S.E[S.C?.e ?? S.tl.latest]) && r.version ? ` · from v${r.version}` : "";
+    return `<li class="saved-item${off ? " is-changed" : ""}" data-hid="${esc(r.id)}" style="--i:${i}">
       <button type="button" class="saved-open" data-hid="${esc(r.id)}">
-        <span class="saved-top"><span class="tag ${changed ? "tag--muted" : "tag--outline"}">${esc(pinTag(pin, r.check === "still" && r.current ? r.current.section : r.section))}</span></span>
+        <span class="saved-top"><span class="tag ${off ? "tag--muted" : "tag--outline"}">${esc(pinTag(pin, r.check === "still" && r.current ? r.current.section : r.section))}</span><span class="saved-when">${esc(from.slice(3))}</span></span>
         <span class="saved-quote">“${esc(cleanQuote(r.quote))}”</span>
         ${r.comment ? `<span class="saved-comment">${esc(r.comment)}</span>` : ""}
       </button>
       ${statusHtml(r) ? `<span class="saved-status">${statusHtml(r)}</span>` : ""}</li>`;
   }).join("");
-  return `<div class="rail-head"><h2 class="eyebrow">Saved from this note</h2><span class="numeral">${recs.length}</span></div>
+  return `<div class="rail-head"><h2 class="eyebrow">Saved from this report</h2><span class="numeral">${recs.length}</span></div>
     <div class="rail-style"><span class="eyebrow">Citation style</span>${segHtml()}</div>
-    ${recs.length ? `<ul class="saved-list">${items}</ul>` : `<p class="rail-empty"><b>Nothing saved yet.</b> Select any passage in the note, then choose <b>Save highlight</b>.
-      Each saved passage keeps its paragraph number, the sources it cites and a citation ready to paste.</p>`}
+    ${recs.length ? `<ul class="saved-list">${items}</ul>` : `<p class="rail-empty"><b>Nothing saved yet.</b> Select any passage, then choose <b>Save highlight</b>.
+      Each saved passage keeps its paragraph number, the sources it cites and a citation to the edition you read it in, ready to paste.</p>`}
     <p class="rail-foot"><a href="../saved/index.html">All saved highlights →</a></p>`;
 }
-function renderSaved() {
-  $("#rail").innerHTML = savedHtml();
+function changesHtml() {
+  const r = S.redline;
+  if (!r) return `<div class="rail-head"><h2 class="eyebrow">Changes</h2></div><p class="rail-empty">Comparing…</p>`;
+  const secText = new Map(r.res.toc.map((s) => [s.id, s.text]));
+  const items = r.res.changes.map((c) => `<li><button type="button" data-k="${c.i}"${c.i === S.cur ? ' class="is-current"' : ""}>
+      <span class="cl-k numeral">${c.i + 1}</span><span class="cl-l">${esc(c.label || "Change")}</span>
+      <span class="cl-s">${esc(c.notes ? "Footnotes" : secText.get(c.sec) || "")}${c.ins || c.del ? ` · <span class="ni">+${fmtN(c.ins)}</span> <span class="nd">−${fmtN(c.del)}</span>` : ""}</span></button></li>`).join("");
+  return `<div class="rail-head"><h2 class="eyebrow">Changes · ${esc(vLabel(S.E[r.a]))} → ${esc(vLabel(S.E[r.b]))}</h2><span class="numeral">${fmtN(r.res.stats.changes)}</span></div>
+    <p class="rail-legend"><ins>inserted</ins> <del>deleted</del> <span>j / k to step</span></p>
+    ${r.res.changes.length ? `<ol class="chg-list">${items}</ol>` : `<p class="rail-empty">No text changes between these editions.</p>`}
+    <p class="rail-foot">Saved highlights show when changes are hidden.</p>`;
+}
+function renderRail() {
+  $("#rail").innerHTML = S.mode === "changes" ? changesHtml() : savedHtml();
   if ($("#sheet").classList.contains("on") && sheetTab === "saved") renderSheet();
-  if (popState?.kind === "hl") {
-    document.querySelectorAll(`.saved-item[data-hid="${CSS.escape(popState.id)}"]`).forEach((x) => x.classList.add("is-hot"));
-  }
+  if (popState?.kind === "hl") document.querySelectorAll(`.saved-item[data-hid="${CSS.escape(popState.id)}"]`).forEach((x) => x.classList.add("is-hot"));
 }
 document.addEventListener("click", (e) => {
   const open = e.target.closest(".saved-open");
-  if (!open) return;
-  const id = open.dataset.hid;
-  if ($("#sheet").contains(open)) closeSheet();
-  if (S.marks.get(id)?.length) goToHighlight(id, { open: true });
-  else openHighlight(id, open.closest(".saved-item"));
+  if (open) {
+    const id = open.dataset.hid;
+    if ($("#sheet").contains(open)) closeSheet();
+    if (S.marks.get(id)?.length) goToHighlight(id, { open: true });
+    else openHighlight(id, open.closest(".saved-item"));
+    return;
+  }
+  const chg = e.target.closest(".chg-list button[data-k]");
+  if (chg) { if ($("#sheet").contains(chg)) closeSheet(); goToChange(+chg.dataset.k); }
 });
-
 async function goToHighlight(id, { open = false } = {}) {
   const marks = S.marks.get(id);
   if (!marks?.length) { if (open) openHighlight(id); return; }
   closePop();
-  await goToElement(marks[0], { block: open ? "start" : "center" });   // room below for the popover
+  await goToElement(marks[0], { block: open ? "start" : "center" });
   marks.forEach((m) => { m.classList.remove("is-flash", "is-new"); void m.offsetWidth; m.classList.add("is-flash"); });
   if (open) openHighlight(id, marks[0]);
 }
-
 function updateCounts() {
-  const all = H.loadHighlights().length, here = H.highlightsFor(COUNTRY, NOTE).length;
+  const all = H.loadHighlights().length, here = seriesRecords().length;
   $("#savedCount").textContent = all;
-  $("#dockCount").textContent = here;
+  $("#dockCount").textContent = S.mode === "changes" ? fmtN(S.redline?.res.stats.changes || 0) : here;
 }
 function bump() {
   updateCounts();
@@ -1004,15 +1908,15 @@ function bump() {
   el.classList.remove("bump"); void el.offsetWidth; el.classList.add("bump");
 }
 
-/* ================================================================== find in note */
+/* ================================================================== find in the text */
 
-const F = { q: "", hits: [], ranges: [], cur: -1, folded: null };
+const F = { q: "", hits: [], ranges: [], cur: -1, folded: null, foldedFor: null };
 const findInput = $("#find");
 const hasHighlightApi = typeof CSS !== "undefined" && "highlights" in CSS && typeof Highlight === "function";
 const fold = (s) => {
   const out = [];
   for (const ch of s) {
-    for (const unit of ch.length === 1 ? [ch] : ch) {            // keep UTF-16 length identical
+    for (const unit of ch.length === 1 ? [ch] : ch) {
       const l = unit.toLowerCase();
       const c = l.length === 1 ? l : unit;
       out.push(c === "‘" || c === "’" || c === "′" ? "'" : c === "“" || c === "”" || c === "″" ? '"' : c);
@@ -1021,19 +1925,22 @@ const fold = (s) => {
   return out.join("");
 };
 function foldedText() {
-  if (!F.folded) { const { norm, map } = normalized(); F.folded = { norm: fold(norm), map }; }
+  if (F.foldedFor !== S.V.root) {
+    const { norm, map } = S.V.kind === "clean" ? normalizedClean() : H.normalizeWithMap(viewIndex().text);
+    F.folded = { norm: fold(norm), map }; F.foldedFor = S.V.root;
+  }
   return F.folded;
 }
-/** Text offset at a viewport y (caret hit-testing across the reading column), or null outside the note. */
+/** Text offset at a viewport y (caret hit-testing across the reading column), or null outside the text. */
 function offsetAtY(y) {
-  if (!S.root) return null;
-  const doc = S.root.getBoundingClientRect();
+  if (!S.V?.root) return null;
+  const doc = S.V.root.getBoundingClientRect();
   if (y < doc.top || y > doc.bottom) return null;
   for (const x of [doc.left + 24, doc.left + doc.width * 0.3, doc.left + doc.width * 0.6]) {
     let node = null, off = 0;
     if (document.caretRangeFromPoint) { const r = document.caretRangeFromPoint(x, y); node = r?.startContainer; off = r?.startOffset || 0; }
     else if (document.caretPositionFromPoint) { const p = document.caretPositionFromPoint(x, y); node = p?.offsetNode; off = p?.offset || 0; }
-    if (node && S.root.contains(node)) return S.ix.offsetOf(node, off);
+    if (node && S.V.root.contains(node)) return viewIndex().offsetOf(node, off);
   }
   return null;
 }
@@ -1042,12 +1949,12 @@ function runFind(q, { jump = true } = {}) {
   F.q = q;
   const nq = fold(H.normWs(q));
   clearFindMarks();
-  if (!S.ready || nq.length < 2) { F.hits = []; F.ranges = []; F.cur = -1; updateFindUI(); return; }
+  if (!S.ready && !S.V || nq.length < 2 || !S.V) { F.hits = []; F.ranges = []; F.cur = -1; updateFindUI(); return; }
   const { norm, map } = foldedText();
   const hits = [];
   for (let i = norm.indexOf(nq); i >= 0 && hits.length < 5000; i = norm.indexOf(nq, i + nq.length)) hits.push([map[i], map[i + nq.length - 1] + 1]);
   F.hits = hits;
-  const ix = S.ix.ensure();
+  const ix = viewIndex();
   F.ranges = hits.map(([a, b]) => ix.range(a, b));
   if (hasHighlightApi) CSS.highlights.set("cpin-find", new Highlight(...F.ranges));
   if (!hits.length) { F.cur = -1; updateFindUI(); return; }
@@ -1083,30 +1990,35 @@ function updateFindUI() {
   $("#findPrev").disabled = $("#findNext").disabled = !n;
 }
 let findTimer = 0;
-findInput.addEventListener("input", () => { clearTimeout(findTimer); findTimer = setTimeout(() => runFind(findInput.value), 140); });
+findInput.addEventListener("input", () => { S.qDropped = true; clearTimeout(findTimer); findTimer = setTimeout(() => runFind(findInput.value), 140); });
 findInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") { e.preventDefault(); clearTimeout(findTimer); stepFind(e.shiftKey ? -1 : 1); }
-  if (e.key === "Escape") { findInput.value = ""; runFind(""); findInput.blur(); }
+  if (e.key === "Escape") { findInput.value = ""; runFind(""); findInput.blur(); setFindOpen(false); }
 });
 $("#findPrev").addEventListener("click", () => stepFind(-1));
 $("#findNext").addEventListener("click", () => stepFind(1));
+function setFindOpen(open) {
+  $("#top").classList.toggle("find-open", open);
+  $("#findToggle").setAttribute("aria-expanded", String(open));
+  if (open) requestAnimationFrame(() => findInput.focus({ preventScroll: true }));
+}
 
-/* --- ?q=<query>: opened from a search result. Fill find-in-note with the query and glide to its first
+/* --- ?q=<query>: opened from a search result. Fill find-in-text with the query and glide to its first
    match at or after the section in the address (#heading-id). Search matches words, not phrases, so if
-   the whole query is not in the note, the longest run of its words that is (soonest after that point)
+   the whole query is not in the text, the longest run of its words that is (soonest after that point)
    is used instead: "internal relocation Kabul" -> "internal relocation". */
 const QUERY_STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "are", "was", "not", "but"]);
 function findFromQuery() {
-  const q = H.normWs((params.get("q") || "").replace(/^\s*"(.+)"\s*$/, "$1"));
+  const q = H.normWs(WANT.q.replace(/^\s*"(.+)"\s*$/, "$1"));
   const id = decodeURIComponent(location.hash.slice(1));
-  if (q.length < 2 || id.startsWith("h=")) return false;                // a saved highlight's link wins
-  const el = id ? document.getElementById(id) : null;
-  const from = el && S.root.contains(el) ? (S.ix.firstTextAt(el) ?? 0) : 0;
+  if (q.length < 2 || id.startsWith("h=") || !S.V) return false;
+  const el = id ? S.V.root.querySelector(`[id="${CSS.escape(id)}"]`) : null;
+  const from = el ? (viewIndex().firstTextAt(el) ?? 0) : 0;
   const { norm, map } = foldedText();
-  const nextAt = (term) => {                                            // first match at or after `from`
+  const nextAt = (term) => {
     const t = fold(term);
     for (let i = norm.indexOf(t); i >= 0; i = norm.indexOf(t, i + 1)) if (map[i] >= from) return map[i];
-    return norm.includes(t) ? Infinity : -1;                            // only earlier in the note
+    return norm.includes(t) ? Infinity : -1;
   };
   const words = q.split(" ").slice(0, 8);
   let term = null;
@@ -1125,11 +2037,49 @@ function findFromQuery() {
   }
   term ||= q;
   findInput.value = term;
+  if (narrow.matches) setFindOpen(true);
   runFind(term, { jump: false });
-  if (!F.hits.length) { if (el && S.root.contains(el)) goToElement(el); return true; }
+  if (!F.hits.length) { if (el) goToElement(el); return true; }
   const k = F.hits.findIndex(([a]) => a >= from);
   goFind(k < 0 ? 0 : k);
   return true;
+}
+
+/* ================================================================== address */
+
+function syncUrl() {
+  if (!S.series) return;
+  const b = S.mode === "changes" && S.pair ? S.pair.b : shownEdition();
+  const url = reportUrl({
+    country: COUNTRY, series: SERIES,
+    edition: isLatest(b) ? null : S.E[b].id,
+    changes: S.mode === "changes",
+    from: S.mode === "changes" && S.pair && S.pair.a !== S.pair.b - 1 ? S.E[S.pair.a].id : null,
+    view: S.view,
+    q: WANT.q && !S.qDropped ? WANT.q : null,
+  }, location.hash);
+  const here = location.pathname.split("/").pop() + location.search + location.hash;
+  if (url !== here) history.replaceState(null, "", url);
+}
+
+function routeHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (!h || !S.ready) return;
+  const m = /^h=(.+)$/.exec(h);
+  if (m) {
+    const id = m[1];
+    if (S.marks.get(id)?.length || S.mode !== "read") return goToHighlight(id, { open: true });
+    // Not in the edition shown: open the edition it was saved from, if held.
+    const rec = recById(id), E = rec && S.E.find((x) => sameEdition(rec, x));
+    if (E && E.i !== S.C?.e) {
+      slider.place(null, E.k);
+      showEdition(E.i);
+      return goToHighlight(id, { open: true });
+    }
+    return goToHighlight(id, { open: true });
+  }
+  const el = S.V?.root.querySelector(`[id="${CSS.escape(h)}"]`);
+  if (el) goToElement(el);
 }
 
 /* ================================================================== chrome: theme, keys, sheet, progress */
@@ -1137,7 +2087,7 @@ function findFromQuery() {
 let sheetTab = "toc";
 function renderSheet() {
   const body = $("#sheetBody");
-  body.innerHTML = sheetTab === "toc" ? `<nav class="toc">${tocHtml(sectionCounts())}</nav>` : `<div class="rail">${savedHtml()}</div>`;
+  body.innerHTML = sheetTab === "toc" ? `<nav class="toc">${tocHtml()}</nav>` : `<div class="rail">${S.mode === "changes" ? changesHtml() : savedHtml()}</div>`;
   $("#sheet").querySelectorAll(".sheet-tab").forEach((t) => t.setAttribute("aria-selected", String(t.dataset.tab === sheetTab)));
 }
 function openSheet(tab) {
@@ -1160,6 +2110,13 @@ function closeSheet() {
   setTimeout(() => { if (!sheet.classList.contains("on")) bd.hidden = true; }, 520);
   $("#dock").classList.remove("is-hidden");
 }
+const rIns = new NumberRoller($("#rIns"), 6), rDel = new NumberRoller($("#rDel"), 6), rChg = new NumberRoller($("#rChg"), 4);
+rollers.push(rIns, rDel, rChg);
+function measureBars() {
+  const root = document.documentElement.style;
+  root.setProperty("--stick-top", `${$("#top").offsetHeight}px`);
+  root.setProperty("--bar-h", `${$("#bar").hidden ? 0 : $("#bar").offsetHeight}px`);
+}
 
 function wireChrome() {
   const themeBtn = $("#theme");
@@ -1178,8 +2135,13 @@ function wireChrome() {
 
   addEventListener("keydown", (e) => {
     const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
-    if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) { e.preventDefault(); findInput.focus(); findInput.select(); return; }
-    if (!typing && !e.metaKey && !e.ctrlKey && !e.altKey && (e.key === "j" || e.key === "k") && F.hits.length) { e.preventDefault(); goFind(F.cur + (e.key === "j" ? 1 : -1)); return; }
+    if (e.key === "/" && !typing && !e.metaKey && !e.ctrlKey) { e.preventDefault(); if (narrow.matches) setFindOpen(true); findInput.focus(); findInput.select(); return; }
+    const plain = !typing && !e.metaKey && !e.ctrlKey && !e.altKey;
+    if (plain && (e.key === "j" || e.key === "k")) {
+      if (F.hits.length) { e.preventDefault(); goFind(F.cur + (e.key === "j" ? 1 : -1)); return; }
+      if (S.mode === "changes") { e.preventDefault(); goToChange(e.key === "j" ? S.cur + 1 : Math.max(0, S.cur - 1)); return; }
+    }
+    if (plain && e.key === "c" && !e.target.closest?.(".rs-handle")) { e.preventDefault(); setMode(S.mode === "changes" ? "read" : "changes"); return; }
     if (e.key === "Escape") {
       if (popState) closePop();
       else if (!tool.hidden) { hideTool(); getSelection().removeAllRanges(); }
@@ -1195,17 +2157,29 @@ function wireChrome() {
     const tab = e.target.closest(".sheet-tab");
     if (tab) { sheetTab = tab.dataset.tab; renderSheet(); }
   });
-  // Contents links (column and sheet) glide to their heading.
   document.addEventListener("click", (e) => {
     const a = e.target.closest(".toc a[data-sec]");
     if (!a) return;
     e.preventDefault();
-    const s = S.sections[Number(a.dataset.sec)];
-    if (!s) return;
+    const s = S.V.sections[Number(a.dataset.sec)];
+    if (!s?.el) return;
     if ($("#sheet").contains(a)) closeSheet();
-    history.replaceState(null, "", `#${s.id}`);
+    history.replaceState(null, "", `${location.pathname}${location.search}#${s.id}`);
     goToElement(s.el);
   });
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-act]");
+    if (!b) return;
+    if (b.dataset.act === "latest") readLatest();
+    if (b.dataset.act === "next-dead") nextDead();
+  });
+  $("#latestMini").addEventListener("click", () => readLatest());
+  $("#changesBtn").addEventListener("click", () => setMode(S.mode === "changes" ? "read" : "changes"));
+  $("#vseg").addEventListener("click", (e) => { const b = e.target.closest("button[data-view]"); if (b && !b.disabled) setView(b.dataset.view); });
+  $("#prevBtn").addEventListener("click", () => goToChange(Math.max(0, S.cur - 1)));
+  $("#nextBtn").addEventListener("click", () => goToChange(S.cur + 1));
+  $("#findToggle").addEventListener("click", () => setFindOpen(!$("#top").classList.contains("find-open")));
+  narrow.addEventListener("change", () => { applyModeUI(); if (S.mode === "changes" && S.redline) paintRedline(S.redline.a, S.redline.b, S.redline.res); });
 
   const bar = $("#progress");
   let ticking = false;
@@ -1216,19 +2190,14 @@ function wireChrome() {
       ticking = false;
       const p = Math.max(0, Math.min(1, scrollY / Math.max(1, maxScroll())));
       bar.style.transform = `scaleX(${p.toFixed(4)})`;
+      $("#bar").classList.toggle("is-stuck", $("#bar").getBoundingClientRect().top <= $("#top").offsetHeight + 0.5);
     });
   }, { passive: true });
-  addEventListener("resize", () => { if (popState) closePop(); hideTool(); moveIndicator(); });
+  addEventListener("resize", () => { if (popState) closePop(); hideTool(); moveIndicator(); rollers.forEach((r) => r.remeasure(true)); });
   addEventListener("hashchange", () => routeHash());
-}
-
-function routeHash({ initial = false } = {}) {
-  const h = decodeURIComponent(location.hash.slice(1));
-  if (!h || !S.ready) return;
-  const m = /^h=(.+)$/.exec(h);
-  if (m) return goToHighlight(m[1], { open: true });
-  const el = document.getElementById(h);
-  if (el && S.root.contains(el)) goToElement(el, initial ? {} : {});
+  new ResizeObserver(measureBars).observe($("#top"));
+  new ResizeObserver(measureBars).observe($("#bar"));
+  measureBars();
 }
 
 /* ================================================================== toasts */
@@ -1251,7 +2220,7 @@ function toast(message, { action, onAction, ms = 3800 } = {}) {
 if (TEST) {
   const offsetsOf = (text, nth = 0) => {
     let i = -1;
-    for (let k = 0; k <= nth; k++) { i = S.text.indexOf(text, i + 1); if (i < 0) return null; }
+    for (let k = 0; k <= nth; k++) { i = S.C.text.indexOf(text, i + 1); if (i < 0) return null; }
     return [i, i + text.length];
   };
   window.cpinReader = {
@@ -1260,7 +2229,7 @@ if (TEST) {
     select(text, nth = 0) {
       const o = offsetsOf(text, nth);
       if (!o) return null;
-      const r = S.ix.range(o[0], o[1]);
+      const r = S.C.ix.range(o[0], o[1]);
       warm(r.startContainer.parentElement);
       const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
       checkSelection();
@@ -1276,16 +2245,35 @@ if (TEST) {
       const ok = await copyRich(payload);
       return { ok, ...S.lastCopy };
     },
+    cite: () => S.pending && formatCitation(ctxFromInfo(S.pending), citeStyle).text,
     lastCopy: () => S.lastCopy,
     open: (id) => openHighlight(id),
     goTo: (id) => goToHighlight(id, { open: true }),
     find: (q) => { findInput.value = q; runFind(q); return { hits: F.hits.length, cur: F.cur }; },
     step: (d) => { goFind(F.cur + d); return F.cur; },
     style: (s) => setStyle(s),
-    highlights: () => H.highlightsFor(COUNTRY, NOTE),
+    highlights: () => seriesRecords(),
     checks: () => Object.fromEntries([...S.checks].map(([id, c]) => [id, c.status])),
     marks: (id) => (S.marks.get(id) || []).map((m) => m.textContent).join(""),
-    state: () => ({ edition: S.edition.sha256, version: S.edition.version_banner, src: S.src, month: S.month, sections: S.sections.length, refs: S.refs.length, paras: S.anchors.filter((a) => a.para).length, textLength: S.text.length }),
-    textAt: (s, e) => S.text.slice(s, e),
+    state: () => ({
+      mode: S.mode, view: S.view, edition: S.C?.e, editionId: S.C && S.E[S.C.e].id, version: S.C && S.E[S.C.e].version,
+      latest: S.tl.latest, stop: slider.b, from: slider.a, pair: S.pair, stops: S.tl.stops.length, editions: S.E.length,
+      sections: S.V?.sections.length, view_kind: S.V?.kind, changes: S.redline?.res.stats.changes ?? null,
+      caption: $("#wc .wc-in:not(.out)")?.innerText, asat: $("#asat").getAttribute("aria-label") || $("#histMini").textContent,
+      url: location.search, links: S.C?.linkCounts?.counts || null, textLength: S.C?.text.length,
+    }),
+    setMode: (m, pair) => setMode(m, pair ? { pair } : {}),
+    setView: (v) => setView(v),
+    play: () => play(),
+    stop: () => stopPlay(),
+    moveTo: (k) => slider.moveTo("b", k, 0),
+    pick: (k) => pickStop(k),
+    latest: () => readLatest(),
+    ref: (num, kind = "section") => { const a = document.createElement("a"); a.dataset.ref = num; a.dataset.kind = kind; goToRef(a); },
+    refs: () => [...document.querySelectorAll("#wc .wc-in:not(.out) a.ref")].map((a) => a.textContent),
+    clickRef: (n = 0) => document.querySelectorAll("#wc .wc-in:not(.out) a.ref")[n]?.click(),
+    setLinks: (map) => { S.linkMap = map; if (S.V?.root) delete S.V.root.dataset.linksDone; decorateView(); return S.C?.linkCounts?.counts; },
+    pairDone: () => pairDone,
+    textAt: (s, e) => S.C.text.slice(s, e),
   };
 }

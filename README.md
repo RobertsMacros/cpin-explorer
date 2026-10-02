@@ -86,25 +86,44 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 cd web && npm install && npm run vendor && npm test
 python3 scripts/serve.py 8781         # from the repo root, then open:
 # http://localhost:8781/prototypes/dashboard/                                   globe dashboard
-# http://localhost:8781/prototypes/reader/?country=iran&note=<note id>           read the latest edition
-# http://localhost:8781/prototypes/redline-timeline/?country=afghanistan&series=note:fear-taliban
-#                                                                                 compare editions
+# http://localhost:8781/prototypes/reader/?country=afghanistan&series=note:fear-taliban
+#                                                                                 one report: read, history, changes
+# http://localhost:8781/prototypes/redline-timeline/                            redline sample (invented text)
 # http://localhost:8781/prototypes/saved/                                       saved highlights
 # http://localhost:8781/prototypes/search/?q=internal%20relocation              full-text search
 ```
 
-- **Reader:** the latest edition, verbatim, with contents, find-in-note, mirrored images and links
-  preserved. Select text to save a highlight. Each highlight records its edition, paragraph number(s),
-  section and the sources its footnotes cite. It produces an OSCOLA citation or a tribunal short form,
-  with a link that jumps to the words on GOV.UK. If a later edition changes the passage, the highlight
-  says so and links to the redline. Highlights are kept in this browser (`localStorage`,
-  `cpin-highlights-v1`) until logins exist; the Saved page exports them as Markdown or JSON.
-- **Redline:** every edition of a report on a timeline. Each edition is captioned with the Home Office's
-  own "Changes from last version of this note" sentence, or the GOV.UK change note, plus a computed
-  summary that is labelled as computed. The comparison runs in a Web Worker
-  (`prototypes/shared/redline-diff.js`).
-- `./cpin export` also writes `prototypes/data/series/` (every edition of each report with 2+ editions;
-  gitignored, regenerate it).
+- **Report page** (`prototypes/reader/`): one page per report, `?country=<slug>&series=<key>`. It opens on
+  the latest edition, verbatim and clean, with contents, find-in-text, mirrored images and links preserved.
+  Links to notes we hold open here; links to country pages open the dashboard at that country; Word
+  bookmarks that GOV.UK lost are repaired; cited sources carry their link status ("Moved", "Dead" with the
+  archived copy) and the head sums them up. Older links (`?country=&note=`) are mapped to their report.
+  - **History**, open by default above the text (collapsible): every edition held and every GOV.UK update
+    on one timeline, with the rolling "As at" date, Play, and a change log. Each edition is captioned with
+    the Home Office's own "Changes from last version of this note" (rendered as published, tables
+    included), else its GOV.UK change note, plus a computed line (most-changed sections, words added and
+    removed) labelled as computed. GOV.UK updates whose edition is not held are dated stops too, so a
+    report with one edition still has a playable history. Section and paragraph numbers in captions
+    ("sections 13.4, and 16.3 to 16.5") link into the text and highlight what they refer to.
+  - **Time travel:** moving the slider shows that edition, clean (`&edition=<id>`); "Read the latest
+    guidance" goes back. The reading place is kept by paragraph number.
+  - **Show changes** turns the same reading area into a redline (Inline or Side-by-side) between the
+    edition shown and the one before, or any two chosen with the Old and New handles
+    (`&changes=1[&from=<id>][&view=sbs]`). Comparisons run in a Web Worker
+    (`prototypes/shared/redline-engine.js`, `redline-worker.js`, `redline-diff.js`).
+    `prototypes/redline-timeline/?country=&series=` now redirects here with changes shown; without a query
+    it is still the invented sample.
+  - **Highlights:** select text in any edition to save a highlight. Each records the edition it was read
+    in, paragraph number(s), section and the sources its footnotes cite, and cites that edition: GOV.UK
+    while it is the live edition, otherwise its Internet Archive copy (dated from the capture in its
+    address). On the latest edition, older highlights are re-anchored or flagged "Changed since you saved
+    it", with a link to the redline. Highlights are kept in this browser (`localStorage`,
+    `cpin-highlights-v1`) until logins exist; the Saved page exports them as Markdown or JSON.
+  - Timeline, captions and paragraph references are pure functions in
+    `prototypes/shared/report-history.js` (tested in `web/test/report-history.test.mjs`); the slider and
+    rolling digits are `prototypes/shared/timeline.js` + `timeline.css`.
+- `./cpin export` also writes `prototypes/data/series/` (every edition held of each report; gitignored,
+  regenerate it).
 - **Search:** full-text search across every live note, or within one country's notes, with
   [Pagefind](https://pagefind.app) (MIT) running in the browser. `cd web && npm run search-index` writes
   one record per h2/h3 section of each live note's current edition (`src/cpin/search_records.py` →

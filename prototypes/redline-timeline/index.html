@@ -18,6 +18,16 @@
   (copied into ../../assets/roberts-macros/, see SOURCE.txt there).
 -->
 <script>
+  // Real notes now open on their report page, which has this timeline and the redline built in:
+  // ?country=&series= goes there with changes shown. Without a query this page stays the sample.
+  (function () {
+    var q = new URLSearchParams(location.search), c = q.get('country'), s = q.get('series');
+    if (!c || !s) return;
+    var enc = function (x) { return encodeURIComponent(x).replace(/%3A/gi, ':'); };
+    window.__cpinRedirect = true;
+    location.replace('../reader/index.html?country=' + enc(c) + '&series=' + enc(s) + '&changes=1' +
+      (q.get('view') === 'sbs' ? '&view=sbs' : '') + location.hash);
+  })();
   // Apply a stored theme before first paint so there is no flash.
   try { var t = localStorage.getItem('cpinx-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -2137,7 +2147,7 @@ async function bootReal() {
   // Warm the cache in the background: each edition against the one before (sizes the bars, readies Play).
   for (let i = N - 1; i >= 1; i--) engine.diff(i - 1, i).catch(() => {});
 }
-if (REAL) bootReal(); else bootSample();
+if (!window.__cpinRedirect) { if (REAL) bootReal(); else bootSample(); }
 </script>
 </body>
 </html>

@@ -1,0 +1,123 @@
+/* CPIN Explorer · history timeline (timeline.js): the revision slider and rolling digits.
+   COBE look from theme.css: square corners (the knobs are the one round thing), one electric blue,
+   Geist Pixel for numbers and labels, Geist Mono for dates. Motion eases; reduced motion is instant. */
+
+/* --- Rolling digits ("number flow") ------------------------------------------------------------ */
+.roller { display: inline-flex; align-items: baseline; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.slot {
+  display: inline-block; height: 1.32em; line-height: 1.32em; overflow: hidden; vertical-align: bottom;
+  transition: width .32s var(--ease);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
+}
+.slot .col { display: block; transform: translateY(calc(var(--i, 0) * -1.32em)); transition: transform .34s var(--ease); }
+.slot .col > span { display: block; height: 1.32em; white-space: pre; width: max-content; }
+.slot.fixed { -webkit-mask-image: none; mask-image: none; }
+.roller.instant .slot, .roller.instant .slot .col { transition: none; }
+
+/* --- Slider --------------------------------------------------------------------------------------- */
+.rs { position: relative; margin-top: .9rem; padding: 0 1.4rem; user-select: none; -webkit-user-select: none; }
+.rs-inner { position: relative; --xa: 0; --xb: 1; height: 6.7rem; touch-action: pan-y; cursor: pointer; }
+/* The baseline sits at y = 4.6rem; bars stand on it, knobs and nodes are centred on it. */
+.rs-plot { position: absolute; left: 0; right: 0; top: 1.2rem; height: 3.4rem; }
+.rs-year { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1px solid var(--line); }
+.rs-year span { position: absolute; top: -.1rem; left: .35rem; font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .06em; color: var(--ink-3); line-height: 1; }
+.rs-today { border-left: 1px dashed var(--blue-line); }
+.rs-today span { color: var(--blue); text-transform: uppercase; }
+.rs-range {
+  position: absolute; top: 1.2rem; height: calc(3.4rem + 1.5px);
+  left: calc(var(--xa) * 100%); width: calc((var(--xb) - var(--xa)) * 100%);
+  background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--blue) 11%, transparent));
+  border-bottom: 3px solid var(--blue); pointer-events: none;
+}
+.rs[data-mode="read"] .rs-range { background: linear-gradient(to bottom, transparent, color-mix(in oklab, var(--blue) 6%, transparent)); border-bottom-color: var(--blue-line); }
+.rs-bar {
+  position: absolute; bottom: 2px; width: .6rem; margin-left: -.3rem; height: max(.3rem, calc(var(--h) * 2.35rem));
+  border: 0; padding: 0; border-radius: 0; background: color-mix(in oklab, var(--blue) 20%, var(--surface)); cursor: pointer;
+  transition: background-color var(--t) var(--ease), outline-color var(--t-fast) var(--ease), height var(--t-slow) var(--ease);
+  outline: 1px solid transparent; outline-offset: 2px;
+}
+.rs-bar.first { background: transparent; box-shadow: inset 0 0 0 1px var(--blue-line); }
+.rs-bar.is-base { background: color-mix(in oklab, var(--blue) 55%, var(--surface)); }
+.rs-bar.in-range { background: color-mix(in oklab, var(--blue) 45%, var(--surface)); }
+.rs[data-mode="compare"] .rs-bar.in-range, .rs-bar.is-cur { background: var(--blue); }
+.rs-bar:hover { outline-color: var(--blue); }
+/* GOV.UK updates whose edition is not held: a hollow tick on the baseline. */
+.rs-ev {
+  position: absolute; bottom: 0; width: .55rem; height: 1.15rem; margin-left: -.275rem; padding: 0; border: 0; border-radius: 0;
+  background: transparent; cursor: pointer; outline: 1px solid transparent; outline-offset: 2px;
+  transition: outline-color var(--t-fast) var(--ease);
+}
+.rs-ev::before { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 100%; margin-left: -.5px; background: repeating-linear-gradient(to top, var(--ink-3) 0 2px, transparent 2px 4px); transition: background var(--t) var(--ease); }
+.rs-ev.in-range::before, .rs-ev.is-cur::before { background: repeating-linear-gradient(to top, var(--blue) 0 2px, transparent 2px 4px); }
+.rs-ev:hover { outline-color: var(--blue); }
+.rs[data-mode="compare"] .rs-ev { opacity: .45; }
+.rs-bar::after, .rs-ev::after { /* tooltip: a blue tag that pops in; line 2 is the stop's change sentence */
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + .55rem); z-index: 3;
+  transform: translate(-50%, .3rem) scale(.97); filter: blur(3px); opacity: 0;
+  white-space: pre-line; width: max-content; max-width: 23rem; text-align: left; pointer-events: none;
+  font-family: var(--font-mono); font-size: .66rem; letter-spacing: 0; line-height: 1.4;
+  padding: .42em .6em .38em; background: var(--blue); color: var(--blue-ink);
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+.rs-bar[data-tip=""]::after, .rs-ev[data-tip=""]::after { display: none; }
+.rs-bar:hover::after, .rs-bar.tip::after, .rs-ev:hover::after, .rs-ev.tip::after { opacity: 1; transform: translate(-50%, 0); filter: none; }
+.rs-bar.edge-l::after, .rs-ev.edge-l::after { left: -.3rem; transform: translate(0, .3rem) scale(.97); }
+.rs-bar.edge-r::after, .rs-ev.edge-r::after { left: auto; right: -.3rem; transform: translate(0, .3rem) scale(.97); }
+.rs-bar.edge-l:hover::after, .rs-bar.edge-l.tip::after, .rs-ev.edge-l:hover::after, .rs-ev.edge-l.tip::after,
+.rs-bar.edge-r:hover::after, .rs-bar.edge-r.tip::after, .rs-ev.edge-r:hover::after, .rs-ev.edge-r.tip::after { transform: none; }
+.rs-base { position: absolute; left: 0; right: 0; top: calc(4.6rem - 1px); height: 2px; background: var(--line); }
+.rs-node {
+  position: absolute; top: 4.6rem; width: .5rem; height: .5rem; margin: -.25rem 0 0 -.25rem;
+  background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+  transition: background-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.rs-node.is-ev { width: .36rem; height: .36rem; margin: -.18rem 0 0 -.18rem; transform: rotate(45deg); }
+.rs-node.is-base { box-shadow: inset 0 0 0 1.5px var(--blue); }
+.rs-node.in-range, .rs-node.is-cur { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue); }
+.rs-label {
+  position: absolute; top: 5.25rem; transform: translateX(-50%); text-align: center; white-space: nowrap;
+  font-family: var(--font-mono); font-size: .62rem; line-height: 1.3; letter-spacing: .02em; color: var(--ink-3);
+  cursor: pointer; transition: color var(--t) var(--ease), opacity var(--t) var(--ease);
+}
+.rs-label b { display: block; font-family: var(--font-pixel); font-weight: 400; font-size: .76rem; letter-spacing: .05em; color: var(--ink-2); margin-bottom: .1rem; }
+.rs-label.is-ev { font-size: .58rem; }
+.rs-label.in-range b, .rs-label.is-base b, .rs-label.is-cur b { color: var(--blue); }
+.rs-label.is-cur { color: var(--ink-2); }
+.rs-label.crowded { opacity: 0; pointer-events: none; }
+
+.rs-handle {
+  position: absolute; top: 0; height: 5.25rem; width: 2.9rem; margin-left: -1.45rem; left: calc(var(--x) * 100%);
+  touch-action: none; cursor: grab; z-index: 2; -webkit-tap-highlight-color: transparent;
+  transition: opacity var(--t) var(--ease);
+}
+.rs-handle.old { --x: var(--xa); --hc: var(--blue-line); }
+.rs-handle.new { --x: var(--xb); --hc: var(--blue); }
+.rs[data-mode="read"] .rs-handle.old { opacity: 0; pointer-events: none; }
+.rs-handle::before { content: ""; position: absolute; left: 50%; top: 0; height: 4.6rem; width: 2px; margin-left: -1px; background: var(--hc); }
+.rs-handle .knob {
+  position: absolute; left: 50%; top: 4.6rem; width: 1.05rem; height: 1.05rem; margin: -.525rem 0 0 -.525rem;
+  border-radius: 50%; border: 2px solid var(--blue); background: var(--surface);
+  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+.rs-handle.new .knob { background: var(--blue); }
+.rs-handle .flag { position: absolute; top: 0; font-size: .6rem; transition: transform var(--t-fast) var(--ease); }
+.rs-handle.old .flag { right: calc(50% - 1px); background: var(--surface); }
+.rs-handle.new .flag { left: calc(50% - 1px); }
+.rs-handle:hover .knob, .rs-handle.is-dragging .knob { transform: scale(1.15); box-shadow: 0 0 0 .4rem color-mix(in oklab, var(--blue) 16%, transparent); }
+.rs-handle.is-dragging { cursor: grabbing; }
+.rs-handle:focus-visible { outline: none; }
+.rs-handle:focus-visible .knob { box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus); }
+.rs-handle:focus-visible .flag { outline: 2px solid var(--focus); outline-offset: 2px; }
+.rs.is-dragging .rs-inner { cursor: grabbing; }
+
+@media (max-width: 599px) {
+  .rs { padding: 0 .9rem; }
+  .rs-label .d { display: none; }
+  .rs-label.is-ev { display: none; }
+  .rs-year span { font-size: .56rem; left: .2rem; }
+  .rs-today span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slot, .slot .col, .rs-bar, .rs-handle, .rs-handle .knob { transition: none; }
+}
