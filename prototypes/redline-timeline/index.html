@@ -9,7 +9,7 @@
   CPIN Explorer · revision slider + redline view toggle.
   Real mode: index.html?country=<slug>&series=<key> (optionally &view=sbs) loads the verbatim GOV.UK
   editions exported by `./cpin export` from ../data/series/ and compares pairs in a module Web Worker
-  (redline-worker.js, engine in ../shared/redline-diff.js). Note text is never altered; only image
+  (../shared/redline-worker.js, engine in ../shared/redline-diff.js). Note text is never altered; only image
   sources are swapped for the mirrored copies at render time. Without a query the page shows the
   synthetic "Ruritania" sample (all sample text is invented) and a chooser of real notes.
   No CDN, no libraries: styles build on ../shared/theme.css (COBE look; Geist fonts self-hosted
@@ -1405,7 +1405,7 @@ const engine = {
   init(bodies, images) {
     this.bodies = bodies; this.images = images;
     try {
-      this.worker = new Worker('redline-worker.js?v=' + ENGINE_BUILD, { type: 'module' });
+      this.worker = new Worker('../shared/redline-worker.js?v=' + ENGINE_BUILD, { type: 'module' });
       this.worker.onmessage = e => this.onMessage(e.data);
       this.worker.onerror = e => { e.preventDefault && e.preventDefault(); this.toFallback(); };
       this.worker.postMessage({ type: 'init', bodies, images });

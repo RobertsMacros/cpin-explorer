@@ -83,8 +83,8 @@ function noteHtml(g, group) {
       <h3 class="sv-note-title">${esc(capFirst(group.topic || n?.topic || group.title))}</h3>
       <p class="note-verbatim">${esc(n?.title || group.title)}</p>
       <div class="sv-note-links">
-        <a class="btn" href="${esc(paths.reader(g.country, group.note))}">Read the note →</a>
-        ${n?.compare_url && n.editions > 1 ? `<a class="btn" href="${esc(n.compare_url)}">Compare ${n.editions} editions</a>` : ""}
+        <a class="btn" href="${esc(paths.reader(g.country, group.note))}">${gone ? "Read the last edition" : "Read the latest guidance"} →</a>
+        ${n?.compare_url && n.editions > 1 ? `<a class="btn" href="${esc(n.compare_url)}">Show changes across ${n.editions} editions</a>` : ""}
       </div>
     </div>
     <ol class="sv-items">${group.items.map((r) => itemHtml(r, g.country)).join("")}</ol>
@@ -96,7 +96,7 @@ function statusHtml(r) {
   if (r.check === "changed") {
     const { n } = noteInfo(r.country, r.note);
     return `<span class="badge badge--changed">Changed since you saved it (v${esc(r.version || "?")} → v${esc(r.current?.version || "?")})</span>${
-      n?.compare_url ? ` <a class="badge-link" href="${esc(n.compare_url)}">Compare editions →</a>` : ""}`;
+      n?.compare_url ? ` <a class="badge-link" href="${esc(n.compare_url)}">Show what changed →</a>` : ""}`;
   }
   if (r.check === "still" && r.current?.version) return `<span class="badge">Still in v${esc(r.current.version)}</span>`;
   return "";

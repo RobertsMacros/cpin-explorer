@@ -153,7 +153,7 @@ def _note_entry(store: Store, country: str, name: str, note: str, index: dict, p
         "earliest": editions[0]["date"] if editions else version_date(index["versions"][0]),
         "latest_change": ({"version": editions[-1]["version"], "statement": editions[-1]["change_statement"]}
                           if editions and editions[-1]["change_statement"] else None),
-        "compare_url": (f"../redline-timeline/index.html?country={country}&series={series['key']}"
+        "compare_url": (f"../reader/index.html?country={country}&series={series['key']}&changes=1"
                         if series and len(editions) > 1 else None),
         "govuk_url": config.GOVUK + index["base_path"] if index["status"] == "live" else None,
         "archive_url": (archived[-1].get("captures") or [{}])[-1].get("archive_url") if archived else None,
@@ -162,7 +162,7 @@ def _note_entry(store: Store, country: str, name: str, note: str, index: dict, p
 
 
 def build_dashboard(store: Store, countries_config: dict, series_out: Path | None = None) -> dict:
-    """The dashboard's data. With series_out, also writes one file per report with 2+ editions."""
+    """The dashboard's data. With series_out, also writes one history file per report."""
     state = store.load_state()
     manifest = store.load_pdf_manifest()
     image_files = store.load_image_manifest()

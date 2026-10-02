@@ -42,7 +42,7 @@ def test_report_with_two_editions_gets_a_series_file_with_verbatim_bodies(site, 
     sync(client, store, full=True)
     data = build_dashboard(store, CONFIG, series_out=tmp_path / "series")
     (note,) = data["countries"][0]["notes"]
-    assert note["editions"] == 2 and note["compare_url"].endswith("country=kenya&series=note:actors-protection")
+    assert note["editions"] == 2 and note["compare_url"].endswith("country=kenya&series=note:actors-protection&changes=1")
     series = json.loads((tmp_path / "series" / "kenya" / "note--actors-protection.json").read_text("utf-8"))
     assert [v["body"] for v in series["versions"]] == [BODY, edited]
     assert series["versions"][-1]["current"] and series["versions"][-1]["govuk_url"].endswith(NOTE_PATH)
