@@ -10,10 +10,16 @@
                         (patience) anchors, LCS dynamic programming inside the gaps.
      4. pairGap         unmatched removed/added blocks that are similar (word Dice >= 0.5) become
                         "modified" pairs (order preserving, best total similarity).
+        groupGap        reworked list items (split, merged, gaining or losing inner <p>s, text moved
+                        into or out of a sub-list): one block matching a run of blocks on the other
+                        side becomes one change, compared as a unit (diffGroup).
      5. diffTokens      word-level diff inside modified blocks, keeping inline markup (links,
                         footnote references, bold/italic) so links stay clickable.
      6. render          inline redline HTML (chunked for content-visibility) and side-by-side rows,
                         plus change records, a contents list with per-section counts and totals.
+                        The inline view follows the new edition's structure: deleted words take the
+                        paragraph of the new words beside them, and removed list items are placed
+                        inside the new lists around them (placeDel), so lists are not torn apart.
 
    The source text is never altered. Normalisation (whitespace, curly quotes, footnote and
    paragraph renumbering, attributes) only decides what counts as "the same"; what is shown is
@@ -203,14 +209,17 @@ export function prepareBody(html, shared) {
   const walk = (node, path) => {
     let run = [], liIndex = 0;
     const isOl = node.tag === 'ol', olStart = isOl ? (parseInt(getAttr(node, 'start'), 10) || 1) : 1;
-    const flush = () => { if (run.length && run.some(hasContent)) blocks.push(makeLeaf(null, run, path, 0)); run = []; };
+    // Each container remembers its first leaf (a list item's own text, its "head"), so the renderer can tell
+    // a container opened for its own content from one reopened only to hold nested content.
+    const add = blk => { blocks.push(blk); for (const c of path) if (!c.first) c.first = blk; };
+    const flush = () => { if (run.length && run.some(hasContent)) add(makeLeaf(null, run, path, 0)); run = []; };
     for (const k of node.kids) {
       if (k.t === 3 || !BLOCK.has(k.tag)) { run.push(k); continue; }
       flush();
       let ord = 0;
       if (k.tag === 'li') ord = isOl ? olStart + liIndex++ : ++liIndex;
-      if (isLeaf(k)) blocks.push(makeLeaf(k, k.kids, path, isOl ? ord : 0));
-      else walk(k, path.concat({ tag: k.tag, attrs: k.attrs, uid: ++uid, ord: isOl ? ord : 0 }));
+      if (isLeaf(k)) add(makeLeaf(k, k.kids, path, isOl ? ord : 0));
+      else walk(k, path.concat({ tag: k.tag, attrs: k.attrs, uid: ++uid, ord: isOl ? ord : 0, first: null }));
     }
     flush();
   };
@@ -437,10 +446,37 @@ function flagNumber(toks, kind) {
 const trivialEq = toks => toks.every(t => !isWordTok(t.text)) ||
   (toks.length <= 2 && toks.filter(t => t.word).length === 1 && toks.find(t => t.word).text.length <= 3);
 
+const tokensOf = (blk, side) => { const toks = tokenize(blk.kids, side); flagNumber(toks, blk.kind); return toks; };
+
+/* Pair the wrappers of two equal tokens: links, emphasis… in order (equal tokens have the same sequence of
+   these), anything else (p, span, td…) by tag in order. Pairing by depth would match an old <p> with a new
+   <a> when only one edition wraps the text in a paragraph (archived <li><p>…</p></li> vs live <li>…</li>). */
+function pairWrappers(ca, cb, res) {
+  const sa = [], sb = [], oa = [], ob = [], pairs = [];
+  for (const w of ca) (SEM[w.tag] ? sa : oa).push(w);
+  for (const w of cb) (SEM[w.tag] ? sb : ob).push(w);
+  for (let k = 0; k < Math.min(sa.length, sb.length); k++) pairs.push([sa[k], sb[k]]);
+  let j = 0;
+  for (const wa of oa) {
+    let q = j;
+    while (q < ob.length && ob[q].tag !== wa.tag) q++;
+    if (q < ob.length) { pairs.push([wa, ob[q]]); j = q + 1; }
+  }
+  let links = null;
+  for (const [wa, wb] of pairs) {
+    if (!res.wmap.has(wa)) res.wmap.set(wa, wb);
+    if (wa.tag === 'a' && !wa.noteref && isExternal(wa.href) && normHref(wa.href) !== normHref(wb.href) && !wb.changedFrom) {
+      wb.changedFrom = wa.href; (links ||= []).push([wa.href, wb.href]);
+    }
+  }
+  return links;
+}
+
 /** Word diff between two leaf blocks. Items carry the token text and their wrapper contexts. */
-export function diffTokens(a, b) {
-  const A = tokenize(a.kids, 'a'), B = tokenize(b.kids, 'b');
-  flagNumber(A, a.kind); flagNumber(B, b.kind);
+export function diffTokens(a, b) { return diffStreams(tokensOf(a, 'a'), tokensOf(b, 'b')); }
+
+/** Word diff between two token streams (each one block, or several blocks of a list item that was reworked). */
+function diffStreams(A, B) {
   const intern = interner();
   const ops = seqDiff(A.map(t => intern(t.key)), B.map(t => intern(t.key)));
   const runs = [];
@@ -461,16 +497,10 @@ export function diffTokens(a, b) {
   for (const r of merged) {
     if (r.eq) {
       r.b.forEach((tb, x) => {
-        const ta = r.a[x];
-        ta.ctx.forEach((wa, d) => {
-          const wb = tb.ctx[d];
-          if (!wb) return;
-          if (!res.wmap.has(wa)) res.wmap.set(wa, wb);
-          if (wa.tag === 'a' && wb.tag === 'a' && !wa.noteref && isExternal(wa.href) && normHref(wa.href) !== normHref(wb.href) && !wb.changedFrom) {
-            wb.changedFrom = wa.href; res.links.push([wa.href, wb.href]);
-          }
-        });
-        res.items.push({ t: tb, ta, st: 'eq' });
+        const ta = r.a[x], it = { t: tb, ta, st: 'eq' };
+        const links = pairWrappers(ta.ctx, tb.ctx, res);
+        if (links) { res.links.push(...links); it.links = links; }
+        res.items.push(it);
       });
       continue;
     }
@@ -486,6 +516,149 @@ export function diffTokens(a, b) {
     });
   }
   return res;
+}
+
+/* ------------------------------------------------------------------ Reworked list items */
+
+/* A list item that was split, merged, re-paragraphed (an <li> gaining or losing inner <p>s) or whose text
+   moved into or out of a sub-list is one block on one side and a run of consecutive blocks on the other.
+   Block alignment pairs at most one of them, which left the rest as stray additions and deletions of words
+   that had not changed. Such a run is compared as one unit ("group"): one word diff over all its blocks,
+   split back into a view per block so each edition keeps its own structure. */
+const GROUP_MIN = 0.75;   // word similarity (Dice) of the single block with the whole run
+const GROUP_GAIN = 0.1;   // … and better than with any one member by this much
+const MEMBER_MIN = 0.6;   // share of each member's words found in the single block
+const GROUP_MAX = 16;     // longest run
+const GROUP_WIN = 12;     // candidates either side of where a block's counterpart would be
+const inItem = b => b.tag === 'li' || b.path.some(c => c.tag === 'li');
+const groupable = b => !!b && b.kind === 't' && !b.inNotes && b.bag.length > 0;
+
+/** Replace runs of pairGap entries that form a group by { grp: { olds, news } }, placed at its first new block. */
+function groupGap(seq) {
+  const n = seq.length;
+  if (n < 2) return seq;
+  const li = [new Uint8Array(n), new Uint8Array(n)];
+  let any = false;
+  for (let e = 0; e < n; e++) for (const side of [0, 1]) if (seq[e][side] && inItem(seq[e][side])) li[side][e] = any = 1;
+  if (!any) return seq;
+  // Order is kept: a block's counterparts lie between the pairs around it. Stretches between pairs, with the
+  // unpaired entries of each side in order (a pair has the stretch before it and the one after it).
+  const segs = [{ s: [[], []] }], segOf = new Int32Array(n), rank = new Int32Array(n);
+  for (let e = 0; e < n; e++) {
+    segOf[e] = segs.length - 1;
+    if (seq[e][0] && seq[e][1]) { segs.push({ s: [[], []] }); continue; }
+    const list = segs[segs.length - 1].s[seq[e][0] ? 0 : 1];
+    rank[e] = list.length; list.push(e);
+  }
+  const candidates = (k, side) => {
+    const other = 1 - side, g = segs[segOf[k]];
+    if (seq[k][other]) return g.s[other].slice(-GROUP_WIN).concat(k, segs[segOf[k] + 1].s[other].slice(0, GROUP_WIN));
+    const mine = g.s[side], theirs = g.s[other];
+    const c = Math.floor(((rank[k] + 0.5) * theirs.length) / mine.length);
+    return theirs.slice(Math.max(0, c - GROUP_WIN), c + GROUP_WIN + 1);
+  };
+  const claimed = new Array(n).fill(null), at = new Map();
+  for (let k = 0; k < n; k++) {
+    if (claimed[k]) continue;
+    for (const side of [0, 1]) {
+      const s = seq[k][side];
+      if (!groupable(s)) continue;
+      const cand = candidates(k, side);
+      if (cand.length < 2 || !(li[side][k] || cand.some(e => li[1 - side][e]))) continue;
+      const run = bestRun(seq, k, side, s, claimed, cand);
+      if (!run) continue;
+      const other = run.map(e => seq[e][1 - side]);
+      const G = side === 0 ? { olds: [s], news: other } : { olds: other, news: [s] };
+      claimed[k] = G;
+      for (const e of run) claimed[e] = G;
+      at.set(side === 0 ? run[0] : k, G);
+      break;
+    }
+  }
+  if (!at.size) return seq;
+  const out = [];
+  for (let k = 0; k < n; k++) {
+    if (at.has(k)) out.push({ grp: at.get(k) });
+    else if (!claimed[k]) out.push(seq[k]);
+  }
+  return out;
+}
+
+/** The best run of consecutive candidate blocks (other side: unpaired, or s's own partner) that s matches as a whole. */
+function bestRun(seq, k, side, s, claimed, cand) {
+  const other = 1 - side, partner = seq[k][other];
+  if (partner && dice(s.bag, partner.bag) > 1 - GROUP_GAIN) return null;   // already as good as a group could be
+  const maxLen = s.bag.length * (2 / GROUP_MIN - 1);                       // longer members cannot reach GROUP_MIN
+  const cs = new Map();
+  for (const w of s.bag) cs.set(w, (cs.get(w) || 0) + 1);
+  const okMemo = new Map(), sim = new Map();   // member test and similarity with s, per entry
+  const ok = e => {
+    if (okMemo.has(e)) return okMemo.get(e);
+    const y = seq[e][other], b = y && y.bag;
+    let v = !claimed[e] && (e === k || !seq[e][side]) && groupable(y) && b.length <= maxLen;
+    if (v) {   // share of y's words found in s (bags are sorted, so repeats are adjacent); stop once it cannot pass
+      const allow = (1 - MEMBER_MIN) * b.length;
+      let c = 0, miss = 0;
+      for (let i = 0; i < b.length && miss <= allow;) {
+        let m = 1;
+        while (i + m < b.length && b[i + m] === b[i]) m++;
+        const h = Math.min(m, cs.get(b[i]) || 0);
+        c += h; miss += m - h; i += m;
+      }
+      v = miss <= allow;
+      if (v) sim.set(e, (2 * c) / (s.bag.length + b.length));   // = dice(s, y)
+    }
+    okMemo.set(e, v);
+    return v;
+  };
+  let best = null;
+  for (let p = 0; p < cand.length; p++) {
+    if (!ok(cand[p])) continue;
+    const cr = new Map();
+    let com = 0, tot = 0, s1 = 0, hasPartner = false, listy = inItem(s);
+    for (let q = p; q < cand.length && q - p < GROUP_MAX && ok(cand[q]); q++) {
+      const e = cand[q], y = seq[e][other];
+      for (const w of y.bag) { const c = cr.get(w) || 0; if (c < (cs.get(w) || 0)) com++; cr.set(w, c + 1); }
+      tot += y.bag.length;
+      s1 = Math.max(s1, sim.get(e));
+      if (e === k) hasPartner = true;
+      if (inItem(y)) listy = true;
+      if (q === p || (partner && !hasPartner) || !listy) continue;
+      const s2 = (2 * com) / (s.bag.length + tot);
+      if (s2 >= GROUP_MIN && s2 >= s1 + GROUP_GAIN && (!best || s2 > best.s2)) best = { s2, p, q };
+    }
+  }
+  return best ? cand.slice(best.p, best.q + 1) : null;
+}
+
+/** Word diff of a group, as views per new block (inline and new column) and per old block (old column).
+    A deletion is shown in the new block holding the last new word before it (or the first, at the start). */
+function diffGroup(G) {
+  const A = [], B = [];
+  for (const x of G.olds) for (const t of tokensOf(x, 'a')) { t.blk = x; A.push(t); }
+  for (const y of G.news) for (const t of tokensOf(y, 'b')) { t.blk = y; B.push(t); }
+  const res = diffStreams(A, B);
+  const view = () => ({ items: [], ins: 0, del: 0, links: [], numChanged: false, textChanged: false, wmap: res.wmap });
+  const nv = new Map(G.news.map(y => [y, view()])), ov = new Map(G.olds.map(x => [x, view()]));
+  const put = (v, it, count) => {
+    const last = v.items[v.items.length - 1];
+    v.items.push(it.st === 'eq' ? it : { ...it, first: !last || last.st !== it.st });
+    if (!count) return;
+    if (it.links) v.links.push(...it.links);
+    if (it.st === 'eq') return;
+    if (it.t.word) v[it.st]++;
+    if (it.t.num) v.numChanged = true; else if (it.t.vis) v.textChanged = true;
+  };
+  const fn = res.items.find(it => it.st !== 'del'), fo = res.items.find(it => it.st !== 'ins');
+  let curN = fn ? fn.t.blk : G.news[0], curO = fo ? (fo.ta || fo.t).blk : G.olds[0];
+  for (const it of res.items) {
+    if (it.st !== 'del') curN = it.t.blk;
+    put(nv.get(curN), it, true);
+    if (it.st === 'ins') continue;
+    curO = (it.ta || it.t).blk;
+    put(ov.get(curO), it, false);
+  }
+  G.views = nv; G.oldViews = ov;
 }
 
 /* ------------------------------------------------------------------ Comparison */
@@ -521,7 +694,11 @@ export function diffBodies(oldBody, newBody, opts = {}) {
   let gapD = [], gapI = [];
   const flushGap = () => {
     if (!gapD.length && !gapI.length) return;
-    for (const [x, y] of pairGap(gapD, gapI, opts.threshold || 0.5)) rows.push(x && y ? { st: 'mod', a: x, b: y } : x ? { st: 'del', a: x, b: null } : { st: 'add', a: null, b: y });
+    for (const e of groupGap(pairGap(gapD, gapI, opts.threshold || 0.5))) {
+      if (e.grp) { for (const y of e.grp.news) rows.push({ st: 'mod', a: e.grp.olds[0], b: y, grp: e.grp }); continue; }
+      const [x, y] = e;
+      rows.push(x && y ? { st: 'mod', a: x, b: y } : x ? { st: 'del', a: x, b: null } : { st: 'add', a: null, b: y });
+    }
     gapD = []; gapI = [];
   };
   for (const [op, i, j] of ops) {
@@ -538,7 +715,7 @@ export function diffBodies(oldBody, newBody, opts = {}) {
   // Container mapping old -> new (innermost first), so removed blocks render inside the new structure.
   const cmap = new Map();
   for (const r of rows) {
-    if (!r.a || !r.b) continue;
+    if (!r.a || !r.b || r.grp) continue;
     const pa = r.a.path, pb = r.b.path;
     for (let k = 1; k <= Math.min(pa.length, pb.length); k++) {
       const ca = pa[pa.length - k], cb = pb[pb.length - k];
@@ -550,7 +727,8 @@ export function diffBodies(oldBody, newBody, opts = {}) {
   const mods = rows.filter(r => r.st === 'mod');
   let done = 0, lastTick = now();
   for (const r of mods) {
-    r.d = diffTokens(r.a, r.b);
+    if (r.grp) { if (!r.grp.views) diffGroup(r.grp); r.d = r.grp.views.get(r.b); }
+    else r.d = diffTokens(r.a, r.b);
     if (!r.d.textChanged && !r.d.links.length) r.st = r.d.numChanged ? 'renum' : 'eq';
     if (++done % 64 === 0 && now() - lastTick > 40) { lastTick = now(); progress('Comparing words', done / mods.length); }
   }
@@ -576,24 +754,31 @@ export function diffBodies(oldBody, newBody, opts = {}) {
     r.sec = sec && !blk.inNotes ? sec.id : null;   // footnotes belong to no section
     if (r.st === 'eq' || r.st === 'renum') { prev = null; r.hunk = -1; continue; }
     const structural = r.st !== 'mod';
-    if (!(prev && prev.structural && structural && prev.notes === blk.inNotes)) hunk++;
-    r.hunk = hunk; r.structural = structural; r.notes = blk.inNotes; prev = r;
-    if (r.sec) sec.hunks.add(hunk);
+    if (r.grp && r.grp.hunk != null) r.hunk = r.grp.hunk;   // a reworked list item is one change
+    else {
+      if (!(prev && prev.structural && structural && prev.notes === blk.inNotes)) hunk++;
+      r.hunk = hunk;
+      if (r.grp) r.grp.hunk = hunk;
+    }
+    r.structural = structural; r.notes = blk.inNotes; prev = r;
+    if (r.sec) sec.hunks.add(r.hunk);
   }
   for (const s of toc) { s.count = s.hunks.size; delete s.hunks; }
   const changes = [];
   for (const r of rows) {
     if (r.hunk < 0) continue;
     let c = changes[r.hunk];
-    if (!c) c = changes[r.hunk] = { i: r.hunk, types: new Set(), sec: r.sec, notes: !!(r.b || r.a).inNotes, ins: 0, del: 0, n: 0, first: r, links: 0 };
-    c.types.add(r.st); c.ins += r.ins; c.del += r.del; c.n++;
+    if (!c) c = changes[r.hunk] = { i: r.hunk, types: new Set(), sec: r.sec, notes: !!(r.b || r.a).inNotes, ins: 0, del: 0, n: 0, first: r, links: 0, grps: new Set() };
+    c.types.add(r.st); c.ins += r.ins; c.del += r.del;
+    if (!r.grp || !c.grps.has(r.grp)) c.n++;   // a reworked item counts once, however many blocks it now has
+    if (r.grp) c.grps.add(r.grp);
     if (r.d) c.links += r.d.links.length;
   }
   for (const c of changes) {
     const t = [...c.types].filter(x => x !== 'mod');
     c.type = c.types.size === 1 ? [...c.types][0] : t.length === 1 ? t[0] : 'mixed';
     c.label = changeLabel(c);
-    delete c.types; delete c.first;
+    delete c.types; delete c.first; delete c.grps;
   }
   for (const r of rows) if (r.hunk >= 0) r.label = changes[r.hunk].label;
   const stats = {
@@ -679,6 +864,19 @@ const linkMarker = (from, to) =>
   `<span class="lc tag tag--outline" tabindex="0" aria-label="Link target changed from ${escAttr(shortUrl(from))} to ${escAttr(shortUrl(to))}">${LINK_ICON}link changed` +
   `<span class="lc-tip" role="tooltip" aria-hidden="true"><b>Link target changed</b><del>${escText(shortUrl(from))}</del><span class="arrow">→</span><ins>${escText(shortUrl(to))}</ins></span></span>`;
 
+/* Wrappers that make a paragraph. One edition can have them where the other does not (archived <li><p>…</p></li>
+   vs live <li>…</li>), so in the inline view a deleted word takes the paragraph of the new words beside it. */
+const PARA = new Set(['p', 'div']);
+const paraPrefix = ctx => { let e = 0; ctx.forEach((w, k) => { if (PARA.has(w.tag)) e = k + 1; }); return ctx.slice(0, e); };
+function delCtx(c, near, wmap) {
+  const m = c.map(w => wmap.get(w) || w);
+  if (!near) return m;
+  const pre = paraPrefix(near), rest = m.filter(w => !PARA.has(w.tag) && !pre.includes(w));
+  // Other structure (a table cell): keep it, and only drop a paragraph the new edition does not have.
+  if (rest.some(w => BLOCK.has(w.tag))) return m.filter(w => !(w.old && PARA.has(w.tag)));
+  return pre.concat(rest);
+}
+
 /** Render diff items. mode: 'inline' (both sides), 'old' (eq + del), 'new' (eq + ins).
     <ins>/<del> always sit innermost, so the HTML stays balanced. */
 function renderItems(d, mode, X, hangNum) {
@@ -686,7 +884,15 @@ function renderItems(d, mode, X, hangNum) {
   const visible = d.items.filter(it => !(mode === 'old' && it.st === 'ins') && !(mode === 'new' && it.st === 'del'));
   // Token as shown on this side: eq tokens keep each edition's own text (e.g. its own footnote number).
   const tokOf = it => (mode === 'old' && it.ta ? it.ta : it.t);
-  const mapCtx = (c, it) => (mode === 'inline' && it.st === 'del' ? c.map(w => d.wmap.get(w) || w) : c);
+  // Inline, deleted words sit in the new edition's structure: next to the new word before them (else after).
+  const near = new Map();
+  if (mode === 'inline') {
+    let cur = null;
+    for (const it of visible) { if (it.st !== 'del') cur = it.t.ctx; else near.set(it, cur); }
+    cur = null;
+    for (let k = visible.length - 1; k >= 0; k--) { const it = visible[k]; if (it.st !== 'del') cur = it.t.ctx; else if (!near.get(it)) near.set(it, cur); }
+  }
+  const mapCtx = (c, it) => (mode === 'inline' && it.st === 'del' ? delCtx(c, near.get(it), d.wmap) : c);
   const renderList = list => {
     let html = '', run = null;
     const open = [];
@@ -711,11 +917,21 @@ function renderItems(d, mode, X, hangNum) {
       html += t.atom ? `<${t.atom.tag}${X(t.atom.tag, t.atom.attrs, oldSide)}>` : escText(t.text);
     };
     for (const it of list) {
-      const t = tokOf(it), oldSide = mode === 'old' || it.st === 'del';
+      const t = tokOf(it), oldSide = mode === 'old' || it.st === 'del', tctx = mapCtx(t.ctx, it);
       const want = it.st === 'eq' || t.marker ? null : it.st === 'ins' ? (mode === 'old' ? null : 'ins') : (mode === 'new' ? null : 'del');
       // Spacing before a change stays outside the mark; spacing inside a run of changed words stays in.
-      for (const w of t.pre) put(w, mapCtx(w.ctx, it), it.first ? null : want, oldSide);
-      put(t, mapCtx(t.ctx, it), want, oldSide);
+      for (const w of t.pre) {
+        let wc = mapCtx(w.ctx, it);
+        // Spacing outside wrappers that are already open around its word (a deleted word placed in the new
+        // paragraph before it) stays inside them rather than closing and reopening them.
+        if (wc.length < tctx.length && wc.every((x, k) => tctx[k] === x)) {
+          let k = 0;
+          while (k < open.length && k < tctx.length && open[k] === tctx[k]) k++;
+          if (k > wc.length) wc = tctx.slice(0, k);
+        }
+        put(w, wc, it.first ? null : want, oldSide);
+      }
+      put(t, tctx, want, oldSide);
     }
     closeTo(0);
     return html;
@@ -783,7 +999,11 @@ function renderResult(res, opts) {
     else if (r.st === 'add') inner = serNodes(blk.kids, X, stripId, 'ins', hangNum);
     else if (r.st === 'del') inner = serNodes(blk.kids, X, true, 'del', hangNum);
     else inner = renderItems(r.d, mode, X, hangNum);
-    if (firstOfHunk.has(r) && (r.st === 'add' || r.st === 'del') && blk.kind !== 'tr' && blk.kind !== 'fig' && !opt.noBadge) inner += BADGE[r.st];
+    if (firstOfHunk.has(r) && (r.st === 'add' || r.st === 'del') && blk.kind !== 'tr' && blk.kind !== 'fig' && !opt.noBadge) {
+      // Inside an item's own paragraph (archived <li><p>…</p></li>), so the badge does not drop to a line of its own.
+      const m = /<\/p>(\s*)$/.exec(inner);
+      inner = m ? inner.slice(0, m.index) + BADGE[r.st] + inner.slice(m.index) : inner + BADGE[r.st];
+    }
     const classes = [chgClass(r), hangNum ? 'np' : ''].filter(Boolean).join(' ');
     let more = (opt.noRow ? '' : ` data-r="${r.i}"`) + (opt.noChg ? '' : chgData(r));
     if (r.hunk >= 0 && blk.ind && !opt.noChg) more += ` style="--ind:${blk.ind}rem"`;
@@ -793,15 +1013,84 @@ function renderResult(res, opts) {
     if (!blk.el) return `<div${X('div', [], false, { cls: ('rl-anon ' + extra.cls).trim(), more: extra.more })}>${inner}</div>`;
     return `<${blk.tag}${X(blk.tag, blk.el.attrs, stripId, extra)}>${inner}</${blk.tag}>`;
   };
-  const openC = (c, stripId) => {
+  /* A container; `blk` is the leaf it is opened for. A list item opened only to hold a nested list (its own text,
+     its first leaf, is elsewhere) gets no bullet of its own, so a nested item shows one bullet, not two. */
+  const openC = (c, stripId, blk) => {
     let more = '';
     if (c.tag === 'li' && c.ord) more = ` value="${c.ord}"`;
+    if (c.tag === 'li' && blk && c.first && c.first !== blk && getAttr(c, 'style') == null) more += ' style="list-style-type:none"';
     const tag = `<${c.tag}${X(c.tag, c.attrs, stripId, { more })}>`;
     return c.tag === 'table' ? `<div class="tbl-scroll" tabindex="0" role="region" aria-label="Table">${tag}` : tag;
   };
   const closeC = c => c.tag === 'table' ? '</table></div>' : `</${c.tag}>`;
-  const mapPath = p => p.map(c => cmap.get(c) || c);
-  const inlinePath = r => (r.st === 'del' ? mapPath(r.a.path) : r.b.path);
+
+  /* ---- Where a removed block goes in the inline view (which follows the new edition's structure). */
+  const ancNew = new Map();    // new container -> its path from the root
+  for (const r of rows) if (r.b) { const p = r.b.path; for (let k = 0; k < p.length; k++) if (!ancNew.has(p[k])) ancNew.set(p[k], p.slice(0, k + 1)); }
+  // An old list item whose text now forms a single new item: that item stays open, so its removed
+  // sub-items are shown inside it rather than under an empty bullet of their own.
+  const intoLeaf = new Map();
+  for (const r of rows) {
+    if (!r.a || !r.b || r.grp || r.b.tag !== 'li' || !r.b.el || r.a.tag === 'li') continue;
+    const li = r.a.path[r.a.path.length - 1];
+    if (li && li.tag === 'li' && !intoLeaf.has(li)) intoLeaf.set(li, (r.keep = { tag: 'li', keep: r }));
+  }
+  const isList = c => !!c && (c.tag === 'ul' || c.tag === 'ol');
+  const common = (p, q) => { let k = 0; while (k < p.length && k < q.length && p[k] === q[k]) k++; return p.slice(0, k); };
+  // Outside lists: under the new counterpart of its deepest container that has one.
+  const mapDeep = pa => {
+    for (let k = pa.length - 1; k >= 0; k--) { const m = cmap.get(pa[k]); if (m && ancNew.has(m)) return ancNew.get(m).concat(pa.slice(k + 1)); }
+    return pa;
+  };
+  /* In lists: under what is open (Pp) when one of its old containers is open or has its counterpart open there,
+     otherwise inside whatever the next new block also needs (C), so a reworked list is never torn into pieces. */
+  const placeDel = (blk, Pp, Pn) => {
+    const pa = blk.path;
+    if (blk.tag !== 'li' && !pa.some(c => c.tag === 'li' || isList(c))) return mapDeep(pa);
+    const C = common(Pp, Pn), at = new Map(Pp.map((c, k) => [c, k]));
+    for (let k = pa.length - 1; k >= 0; k--) {
+      let j = at.has(pa[k]) ? at.get(pa[k]) : -1;
+      if (j < 0) { const m = intoLeaf.get(pa[k]) || cmap.get(pa[k]); if (m && at.has(m)) j = at.get(m); }
+      if (j < 0) continue;
+      if (j + 1 < C.length) break;
+      // Below that, use the new containers the next new block opens anyway (its counterpart, or a list of the
+      // same kind with none), rather than opening old ones beside them.
+      const base = Pp.slice(0, j + 1), tail = pa.slice(k + 1);
+      let q = 0;
+      if (base.every((c, x) => Pn[x] === c)) {
+        for (; q < tail.length; q++) {
+          const nb = Pn[base.length + q];
+          if (!nb || !(cmap.get(tail[q]) === nb || (isList(tail[q]) && nb.tag === tail[q].tag))) break;
+        }
+      }
+      return base.concat(Pn.slice(base.length, base.length + q), tail.slice(q));
+    }
+    const own = pa[pa.length - 1];
+    if (blk.tag === 'li' || (own && own.tag === 'li')) {          // a list item, or the text of one
+      const unit = blk.tag === 'li' ? [] : [own];
+      if (isList(C[C.length - 1])) return C.concat(unit);
+      const list = pa[pa.length - 1 - unit.length];
+      if (!isList(list)) return C.concat(unit);
+      // Right after or before a new list of the same kind (the list was rewritten): join it, not start one beside it.
+      const pl = Pp[C.length], nl = Pn[C.length];
+      if (pl && pl.tag === list.tag) return C.concat(pl, unit);
+      if (nl && nl.tag === list.tag) return C.concat(nl, unit);
+      if (C.length) return C.concat(list, unit);
+    }
+    return mapDeep(pa);
+  };
+  const paths = new Array(rows.length);
+  {
+    const nextNew = new Array(rows.length);
+    let nx = [];
+    for (let i = rows.length - 1; i >= 0; i--) { nextNew[i] = nx; if (rows[i].b) nx = rows[i].b.path; }
+    let open = [];
+    for (let i = 0; i < rows.length; i++) {
+      const r = rows[i], p = r.st === 'del' ? placeDel(r.a, open, nextNew[i]) : r.b.path;
+      paths[i] = p;
+      open = r.keep ? p.concat(r.keep) : p;
+    }
+  }
 
   /* ---- Inline document, in content-visibility chunks at the top level. */
   let inline = '', chunk = '', chunkChars = 0, chunkBlocks = 0;
@@ -814,18 +1103,20 @@ function renderResult(res, opts) {
   {
     const open = [], opened = new Set();
     for (const r of rows) {
-      const path = inlinePath(r);
+      const path = paths[r.i], blk = r.st === 'del' ? r.a : r.b;
       let k = 0;
       while (k < open.length && k < path.length && open[k] === path[k]) k++;
       while (open.length > k) chunk += closeC(open.pop());
       if (!open.length && (chunkBlocks >= 28 || chunkChars >= 9000)) flushChunk();
       while (open.length < path.length) {
         const c = path[open.length];
-        chunk += openC(c, opened.has(c) || (r.st === 'del' && !cmap.has(c)));
+        chunk += openC(c, opened.has(c) || !ancNew.has(c), blk);   // old containers lose their ids
         opened.add(c); open.push(c);
       }
-      chunk += leafHtml(r, 'inline') + '\n';
-      chunkBlocks++; chunkChars += (r.b || r.a).plain.length + (r.st === 'mod' && r.a ? r.a.plain.length * 0.3 : 0);
+      const html = leafHtml(r, 'inline');
+      if (r.keep) { chunk += html.slice(0, -'</li>'.length); open.push(r.keep); }   // closed by the next block that is not inside it
+      else chunk += html + '\n';
+      chunkBlocks++; chunkChars += blk.plain.length + (r.st === 'mod' && r.a ? r.a.plain.length * 0.3 : 0);
     }
     while (open.length) chunk += closeC(open.pop());
     flushChunk();
@@ -843,15 +1134,26 @@ function renderResult(res, opts) {
       let k = 0;
       while (k < open.length && k < path.length && open[k] === path[k]) k++;
       while (open.length > k) html += closeC(open.pop());
-      while (open.length < path.length) { const c = path[open.length]; html += openC(c, true); open.push(c); }
+      while (open.length < path.length) { const c = path[open.length]; html += openC(c, true, blk); open.push(c); }
       html += leafHtml(r, side, { noChg: !list.isTable, noRow: !list.isTable });
     }
     while (open.length) html += closeC(open.pop());
     return html;
   };
-  const tableOf = r => { const p = inlinePath(r); for (let k = p.length - 1; k >= 0; k--) if (p[k].tag === 'table') return p[k]; return null; };
+  const tableOf = r => { const p = paths[r.i]; for (let k = p.length - 1; k >= 0; k--) if (p[k].tag === 'table') return p[k]; return null; };
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i], blk = r.b || r.a;
+    if (r.grp) {   // a reworked list item: one row, its old blocks on the left and its new blocks on the right
+      const G = r.grp, group = [r];
+      while (i + 1 < rows.length && rows[i + 1].grp === G) group.push(rows[++i]);
+      const lead = group.find(x => x.hunk >= 0) || r;
+      const olds = G.olds.map(a => ({ st: lead.hunk >= 0 ? 'mod' : 'eq', a, b: null, d: G.oldViews.get(a) }));
+      const len = Math.max(G.olds.reduce((s, x) => s + x.plain.length, 0), group.reduce((s, x) => s + x.b.plain.length, 0));
+      const est = Math.round(len / 34 * 26 + 18 * Math.max(olds.length, group.length));
+      const cls = ['sbs-row', chgClass(lead)].filter(Boolean).join(' ');
+      sbs += `<div class="${cls}" data-r="${r.i}"${chgData(lead)} style="contain-intrinsic-size:auto ${Math.max(28, est)}px"><div class="sbs-cell old">${cellSeq(olds, 'old')}</div><div class="sbs-cell new">${cellSeq(group, 'new')}</div></div>\n`;
+      continue;
+    }
     if (blk.kind === 'tr' && tableOf(r)) {
       const t = tableOf(r), group = [r];
       while (i + 1 < rows.length && (rows[i + 1].b || rows[i + 1].a).kind === 'tr' && tableOf(rows[i + 1]) === t) group.push(rows[++i]);

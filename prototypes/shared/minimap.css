@@ -1,0 +1,75 @@
+/* The minimap (minimap.js): a slim strip at the right edge of the reading column that maps the whole text.
+   COBE look: white, one electric blue, square corners, hairlines. The page keeps room for it beside the text
+   (--mm-space, see reader.css); colours are tokens, so dark mode follows theme.css. */
+
+:root {
+  --mm-w: 1rem;                            /* the track */
+  --mm-gut: 6px;                           /* a notch either side: saved highlights (left), find matches (right) */
+  --mm-gap: 1.25rem;                       /* from the edge of the text */
+  --mm-space: calc(var(--mm-gap) + var(--mm-w) + 2 * var(--mm-gut));
+}
+@media (min-width: 2400px) { :root { --mm-w: 1.2rem; --mm-gap: 1.6rem; } }
+
+.minimap {
+  --mm-tick: var(--ink-3); --mm-ins: var(--ins); --mm-del: var(--del); --mm-mod: var(--blue);
+  --mm-hl: var(--blue); --mm-find: var(--ink); --mm-cur: var(--blue); --mm-dead: var(--del);
+  position: absolute; z-index: 6; top: 0; bottom: 0; right: 0; width: calc(var(--mm-w) + 2 * var(--mm-gut));
+  transition: opacity var(--t-slow) var(--ease);
+}
+.minimap.is-empty { opacity: 0; pointer-events: none; }
+.mm-stick {
+  position: sticky; top: calc(var(--stick-top, 3.75rem) + var(--bar-h, 0px) + 1.4rem);
+  height: calc(100vh - var(--stick-top, 3.75rem) - var(--bar-h, 0px) - 2.8rem);
+  cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none;
+}
+.minimap.is-drag .mm-stick { cursor: grabbing; }
+.mm-track {
+  position: absolute; top: 0; bottom: 0; left: var(--mm-gut); right: var(--mm-gut);
+  border: 1px solid var(--line); background: var(--bg); transition: border-color var(--t-fast) var(--ease);
+}
+.minimap:hover .mm-track, .minimap.is-drag .mm-track { border-color: var(--line-strong); }
+.mm-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; transition: opacity var(--t) var(--ease); }
+.minimap.is-stale .mm-canvas { opacity: .35; }
+.mm-probe { display: none; }
+
+/* What is on screen: a translucent window with a blue hairline, a little wider than the track. */
+.mm-view {
+  position: absolute; left: 0; right: 0; top: 0; height: 4px; pointer-events: none; will-change: transform;
+  background: color-mix(in oklab, var(--blue) 12%, transparent); box-shadow: inset 0 0 0 1px var(--blue);
+  opacity: 0; transition: opacity var(--t) var(--ease), background-color var(--t-fast) var(--ease);
+}
+.mm-view.on { opacity: 1; }
+.minimap:hover .mm-view, .minimap.is-drag .mm-view { background: color-mix(in oklab, var(--blue) 20%, transparent); }
+
+/* Hover: a hairline at the pointer and the section's name in a blue label tag, to the left over the margin. */
+.mm-hover {
+  position: absolute; left: var(--mm-gut); right: var(--mm-gut); top: -.5px; height: 1px; background: var(--blue);
+  pointer-events: none; opacity: 0; transition: opacity var(--t-fast) var(--ease);
+}
+.mm-tip {
+  position: absolute; right: calc(100% + .35rem); top: 0; pointer-events: none; white-space: nowrap;
+  opacity: 0; filter: blur(3px); transition: opacity var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+.mm-tip .tag { max-width: min(24rem, 40vw); box-shadow: 0 6px 18px -10px rgb(16 24 40 / .5); }
+.mm-tip-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.mm-tip-n:empty { display: none; }
+.mm-tip-n { flex: none; padding-left: .5em; border-left: 1px solid color-mix(in oklab, var(--blue-ink) 40%, transparent); }
+.minimap.is-hover .mm-hover { opacity: 1; }
+.minimap.is-hover.has-tip .mm-tip { opacity: 1; filter: none; }
+
+/* Wide screens: the main sections named beside the strip, where they fall in the text. */
+.mm-labels { display: none; position: absolute; top: 0; bottom: 0; left: calc(100% + .75rem); margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.minimap.has-labels .mm-labels { display: block; }
+.mm-label {
+  position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: .45rem; max-width: 100%; height: 1.15rem;
+  font-family: var(--font-mono); font-size: .64rem; line-height: 1; letter-spacing: .01em; color: var(--ink-3); white-space: nowrap;
+  pointer-events: auto; cursor: pointer; transition: color var(--t-fast) var(--ease);
+}
+.mm-label::before { content: ""; position: absolute; right: calc(100% + .2rem); top: var(--tick, 50%); width: .55rem; height: 1px; background: var(--line-strong); transition: background-color var(--t-fast) var(--ease); }
+.mm-label.l2 { color: var(--ink-2); }
+.mm-label:hover, .mm-label.is-on { color: var(--blue); }
+.mm-label:hover::before, .mm-label.is-on::before { background: var(--blue); }
+.mm-label-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.mm-label-n { flex: none; padding: .22em .36em .18em; background: var(--blue); color: var(--blue-ink); font-family: var(--font-pixel); font-size: .56rem; letter-spacing: .04em; }
+
+@media print { .minimap { display: none !important; } }

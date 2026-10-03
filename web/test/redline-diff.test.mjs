@@ -157,6 +157,141 @@ test("parser handles void elements, entities and implied closes", () => {
   assert.deepEqual(blocks.map((b) => b.plain), ["one", "two", "three"]);
 });
 
+/* ---- Reworked lists. Fixtures distilled from real edition pairs (named in each test). */
+
+const ul = (s) => wrap(`<ul>${s}</ul>`);
+/** The inline element for one row (a leaf <li> or <p>), found by a phrase in it. */
+const leafWith = (html, phrase, tag = "li") => {
+  const k = html.indexOf(phrase);
+  assert.ok(k >= 0, `"${phrase}" rendered`);
+  const s = html.lastIndexOf(`<${tag} `, k), e = html.indexOf(`</${tag}>`, k);
+  return html.slice(s, e + tag.length + 3);
+};
+const count = (s, re) => (s.match(re) || []).length;
+/** The side-by-side row holding a phrase (rows can span lines when the source text does). */
+const sbsRowWith = (html, phrase) => html.split('<div class="sbs-row').find((x) => x.includes(phrase));
+
+test("a list item that gains or loses its <p> keeps its changed words in one item (Honduras, gangs v1 → v2)", () => {
+  // Archived captures wrap each item in <p>; the live page does not.
+  const wayback = ul(`<li>\n<p>have not complied with a gang’s rules or demands and/or</p>\n</li><li>\n<p>other item</p>\n</li>`);
+  const live = ul(`<li>Someone who has not complied with a group’s rules or demands, or otherwise openly opposes the gang</li><li>other item</li>`);
+  let r = diffBodies(wayback, live);
+  assert.equal(r.stats.changes, 1);
+  let li = leafWith(r.inlineHtml, "complied");
+  assert.equal(count(li, /<p[\s>]/g), 0, `no paragraph breaks inside the item: ${li}`);
+  assert.match(li, /<del>have<\/del>/);
+  assert.match(li, /<ins>Someone who has<\/ins> not complied with a <del>gang’s<\/del> <ins>group’s<\/ins> rules or demands/);
+  // The other way round: the new item's own single <p> holds every word, deleted ones included.
+  r = diffBodies(live, wayback);
+  li = leafWith(r.inlineHtml, "complied");
+  assert.equal(count(li, /<p[\s>]/g), 1, li);
+  assert.match(li, /^<li[^>]*>\s*<p>[\s\S]*<\/p>\s*<\/li>$/, `one paragraph around the whole item: ${li}`);
+});
+
+test("a link in a list item that lost its <p> stays one link, and a changed target is still flagged (Turkey, Kurds v4 → v5)", () => {
+  const a = ul(`<li>\n<p><a href="https://example.org/a">‘Report title’</a>, 1 May 2023</p>\n</li>`);
+  const b = ul(`<li><a href="https://example.org/a">Report title</a>, 1 May 2023. Accessed: 2 June 2024</li>`);
+  const li = leafWith(diffBodies(a, b).inlineHtml, "Report title");
+  assert.equal(count(li, /<a /g), 1, li);
+  assert.equal(count(li, /<p[\s>]/g), 0, li);
+  const moved = diffBodies(ul(`<li><p><a href="https://example.org/old">Report</a></p></li>`), ul(`<li><a href="https://example.org/new">Report</a></li>`));
+  assert.equal(moved.changes.length, 1);
+  assert.equal(moved.changes[0].label, "List item: link target changed");
+});
+
+test("items removed from a flattened sub-list stay in the one list, without empty bullets (Sri Lanka, Tamil separatism v8 → v9)", () => {
+  const a = ul(`<li>Treatment of Tamils\n<ul><li>Treatment of Tamils generally</li><li>Discrimination and harassment</li><li>Land repatriation</li></ul></li><li>Media</li>`);
+  const b = ul(`<li>Treatment of Tamils</li><li>Treatment of Tamils generally</li><li>Land repatriation</li><li>Media</li>`);
+  const r = diffBodies(a, b);
+  assert.equal(r.stats.changes, 1);
+  assert.equal(r.changes[0].label, "List item removed");
+  const html = r.inlineHtml;
+  assert.equal(count(html, /<ul[\s>]/g), 1, `one list, not torn apart: ${html}`);
+  assert.equal(count(html, /<li[^>]*>\s*<ul/g), 0, "no empty bullet holding a nested list");
+  assert.match(html, /<li class="chg is-removed"[^>]*><del>Discrimination and harassment<\/del>/);
+});
+
+test("old items removed between new sub-items do not tear the new nested list (Namibia, sexual orientation v2 → v3)", () => {
+  const a = ul(`<li>statements made by government figures</li><li>how the law is applied</li><li>government policies that assist or discriminate</li><li>access to public services</li>`);
+  const b = ul(`<li>State attitudes and treatment, incl.\n<ul><li>statements made by government figures</li><li>government policies that assist or discriminate</li><li>access to justice</li></ul></li><li>Access to services</li>`);
+  const html = diffBodies(a, b).inlineHtml;
+  assert.equal(count(html, /<ul[\s>]/g), 2, `the new list and its one sub-list: ${html}`);
+  assert.equal(count(html, /<\/ul>\s*<ul/g), 0);
+  assert.match(html, /<ul><li[^>]*>statements made by government figures<\/li>\s*<li class="chg is-removed"[^>]*><del>how the law is applied<\/del>/);
+});
+
+test("sub-items removed when an item is folded into one line are shown inside that item (Afghanistan, children v4 → v5)", () => {
+  const a = ul(`<li>\n<p>Socio-economic rights</p>\n<ul><li>Access to education</li><li>Access to healthcare</li></ul></li><li>Documentation</li>`);
+  const b = ul(`<li>Socio-economic rights (education, healthcare)</li><li>Documentation</li>`);
+  const html = diffBodies(a, b).inlineHtml;
+  assert.equal(count(html, /<li[^>]*>\s*<ul/g), 0, `no empty bullet: ${html}`);
+  assert.match(html, /<li class="chg is-mod"[^>]*>Socio-economic rights <ins>\(education, healthcare\)<\/ins>\s*<ul><li class="chg is-removed"[^>]*><del>Access to education<\/del>[\s\S]*?<\/ul><\/li>\s*<li[^>]*>Documentation<\/li>/);
+});
+
+test("an item whose text moves into a sub-list is one changed item, not a deletion plus additions (Iran, Christian converts v1 → v2)", () => {
+  const a = ul(`<li>House Churches * Numbers * Types * Locations</li><li>Right to education and employment</li>`);
+  const b = ul(`<li>House Churches\n<ul><li>Numbers</li><li>Types</li><li>Locations</li></ul></li><li>Right to education and employment</li>`);
+  const r = diffBodies(a, b);
+  assert.equal(r.stats.changes, 1, JSON.stringify(r.changes));
+  assert.equal(r.changes[0].label, "List item changed");
+  assert.equal(r.stats.ins + r.stats.del, 0, "no words added or removed, only the asterisks");
+  const html = r.inlineHtml;
+  for (const w of ["Numbers", "Types", "Locations"]) {
+    assert.equal(count(html, new RegExp(w, "g")), 1, `${w} shown once`);
+    assert.ok(!new RegExp(`<(ins|del)>[^<]*${w}`).test(html), `${w} is not marked`);
+  }
+  assert.match(html, /House Churches <del>\*<\/del><\/div>\s*<ul><li[^>]*>Numbers <del>\*<\/del><\/li>/);
+  // Side by side: one row, the old item on the left and the new item with its sub-list on the right.
+  const row = sbsRowWith(r.sbsHtml, "House Churches");
+  assert.ok(row.includes("Locations</li></ul></li></ul></div></div>"), row);
+  assert.equal(count(row, /<div class="sbs-cell/g), 2);
+  // The worker parses each edition once and reuses it: the same redline, however often it is compared.
+  const shared = {}, A = prepareBody(a, shared), B = prepareBody(b, shared);
+  for (let k = 0; k < 2; k++) assert.equal(diffBodies(A, B).inlineHtml, r.inlineHtml);
+  assert.equal(diffBodies(A, B).sbsHtml, r.sbsHtml);
+});
+
+test("splitting, merging and re-paragraphing items moves no words (gains <p>s, split, merge)", () => {
+  const one = `<li>The first sentence about the matter. The second sentence follows here.</li><li>other item</li>`;
+  const twoP = `<li>\n<p>The first sentence about the matter.</p>\n<p>The second sentence follows here.</p>\n</li><li>other item</li>`;
+  for (const [x, y] of [[one, twoP], [twoP, one]]) {
+    const r = diffBodies(ul(x), ul(y));
+    assert.equal(r.stats.changes, 0, JSON.stringify(r.changes));
+  }
+  const joined = `<li>alpha one two three, and beta four five six</li><li>gamma</li>`;
+  const split = `<li>alpha one two three</li><li>beta four five six</li><li>gamma</li>`;
+  let r = diffBodies(ul(joined), ul(split));
+  assert.equal(r.stats.changes, 1);
+  assert.deepEqual([r.stats.ins, r.stats.del], [0, 1]);   // "and"
+  assert.equal(count(r.inlineHtml, /beta/g), 1, "the moved words appear once");
+  r = diffBodies(ul(split), ul(joined));
+  assert.equal(r.stats.changes, 1);
+  assert.deepEqual([r.stats.ins, r.stats.del], [1, 0]);
+  assert.equal(count(r.inlineHtml, /beta/g), 1);
+  assert.match(r.inlineHtml, /<li class="chg is-mod"[^>]*>alpha one two three<ins>, and<\/ins> beta four five six<\/li>/);
+});
+
+test("side by side, a nested item has one bullet, not an empty bullet for its parent", () => {
+  const a = ul(`<li>Head\n<ul><li>one</li><li>two</li></ul></li>`);
+  const b = ul(`<li>Head\n<ul><li>one</li><li>two changed</li></ul></li>`);
+  const row = sbsRowWith(diffBodies(a, b).sbsHtml, "changed");
+  assert.match(row, /<ul><li style="list-style-type:none"><ul><li>two <ins>changed<\/ins><\/li><\/ul><\/li><\/ul>/);
+});
+
+test("real pairs: reworked lists render without broken items or torn lists", () => {
+  const load = (p) => JSON.parse(readFileSync(new URL(`../../prototypes/data/series/${p}.json`, import.meta.url), "utf8")).versions.filter((v) => typeof v.body === "string");
+  const torn = (s) => count(s.replace(/<div class="cv"[^>]*>|<\/div>\n?/g, ""), /<\/(ul|ol)>\s*<(ul|ol)[\s>]/g);
+  for (const [p, i] of [["honduras/note--gangs", 1], ["sri-lanka/note--separatism-tamil", 2]]) {
+    const V = load(p), r = diffBodies(V[i - 1].body, V[i].body);
+    // Every changed list item has exactly as many paragraphs as the new edition's item.
+    for (const row of r.rows.filter((x) => x.st === "mod" && x.b?.tag === "li" && !x.grp)) {
+      const li = leafWith(r.inlineHtml, ` data-r="${row.i}"`).split(/<[uo]l[\s>]/)[0];   // its own text, not a nested list
+      assert.equal(count(li, /<p[\s>]/g), row.b.kids.filter((k) => k.t === 1 && k.tag === "p").length, `${p}: ${li.slice(0, 300)}`);
+    }
+    assert.ok(torn(r.inlineHtml) <= torn(V[i].body), `${p}: lists torn apart (${torn(r.inlineHtml)})`);
+  }
+});
+
 test("a real pair from the Afghanistan 'fear of the Taliban' series completes and finds changes", () => {
   const url = new URL("../../prototypes/data/series/afghanistan/note--fear-taliban.json", import.meta.url);
   const series = JSON.parse(readFileSync(url, "utf8"));

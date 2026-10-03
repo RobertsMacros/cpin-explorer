@@ -28,6 +28,7 @@ import {
 } from "../shared/report-history.js";
 import { DateRoller, HistorySlider, NumberRoller } from "../shared/timeline.js";
 import { RedlineEngine } from "../shared/redline-engine.js";
+import { DocPositioner, Minimap } from "../shared/minimap.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const params = new URLSearchParams(location.search);
@@ -95,6 +96,7 @@ const S = {
 };
 let readyResolve;
 const ready = new Promise((r) => { readyResolve = r; });
+let minimap = null, minimapRoot = null;               // the strip beside the text (see "minimap" below)
 
 /* ================================================================== text index */
 
@@ -174,6 +176,7 @@ boot().catch((error) => { console.error(error); fail("Something went wrong while
 
 async function boot() {
   wireChrome();
+  setupMinimap();
   if (!/^[a-z0-9-]+$/.test(COUNTRY) || (!SERIES && !NOTE) || (SERIES && !/^[\w:.-]+$/.test(SERIES)) || (NOTE && !/^[\w.()-]+$/.test(NOTE))) {
     return fail("That address does not name a report.", "Open a report from the dashboard, or use reader/index.html?country=<country>&series=<report>.");
   }
@@ -616,6 +619,7 @@ function stopPlay() {
   S.playing = false; playToken++;
   $("#playBtn").setAttribute("aria-pressed", "false"); $("#playLbl").textContent = "Play history";
   flushPlayRender();
+  minimap?.schedule();                                   // it waited while Play ran
 }
 /** While Play runs the text follows each stop once the caption has settled, in idle time, so nothing animating
  *  stutters; while the text is off screen (watching the history) it waits until Play stops or the reader scrolls. */
@@ -844,6 +848,7 @@ function afterShow() {
   updateEditionNote();
   if (F.q) runFind(F.q, { jump: false });
   if (S.ready) syncUrl();
+  refreshMinimap();
 }
 
 /* ---- keeping the reader's place across editions and views -------------------------------------- */
@@ -1161,6 +1166,7 @@ function decorateView() {
     if (root === S.V?.root && S.V.ix) S.V.ix.dirty = true;
   }
   showSources(S.C?.linkCounts || null);
+  minimap?.schedule();                                   // dead sources
 }
 function showSources(result) {
   const line = $("#sourcesLine");
@@ -1463,6 +1469,7 @@ function sync() {
   if (S.V?.kind === "clean") renderToc();
   updateCounts();
   if (F.q && S.V?.kind === "clean") runFind(F.q, { jump: false });
+  minimap?.schedule();                                   // saved highlights
 }
 const recById = (id) => H.loadHighlights().find((r) => r.id === id) || null;
 
@@ -1988,6 +1995,7 @@ function updateFindUI() {
   count.classList.toggle("none", on && !n);
   count.textContent = on ? (n ? `${F.cur + 1}/${n}${n >= 5000 ? "+" : ""}` : "0") : "";
   $("#findPrev").disabled = $("#findNext").disabled = !n;
+  minimap?.schedule();                                   // matches, and which is current
 }
 let findTimer = 0;
 findInput.addEventListener("input", () => { S.qDropped = true; clearTimeout(findTimer); findTimer = setTimeout(() => runFind(findInput.value), 140); });
@@ -2200,6 +2208,72 @@ function wireChrome() {
   measureBars();
 }
 
+/* ================================================================== minimap */
+
+// The strip beside the text (../shared/minimap.js): section ticks; with changes shown, insertions and deletions;
+// otherwise saved highlights and dead sources; find matches in either. Rebuilt (debounced) whenever the text
+// shown, its marks or its layout change; it waits while Play runs. (`minimap` is declared with the state.)
+const DEAD_LINKS = 'a[data-link-status="broken"], a[data-link-status="server-error"], a[data-link-status="unreachable"]';
+function setupMinimap() {
+  const host = $("#minimap");
+  if (!host) return;
+  minimap = new Minimap(host, {
+    doc: $("#doc"),
+    observe: [$("#head"), $("#history"), $("#editionNote")],
+    insetTop: () => $("#top").offsetHeight + ($("#bar").hidden ? 0 : $("#bar").offsetHeight),
+    busy: () => S.playing,
+    onSeek: () => stopGlide(),
+    labelRoom: (strip) => {
+      const reader = $("#reader"), rail = $("#rail").getBoundingClientRect();
+      const edge = rail.width ? rail.left - 12 : reader.getBoundingClientRect().right - parseFloat(getComputedStyle(reader).paddingRight || 0);
+      return edge - strip.right;
+    },
+    positioner: (doc) => {
+      if (!S.V?.root?.isConnected) return new DocPositioner(doc);
+      const ix = viewIndex();
+      return new DocPositioner(doc, { offsetOf: (el) => ix.firstTextAt(el), length: ix.length });
+    },
+    collect: minimapMarks,
+  });
+}
+/** Rebuild after the text shown changed; ease the new marks in when it is a different text. */
+function refreshMinimap() {
+  const fresh = S.V?.root !== minimapRoot;
+  minimapRoot = S.V?.root || null;
+  minimap?.schedule({ fade: fresh && S.ready });
+}
+function minimapMarks(pos) {
+  const V = S.V;
+  if (!V?.root?.isConnected) return {};
+  const marks = [], sections = [];
+  const redline = V.kind === "redline" && S.redline ? S.redline : null;
+  for (const s of V.sections) {
+    if (!s.el?.isConnected || s.level > 3) continue;
+    const [y] = pos.yOf(s.el);
+    sections.push({ y, label: s.title, level: s.level, count: redline ? s.count : 0 });
+    marks.push({ kind: s.level === 2 ? "h2" : "h3", y0: y });
+  }
+  if (redline) {
+    // One mark per change, from its first block to its last, in the lane of what it does: deleted words
+    // (left, red), inserted words (right, blue); a reworded passage has both.
+    for (const [k, els] of S.hunks) {
+      if (!els.length) continue;
+      const c = redline.res.changes[k];
+      const y0 = pos.yOf(els[0])[0], y1 = pos.yOf(els[els.length - 1])[1];
+      const added = els.every((e) => e.classList.contains("is-added")), removed = els.every((e) => e.classList.contains("is-removed"));
+      const ins = added || (c ? c.ins > 0 : !removed), del = removed || (c ? c.del > 0 : !added);
+      if (ins) marks.push({ kind: "ins", y0, y1, weight: c?.ins || 1 });
+      if (del) marks.push({ kind: "del", y0, y1, weight: c?.del || 1 });
+      if (!ins && !del) marks.push({ kind: "mod", y0, y1 });
+    }
+  } else {
+    for (const [, chk] of S.checks) if (chk.match) marks.push({ kind: "hl", y0: pos.yAt(chk.match.start), y1: pos.yAt(chk.match.end) });
+    for (const a of V.root.querySelectorAll(DEAD_LINKS)) { const [y0, y1] = pos.yOf(a); marks.push({ kind: "dead", y0, y1 }); }
+  }
+  if (F.foldedFor === V.root) F.hits.forEach(([a, b], i) => marks.push({ kind: i === F.cur ? "find-cur" : "find", y0: pos.yAt(a), y1: pos.yAt(b) }));
+  return { sections, marks, changes: !!redline };
+}
+
 /* ================================================================== toasts */
 
 function toast(message, { action, onAction, ms = 3800 } = {}) {
@@ -2275,5 +2349,10 @@ if (TEST) {
     setLinks: (map) => { S.linkMap = map; if (S.V?.root) delete S.V.root.dataset.linksDone; decorateView(); return S.C?.linkCounts?.counts; },
     pairDone: () => pairDone,
     textAt: (s, e) => S.C.text.slice(s, e),
+    minimap: () => minimap && {
+      height: minimap.h, docHeight: Math.round(minimap.docH), marks: minimap.marks.length, drawn: minimap.drawn,
+      sections: minimap.sections.length, labels: minimap.kept.length, cost: Math.round((minimap.cost || 0) * 10) / 10,
+      view: [Math.round(minimap.viewT), Math.round(minimap.viewB)], classes: $("#minimap").className, dirty: minimap.dirty, builds: minimap.builds,
+    },
   };
 }

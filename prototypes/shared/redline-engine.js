@@ -8,7 +8,7 @@
 // A module Web Worker (redline-worker.js) parses each body once and caches results; jobs queue with
 // priority (the pair on screen first, background warm-ups after). Browsers without module workers run
 // the same engine on the main thread.
-export const ENGINE_BUILD = "2026-10-02.4";   // bump when redline-diff.js changes (cache-buster)
+export const ENGINE_BUILD = "2026-10-03.1";   // bump when redline-diff.js changes (cache-buster)
 
 export class RedlineEngine {
   constructor({ max = 10 } = {}) {

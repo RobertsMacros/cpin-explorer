@@ -1396,7 +1396,7 @@ function renderTocReal(res) {
 }
 
 /* ---------- Diff engine: module worker with a priority queue; main-thread fallback ---------- */
-const ENGINE_BUILD = '2026-10-02.3';   // bump when ../shared/redline-diff.js changes (cache-buster)
+const ENGINE_BUILD = '2026-10-03.1';   // bump when ../shared/redline-diff.js changes (cache-buster)
 const engine = {
   worker: null, fallback: null, bodies: null, images: null, seq: 0, queue: [], current: null, results: new Map(), MAX: 10,
   key: (a, b) => a + ':' + b,

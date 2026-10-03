@@ -740,6 +740,16 @@ a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash);
 .toc .rm-sec { text-decoration: line-through; text-decoration-color: var(--del); color: var(--ink-3); cursor: default; }
 .toc .rm-sec:hover { background: none; color: var(--ink-3); }
 
+/* --- Minimap (../shared/minimap.css): a strip just right of the text, in room the reading column keeps for it,
+   so the text keeps its measure on wide screens. Side by side is held to the width of its two columns and
+   centred, so the strip stays at the text's edge on 4K too. Wide screens only (the dock takes over below). */
+.center { position: relative; }
+@media (min-width: 1200px) {
+  .center { max-width: calc(var(--measure) + var(--gutter) + var(--mm-space)); padding-right: var(--mm-space); }
+  .reader.is-sbs .center { max-width: calc(2 * (66ch + 4rem) + 2rem + var(--mm-space)); }
+}
+@media (max-width: 1199px) { .minimap { display: none; } }
+
 /* --- Responsive ---------------------------------------------------------------------------------------- */
 @media (max-width: 1199px) {
   .hist-grid { grid-template-columns: minmax(0, 1fr); }

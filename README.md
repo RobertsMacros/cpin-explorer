@@ -112,7 +112,12 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
     (`&changes=1[&from=<id>][&view=sbs]`). Comparisons run in a Web Worker
     (`prototypes/shared/redline-engine.js`, `redline-worker.js`, `redline-diff.js`).
     `prototypes/redline-timeline/?country=&series=` now redirects here with changes shown; without a query
-    it is still the invented sample.
+    it is still the invented sample. Reworked lists (items gaining or losing `<p>`, split, merged or moved
+    into sub-lists) are compared as units, so an item reads as one changed item, not fragments.
+  - **Minimap** (≥1200px): a strip at the text's edge showing the whole report: section ticks, insertions
+    and deletions in two lanes when changes are shown, otherwise saved highlights and dead links; find
+    matches; the part on screen. Click or drag to move; hover names the section
+    (`prototypes/shared/minimap.js`, tested in `web/test/minimap.test.mjs`).
   - **Highlights:** select text in any edition to save a highlight. Each records the edition it was read
     in, paragraph number(s), section and the sources its footnotes cite, and cites that edition: GOV.UK
     while it is the live edition, otherwise its Internet Archive copy (dated from the capture in its
