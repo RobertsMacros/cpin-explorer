@@ -1,0 +1,83 @@
+# Publish the site to Cloudflare (a static-assets Worker; see web/wrangler.jsonc).
+# Runs after the scheduled sync commits new data (called from sync.yml, since pushes made with the
+# workflow token don't trigger other workflows), on pushes that change the site, or by hand.
+# Needs two repository secrets: CLOUDFLARE_API_TOKEN (a token with "Edit Cloudflare Workers"
+# permission) and CLOUDFLARE_ACCOUNT_ID. Without them the job notes it and stops.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+    paths: ["prototypes/**", "web/**", "assets/**", "data/**", "src/**", "config/**", ".github/workflows/deploy.yml"]
+  workflow_dispatch:
+  workflow_call:
+    secrets:
+      CLOUDFLARE_API_TOKEN: { required: false }
+      CLOUDFLARE_ACCOUNT_ID: { required: false }
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.creds.outputs.ready }}
+    steps:
+      - id: creds
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$TOKEN" ] && [ -n "$ACCOUNT" ]; then echo "ready=true" >> "$GITHUB_OUTPUT"
+          else echo "::notice::Not deploying: add the CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets."; fi
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.ready == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main                    # the sync job may have just pushed a data commit
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install -e .
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      # Mirrored images are not in git. Keep them between runs so only new ones are fetched
+      # (politely, from GOV.UK's asset host); a cold cache fetches each once.
+      - uses: actions/cache@v4
+        with:
+          path: data/images/files
+          key: images-${{ hashFiles('data/images/manifest.json') }}
+          restore-keys: images-
+      - name: Mirror images
+        run: python -m cpin images
+
+      - name: Export site data
+        run: python -m cpin export
+      - name: Build search index and site
+        working-directory: web
+        env:
+          PYTHON: python
+        run: |
+          npm ci
+          npm run search-index
+          npm run site
+      - name: Deploy
+        working-directory: web
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy

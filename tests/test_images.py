@@ -42,6 +42,18 @@ def test_unchanged_image_costs_a_304_and_verify_counts_it(site, client, store):
     assert verify.check_integrity(store)["images_ok"] == 1
 
 
+def test_image_in_manifest_but_not_on_disk_is_fetched_again(site, client, store):
+    # A fresh checkout (e.g. the deploy job) has the manifest from git but not the files.
+    govuk(site, body=BODY_WITH_MAP)
+    serve_map(site)
+    sync(client, store)
+    entry = store.load_image_manifest()[SVG_URL]
+    store.image_path(entry["sha256"], ".svg").unlink()
+    report = sync(client, store, full=True)
+    assert report.images["downloaded"] == 1
+    assert store.image_path(entry["sha256"], ".svg").read_bytes() == SVG
+
+
 def test_missing_image_is_reported_not_fatal(site, client, store):
     govuk(site, body=BODY_WITH_MAP)                    # the image URL is never served: 404
     report = sync(client, store)

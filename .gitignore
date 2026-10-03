@@ -25,3 +25,7 @@ prototypes/search/pagefind/
 
 # Word lock files
 ~$*
+
+# Deployable site, assembled by `cd web && npm run site` (see web/build-site.mjs).
+site/
+.wrangler/

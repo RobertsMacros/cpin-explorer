@@ -7,9 +7,11 @@
     "vendor": "node build-vendor.mjs",
     "test": "node --test test/*.test.mjs",
     "borders": "node build-borders.mjs",
-    "search-index": "PYTHONPATH=../src ../.venv/bin/python -m cpin.search_records && node build-search.mjs",
+    "search-index": "PYTHONPATH=../src ${PYTHON:-../.venv/bin/python} -m cpin.search_records && node build-search.mjs",
     "docx": "node build-docx.mjs",
-    "docx-samples": "node build-docx.mjs --samples"
+    "docx-samples": "node build-docx.mjs --samples",
+    "site": "node build-site.mjs",
+    "deploy": "npm run site && wrangler deploy"
   },
   "dependencies": {
     "cobe": "2.0.1",
@@ -22,6 +24,7 @@
     "docx": "^9.8.1",
     "esbuild": "0.28.2",
     "mapshaper": "^0.7.72",
-    "pagefind": "1.5.2"
+    "pagefind": "1.5.2",
+    "wrangler": "^4.147.0"
   }
 }

@@ -43,7 +43,10 @@ def mirror_images(client: PoliteClient, store: Store, refs: dict[str, set[str]],
         stats["checked"] += 1
         entry = manifest.get(url)
         used_by = sorted(set(entry.get("used_by", [])) | notes) if entry else sorted(notes)
-        r = client.get(url, etag=entry.get("etag") if entry else None, follow=True)
+        # Only ask "changed since?" when our copy is actually on disk: a fresh checkout has the
+        # manifest (in git) but not the files, and a 304 would leave the file missing.
+        held = entry and store.image_path(entry["sha256"], entry.get("ext", "")).exists()
+        r = client.get(url, etag=entry.get("etag") if held else None, follow=True)
         if r.not_modified:
             entry.update(last_seen=seen_at, used_by=used_by)
             stats["unchanged"] += 1

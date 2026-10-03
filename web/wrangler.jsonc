@@ -1,0 +1,15 @@
+// CPIN Explorer on Cloudflare: a static-assets-only Worker serving ../site (built by build-site.mjs).
+// Deploy with `npm run deploy` from web/. Public, but every response carries X-Robots-Tag: noindex.
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "cpin-explorer",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "../site",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "workers_dev": true,
+  "preview_urls": false,
+  "observability": { "enabled": false }
+}

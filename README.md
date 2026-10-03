@@ -14,10 +14,12 @@ It has three parts:
 1. **Scraper** (`src/cpin/`, built): fetches every country page and every note from the GOV.UK
    Content API, stores each note's body exactly as published, mirrors the PDF editions, and keeps
    every version it sees. Older editions are recovered, where possible, from the Internet Archive.
-2. **Site** (not built yet): a static site with a COBE globe, a country page per country, a reader
-   that keeps GOV.UK's formatting and links, and search within a country and across all of them.
-3. **Comparison** (prototype only): a timeline slider across editions and inline redlines
-   between any two of them. See `prototypes/redline-timeline/`.
+2. **Site** (`prototypes/`, built): a static site with a COBE globe, a panel per country, one page
+   per report that keeps GOV.UK's formatting and links, saved highlights with citations, and search
+   within a country and across all of them. Live at
+   <https://cpin-explorer.robert-m-w-stevens.workers.dev> (public, but marked noindex).
+3. **Comparison** (built, in the report page): a timeline slider across editions and inline or
+   side-by-side redlines between any two of them.
 
 ## Status
 
@@ -36,11 +38,12 @@ It has three parts:
 - **Kept verbatim, as published:**
   - Title typos: "(accesible)", "country police and information note", "country and policy information note".
   - A broken Markdown link in a China note.
+- **Since then (3 October 2026):** the Internet Archive backfill covered all 47 countries (238 archived
+  editions); editions are grouped into 191 reports; the link checker has tested 16,495 cited links; the
+  site is hosted on Cloudflare and redeployed after each sync that changes content.
 - **Not done yet:**
-  - Scheduled runs. The workflow is written, but the repository is not on GitHub.
   - R2 storage for PDFs.
-  - Series grouping of editions.
-  - The site.
+  - Text extraction for the PDF-only countries.
 
 ## What it collects
 
@@ -156,9 +159,27 @@ tiny on a globe, so every country has a clickable pin and appears in the A–Z l
 **Credit:** the Home Office is credited in text ("Source: Home Office, GOV.UK"). Its logo is not used:
 the Open Government Licence excludes departmental logos, and it would suggest official endorsement.
 
-`.github/workflows/sync.yml` runs a quick sync daily and a full sync weekly, and commits changes
-to `data/`. It does nothing until the repository is on GitHub. PDFs are kept out of git
+`.github/workflows/sync.yml` runs a quick sync daily and a full sync weekly, commits changes to
+`data/`, and, when content changed, calls `deploy.yml`. PDFs are kept out of git
 (`data/pdfs/files/`); they are meant for Cloudflare R2, which is not set up yet.
+
+## Hosting
+
+The site is a static-assets-only Cloudflare Worker (`web/wrangler.jsonc`), live at
+<https://cpin-explorer.robert-m-w-stevens.workers.dev> (`/` redirects to the globe).
+
+- **Public, hidden from search engines:** every response carries `X-Robots-Tag: noindex, nofollow,
+  noarchive`. `robots.txt` keeps crawlers off the bulk data but not off pages, because a crawler that
+  can't fetch a page never sees its noindex.
+- **Build:** `web/build-site.mjs` copies only what the pages load into `site/` (gitignored), keeping the
+  repo's layout so relative links work, and checks Cloudflare's limits (25 MB a file, 20,000 files).
+  PDFs are not shipped; PDF links go to GOV.UK.
+- **Deploy by hand:** after `./cpin export` and `cd web && npm run search-index`, run
+  `cd web && npm run deploy` (needs `npx wrangler login` once).
+- **Deploy automatically:** `.github/workflows/deploy.yml` runs after a sync that changed content, on
+  pushes that change the site, or by hand. It needs two repository secrets, `CLOUDFLARE_API_TOKEN`
+  (a token with "Edit Cloudflare Workers") and `CLOUDFLARE_ACCOUNT_ID`; without them it notes that and
+  stops. Mirrored images are cached between runs, so only new ones are fetched.
 
 ## Data layout
 
@@ -166,12 +187,10 @@ See the docstring at the top of `src/cpin/store.py`.
 
 ## Roadmap
 
-- Site: globe (COBE), country pages, reader, search, filters; responsive from phone to 4K.
-- Comparison: timeline slider and inline/side-by-side redlines, built on the prototype.
-- Series grouping: linking a note's successive editions, which GOV.UK publishes at new URLs.
 - PDF-only notes (currently France and Gambia): text extraction for search and comparison.
-- Link checker: test the sources each note cites, and show where they lead.
-- Hosting: Cloudflare (static assets, R2 for PDFs); login can be added with Cloudflare Access.
+- R2 for the mirrored PDFs, so the site can serve its own copies.
+- Cleaner URLs (`/reader/…` rather than `/prototypes/reader/…`) once the prototypes settle.
+- Login, if wanted later, with Cloudflare Access.
 
 ## Licence and attribution
 
