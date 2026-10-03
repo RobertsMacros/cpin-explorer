@@ -31,7 +31,7 @@
   // Apply a stored theme before first paint so there is no flash.
   try { var t = localStorage.getItem('cpinx-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
-<link rel="icon" href="../../assets/roberts-macros/image.png">
+<link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
 <link rel="stylesheet" href="../shared/theme.css">
 <style>
 /* ===================================================================
@@ -707,13 +707,14 @@ del::before { content: " [deleted: "; } del::after { content: " ] "; }
   .notice { align-items: flex-start; }
 }
 </style>
+<link rel="stylesheet" href="../shared/brand.css">
 </head>
 <body>
 <header class="appbar">
   <div class="wrap">
     <a class="brand" href="#top" id="top">
-      <span class="rm"><img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="1536" height="1024"></span>
-      <span class="brand-name">CPIN Explorer</span>
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
+      <span class="brand-name"><b>CPIN</b>EXPLORER</span>
     </a>
     <span class="crumb" id="crumb">Prototype · revision timeline &amp; redline</span>
     <span class="spacer"></span>
@@ -2109,7 +2110,7 @@ async function bootReal() {
   back.href = '../dashboard/index.html#' + encodeURIComponent(country || '');
   back.textContent = '← ' + capFirst(String(country || '').replace(/-/g, ' '));
   crumb.replaceWith(back);
-  $('notice').innerHTML = `<span class="tag tag--outline" aria-hidden="true">Verbatim</span><span><strong>Text is verbatim from GOV.UK</strong> (Source: Home Office, GOV.UK · Crown copyright, Open Government Licence v3.0). Marks show differences between the two editions selected. Archived editions are copies captured by the Internet Archive.</span>`;
+  $('notice').innerHTML = `<span class="tag tag--outline" aria-hidden="true">Verbatim</span><span><strong>Text is verbatim from GOV.UK</strong> (Sources: Home Office, GOV.UK · Crown copyright, Open Government Licence v3.0). Marks show differences between the two editions selected. Archived editions are copies captured by the Internet Archive.</span>`;
   $('doc').innerHTML = `<p class="loading"><span class="tag">Loading</span>Fetching editions…</p>`;
   $('cmpDesc').textContent = '';
   applyThemeLabel(); applyModeUI();

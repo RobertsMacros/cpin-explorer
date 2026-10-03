@@ -1,8 +1,8 @@
-<img src="assets/roberts-macros/image.png" alt="Roberts Macros" width="72" align="right">
+<img src="assets/cpin-explorer/favicon.svg" alt="CPIN Explorer" width="72" align="right">
 
 # CPIN Explorer
 
-*Roberts Macros: no macro too micro.*
+*A Roberts Macros work tool.*
 
 A verbatim, versioned mirror of the Home Office's
 [Country Policy and Information Notes](https://www.gov.uk/government/collections/country-policy-and-information-notes)
@@ -93,23 +93,34 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
 #                                                                                 one report: read, history, changes
 # http://localhost:8781/prototypes/redline-timeline/                            redline sample (invented text)
 # http://localhost:8781/prototypes/saved/                                       saved highlights
-# http://localhost:8781/prototypes/search/?q=internal%20relocation              full-text search
+# http://localhost:8781/prototypes/dashboard/?q=internal%20relocation            search (one box: countries, reports, text)
 ```
 
 - **Report page** (`prototypes/reader/`): one page per report, `?country=<slug>&series=<key>`. It opens on
   the latest edition, verbatim and clean, with contents, find-in-text, mirrored images and links preserved.
   Links to notes we hold open here; links to country pages open the dashboard at that country; Word
   bookmarks that GOV.UK lost are repaired; cited sources carry their link status ("Moved", "Dead" with the
-  archived copy) and the head sums them up. Older links (`?country=&note=`) are mapped to their report.
+  archived copy). Older links (`?country=&note=`) are mapped to their report.
+  - **Head:** three quiet lines (back to the country, the title, one line of version, date and links)
+    and two chips: *Sources* (link counts and "next dead link") and *Verbatim* (where this edition's text
+    came from: GOV.UK as at the last check, or the Internet Archive capture, with the verbatim title).
+  - **Nothing above the text moves between editions:** fixed-height lines and caption box (long captions
+    and tables open behind "More"), measured at 0 px across every edition of five reports.
   - **History**, open by default above the text (collapsible): every edition held and every GOV.UK update
-    on one timeline, with the rolling "As at" date, Play, and a change log. Each edition is captioned with
+    on one timeline, with the rolling "As at" date and Play ("All editions" lists them). Each edition is captioned with
     the Home Office's own "Changes from last version of this note" (rendered as published, tables
     included), else its GOV.UK change note, plus a computed line (most-changed sections, words added and
     removed) labelled as computed. GOV.UK updates whose edition is not held are dated stops too, so a
     report with one edition still has a playable history. Section and paragraph numbers in captions
     ("sections 13.4, and 16.3 to 16.5") link into the text and highlight what they refer to.
-  - **Time travel:** moving the slider shows that edition, clean (`&edition=<id>`); "Read the latest
-    guidance" goes back. The reading place is kept by paragraph number.
+  - **Time travel:** moving the slider shows that edition, clean (`&edition=<id>`); "Latest guidance →"
+    in the edition bar goes back. The reading place is kept by paragraph number.
+  - **Rewrites:** `./cpin export` records how much of each edition's wording survives from the one before
+    (`similarity_to_previous`: shared five-word phrases ÷ the larger edition). Below 25%
+    (`REWRITE_THRESHOLD` in `report-history.js`) the caption says "Rewritten · about N% of the earlier
+    wording kept", and Show changes offers the two editions side by side without marks instead of a
+    redline (still one click away). A third of consecutive pairs are rewrites: see
+    `docs/reviews/2026-10-03-rewritten-editions.md`.
   - **Show changes** turns the same reading area into a redline (Inline or Side-by-side) between the
     edition shown and the one before, or any two chosen with the Old and New handles
     (`&changes=1[&from=<id>][&view=sbs]`). Comparisons run in a Web Worker
@@ -126,28 +137,47 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
     while it is the live edition, otherwise its Internet Archive copy (dated from the capture in its
     address). On the latest edition, older highlights are re-anchored or flagged "Changed since you saved
     it", with a link to the redline. Highlights are kept in this browser (`localStorage`,
-    `cpin-highlights-v1`) until logins exist; the Saved page exports them as Markdown or JSON.
+    `cpin-highlights-v1`) until logins exist; the Saved page exports them as Markdown, JSON or Word.
+    Citation styles are "Full (OSCOLA)" and "Short (tribunal)".
   - Timeline, captions and paragraph references are pure functions in
     `prototypes/shared/report-history.js` (tested in `web/test/report-history.test.mjs`); the slider and
     rolling digits are `prototypes/shared/timeline.js` + `timeline.css`.
 - `./cpin export` also writes `prototypes/data/series/` (every edition held of each report; gitignored,
   regenerate it).
-- **Search:** full-text search across every live note, or within one country's notes, with
-  [Pagefind](https://pagefind.app) (MIT) running in the browser. `cd web && npm run search-index` writes
-  one record per h2/h3 section of each live note's current edition (`src/cpin/search_records.py` →
-  `prototypes/data/search-records.jsonl`; body text only, footnote markers removed, no footnote list,
-  bibliography or version control), then builds the index into `prototypes/search/pagefind/` (gitignored;
-  rebuild after each export). On 2 October 2026: 3,945 records from 164 notes, an 18 MB index in about
-  4,200 files, built in about a minute. The dashboard's ⌘K box adds an "In the text" group (scoped to the
-  selected country, or everywhere), each country has a box for its own notes, and
-  `prototypes/search/?q=&country=&kind=` lists every hit grouped by note with filters. A hit opens the
-  reader at its section with `&q=`, which fills find-in-note and glides to the first match.
+- **Search:** one box, in the dashboard's header (`prototypes/dashboard/search-query.js`). As you type it
+  lists countries, then reports, then passages from the full text. Reports sit under subject headings
+  ("Humanitarian situation · 9 countries · 10 reports") from a reviewed table,
+  `prototypes/shared/topic-groups.js`: GOV.UK words one subject many ways, so a title joins a group only
+  if it is listed, or is a listed topic plus a place or bracketed note; anything else stands alone
+  (`docs/reviews/2026-10-03-topic-groups.md`). Queries are read forgivingly ("country reports", "FFM",
+  a country name) and never dead-end: with no title match the passages are the answer. "All N passages →"
+  opens the full list in the panel with Kind and Country filters (`?q=&view=passages&country=&kind=`).
+  Each country has a box for its own reports and their text. `prototypes/search/` now only redirects here.
+  The text index is [Pagefind](https://pagefind.app) (MIT), in the browser (`shared/fulltext-search.js`):
+  `cd web && npm run search-index` writes one record per h2/h3 section of each live note's current edition
+  (`src/cpin/search_records.py` → `prototypes/data/search-records.jsonl`; body text only, no footnotes,
+  bibliography or version control), then builds `prototypes/search/pagefind/` (gitignored; rebuild after
+  each export). On 2 October 2026: 3,945 records from 164 notes, an 18 MB index in about 4,200 files. A
+  hit opens the report at its section with `&q=`, which fills find-in-report and glides to the first match.
+- **Dashboard** (`prototypes/dashboard/`): from 901 px the page is an app shell: header, the globe, the
+  panel as its own scrolling column, and the footer always in view; below that it is one scrolling page.
+  - **Choosing a country:** the dots are the targets (`pick.js`: a dot's drawn radius plus a margin,
+    nearest dot wins); borders are the fallback, so a tiny country is as easy to pick as a large one.
+    Hovering lights a country in its flag's colours after a short rest, with a crossfade.
+  - **"Accurate as of":** the header quietly asks GOV.UK's content API for the country pages' last-updated
+    dates (once per visit, reused for 30 minutes) and shows "Accurate as of <now>", "GOV.UK has N newer
+    updates", or "Copy fetched <when>" (`sync-status.js`). It compares dates, not text; the weekly full
+    sync catches silent edits. All times are UK time (`shared/uk-time.js`).
+- **Header and footer** (`shared/brand.css`): CPIN Explorer's dotted-globe mark and wordmark; in the footer
+  the RM mark, the sources credit and "Report a bug" (an email with the page and browser filled in;
+  address in `shared/site-config.js`).
 
 The look follows the COBE site: white, one electric blue, Geist Sans for reading and Geist Pixel /
 Geist Mono for labels and numbers, all self-hosted (`prototypes/vendor/`, built by `web/build-vendor.mjs`).
 The globe is [COBE](https://cobe.vercel.app) v2. COBE has no render loop of its own, so the page drives
 it and stops drawing when nothing moves. Clicks are mapped back to latitude/longitude by inverting COBE's
-projection (`prototypes/shared/globe-math.js`), then to a country (`country-locator.js`).
+projection (`prototypes/shared/globe-math.js`), then to a country: its dot first (`dashboard/pick.js`),
+then its borders (`country-locator.js`).
 
 **Borders:** `prototypes/vendor/countries-gbr.json` is built by `web/build-borders.mjs` from Natural
 Earth's 1:10m countries, **UK point of view** (public domain; revision recorded in `VERSIONS.json`). It
@@ -156,7 +186,7 @@ do not. It leaves the Golan Heights unassigned, so `config/countries.json` patch
 clicks. Small states (Gambia, Lebanon, Kuwait, Jamaica, Trinidad and Tobago, Palestine, El Salvador) are
 tiny on a globe, so every country has a clickable pin and appears in the A–Z list.
 
-**Credit:** the Home Office is credited in text ("Source: Home Office, GOV.UK"). Its logo is not used:
+**Credit:** the Home Office is credited in text ("Sources: Home Office, GOV.UK"). Its logo is not used:
 the Open Government Licence excludes departmental logos, and it would suggest official endorsement.
 
 `.github/workflows/sync.yml` runs a quick sync daily and a full sync weekly, commits changes to
@@ -199,6 +229,11 @@ Contains public sector information licensed under the
 The notes are Crown copyright. This is an independent mirror, not an official Home Office
 service; always check the current edition on GOV.UK.
 
-Brand artwork: the RM mark in `assets/roberts-macros/` is copied from
+Brand artwork: the product mark (the dotted globe in the header, tab icon and Word export) is
+CPIN Explorer's own, in `assets/cpin-explorer/` (options and choice: `prototypes/brand/`). The RM mark
+in the footer is from `assets/roberts-macros/`, copied from
 [Roberts-Macros-assets](https://github.com/RobertsMacros/Roberts-Macros-assets) at revision
-`95e38faf099249376af855cf509967aa2e93ac0c` (see `assets/roberts-macros/SOURCE.txt`).
+`95e38faf099249376af855cf509967aa2e93ac0c`; the transparent crops of the mark in `derived/` are made from those
+originals (see `assets/roberts-macros/SOURCE.txt`).
+
+<img src="assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="110">

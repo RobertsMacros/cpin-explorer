@@ -2,49 +2,29 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Search · CPIN Explorer</title>
-<meta name="description" content="Search the full text of every live Home Office country policy and information note, mirrored verbatim from GOV.UK.">
-<link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" type="image/png" href="../../assets/roberts-macros/image.png">
-<link rel="stylesheet" href="../shared/theme.css">
-<link rel="stylesheet" href="../dashboard/dashboard.css">
-<link rel="stylesheet" href="search.css">
-<script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
-<script type="module" src="search.js"></script>
+<link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
+<script>
+  // The site has one search, in the header of the start page (../dashboard/). This page used to be a
+  // separate full-text search; links to it (?q=&country=&kind=) land on the same results there.
+  // The index itself still lives beside this file, in pagefind/ (built by `npm run search-index`).
+  (function () {
+    var from = new URLSearchParams(location.search), to = new URLSearchParams();
+    var q = (from.get("q") || "").trim();
+    if (q) {
+      to.set("q", q);
+      to.set("view", "passages");
+      ["country", "kind"].forEach(function (key) { if (from.get(key)) to.set(key, from.get(key)); });
+    }
+    var qs = to.toString().replace(/%2C/g, ",");
+    location.replace("../dashboard/index.html" + (qs ? "?" + qs : ""));
+  })();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=../dashboard/index.html"></noscript>
 </head>
 <body>
-<header class="top">
-  <a class="brand" href="../dashboard/index.html" aria-label="CPIN Explorer home">
-    <img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="30" height="30">
-    <span class="brand-name">CPIN EXPLORER</span>
-  </a>
-  <form class="search" role="search" id="form">
-    <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
-    <input id="q" name="q" type="search" placeholder="Search the text of every note" autocomplete="off" spellcheck="false" aria-label="Search the text of every note" aria-controls="results">
-    <kbd class="search-kbd">/</kbd>
-  </form>
-  <a class="btn saved-link" href="../saved/index.html" title="Highlights you have saved">SAVED <span id="savedCount" class="numeral"></span></a>
-  <div class="sync" title="When the scraper last checked GOV.UK"><span class="live-dot" aria-hidden="true"></span><span id="sync">Loading…</span></div>
-  <button class="btn theme-btn" id="theme" type="button">AUTO</button>
-</header>
-
-<main class="sr">
-  <section class="sr-hero" id="hero" aria-live="polite"></section>
-  <div class="sr-body">
-    <aside class="sr-side" aria-label="Filters">
-      <button class="btn sr-filter-toggle" id="filterToggle" type="button" aria-expanded="false" aria-controls="facets">Filters <span class="numeral" id="filterCount"></span></button>
-      <div class="sr-facets" id="facets"><div class="sr-facets-in" id="facetsIn"></div></div>
-    </aside>
-    <section class="sr-results" id="results" aria-label="Results"></section>
-  </div>
-</main>
-
-<footer class="foot">
-  <span>Source: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
-  <span class="foot-rm">Roberts Macros: no macro too micro.</span>
-</footer>
-<noscript><p class="noscript">Search needs JavaScript. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
+<p>Search is on the <a href="../dashboard/index.html">CPIN Explorer start page</a>.</p>
 </body>
 </html>

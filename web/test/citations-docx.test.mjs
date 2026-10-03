@@ -81,10 +81,13 @@ test("full export: quotes, citations with real links, sources, notes and the sta
   assert.ok(text.includes("Changed since saved"));
   assert.ok(text.includes("v6.0 → v7.0: these words are not in the edition now on GOV.UK. The citation points to the archived copy of v6.0."));
   assert.ok(text.includes("CPIN Explorer") && text.includes(`Saved citations · 2 October 2026`) && text.includes("OSCOLA citations"));
-  assert.ok(doc.includes('<a:srcRect l="22000" t="21500" r="22500" b="38000"/>'), "the RM mark, cropped");
-  assert.ok([...full.keys()].some((k) => /^word\/media\/.+\.png$/.test(k)));
+  assert.ok(doc.includes('name="CPIN Explorer"') && !doc.includes('name="Roberts Macros"'), "the header carries CPIN Explorer's mark, not the RM mark");
+  assert.ok(!doc.includes("<a:srcRect "), "the product mark is square: nothing to crop");
+  assert.ok([...full.keys()].filter((k) => /^word\/media\/.+\.png$/.test(k)).length >= 2, "both marks are embedded");
   const footer = xml(full, "word/footer1.xml");
-  assert.ok(docText(footer).includes("Source: Home Office, GOV.UK. Contains public sector information licensed under the Open Government Licence v3.0. CPIN Explorer is an independent mirror, not affiliated with or endorsed by the Home Office."));
+  assert.ok(footer.includes('name="Roberts Macros"'), "the RM mark sits in the footer, beside the source credit");
+  assert.ok(!/no macro/i.test(docText(footer) + docText(doc)), "no slogan");
+  assert.ok(docText(footer).includes("Sources: Home Office, GOV.UK. Contains public sector information licensed under the Open Government Licence v3.0. CPIN Explorer is an independent mirror, not affiliated with or endorsed by the Home Office."));
   assert.match(footer, /PAGE/);
   assert.match(footer, /NUMPAGES/);
   assert.ok(/<w:pgSz w:w="11906" w:h="16838"/.test(doc), "A4");
@@ -149,7 +152,8 @@ test("citations only: the same look, a numbered list grouped by country and note
   const doc = xml(cites, "word/document.xml");
   const text = docText(doc);
   assert.ok(text.includes("CPIN Explorer") && text.includes("Citations · 2 October 2026"));
-  assert.ok(doc.includes("<a:srcRect "), "the RM mark");
+  assert.ok(doc.includes('name="CPIN Explorer"'), "CPIN Explorer's mark in the header");
+  assert.ok(xml(cites, "word/footer1.xml").includes('name="Roberts Macros"'), "the RM mark in the footer");
   assert.deepEqual(styled(doc, "Heading1"), ["Afghanistan", "Iran"]);
   assert.deepEqual(styled(doc, "Heading2"), ["Humanitarian situation", "Illegal exit", "Military service"]);
   assert.deepEqual(styled(doc, "Heading3"), []);

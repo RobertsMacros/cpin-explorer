@@ -25,6 +25,9 @@
 .sv-tools-in { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .8rem; }
 .sv-tools-gap { flex: 1; }
 .sv-tools .btn { min-height: 2.2rem; font-size: .76rem; }
+/* One line under the tools: what the chosen citation style produces. */
+.sv-tools .seg-hint { flex-basis: 100%; order: 10; display: flex; flex-wrap: wrap; align-items: baseline; gap: .2rem .7rem; }
+.sv-tools .seg-hint .eyebrow { font-size: .62rem; }
 
 /* Export to Word: a button with a two-item menu (the docx library loads only when one is chosen) */
 .sv-export { position: relative; display: inline-flex; }
@@ -116,4 +119,10 @@
   .sv-actions .btn-del { margin-left: 0; }
   .sv-country-head canvas.dotflag { width: 2.8rem; }
   .sv-stats .numeral { font-size: 1.6rem; }
+}
+
+/* Phones: the example selection bar wraps onto two rows; before, its last buttons were cut off. */
+@media (max-width: 600px) {
+  .sv-demo { flex-wrap: wrap; }
+  .sv-demo span { flex: 1 1 auto; text-align: center; box-shadow: 0 -1px 0 color-mix(in oklab, var(--blue-ink) 25%, transparent); }
 }

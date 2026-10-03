@@ -9,7 +9,7 @@
      ../../assets/roberts-macros/, see SOURCE.txt there). -->
 <link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" type="image/png" href="../../assets/roberts-macros/image.png">
+<link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
 <link rel="stylesheet" href="../shared/theme.css">
 <link rel="stylesheet" href="../shared/timeline.css">
 <link rel="stylesheet" href="../shared/link-status.css">
@@ -17,13 +17,14 @@
 <link rel="stylesheet" href="reader.css">
 <script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; if (localStorage.getItem("cpin-history-open") === "0") document.documentElement.classList.add("hist-closed"); } catch (e) {}</script>
 <script type="module" src="reader.js"></script>
+<link rel="stylesheet" href="../shared/brand.css">
 </head>
 <body class="is-loading">
 <a class="skip" href="#doc">Skip to the text</a>
 <header class="top" id="top">
   <a class="brand" id="brand" href="../dashboard/index.html" aria-label="CPIN Explorer: back to the globe">
-    <img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="30" height="30">
-    <span class="brand-name">CPIN EXPLORER</span>
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
+    <span class="brand-name"><b>CPIN</b>EXPLORER</span>
   </a>
   <button class="btn find-toggle" id="findToggle" type="button" aria-label="Find in this report" aria-expanded="false" aria-controls="findBox"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg></button>
   <div class="find" id="findBox" role="search">
@@ -39,9 +40,11 @@
   <div class="progress" aria-hidden="true"><i id="progress"></i></div>
 </header>
 
+<!-- Head: flag, title and one quiet line about the edition shown; "Verbatim" and "Sources" open small panels. -->
 <section class="masthead wide" id="head" aria-label="About this report"></section>
 
-<!-- History: every edition held and every GOV.UK update, on one timeline. Open by default. -->
+<!-- History: every edition held and every GOV.UK update, on one timeline. Open by default. Everything in it
+     keeps its place while editions change (fixed-height lines and caption), so stepping or Play never jolts. -->
 <section class="history wide" id="history" aria-labelledby="histTitle" hidden>
   <div class="hist-frame">
     <div class="hist-head">
@@ -49,25 +52,26 @@
       <span class="hist-count" id="histCount"></span>
       <span class="hist-mini" id="histMini" aria-hidden="true"></span>
       <span class="spacer"></span>
-      <span class="tl-hint" id="tlHint"><kbd>←</kbd><kbd>→</kbd> step · <kbd>Home</kbd><kbd>End</kbd></span>
-      <button class="btn play" id="playBtn" type="button" aria-pressed="false">
+      <div class="clog-wrap" id="clogWrap">
+        <button class="btn clog-btn" id="clogBtn" type="button" aria-expanded="false" aria-controls="clogPanel"><span class="lbl-long">All editions</span><span class="lbl-short">Editions</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <div class="clog" id="clogPanel" hidden>
+          <h3 class="eyebrow" id="clogTitle">Editions and updates · newest first</h3>
+          <ol id="clog" aria-labelledby="clogTitle"></ol>
+        </div>
+      </div>
+      <button class="btn play" id="playBtn" type="button" aria-pressed="false" aria-keyshortcuts="ArrowLeft ArrowRight Home End"
+        title="Play every edition and update in turn.&#10;On the timeline: ← → step, Home and End go to the first and last. c shows changes.">
         <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.5 4.5v11l9-5.5z" fill="currentColor"/></svg>
         <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="4.5" width="3" height="11" fill="currentColor"/><rect x="11.5" y="4.5" width="3" height="11" fill="currentColor"/></svg>
-        <span id="playLbl">Play history</span>
+        <span id="playLbl">Play<span class="lbl-x"> history</span></span>
       </button>
       <button class="btn hist-toggle" id="histToggle" type="button" aria-expanded="true" aria-controls="histBody"><span class="lbl">Hide</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 10l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
     </div>
     <div class="hist-body" id="histBody">
       <div class="hist-clip">
         <div class="hist-grid">
-          <div class="hist-main">
-            <p class="asat"><span class="asat-label tag" id="asatLabel">As at</span><span class="asat-roll" id="asat" aria-hidden="true"></span><span class="sr-only" id="asatSr" aria-live="polite"></span></p>
-            <div class="wc" id="wc" aria-live="polite" aria-atomic="true"></div>
-          </div>
-          <div class="clog" id="clogWrap">
-            <h3 class="eyebrow" id="clogTitle">Editions and updates · newest first</h3>
-            <ol id="clog" aria-labelledby="clogTitle"></ol>
-          </div>
+          <p class="asat"><span class="asat-label tag" id="asatLabel">As at</span><span class="asat-roll" id="asat" aria-hidden="true"></span><span class="sr-only" id="asatSr" aria-live="polite"></span></p>
+          <div class="wc" id="wc" aria-live="polite" aria-atomic="true"></div>
         </div>
         <div id="rs"></div>
       </div>
@@ -80,7 +84,7 @@
   <span class="busy-bar" id="busyBar" aria-hidden="true"></span>
   <div class="bar-in">
     <span class="ed-chip" id="edChip"></span>
-    <button class="btn latest-mini" id="latestMini" type="button" hidden>Latest guidance <span aria-hidden="true">→</span></button>
+    <button class="btn btn--primary latest-mini" id="latestMini" type="button" hidden><span class="lm-long">Latest guidance</span><span class="lm-short">Latest</span> <span aria-hidden="true">→</span></button>
     <span class="spacer"></span>
     <span class="cmp" id="cmp">
       <span class="vseg" id="vseg" role="radiogroup" aria-label="How to show changes" data-value="inline"><span class="vseg-thumb" aria-hidden="true"></span>
@@ -116,8 +120,9 @@
 </main>
 
 <footer class="foot">
-  <span>Source: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. Earlier editions are copies captured by the Internet Archive. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
-  <span class="foot-rm">Roberts Macros: no macro too micro.</span>
+  <!--brand-rm--><span class="foot-rm"><img class="rm-ink" src="../../assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="261" height="128"><img class="rm-light" src="../../assets/roberts-macros/derived/rm-mark-light.png" alt="" width="261" height="128"></span><!--/brand-rm-->
+  <span>Sources: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. Earlier editions are copies captured by the Internet Archive. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
+  <!--brand-foot--><span class="foot-end"><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
 </footer>
 
 <!-- Phones and narrow windows: contents and saved passages (or the list of changes) live in a slide-up sheet. -->
@@ -141,5 +146,6 @@
 <div class="pop" id="pop" role="dialog" aria-modal="false" hidden></div>
 <div class="toasts" id="toasts" aria-live="polite"></div>
 <noscript><p class="noscript">This page needs JavaScript. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
+<script type="module" src="../shared/report-bug.js"></script>
 </body>
 </html>

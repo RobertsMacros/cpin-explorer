@@ -13,6 +13,12 @@ export const MONTHS = ["January", "February", "March", "April", "May", "June", "
 export const MONTHS_SHORT = MONTHS.map((m) => m.slice(0, 3));
 export const STYLES = ["oscola", "tribunal"];
 export const STYLE_NAMES = { oscola: "OSCOLA", tribunal: "Tribunal" };
+/** Labels for the style switch, so each explains itself, and what each produces (one line, for a hint). */
+export const STYLE_LABELS = { oscola: "Full (OSCOLA)", tribunal: "Short (tribunal)" };
+export const STYLE_HINTS = {
+  oscola: "The full legal citation: author, title, version and date, paragraph, link and the date you accessed it.",
+  tribunal: "The compact reference used in Upper Tribunal and First-tier Tribunal determinations and skeleton arguments.",
+};
 
 const MONTH_RE = new RegExp(`(${MONTHS.join("|")})\\s+(\\d{4})`, "i");
 const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

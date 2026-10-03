@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo options · CPIN Explorer</title>
+<link rel="stylesheet" href="../shared/theme.css">
+<style>
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-text); }
+  main { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  h1 { font-family: var(--font-display); color: var(--blue); font-weight: 400; font-size: 2.6rem; margin: .2rem 0 1.5rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; }
+  .opt { border: 1px solid var(--line); }
+  .opt h2 { margin: 0; padding: .7rem 1rem; border-bottom: 1px solid var(--line); font: 500 .72rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; display: flex; justify-content: space-between; }
+  .opt h2 b { color: var(--blue); font-weight: 500; }
+  .pane { padding: 1.2rem 1rem; display: flex; flex-direction: column; gap: 1.2rem; }
+  .pane.dark { background: #0b0d12; color: #e6e9ef; --line: #262b36; --blue: #8b93ff; }
+  .sizes { display: flex; align-items: end; gap: 1.1rem; }
+  .sizes svg { color: var(--blue); }
+  .sizes span { display: block; font: .62rem var(--font-mono); color: var(--ink-2); text-align: center; margin-top: .3rem; }
+  .pane.dark .sizes span { color: #8a93a6; }
+  .header { display: flex; align-items: center; gap: .7rem; border: 1px solid var(--line); padding: .7rem .9rem; }
+  .header svg { width: 34px; height: 34px; color: var(--blue); flex: none; }
+  .header .name { font: 500 .95rem var(--font-mono); letter-spacing: .22em; }
+  .header .name b { font-family: var(--font-display); font-weight: 400; color: var(--blue); letter-spacing: .08em; font-size: 1.15rem; margin-right: .35rem; }
+  .note { color: var(--ink-2); max-width: 46rem; }
+</style>
+<link rel="stylesheet" href="../shared/brand.css">
+</head>
+<body>
+<main>
+  <p class="eyebrow">CPIN Explorer · header logo</p>
+  <p class="note"><strong>Chosen (3 Oct 2026):</strong> mark A, the dotted globe, with wordmark (a) — two fonts at the same size, square pixel “CPIN” and mono “EXPLORER”. Set in <code>prototypes/shared/brand.css</code> and <code>assets/cpin-explorer/mark.svg</code>.</p>
+  <h1>Logo options</h1>
+  <p class="note">Three marks in the globe's dotted style, shown at real sizes (16–128 px), in a header, light and dark. Each is one small vector file that takes the page's blue, so it stays sharp on 4K and follows the theme. The RM mark moves to the footer.</p>
+  <div class="grid" id="grid"></div>
+
+  <h1 style="margin-top:3rem">Wordmark</h1>
+  <p class="note">Logo A with the name set different ways, at header size. Now: "CPIN" larger in the outline pixel font, "EXPLORER" in mono. (a) keeps the two fonts but makes them the same size. (b) sets both words in one font, "CPIN" in blue.</p>
+  <div class="words" id="words"></div>
+</main>
+<style>
+  .words { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+  .words .row { display: contents; }
+  .words .cell { display: flex; align-items: center; gap: .65rem; padding: 1.1rem 1.2rem; border-bottom: 1px solid var(--line); min-height: 4.6rem; }
+  .words .cell.dark { background: #0b0d12; color: #e6e9ef; --blue: #8b96ff; border-color: #262b36; }
+  .words .label { grid-column: 1 / -1; padding: .55rem 1.2rem; font: 500 .68rem var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--blue); border-bottom: 1px solid var(--line); background: var(--sunken); }
+  .words svg { width: 34px; height: 34px; color: var(--blue); flex: none; }
+  .wm { white-space: nowrap; }
+  .wm b { font-weight: 400; color: var(--blue); }
+</style>
+<script type="module">
+  const opts = [
+    ["mark-dots", "A · Dotted globe", "The COBE globe in miniature: dots fade towards the edge."],
+    ["mark-pin", "B · Globe with a pin", "As A, with one country picked out: the act of choosing a country."],
+    ["mark-wire", "C · Dotted wireframe", "Outline and dotted meridians: clearest at 16 px (browser tab)."],
+  ];
+  const mark = (id, px) => `<svg width="${px}" height="${px}" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/${id}.svg#mark"/></svg>`;
+  const pane = (id, dark) => `<div class="pane${dark ? " dark" : ""}">
+      <div class="sizes">${[16, 24, 34, 64, 128].map((px) => `<div>${mark(id, px)}<span>${px}</span></div>`).join("")}</div>
+      <div class="header">${mark(id, 34)}<span class="name"><b>CPIN</b>EXPLORER</span></div>
+    </div>`;
+  document.getElementById("grid").innerHTML = opts.map(([id, title, why]) => `<section class="opt">
+      <h2><b>${title}</b><span>${id}.svg</span></h2>${pane(id, false)}${pane(id, true)}
+      <p class="note" style="padding:0 1rem 1rem;margin:0">${why}</p></section>`).join("");
+
+  // Wordmark variants: [label, CPIN style, EXPLORER style]
+  const MONO = "font-family:var(--font-mono);font-size:.95rem;letter-spacing:.22em";
+  const words = [
+    ["Now · two fonts, CPIN larger", "font-family:var(--font-display);font-size:1.15rem;letter-spacing:.08em", MONO],
+    ["(a) two fonts, same size · outline pixel + mono", "font-family:var(--font-display);font-size:.95rem;letter-spacing:.16em", MONO],
+    ["(a) two fonts, same size · square pixel + mono", "font-family:var(--font-pixel);font-size:.95rem;letter-spacing:.16em", MONO],
+    ["(b) one font · mono", MONO, MONO],
+    ["(b) one font · square pixel", "font-family:var(--font-pixel);font-size:1rem;letter-spacing:.18em", "font-family:var(--font-pixel);font-size:1rem;letter-spacing:.18em"],
+    ["(b) one font · outline pixel", "font-family:var(--font-display);font-size:1.1rem;letter-spacing:.14em", "font-family:var(--font-display);font-size:1.1rem;letter-spacing:.14em"],
+    ["(b) one font · Geist sans", "font-family:var(--font-text);font-weight:600;font-size:1rem;letter-spacing:.14em", "font-family:var(--font-text);font-weight:600;font-size:1rem;letter-spacing:.14em"],
+  ];
+  const wm = (cp, ex) => `${mark("mark-dots", 34)}<span class="wm"><b style="${cp}">CPIN</b><span style="${ex};margin-left:.55em">EXPLORER</span></span>`;
+  document.getElementById("words").innerHTML = words.map(([label, cp, ex]) =>
+    `<div class="label">${label}</div><div class="cell">${wm(cp, ex)}</div><div class="cell dark">${wm(cp, ex)}</div>`).join("");
+</script>
+</body>
+</html>

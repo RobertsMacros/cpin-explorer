@@ -274,7 +274,7 @@ export function exportMarkdown(records, { style = "oscola", accessed = new Date(
       }
     }
   }
-  out.push(`---`, ``, `Source: Home Office, GOV.UK. Contains public sector information licensed under the Open Government Licence v3.0.`, ``);
+  out.push(`---`, ``, `Sources: Home Office, GOV.UK. Contains public sector information licensed under the Open Government Licence v3.0.`, ``);
   return out.join("\n");
 }
 

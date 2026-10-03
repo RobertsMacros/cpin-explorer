@@ -97,6 +97,134 @@ export function captionSource(edition) {
   return null;
 }
 
+/* ------------------------------------------------------------------ rewrites */
+
+/**
+ * Below this share of the earlier edition's wording kept, an edition counts as a rewrite: the history
+ * caption says so, and Show changes offers the two texts side by side before a redline that would mark
+ * almost everything. (Of 209 consecutive pairs held, 120 keep 90% or more and 68 keep under 25%.)
+ */
+export const REWRITE_THRESHOLD = 0.25;
+
+/** True when a similarity (0..1, from the export or wordingKept) marks a rewrite. */
+export const isRewrite = (sim) => typeof sim === "number" && Number.isFinite(sim) && sim < REWRITE_THRESHOLD;
+
+/** "about 5%", "less than 1%": a similarity as words. */
+export function keptPercent(sim) {
+  const p = Math.round(sim * 100);
+  return sim > 0 && p < 1 ? "less than 1%" : `about ${p}%`;
+}
+
+const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: "\"", apos: "'", nbsp: " ", lsquo: "‘", rsquo: "’", ldquo: "“", rdquo: "”", ndash: "–", mdash: "—", hellip: "…" };
+const TAGS = /<(script|style)\b[\s\S]*?<\/\1\s*>|<!--[\s\S]*?-->|<[^>]*>/gi;
+/** The words of a body's text, lower-cased, punctuation stripped: as the export's body_words (src/cpin/export.py). */
+export function bodyWords(body) {
+  const text = String(body || "").replace(TAGS, " ").replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => {
+    if (e[0] === "#") { const n = e[1] === "x" || e[1] === "X" ? parseInt(e.slice(2), 16) : +e.slice(1); return Number.isFinite(n) && n > 0 && n < 0x110000 ? String.fromCodePoint(n) : " "; }
+    return namedEntity(e, m);
+  });
+  return text.toLowerCase().match(/[\p{L}\p{N}]+/gu) || [];
+}
+// Named entities must decode as the export's html.unescape does, or the two measures drift apart
+// ("caf&eacute;" is one word, "&pound;5" is "5"). A browser knows every entity, so it is asked (once per
+// name); without a DOM (the tests), the common ones in the table above.
+const entityCache = new Map();
+let entityBox = null;
+function namedEntity(name, raw) {
+  if (Object.hasOwn(ENTITIES, name)) return ENTITIES[name];
+  if (typeof document === "undefined") return ENTITIES[name.toLowerCase()] ?? raw;
+  if (!entityCache.has(name)) {
+    entityBox ??= document.createElement("textarea");
+    entityBox.innerHTML = `&${name};`;
+    entityCache.set(name, entityBox.value);
+  }
+  return entityCache.get(name);
+}
+/**
+ * How much of one edition's wording another keeps: five-word phrases in common ÷ phrases in the larger
+ * edition (the export's similarity_to_previous, for pairs that are not consecutive).
+ */
+export function wordingKept(bodyA, bodyB, n = 5) {
+  return phrasesShared(phrasesOf(bodyA, n), phrasesOf(bodyB, n));
+}
+/** Every run of n consecutive words of a body, as a Set (a text shorter than n words is one phrase).
+ *  The costly half of wordingKept: keep the Set to compare one edition with several others. */
+export function phrasesOf(body, n = 5) {
+  const w = bodyWords(body), out = new Set();
+  if (w.length < n) { if (w.length) out.add(w.join(" ")); return out; }
+  for (let i = 0; i + n <= w.length; i++) out.add(w.slice(i, i + n).join(" "));
+  return out;
+}
+/** Phrases in common ÷ phrases in the larger of two phrasesOf() Sets, to 3 decimals (1 when both are empty). */
+export function phrasesShared(A, B) {
+  const larger = Math.max(A.size, B.size);
+  if (!larger) return 1;
+  let common = 0;
+  const [small, big] = A.size <= B.size ? [A, B] : [B, A];
+  for (const p of small) if (big.has(p)) common++;
+  return Math.round((common / larger) * 1000) / 1000;
+}
+
+/**
+ * Whether editions came between edition i and the one held before it: its version number skips
+ * (v3.0 -> v7.0), or GOV.UK published updates in between whose editions are not held. (An update dated
+ * after edition i took effect is about edition i itself, wherever it falls on the timeline.)
+ */
+export function editionsBetweenNotHeld(timeline, i) {
+  const cur = timeline?.editions?.[i], prev = timeline?.editions?.[i - 1];
+  if (!cur || !prev) return false;
+  if (versionsNotHeld(prev.version ?? undefined, cur.version)) return true;
+  return timeline.stops.some((s) => s.kind === "update" && s.k > prev.k && s.k < cur.k && s.inForce !== cur.i);
+}
+
+/** A heading's words, for matching it across editions: lower-cased, its number and punctuation dropped
+ *  ("9. Judiciary" and "8.2 Judiciary:" are the same heading). */
+export function headingKey(text) {
+  return String(text || "").toLowerCase().replace(/\s+/g, " ").trim()
+    .replace(/^(?:\d{1,3}(?:\.\d{1,3})*\.?|[a-z]\))\s+/, "")
+    .replace(/[^\p{L}\p{N} ]+/gu, "").replace(/ +/g, " ").trim();
+}
+
+/**
+ * The headings two editions share, in order, so their sections can be lined up side by side: the longest
+ * sequence of equal keys that keeps both orders. Returns [[oldIndex, newIndex], …]; empty keys never match.
+ */
+export function alignHeadings(oldKeys, newKeys) {
+  const n = oldKeys.length, m = newKeys.length;
+  const dp = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
+  const eq = (i, j) => !!oldKeys[i] && oldKeys[i] === newKeys[j];
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = eq(i, j) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const pairs = [];
+  for (let i = 0, j = 0; i < n && j < m;) {
+    if (eq(i, j)) { pairs.push([i, j]); i++; j++; } else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+  }
+  return pairs;
+}
+
+/**
+ * Linked scrolling for two editions side by side. points are [x, y] pairs: where each shared heading sits in
+ * one text and in the other. increasing() keeps those that go forward in both; mapThrough() carries a position
+ * in the first text to the second, in proportion between the points either side of it.
+ */
+export function increasing(points) {
+  const out = [];
+  for (const [x, y] of points) {
+    if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+    const last = out[out.length - 1];
+    if (!last || (x >= last[0] && y >= last[1])) out.push([x, y]);
+  }
+  return out;
+}
+export function mapThrough(points, x) {
+  if (!points.length) return 0;
+  if (x <= points[0][0]) return points[0][1];
+  for (let i = 1; i < points.length; i++) {
+    const [x0, y0] = points[i - 1], [x1, y1] = points[i];
+    if (x <= x1) return x1 === x0 ? y1 : y0 + ((x - x0) * (y1 - y0)) / (x1 - x0);
+  }
+  return points[points.length - 1][1];
+}
+
 /** How long Play lingers on a caption so it can be read: about 2.5 to 5.5 seconds. */
 export function dwellFor(chars) {
   return Math.max(2500, Math.min(5500, 1400 + ((chars || 24) + 40) * 13));

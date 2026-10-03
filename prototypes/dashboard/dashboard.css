@@ -1,6 +1,6 @@
 /* Dashboard layout. Tokens, fonts and shared components come from ../shared/theme.css. */
 
-body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
+body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: minmax(0, 1fr); }   /* never wider than the window */
 
 /* --- Header --------------------------------------------------------------------------------- */
 .top {
@@ -24,7 +24,14 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
 .search input::placeholder { color: var(--ink-3); }
 .search input::-webkit-search-cancel-button { display: none; }
 .sync { display: flex; align-items: center; gap: .5rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); white-space: nowrap; }
-.live-dot { width: .5rem; height: .5rem; background: var(--blue); animation: live 2.6s var(--ease) infinite; }
+/* How current the copy is (sync-status.js): a still dot and one line, which opens the check pop-up. */
+.sync-status { display: inline-flex; align-items: center; gap: .5rem; border: 0; padding: 0; background: none; color: inherit; font: inherit; white-space: nowrap; cursor: pointer; text-align: left; transition: color var(--t-fast) var(--ease); }
+.sync-status:hover, .sync-status[data-state="newer"] { color: var(--blue); }
+.sync-words { display: inline-block; transition: opacity 170ms var(--ease); }
+.sync-words.is-changing { opacity: 0; }
+#sync .sync-words { min-width: 38ch; }        /* its longest wording: nothing in the header moves when it changes */
+.stage-sync { display: none; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); }
+.live-dot { width: .5rem; height: .5rem; background: var(--blue); }   /* static: "accurate as of" must not flash */
 @keyframes live { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--blue) 45%, transparent); } 75%, 100% { box-shadow: 0 0 0 .55rem transparent; } }
 .theme-btn { min-height: 2.35rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; min-width: 4.6rem; }
 
@@ -48,14 +55,15 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
 .pins { position: absolute; inset: 0; pointer-events: none; }
 .pin {
   position: absolute; left: 0; top: 0; width: 1.5rem; height: 1.5rem; margin: -.75rem 0 0 -.75rem; padding: 0;
-  border: 0; border-radius: 50%; background: none; cursor: pointer; pointer-events: auto;
+  border: 0; border-radius: 50%; background: none; cursor: pointer; pointer-events: none;
   opacity: var(--vis, 1); will-change: transform;
 }
-.pin.is-behind { pointer-events: none; visibility: hidden; }
+.pin.is-behind { visibility: hidden; }
 .pin:focus-visible { outline: 2px solid var(--blue); outline-offset: 0; }
 .pin-label {
   position: absolute; left: 50%; top: 50%; gap: .4em;
-  --dx: -50%; --dy: calc(-100% - 1.2rem); --s: .94;
+  --gap: max(1.2rem, var(--ring, 0px) + 5px);              /* clear of the dot, however large it is drawn */
+  --dx: -50%; --dy: calc(-100% - var(--gap)); --s: .94;
   transform: translate(var(--dx), var(--dy)) scale(var(--s));
   /* No box: plain lettering, kept legible over the dots by a soft halo in the page colour. */
   background: none; box-shadow: none; padding-left: 0; padding-right: 0; color: var(--ink-2);
@@ -64,9 +72,9 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
   transition: opacity var(--t) var(--ease), filter var(--t) var(--ease), transform var(--t-slow) var(--ease),
               color var(--t-fast) var(--ease);
 }
-.pin[data-place="bottom"] .pin-label { --dx: -50%; --dy: 1.2rem; }
-.pin[data-place="right"] .pin-label { --dx: 1.2rem; --dy: -50%; }
-.pin[data-place="left"] .pin-label { --dx: calc(-100% - 1.2rem); --dy: -50%; }
+.pin[data-place="bottom"] .pin-label { --dx: -50%; --dy: var(--gap); }
+.pin[data-place="right"] .pin-label { --dx: var(--gap); --dy: -50%; }
+.pin[data-place="left"] .pin-label { --dx: calc(-100% - var(--gap)); --dy: -50%; }
 .pin-label b { font-weight: 400; opacity: .75; }
 /* The stem points back at the marker from whichever side the label sits on. */
 .pin-label::after { content: ""; position: absolute; background: currentColor; opacity: .7; }
@@ -80,7 +88,8 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
 .pin.is-selected .pin-label::after, .pin.is-hover .pin-label::after { opacity: 1; }
 .pin.is-hover, .pin.is-selected { z-index: 3; }
 .pin::before {
-  content: ""; position: absolute; inset: .35rem; border-radius: 50%; border: 1.5px solid var(--blue);
+  /* The ring hugs the dot as COBE draws it (--ring: its radius plus 3px, set by app.js). */
+  content: ""; position: absolute; inset: calc(50% - var(--ring, .4rem)); border-radius: 50%; border: 1.5px solid var(--blue);
   opacity: 0; transform: scale(.4); transition: opacity var(--t-fast) var(--ease), transform var(--t) var(--ease);
 }
 .pin.is-hover::before, .pin.is-selected::before { opacity: 1; transform: scale(1); }
@@ -96,6 +105,8 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; }
 /* --- Panel ------------------------------------------------------------------------------------ */
 .panel { padding: clamp(1.25rem, 2.4vw, 2.75rem); min-width: 0; }
 .panel > * { animation: pop-in var(--t) var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+/* Only what is on screen pops in: blurs further down would cost frames while the globe is flying. */
+.panel > :nth-child(n + 9), .notes > .note:nth-child(n + 5) { animation: none; }
 .section { margin: 0 0 2.2rem; }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 .8rem; padding-bottom: .55rem; border-bottom: 1px solid var(--line); }
 .lede { margin: .3rem 0 1.4rem; color: var(--ink-2); max-width: 38rem; }
@@ -238,13 +249,15 @@ mark { background: color-mix(in oklab, var(--blue) 16%, transparent); color: inh
 .csearch-results { transition: opacity var(--t) var(--ease); }
 .csearch-results .empty { margin: .7rem 0 0; }
 
-.foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 2rem; padding: 1.1rem clamp(1rem, 2.4vw, 2.75rem); border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .7rem; color: var(--ink-2); }
-.foot-rm { font-family: var(--font-pixel); letter-spacing: .08em; }
+/* Footer: the box and its type only. Its row (RM mark, source credit, "Report a bug") is laid out by
+   ../shared/brand.css, which loads after this file. */
+.foot, .site-foot { padding: 1.1rem clamp(1rem, 2.4vw, 2.75rem); border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .7rem; color: var(--ink-2); background: var(--bg); }
 .noscript { padding: 2rem; }
 
 /* --- Smaller screens ------------------------------------------------------------------------- */
 @media (max-width: 1100px) {
   .sync { display: none; }
+  .stage-sync { display: inline-flex; }       /* no room in the header: the same line sits under the globe */
 }
 @media (max-width: 900px) {
   .top { flex-wrap: wrap; height: auto; padding-top: .6rem; padding-bottom: .6rem; row-gap: .6rem; }
@@ -296,11 +309,159 @@ canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height:
 .gone-reports summary { cursor: pointer; padding: .6rem 0; }
 .gone-reports .notes { margin-top: .6rem; }
 .history-link { display: inline-block; margin-top: .2rem; font-family: var(--font-mono); font-size: .74rem; }
-/* Footer RM mark */
-.foot-rm { display: inline-flex; align-items: center; gap: .5rem; }
-.foot-rm img { width: 1.4rem; height: auto; }
 /* Theme switch: no transitions for the one frame the colours change. */
 .theme-switching *, .theme-switching *::before, .theme-switching *::after { transition: none !important; }
 /* Clicking a country: the panel's top lands clear of the sticky header. */
 .panel { scroll-margin-top: 4.5rem; }
 @media (max-width: 900px) { .panel { scroll-margin-top: 8.5rem; } .check-btn { display: none; } }
+
+/* --- App shell (two columns: 901px and wider) ---------------------------------------------------
+   The page itself does not scroll. Header on top, footer always in view, the globe sized to the
+   space between them, and the panel its own scrolling column. Up to 900px (one column, above) the
+   page scrolls as a page with the footer at its end. */
+@media (min-width: 901px) {
+  body.dash { height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; grid-template-rows: auto minmax(0, 1fr) auto; }
+  .dash .top { position: relative; top: auto; background: var(--bg); backdrop-filter: none; }   /* nothing scrolls under it now */
+  .dash .layout { min-height: 0; grid-template-rows: minmax(0, 1fr); align-items: stretch; }
+  /* The stage is a size container, so the globe can be the largest square that fits it (cqw/cqh). */
+  .dash .stage { position: relative; top: auto; height: auto; min-height: 0; container-type: size; padding-top: 1rem; padding-bottom: 1rem; gap: .8rem; }
+  .dash .globe-wrap { flex: none; width: min(100cqw, 100cqh - 2.2rem); max-width: none; }
+  .dash .panel { min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; scroll-margin-top: 0; }
+  .dash .foot, .dash .site-foot { padding-top: .55rem; padding-bottom: .55rem; }
+  @container (max-width: 40rem) { .legend-hint { display: none; } }
+}
+@media (min-width: 901px) and (max-width: 1100px) { .dash .stage { gap: .5rem; } .dash .globe-wrap { width: min(100cqw, 100cqh - 3.6rem); } }   /* room for the status line */
+
+/* --- Search results ------------------------------------------------------------------------------ */
+.search-hint { margin: .5rem 0 1.4rem; padding: .7rem .9rem; border-left: 2px solid var(--blue); background: var(--blue-wash); font-size: .9rem; max-width: 44rem; }
+.no-titles { margin: .5rem 0 1.3rem; }
+.no-titles:has(~ #textHits .nomatch) { display: none; }       /* the "nothing matches" block says it all */
+.results-group > .empty { margin: 0 0 .5rem; }
+.hit.is-gone, .rhit.is-gone { color: var(--ink-2); }
+/* One topic that many countries have a report on: the topic once, then the countries, compactly. */
+.rgroup { padding: .75rem 0 .55rem; border-bottom: 1px solid var(--line); }
+.rgroup-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 .4rem; font-size: 1rem; font-weight: 560; line-height: 1.3; }
+.rgroup-topic::first-letter { text-transform: uppercase; }
+.rgroup-n { flex: none; font-family: var(--font-pixel); font-weight: 400; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.rgroup-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(15.5rem, 1fr)); column-gap: 1.6rem; }
+.rgroup-list--wide { grid-template-columns: minmax(0, 1fr); }      /* a row has a long note: one report per line */
+.rgroup-list--wide .rhit-name { white-space: normal; line-height: 1.3; }   /* and room to say it (a phone has no tooltip) */
+.rhit {
+  display: flex; align-items: center; gap: .55rem; width: 100%; min-width: 0; padding: .36rem .1rem; border: 0; background: none;
+  color: var(--ink); font: inherit; font-size: .9rem; text-align: left; cursor: pointer;
+  transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease);
+}
+.rhit:hover, .rhit:focus-visible { color: var(--blue); padding-left: .4rem; }
+.rhit-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }   /* the full title is the row's tooltip */
+.rhit-q { font-style: normal; font-size: .82rem; color: var(--ink-2); }      /* how this report's title differs from the heading */
+.rhit-when { flex: none; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); white-space: nowrap; }
+.rhit[hidden], .rgroup-all[hidden] { display: none; }
+.rhit.is-new { animation: pop-in var(--t) var(--ease) both; }
+.rgroup-all {
+  display: inline-flex; margin: .3rem 0 .1rem; padding: .2rem 0; border: 0; background: none; cursor: pointer;
+  font-family: var(--font-pixel); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+  transition: color var(--t-fast) var(--ease);
+}
+.rgroup-all:hover, .rgroup-all:focus-visible { color: var(--blue); text-decoration: underline; text-underline-offset: .35em; }
+button.all-results { text-align: left; }
+/* Nothing at all: say so, and offer ways on. */
+.nomatch { padding: 1.3rem 1.2rem 1.2rem; border: 1px solid var(--line); background: var(--sunken); max-width: 46rem; animation: pop-in var(--t) var(--ease) both; }
+.nomatch h2 { margin: .8rem 0 .4rem; font-size: 1.1rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.nomatch p { margin: 0 0 .9rem; color: var(--ink-2); font-size: .92rem; }
+.nomatch p .btn { margin: 0 .5rem .3rem 0; }
+.examples { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0 0 1rem; }
+.examples .eyebrow { margin-right: .2rem; }
+.examples .tag { border: 0; cursor: pointer; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease); }
+.examples .tag:hover, .examples .tag:focus-visible { background: var(--blue); color: var(--blue-ink); }
+/* The country's own box: its results sit under it in the same style. */
+.csearch-results .results-group { margin: 1rem 0 .3rem; }
+.csearch-results .all-results { margin-bottom: .2rem; }
+/* A report reached from a search result: its card is marked for a moment. */
+.note.is-target { animation: target-flash 1.8s var(--ease) both; }
+@keyframes target-flash {
+  0%, 30% { border-color: var(--blue); background: var(--blue-wash); box-shadow: 0 0 0 3px var(--blue-wash); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* --- Passages view: every passage for a search, by report, with filters ---------------------------- */
+.psummary { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .7rem; min-height: 1.7rem; margin: .5rem 0 0; font-family: var(--font-pixel); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.psummary i { font-style: normal; }
+.psummary b { font-weight: 400; font-size: 1.3rem; color: var(--blue); letter-spacing: .02em; margin-right: .2rem; }
+.hero-title { overflow-wrap: anywhere; }
+.pfilters { position: relative; z-index: 4; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 1rem 0 1.2rem; }
+.pmenu { position: relative; }
+.pmenu-btn { list-style: none; min-height: 2.1rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; user-select: none; }
+.pmenu-btn::-webkit-details-marker { display: none; }
+.pmenu-btn::after { content: "▾"; font-family: var(--font-mono); transition: transform var(--t) var(--ease); }
+.pmenu[open] .pmenu-btn::after { transform: rotate(180deg); }
+.pmenu[open] .pmenu-btn, .pmenu.is-on .pmenu-btn { border-color: var(--blue); color: var(--blue); }
+.pmenu-n:not(:empty) { padding: .15em .4em; background: var(--blue); color: var(--blue-ink); }
+.pmenu-pop {
+  position: absolute; left: 0; top: calc(100% + .35rem); z-index: 6; display: flex; flex-direction: column;
+  width: min(21rem, calc(100vw - 2.5rem)); max-height: min(24rem, 58vh); padding: .5rem .8rem .6rem;
+  background: var(--surface); border: 1px solid var(--blue); animation: pop-in var(--t) var(--ease) both;
+}
+.pmenu-list { list-style: none; margin: 0; padding: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.pmenu-find { display: block; margin: .2rem 0 .4rem; }
+.pmenu-find input {
+  width: 100%; height: 2.1rem; padding: 0 .6rem; border: 1px solid var(--line-strong); border-radius: 0; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: .84rem; outline: 0; transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+.pmenu-find input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); }
+.pmenu-find input::-webkit-search-cancel-button { display: none; }
+.opt {
+  position: relative; display: flex; align-items: center; gap: .55rem; padding: .42rem .1rem; border-bottom: 1px solid var(--line);
+  font-size: .88rem; cursor: pointer; transition: color var(--t-fast) var(--ease), opacity var(--t) var(--ease), padding var(--t) var(--ease);
+}
+li:last-child > .opt { border-bottom: 0; }
+.opt:hover { color: var(--blue); padding-left: .3rem; }
+.opt input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.opt-box { flex: none; position: relative; width: .85rem; height: .85rem; border: 1.5px solid var(--line-strong); background: var(--bg); transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease); }
+.opt-box::after { content: ""; position: absolute; inset: 2px; background: var(--blue-ink); transform: scale(0); transition: transform var(--t) var(--ease); }
+.opt input:checked + .opt-box { background: var(--blue); border-color: var(--blue); }
+.opt input:checked + .opt-box::after { transform: scale(1); clip-path: polygon(14% 52%, 0 68%, 38% 100%, 100% 22%, 86% 8%, 38% 70%); }
+.opt input:focus-visible + .opt-box { outline: 2px solid var(--blue); outline-offset: 2px; }
+.opt input:checked ~ .opt-name { color: var(--blue); }
+.opt-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.opt-count { font-size: .74rem; color: var(--ink-2); }
+.opt.is-zero { opacity: .42; }
+.pchips { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; }
+.pchip { border: 0; cursor: pointer; transition: filter var(--t-fast) var(--ease); }
+.pchip span { margin-left: .2em; opacity: .8; }
+.pchip:hover { filter: brightness(1.12); }
+.pclear { border: 0; padding: 0; background: none; cursor: pointer; color: var(--blue); font-family: var(--font-pixel); font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+.pclear:hover { text-decoration: underline; text-underline-offset: .35em; }
+.presults { min-width: 0; transition: opacity var(--t) var(--ease); }
+.presults.is-busy { opacity: .5; }
+.plist { display: grid; gap: .9rem; }
+.pnote {
+  padding: 1rem 1.1rem .5rem; border: 1px solid var(--line); background: var(--surface); min-width: 0;
+  transition: border-color var(--t-fast) var(--ease);
+  animation: pop-in var(--t) var(--ease) both; animation-delay: calc(min(var(--i, 0), 6) * 40ms);
+}
+.pnote:hover, .pnote:focus-within { border-color: var(--blue); }
+.pnote-top { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; }
+.pnote-kind, .pnote-when { font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+.pnote-title { margin: .55rem 0 .35rem; font-size: 1.08rem; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; }
+.pnote-title a { color: var(--ink); }
+.pnote-title a::first-letter { text-transform: uppercase; }
+.pnote-title a:hover, .pnote-title a:focus-visible { color: var(--blue); text-decoration: none; }
+.phits { list-style: none; margin: 0; padding: 0; }
+.phit {
+  display: grid; gap: .25rem; padding: .7rem .1rem .75rem; border-top: 1px solid var(--line); color: var(--ink);
+  transition: background var(--t-fast) var(--ease), padding var(--t) var(--ease);
+}
+.phit:hover, .phit:focus-visible { text-decoration: none; background: var(--blue-wash); padding-left: .55rem; padding-right: .35rem; }
+.phit:focus-visible { outline-offset: -2px; }
+.phit-section { font-family: var(--font-mono); font-size: .74rem; color: var(--blue); }
+.phit-excerpt { font-size: .92rem; line-height: 1.6; color: var(--ink-2); }
+.phit-excerpt mark { background: color-mix(in oklab, var(--blue) 15%, transparent); color: var(--ink); box-shadow: inset 0 -1px 0 var(--blue-line); padding: 0 .05em; }
+.phits li.is-new { animation: pop-in var(--t) var(--ease) both; }
+.pmore-in {
+  display: block; width: 100%; margin: 0; padding: .65rem .1rem .55rem; border: 0; border-top: 1px solid var(--line); background: none; text-align: left; cursor: pointer;
+  font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue);
+}
+.pmore-in:hover { text-decoration: underline; text-underline-offset: .35em; }
+.pfoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; margin-top: 1.4rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+.pfoot[hidden] { display: none; }
+.pshowing { font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }

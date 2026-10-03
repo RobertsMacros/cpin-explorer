@@ -3,6 +3,11 @@
 // and GOV.UK update on a timeline (drag, step or Play), each captioned with what changed; and the same
 // reading area can show a redline between the edition shown and the one before (or any two).
 //
+// The head is one quiet block (flag, title, one line about the edition shown; "Verbatim" and "Sources" open
+// small panels) and everything above the text has a fixed height, so changing edition moves nothing.
+// An edition that keeps under a quarter of the earlier wording is a rewrite (REWRITE_THRESHOLD): the caption
+// says so, and Show changes offers the two editions side by side, unmarked, before a redline.
+//
 //   index.html?country=<slug>&series=<key>                         the latest edition, clean
 //     &edition=<id>                                               an earlier edition (time travel)
 //     &changes=1[&from=<id>][&view=sbs]                           the redline, in place
@@ -16,17 +21,18 @@
 import { hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
-  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, quoteWithCitation, STYLE_NAMES,
+  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, quoteWithCitation, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, STYLES,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
 import { analyseBody, describePassage, parseBody } from "../shared/note-source.js";
 import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
 import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
 import {
-  buildTimeline, captionSource, computedSummary, dwellFor, editionForStop, findParaRefs, leadingNumber, reportUrl,
-  resolveParaRef, seriesPath, versionsNotHeld,
+  alignHeadings, buildTimeline, captionSource, computedSummary, dwellFor, editionForStop, editionsBetweenNotHeld, findParaRefs, headingKey,
+  increasing, isRewrite, keptPercent, leadingNumber, mapThrough, phrasesOf, phrasesShared, reportUrl, resolveParaRef, seriesPath, versionsNotHeld,
 } from "../shared/report-history.js";
 import { DateRoller, HistorySlider, NumberRoller } from "../shared/timeline.js";
+import { ukDate, ukParts, ukTime } from "../shared/uk-time.js";
 import { RedlineEngine } from "../shared/redline-engine.js";
 import { DocPositioner, Minimap } from "../shared/minimap.js";
 
@@ -46,13 +52,20 @@ const narrow = matchMedia("(max-width: 899px)");
 const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const MON = MONTHS.map((m) => m.slice(0, 3));
 const asT = (x) => (typeof x === "number" ? x : Date.parse(x));
-const fmtDate = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${d.getUTCDate()} ${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
-const fmtLong = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
-const fmtMonth = (x) => { const d = new Date(asT(x)); return Number.isNaN(+d) ? "" : `${MON[d.getUTCMonth()]} ${d.getUTCFullYear()}`; };
-const fmtDateTime = (iso) => (iso ? `${fmtDate(iso)} · ${new Date(iso).toISOString().slice(11, 16)} UTC` : "");
+// Dates are UK dates (../shared/uk-time.js), like the times of day and like GOV.UK itself: an edition
+// published at 00:30 BST belongs to that day, not the day before (which is what UTC would say).
+const fmtDate = (x) => { const d = ukParts(asT(x)); return d ? `${d.day} ${MON[d.month]} ${d.year}` : ""; };
+const fmtLong = (x) => { const d = ukParts(asT(x)); return d ? `${d.day} ${MONTHS[d.month]} ${d.year}` : ""; };
+const fmtMonth = (x) => { const d = ukParts(asT(x)); return d ? `${MON[d.month]} ${d.year}` : ""; };
+/** A date with its time of day, on the site's one clock (UK time, BST or GMT): "2 Oct 2026 · 17:11 BST". */
+const fmtDateTime = (iso) => {
+  if (!iso) return "";
+  const [d, m, y] = ukDate(iso).split(" ");
+  return y ? `${+d} ${m[0]}${m.slice(1).toLowerCase()} ${y} · ${ukTime(iso)}` : "";
+};
 const fmtN = (n) => Number(n || 0).toLocaleString("en-GB");
 const stopDate = (s) => (s.prec === "month" ? fmtMonth(s.t) : fmtDate(s.t));
-const stopDateLong = (s) => (s.prec === "month" ? `${MONTHS[new Date(s.t).getUTCMonth()]} ${new Date(s.t).getUTCFullYear()}` : fmtLong(s.t));
+const stopDateLong = (s) => { const d = ukParts(s.t); return s.prec === "month" ? (d ? `${MONTHS[d.month]} ${d.year}` : "") : fmtLong(s.t); };
 const vLabel = (e) => (e?.version ? `v${e.version}` : "edition");
 const truncate = (s, n) => (s.length > n ? `${s.slice(0, n - 1).replace(/\s+\S*$/, "")}…` : s);
 const idle = (fn, timeout = 400) => (window.requestIdleCallback ? requestIdleCallback(fn, { timeout }) : setTimeout(fn, 60));
@@ -66,8 +79,11 @@ const ICON = {
 
 const STYLE_KEY = "cpin-cite-style";
 let citeStyle = (() => { try { return localStorage.getItem(STYLE_KEY) === "tribunal" ? "tribunal" : "oscola"; } catch { return "oscola"; } })();
-const segHtml = () => `<div class="seg" role="radiogroup" aria-label="Citation style" data-value="${citeStyle}"><span class="seg-thumb" aria-hidden="true"></span>${
-  ["oscola", "tribunal"].map((s) => `<button type="button" role="radio" data-style="${s}" aria-checked="${citeStyle === s}">${STYLE_NAMES[s]}</button>`).join("")}</div>`;
+/** The style switch: "Full (OSCOLA)" | "Short (tribunal)", each with a tooltip saying what it produces; with
+ *  hint, a line under it says the same for the style chosen. */
+const segHtml = ({ hint = false } = {}) => `<div class="seg" role="radiogroup" aria-label="Citation style" data-value="${citeStyle}"><span class="seg-thumb" aria-hidden="true"></span>${
+  STYLES.map((s) => `<button type="button" role="radio" data-style="${s}" aria-checked="${citeStyle === s}" title="${esc(STYLE_HINTS[s])}">${esc(STYLE_LABELS[s])}</button>`).join("")}</div>${
+  hint ? `<p class="seg-hint" data-style-hint>${esc(STYLE_HINTS[citeStyle])}</p>` : ""}`;
 function setStyle(style, { persist = true } = {}) {
   if (style !== "oscola" && style !== "tribunal") return;
   citeStyle = style;
@@ -76,6 +92,7 @@ function setStyle(style, { persist = true } = {}) {
     seg.dataset.value = style;
     seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.style === style)));
   });
+  document.querySelectorAll("[data-style-hint]").forEach((p) => { p.textContent = STYLE_HINTS[style]; });
   if (popState?.kind === "hl") renderPopCitation();
 }
 document.addEventListener("click", (e) => { const b = e.target.closest(".seg button[data-style]"); if (b) setStyle(b.dataset.style); });
@@ -90,6 +107,8 @@ const S = {
   C: null,                                     // the clean edition: { e, root, A, ix, text, fresh }
   V: null,                                     // what #doc shows: { kind, root, ix, sections, targets }
   redline: null,                               // { a, b, res } painted
+  rewrite: null,                               // the pair shown is a rewrite: { a, b, sim, view: notice | pair | redline }
+  sources: null,                               // link counts of the edition shown, for the Sources chip
   marks: new Map(), checks: new Map(), pending: null, lastCopy: null, ready: false,
   linkMap: null, links: null, fullSha: new Map(), sums: [], sizes: [],
   playing: false, cur: -1, hunks: new Map(),
@@ -102,7 +121,8 @@ let minimap = null, minimapRoot = null;               // the strip beside the te
 
 // Offsets into the text of the body as published, so a highlight can be stored as plain text positions
 // and found again however the DOM is split up by marks. Tags added for display (link status) are skipped.
-const SKIP_UI = (el) => el.classList.contains("linkstatus") || el.classList.contains("lc") || el.classList.contains("badge");
+const SKIP_UI = (el) => el.classList.contains("linkstatus") || el.classList.contains("lc") || el.classList.contains("badge")
+  || ((el.classList.contains("pv-pane") || el.classList.contains("sbs-cell")) && !!el.closest(".pv") && getComputedStyle(el).display === "none");   // phones: the edition not on screen
 function textWalker(root) {
   return document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT, {
     acceptNode: (n) => (n.nodeType === Node.TEXT_NODE ? NodeFilter.FILTER_ACCEPT : SKIP_UI(n) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_SKIP),
@@ -277,51 +297,129 @@ function renderHead() {
   const c = S.country, s = S.series;
   const topic = capFirst(s.topic || S.report?.topic || s.key);
   document.title = `${topic} · ${c.name} · CPIN Explorer`;
-  $("#brand").href = `../dashboard/index.html#${encodeURIComponent(c.slug)}`;
-  const status = gone()
-    ? `<p class="notice notice--gone"><span class="tag">${s.status === "removed" ? "Removed" : "Archived"}</span><span><strong>No longer on GOV.UK.</strong>
-        The Home Office has withdrawn this report. Every edition below is the text as it was published, from copies held here or captured by the Internet Archive; none of it is current guidance.</span></p>`
-    : `<p class="notice"><span class="tag tag--outline">Verbatim</span><span>Text is verbatim from GOV.UK as at the last check${S.data?.last_sync ? ` (${esc(fmtDateTime(S.data.last_sync))})` : ""}.
-        Select any passage to save it with a citation to the edition shown.</span></p>`;
+  const back = `../dashboard/index.html#${encodeURIComponent(c.slug)}`;
+  $("#brand").href = back;
+  // One quiet block: where it is from, what it is, and one line about the edition shown. The rest is on demand:
+  // "Verbatim" says exactly where the words come from; "Sources" opens the link check for this edition.
   $("#head").innerHTML = `
-    <a class="btn back" href="../dashboard/index.html#${esc(c.slug)}" style="--i:0">← ${esc(c.name)}</a>
-    <div class="mh-row" style="--i:1">
+    <div class="mh-row" style="--i:0">
       ${c.iso_a2 ? `<canvas class="dotflag dotflag--hero" data-flag="${esc(c.iso_a2)}" data-cols="24" data-reveal data-interactive aria-hidden="true"></canvas>` : ""}
-      <div class="mh-id"><p class="eyebrow">${esc(c.name)} · ${esc(s.kind || "Report")}</p>
+      <div class="mh-id">
+        <p class="eyebrow mh-eyebrow"><a class="mh-back" href="${esc(back)}" title="Back to ${esc(c.name)}: all its reports"><span aria-hidden="true">←</span> ${esc(c.name)}</a><span class="mh-kind">${esc(s.kind || "Report")}</span></p>
         <h1 class="report-title">${esc(topic)}</h1>
-        <p class="note-verbatim" id="verbatim" title="Title as published on GOV.UK"></p>
-        <p class="meta-line" id="metaLine"></p>
-        <p class="sources-line" id="sourcesLine" hidden></p></div>
-      <div class="mh-cta"><button class="btn btn--primary latest-btn" id="latestBtn" type="button">${gone() ? "Read the last edition" : "Read the latest guidance"}</button></div>
-    </div>
-    <div class="mh-notice" style="--i:2">${status}</div>`;
-  $("#latestBtn").addEventListener("click", () => readLatest());
+        <div class="mh-meta">
+          <p class="meta-line" id="metaLine"></p>
+          <div class="mh-chips">
+            <button type="button" class="chip" id="sourcesChip" data-hpop="sources" aria-expanded="false" aria-controls="hpop" hidden></button>
+            <button type="button" class="chip" id="verbatimChip" data-hpop="verbatim" aria-expanded="false" aria-controls="hpop">Verbatim</button>
+            <div class="hpop" id="hpop" role="dialog" aria-label="About the edition shown" hidden></div>
+          </div>
+        </div>
+      </div>
+    </div>${gone() ? `
+    <p class="notice notice--gone" style="--i:1"><span class="tag">${s.status === "removed" ? "Removed" : "Archived"}</span><span><strong>No longer on GOV.UK.</strong>
+      The Home Office has withdrawn this report. Every edition here is the text as it was published; none of it is current guidance.</span></p>` : ""}`;
   Promise.all([document.fonts?.ready, ready]).then(() => idle(() => hydrateFlags($("#head")), 300));
 }
 
-/** The parts of the head that follow the edition shown. */
+/** The title an edition was published under (verbatim), for the Verbatim panel. */
+function publishedTitle(v) {
+  return v.title && !/^[a-z0-9-]+$/.test(v.title) ? v.title : (S.country.notes?.find((n) => n.id === v.note)?.title || v.title || "");
+}
+/**
+ * Exactly where the words of an edition come from: GOV.UK as at the last check (the live edition), the
+ * Internet Archive's copy (an archived edition), or the copy taken here before GOV.UK replaced it.
+ * short is one line (the chip's tooltip); html the panel's first paragraph.
+ */
+function verbatimInfo(E) {
+  const v = E.v, cap = capturedAt(v);
+  const ia = v.archive_url ? `<a href="${esc(v.archive_url)}" target="_blank" rel="noopener">Internet Archive copy${cap ? ` captured ${esc(fmtDate(cap))}` : ""} ↗</a>` : "";
+  if (v.source === "wayback") {
+    return { short: `Verbatim: the Internet Archive copy${cap ? ` captured ${fmtDate(cap)}` : ""}`,
+      html: `The words below are the ${ia || "Internet Archive copy"} of this edition, exactly as GOV.UK published it then. It is no longer on GOV.UK.` };
+  }
+  if (v.current && !gone()) {
+    const at = S.data?.last_sync ? fmtDateTime(S.data.last_sync) : "";
+    return { short: `Verbatim from GOV.UK as at the last check${at ? ` (${at})` : ""}`,
+      html: `The words below are exactly as published on ${v.govuk_url ? `<a href="${esc(v.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : "GOV.UK"}, as at the last check${at ? ` (<b>${esc(at)}</b>)` : ""}.` };
+  }
+  const seen = v.first_seen ? fmtDate(v.first_seen) : "";
+  return { short: `Verbatim from GOV.UK${seen ? `, copied ${seen}` : ""}; since ${gone() ? "withdrawn" : "replaced"}`,
+    html: `The words below are exactly as GOV.UK published this edition, from the copy taken here${seen ? ` on <b>${esc(seen)}</b>` : ""}.
+      GOV.UK has since ${gone() ? "withdrawn the report" : "replaced it with a newer edition"}.${ia ? ` An ${ia} holds the same edition.` : ""}` };
+}
+
+/** The parts of the head that follow the edition shown. One line, so nothing below it moves. */
 function updateHead() {
   const e = shownEdition(), E = S.E[e], v = E.v;
   const src = editionSource(E);
   const pdf = isLatest(e) ? (S.report?.latest?.pdf_url || S.country.notes?.find((n) => n.id === v.note)?.pdf_url) : null;
   const published = v.published ? `${v.published_precision === "month" ? fmtMonth(v.published) : fmtDate(v.published)}` : "";
+  // .m-l parts drop out on phones ("v2.0 · 19 Nov 2025 · GOV.UK ↗ · PDF ↗"), so the line still fits on one line.
   const meta = [
-    `<span>Version <b>${esc(E.version || "—")}</b></span>`,
-    published ? `<span>Published ${esc(published)}</span>` : "",
-    src.archived ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">Archived copy${src.capturedAt ? ` · ${esc(fmtDate(src.capturedAt))}` : ""} ↗</a>`
+    E.version ? `<span><span class="m-l">Version </span><span class="m-s">v</span><b>${esc(E.version)}</b></span>` : "",
+    published ? `<span><span class="m-l">Published </span>${esc(published)}</span>` : "",
+    src.archived ? `<a href="${esc(src.url)}" target="_blank" rel="noopener" title="The Internet Archive's copy of this edition${src.capturedAt ? `, captured ${esc(fmtDate(src.capturedAt))}` : ""}">Archived copy${src.capturedAt ? `<span class="m-l">, ${esc(fmtDate(src.capturedAt))}</span>` : ""} ↗</a>`
       : src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : "",
     pdf ? `<a href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : "",
   ].filter(Boolean).join("");
-  const line = $("#metaLine"), verb = $("#verbatim");
+  const line = $("#metaLine");
   if (line.innerHTML !== meta) { line.innerHTML = meta; swapIn(line); }
-  const title = v.title && !/^[a-z0-9-]+$/.test(v.title) ? v.title : (S.country.notes?.find((n) => n.id === v.note)?.title || v.title || "");
-  if (verb.textContent !== title) { verb.textContent = title; swapIn(verb); }
-  const home = S.mode === "read" && isLatest(e) && S.slider?.b === stopOf(S.tl.latest);
-  const btn = $("#latestBtn");
-  btn.classList.toggle("is-here", home);
-  btn.setAttribute("aria-disabled", String(home));
-  btn.title = home ? `You are reading the ${gone() ? "last edition" : "latest guidance"}` : "Back to the latest edition, without changes marked";
+  // Cut short (a narrow window)? Then the whole line is its tooltip.
+  line.title = line.scrollWidth > line.clientWidth + 1
+    ? [E.version ? `Version ${E.version}` : "", published ? `Published ${published}` : "", src.archived ? `Archived copy${src.capturedAt ? `, ${fmtDate(src.capturedAt)}` : ""}` : src.url ? "GOV.UK" : "", pdf ? "PDF" : ""].filter(Boolean).join(" · ")
+    : "";
+  $("#verbatimChip").title = verbatimInfo(E).short;
+  showSourcesChip();
+  if (hpopKind) renderHeadPop();
 }
+
+/* ---- the head's two panels: Verbatim and Sources ----------------------------------------------- */
+let hpopKind = "";
+function renderHeadPop() {
+  const box = $("#hpop");
+  if (!box || !hpopKind) return;
+  let html;
+  if (hpopKind === "verbatim") {
+    const E = S.E[shownEdition()], info = verbatimInfo(E), title = publishedTitle(E.v);
+    html = `<p class="hpop-head"><span class="tag tag--outline">Verbatim</span><span>${esc(vLabel(E))} · ${esc(stopDate(E))}</span></p>
+      <p>${info.html} Nothing is reworded: only the layout is ours.</p>
+      ${title ? `<p class="hpop-kv"><span class="eyebrow">Published as</span><span>${esc(title)}</span></p>` : ""}
+      <p class="hpop-note">Select any passage to save it with a citation to this edition.</p>`;
+  } else {
+    const r = S.sources;
+    if (!r) return closeHeadPop();
+    const checked = r.counts.total - r.counts.unchecked;
+    const bits = (checked ? summaryLine(r) : `${fmtN(r.counts.total)} links · not checked yet`).split(" · ");
+    html = `<p class="hpop-head"><span class="tag tag--outline">Sources</span><span>Links cited in ${esc(vLabel(S.E[S.C?.e ?? shownEdition()]))}</span></p>
+      <ul class="hpop-counts">${bits.map((b) => `<li${/dead/.test(b) ? ' class="is-dead"' : ""}>${esc(b)}</li>`).join("")}</ul>
+      <p class="hpop-note">Each link was checked automatically. Dead and moved links are tagged where they appear in the text, with an archived copy where the Internet Archive has one.</p>
+      ${r.dead.length && S.V?.kind === "clean" ? `<p><button class="btn" type="button" data-act="next-dead">Next dead link ↓</button></p>` : ""}`;
+  }
+  if (box.innerHTML !== html) box.innerHTML = html;
+}
+function openHeadPop(kind) {
+  const box = $("#hpop");
+  hpopKind = kind;
+  renderHeadPop();
+  if (!hpopKind) return;
+  document.querySelectorAll(".chip[data-hpop]").forEach((c) => c.setAttribute("aria-expanded", String(c.dataset.hpop === kind)));
+  box.hidden = false;
+  box.classList.remove("is-in"); void box.offsetWidth; box.classList.add("is-in");
+}
+function closeHeadPop() {
+  if (!hpopKind) return false;
+  hpopKind = "";
+  document.querySelectorAll(".chip[data-hpop]").forEach((c) => c.setAttribute("aria-expanded", "false"));
+  const box = $("#hpop");
+  if (box) box.hidden = true;
+  return true;
+}
+document.addEventListener("click", (e) => {
+  const chip = e.target.closest(".chip[data-hpop]");
+  if (chip) { if (hpopKind === chip.dataset.hpop) closeHeadPop(); else openHeadPop(chip.dataset.hpop); return; }
+  if (hpopKind && !e.target.closest("#hpop")) closeHeadPop();
+});
 function swapIn(el) {
   if (reduced.matches || !S.ready) return;
   el.animate([{ opacity: 0, filter: "blur(3px)" }, { opacity: 1, filter: "blur(0)" }], { duration: 260, easing: "cubic-bezier(.2,.8,.2,1)" });
@@ -367,7 +465,27 @@ function buildHistory(e) {
   $("#playBtn").addEventListener("click", () => play());
   $("#histToggle").addEventListener("click", () => setHistoryOpen(document.documentElement.classList.contains("hist-closed")));
   setHistoryOpen(!document.documentElement.classList.contains("hist-closed"), { instant: true });
-  $("#clog").addEventListener("click", (ev) => { const li = ev.target.closest("li[data-k]"); if (li && !li.classList.contains("is-off")) pickStop(+li.dataset.k); });
+  // "All editions": the full list, on demand (the timeline, the caption and Play already tell the story).
+  $("#clogWrap").hidden = tl.stops.length < 2;
+  $("#clogBtn").addEventListener("click", () => setClogOpen($("#clogPanel").hidden));
+  $("#clog").addEventListener("click", (ev) => {
+    const li = ev.target.closest("li[data-k]");
+    if (!li || li.classList.contains("is-off")) return;
+    setClogOpen(false);
+    pickStop(+li.dataset.k);
+  });
+  document.addEventListener("click", (ev) => { if (!$("#clogPanel").hidden && !ev.target.closest("#clogWrap")) setClogOpen(false); });
+  $("#wc").addEventListener("click", (ev) => { if (ev.target.closest(".wc-more")) setCaptionOpen(!$("#wc").classList.contains("is-open")); });
+}
+function setClogOpen(open) {
+  const panel = $("#clogPanel"), btn = $("#clogBtn");
+  if (panel.hidden === !open) return;
+  panel.hidden = !open;
+  btn.setAttribute("aria-expanded", String(open));
+  if (!open) return;
+  panel.classList.remove("is-in"); void panel.offsetWidth; panel.classList.add("is-in");
+  const list = $("#clog"), item = list.querySelector("li.is-new");
+  if (item) list.scrollTop = Math.max(0, item.offsetTop - (list.clientHeight - item.offsetHeight) / 2);
 }
 
 function setHistoryOpen(open, { instant = false } = {}) {
@@ -376,7 +494,9 @@ function setHistoryOpen(open, { instant = false } = {}) {
   if (instant) { root.classList.add("hist-instant"); requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove("hist-instant"))); }
   $("#histToggle").setAttribute("aria-expanded", String(open));
   $("#histToggle .lbl").textContent = open ? "Hide" : "Show";
+  $("#histToggle").title = open ? "Hide the history" : "Show the history";
   $("#histBody").inert = !open;
+  if (!open) setClogOpen(false);
   try { localStorage.setItem("cpin-history-open", open ? "1" : "0"); } catch {}
   if (open) requestAnimationFrame(() => slider?.cull());
 }
@@ -446,22 +566,42 @@ function linkRefs(root) {
     t.replaceWith(frag);
   }
 }
+/** "the earlier wording" phrased for an edition: its rewrite line, or "" when it is not a rewrite. */
+function rewriteLine(i) {
+  const sim = S.E[i]?.v.similarity_to_previous;
+  if (i < 1 || !isRewrite(sim)) return "";
+  const missing = versionsNotHeld(S.E[i - 1].version ?? undefined, S.E[i].version).replace(/ not held$/, "");
+  return `Rewritten · ${keptPercent(sim)} of the earlier wording kept${editionsBetweenNotHeld(S.tl, i) ? ` · editions in between not held${missing ? ` (${missing})` : ""}` : ""}`;
+}
+/** The computed line under a caption: short, and secondary. { html, title (the fuller version, on hover), tag, pending } */
 function computedHtml(stop) {
   if (stop.kind === "update") {
     const held = stop.inForce == null ? S.E[0] : S.E[stop.inForce];
-    return { html: stop.inForce == null
-      ? `This edition is not held, so its text cannot be shown. The earliest edition held is ${esc(vLabel(held))} (${esc(stopDate(held))}).`
-      : `No new edition of this report is held from this update; ${esc(vLabel(held))} (${esc(stopDate(held))}) is shown.`, tag: "Not held" };
+    const shown = `${vLabel(held)} (${stopDate(held)})`;
+    return stop.inForce == null
+      ? { tag: "Not held", html: `The earliest edition held, ${esc(shown)}, is shown.`, title: "The edition from this update is not held, so its text cannot be shown." }
+      : { tag: "Not held", html: `${esc(shown)} is shown.`, title: "No new edition of this report is held from this update; the edition then in force is shown." };
   }
   const i = stop.i;
-  if (i === 0) return { html: S.E.length > 1 ? "Earliest edition held: there is no earlier edition here to compare it with." : "The only edition held: there is no earlier edition here to compare it with." };
+  if (i === 0) return { html: S.E.length > 1 ? "Earliest edition held." : "The only edition held.", title: "There is no earlier edition here to compare it with." };
   const c = computedSummary(S.sums[i]);
   const prev = vLabel(S.E[i - 1]);
+  const rw = rewriteLine(i);
+  const words = c?.changes ? `<span class="ni">+${fmtN(c.ins)}</span> <span class="nd">−${fmtN(c.del)}</span> words` : "";
+  if (rw) {
+    return { html: `<b class="rw">${esc(rw.slice(0, 9))}</b>${esc(rw.slice(9))}${words ? ` · ${words}` : ""}`, pending: !c,
+      title: `Computed from the two texts: five-word phrases that ${vLabel(stop)} shares with ${prev}.` };
+  }
   if (!c) return { html: `Comparing with ${esc(prev)}…`, pending: true };
-  if (!c.changes) return { html: `No text changes found against ${esc(prev)}.` };
-  const parts = c.secs.map((t, k) => `<a href="#" class="ref" data-sec="${esc(t.id || "")}" data-sec-text="${esc(t.text)}" title="Go to this section">${esc(truncate(t.text, 52))}</a> (${t.count}${k ? "" : t.count === 1 ? " change" : " changes"})`);
-  const notes = c.noteChanges ? `${fmtN(c.noteChanges)} footnote ${c.noteChanges === 1 ? "change" : "changes"} · ` : "";
-  return { html: `${parts.length ? `Most changed: ${parts.join(", ")} · ` : ""}${notes}<span class="ni">+${fmtN(c.ins)}</span> <span class="nd">−${fmtN(c.del)}</span> words <span class="wc-note">vs ${esc(prev)}</span>` };
+  if (!c.changes) return { html: `No text changes from ${esc(prev)}.` };
+  const top = c.secs[0];
+  const detail = [
+    c.secs.length ? `Most changed: ${c.secs.map((t) => `${t.text} (${t.count})`).join(", ")}` : "",
+    c.noteChanges ? `${fmtN(c.noteChanges)} footnote ${c.noteChanges === 1 ? "change" : "changes"}` : "",
+    `+${fmtN(c.ins)} −${fmtN(c.del)} words compared with ${prev}`,
+  ].filter(Boolean).join(" · ");
+  return { title: detail, html: `${words} <span class="wc-note">vs ${esc(prev)}</span>${top
+    ? ` · most changed: <a href="#" class="ref" data-sec="${esc(top.id || "")}" data-sec-text="${esc(top.text)}" title="Go to this section">${esc(truncate(top.text, 52))}</a>` : ""}` };
 }
 function captionNode(stop, calc = computedHtml(stop)) {
   const wrap = document.createElement("div");
@@ -469,20 +609,45 @@ function captionNode(stop, calc = computedHtml(stop)) {
   const meta = document.createElement("p");
   meta.className = "wc-meta";
   if (stop.kind === "edition") {
-    const src = captionSource(stop), gap = versionsNotHeld(S.E[stop.i - 1]?.version ?? undefined, stop.version);
-    meta.innerHTML = `<span class="tag">What changed</span><span>in <b>${esc(vLabel(stop))}</b> · ${esc(stopDate(stop))}</span>${
+    const src = captionSource(stop);
+    const gap = rewriteLine(stop.i) ? "" : versionsNotHeld(S.E[stop.i - 1]?.version ?? undefined, stop.version);
+    meta.innerHTML = `<span class="tag">What changed</span><span>in <b>${esc(stop.version ? vLabel(stop) : "this edition")}</b></span>${
       src ? `<span class="tag tag--outline" title="${esc(src.kind === "home-office" ? "Verbatim from the note: “Changes from last version of this note”" : "Verbatim GOV.UK change note")}">${esc(src.label)}</span>` : ""}${
-      stop.v.source === "wayback" ? `<span class="wc-note">archived copy${capturedAt(stop.v) ? `, captured ${esc(fmtDate(capturedAt(stop.v)))}` : ""}</span>` : ""}${
       gap ? `<span class="wc-note">${esc(gap)}</span>` : ""}`;
   } else {
-    meta.innerHTML = `<span class="tag">GOV.UK update</span><span>${esc(stopDate(stop))}</span><span class="tag tag--outline" title="Verbatim GOV.UK change note">GOV.UK change note</span>`;
+    meta.innerHTML = `<span class="tag">GOV.UK update</span><span class="tag tag--outline" title="Verbatim GOV.UK change note">GOV.UK change note</span>`;
   }
+  const box = document.createElement("div");
+  box.className = "wc-box";
+  const more = document.createElement("button");
+  more.type = "button"; more.className = "wc-more"; more.textContent = "More"; more.setAttribute("aria-expanded", "false");
+  box.append(statementNode(stop), more);
   const line = document.createElement("p");
   line.className = "wc-calc";
-  line.innerHTML = `<span class="tag ${calc.tag ? "tag--muted" : "tag--calc"}">${esc(calc.tag || "Computed")}</span><span>${calc.html}</span>`;
-  wrap.append(meta, statementNode(stop), line);
+  line.innerHTML = `<span class="tag ${calc.tag ? "tag--muted" : "tag--calc"}">${esc(calc.tag || "Computed")}</span><span class="wc-calc-t"${calc.title ? ` title="${esc(calc.title)}"` : ""}>${calc.html}</span>`;
+  wrap.append(meta, box, line);
   wrap.dataset.key = `${stop.k}|${calc.html}`;
   return { node: wrap, pending: calc.pending };
+}
+/** A statement longer than the caption's fixed height is faded out with a "More" button; nothing moves until it is pressed. */
+function fitCaption(node = $("#wc .wc-in:not(.out)")) {
+  const text = node?.querySelector(".wc-text");
+  if (!text || $("#wc").classList.contains("is-open")) return;
+  const clipped = text.scrollHeight > text.clientHeight + 2 || [...text.querySelectorAll(".wc-tbl")].some((t) => t.scrollHeight > t.clientHeight + 2);
+  node.classList.toggle("is-clipped", clipped);
+}
+/** Open or close a long caption: its height eases; the rest of the page follows (the reader asked for it). */
+function setCaptionOpen(open) {
+  const box = $("#wc");
+  if (box.classList.contains("is-open") === open) return;
+  const h0 = box.offsetHeight;
+  box.classList.toggle("is-open", open);
+  const h1 = box.offsetHeight;
+  box.querySelectorAll(".wc-more").forEach((b) => { b.textContent = open ? "Less" : "More"; b.setAttribute("aria-expanded", String(open)); });
+  if (!open) box.querySelectorAll(".wc-text, .wc-tbl").forEach((x) => { x.scrollTop = 0; });
+  if (!reduced.matches && Math.abs(h1 - h0) > 1 && document.visibilityState === "visible") {
+    box.animate([{ height: `${h0}px` }, { height: `${h1}px` }], { duration: 300, easing: EASE });
+  }
 }
 const captionChars = (stop) => (stop.kind === "update" ? stop.note : captionSource(stop)?.text || captionSource(stop)?.notes?.map((g) => g.note).join(" ") || "").length;
 let wcKey = "", wcStop = -1;
@@ -493,11 +658,15 @@ function updateCaption(k, { force = false } = {}) {
   const calc = computedHtml(stop);
   if (!force && `${stop.k}|${calc.html}` === wcKey) return;          // called every frame while a handle moves
   const { node, pending } = captionNode(stop, calc);
+  const sameStop = wcStop === k;
   wcKey = node.dataset.key; wcStop = k;
   const box = $("#wc");
+  if (!sameStop) setCaptionOpen(false);                             // a caption opened with "More" closes when the stop changes
   box.querySelectorAll(".wc-in.out").forEach((x) => x.remove());
   const old = box.querySelector(".wc-in");
   box.append(node);
+  fitCaption(node);
+  if (box.classList.contains("is-open")) node.querySelector(".wc-more").textContent = "Less";
   if (pending && S.engine) S.engine.diff(stop.i - 1, stop.i).then(() => { if (wcStop === k) updateCaption(k); }).catch(() => {});
   if (!old) return;
   if (reduced.matches || !S.ready) { old.remove(); return; }
@@ -516,6 +685,7 @@ function tipOf(s) {
   const i = s.i;
   const cap = s.v.source === "wayback" && capturedAt(s.v) ? ` · archived ${fmtDate(capturedAt(s.v))}` : "";
   const size = i === 0 ? (S.E.length > 1 ? " · earliest edition held" : " · only edition held")
+    : isRewrite(s.v.similarity_to_previous) ? ` · rewritten, ${keptPercent(s.v.similarity_to_previous)} of the wording kept`
     : S.sizes[i] == null ? " · comparing…" : S.sizes[i] ? ` · ${fmtN(S.sizes[i])} words changed` : " · no text changes";
   const src = captionSource(s);
   const said = src?.kind === "home-office" ? `“${truncate(src.text || "", 140)}” (Home Office)` : src?.notes?.length ? `“${truncate(src.notes[0].note, 140)}” (GOV.UK)` : "No change statement.";
@@ -532,7 +702,7 @@ function buildChangeLog() {
     const text = src?.kind === "home-office" ? src.text : src?.notes?.[0]?.note || "";
     return `<li data-k="${k}"><button type="button" aria-label="${esc(`${vLabel(s)}, ${s.long}${text ? `: ${text}` : ""}. Show this edition.`)}"><span class="cl-v">${esc(vLabel(s))}</span>
       <span class="cl-m"><span>${esc(stopDate(s))}</span>${src ? `<span class="tag tag--outline">${src.kind === "home-office" ? "Home Office" : "GOV.UK"}</span>` : ""}${
-        s.v.source === "wayback" ? "<span>archived copy</span>" : ""}<span class="cl-n" data-i="${s.i}"></span>${gap ? `<span>${esc(gap)}</span>` : ""}</span>
+        s.v.source === "wayback" ? "<span>archived copy</span>" : ""}${isRewrite(s.v.similarity_to_previous) ? `<span>rewritten, ${esc(keptPercent(s.v.similarity_to_previous))} kept</span>` : `<span class="cl-n" data-i="${s.i}"></span>`}${gap ? `<span>${esc(gap)}</span>` : ""}</span>
       ${text ? `<span class="cl-t">${esc(text)}</span>` : `<span class="cl-t none">No change statement.</span>`}</button></li>`;
   });
   $("#clog").innerHTML = items.join("");
@@ -612,12 +782,13 @@ async function pickStop(k) {
 }
 
 /* ---- Play ------------------------------------------------------------------------------------- */
+const PLAY_LABEL = `Play<span class="lbl-x"> history</span>`;      // "Play" alone on phones
 let playToken = 0, playRender = null;
 const wait = (ms, tok) => new Promise((r) => setTimeout(() => r(tok === playToken), ms));
 function stopPlay() {
   if (!S.playing) return;
   S.playing = false; playToken++;
-  $("#playBtn").setAttribute("aria-pressed", "false"); $("#playLbl").textContent = "Play history";
+  $("#playBtn").setAttribute("aria-pressed", "false"); $("#playLbl").innerHTML = PLAY_LABEL;
   flushPlayRender();
   minimap?.schedule();                                   // it waited while Play ran
 }
@@ -679,8 +850,8 @@ async function play() {
 
 const BLOCKISH = new Set(["UL", "OL", "TABLE", "TBODY", "THEAD", "TFOOT", "TR", "DIV", "SECTION", "BLOCKQUOTE", "FIGURE"]);
 
-/** Build an edition's verbatim body, detached, ready to mount. */
-function buildClean(e) {
+/** An edition's verbatim body as a detached element, with presentation only (images, links, paragraph numbers). */
+function buildBody(e) {
   const E = S.E[e];
   const { root } = parseBody(E.v.body);
   let gs = root;
@@ -696,6 +867,11 @@ function buildClean(e) {
   const A = analyseBody(gs);                     // offsets into the verbatim text, before any presentation
   internalLinks(gs);
   presentation(gs, A);
+  return { gs, A };
+}
+/** Build an edition's verbatim body, detached, ready to mount. */
+function buildClean(e) {
+  const { gs, A } = buildBody(e);
   const doc = $("#doc");
   const fs = parseFloat(getComputedStyle(doc).fontSize) || 17;
   const width = Math.max(280, (doc.clientWidth || 700) - parseFloat(getComputedStyle(doc).paddingLeft || 0));
@@ -827,12 +1003,13 @@ function placeAllIfFresh() {
 }
 function mountClean() {
   const doc = $("#doc");
-  doc.classList.remove("is-redline", "is-sbs");
+  doc.classList.remove("is-redline", "is-sbs", "is-pair");
+  doc.classList.toggle("is-entered", S.ready);          // the lift-in is for arriving; changing edition only crossfades
   $("#reader").classList.remove("is-sbs");
   doc.replaceChildren(S.C.root);
   doc.removeAttribute("aria-busy");
   S.V = { kind: "clean", root: S.C.root, ix: S.C.ix, sections: S.C.A.sections, targets: null };
-  S.redline = null;
+  S.redline = null; S.rewrite = null;
   fullSha(S.E[S.C.e]);
   placeAllIfFresh();
   decorateView();
@@ -840,6 +1017,7 @@ function mountClean() {
 }
 /** Everything that follows the text shown: contents, rail, head, bar, notes, find, address. */
 function afterShow() {
+  $("#reader").classList.toggle("is-notice", S.V?.kind === "notice");
   renderToc();
   renderRail();
   updateCounts();
@@ -941,7 +1119,19 @@ function loadPair(a, b, { initial = false } = {}) {
   const run = (async () => {
     closePop(); hideTool();
     S.pair = { a, b };
+    // A rewrite keeps so little wording that a redline marks almost everything: say so, and offer the two
+    // editions side by side instead (the reader's choice is remembered for the session).
+    const sim = pairSimilarity(a, b);
+    S.rewrite = isRewrite(sim) ? { a, b, sim, view: rewriteChoice || "notice" } : null;
     updateHead(); updateBar();
+    if (S.rewrite && S.rewrite.view !== "redline") {
+      setBusy(false);
+      const anchor = initial || S.V?.kind === "notice" ? null : captureAnchor();
+      if (S.rewrite.view === "pair") paintPair(a, b); else paintRewriteNotice(a, b);
+      restoreAnchor(anchor);
+      if (!initial && !reduced.matches) $("#doc").animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: 280, easing: EASE });
+      return;
+    }
     const engine = ensureEngine();
     let res = engine.cached(a, b);
     if (!res) {
@@ -956,7 +1146,7 @@ function loadPair(a, b, { initial = false } = {}) {
       setBusy(false);
     }
     if (S.mode !== "changes") return;
-    const anchor = initial ? null : captureAnchor();
+    const anchor = initial || S.V?.kind === "notice" ? null : captureAnchor();
     paintRedline(a, b, res);
     restoreAnchor(anchor);
     if (!initial && !reduced.matches) $("#doc").animate([{ opacity: 0.25 }, { opacity: 1 }], { duration: 280, easing: EASE });
@@ -985,6 +1175,7 @@ function paintRedline(a, b, res) {
   internalLinks(wrap);
   wrap.querySelectorAll("img").forEach(imgLoad);
   doc.classList.add("is-redline");
+  doc.classList.remove("is-pair");
   doc.classList.toggle("is-sbs", view === "sbs");
   $("#reader").classList.toggle("is-sbs", view === "sbs");
   doc.replaceChildren(wrap);
@@ -1009,6 +1200,175 @@ function paintRedline(a, b, res) {
   afterShow();
   markCurrent(false);
 }
+/* ---- rewrites: a notice, then the two editions side by side (unmarked) or the redline anyway ------------------ */
+const REWRITE_VIEW_KEY = "cpin-rewrite-view";
+let rewriteChoice = (() => { try { const v = sessionStorage.getItem(REWRITE_VIEW_KEY); return v === "pair" || v === "redline" ? v : null; } catch { return null; } })();
+const pairSims = new Map();
+/** How much of edition a's wording edition b keeps: the export's figure for consecutive editions, else computed here. */
+function pairSimilarity(a, b) {
+  const known = S.E[b].v.similarity_to_previous;
+  if (b === a + 1 && typeof known === "number") return known;
+  const k = `${a}:${b}`;
+  if (!pairSims.has(k)) pairSims.set(k, phrasesShared(editionPhrases(a), editionPhrases(b)));
+  return pairSims.get(k);
+}
+// An edition's phrases are worked out once and the last few kept (each Set is a few megabytes), so
+// moving one handle across several editions re-reads only the edition that changed.
+const phraseSets = new Map();
+function editionPhrases(i) {
+  let set = phraseSets.get(i);
+  if (set) phraseSets.delete(i);                         // re-inserted below: most recently used last
+  else set = phrasesOf(S.E[i].v.body);
+  phraseSets.set(i, set);
+  while (phraseSets.size > 4) phraseSets.delete(phraseSets.keys().next().value);
+  return set;
+}
+function chooseRewriteView(view) {
+  rewriteChoice = view;
+  try { sessionStorage.setItem(REWRITE_VIEW_KEY, view); } catch {}
+  if (S.mode === "changes" && S.pair) loadPair(S.pair.a, S.pair.b);
+}
+const edName = (E) => (E.version ? `v${E.version}` : `the ${stopDate(E)} edition`);
+function paintRewriteNotice(a, b) {
+  const doc = $("#doc"), A = S.E[a], B = S.E[b], rw = S.rewrite;
+  const between = b === a + 1 && editionsBetweenNotHeld(S.tl, b);
+  const wrap = document.createElement("div");
+  wrap.className = "rw-notice";
+  wrap.innerHTML = `<span class="tag tag--outline">Rewrite</span>
+    <p class="rw-title">${esc(B.version ? edName(B) : capFirst(edName(B)))} is a rewrite of ${esc(edName(A))} (${esc(keptPercent(rw.sim))} of the wording kept), so a redline would mark almost everything.</p>
+    <p class="rw-sub">${esc(stopDate(A))} → ${esc(stopDate(B))}${between ? " · editions in between not held" : ""}</p>
+    <div class="rw-actions">
+      <button class="btn btn--primary" type="button" data-act="rw-pair">Read them side by side</button>
+      <button class="btn" type="button" data-act="rw-redline">Show the redline anyway</button>
+    </div>
+    <p class="rw-foot"><span class="tag tag--calc">Computed</span><span>From the two texts: the share of five-word phrases they have in common. Your choice is kept for this visit.</span></p>`;
+  doc.classList.remove("is-redline", "is-sbs", "is-pair");
+  $("#reader").classList.remove("is-sbs");
+  doc.replaceChildren(wrap);
+  doc.removeAttribute("aria-busy");
+  S.redline = null; S.hunks = new Map(); S.cur = -1;
+  S.V = { kind: "notice", root: wrap, ix: null, sections: [], targets: null };
+  afterShow();
+  markCurrent(false);
+}
+
+let pairShow = "new";                                 // phones: which edition of a side-by-side pair is on screen
+/**
+ * Two editions side by side, clean: no marks. The newer one scrolls with the page; the older sits in a pane
+ * beside it that follows. Where the two share a heading the sections meet at the top of the screen, and
+ * between shared headings the pane moves in proportion, so both always show text. Phones show one edition
+ * at a time, with a switch that keeps the reader in the same section.
+ */
+function paintPair(a, b) {
+  const doc = $("#doc"), A = S.E[a], B = S.E[b];
+  const oldGs = buildBody(a).gs, newGs = buildBody(b).gs;
+  // The older edition's ids are prefixed so the two texts' anchors and footnotes stay apart.
+  oldGs.querySelectorAll("[id]").forEach((el) => { el.id = `old-${el.id}`; });
+  oldGs.querySelectorAll('a[href^="#"]').forEach((el) => el.setAttribute("href", `#old-${el.getAttribute("href").slice(1)}`));
+  const fs = parseFloat(getComputedStyle(doc).fontSize) || 17;
+  const width = Math.max(280, Math.min(66 * fs * 0.5, (($("#reader .center").clientWidth || 1200) - 32) / 2 - 64));
+  chunk(oldGs, { fs, width });
+  chunk(newGs, { fs, width });
+  // Headings the two share, in order. Each starts a chunk, whose top is where the heading sits.
+  const heads = (gs) => [...gs.querySelectorAll(":scope > .cv > h2:first-child, :scope > .cv > h3:first-child")].map((el) => ({ box: el.parentElement, key: headingKey(el.textContent) }));
+  const oh = heads(oldGs), nh = heads(newGs);
+  const links = alignHeadings(oh.map((h) => h.key), nh.map((h) => h.key)).map(([i, j]) => ({ o: oh[i].box, n: nh[j].box }));
+  const wrap = document.createElement("div");
+  wrap.className = "rl pv";
+  wrap.dataset.show = pairShow;
+  const lab = (E) => `<b>${esc(vLabel(E))}</b> · ${esc(stopDate(E))}${E.v.source === "wayback" ? " · archived copy" : ""}`;
+  wrap.innerHTML = `<div class="sbs">
+    <div class="sbs-head"><span><span class="tag tag--outline">Old</span>${lab(A)}</span><span><span class="tag">New</span>${lab(B)}</span></div>
+    <div class="pv-switch" role="radiogroup" aria-label="Which edition to read">
+      <button type="button" role="radio" data-show="old" aria-checked="${pairShow === "old"}"><span class="tag tag--outline">Old</span><b>${esc(vLabel(A))}</b><span>${esc(fmtMonth(A.t))}</span></button>
+      <button type="button" role="radio" data-show="new" aria-checked="${pairShow === "new"}"><span class="tag">New</span><b>${esc(vLabel(B))}</b><span>${esc(fmtMonth(B.t))}</span></button></div>
+    <div class="pv-cols"><div class="pv-pane"><div class="sbs-cell old"></div></div><div class="sbs-cell new"></div></div></div>`;
+  const pane = wrap.querySelector(".pv-pane"), oldCell = wrap.querySelector(".sbs-cell.old"), newCell = wrap.querySelector(".sbs-cell.new");
+  oldCell.append(oldGs);
+  newCell.append(newGs);
+  doc.classList.remove("is-redline");
+  doc.classList.add("is-sbs", "is-pair");
+  $("#reader").classList.add("is-sbs");
+  doc.replaceChildren(wrap);
+  doc.removeAttribute("aria-busy");
+  S.redline = null; S.hunks = new Map(); S.cur = -1;
+  const sections = [...newCell.querySelectorAll("h2, h3")].filter((h) => h.id)
+    .map((h) => ({ id: h.id, title: h.textContent.replace(/\s+/g, " ").trim(), level: +h.tagName[1], st: null, count: 0, el: h, at: null }));
+  S.V = { kind: "pair", root: wrap, ix: null, sections, targets: null, pair: { pane, oldCell, newCell, links } };
+  // A much shorter newer edition would drag the older pane past at many times the page's speed: give the page
+  // room to scroll (blank below the newer text), so the pane never moves at more than about three times it.
+  newCell.style.minHeight = `${Math.round(oldCell.offsetHeight / 3)}px`;
+  pairWatch ||= new ResizeObserver(() => queuePairSync());
+  pairWatch.disconnect();
+  pairWatch.observe(oldCell); pairWatch.observe(newCell);
+  decorateView();
+  afterShow();
+  markCurrent(false);
+  syncPair();
+}
+let pairWatch = null, pairQueued = false;
+const pairOf = () => (S.V?.kind === "pair" && S.V.pair?.pane.isConnected ? S.V.pair : null);
+const pairLinked = (P) => getComputedStyle(P.pane).position === "sticky";      // side by side (not phones)
+/** Where each shared heading sits: [down the newer text, down the older text], from the start to the end of both. */
+function pairPoints(P) {
+  const nb = P.newCell.getBoundingClientRect(), ob = P.oldCell.getBoundingClientRect(), view = P.pane.clientHeight;
+  const pts = [[0, 0]];
+  for (const l of P.links) pts.push([l.n.getBoundingClientRect().top - nb.top, l.o.getBoundingClientRect().top - ob.top]);
+  pts.push([Math.max(0, nb.height - view), Math.max(0, ob.height - view)]);
+  return increasing(pts);
+}
+/** The older pane follows the page: called on scroll and whenever either text changes height. */
+function syncPair() {
+  pairQueued = false;
+  const P = pairOf();
+  if (!P || !pairLinked(P)) return;
+  const y = P.pane.getBoundingClientRect().top - P.newCell.getBoundingClientRect().top;       // how far into the newer text the top of the pane is
+  const to = Math.round(mapThrough(pairPoints(P), y));
+  if (Math.abs(P.pane.scrollTop - to) >= 1) P.pane.scrollTop = to;
+}
+function queuePairSync() {
+  if (pairQueued || !pairOf()) return;
+  pairQueued = true;
+  requestAnimationFrame(syncPair);
+}
+addEventListener("scroll", queuePairSync, { passive: true });
+addEventListener("resize", queuePairSync);
+const inOldPane = (node) => { const P = pairOf(); return !!P && !!node && P.pane.contains(node) && pairLinked(P); };
+/** For gliding to a place in the older pane: the rectangle the page would have to bring to the top for the pane
+ *  (which follows the page) to show it. */
+function oldPaneRect(getRect) {
+  const P = pairOf(), r = getRect();
+  if (!P || !r) return r;
+  const back = increasing(pairPoints(P).map(([n, o]) => [o, n]));
+  const o = Math.max(0, r.top - P.oldCell.getBoundingClientRect().top - 28);                   // a little below the pane's top
+  const stick = parseFloat(getComputedStyle(P.pane).top) || 0;
+  const pageY = P.newCell.getBoundingClientRect().top + scrollY + mapThrough(back, o) - stick;
+  return { top: pageY - scrollY + headOffset(), height: 0 };
+}
+/** Phones: swap the edition on screen, keeping the reader in the same section (through the shared headings). */
+function setPairShow(side) {
+  const P = pairOf();
+  if (!P || side === pairShow) return;
+  const wrap = S.V.root, line = headOffset() + 8;
+  const [fromCell, toCell] = side === "old" ? [P.newCell, P.oldCell] : [P.oldCell, P.newCell];
+  const [fromKey, toKey] = side === "old" ? ["n", "o"] : ["o", "n"];
+  const tops = (cell, key) => { const t = cell.getBoundingClientRect(); return [0, ...P.links.map((l) => l[key].getBoundingClientRect().top - t.top), t.height]; };
+  const linked = pairLinked(P);
+  const y = line - fromCell.getBoundingClientRect().top, from = linked ? null : tops(fromCell, fromKey);
+  pairShow = side;
+  wrap.dataset.show = side;
+  wrap.querySelectorAll(".pv-switch button").forEach((x) => x.setAttribute("aria-checked", String(x.dataset.show === side)));
+  S.V.ix = null; S.V.targets = null; F.foldedFor = null;
+  for (const s of S.V.sections) s.at = null;
+  if (from && y > 0) {
+    const to = tops(toCell, toKey);
+    const at = mapThrough(increasing(from.map((x, i) => [x, to[i]])), y);
+    scrollTo({ top: Math.max(0, scrollY + toCell.getBoundingClientRect().top + at - line), behavior: "instant" });
+  }
+  if (F.q) runFind(F.q, { jump: false });
+  refreshMinimap();
+}
+
 function renderStats(st) {
   rIns.set(st.ins, !S.ready); rDel.set(st.del, !S.ready); rChg.set(st.changes, !S.ready);
   $("#chgWord").textContent = st.changes === 1 ? "change" : "changes";
@@ -1123,34 +1483,49 @@ function updateBar() {
     const arrow = `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
     html = `<span class="tag tag--outline ver" title="${esc(stopDateLong(A))}">${esc(vLabel(A))}</span>${arrow}<span class="tag ver" title="${esc(stopDateLong(B))}">${esc(vLabel(B))}</span><span class="ed-when">${esc(stopDate(A))} → ${esc(stopDate(B))}</span><span class="sr-only">Changes from ${esc(vLabel(A))} to ${esc(vLabel(B))}</span>`;
   } else {
-    const e = shownEdition(), E = S.E[e];
-    html = `<span class="tag ${isLatest(e) ? "" : "tag--muted"}">${isLatest(e) ? (gone() ? "Last edition" : "Latest") : "Earlier edition"}</span><b>${esc(vLabel(E))}</b><span class="ed-when">${esc(stopDate(E))}</span>`;
+    // Which edition is being read. With the head's line this is all that says so: no note above the text, so the
+    // text keeps its place from one edition to the next.
+    const e = shownEdition(), E = S.E[e], stop = S.tl.stops[slider.b];
+    const archived = E.v.source === "wayback" ? " · archived copy" : "";
+    html = stop?.kind === "update"
+      ? `<span class="tag tag--muted" title="GOV.UK updated this report on ${esc(stopDateLong(stop))}, but that edition is not held here">Not held</span><span class="ed-when">${esc(stopDate(stop))} update · showing</span><b>${esc(vLabel(E))}</b><span class="ed-when">${esc(stopDate(E))}${archived}</span>`
+      : `<span class="tag ${isLatest(e) ? "" : "tag--muted"}"${isLatest(e) ? "" : ` title="${gone() ? "Not the last edition held" : "Not the current guidance"}"`}>${isLatest(e) ? (gone() ? "Last edition" : "Latest") : `<span class="tag-x">Earlier edition · ${gone() ? "not the last edition" : "not current guidance"}</span><span class="tag-s">${gone() ? "Not the last" : "Not current"}</span>`}</span>${
+        E.version ? `<b>${esc(vLabel(E))}</b><span class="ed-when">${esc(stopDate(E))}${archived}</span>` : `<b class="ed-date">${esc(stopDate(E))}</b>${archived ? `<span class="ed-when">${archived.slice(3)}</span>` : ""}`}`;
   }
   if (chip.innerHTML !== html) chip.innerHTML = html;
-  const home = S.mode === "read" && isLatest(shownEdition());
-  $("#latestMini").hidden = home;
-  $("#latestMini").firstChild.textContent = gone() ? "Last edition " : "Latest guidance ";
+  // The one way back: on the latest edition, read clean, there is nowhere to go back to.
+  const home = isLatest(shownEdition());                           // comparing into the latest: "Hide changes" is the way back
+  const mini = $("#latestMini");
+  mini.hidden = home;
+  mini.querySelector(".lm-long").textContent = gone() ? "Last edition" : "Latest guidance";
+  mini.querySelector(".lm-short").textContent = gone() ? "Last" : "Latest";
+  mini.title = gone() ? "Back to the last edition held, without changes marked" : "Back to the latest guidance, without changes marked";
+  $("#bar").classList.toggle("no-redline", S.mode === "changes" && !!S.rewrite && S.rewrite.view !== "redline");
 }
+/** Above the text. Reading: nothing (the bar says which edition is shown and offers the way back), so the text
+ *  keeps its place from one edition to the next. Changes: one fixed line, the legend or what a rewrite is shown as. */
 function updateEditionNote() {
   const box = $("#editionNote");
   let html = "";
-  const stop = S.tl.stops[slider.b];
   if (S.mode === "changes" && S.pair) {
-    const A = S.E[S.pair.a], B = S.E[S.pair.b];
-    html = `<span class="tag tag--outline">Changes</span><span>From <b>${esc(vLabel(A))}</b> (${esc(stopDate(A))}) to <b>${esc(vLabel(B))}</b> (${esc(stopDate(B))}).
-      <ins>Inserted words</ins> are underlined, <del>deleted words</del> struck through; bars in the margin mark changed paragraphs.${S.pair.b - S.pair.a > 1 ? ` This spans ${S.pair.b - S.pair.a} editions.` : ""}</span>`;
-  } else if (stop?.kind === "update") {
-    const E = S.E[shownEdition()];
-    html = `<span class="tag tag--muted">Not held</span><span>GOV.UK updated this report on <b>${esc(stopDateLong(stop))}</b>, but that edition is not held here.
-      The text below is <b>${esc(vLabel(E))}</b> (${esc(stopDate(E))})${stop.inForce == null ? ", the earliest edition held" : ", the edition then in force"}.</span>`;
-  } else if (!isLatest(shownEdition())) {
-    const E = S.E[shownEdition()], src = editionSource(E);
-    html = `<span class="tag tag--muted">Earlier edition</span><span>You are reading <b>${esc(vLabel(E))}</b> (${esc(stopDateLong(E))}), ${gone() ? "not the last edition held" : "not the current guidance"}.${
-      src.archived ? ` An <a href="${esc(src.url)}" target="_blank" rel="noopener">Internet Archive copy${src.capturedAt ? ` captured ${esc(fmtDate(src.capturedAt))}` : ""} ↗</a> holds the same edition.` : ""}
-      <button class="linklike" type="button" data-act="latest">${gone() ? "Read the last edition" : "Read the latest guidance"} →</button></span>`;
+    const A = S.E[S.pair.a], B = S.E[S.pair.b], rw = S.rewrite;
+    const kept = rw ? `${keptPercent(rw.sim)} of the wording kept` : "";
+    if (rw?.view === "pair") {
+      html = `<span class="tag tag--outline">Rewrite</span><span class="en-t">${esc(vLabel(A))} and ${esc(vLabel(B))} side by side, unmarked · ${esc(kept)}</span><button class="linklike" type="button" data-act="rw-redline">Show the redline anyway</button>`;
+    } else if (rw?.view === "notice") {
+      html = "";                                                    // the notice itself is the whole page
+    } else {
+      html = `<span class="tag tag--outline">Changes</span><span class="en-t"><ins>Inserted</ins> words are underlined, <del>deleted</del> words struck through; bars in the margin mark changed paragraphs${
+        S.pair.b - S.pair.a > 1 ? ` · spans ${S.pair.b - S.pair.a} editions` : ""}</span>${rw ? `<button class="linklike" type="button" data-act="rw-pair">Read side by side instead</button>` : ""}`;
+    }
   }
   if (!html) { box.hidden = true; box.innerHTML = ""; return; }
-  if (box.innerHTML !== html) { box.innerHTML = html; if (S.ready) swapIn(box); }
+  if (box.innerHTML !== html) {
+    box.innerHTML = html;
+    const t = box.querySelector(".en-t");
+    if (t) t.title = t.textContent;
+    if (S.ready) swapIn(box);
+  }
   box.hidden = false;
 }
 
@@ -1168,18 +1543,32 @@ function decorateView() {
   showSources(S.C?.linkCounts || null);
   minimap?.schedule();                                   // dead sources
 }
+/** The Sources chip: one fact (how many dead links, else how many links); the rest opens on demand. */
 function showSources(result) {
-  const line = $("#sourcesLine");
-  if (!result || !result.counts.total) { line.hidden = true; return; }
-  const checked = result.counts.total - result.counts.unchecked;
-  const text = checked ? summaryLine(result) : `${fmtN(result.counts.total)} links · not checked yet`;
-  line.innerHTML = `<span class="tag tag--outline">Sources</span><span>${esc(text)}</span>${result.dead.length && S.V?.kind === "clean" ? ` <button class="linklike" type="button" data-act="next-dead">Next dead link ↓</button>` : ""}`;
-  line.hidden = false;
+  const chip = $("#sourcesChip");
+  S.sources = result && result.counts.total ? result : null;
+  if (!S.sources) { chip.hidden = true; if (hpopKind === "sources") closeHeadPop(); return; }
+  const c = result.counts, checked = c.total - c.unchecked;
+  const fact = !checked ? "not checked yet" : c.dead ? `${fmtN(c.dead)} dead ${c.dead === 1 ? "link" : "links"}` : `${fmtN(c.total)} ${c.total === 1 ? "link" : "links"}`;
+  const html = `Sources<span class="chip-v${checked && c.dead ? " is-dead" : ""}">${esc(fact)}</span>`;
+  if (chip.innerHTML !== html) chip.innerHTML = html;
+  chip.title = checked ? summaryLine(result) : `${fmtN(c.total)} links · not checked yet`;
+  showSourcesChip();
+  if (hpopKind === "sources") renderHeadPop();
+}
+/** The counts are of the edition last read clean: the chip shows only while the head is about that edition. */
+function showSourcesChip() {
+  const chip = $("#sourcesChip");
+  if (!chip) return;
+  const on = !!S.sources && S.C?.e === shownEdition();
+  chip.hidden = !on;
+  if (!on && hpopKind === "sources") closeHeadPop();
 }
 let deadIx = -1;
 function nextDead() {
   const dead = S.C?.linkCounts?.dead || [];
   if (!dead.length || S.V.kind !== "clean") return;
+  closeHeadPop();
   deadIx = (deadIx + 1) % dead.length;
   const a = dead[deadIx].anchor;
   goToElement(a, { block: "center" }).then(() => flash([a.closest("p, li, td") || a]));
@@ -1222,7 +1611,9 @@ document.addEventListener("click", (e) => {
 let spy = null, activeSection = -1;
 function tocHtml() {
   const secs = S.V?.sections || [];
-  const head = S.V?.kind === "redline" ? `<p class="eyebrow">Contents · changes per section</p>` : `<p class="eyebrow">On this page</p>`;
+  const head = S.V?.kind === "redline" ? `<p class="eyebrow">Contents · changes per section</p>`
+    : S.V?.kind === "pair" && S.pair ? `<p class="eyebrow">Contents · ${esc(vLabel(S.E[S.pair.b]))}</p>` : `<p class="eyebrow">On this page</p>`;
+  if (S.V?.kind === "notice") return `${head}<p class="rail-empty">Choose how to compare the two editions.</p>`;   // phones' sheet; hidden beside the notice
   if (!secs.length) return `${head}<p class="rail-empty">This edition has no headings.</p>`;
   const counts = S.V.kind === "clean" ? sectionCounts() : secs.map((s) => s.count);
   return `${head}<ol class="toc-list"><span class="toc-ind" aria-hidden="true"></span>${secs.map((s, i) => {
@@ -1252,7 +1643,7 @@ function renderToc() {
 /** Section offsets for the spy (redline sections are measured lazily). */
 function sectionAt(off) {
   const secs = S.V.sections;
-  if (S.V.kind === "redline" && secs.some((s) => s.at == null)) {
+  if (S.V.kind !== "clean" && secs.some((s) => s.at == null)) {
     const ix = viewIndex();
     for (const s of secs) s.at = s.el ? ix.firstTextAt(s.el) ?? Infinity : Infinity;
   }
@@ -1304,7 +1695,14 @@ function moveIndicator() {
 
 let glide = null;
 const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
-const headOffset = () => $("#top").offsetHeight + ($("#bar").hidden ? 0 : $("#bar").offsetHeight) + 18;
+/** Height of what stays stuck above the text: the header, the bar, and (side by side) the column heads or the switch. */
+const headOffset = () => $("#top").offsetHeight + ($("#bar").hidden ? 0 : $("#bar").offsetHeight) + columnHeadHeight() + 18;
+function columnHeadHeight() {
+  const V = S.V;
+  if (!V || (V.kind !== "pair" && V.kind !== "redline")) return 0;
+  V.heads ??= [...V.root.querySelectorAll(".sbs-head, .pv-switch")];
+  return V.heads.reduce((h, el) => h + el.offsetHeight, 0);
+}
 const maxScroll = () => document.documentElement.scrollHeight - innerHeight;
 const warmed = [];
 function warm(node) {
@@ -1364,6 +1762,7 @@ addEventListener("touchstart", stopGlide, { passive: true });
 function goToElement(el, opts = {}) {
   if (!el) return Promise.resolve();
   warm(el);
+  if (inOldPane(el)) return glideTo(() => oldPaneRect(() => el.getBoundingClientRect()));
   return glideTo(() => el.getBoundingClientRect(), opts);
 }
 
@@ -1778,9 +2177,9 @@ function deleteHighlight(id) {
 }
 
 /* --- footnotes ----------------------------------------------------------------------------- */
-function openFootnote(n, anchor) {
+function openFootnote(n, anchor, prefix = "") {
   const f = S.C?.A.fns.get(n);
-  if (!f || S.V.kind !== "clean") return goToFootnote(n);
+  if (!f || S.V.kind !== "clean") return goToFootnote(n, prefix);
   popState = { kind: "fn", n };
   showPop(`
     <div class="pop-head"><span class="tag tag--outline">Footnote ${n}</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div>
@@ -1794,8 +2193,8 @@ function sanitizeFootnote(html) {
   t.content.querySelectorAll("a[href]").forEach((a) => { if (!a.getAttribute("href").startsWith("#")) { a.target = "_blank"; a.rel = "noopener"; } });
   return t.innerHTML;
 }
-function goToFootnote(n) {
-  const li = S.V.root.querySelector(`[id="fn:${n}"]`) || document.getElementById(`fn:${n}`);
+function goToFootnote(n, prefix = "") {
+  const li = S.V.root.querySelector(`[id="${prefix}fn:${n}"]`) || document.getElementById(`${prefix}fn:${n}`);
   if (!li) return;
   goToElement(li, { block: "center" }).then(() => {
     li.classList.add("is-target");
@@ -1808,8 +2207,9 @@ $("#doc").addEventListener("click", (e) => {
   const ref = e.target.closest('a[role="doc-noteref"], sup a.footnote');
   if (ref) {
     e.preventDefault();
-    const n = Number((ref.getAttribute("href") || "").match(/(\d+)\s*$/)?.[1]);
-    if (n) openFootnote(n, ref);
+    const href = ref.getAttribute("href") || "";
+    const n = Number(href.match(/(\d+)\s*$/)?.[1]);
+    if (n) openFootnote(n, ref, href.startsWith("#old-") ? "old-" : "");
     return;
   }
   const back = e.target.closest('a[role="doc-backlink"], a.reversefootnote');
@@ -1862,13 +2262,17 @@ function savedHtml() {
       ${statusHtml(r) ? `<span class="saved-status">${statusHtml(r)}</span>` : ""}</li>`;
   }).join("");
   return `<div class="rail-head"><h2 class="eyebrow">Saved from this report</h2><span class="numeral">${recs.length}</span></div>
-    <div class="rail-style"><span class="eyebrow">Citation style</span>${segHtml()}</div>
+    <div class="rail-style"><span class="eyebrow">Citation style</span>${segHtml({ hint: true })}</div>
     ${recs.length ? `<ul class="saved-list">${items}</ul>` : `<p class="rail-empty"><b>Nothing saved yet.</b> Select any passage, then choose <b>Save highlight</b>.
       Each saved passage keeps its paragraph number, the sources it cites and a citation to the edition you read it in, ready to paste.</p>`}
     <p class="rail-foot"><a href="../saved/index.html">All saved highlights →</a></p>`;
 }
 function changesHtml() {
   const r = S.redline;
+  if (!r && S.rewrite) {                                            // phones' sheet; hidden beside the notice
+    return `<div class="rail-head"><h2 class="eyebrow">Changes · ${esc(vLabel(S.E[S.rewrite.a]))} → ${esc(vLabel(S.E[S.rewrite.b]))}</h2></div>
+      <p class="rail-empty"><b>A rewrite.</b> ${esc(capFirst(keptPercent(S.rewrite.sim)))} of the wording is kept, so there is no list of changes.</p>`;
+  }
   if (!r) return `<div class="rail-head"><h2 class="eyebrow">Changes</h2></div><p class="rail-empty">Comparing…</p>`;
   const secText = new Map(r.res.toc.map((s) => [s.id, s.text]));
   const items = r.res.changes.map((c) => `<li><button type="button" data-k="${c.i}"${c.i === S.cur ? ' class="is-current"' : ""}>
@@ -1907,7 +2311,7 @@ async function goToHighlight(id, { open = false } = {}) {
 function updateCounts() {
   const all = H.loadHighlights().length, here = seriesRecords().length;
   $("#savedCount").textContent = all;
-  $("#dockCount").textContent = S.mode === "changes" ? fmtN(S.redline?.res.stats.changes || 0) : here;
+  $("#dockCount").textContent = S.mode !== "changes" ? here : S.redline ? fmtN(S.redline.res.stats.changes || 0) : S.rewrite ? "–" : "0";
 }
 function bump() {
   updateCounts();
@@ -1941,7 +2345,7 @@ function foldedText() {
 /** Text offset at a viewport y (caret hit-testing across the reading column), or null outside the text. */
 function offsetAtY(y) {
   if (!S.V?.root) return null;
-  const doc = S.V.root.getBoundingClientRect();
+  const doc = (S.V.pair?.newCell || S.V.root).getBoundingClientRect();     // side by side: the contents follow the newer edition
   if (y < doc.top || y > doc.bottom) return null;
   for (const x of [doc.left + 24, doc.left + doc.width * 0.3, doc.left + doc.width * 0.6]) {
     let node = null, off = 0;
@@ -1983,7 +2387,9 @@ function goFind(k, { scroll = true } = {}) {
   if (!scroll) return;
   warm(range.startContainer.parentElement);
   const r = range.getBoundingClientRect();
-  if (!r.height || r.top < headOffset() || r.bottom > innerHeight - 60) glideTo(() => range.getBoundingClientRect(), { block: "center" });
+  if (r.height && r.top >= headOffset() && r.bottom <= innerHeight - 60) return;
+  if (inOldPane(range.startContainer)) glideTo(() => oldPaneRect(() => range.getBoundingClientRect()));
+  else glideTo(() => range.getBoundingClientRect(), { block: "center" });
 }
 function stepFind(dir) {
   if (findInput.value !== F.q) return runFind(findInput.value);
@@ -2151,6 +2557,8 @@ function wireChrome() {
     }
     if (plain && e.key === "c" && !e.target.closest?.(".rs-handle")) { e.preventDefault(); setMode(S.mode === "changes" ? "read" : "changes"); return; }
     if (e.key === "Escape") {
+      if (closeHeadPop()) return;
+      if (!$("#clogPanel").hidden) { setClogOpen(false); $("#clogBtn").focus(); return; }
       if (popState) closePop();
       else if (!tool.hidden) { hideTool(); getSelection().removeAllRanges(); }
       else closeSheet();
@@ -2178,9 +2586,11 @@ function wireChrome() {
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-act]");
     if (!b) return;
-    if (b.dataset.act === "latest") readLatest();
     if (b.dataset.act === "next-dead") nextDead();
+    if (b.dataset.act === "rw-pair") { closeSheet(); chooseRewriteView("pair"); }
+    if (b.dataset.act === "rw-redline") { closeSheet(); chooseRewriteView("redline"); }
   });
+  $("#doc").addEventListener("click", (e) => { const b = e.target.closest(".pv-switch button[data-show]"); if (b) setPairShow(b.dataset.show); });
   $("#latestMini").addEventListener("click", () => readLatest());
   $("#changesBtn").addEventListener("click", () => setMode(S.mode === "changes" ? "read" : "changes"));
   $("#vseg").addEventListener("click", (e) => { const b = e.target.closest("button[data-view]"); if (b && !b.disabled) setView(b.dataset.view); });
@@ -2230,7 +2640,10 @@ function setupMinimap() {
     },
     positioner: (doc) => {
       if (!S.V?.root?.isConnected) return new DocPositioner(doc);
-      const ix = viewIndex();
+      const ix = viewIndex(), P = pairOf();
+      if (P && pairLinked(P)) {                           // side by side: the strip follows the newer edition (the page's scroll)
+        return new DocPositioner(doc, { chunks: ".sbs-cell.new .cv", offsetOf: (el) => (P.pane.contains(el) ? null : ix.firstTextAt(el)), length: ix.length });
+      }
       return new DocPositioner(doc, { offsetOf: (el) => ix.firstTextAt(el), length: ix.length });
     },
     collect: minimapMarks,
@@ -2267,10 +2680,11 @@ function minimapMarks(pos) {
       if (!ins && !del) marks.push({ kind: "mod", y0, y1 });
     }
   } else {
-    for (const [, chk] of S.checks) if (chk.match) marks.push({ kind: "hl", y0: pos.yAt(chk.match.start), y1: pos.yAt(chk.match.end) });
-    for (const a of V.root.querySelectorAll(DEAD_LINKS)) { const [y0, y1] = pos.yOf(a); marks.push({ kind: "dead", y0, y1 }); }
+    if (V.kind === "clean") for (const [, chk] of S.checks) if (chk.match) marks.push({ kind: "hl", y0: pos.yAt(chk.match.start), y1: pos.yAt(chk.match.end) });
+    for (const a of (V.pair?.newCell || V.root).querySelectorAll(DEAD_LINKS)) { const [y0, y1] = pos.yOf(a); marks.push({ kind: "dead", y0, y1 }); }
   }
-  if (F.foldedFor === V.root) F.hits.forEach(([a, b], i) => marks.push({ kind: i === F.cur ? "find-cur" : "find", y0: pos.yAt(a), y1: pos.yAt(b) }));
+  const from = V.pair && pairLinked(V.pair) ? viewIndex().firstTextAt(V.pair.newCell) ?? 0 : 0;   // matches in the older pane have no place on the strip
+  if (F.foldedFor === V.root) F.hits.forEach(([a, b], i) => { if (a >= from) marks.push({ kind: i === F.cur ? "find-cur" : "find", y0: pos.yAt(a), y1: pos.yAt(b) }); });
   return { sections, marks, changes: !!redline };
 }
 
@@ -2335,7 +2749,16 @@ if (TEST) {
       sections: S.V?.sections.length, view_kind: S.V?.kind, changes: S.redline?.res.stats.changes ?? null,
       caption: $("#wc .wc-in:not(.out)")?.innerText, asat: $("#asat").getAttribute("aria-label") || $("#histMini").textContent,
       url: location.search, links: S.C?.linkCounts?.counts || null, textLength: S.C?.text.length,
+      rewrite: S.rewrite && { a: S.rewrite.a, b: S.rewrite.b, sim: S.rewrite.sim, view: S.rewrite.view },
+      note: $("#editionNote").hidden ? null : $("#editionNote").innerText, meta: $("#metaLine")?.innerText, chip: $("#edChip")?.innerText,
+      verbatim: $("#verbatimChip")?.title, sources: $("#sourcesChip")?.hidden ? null : $("#sourcesChip")?.innerText,
     }),
+    rewriteView: (v) => chooseRewriteView(v),
+    forgetRewriteView: () => { rewriteChoice = null; try { sessionStorage.removeItem(REWRITE_VIEW_KEY); } catch {} },
+    pairShow: (side) => setPairShow(side),
+    headPop: (kind) => (kind ? openHeadPop(kind) : closeHeadPop()),
+    allEditions: (open) => setClogOpen(open),
+    captionOpen: (open) => setCaptionOpen(open),
     setMode: (m, pair) => setMode(m, pair ? { pair } : {}),
     setView: (v) => setView(v),
     play: () => play(),

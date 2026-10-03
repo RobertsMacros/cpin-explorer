@@ -1,0 +1,6 @@
+CPIN Explorer's own mark (product icon, alongside the Roberts Macros mark in the footer).
+Generated 2026-10-03: a dotted globe in the style of the site's COBE globe, (option A, chosen by the owner).
+  mark.svg      the mark in use (a copy of mark-dots.svg); a <symbol id="mark"> drawn in currentColor,
+                so pages colour it with CSS: <svg><use href=".../mark.svg#mark"/></svg>
+  favicon.svg   the same mark in the site's blue, lighter in dark mode
+  mark-dots.svg, mark-pin.svg, mark-wire.svg   the three options (see prototypes/brand/)

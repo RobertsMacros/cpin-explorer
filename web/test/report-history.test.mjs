@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import {
-  buildTimeline, captionSource, computedSummary, DAY, dwellFor, editionForStop, findParaRefs, leadingNumber, reportUrl,
-  resolveParaRef, seriesPath, versionsNotHeld,
+  alignHeadings, bodyWords, buildTimeline, captionSource, computedSummary, DAY, dwellFor, editionForStop, editionsBetweenNotHeld, findParaRefs,
+  headingKey, increasing, isRewrite, keptPercent, leadingNumber, mapThrough, reportUrl, resolveParaRef, REWRITE_THRESHOLD, seriesPath, versionsNotHeld, wordingKept,
 } from "../../prototypes/shared/report-history.js";
 
 const ed = (id, version, date, extra = {}) => ({ id, version, date, published: date, valid_from: date, body: "<p>x</p>", govuk_change_notes: [], ...extra });
@@ -184,3 +184,82 @@ test("report addresses keep the series readable and add only what differs from t
 });
 
 test("timeline gaps: DAY is a day", () => { assert.equal(DAY, 24 * 3600 * 1000); });
+
+/* ------------------------------------------------------------------ rewrites */
+
+test("words for the rewrite measure ignore markup, case and punctuation (as the export does)", () => {
+  // The same example as tests/test_export.py, so the browser and the export agree.
+  assert.deepEqual(bodyWords("<p>The <b>State</b> is “willing”&nbsp;and able.</p><!-- x --><td>A</td><td>B</td>"),
+    ["the", "state", "is", "willing", "and", "able", "a", "b"]);
+  assert.deepEqual(bodyWords("<p>R&amp;D &#8217;n&#x2019; 2.0</p>"), ["r", "d", "n", "2", "0"]);
+});
+
+test("wording kept is five-word phrases in common over the larger edition", () => {
+  const ten = "<p>one two three four five six seven eight nine ten</p>";
+  assert.equal(wordingKept(ten, "<p>One two three four five, six seven eight nine ten.</p>"), 1);
+  assert.equal(wordingKept(ten, "<p>one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen</p>"), 0.5);
+  assert.equal(wordingKept(ten, "<p>an entirely different text about other things</p>"), 0);
+  assert.equal(wordingKept("", ""), 1);
+});
+
+test("an edition is a rewrite below the threshold, worded as a rounded share", () => {
+  assert.equal(REWRITE_THRESHOLD, 0.25);
+  assert.equal(isRewrite(0.047), true);
+  assert.equal(isRewrite(0.25), false);
+  assert.equal(isRewrite(null), false);
+  assert.equal(isRewrite(undefined), false);
+  assert.equal(keptPercent(0.047), "about 5%");
+  assert.equal(keptPercent(0.004), "less than 1%");
+  assert.equal(keptPercent(0), "about 0%");
+});
+
+test("editions in between are not held when the version skips or GOV.UK updates fall between", () => {
+  const skip = buildTimeline({ versions: [ed("a", "3.0", "2019-01-01T00:00:00Z"), ed("b", "7.0", "2024-01-01T00:00:00Z")], history: [] });
+  assert.equal(editionsBetweenNotHeld(skip, 1), true);
+  const next = buildTimeline({ versions: [ed("a", "1.0", "2020-11-11T00:00:00Z"), ed("b", "2.0", "2025-11-19T00:00:00Z")], history: [] });
+  assert.equal(editionsBetweenNotHeld(next, 1), false);
+  assert.equal(editionsBetweenNotHeld(next, 0), false);
+  const updates = buildTimeline({ versions: [ed("a", "1.0", "2020-11-11T00:00:00Z"), ed("b", "2.0", "2025-11-19T00:00:00Z")],
+    history: [{ date: "2023-03-01T10:00:00Z", note: "Updated the note." }] });
+  assert.equal(editionsBetweenNotHeld(updates, 1), true);
+  // Sudan v3.0: in force from July, dated September; GOV.UK's July note about it sits between v2.0 and v3.0 on
+  // the timeline but is about v3.0 itself, not an edition in between.
+  const own = buildTimeline({ versions: [ed("a", "2.0", "2025-01-16T00:00:00Z"),
+    ed("b", "3.0", "2026-09-07T00:00:00Z", { valid_from: "2026-07-01T00:00:00Z", govuk_change_notes: [{ date: "2026-09-07T10:00:00Z", note: "Updated." }] })],
+  history: [{ date: "2026-07-23T10:00:00Z", note: "Published an updated version." }] });
+  assert.deepEqual(own.stops.map((s) => s.kind), ["edition", "update", "edition"]);
+  assert.equal(editionsBetweenNotHeld(own, 1), false);
+});
+
+test("headings match across editions whatever their numbering, and sections line up in order", () => {
+  assert.equal(headingKey("9. Judiciary"), "judiciary");
+  assert.equal(headingKey("  8.2  Judiciary: "), "judiciary");
+  assert.equal(headingKey("Annex A: sources"), "annex a sources");
+  const oldKeys = ["preface", "assessment", "country information", "judiciary", "police", "bibliography"].map(headingKey);
+  const newKeys = ["Executive summary", "Assessment", "1. Police", "2. Judiciary", "", "Bibliography"].map(headingKey);
+  // Police and judiciary swapped places: only one of them can stay in order; the rest line up.
+  const pairs = alignHeadings(oldKeys, newKeys);
+  const matched = pairs.map(([i, j]) => { assert.equal(oldKeys[i], newKeys[j]); return oldKeys[i]; });
+  assert.equal(matched.length, 3);
+  assert.deepEqual([matched[0], matched[2]], ["assessment", "bibliography"]);
+  assert.ok(["police", "judiciary"].includes(matched[1]));
+  for (let k = 1; k < pairs.length; k++) assert.ok(pairs[k][0] > pairs[k - 1][0] && pairs[k][1] > pairs[k - 1][1]);
+  assert.deepEqual(alignHeadings(["", "a"], ["", "b"]), []);
+  assert.deepEqual(alignHeadings([], ["a"]), []);
+});
+
+test("linked scrolling goes through the shared headings and moves in proportion between them", () => {
+  // Shared headings at 1000/400 and 3000/2400; the texts end (less a screen) at 5000 and 2600.
+  const pts = increasing([[0, 0], [1000, 400], [3000, 2400], [2500, 9999], [5000, 2600]]);
+  assert.deepEqual(pts, [[0, 0], [1000, 400], [3000, 2400], [5000, 2600]]);       // one that goes backwards is dropped
+  assert.equal(mapThrough(pts, -50), 0);
+  assert.equal(mapThrough(pts, 500), 200);
+  assert.equal(mapThrough(pts, 1000), 400);
+  assert.equal(mapThrough(pts, 2000), 1400);
+  assert.equal(mapThrough(pts, 4000), 2500);
+  assert.equal(mapThrough(pts, 99999), 2600);
+  // The way back (which page position shows a given place in the other text) is the same map, flipped.
+  const back = increasing(pts.map(([x, y]) => [y, x]));
+  assert.equal(mapThrough(back, 1400), 2000);
+  assert.equal(mapThrough([], 10), 0);
+});

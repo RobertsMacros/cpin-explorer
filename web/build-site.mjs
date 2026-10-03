@@ -16,12 +16,13 @@ const INCLUDE = [
   "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search",
   "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data",
   "prototypes/package.json",
-  "assets/roberts-macros",
+  "assets/cpin-explorer", "assets/roberts-macros",
   "data/countries", "data/images/manifest.json", "data/images/files",
 ];
-// Never shipped: development screenshots, sample exports, and the 23 MB file the search index is built from.
+// Never shipped: development screenshots, sample exports, the 23 MB file the search index is built
+// from, and the export's similarity cache.
 const EXCLUDE = [/\/screenshots(\/|$)/, /^prototypes\/saved\/samples(\/|$)/, /^prototypes\/data\/search-records\.jsonl$/,
-  /(^|\/)\.DS_Store$/, /(^|\/)\.tmp-/];
+  /^prototypes\/data\/series\/similarity-cache\.json$/, /(^|\/)\.DS_Store$/, /(^|\/)\.tmp-/];
 
 const REQUIRED = ["prototypes/dashboard/data.json", "prototypes/data/series", "prototypes/search/pagefind", "data/images/files"];
 for (const rel of REQUIRED) {
@@ -34,7 +35,7 @@ await mkdir(OUT, { recursive: true });
 const keep = (src) => !EXCLUDE.some((re) => re.test(path.relative(ROOT, src).split(path.sep).join("/")));
 for (const rel of INCLUDE) await cp(path.join(ROOT, rel), path.join(OUT, rel), { recursive: true, filter: keep });
 
-await writeFile(path.join(OUT, "_redirects"), "/ /prototypes/dashboard/ 302\n");
+await writeFile(path.join(OUT, "_redirects"), "/ /prototypes/dashboard/ 302\n/favicon.ico /assets/cpin-explorer/favicon.svg 302\n");
 // noindex on every response. robots.txt deliberately does not block pages: a crawler that can't fetch
 // a page never sees its noindex, and may still list the bare URL. It does keep bots off the bulk data.
 await writeFile(path.join(OUT, "_headers"), `/*
@@ -51,9 +52,14 @@ await writeFile(path.join(OUT, "robots.txt"), "User-agent: *\nDisallow: /data/\n
 await writeFile(path.join(OUT, "404.html"), `<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex"><title>Not found · CPIN Explorer</title>
+<link rel="icon" type="image/svg+xml" href="/assets/cpin-explorer/favicon.svg">
 <link rel="stylesheet" href="/prototypes/shared/theme.css">
-<style>main{max-width:40rem;margin:18vh auto;padding:0 1rem}h1{font-family:var(--font-pixel,monospace);color:var(--blue)}</style>
-</head><body><main><p class="eyebrow">CPIN Explorer</p><h1>Not found</h1>
+<style>body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text)}header{padding:.9rem clamp(1rem,2.4vw,2.75rem);border-bottom:1px solid var(--line)}
+main{max-width:40rem;margin:16vh auto;padding:0 1rem}h1{font-family:var(--font-display,monospace);font-weight:400;font-size:2.6rem;color:var(--blue);margin:.2rem 0 1rem}</style>
+<link rel="stylesheet" href="/prototypes/shared/brand.css">
+</head><body>
+<header><a class="brand" href="/prototypes/dashboard/" aria-label="CPIN Explorer home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="/assets/cpin-explorer/mark.svg#mark"/></svg><span class="brand-name"><b>CPIN</b>EXPLORER</span></a></header>
+<main><p class="eyebrow">CPIN Explorer</p><h1>Not found</h1>
 <p>That page isn't here. <a href="/prototypes/dashboard/">Go to the globe</a>.</p></main></body></html>
 `);
 

@@ -1,5 +1,6 @@
 /* Report page: one report, every edition held, read verbatim; history band, redline in place,
-   saved highlights and citations.
+   saved highlights and citations. Everything above the text keeps one height whatever the edition shown
+   (single lines cut with an ellipsis, a caption box of fixed height), so stepping or Play moves nothing.
    Tokens, fonts and components (.tag, .eyebrow, .btn, .numeral, .pop-in) come from ../shared/theme.css;
    the slider and rolling digits from ../shared/timeline.css; link status tags from ../shared/link-status.css.
    The saved page (../saved/) reuses the header, footer, citation and segmented-control styles. */
@@ -24,6 +25,7 @@ html { scroll-padding-top: calc(var(--stick-top, var(--top-h)) + var(--bar-h, 0p
 .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .spacer { flex: 1; }
 body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; overflow-x: hidden; }
+body > * { min-width: 0; }                 /* a one-line caption or bar must never widen the page: it is cut short instead */
 .skip { position: absolute; left: -999px; top: .5rem; z-index: 60; background: var(--blue); color: var(--blue-ink); padding: .5rem .8rem; font-family: var(--font-mono); font-size: .8rem; }
 .skip:focus { left: .5rem; }
 
@@ -127,6 +129,7 @@ canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height:
 .doc .govspeak > .cv:nth-child(2) { animation-delay: 60ms; }
 .doc .govspeak > .cv:nth-child(3) { animation-delay: 120ms; }
 @keyframes doc-in { from { opacity: 0; transform: translateY(.6rem); filter: blur(3px); } }
+.doc.is-entered .govspeak > .cv:nth-child(-n+3) { animation: none; }     /* another edition: no lift, the text keeps its place */
 /* Long notes: top-level chunks skip rendering while off screen. Each chunk reaches into the gutter so
    hanging paragraph numbers sit inside its paint box. */
 .doc .cv { display: flow-root; content-visibility: auto; margin-left: calc(-1 * var(--gutter)); padding-left: var(--gutter); }
@@ -299,7 +302,7 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .seg { position: relative; display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line-strong); background: var(--surface); isolation: isolate; }
 .seg button {
   position: relative; z-index: 1; min-height: 1.9rem; padding: 0 .7rem; border: 0; border-radius: 0; background: none; cursor: pointer;
-  font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2);
+  font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap;
   transition: color var(--t) var(--ease);
 }
 .seg button[aria-checked="true"] { color: var(--blue-ink); }
@@ -311,7 +314,13 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .rail-head { display: flex; align-items: baseline; justify-content: space-between; gap: .6rem; padding-bottom: .55rem; margin-bottom: .75rem; border-bottom: 1px solid var(--line); }
 .rail-head .eyebrow { margin: 0; }
 .rail-head .numeral { font-size: 1.1rem; color: var(--blue); line-height: 1; }
-.rail-style { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin-bottom: .9rem; }
+/* Citation style: "Full (OSCOLA)" | "Short (tribunal)", and one line saying what the chosen one produces. */
+.rail-style { display: grid; gap: .5rem; margin-bottom: .9rem; }
+.rail-style .eyebrow { margin: 0; }
+.rail-style .seg { width: 100%; }
+.pop .rail-style { display: flex; align-items: center; justify-content: space-between; gap: .6rem; margin: 0; }
+.pop .rail-style .seg { width: auto; }
+.seg-hint { margin: 0; font-family: var(--font-mono); font-size: .7rem; line-height: 1.45; color: var(--ink-2); }
 .saved-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
 .saved-item {
   display: grid; gap: .45rem; padding: .7rem .75rem .75rem; border: 1px solid var(--line); background: var(--surface);
@@ -436,78 +445,144 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .linklike:hover { text-decoration-color: currentColor; }
 .wide { width: 100%; padding-inline: var(--pad-x); }
 
-/* --- Masthead ---------------------------------------------------------------------------------------- */
-.masthead { padding-top: 1.4rem; }
+/* --- Masthead: the flag, the title, and one quiet line about the edition shown ------------------------
+   Every line has a fixed height (the line about the edition is one line, cut with an ellipsis if it must be),
+   so nothing below moves when the edition changes. "Verbatim" and "Sources" are chips that open a small panel. */
+.masthead { padding-top: 1.6rem; }
 .masthead > * { animation: pop-in var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
+.mh-row { position: relative; z-index: 27; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .4rem 1.5rem; }
+.mh-row > .mh-id:first-child { grid-column: 1 / -1; }
+.mh-id { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: .45rem; }
+.mh-eyebrow { display: flex; align-items: center; gap: .6rem; height: 1.1rem; margin: 0; white-space: nowrap; }
 /* The way back to the country: a plain link, no box (country names are never boxed). */
-.masthead .back { display: inline-flex; min-height: 0; margin: 0 0 .9rem; padding: .2rem 0; border: 0; background: none; color: var(--blue); font-size: .76rem; letter-spacing: .04em; }
-.masthead .back:hover { color: var(--blue); text-decoration: underline; text-underline-offset: .25em; }
-.mh-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .4rem 1.5rem; }
-.mh-row > .mh-id:first-child { grid-column: 1 / 3; }
-.mh-id { min-width: 0; display: grid; gap: .4rem; justify-items: start; }
-.mh-id .eyebrow { margin: 0; }
+.mh-back { color: var(--blue); }
+.mh-back:hover { text-decoration: underline; text-underline-offset: .25em; }
+.mh-back { flex: none; }
+.mh-kind { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.mh-kind::before { content: "·"; margin-right: .6rem; color: var(--ink-3); }
 .report-title {
   margin: 0; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.1rem, 3.1vw, 3.8rem); line-height: 1.02;
   letter-spacing: .06em; color: var(--blue); text-transform: uppercase; text-wrap: balance; overflow-wrap: anywhere;
 }
-.masthead .note-verbatim { margin: .05rem 0 0; max-width: 90ch; }
-.masthead .meta-line { margin: .25rem 0 0; }
+.mh-meta { display: flex; align-items: center; gap: .5rem 1rem; min-height: 1.9rem; }
+.masthead .meta-line { flex: 1 1 auto; min-width: 0; display: block; margin: 0; line-height: 1.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.masthead .meta-line > * + * { margin-left: .6rem; }
 .meta-line a { white-space: nowrap; }
-.sources-line { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; margin: 0; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); }
-.sources-line[hidden] { display: none; }
-.sources-line .tag { font-size: .56rem; }
-.mh-cta { align-self: end; }
-.latest-btn { min-height: 2.6rem; padding: 0 1.1rem; font-size: .8rem; }
-.latest-btn.is-here { background: var(--surface); border-color: var(--line-strong); color: var(--ink-3); cursor: default; filter: none; }
-.latest-btn.is-here::before { content: ""; width: .45rem; height: .45rem; background: var(--blue); margin-right: .15rem; }
-.mh-notice .notice { max-width: 120ch; margin-top: 1rem; }
-.mh-notice .notice:not(.notice--gone) { font-size: .8rem; }
+.meta-line .m-s { display: none; }
+.mh-chips { position: relative; flex: none; display: flex; align-items: center; gap: .45rem; }
+.chip {
+  display: inline-flex; align-items: center; gap: .55em; height: 1.75rem; padding: 0 .6rem; border: 1px solid var(--line-strong); border-radius: 0;
+  background: var(--surface); color: var(--ink-2); cursor: pointer; white-space: nowrap;
+  font-family: var(--font-pixel); font-size: .62rem; line-height: 1; letter-spacing: .1em; text-transform: uppercase;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+.chip[hidden] { display: none; }
+.chip::after { content: ""; width: .32rem; height: .32rem; margin: -.15rem 0 0 .1rem; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); opacity: .7; transition: transform var(--t) var(--ease), margin var(--t) var(--ease); }
+.chip[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: .15rem; }
+.chip:hover, .chip[aria-expanded="true"] { border-color: var(--blue); color: var(--blue); }
+.chip[aria-expanded="true"] { background: var(--blue-wash); }
+#verbatimChip { border-color: var(--blue); color: var(--blue); }
+.chip-v { color: var(--ink); }
+.chip-v::before { content: "·"; margin-right: .55em; color: var(--ink-3); }
+.chip-v.is-dead { color: var(--del); }
+.chip:hover .chip-v:not(.is-dead), .chip[aria-expanded="true"] .chip-v:not(.is-dead) { color: inherit; }
+/* The panel a chip opens: under the chips, right-aligned, over whatever is below (nothing is pushed down). */
+.hpop {
+  position: absolute; z-index: 2; top: calc(100% + .55rem); right: 0; width: min(27rem, calc(100vw - 2 * var(--pad-x)));
+  display: grid; gap: .65rem; padding: .85rem .95rem .95rem; background: var(--surface); border: 1px solid var(--line-strong); box-shadow: var(--shadow);
+  font-family: var(--font-text); font-size: .84rem; line-height: 1.5; letter-spacing: 0; text-transform: none; color: var(--ink-2); white-space: normal;
+  transform-origin: 100% 0;
+}
+.hpop[hidden] { display: none; }
+.hpop.is-in { animation: pop-in var(--t) var(--ease) both; }
+.hpop p { margin: 0; }
+.hpop b { font-weight: 600; color: var(--ink); }
+.hpop a { text-decoration: underline; text-decoration-color: var(--blue-line); text-underline-offset: .2em; }
+.hpop-head { display: flex; align-items: center; gap: .6rem; font-family: var(--font-mono); font-size: .74rem; }
+.hpop-head .tag { font-size: .58rem; }
+.hpop-kv { display: grid; gap: .25rem; padding: .55rem .65rem; border: 1px solid var(--line); background: var(--sunken); font-family: var(--font-mono); font-size: .74rem; line-height: 1.45; color: var(--ink); overflow-wrap: anywhere; }
+.hpop-kv .eyebrow { font-size: .56rem; }
+.hpop-note { font-size: .78rem; }
+.hpop-counts { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .3rem; }
+.hpop-counts li { padding: .22rem .5rem; border: 1px solid var(--line); font-family: var(--font-mono); font-size: .74rem; color: var(--ink); white-space: nowrap; }
+.hpop-counts li.is-dead { color: var(--del); border-color: color-mix(in oklab, var(--del) 45%, var(--bg)); background: var(--del-wash); }
+.hpop .btn { min-height: 2.1rem; font-size: .74rem; }
+.masthead .notice--gone { max-width: 120ch; margin-top: 1.1rem; }
 
-/* --- History band ----------------------------------------------------------------------------------- */
-.history { margin-top: 1.5rem; }
+/* --- History band -----------------------------------------------------------------------------------
+   Head: the title, how much is held, then All editions (a drop-down), Play and Hide. Body: the date the handle
+   is on, what changed then (the Home Office's words), and the timeline. The date column, the caption and each
+   of its lines have fixed sizes, so stepping or playing through editions moves nothing. */
+.history { margin-top: 1.4rem; --asat-fs: clamp(1.7rem, 1.05rem + 1.2vw, 2.6rem); }
 .history[hidden] { display: none; }
 .hist-frame { border: 1px solid var(--line); background: var(--surface); }
-.hist-head { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .9rem; padding: .7rem 1.1rem; }
-.hist-head .eyebrow { color: var(--blue); }
-.hist-count { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); }
-.hist-mini { display: none; font-family: var(--font-pixel); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+.hist-head { position: relative; display: flex; align-items: center; gap: .4rem .5rem; min-height: 3.5rem; padding: .6rem 1.1rem; }
+.hist-head .eyebrow { color: var(--blue); margin-right: .4rem; }
+.hist-count { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.hist-mini { display: none; margin-left: .4rem; font-family: var(--font-pixel); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
 .hist-closed .hist-mini { display: inline; animation: pop-in var(--t) var(--ease) both; }
 .hist-instant .hist-mini { animation: none; }
-.tl-hint { font-family: var(--font-mono); color: var(--ink-3); font-size: .7rem; display: inline-flex; gap: .3rem; align-items: center; }
-.hist-closed .tl-hint { display: none; }
-.play { min-height: 2.25rem; gap: .5rem; }
+.hist-head .btn { min-height: 2.25rem; flex: none; }
+/* Play is the one button with a box; the two beside it are quiet. */
+.clog-btn, .hist-toggle { gap: .35rem; padding: 0 .65rem; border-color: transparent; background: none; color: var(--ink-2); }
+.clog-btn:hover, .hist-toggle:hover, .clog-btn[aria-expanded="true"] { border-color: transparent; background: var(--blue-wash); color: var(--blue); }
+.clog-btn svg, .hist-toggle svg { width: .85rem; height: .85rem; transition: transform var(--t) var(--ease); }
+.clog-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+.clog-btn .lbl-short { display: none; }
+.hist-closed .clog-wrap { display: none; }
+.play { gap: .5rem; min-width: 9.6rem; }
 .play svg { width: .95rem; height: .95rem; }
 .play .i-pause { display: none; }
 .play[aria-pressed="true"] .i-play { display: none; }
 .play[aria-pressed="true"] .i-pause { display: block; }
 .play[aria-pressed="true"] { border-color: var(--blue); color: var(--blue); background: var(--blue-wash); }
 .play:disabled { opacity: .4; cursor: default; }
-.hist-toggle { min-height: 2.25rem; gap: .35rem; padding: 0 .7rem; }
-.hist-toggle svg { width: .85rem; height: .85rem; transition: transform var(--t) var(--ease); }
 .hist-closed .hist-toggle svg { transform: rotate(180deg); }
 .hist-body { display: grid; grid-template-rows: 1fr; border-top: 1px solid var(--line); transition: grid-template-rows var(--t-slow) var(--ease), border-color var(--t) var(--ease); }
 .hist-closed .hist-body { grid-template-rows: 0fr; border-top-color: transparent; }
 .hist-instant .hist-body { transition: none; }
 .hist-clip { min-height: 0; overflow: hidden; }
-.hist-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(19rem, 31rem); gap: 1rem 2.6rem; align-items: start; padding: 1.05rem 1.1rem 0; }
-.hist-clip > .rs { margin: .2rem 1.1rem .7rem; }
-.asat { display: flex; align-items: center; gap: .85rem; margin: 0; }
-.asat-label { min-width: 4.7em; justify-content: center; font-size: .64rem; transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease); }
+.hist-grid { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .8rem clamp(1.6rem, 3.2vw, 4rem); align-items: start; padding: 1.15rem 1.1rem 0; }
+.hist-clip > .rs { margin: .1rem 1.1rem .7rem; }
+.asat { display: grid; gap: .6rem; justify-items: start; align-content: start; width: calc(var(--asat-fs) * 6.5); margin: 0; }
+.asat-label { min-width: 4.7em; justify-content: center; font-size: .62rem; transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease); }
 .asat-label.is-from { background: var(--surface); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
-.asat-roll { font-family: var(--font-pixel); font-size: clamp(2rem, 1.2rem + 1.7vw, 3.2rem); line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); }
+.asat-roll { font-family: var(--font-pixel); font-size: var(--asat-fs); line-height: 1; letter-spacing: .03em; text-transform: uppercase; color: var(--ink); }
 
-/* What changed: the Home Office's statement (or GOV.UK's note), verbatim, then a computed line. Old and
-   new captions share one grid cell and crossfade. */
-.wc { display: grid; margin: .95rem 0 0; max-width: 66rem; }
+/* What changed: the Home Office's statement (or GOV.UK's note), verbatim, then a short computed line. Old and
+   new captions share one grid cell and crossfade. The box has one height: a label line, room for two lines of
+   statement (95% of them fit; three lines on phones), the computed line. A longer statement, or a table, fades
+   out and offers "More", which opens it. */
+.wc {
+  --wc-lines: 2; --wc-fs: clamp(1rem, .9rem + .26vw, 1.22rem); --wc-lh: calc(var(--wc-fs) * 1.36); --wc-text-h: calc(var(--wc-lines) * var(--wc-lh) + .1rem);
+  --wc-calc-h: 1.4rem;
+  display: grid; align-content: start; max-width: 74rem; margin: 0; overflow: hidden;
+  height: calc(1.5rem + .45rem + var(--wc-text-h) + .5rem + var(--wc-calc-h));
+}
+.wc.is-open { height: auto; }
 .wc-in { grid-area: 1 / 1; min-width: 0; }
-.wc-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; margin: 0 0 .55rem; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }
+.wc-meta { display: flex; align-items: center; gap: .6rem; height: 1.5rem; margin: 0 0 .45rem; overflow: hidden; white-space: nowrap; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }
+.wc-meta > * { flex: none; }
 .wc-meta .tag { font-size: .58rem; }
 .wc-meta b { color: var(--ink); font-weight: 500; }
 .wc-note { color: var(--ink-3); }
+.wc-box { position: relative; }
 .wc-text {
-  margin: 0; padding: .05rem 0 .05rem .95rem; border-left: 2px solid var(--blue);
-  font-size: clamp(1.02rem, .9rem + .32vw, 1.32rem); line-height: 1.36; letter-spacing: -.01em; font-weight: 500; color: var(--ink); text-wrap: pretty;
+  max-height: var(--wc-text-h); margin: 0; padding: .05rem 0 .05rem .95rem; overflow: hidden; border-left: 2px solid var(--blue);
+  font-size: var(--wc-fs); line-height: 1.36; letter-spacing: -.01em; font-weight: 500; color: var(--ink); text-wrap: pretty;
 }
+.wc-in.is-clipped .wc-text { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 1.7rem), transparent); mask-image: linear-gradient(to bottom, #000 calc(100% - 1.7rem), transparent); }
+.wc.is-open .wc-text { max-height: none; -webkit-mask-image: none; mask-image: none; }
+.wc-more {
+  display: none; position: absolute; right: 0; bottom: 0; align-items: center; height: 1.5rem; padding: 0 .55rem; border: 1px solid var(--line-strong); border-radius: 0;
+  background: var(--surface); color: var(--blue); cursor: pointer; font-family: var(--font-mono); font-size: .7rem;
+  transition: border-color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+.wc-in.is-clipped .wc-more { box-shadow: -.9rem 0 .8rem .1rem var(--surface); }      /* the words run out softly under it */
+.wc.is-open .wc-more { box-shadow: none; }
+.wc-more:hover { border-color: var(--blue); background: var(--blue-wash); }
+.wc-in.is-clipped .wc-more { display: inline-flex; }
+.wc.is-open .wc-more { position: static; margin: .45rem 0 0 .95rem; }
 .wc-text p { margin: 0 0 .4rem; }
 .wc-text > :last-child, .wc-text li > p:last-child { margin-bottom: 0; }
 .wc-text ul, .wc-text ol { margin: .15rem 0 .45rem; padding-left: 1.2rem; }
@@ -517,12 +592,13 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .wc-text li > p { margin: 0; }
 .wc-text.none { color: var(--ink-3); font-weight: 400; border-left-color: var(--line-strong); }
 .wc-date { font-family: var(--font-mono); font-size: .68rem; font-weight: 400; letter-spacing: 0; color: var(--ink-3); white-space: nowrap; }
-/* Tables in a change statement (Sudan v3.0: where "15c" is met, by state), compact and scrollable. */
-/* A statement with a table: the words on the left, the table beside them (stacked on narrow screens). */
+/* A statement with a table (Sudan v3.0: where "15c" is met, by state): the words on the left, the table beside
+   them in its own scroller (stacked on narrow screens). */
 .wc-text:has(> .wc-tbl) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 2rem; align-items: start; }
 .wc-text:has(> .wc-tbl) > :not(.wc-tbl) { grid-column: 1; }
-.wc-text:has(> .wc-tbl) > .wc-tbl { grid-column: 2; grid-row: 1 / span 12; margin-top: 0; }
-.wc-tbl { width: max-content; max-width: 100%; max-height: 15.5rem; margin: .6rem 0 .35rem; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line); background: var(--bg); scrollbar-width: thin; }
+.wc-text:has(> .wc-tbl) > .wc-tbl { grid-column: 2; grid-row: 1 / span 12; margin: 0; }
+.wc-tbl { width: max-content; max-width: 100%; max-height: var(--wc-text-h); margin: .6rem 0 .35rem; overflow: auto; overscroll-behavior: contain; border: 1px solid var(--line); background: var(--bg); scrollbar-width: thin; }
+.wc.is-open .wc-tbl { max-height: 15.5rem; }
 .wc-tbl table { border-collapse: collapse; font-family: var(--font-mono); font-size: .74rem; font-weight: 400; line-height: 1.35; letter-spacing: 0; font-variant-numeric: tabular-nums; }
 .wc-tbl th, .wc-tbl td { padding: .24rem .8rem .22rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; white-space: nowrap; }
 .wc-tbl thead th { position: sticky; top: 0; z-index: 1; background: var(--sunken); font-family: var(--font-pixel); font-weight: 400; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); box-shadow: inset 0 -1px 0 var(--line); }
@@ -531,28 +607,40 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .wc-tbl tr:last-child > * { border-bottom: 0; }
 .wc-tbl tbody tr:hover > * { background: var(--blue-wash); }
 .wc-tbl:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.wc-calc { margin: .6rem 0 0; display: flex; flex-wrap: wrap; gap: .3rem .55rem; align-items: baseline; font-family: var(--font-mono); font-size: .76rem; line-height: 1.5; color: var(--ink-2); }
-.wc-calc .tag { font-size: .55rem; transform: translateY(-.08em); }
+/* The computed line: one line, secondary; the fuller version is its tooltip. */
+.wc-calc { display: flex; align-items: center; gap: .55rem; height: var(--wc-calc-h); margin: .5rem 0 0; white-space: nowrap; font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }
+.wc-calc .tag { flex: none; font-size: .52rem; }
+.wc-calc-t { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.wc-calc .rw { font-weight: 500; color: var(--ink); }
 .tag--calc { background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
 .ni { color: var(--ins); } .nd { color: var(--del); }
 a.ref { color: var(--blue); text-decoration: underline; text-decoration-color: var(--blue-line); text-decoration-thickness: 1px; text-underline-offset: .18em; cursor: pointer; transition: background-color var(--t-fast) var(--ease); }
 a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash); }
 
-/* Change log: every edition and update, newest first; the slider and Play highlight it. */
-.clog { min-width: 0; }
-.clog .eyebrow { margin: 0 0 .5rem; font-size: .62rem; }
-.clog ol { list-style: none; margin: 0; padding: 0; max-height: 12.5rem; overflow: auto; overscroll-behavior: contain; border-top: 1px solid var(--line); scrollbar-width: thin; position: relative; }
+/* All editions: every edition and update, newest first, in a drop-down under its button. */
+.clog-wrap { position: relative; flex: none; }
+.clog-wrap[hidden] { display: none; }
+.clog {
+  position: absolute; z-index: 27; top: calc(100% + .45rem); right: 0; width: min(31rem, calc(100vw - 2 * var(--pad-x) - 2rem)); min-width: 0;
+  padding: .8rem 0 0; background: var(--surface); border: 1px solid var(--line-strong); box-shadow: var(--shadow); transform-origin: 100% 0;
+}
+.clog[hidden] { display: none; }
+.clog.is-in { animation: pop-in var(--t) var(--ease) both; }
+.clog .eyebrow { margin: 0 .85rem .6rem; font-size: .6rem; color: var(--ink-2); }
+.clog ol { list-style: none; margin: 0; padding: 0; max-height: min(24rem, 54vh); overflow: auto; overscroll-behavior: contain; border-top: 1px solid var(--line); scrollbar-width: thin; position: relative; }
 .clog li { margin: 0; }
 .clog button {
   display: grid; grid-template-columns: 3.1rem minmax(0, 1fr); gap: .12rem .7rem; width: 100%; text-align: left; font: inherit; color: inherit;
-  padding: .5rem .6rem .5rem .65rem; border: 0; border-bottom: 1px solid var(--line); border-left: 2px solid transparent; background: none; cursor: pointer;
+  padding: .55rem .8rem .55rem .75rem; border: 0; border-bottom: 1px solid var(--line); border-left: 2px solid transparent; background: none; cursor: pointer;
   transition: background-color var(--t) var(--ease), border-color var(--t) var(--ease), opacity var(--t) var(--ease);
 }
+.clog li:last-child button { border-bottom: 0; }
 .clog button:hover { background: var(--sunken); }
 .clog button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
 .clog .cl-v { grid-row: 1 / span 2; font-family: var(--font-pixel); font-size: .78rem; letter-spacing: .05em; color: var(--ink-2); padding-top: .12rem; transition: color var(--t) var(--ease); }
 .clog .cl-m { display: flex; flex-wrap: wrap; gap: .2rem .45rem; align-items: center; font-family: var(--font-mono); font-size: .66rem; color: var(--ink-3); }
 .clog .cl-m .tag { font-size: .5rem; }
+.clog .cl-m > span:empty { display: none; }
 .clog .cl-t { font-size: .82rem; line-height: 1.4; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; transition: color var(--t) var(--ease); }
 .clog .cl-t.none { color: var(--ink-3); }
 .clog li.is-ev .cl-v { color: var(--ink-3); font-family: var(--font-mono); }
@@ -572,16 +660,28 @@ a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash);
 }
 .bar[hidden] { display: none; }
 .bar.is-stuck { box-shadow: 0 10px 22px -20px rgb(16 24 40 / .55); }
-.bar-in { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem .9rem; min-height: 3.3rem; padding: .45rem var(--pad-x); }
-.ed-chip { display: inline-flex; align-items: center; gap: .5rem; min-width: 0; font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); white-space: nowrap; }
+/* One line, always: the bar never wraps, so it has one height whatever the edition or the pair of editions
+   (the less important parts drop out as the window narrows; see the breakpoints at the end). */
+.bar-in { display: flex; flex-wrap: nowrap; align-items: center; gap: .55rem .9rem; min-height: 3.3rem; padding: .45rem var(--pad-x); }
+.bar-in > * { flex: none; }
+.bar-in > .spacer { flex: 1 1 0; min-width: 0; }
+.ed-chip { flex: 0 1 auto; display: inline-flex; align-items: center; gap: .5rem; min-width: 0; overflow: hidden; font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); white-space: nowrap; }
+.ed-chip > * { flex: none; }
+.ed-chip > .ed-when { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .ed-chip b { font-family: var(--font-pixel); font-weight: 400; font-size: .86rem; letter-spacing: .05em; color: var(--ink); }
 .ed-chip .tag { font-size: .58rem; }
+.ed-chip b.ed-date { font-family: var(--font-mono); font-weight: 500; font-size: .78rem; letter-spacing: 0; }   /* an edition with no version number: its date */
 .ed-chip .tag.ver { text-transform: none; font-size: .66rem; }
 .ed-chip svg { width: .9rem; height: .9rem; color: var(--ink-3); flex: none; }
 .ed-when { color: var(--ink-2); }
-.latest-mini { min-height: 2.1rem; padding: 0 .7rem; font-size: .72rem; animation: pop-in var(--t) var(--ease) both; }
+/* The one way back to the latest edition: beside the edition it leaves, in the bar that stays on screen. */
+.latest-mini { min-height: 2.1rem; padding: 0 .8rem; font-size: .74rem; white-space: nowrap; animation: pop-in var(--t) var(--ease) both; }
 .latest-mini[hidden] { display: none; }
-.cmp { display: none; align-items: center; gap: .5rem .9rem; flex-wrap: wrap; }
+.latest-mini .lm-short { display: none; }
+.ed-chip .tag-s { display: none; }                   /* phones: the short form of "not current guidance" */
+/* A rewrite shown as a notice or side by side has no redline: no counts, no stepping, no inline/side-by-side. */
+.bar.no-redline .vseg, .bar.no-redline .stats, .bar.no-redline .nav { display: none; }
+.cmp { display: none; align-items: center; gap: .5rem .9rem; flex-wrap: nowrap; }
 .bar.is-changes .cmp { display: inline-flex; animation: pop-in var(--t) var(--ease) both; }
 .vseg { position: relative; display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line-strong); background: var(--surface); isolation: isolate; }
 .vseg button {
@@ -624,15 +724,50 @@ a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash);
 .doc.is-busy { opacity: .45; filter: saturate(.6); }
 
 /* --- Above the text: which edition, or which comparison ---------------------------------------------- */
+/* Only while changes are shown: one line of fixed height (the legend, or how a rewrite is being shown), so the
+   text below keeps its place from one pair of editions to the next. Reading an edition, there is no note. */
 .edition-note {
-  display: flex; flex-wrap: wrap; align-items: center; gap: .55rem .8rem; margin: 0 0 1.8rem var(--gutter); padding: .7rem .9rem;
-  border-left: 2px solid var(--blue); background: var(--blue-wash); font-size: .86rem; line-height: 1.5; color: var(--ink);
+  display: flex; align-items: center; gap: .7rem; height: 2.7rem; margin: 0 0 1.6rem var(--gutter); padding: 0 .9rem; overflow: hidden;
+  border-left: 2px solid var(--blue); background: var(--blue-wash); font-size: .84rem; line-height: 1.4; color: var(--ink); white-space: nowrap;
 }
 .edition-note[hidden] { display: none; }
-.edition-note > span:not(.tag) { flex: 1 1 22rem; min-width: 0; }
-.edition-note .tag { flex: none; }
-.edition-note .btn { min-height: 2.1rem; font-size: .74rem; }
+.edition-note .en-t { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.edition-note .tag, .edition-note .linklike { flex: none; }
+.edition-note .tag { font-size: .58rem; }
 .edition-note b { font-weight: 600; }
+.reader.is-sbs .edition-note { margin-left: 0; }
+
+/* --- A rewrite: a calm notice instead of a wall of marks -------------------------------------------------- */
+.rw-notice {
+  display: grid; gap: .85rem; justify-items: start; max-width: 46rem; margin: 0 0 4rem; padding: 1.5rem 1.6rem 1.35rem;
+  border: 1px solid var(--line-strong); background: var(--surface); animation: rw-in var(--t-slow) var(--ease) both;
+}
+@keyframes rw-in { from { opacity: 0; filter: blur(4px); } }       /* it fades in where it sits: no lift, nothing jumps */
+.rw-notice .tag { font-size: .6rem; }
+.rw-notice p { margin: 0; }
+.rw-title { font-size: 1.24rem; line-height: 1.4; font-weight: 560; letter-spacing: -.014em; color: var(--ink); text-wrap: pretty; }
+.rw-sub { font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); }
+.rw-actions { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .25rem; }
+.rw-actions .btn { min-height: 2.5rem; }
+.rw-foot { display: flex; gap: .6rem; align-items: baseline; padding-top: .9rem; border-top: 1px solid var(--line); width: 100%; font-family: var(--font-mono); font-size: .72rem; line-height: 1.5; color: var(--ink-2); }
+.rw-foot .tag { flex: none; font-size: .52rem; transform: translateY(-.1em); }
+
+.reader.is-notice > .toc, .reader.is-notice > .rail { visibility: hidden; }
+
+/* --- A rewrite read side by side: two clean editions, no marks ------------------------------------------
+   The newer edition is in the page's flow; the older one is in a pane beside it that stays on screen and is
+   scrolled by reader.js to follow (syncPair): sections with the same heading meet at the top. */
+.doc.is-pair .sbs-head { height: 2.6rem; padding: 0; margin-bottom: 0; align-items: center; }
+.pv-cols { display: grid; grid-template-columns: 1fr 1fr; column-gap: 2rem; align-items: start; }
+.pv-pane {
+  position: sticky; top: calc(var(--stick-top, var(--top-h)) + var(--bar-h, 0px) + 2.6rem);
+  height: calc(100vh - var(--stick-top, var(--top-h)) - var(--bar-h, 0px) - 2.6rem); overflow: hidden;
+}
+.doc.is-pair .sbs-cell { padding-top: 1.2rem; padding-bottom: 3rem; }
+.doc.is-pair .sbs-cell .cv { margin-left: -4rem; padding-left: 4rem; }
+.pv-pane .cv { content-visibility: visible; }                 /* laid out once, so the pane's positions are exact */
+.doc.is-pair .govspeak > .cv:nth-child(-n+3) { animation: none; }
+.pv-switch { display: none; }
 
 /* --- Flash on arrival from a caption reference ------------------------------------------------------- */
 .doc .ref-flash { animation: ref-flash 2.5s var(--ease) both; }
@@ -751,18 +886,30 @@ a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash);
 @media (max-width: 1199px) { .minimap { display: none; } }
 
 /* --- Responsive ---------------------------------------------------------------------------------------- */
+@media (max-width: 1599px) {
+  .bar.is-changes .ed-when { display: none; }            /* the dates are the version tags' tooltips */
+}
+@media (max-width: 1279px) {
+  .bar.is-changes .nav .pos, .bar.is-changes .stats .stat-w, .bar.is-changes .stats .dot, .bar.is-changes .stats > span:last-child { display: none; }
+  .bar.is-changes .nav .btn .lbl { display: none; }
+  .bar.is-changes .latest-mini .lm-long { display: none; }
+  .bar.is-changes .latest-mini .lm-short { display: inline; }
+}
 @media (max-width: 1199px) {
-  .hist-grid { grid-template-columns: minmax(0, 1fr); }
   .wc-text:has(> .wc-tbl) { display: block; }
-  .clog ol { max-height: 10rem; }
+  .wc-text:has(> .wc-tbl) > .wc-tbl { margin: .5rem 0 .2rem; }
 }
 @media (max-width: 899px) {
+  .bar.is-changes .stats { display: none; }
   .masthead { padding-top: 1.2rem; }
-  .mh-row { gap: 1rem; }
+  .mh-row { gap: 1rem; align-items: start; }
+  /* The line about the edition, then the chips on a line of their own (both of fixed height). */
+  .mh-meta { display: grid; gap: .35rem; }
+  .mh-chips { justify-self: start; position: static; }
+  .mh-id { position: relative; }
+  .hpop { left: 0; right: auto; width: min(27rem, 100%); transform-origin: 0 0; }
+  #verbatimChip { order: -1; }                                    /* first, so it keeps its place when the Sources chip changes width */
   .report-title { font-size: clamp(1.75rem, 7.4vw, 2.6rem); }
-  .mh-row { grid-template-columns: auto minmax(0, 1fr); align-items: start; }
-  .mh-cta { grid-column: 1 / -1; margin-top: .5rem; }
-  .latest-btn { width: 100%; }
   .bar-in { gap: .45rem .6rem; padding-block: .35rem; }
   .ed-chip .ed-when { display: none; }
   .vseg { display: none; }
@@ -775,30 +922,68 @@ a.ref:hover { text-decoration-color: currentColor; background: var(--blue-wash);
   .doc.is-redline .cv { margin-left: -.95rem; padding-left: .95rem; }
   .edition-note { margin-left: 0; }
   .hist-head { padding: .6rem .8rem; }
-  .hist-grid { padding: .9rem .8rem 0; }
+  /* The date above the caption, both full width. */
+  .hist-grid { grid-template-columns: minmax(0, 1fr); padding: .9rem .8rem 0; }
+  .asat { display: flex; align-items: center; gap: .8rem; width: auto; }
   .hist-clip > .rs { margin-inline: .8rem; }
-  .tl-hint { display: none; }
+  /* Side by side becomes one edition at a time, with a switch that stays in view. */
+  .reader.is-sbs { grid-template-columns: minmax(0, 1fr); }
+  .doc.is-pair .sbs-head { display: none; }
+  .pv-switch {
+    position: sticky; top: calc(var(--stick-top, var(--top-h)) + var(--bar-h, 0px)); z-index: 5; display: grid; grid-template-columns: 1fr 1fr;
+    margin: 0 0 1.2rem; background: var(--bg); border: 1px solid var(--line-strong);
+  }
+  .pv-switch button {
+    display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 2.7rem; padding: 0 .6rem; border: 0; border-radius: 0; background: none;
+    color: var(--ink-2); cursor: pointer; font-family: var(--font-mono); font-size: .74rem; white-space: nowrap; overflow: hidden;
+    transition: background-color var(--t) var(--ease), color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+  }
+  .pv-switch button + button { border-left: 1px solid var(--line-strong); }
+  .pv-switch button b { font-weight: 500; color: inherit; }
+  .pv-switch .tag { font-size: .54rem; }
+  .pv-switch button[aria-checked="true"] { background: var(--blue-wash); color: var(--ink); box-shadow: inset 0 -2px 0 var(--blue); }
+  .pv-cols { display: block; }
+  .pv-pane { position: static; height: auto; overflow: visible; }
+  .doc.is-pair .sbs-cell { max-width: none; padding: 0; }
+  .doc.is-pair .sbs-cell .cv { margin-left: 0; padding-left: 0; }
+  .pv[data-show="new"] .pv-pane, .pv[data-show="old"] .sbs-cell.new { display: none; }
+  .rw-notice { padding: 1.2rem 1.1rem 1.1rem; }
+  .rw-title { font-size: 1.12rem; }
 }
 @media (max-width: 599px) {
-  .clog { display: none; }
-  .latest-mini { display: none; }
-  .bar.is-changes .stats { display: none; }
-  .latest-btn.is-here { display: none; }
-  .mh-cta:has(.is-here) { display: none; }
+  .bar.is-changes .latest-mini { display: none; }        /* no room beside the step buttons: "Hide changes", then "Latest" */
   .dotflag--hero { width: 3.6rem; }
-  .masthead .back { margin-bottom: .8rem; }
-  .mh-notice .notice:not(.notice--gone) { font-size: .76rem; }
+  .hpop { width: calc(100vw - 2 * var(--pad-x)); margin-left: calc(-3.6rem - 1rem); }      /* the full width, from under the flag */
+  .mh-row > .mh-id:first-child .hpop { margin-left: 0; }
+  .hist-head { flex-wrap: wrap; }
   .hist-count { flex-basis: 100%; order: 5; }
   .hist-head .spacer { display: none; }
-  .play { margin-left: auto; }
-  .asat-roll { font-size: 2rem; }
-  .wc-text { font-size: 1rem; }
+  .clog-wrap { position: static; margin-left: auto; }
+  .clog { left: .8rem; right: .8rem; width: auto; top: calc(100% - .4rem); }
+  .clog-btn .lbl-long, .play .lbl-x { display: none; }
+  .clog-btn .lbl-short { display: inline; }
+  .play { min-width: 6.4rem; }
+  .hist-toggle .lbl { display: none; }
+  .history { --asat-fs: 1.9rem; }
+  .wc { --wc-fs: 1rem; --wc-lines: 3; --wc-calc-h: 2.5rem; }
+  /* The computed line may take two lines here (its height is still fixed). */
+  .wc-calc { align-items: start; line-height: 1.25rem; }
+  .wc-calc .tag { margin-top: .22rem; }
+  .wc-calc-t { white-space: normal; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .meta-line .m-l { display: none; }
+  .meta-line .m-s { display: inline; }
   .switch .sw-lbl { font-size: .74rem; }
-  .latest-mini { padding: 0 .55rem; font-size: .68rem; }
+  .ed-chip .tag-x, .latest-mini .lm-long { display: none; }
+  .ed-chip .tag-s { display: inline; }
+  .ed-chip { gap: .35rem; }                           /* room for "Not current" beside the version */
+  .bar-in { column-gap: .4rem; }
+  .latest-mini .lm-short { display: inline; }
+  .latest-mini { padding: 0 .6rem; font-size: .7rem; }
+  .edition-note { font-size: .78rem; gap: .5rem; padding: 0 .7rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hist-body { transition: none; }
 }
 @media print {
-  .history, .bar, .edition-note .btn, .masthead .latest-btn { display: none !important; }
+  .history, .bar, .edition-note, .mh-chips { display: none !important; }
 }

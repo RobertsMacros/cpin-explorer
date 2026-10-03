@@ -77,7 +77,7 @@ export async function drawDotFlag(canvas, code, { cols = 12, reveal = false, int
     canvas.dataset.flagWidth = canvas.getBoundingClientRect().width || canvas.clientWidth || cols * 2;
   }
   const flagW = Number(canvas.dataset.flagWidth), flagH = (flagW * rows) / cols;
-  const pad = interactive && !reduced ? Math.round(flagW * 0.14) : 0;
+  const pad = interactive && !reduced ? Math.round(flagW * 0.22) : 0;
   if (pad) Object.assign(canvas.style, { width: `${flagW + 2 * pad}px`, margin: `-${pad}px` });
   const W = flagW + 2 * pad, H = flagH + 2 * pad;
   const dpr = Math.min(3, window.devicePixelRatio || 1);
@@ -131,18 +131,38 @@ export async function drawDotFlag(canvas, code, { cols = 12, reveal = false, int
 
 // Dots flee the pointer and spring back (slightly underdamped, so they overshoot and settle) when it
 // leaves; entering the flag sends a ripple out from that point. The loop runs only while dots move.
-const K = 150;                                              // spring stiffness
+const K = 190;                                              // spring stiffness
 
 // Tunable (prototypes/flags/ has sliders). strength scales the push and the ripple; reach is the
-// radius of influence as a share of the flag's width; bounce 0 = no overshoot, 1 = very springy.
-export const DEFAULT_SCATTER = { strength: 0.8, reach: 0.22, bounce: 0.6 };   // set by the owner, 2 Oct 2026
-export const scatterSettings = { ...DEFAULT_SCATTER };
-try {
-  Object.assign(scatterSettings, JSON.parse(globalThis.localStorage?.getItem("cpin-flag-scatter") || "{}"));
-} catch {}
+// radius of influence as a share of the flag's width (the ripple dies away over about twice that);
+// bounce 0 = no overshoot, 1 = very springy.
+// 3 Oct 2026, owner: first "stronger, with less reach" (1.2 / 0.14 / 0.6), then on seeing it "increase
+// strength, reduce reach again, increase bounce": a sharp, very local push with a lively spring-back.
+export const DEFAULT_SCATTER = { strength: 1.7, reach: 0.09, bounce: 0.8 };
+// The key carries a version: a value saved under earlier defaults or an earlier model must not silently
+// keep the old feel ("cpin-flag-scatter", 2 Oct 2026: 0.8 / 0.22 / 0.6; "-v2": 1.2 / 0.14 / 0.6).
+export const SCATTER_KEY = "cpin-flag-scatter-v3";
+const OLD_SCATTER_KEYS = ["cpin-flag-scatter", "cpin-flag-scatter-v2"];
+const SCATTER_RANGE = { strength: [0, 3], reach: [0.02, 0.4], bounce: [0, 1] };
+
+/** The saved settings (this version's key only), clamped to the sliders' ranges; older keys are dropped. */
+export function loadScatterSettings(storage) {
+  const settings = { ...DEFAULT_SCATTER };
+  try {
+    for (const key of OLD_SCATTER_KEYS) storage?.removeItem(key);
+    const saved = JSON.parse(storage?.getItem(SCATTER_KEY) || "{}");
+    for (const [name, [lo, hi]] of Object.entries(SCATTER_RANGE)) {
+      const v = Number(saved?.[name]);
+      if (saved?.[name] != null && Number.isFinite(v)) settings[name] = Math.min(hi, Math.max(lo, v));
+    }
+  } catch {}
+  return settings;
+}
+const storage = () => { try { return globalThis.localStorage; } catch { return null; } };
+export const scatterSettings = loadScatterSettings(storage());
 export function setScatterSettings(next) {
   Object.assign(scatterSettings, next);
-  try { globalThis.localStorage?.setItem("cpin-flag-scatter", JSON.stringify(scatterSettings)); } catch {}
+  try { storage()?.setItem(SCATTER_KEY, JSON.stringify(scatterSettings)); } catch {}
 }
 
 /** Advance every dot by dt seconds. state: { dots, mouse, ripple, flagW, pitch }. Returns total speed. */
@@ -150,13 +170,15 @@ export function scatterStep(state, dt, now) {
   const { strength, bounce } = scatterSettings;
   const reach = state.flagW * scatterSettings.reach;
   const C = 2 * (1 - 0.8 * bounce) * Math.sqrt(K);          // damping from the bounce setting
+  // The push no longer shrinks with the reach: a small reach still shoves the nearest dots well clear.
+  const shove = (0.3 * reach + 0.055 * state.flagW) * strength;
   let energy = 0;
   for (const d of state.dots) {
     let tx = 0, ty = 0;
     if (state.mouse) {
       const dx = d.x - state.mouse.x, dy = d.y - state.mouse.y, dist = Math.hypot(dx, dy) || 0.001;
       if (dist < reach) {
-        const push = (1 - dist / reach) ** 2 * reach * 0.6 * strength;
+        const push = (1 - dist / reach) ** 2 * shove;
         tx = (dx / dist) * push; ty = (dy / dist) * push;
       }
     }
@@ -164,9 +186,11 @@ export function scatterStep(state, dt, now) {
       const age = (now - state.ripple.t0) / 1000;
       const dx = d.x - state.ripple.x, dy = d.y - state.ripple.y, dist = Math.hypot(dx, dy) || 0.001;
       const front = age * state.flagW * 1.5;
-      const wave = Math.exp(-((dist - front) ** 2) / (2 * (state.pitch * 1.4) ** 2)) * Math.exp(-age * 2.4);
+      // A ring that travels out and dies away with distance (within about twice the reach) and with time.
+      const wave = Math.exp(-((dist - front) ** 2) / (2 * (state.pitch * 1.4) ** 2))
+        * Math.exp(-dist / (reach * 2.2)) * Math.exp(-age * 2.4) * 2.2;
       tx += (dx / dist) * wave * state.pitch * strength; ty += (dy / dist) * wave * state.pitch * strength;
-      if (age > 1.4) state.ripple = null;
+      if (age > 1.1) state.ripple = null;
     }
     d.vx += (K * (tx - d.ox) - C * d.vx) * dt;
     d.vy += (K * (ty - d.oy) - C * d.vy) * dt;
@@ -199,15 +223,67 @@ function attachScatter(canvas, geometry) {
   }
 }
 
-/** Render every <canvas class="dotflag"> under root that has not been drawn yet. */
-export function hydrateFlags(root = document, { force = false } = {}) {
-  return Promise.all([...root.querySelectorAll("canvas.dotflag")].map((canvas) => {
-    if (canvas.dataset.drawn && !force) return null;
-    canvas.dataset.drawn = "1";
-    return drawDotFlag(canvas, canvas.dataset.flag, {
-      cols: Number(canvas.dataset.cols) || 12,
-      reveal: canvas.hasAttribute("data-reveal") && !force,
-      interactive: canvas.hasAttribute("data-interactive"),
-    }).catch((e) => { canvas.dataset.error = String(e?.message || e); canvas.classList.add("dotflag--failed"); });
-  }));
+function hydrateOne(canvas, force) {
+  canvas.dataset.drawn = "1";
+  return drawDotFlag(canvas, canvas.dataset.flag, {
+    cols: Number(canvas.dataset.cols) || 12,
+    reveal: canvas.hasAttribute("data-reveal") && !force,
+    interactive: canvas.hasAttribute("data-interactive"),
+  }).catch((e) => { canvas.dataset.error = String(e?.message || e); canvas.classList.add("dotflag--failed"); });
+}
+
+// Lazy hydration: a flag is drawn when it comes into view, a few per frame, so a long list of them
+// (every country, a page of search results) never holds up whatever else is moving.
+const FRAME_BUDGET_MS = 3;
+const queue = new Set();
+let pumping = false, observer = null;
+const nextFrame = () => new Promise((resolve) => requestAnimationFrame(resolve));
+async function pump() {
+  pumping = true;
+  await nextFrame();
+  let t0 = performance.now();
+  while (queue.size) {
+    const canvas = queue.values().next().value;
+    queue.delete(canvas);
+    if (!canvas.isConnected) continue;
+    const force = canvas.dataset.force === "1";
+    delete canvas.dataset.force;
+    const drawn = hydrateOne(canvas, force);
+    if (force || !canvas.hasAttribute("data-reveal")) await drawn;      // a reveal animates on its own
+    if (performance.now() - t0 > FRAME_BUDGET_MS) { await nextFrame(); t0 = performance.now(); }
+  }
+  pumping = false;
+}
+function lazyObserver() {
+  observer ??= new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      observer.unobserve(entry.target);
+      queue.add(entry.target);
+    }
+    if (queue.size && !pumping) pump();
+  }, { rootMargin: "120px" });
+  return observer;
+}
+
+/**
+ * Render every <canvas class="dotflag"> under root that has not been drawn yet.
+ * lazy: draw each flag only once it is on screen, spreading the drawing over frames.
+ * force: draw again (a theme change).
+ */
+export function hydrateFlags(root = document, { force = false, lazy = false } = {}) {
+  const canvases = [...root.querySelectorAll("canvas.dotflag")].filter((canvas) => force || !canvas.dataset.drawn);
+  if (lazy && typeof IntersectionObserver === "function") {
+    const io = lazyObserver();
+    for (const canvas of canvases) {
+      if (force) {
+        if (!canvas.dataset.drawn) continue;      // still waiting to come into view: drawn in the new colours then
+        canvas.dataset.force = "1";
+      }
+      io.unobserve(canvas);
+      io.observe(canvas);
+    }
+    return Promise.resolve();
+  }
+  return Promise.all(canvases.map((canvas) => hydrateOne(canvas, force)));
 }

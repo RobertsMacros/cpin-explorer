@@ -7,25 +7,26 @@
 <meta name="description" content="Home Office country policy and information notes, mirrored verbatim, with every edition on record.">
 <link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="icon" type="image/png" href="../../assets/roberts-macros/image.png">
+<link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
 <link rel="stylesheet" href="../shared/theme.css">
 <link rel="stylesheet" href="dashboard.css">
 <script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <script type="module" src="app.js"></script>
+<link rel="stylesheet" href="../shared/brand.css">
 </head>
-<body>
+<body class="dash">
 <header class="top">
   <a class="brand" href="./" aria-label="CPIN Explorer home">
-    <img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="30" height="30">
-    <span class="brand-name">CPIN EXPLORER</span>
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
+    <span class="brand-name"><b>CPIN</b>EXPLORER</span>
   </a>
   <label class="search">
     <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
-    <input id="q" type="search" placeholder="Search countries and topics" autocomplete="off" spellcheck="false" aria-label="Search countries and note topics">
+    <input id="q" type="search" placeholder="Search countries, reports and their text" autocomplete="off" spellcheck="false" aria-label="Search countries, report titles and the text of the reports">
     <kbd class="search-kbd">⌘K</kbd>
   </label>
   <a class="btn saved-link" href="../saved/index.html" title="Highlights you have saved">SAVED <span id="savedCount" class="numeral"></span></a>
-  <div class="sync" title="When the scraper last checked GOV.UK"><span class="live-dot" aria-hidden="true"></span><span id="sync">Loading…</span>
+  <div class="sync"><button class="sync-status" id="sync" type="button" aria-controls="checkPop"><span class="live-dot" aria-hidden="true"></span><span class="sync-words"></span></button>
     <button class="btn check-btn" id="checkBtn" type="button">CHECK FOR CHANGES</button></div>
   <div class="check-pop" id="checkPop" hidden aria-live="polite"></div>
   <button class="btn theme-btn" id="theme" type="button">AUTO</button>
@@ -48,14 +49,17 @@
       <span><i class="key"></i>Other countries</span>
       <span class="legend-hint">Drag to turn · Click a country</span>
     </p>
+    <button class="sync-status stage-sync" id="syncLine" type="button" aria-controls="checkPop"><span class="live-dot" aria-hidden="true"></span><span class="sync-words"></span></button>
   </section>
   <aside class="panel" id="panel" aria-live="polite"></aside>
 </main>
 
-<footer class="foot">
-  <span>Source: <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">Home Office, GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office; always check the current edition on GOV.UK.</span>
-  <span class="foot-rm"><img src="../../assets/roberts-macros/image.png" alt="Roberts Macros" width="22" height="22">Roberts Macros: no macro too micro.</span>
+<footer class="foot site-foot">
+  <!--brand-rm--><span class="foot-rm"><img class="rm-ink" src="../../assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="261" height="128"><img class="rm-light" src="../../assets/roberts-macros/derived/rm-mark-light.png" alt="" width="261" height="128"></span><!--/brand-rm-->
+  <span>Sources: <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">Home Office, GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office; always check the current edition on GOV.UK.</span>
+  <!--brand-foot--><span class="foot-end"><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
 </footer>
 <noscript><p class="noscript">This page needs JavaScript for the globe. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
+<script type="module" src="../shared/report-bug.js"></script>
 </body>
 </html>

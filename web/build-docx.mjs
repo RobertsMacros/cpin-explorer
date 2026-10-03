@@ -202,14 +202,14 @@ export async function sampleHighlights({ passages = SAMPLE_PASSAGES } = {}) {
 
 /* ------------------------------------------------------------------ 4. sample exports */
 
-/** The RM mark (assets/roberts-macros/image.png, 1536 × 1024) at 384 × 256, as the saved page scales it
- *  before export: the original is 400 KB. macOS sips does the scaling; elsewhere the original is used. */
-export function rmMark() {
-  const original = join(ROOT, "assets/roberts-macros/image.png");
-  const dir = mkdtempSync(join(tmpdir(), "cpin-rm-"));
+/** CPIN Explorer's mark (assets/cpin-explorer/mark-512.png) at 192 × 192, as the saved page scales it
+ *  before export. macOS sips does the scaling; elsewhere the original is used. */
+export function productMark() {
+  const original = join(ROOT, "assets/cpin-explorer/mark-512.png");
+  const dir = mkdtempSync(join(tmpdir(), "cpin-mark-"));
   try {
-    execFileSync("sips", ["-z", "256", "384", original, "--out", join(dir, "rm.png")], { stdio: "ignore", timeout: 30_000 });
-    return readBytes(join(dir, "rm.png"));
+    execFileSync("sips", ["-z", "192", "192", original, "--out", join(dir, "mark.png")], { stdio: "ignore", timeout: 30_000 });
+    return readBytes(join(dir, "mark.png"));
   } catch {
     return readBytes(original);
   } finally {
@@ -217,12 +217,12 @@ export function rmMark() {
   }
 }
 
-/** Font files, the RM mark and the dashboard's note details, read from disk (the browser fetches the same). */
+/** Font files, both marks and the dashboard's note details, read from disk (the browser fetches the same). */
 export function docxAssets() {
   const fonts = Object.fromEntries(DOCX_FONT_FILES.map((f) => [f.file, readBytes(join(VENDOR, "fonts", f.file))]));
   const data = JSON.parse(read("prototypes/dashboard/data.json"));
   const noteInfo = (country, note) => data.countries.find((c) => c.slug === country)?.notes.find((n) => n.id === note) || null;
-  return { fonts, logo: rmMark(), noteInfo };
+  return { fonts, logo: productMark(), rm: readBytes(join(ROOT, "assets/roberts-macros/derived/rm-mark-ink.png")), noteInfo };
 }
 
 async function writeSamples() {

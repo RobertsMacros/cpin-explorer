@@ -1,8 +1,10 @@
 """Export what the site needs from the store. Derived data only: the store is never changed.
 
 Note titles and GOV.UK change notes are passed through verbatim; the only additions are
-labels computed from them (kind, topic, month) and counts of what we hold.
+labels computed from them (kind, topic, month), counts of what we hold, and how much of the
+previous edition's wording each edition keeps (`similarity_to_previous`, see `similarity`).
 """
+import html
 import json
 import re
 from pathlib import Path
@@ -31,12 +33,91 @@ def kind_label(kind: str) -> str:
     for pattern, label in KIND_LABELS:
         if re.search(pattern, kind, re.IGNORECASE):
             return label
-    return kind.capitalize() or "Note"
+    # A page in the collection with no document type in its title is not a report: e.g. Albania's 2022
+    # "All Albania country policy and information notes have been removed for review".
+    return kind.capitalize() or "GOV.UK notice"
 
 
 def series_path(country: str, key: str) -> str:
     """Path of a series file, relative to the series directory: 'afghanistan/note--fear-taliban.json'."""
     return f"{country}/{key.replace(':', '--')}.json"
+
+
+# --- How much wording an edition keeps -----------------------------------------------------------
+# Five-word phrases ("shingles") of the body's words, lower-cased with punctuation stripped. The share of
+# phrases two editions have in common, out of the larger edition's phrases, says how much wording carries
+# over: 1.0 for an unchanged text, around 0.05 for a wholesale rewrite (a redline of which marks almost
+# everything). The report page flags editions below its rewrite threshold. The same measure is computed
+# in the browser for other pairs (prototypes/shared/report-history.js, wordingKept), so keep them alike.
+SHINGLE_WORDS = 5
+SIMILARITY_METHOD = "five-word-shingles/1"       # bump when the measure changes (invalidates the cache)
+_TAGS = re.compile(r"<(script|style)\b.*?</\1\s*>|<!--.*?-->|<[^>]*>", re.S | re.I)
+_WORDS = re.compile(r"[^\W_]+")                   # letters and digits, any script
+
+
+def body_words(body: str) -> list[str]:
+    """The words of a body's text, lower-cased, punctuation stripped (tags dropped, entities decoded)."""
+    return _WORDS.findall(html.unescape(_TAGS.sub(" ", body or "")).lower())
+
+
+def shingles(words: list[str], n: int = SHINGLE_WORDS) -> set:
+    """Every run of n consecutive words (a text shorter than n words is one phrase)."""
+    if len(words) < n:
+        return {tuple(words)} if words else set()
+    return set(zip(*(words[i:] for i in range(n))))
+
+
+def similarity(old: set, new: set) -> float:
+    """Phrases in common ÷ phrases in the larger edition, to 3 decimals (1.0 when both are empty)."""
+    larger = max(len(old), len(new))
+    return round(len(old & new) / larger, 3) if larger else 1.0
+
+
+def add_similarity(editions: list, cache: dict | None = None) -> None:
+    """Set `similarity_to_previous` on each edition (None on the first): its wording against the previous
+    edition held. cache maps 'old id:new id' (body hashes) to known values, so unchanged pairs are not
+    recomputed; new values are added to it."""
+    phrases: dict[str, set] = {}
+
+    def of(e):
+        if e["id"] not in phrases:
+            phrases[e["id"]] = shingles(body_words(e["body"]))
+        return phrases[e["id"]]
+
+    for prev, e in zip([None, *editions], editions):
+        if prev is None:
+            e["similarity_to_previous"] = None
+            continue
+        key = f"{prev['id']}:{e['id']}"
+        if cache is not None and isinstance(cache.get(key), (int, float)):
+            e["similarity_to_previous"] = cache[key]
+            continue
+        e["similarity_to_previous"] = similarity(of(prev), of(e))
+        if cache is not None:
+            cache[key] = e["similarity_to_previous"]
+        phrases.pop(prev["id"], None)                # only the latest edition's phrases are needed next
+
+
+SIMILARITY_CACHE = "similarity-cache.json"         # beside the series files (derived, like them)
+
+
+def load_similarity_cache(series_out: Path | None) -> dict | None:
+    if not series_out:
+        return None
+    try:
+        data = json.loads((Path(series_out) / SIMILARITY_CACHE).read_text("utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return data.get("pairs", {}) if data.get("method") == SIMILARITY_METHOD else {}
+
+
+def save_similarity_cache(series_out: Path | None, cache: dict | None) -> None:
+    if not series_out or cache is None:
+        return
+    path = Path(series_out) / SIMILARITY_CACHE
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({"method": SIMILARITY_METHOD, "pairs": dict(sorted(cache.items()))},
+                               separators=(",", ":")), "utf-8")
 
 
 def _edition(store: Store, country: str, name: str, note: str, index: dict, v: dict) -> dict:
@@ -72,9 +153,10 @@ def _edition(store: Store, country: str, name: str, note: str, index: dict, v: d
 
 
 def build_series(store: Store, country: str, name: str, key: str, members: list, image_files: dict,
-                 history: list | None = None) -> dict:
+                 history: list | None = None, similarity_cache: dict | None = None) -> dict:
     """Every edition of one report, oldest first, with verbatim bodies. An edition held twice with the
-    same text (an archive copy of one we also hold live) is listed once, preferring the live copy."""
+    same text (an archive copy of one we also hold live) is listed once, preferring the live copy.
+    Each edition also says how much of the previous one's wording it keeps (`similarity_to_previous`)."""
     editions = sorted((_edition(store, country, name, note, index, v) for note, index in members for v in index["versions"]),
                       key=lambda e: (e["date"], e["first_seen"]))
     collapsed = []
@@ -85,6 +167,7 @@ def build_series(store: Store, country: str, name: str, key: str, members: list,
             collapsed[-1] = keep
             continue
         collapsed.append(e)
+    add_similarity(collapsed, similarity_cache)
     topic_words = set(key.split(":", 1)[1].split("-")) - {"untitled"}
     for e in collapsed:                                          # GOV.UK's own dated change notes, verbatim
         e["govuk_change_notes"] = matching_change_notes(history or [], e["published"], topic_words)
@@ -169,6 +252,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
     mapping = countries_config["countries"]
     countries, recent = [], []
     note_paths: dict[str, dict] = {}         # GOV.UK path of any note we hold -> where it lives here
+    similarity_cache = load_similarity_cache(series_out)
     for slug, known in sorted(state["countries"].items(), key=lambda kv: kv[1]["name"]):
         publication = store.load_publication(slug) or {}
         pairs = pair_pdfs(publication) if publication else {}
@@ -183,7 +267,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
         for note, index in store.notes_for(slug):
             groups.setdefault(series_key(parse_note_title(index["title"], known["name"])), []).append((note, index))
         for key, members in groups.items():
-            series = build_series(store, slug, known["name"], key, members, image_files, history)
+            series = build_series(store, slug, known["name"], key, members, image_files, history, similarity_cache)
             if series_out:                       # every report, so every report has a timeline
                 path = Path(series_out) / series_path(slug, key)
                 path.parent.mkdir(parents=True, exist_ok=True)
@@ -229,6 +313,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
             "history": history,
         })
         recent += [{"country": slug, "name": known["name"], **h} for h in history]
+    save_similarity_cache(series_out, similarity_cache)
     recent.sort(key=lambda h: h["date"] or "", reverse=True)
     live_notes = [n for c in countries for n in c["notes"] if n["status"] == "live"]
     runs = store.runs()

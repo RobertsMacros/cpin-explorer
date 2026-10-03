@@ -16,7 +16,7 @@
 // page loads prototypes/vendor/docx.js only when someone exports.
 //
 //   const bytes = await buildCitationsDocx(docx, records, { mode: "full" | "citations", style: "oscola",
-//     fonts: { "Geist-Regular.ttf": Uint8Array, … }, logo: Uint8Array, flags: { iran: { data, width, height } },
+//     fonts: { "Geist-Regular.ttf": Uint8Array, … }, logo: Uint8Array, rm: Uint8Array, flags: { iran: { data, width, height } },
 //     noteInfo: (country, note) => dashboardNote, output: "blob" | "nodebuffer" | "uint8array" });
 //
 // Citations come from formatCitation (citation.js) and are not rewritten: its HTML (<i>, <a>) is turned
@@ -61,7 +61,7 @@ export function docxFileName(mode = "full", when = new Date()) {
 export const DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
 export const ATTRIBUTION = [
-  { text: "Source: Home Office, " },
+  { text: "Sources: Home Office, " },
   { text: "GOV.UK", href: "https://www.gov.uk/government/collections/country-policy-and-information-notes" },
   { text: ". Contains public sector information licensed under the " },
   { text: "Open Government Licence v3.0", href: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" },
@@ -121,10 +121,11 @@ export function bookmarkNamer() {
 /**
  * Build the .docx. records: highlight records (prototypes/shared/highlights.js). Returns what
  * docx.Packer.pack gives for `output` (a Blob in the browser, a Buffer in Node by default).
- * logo: the RM mark (assets/roberts-macros/image.png, any scale: its padding is cropped here).
+ * logo: CPIN Explorer's mark, a square PNG (assets/cpin-explorer/mark-512.png, any scale), for the header.
+ * rm: the Roberts Macros mark alone, a PNG about twice as wide as tall (assets/roberts-macros/derived/rm-mark-ink.png), for the footer.
  */
 export async function buildCitationsDocx(docx, records, {
-  mode = "full", style = "oscola", accessed = new Date(), fonts = null, logo = null, flags = null,
+  mode = "full", style = "oscola", accessed = new Date(), fonts = null, logo = null, rm = null, flags = null,
   noteInfo = null, output = null,
 } = {}) {
   const D = docx;
@@ -184,13 +185,22 @@ export async function buildCitationsDocx(docx, records, {
   const TEXT_W = PAGE.width - MARGIN.left - MARGIN.right;                 // 9638
   const LIST_INDENT = 567;
 
+  // Footer, as on the site: the RM mark at the left, in line with the source credit; page number at the right.
+  const RM_W = rm && byteLength(rm) ? 820 : 0;
   const footer = new D.Footer({
     children: [new D.Table({
-      width: { size: TEXT_W, type: D.WidthType.DXA }, columnWidths: [TEXT_W - 2000, 2000], layout: D.TableLayoutType.FIXED,
+      width: { size: TEXT_W, type: D.WidthType.DXA }, columnWidths: [...(RM_W ? [RM_W] : []), TEXT_W - 2000 - RM_W, 2000], layout: D.TableLayoutType.FIXED,
       borders: { ...noBorders, top: RULE },
       rows: [new D.TableRow({ children: [
+        ...(RM_W ? [new D.TableCell({
+          width: { size: RM_W, type: D.WidthType.DXA }, margins: { top: 110, bottom: 0, left: 0, right: 0 },
+          children: [new D.Paragraph({ style: "CpinFooter", children: [new D.ImageRun({
+            type: "png", data: rm, transformation: { width: 31, height: 15 },
+            altText: { name: "Roberts Macros", title: "Roberts Macros", description: "RM, the Roberts Macros mark" },
+          })] })],
+        })] : []),
         new D.TableCell({
-          width: { size: TEXT_W - 2000, type: D.WidthType.DXA }, margins: { top: 110, bottom: 0, left: 0, right: 240 },
+          width: { size: TEXT_W - 2000 - RM_W, type: D.WidthType.DXA }, margins: { top: 110, bottom: 0, left: 0, right: 240 },
           children: [new D.Paragraph({ style: "CpinFooter", children: richRuns(ATTRIBUTION, { size: 13, color: C.ink2 }) })],
         }),
         new D.TableCell({
@@ -204,19 +214,18 @@ export async function buildCitationsDocx(docx, records, {
     })],
   });
 
-  /* ---- header block: RM mark, CPIN EXPLORER, title, citation style (and, in full, the counts) */
+  /* ---- header block: the CPIN Explorer mark, CPIN EXPLORER, title, citation style (and, in full, the counts) */
   function headerBlock() {
     const cells = [];
-    const widths = logo && byteLength(logo) ? [1000, 5000, TEXT_W - 6000] : [5000, TEXT_W - 5000];
+    const widths = logo && byteLength(logo) ? [660, 5340, TEXT_W - 6000] : [5000, TEXT_W - 5000];
     const cell = (w, children, align) => new D.TableCell({
       width: { size: w, type: D.WidthType.DXA }, verticalAlign: D.VerticalAlign.CENTER, margins: { top: 0, bottom: 90, left: 0, right: 0 },
       children: [new D.Paragraph({ alignment: align, children })],
     });
     if (widths.length === 3) {
       cells.push(cell(widths[0], [new D.ImageRun({
-        type: "png", data: logo, transformation: { width: 52, height: 25 },
-        crop: { left: 22, top: 21.5, right: 22.5, bottom: 38 },                // the RM mark without its padding
-        altText: { name: "Roberts Macros", title: "Roberts Macros", description: "RM, the Roberts Macros mark" },
+        type: "png", data: logo, transformation: { width: 26, height: 26 },
+        altText: { name: "CPIN Explorer", title: "CPIN Explorer", description: "The CPIN Explorer mark: a dotted globe" },
       })]));
     }
     cells.push(cell(widths.at(-2), [pixel(APP_NAME, { size: 21, color: C.ink, characterSpacing: 34 })]));
@@ -473,7 +482,7 @@ export async function buildCitationsDocx(docx, records, {
     creator: APP_NAME, lastModifiedBy: APP_NAME,
     title: full ? `${APP_NAME} citations` : `${APP_NAME} citations only`,
     subject: "Passages saved from Home Office country policy and information notes",
-    description: `${plural(items.length, full ? "highlight" : "citation")}, ${styleName} citations, exported ${longDate(accessed)}. Source: Home Office, GOV.UK (Open Government Licence v3.0).`,
+    description: `${plural(items.length, full ? "highlight" : "citation")}, ${styleName} citations, exported ${longDate(accessed)}. Sources: Home Office, GOV.UK (Open Government Licence v3.0).`,
     keywords: "CPIN, Home Office, country policy and information notes, citations",
     features: { updateFields: false },
     fonts: fontOptions,

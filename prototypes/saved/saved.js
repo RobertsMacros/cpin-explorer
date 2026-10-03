@@ -4,7 +4,7 @@
 import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
-  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteWithCitation, STYLE_NAMES,
+  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteWithCitation, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
 import { analyseBody, describePassage, editionSource, fetchText, latestCapture, parseBody, paths, pickEdition } from "../shared/note-source.js";
@@ -133,7 +133,7 @@ function emptyHtml() {
     <ol class="sv-steps" style="--i:1">
       <li><span class="numeral">1</span><p><b>Open a note in the reader.</b> Every edition is shown verbatim, as published on GOV.UK.</p></li>
       <li><span class="numeral">2</span><p><b>Select a passage.</b> A bar appears with its paragraph number.</p></li>
-      <li><span class="numeral">3</span><p><b>Choose Save highlight.</b> It is kept here with an OSCOLA or tribunal citation, a link that jumps to the words on GOV.UK, and the sources the passage cites.</p></li>
+      <li><span class="numeral">3</span><p><b>Choose Save highlight.</b> It is kept here with a citation, full (OSCOLA) or short (tribunal), a link that jumps to the words on GOV.UK, and the sources the passage cites.</p></li>
     </ol>
     <div class="sv-demo" style="--i:2" aria-hidden="true"><span class="st-pin">PARA 9.1.1</span><span>Save highlight</span><span>Copy quote + citation</span><span>Copy citation</span></div>
     ${recent.length ? `<section class="sv-start" style="--i:3"><h2 class="eyebrow">Start with a recent note</h2><ul>${recent.map(({ c, n }) =>
@@ -148,8 +148,13 @@ function setStyle(next, { persist = true, rerender = true } = {}) {
   if (persist) { try { localStorage.setItem(STYLE_KEY, style); } catch {} }
   document.querySelectorAll(".seg").forEach((seg) => {
     seg.dataset.value = style;
-    seg.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.style === style)));
+    seg.querySelectorAll("button").forEach((b) => {
+      b.setAttribute("aria-checked", String(b.dataset.style === style));
+      b.textContent = STYLE_LABELS[b.dataset.style] || b.textContent;          // "Full (OSCOLA)" | "Short (tribunal)", as in the reader
+      b.title = STYLE_HINTS[b.dataset.style] || "";
+    });
   });
+  document.querySelectorAll("[data-style-hint]").forEach((p) => { p.textContent = STYLE_HINTS[style]; });   // what the chosen style produces
   if (!rerender) return;
   const recs = new Map(H.loadHighlights().map((r) => [r.id, r]));
   document.querySelectorAll(".sv-item").forEach((li) => {
@@ -259,17 +264,18 @@ function loadWordKit() {
     const [docx, builder] = await Promise.all([import("../vendor/docx.js"), import("../shared/citations-docx.js")]);
     const fonts = Object.fromEntries(await Promise.all(builder.fontFilesFor().map(async (f) =>
       [f.file, await fetchBytes(`../vendor/fonts/${f.file}`).catch((e) => { console.warn("Word export: font not loaded, falling back to Office fonts", e); return null; })])));
-    const logo = await rmMark().catch((e) => { console.warn("Word export: no RM mark", e); return null; });
-    return { docx, builder, fonts, logo };
+    const logo = await productMark().catch((e) => { console.warn("Word export: no CPIN Explorer mark", e); return null; });
+    const rm = await fetchBytes("../../assets/roberts-macros/derived/rm-mark-ink.png").catch((e) => { console.warn("Word export: no RM mark", e); return null; });
+    return { docx, builder, fonts, logo, rm };
   })().catch((error) => { wordKit = null; throw error; });
   return wordKit;
 }
 
-/** The RM mark at 384 × 256 (the original is 1536 × 1024 and 400 KB); the builder crops its padding. */
-async function rmMark() {
-  const bitmap = await createImageBitmap(new Blob([await fetchBytes("../../assets/roberts-macros/image.png")], { type: "image/png" }));
+/** CPIN Explorer's mark (the dotted globe) at 192 × 192 for the document header; the file is 512 × 512. */
+async function productMark() {
+  const bitmap = await createImageBitmap(new Blob([await fetchBytes("../../assets/cpin-explorer/mark-512.png")], { type: "image/png" }));
   const canvas = document.createElement("canvas");
-  canvas.width = 384; canvas.height = 256;
+  canvas.width = 192; canvas.height = 192;
   canvas.getContext("2d").drawImage(bitmap, 0, 0, canvas.width, canvas.height);
   return canvasPng(canvas);
 }
@@ -308,7 +314,7 @@ async function exportWord(mode) {
     const kit = await loadWordKit();
     const now = new Date();
     const blob = await kit.builder.buildCitationsDocx(kit.docx, recs, {
-      mode, style, accessed: now, fonts: kit.fonts, logo: kit.logo, flags: await flagPngs(recs),
+      mode, style, accessed: now, fonts: kit.fonts, logo: kit.logo, rm: kit.rm, flags: await flagPngs(recs),
       noteInfo: (country, note) => noteInfo(country, note).n, output: "blob",
     });
     const name = kit.builder.docxFileName(mode, now);

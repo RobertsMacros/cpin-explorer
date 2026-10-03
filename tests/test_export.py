@@ -2,7 +2,8 @@ import json
 
 from conftest import BODY, NOTE_PATH, PDF_URL, govuk
 
-from cpin.export import build_dashboard, kind_label
+from cpin.export import (add_similarity, body_words, build_dashboard, kind_label, load_similarity_cache, shingles,
+                         similarity)
 from cpin.sync import sync
 
 CONFIG = {"countries": {"kenya": {"iso_n3": "404", "marker": [0.2, 37.9]}},
@@ -70,3 +71,53 @@ def test_reports_group_editions_from_different_urls(site, client, store, tmp_pat
     assert report["latest"]["version"] == "2.0" and report["read_url"].endswith("series=note:actors-protection")
     assert len(kenya["notes"]) == 2                       # both URLs still listed for search and links
     assert data["note_paths"]["/government/publications/kenya/old"]["series"] == "note:actors-protection"
+
+
+def test_words_for_similarity_ignore_markup_case_and_punctuation():
+    assert body_words('<p>The <b>State</b> is “willing”&nbsp;and able.</p><!-- x --><td>A</td><td>B</td>') == \
+        ["the", "state", "is", "willing", "and", "able", "a", "b"]
+    assert len(shingles(["a", "b", "c", "d", "e", "f"])) == 2           # five-word phrases
+    assert shingles(["too", "short"]) == {("too", "short")}
+
+
+def test_similarity_is_shared_phrases_over_the_larger_edition():
+    old = shingles(body_words("<p>one two three four five six seven eight nine ten</p>"))       # 6 phrases
+    same = shingles(body_words("<p>One two three four five, six seven eight nine ten.</p>"))
+    longer = shingles(body_words("<p>one two three four five six seven eight nine ten eleven twelve "
+                                 "thirteen fourteen fifteen sixteen</p>"))                      # 12 phrases
+    assert similarity(old, same) == 1.0
+    assert similarity(old, longer) == 0.5                                # 6 shared of 12
+    assert similarity(old, shingles(body_words("<p>an entirely different text about other things</p>"))) == 0.0
+
+
+def test_each_edition_records_how_much_wording_it_keeps(site, client, store, tmp_path):
+    govuk(site)
+    sync(client, store)
+    edited = BODY.replace("able to offer", "able to provide")                       # a small edit
+    govuk(site, body=edited)
+    sync(client, store, full=True)
+    rewrite = ('<div class="govspeak"><h2 id="assessment">Assessment</h2><p>Kenyan courts now handle most '
+               'complaints against the police within months, according to several sources consulted in 2026, '
+               'though delays remain in rural counties.</p><p>Version control: this is Version 3.0.</p></div>')
+    govuk(site, body=rewrite)
+    sync(client, store, full=True)
+    out = tmp_path / "series"
+    build_dashboard(store, CONFIG, series_out=out)
+    versions = json.loads((out / "kenya" / "note--actors-protection.json").read_text("utf-8"))["versions"]
+    first, small, rewritten = (v["similarity_to_previous"] for v in versions)
+    assert first is None
+    assert 0.6 < small < 1.0                       # most five-word phrases survive a two-word edit
+    assert rewritten < 0.25                        # a rewrite keeps almost none
+    # Known pairs are cached beside the series files (keyed by body hashes) and reused next time.
+    cache = load_similarity_cache(out)
+    assert cache == {f"{versions[0]['id']}:{versions[1]['id']}": small, f"{versions[1]['id']}:{versions[2]['id']}": rewritten}
+    eds = [{"id": v["id"], "body": "never read"} for v in versions]
+    add_similarity(eds, cache)
+    assert [e["similarity_to_previous"] for e in eds] == [None, small, rewritten]
+
+
+def test_a_page_with_no_document_type_is_a_notice_not_a_report():
+    from cpin.export import kind_label
+    assert kind_label("") == "GOV.UK notice"
+    assert kind_label("country policy and information note") == "CPIN"
+    assert kind_label("report of a fact-finding mission") == "Report of a fact-finding mission"
