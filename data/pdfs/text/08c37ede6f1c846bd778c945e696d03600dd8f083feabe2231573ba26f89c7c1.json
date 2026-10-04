@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 31,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 32,
+ "paragraphs": 274,
+ "list_items": 29,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 53,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 39"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Pakistan: Medical and healthcare issues",
+ "cover_version": "2.0",
+ "cover_date": "August 2018",
+ "pdf_sha256": "08c37ede6f1c846bd778c945e696d03600dd8f083feabe2231573ba26f89c7c1",
+ "images": []
+}

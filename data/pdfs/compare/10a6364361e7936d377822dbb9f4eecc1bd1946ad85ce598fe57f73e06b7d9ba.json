@@ -1,0 +1,133 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/report-of-a-fact-finding-mission-ethiopia-situation-of-the-tigrayans-december-2024-accessible",
+ "pdf_sha256": "10a6364361e7936d377822dbb9f4eecc1bd1946ad85ce598fe57f73e06b7d9ba",
+ "body_sha256": "afc955d9c473f96ae1794db0f4a8eeed7d64e2df8509ac2a47fff12a11dd8226",
+ "words": {
+  "web": 21969,
+  "pdf": 21969
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "December 2024",
+   "pdf": null,
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 0,
+   "pdf": 0,
+   "web_notices": 0,
+   "pdf_notices": 0
+  },
+  "footnotes": {
+   "web": 11,
+   "pdf": 11,
+   "pdf_raw": 11,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 182,
+   "pdf": 21
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 0,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

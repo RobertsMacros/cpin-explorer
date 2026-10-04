@@ -1,0 +1,464 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-modern-slavery-china-august-2026-accessible",
+ "pdf_sha256": "323d7ddc465f88898b98faf669575a696f9b71506c4ae8d1c7efa2a114c8e323",
+ "body_sha256": "c7418b01eeac368da10d87cdb409cf0e9b77634998b599154d8bac4821a82eee",
+ "words": {
+  "web": 16433,
+  "pdf": 16471
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 32,
+   "share": 0.001003,
+   "passages": 1,
+   "sizes": {
+    "spelling": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 32
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 13,
+    "web_words": 0,
+    "pdf_words": 13
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 31
+   },
+   "list marker": {
+    "differences": 13,
+    "web_words": 0,
+    "pdf_words": 13
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "August 2026",
+   "pdf": "3.0",
+   "pdf_date": "August 2026"
+  },
+  "section_updated": {
+   "web": [
+    "25 August 2026"
+   ],
+   "pdf": [
+    "25 August 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 76,
+   "pdf": 76,
+   "pdf_raw": 76,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 57,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Feedback to the Home Office\nWe welcome feedback on how to improve our products. If you would like to comment on this note, please email the Country Policy and Information Team.",
+   "web_words": 0,
+   "pdf_words": 31,
+   "before": "version of this note\nUpdate to country information.",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "before_pdf": "version of this note\nUpdate to country information",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "14.2.2",
+    "section": "Version control and feedback",
+    "page": 41
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "residence.",
+   "pdf": "residency.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "migrants have settled in cities and obtained permanent",
+   "after": "13.2.6 See also the Country Information",
+   "where": {
+    "heading": "hukou",
+    "paragraph": "13.2.5",
+    "section": "Country information",
+    "page": 36
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://data.worldbank.org/country/china),",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "10 June 2026\nWorld Bank Group, [China\nData](",
+   "after": "no date. Accessed: 16 June 2026\nWorldometer:\nLargest",
+   "before_pdf": "10 June 2026\nWorld Bank Group, China | Data,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.2.2",
+    "section": "Bibliography",
+    "page": 33
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.",
+   "pdf": "10.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "online scam operations in Burma, Cambodia, and Laos.’",
+   "after": "3 GI-TOC’s Organized Crime Index 2025",
+   "where": {
+    "heading": "perpetrators",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to death and also to confiscation of property:",
+   "after": "being a ringleader of a gang engaged in",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "in abducting and trafficking in women and children;",
+   "after": "abducting and trafficking in three or more women",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "in three or more women and/or children;",
+   "after": "raping the woman who is abducted and trafficked",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "the woman who is abducted and trafficked in;",
+   "after": "enticing or forcing the woman who is abducted",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "who would force her to engage in prostitution;",
+   "after": "kidnapping a woman or child by means of",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "anaesthesia for the purpose of selling the victim;",
+   "after": "stealing a baby or an infant for the",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "infant for the purpose of selling the victim;",
+   "after": "causing serious injury or death to the woman",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "his relatives or any other serious consequences; or",
+   "after": "selling a woman or a child out of",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "sentenced to a fine or confiscation of property:",
+   "after": "making arrangements for another person to engage in",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "engage in prostitution and the circumstances being serious;",
+   "after": "forcing a girl under the age of 14",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "the age of 14 to engage in prostitution;",
+   "after": "forcing a number of persons to engage in",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "repeatedly forcing another person to engage in prostitution;",
+   "after": "forcing the victim to engage in prostitution after",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to engage in prostitution after raping her; or",
+   "after": "causing serious injury, death or other serious consequences",
+   "where": {
+    "heading": "criminal-law",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 15
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 155,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.4.3"
+  ],
+  "unconfirmed": []
+ }
+}

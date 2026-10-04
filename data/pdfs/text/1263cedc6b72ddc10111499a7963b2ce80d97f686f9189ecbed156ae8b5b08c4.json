@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 42,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 43,
+ "paragraphs": 317,
+ "list_items": 56,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 69,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Democratic Republic of Congo (DRC): Gender Based Violence",
+ "cover_version": null,
+ "cover_date": "September 2018",
+ "pdf_sha256": "1263cedc6b72ddc10111499a7963b2ce80d97f686f9189ecbed156ae8b5b08c4",
+ "images": []
+}

@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 350,
+ "list_items": 72,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 139,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 24"
+ ],
+ "figure_pages": {
+  "bbe02b1ee9ce9e3e716a521e3fd6e7785d5f887a62bbe0ba98016029444ffe52.png": 13
+ },
+ "figure_sizes": {
+  "bbe02b1ee9ce9e3e716a521e3fd6e7785d5f887a62bbe0ba98016029444ffe52.png": [
+   745,
+   214
+  ]
+ },
+ "figure_text": {
+  "bbe02b1ee9ce9e3e716a521e3fd6e7785d5f887a62bbe0ba98016029444ffe52.png": 1
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Jamaica: Fear of organised criminal groups",
+ "cover_version": "3.0",
+ "cover_date": "August 2019",
+ "pdf_sha256": "0b7ba6c2f8d250a7edcdbec1952ccb2d3ee4f59e38e42c16c5d60095d1e4562a",
+ "images": [
+  "bbe02b1ee9ce9e3e716a521e3fd6e7785d5f887a62bbe0ba98016029444ffe52.png"
+ ]
+}

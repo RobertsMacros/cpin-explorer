@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 20,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 30,
+ "paragraphs": 130,
+ "list_items": 7,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 36,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 11"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance The Gambia: Sexual orientation and gender identity",
+ "cover_version": "1.0",
+ "cover_date": "January 2016",
+ "pdf_sha256": "bffd1cfde5fbf6a1c85e4cd89633216583b6a7eaa0ea817258075e8188d9f0e6",
+ "images": []
+}

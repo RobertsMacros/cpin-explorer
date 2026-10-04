@@ -1,0 +1,55 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 31,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 29,
+ "paragraphs": 227,
+ "list_items": 21,
+ "tables": 0,
+ "figures": 4,
+ "footnotes": 52,
+ "bookmarks": 29,
+ "warnings": [],
+ "figure_pages": {
+  "e4fe46a58a5d00967bfb6ba5020d7d9edb1570168c2f603e363b37a81e7cb21b.jpg": 13,
+  "43b205011b476fbf7d4f30940b35c474f62f47b09191e4dd33569c4f74b90812.jpg": 14,
+  "ddea244b30515ac944c6a2fc827e6673389da056b6bd239655cc5ec9b502ad88.png": 16,
+  "d43c52144871d01716302ad94febde78b0ff12119eaf7620395f786a05af8e60.png": 17
+ },
+ "figure_sizes": {
+  "e4fe46a58a5d00967bfb6ba5020d7d9edb1570168c2f603e363b37a81e7cb21b.jpg": [
+   883,
+   749
+  ],
+  "43b205011b476fbf7d4f30940b35c474f62f47b09191e4dd33569c4f74b90812.jpg": [
+   918,
+   759
+  ],
+  "ddea244b30515ac944c6a2fc827e6673389da056b6bd239655cc5ec9b502ad88.png": [
+   445,
+   349
+  ],
+  "d43c52144871d01716302ad94febde78b0ff12119eaf7620395f786a05af8e60.png": [
+   693,
+   626
+  ]
+ },
+ "figure_text": {
+  "e4fe46a58a5d00967bfb6ba5020d7d9edb1570168c2f603e363b37a81e7cb21b.jpg": 0,
+  "43b205011b476fbf7d4f30940b35c474f62f47b09191e4dd33569c4f74b90812.jpg": 0,
+  "ddea244b30515ac944c6a2fc827e6673389da056b6bd239655cc5ec9b502ad88.png": 0,
+  "d43c52144871d01716302ad94febde78b0ff12119eaf7620395f786a05af8e60.png": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Female Genital Mutilation (FGM)",
+ "cover_version": "2.0",
+ "cover_date": "February 2020",
+ "pdf_sha256": "fa1a43b06aa7fe567abd2b2f078fa729532c82a16a39653b194a0e567799380b",
+ "images": [
+  "43b205011b476fbf7d4f30940b35c474f62f47b09191e4dd33569c4f74b90812.jpg",
+  "d43c52144871d01716302ad94febde78b0ff12119eaf7620395f786a05af8e60.png",
+  "ddea244b30515ac944c6a2fc827e6673389da056b6bd239655cc5ec9b502ad88.png",
+  "e4fe46a58a5d00967bfb6ba5020d7d9edb1570168c2f603e363b37a81e7cb21b.jpg"
+ ]
+}

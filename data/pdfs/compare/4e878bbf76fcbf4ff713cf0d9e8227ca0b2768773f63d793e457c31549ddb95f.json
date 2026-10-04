@@ -1,0 +1,137 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "afghanistan/country-policy-and-information-note-unaccompanied-children-afghanistan-may-2026-accessible",
+ "pdf_sha256": "4e878bbf76fcbf4ff713cf0d9e8227ca0b2768773f63d793e457c31549ddb95f",
+ "body_sha256": "0032f789b9347deaed5b3f7878a04b44c3bd1c61c463844647fb930322c0e957",
+ "words": {
+  "web": 15408,
+  "pdf": 15408
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "May 2026",
+   "pdf": "5.0",
+   "pdf_date": "May 2026"
+  },
+  "section_updated": {
+   "web": [
+    "8 May 2026"
+   ],
+   "pdf": [
+    "8 May 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 161,
+   "pdf": 161,
+   "pdf_raw": 161,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 61,
+   "pdf": 59
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 185,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

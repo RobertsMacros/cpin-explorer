@@ -1,0 +1,348 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-actors-of-protection-india-september-2025-accessible",
+ "pdf_sha256": "5ad79a838023e0b66eb3c76d19363d106c658e2acc77b77e1dc4c0285470f4d4",
+ "body_sha256": "ae30dc6aa6d4a15ac61f304176c18e1006365b09eb4b562f6b83676f98aea6a5",
+ "words": {
+  "web": 24395,
+  "pdf": 24291
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 99,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 99,
+    "pdf_words": 0
+   },
+   "stray characters": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 8,
+   "web_words": 20,
+   "pdf_words": 17
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "September 2025",
+   "pdf": "3.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "29 September 2025"
+   ],
+   "pdf": [
+    "29 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 243,
+   "pdf": 243,
+   "pdf_raw": 243,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 20,
+   "pdf": 24
+  },
+  "headings": {
+   "web": 58,
+   "pdf": 51
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Supreme Court of India\nIts decisions are biding on all courts\nCan transfer Judges of High Courts\nCan move cases from any court to itself\nCan transfer cases from one High Court to another\nHigh Court\nCan hear appeals from lower courts\nCan issue writs for restoring Fundamental Rights\nCan deal with cases within the jurisdiction of the State\nExercises superintendence and control over courts below it\nDistrict Court\nDeals with cases arising in the District\nConsiders appeals on decisions given by lower courts\nDecides cases involving serious criminal offences\nSubordinate Courts\nConsider cases of civil and criminal nature",
+   "pdf": "",
+   "web_words": 99,
+   "pdf_words": 0,
+   "before": "the structure and organisation of the judicial system:",
+   "after": "8.1.3 On 27 June 2022, Vaish",
+   "where": {
+    "heading": "supreme-court-of-india",
+    "paragraph": "8.1.2",
+    "section": "8. Rule of law and judiciary",
+    "page": 43
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "8.9.9",
+    "section": "Bibliography",
+    "page": 62
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "Organisations_responsible_for}",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "covering events in 2023, (USSD 2023 report) stated:",
+   "after": "An arrested person had to be brought before",
+   "where": {
+    "heading": "Legislation",
+    "paragraph": "4.3.3",
+    "section": "4. Legal framework",
+    "page": 36
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Cases awaiting preliminary consideration\nCases received or awaiting from authorities\nCases in progress)",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "Concluded after receipt (Cases completed and decision made)",
+   "after": "2021-2022\n1316\n250\n3804\n2022-2023\n2512",
+   "before_pdf": "completed consideration (Cases in progress)\nand decision made)",
+   "where": {
+    "heading": "Investigations_and_outcomes",
+    "paragraph": "7.2.2",
+    "section": "7. Oversight and redress",
+    "page": 39
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "7 16 14 59",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "24\n18\n46\nKeeping a person hungry and",
+   "after": "thirsty for some time\n7\n16\n14\n59",
+   "where": {
+    "heading": "Misconduct_and_human",
+    "paragraph": "6.6.21",
+    "section": "6. Capabilities of the security forces",
+    "page": 33
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "7\n16\n14\n59",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "a person hungry and thirsty for some time",
+   "after": "beating on soles, applying red chilli powder to",
+   "before_pdf": "7 16 14 59 thirsty for some time",
+   "where": {
+    "heading": "Misconduct_and_human",
+    "paragraph": "6.6.21",
+    "section": "6. Capabilities of the security forces",
+    "page": 33
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Cases Cases received or",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "2021 and 2024 (Table by CPIT)\nYear\nConcluded",
+   "after": "after receipt (Cases completed and decision made)\nCases",
+   "before_pdf": "2021 and 2024 (Table by CPIT)\nYear Concluded",
+   "where": {
+    "heading": "Investigations_and_outcomes",
+    "paragraph": "7.2.2",
+    "section": "7. Oversight and redress",
+    "page": 38
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "awaiting awaiting from (",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2024 (Table by CPIT)\nYear\nConcluded after receipt (",
+   "after": "Cases completed and decision made)\nCases awaiting preliminary",
+   "before_pdf": "Year Concluded Cases Cases received or after receipt",
+   "where": {
+    "heading": "Investigations_and_outcomes",
+    "paragraph": "7.2.2",
+    "section": "7. Oversight and redress",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "preliminary authorities",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Table by CPIT)\nYear\nConcluded after receipt (Cases",
+   "after": "completed and decision made)\nCases awaiting preliminary consideration",
+   "before_pdf": "received or after receipt awaiting awaiting from (Cases",
+   "where": {
+    "heading": "Investigations_and_outcomes",
+    "paragraph": "7.2.2",
+    "section": "7. Oversight and redress",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "consideration (Cases in progress)",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "by CPIT)\nYear\nConcluded after receipt (Cases completed",
+   "after": "and decision made)\nCases awaiting preliminary consideration\nCases",
+   "before_pdf": "receipt awaiting awaiting from (Cases preliminary authorities completed",
+   "where": {
+    "heading": "Investigations_and_outcomes",
+    "paragraph": "7.2.2",
+    "section": "7. Oversight and redress",
+    "page": 39
+   }
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "artefact",
+   "web": "Back to Contents",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Inspector’s pages of the gov.uk website.",
+   "after": "OHCHR, Status of ratification interactive dashboard, no date",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "8.9.9",
+    "section": "Bibliography",
+    "page": 62
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 260,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

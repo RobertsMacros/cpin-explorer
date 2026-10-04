@@ -1,0 +1,189 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-gulenist-movement-turkey-february-2022-accessible-version",
+ "pdf_sha256": "fbe027a1961494351833314e8508d7d94fe7295c886415f464b7d280422fb015",
+ "body_sha256": "363d4ba337b2a63b51cb4ea832a18dc26860277be5a70d2ef801261ea6cc0ab0",
+ "words": {
+  "web": 15654,
+  "pdf": 15655
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "August 2025",
+   "pdf": "5.0",
+   "pdf_date": "August 2025"
+  },
+  "section_updated": {
+   "web": [
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023"
+   ],
+   "pdf": [
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023",
+    "9 August 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 7,
+   "pdf": 7,
+   "web_notices": 7,
+   "pdf_notices": 7
+  },
+  "footnotes": {
+   "web": 158,
+   "pdf": 158,
+   "pdf_raw": 158,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 61,
+   "pdf": 46
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.2.3",
+    "section": "Version control and feedback",
+    "page": 41
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "2016 .",
+   "pdf": "201639 .",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "commenced prior to the attempted coup in July",
+   "after": "During this period, the Erdoğan government led a",
+   "where": {
+    "heading": "Relationship_with_the",
+    "paragraph": "7.3.3",
+    "section": "Country information",
+    "page": 8
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 141,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

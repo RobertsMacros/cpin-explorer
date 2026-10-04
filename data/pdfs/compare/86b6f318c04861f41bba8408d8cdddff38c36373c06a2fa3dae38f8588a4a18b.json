@@ -1,0 +1,297 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "russia/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-june-2025-accessible",
+ "pdf_sha256": "86b6f318c04861f41bba8408d8cdddff38c36373c06a2fa3dae38f8588a4a18b",
+ "body_sha256": "68e1eb7f99bc0cf24cdefb60108af101c877d1698665d23eeef486046662bdef",
+ "words": {
+  "web": 32044,
+  "pdf": 32035
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 3.1e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "attachment label": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 4,
+   "web_words": 12,
+   "pdf_words": 6
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "June 2025",
+   "pdf": "2.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "11 June 2025"
+   ],
+   "pdf": [
+    "11 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 283,
+   "pdf": 283,
+   "pdf_raw": 283,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 98,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "or “",
+   "pdf": "for “",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "criminal offences but sometimes given more severe penalties]",
+   "after": "displaying” LGBT movement symbols, mostly for posting the",
+   "where": {
+    "heading": "Arrests_and_punishments",
+    "paragraph": "10.1.16",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.1.7",
+    "section": "Version control and feedback",
+    "page": 77
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 646KB)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "4 The Criminal Code of the Russian Federation (",
+   "after": "includes provisions against inciting hatred or enmity based",
+   "before_pdf": "4 The Criminal Code of the Russian Federation",
+   "where": {
+    "heading": "Constitution_and_statutory",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 636KB),",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "in the Chechen Republic of the Russian Federation (",
+   "after": "published December 2018\nPink News Chechnya gay purge’",
+   "before_pdf": "in the Chechen Republic of the Russian Federation,",
+   "where": {
+    "heading": "Attitudes_and_treatment",
+    "paragraph": "10.5.5",
+    "section": "Country information",
+    "page": 12
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "General detentions (2023)",
+   "pdf": "Category\nLaw/Basis\nNumber/Description\nDetails",
+   "web_words": 3,
+   "pdf_words": 6,
+   "before": "people (27%) (Subset of 63)\nMentally disabled’ institutions",
+   "after": "in mental wards\n12 people (19%) (subset of",
+   "where": {
+    "heading": "Arrests_and_punishments",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "General detentions (2023)",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "types include: ‘mental wards’, nursing homes, prison etc.",
+   "after": "in nursing homes\n17 people (27%) (Subset of",
+   "where": {
+    "heading": "Arrests_and_punishments",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "General detentions (2023)",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "19%) (subset of 63)\nConfined by court order",
+   "after": "in detention rooms\n11 people (17%) (Subset of",
+   "where": {
+    "heading": "Arrests_and_punishments",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "General detentions (2023)",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "people (17%) (Subset of 63)\nShort-term confinement",
+   "after": "Forced disclosure of SOGIE in detention\n40 of",
+   "where": {
+    "heading": "Arrests_and_punishments",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 279,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

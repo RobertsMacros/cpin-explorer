@@ -1,0 +1,204 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-bulletin-iran-kurds-and-kurdish-political-groups-may-2026-accessible",
+ "pdf_sha256": "1a82707974e83d5a9982c310875a05da82e0f5a14a07abbfb26c98cdddb5ec11",
+ "body_sha256": "f9f5b5ec999a577e97b07b196e111e784f56a8fc92652de6cf3a22f9a1765e2c",
+ "words": {
+  "web": 7870,
+  "pdf": 7875
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 5,
+   "share": 0.000318,
+   "passages": 1,
+   "sizes": {
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "May 2026",
+   "pdf": null,
+   "pdf_date": "May 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 63,
+   "pdf": 64,
+   "pdf_raw": 64,
+   "differ": true
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 26,
+   "pdf": 26
+  },
+  "drafts": [
+   "footnote count differs: web 63, PDF 64"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ACLED, About ACLED, no date",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Iranian Kurdish forces in Iraq, 5 March 2026",
+   "after": "Reuters, Trump’s mixed messages and Iran’s",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "6.1.2",
+    "section": "Version control and feedback",
+    "page": 8
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "6.1.2",
+    "section": "Version control and feedback",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "20]].",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "analysis of data by the conflict monitor ACLED[^[",
+   "after": "Nearly half targeted Kurdish political groups and fighters ...",
+   "before_pdf": "analysis of data by the conflict monitor ACLED[].",
+   "where": {
+    "heading": "military-targeting",
+    "paragraph": "5.1.4",
+    "section": "Country information",
+    "page": 8
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 60,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

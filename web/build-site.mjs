@@ -13,11 +13,11 @@ const MAX_FILES = 20000;                  // and per deployment (free plan)
 
 // What the pages need, relative to the repo root.
 const INCLUDE = [
-  "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search",
+  "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search", "prototypes/guide",
   "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data",
   "prototypes/package.json",
   "assets/cpin-explorer", "assets/roberts-macros",
-  "data/countries", "data/images/manifest.json", "data/images/files",
+  "data/countries", "data/images/manifest.json", "data/images/files", "data/pdfs/text/images",
 ];
 // Never shipped: development screenshots, sample exports, the 23 MB file the search index is built
 // from, and the export's similarity cache.
@@ -57,6 +57,7 @@ await writeFile(path.join(OUT, "404.html"), `<!doctype html>
 <style>body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text)}header{padding:.9rem clamp(1rem,2.4vw,2.75rem);border-bottom:1px solid var(--line)}
 main{max-width:40rem;margin:16vh auto;padding:0 1rem}h1{font-family:var(--font-display,monospace);font-weight:400;font-size:2.6rem;color:var(--blue);margin:.2rem 0 1rem}</style>
 <link rel="stylesheet" href="/prototypes/shared/brand.css">
+<script type="module" src="/prototypes/shared/brand-mark.js" blocking="render"></script>
 </head><body>
 <header><a class="brand" href="/prototypes/dashboard/" aria-label="CPIN Explorer home"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="/assets/cpin-explorer/mark.svg#mark"/></svg><span class="brand-name"><b>CPIN</b>EXPLORER</span></a></header>
 <main><p class="eyebrow">CPIN Explorer</p><h1>Not found</h1>

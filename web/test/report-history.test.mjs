@@ -1,9 +1,11 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { readFileSync } from "node:fs";
 import {
-  alignHeadings, bodyWords, buildTimeline, captionSource, computedSummary, DAY, dwellFor, editionForStop, editionsBetweenNotHeld, findParaRefs,
-  headingKey, increasing, isRewrite, keptPercent, leadingNumber, mapThrough, reportUrl, resolveParaRef, REWRITE_THRESHOLD, seriesPath, versionsNotHeld, wordingKept,
+  alignHeadings, archiveCopy, firstSeen, bodyWords, buildTimeline, captionSource, computedSummary, currentPdf, DAY, editionForStop, editionsBetweenNotHeld, editionTime, findParaRefs, findSectionNames, headingKey, headingName, increasing, isRemovalNote, isRewrite, keptPercent, leadingNumber, mapThrough, ownDate, readOnGovuk, reportUrl, resolveParaRef, REWRITE_THRESHOLD, seriesPath, updateKind, versionsNotHeld, wordingKept,
+  capturedAt, editionWhere, isArchivedPdf, sourceWords,
 } from "../../prototypes/shared/report-history.js";
+import { formatCitation, titleMonth } from "../../prototypes/shared/citation.js";
 
 const ed = (id, version, date, extra = {}) => ({ id, version, date, published: date, valid_from: date, body: "<p>x</p>", govuk_change_notes: [], ...extra });
 
@@ -15,6 +17,83 @@ test("every held edition is a stop, oldest first, and the newest is the default"
   assert.deepEqual(tl.stops.map((s) => s.kind), ["edition", "edition"]);
   assert.equal(tl.latest, 1);
   assert.deepEqual(tl.stops.map((s) => s.k), [0, 1]);
+});
+
+test("an edition answers to every stored copy of its words", () => {
+  // The export lists one copy of a text and names the others under also_held_as. A link or a saved highlight
+  // made on one of those copies before they were merged must still find the edition.
+  const tl = buildTimeline({ versions: [
+    ed("a", "1.0", "2022-01-10T00:00:00Z", { also_held_as: [{ id: "a-archived", source: "wayback" }, { id: "a-again", source: "wayback" }] }),
+    ed("b", "2.0", "2024-03-01T00:00:00Z"),
+  ], history: [] });
+  assert.deepEqual(tl.editions[0].ids, ["a", "a-archived", "a-again"]);
+  assert.deepEqual(tl.editions[1].ids, ["b"]);
+  assert.equal(tl.editions.findIndex((e) => e.ids.includes("a-again")), 0);
+});
+
+test("an edition's words were first seen at the earliest of the archive's capture and this site's copy", () => {
+  // Iran, Kurds (v5.0): the live text was first captured by the Internet Archive months before this site read it.
+  assert.equal(firstSeen({ captured_at: "2025-12-19T23:51:40Z", first_seen: "2026-10-02T12:09:19Z" }), "2025-12-19T23:51:40Z");
+  assert.equal(firstSeen({ captured_at: null, first_seen: "2026-10-02T12:09:19Z" }), "2026-10-02T12:09:19Z");
+  assert.equal(firstSeen({}), null);
+});
+
+test("an edition's archive copy is its own, else the latest held of the same words", () => {
+  const own = { archive_url: "https://web.archive.org/web/20240406123856/https://www.gov.uk/x", captured_at: "2024-04-06T12:35:17Z" };
+  assert.deepEqual(archiveCopy(own), own);
+  // Copied from GOV.UK and since replaced: the archive's copies of the same words are named under also_held_as.
+  const replaced = { source: "live", current: false, archive_url: null, also_held_as: [
+    { id: "p", source: "wayback", captured_at: "2024-01-02T00:00:00Z", archive_url: "https://web.archive.org/web/20240102000000/https://www.gov.uk/x" },
+    { id: "q", source: "wayback", captured_at: "2025-03-04T00:00:00Z", archive_url: "https://web.archive.org/web/20250304000000/https://www.gov.uk/x" },
+    { id: "r", source: "live" }] };
+  assert.deepEqual(archiveCopy(replaced), { archive_url: "https://web.archive.org/web/20250304000000/https://www.gov.uk/x", captured_at: "2025-03-04T00:00:00Z" });
+  assert.equal(archiveCopy({ source: "live", also_held_as: [{ id: "r", source: "live" }] }), null);
+  assert.equal(archiveCopy({}), null);
+  assert.equal(archiveCopy(undefined), null);
+});
+
+test("an edition recovered as a PDF from the Internet Archive is both: from the PDF, and an archived copy", () => {
+  // Palestine, security and humanitarian situation in Gaza, March 2019: GOV.UK lists the file no longer, and its own
+  // address for it now leads to a later edition. The Archive's copy is the source, with the time in its address.
+  const archive = "https://web.archive.org/web/20190726161037/https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/784644/OPTs_v2.0_March_2019.pdf";
+  const recovered = { source: "pdf", listed: false, current: false, govuk_url: null, archive_url: archive, pdf_url: archive, captured_at: "2019-07-26T16:10:37Z" };
+  assert.equal(isArchivedPdf(recovered), true);
+  assert.deepEqual(editionWhere(recovered, { gone: false, fallback: "https://www.gov.uk/report" }),
+    { url: archive, archived: true, capturedAt: "2019-07-26T16:10:37Z", pdf: true });
+  assert.equal(sourceWords(recovered), "text from the PDF · archived copy");
+  assert.equal(capturedAt({ archive_url: archive, captured_at: "2019-07-26T16:10:39Z" }), "2019-07-26T16:10:37Z", "the time in the address, so date and link agree");
+  assert.equal(capturedAt({ captured_at: "2019-07-26T16:10:39Z" }), "2019-07-26T16:10:39Z");
+  assert.equal(capturedAt({}), null);
+  // A PDF GOV.UK lists now is read from GOV.UK's file, even where the Archive holds a copy of the same words.
+  const pdfUrl = "https://assets.publishing.service.gov.uk/media/6abf/PSE_CPIN.pdf";
+  const listed = { source: "pdf", listed: true, current: true, pdf_url: pdfUrl, archive_url: null,
+    also_held_as: [{ id: "c", source: "pdf", captured_at: "2026-10-02T11:03:33Z", archive_url: "https://web.archive.org/web/20261002110333/" + pdfUrl }] };
+  assert.equal(isArchivedPdf(listed), false);
+  assert.deepEqual(editionWhere(listed), { url: pdfUrl, archived: false, capturedAt: null, pdf: true });
+  assert.equal(sourceWords(listed), "text from the PDF");
+  // Web versions, as before: GOV.UK while it is the edition there, else the archive copy, else the report's address.
+  const live = { source: "live", current: true, govuk_url: "https://www.gov.uk/note" };
+  assert.deepEqual(editionWhere(live), { url: "https://www.gov.uk/note", archived: false, capturedAt: null });
+  assert.equal(sourceWords(live), "");
+  const web = { source: "wayback", archive_url: "https://web.archive.org/web/20240406123856/https://www.gov.uk/x", captured_at: "2024-04-06T12:38:56Z" };
+  assert.deepEqual(editionWhere(web), { url: web.archive_url, archived: true, capturedAt: "2024-04-06T12:38:56Z" });
+  assert.equal(sourceWords(web), "archived copy");
+  assert.deepEqual(editionWhere({ ...live, archive_url: web.archive_url }, { gone: true }), { url: web.archive_url, archived: true, capturedAt: "2024-04-06T12:38:56Z" },
+    "a report no longer on GOV.UK is read at its archive copy");
+  assert.deepEqual(editionWhere({ source: "live", current: false }, { fallback: "https://www.gov.uk/report" }), { url: "https://www.gov.uk/report", archived: false, capturedAt: null });
+});
+
+test("the latest is the edition now on GOV.UK, which is not always the last in date order", () => {
+  // GOV.UK put the note back to its earlier text: v1.0 is in force again, and v2.0 is history.
+  const reverted = buildTimeline({ versions: [ed("a", "1.0", "2022-01-10T00:00:00Z", { current: true }), ed("b", "2.0", "2024-03-01T00:00:00Z", { current: false })], history: [] });
+  assert.equal(reverted.latest, 0);
+  assert.deepEqual(reverted.stops.map((s) => s.id), ["a", "b"], "the timeline stays in date order");
+  assert.equal(editionForStop(null, reverted), 0, "the default view is the edition in force");
+  // The usual case, and a report no longer on GOV.UK (nothing is current): the last edition held.
+  assert.equal(buildTimeline({ versions: [ed("a", "1.0", "2022-01-10T00:00:00Z", { current: false }), ed("b", "2.0", "2024-03-01T00:00:00Z", { current: true })], history: [] }).latest, 1);
+  assert.equal(buildTimeline({ versions: [ed("a", "1.0", "2022-01-10T00:00:00Z", { current: false }), ed("b", "2.0", "2024-03-01T00:00:00Z", { current: false })], history: [] }).latest, 1);
+  // An edition with no text here (a PDF only) is not a stop, so it cannot be the latest shown.
+  assert.equal(buildTimeline({ versions: [ed("a", "1.0", "2022-01-10T00:00:00Z"), { id: "pdf", version: "2.0", date: "2023-01-01T00:00:00Z", current: true }], history: [] }).latest, 0);
 });
 
 test("editions without a body are not held", () => {
@@ -40,7 +119,7 @@ test("a change note dated just after an edition took effect belongs to it (Afgha
   assert.deepEqual(tl.editions[1].notes, [{ date: "2026-02-26T15:48:09Z", note: "Updated to version 6.0." }]);
 });
 
-test("a single-edition report gets its GOV.UK history as dated, playable updates (Sri Lanka)", () => {
+test("a single-edition report gets its GOV.UK history as dated updates to step through (Sri Lanka)", () => {
   const history = [
     { date: "2025-09-02T12:59:22Z", note: "Published the note, August 2025." },
     { date: "2023-04-14T15:34:54Z", note: "The guidance has been updated in section 5.4." },
@@ -91,12 +170,6 @@ test("the Home Office's statement comes first, then GOV.UK's change notes", () =
   assert.equal(captionSource(withStatement).html, "<p>Updated COI.</p>");
   assert.equal(captionSource({ v: {}, notes: [{ date: "2024-01-01", note: "Published." }] }).kind, "govuk");
   assert.equal(captionSource({ v: {}, notes: [] }), null);
-});
-
-test("Play lingers longer on longer captions, within bounds", () => {
-  assert.equal(dwellFor(0), 2500);
-  assert.ok(dwellFor(200) > dwellFor(40));
-  assert.equal(dwellFor(10000), 5500);
 });
 
 test("the computed line ranks sections by changes and leaves back matter out", () => {
@@ -222,12 +295,13 @@ test("editions in between are not held when the version skips or GOV.UK updates 
   const updates = buildTimeline({ versions: [ed("a", "1.0", "2020-11-11T00:00:00Z"), ed("b", "2.0", "2025-11-19T00:00:00Z")],
     history: [{ date: "2023-03-01T10:00:00Z", note: "Updated the note." }] });
   assert.equal(editionsBetweenNotHeld(updates, 1), true);
-  // Sudan v3.0: in force from July, dated September; GOV.UK's July note about it sits between v2.0 and v3.0 on
-  // the timeline but is about v3.0 itself, not an edition in between.
+  // Sudan v3.0: valid from July, on a page GOV.UK dated September. It sits at its own date, so GOV.UK's July note
+  // about it follows it on the timeline (with v3.0 in force): it is about v3.0 itself, not an edition in between.
   const own = buildTimeline({ versions: [ed("a", "2.0", "2025-01-16T00:00:00Z"),
     ed("b", "3.0", "2026-09-07T00:00:00Z", { valid_from: "2026-07-01T00:00:00Z", govuk_change_notes: [{ date: "2026-09-07T10:00:00Z", note: "Updated." }] })],
   history: [{ date: "2026-07-23T10:00:00Z", note: "Published an updated version." }] });
-  assert.deepEqual(own.stops.map((s) => s.kind), ["edition", "update", "edition"]);
+  assert.deepEqual(own.stops.map((s) => s.kind), ["edition", "edition", "update"]);
+  assert.equal(own.events[0].inForce, 1);
   assert.equal(editionsBetweenNotHeld(own, 1), false);
 });
 
@@ -262,4 +336,156 @@ test("linked scrolling goes through the shared headings and moves in proportion 
   const back = increasing(pts.map(([x, y]) => [y, x]));
   assert.equal(mapThrough(back, 1400), 2000);
   assert.equal(mapThrough([], 10), 0);
+});
+
+test("an update says why it has no text: a PDF only, a removal, or simply not held", () => {
+  const series = { current_pdf_only: true, pdf_editions: [{ title: "Humanitarian situation, September 2026", month: "2026-09", pdf_url: "https://assets/x.pdf", current: true }],
+    versions: [{ id: "a", body: "<p>x</p>", version: "4.0", published: "2024-11-13T00:00:00Z", date: "2024-11-13T00:00:00Z" }],
+    history: [
+      { date: "2026-10-02T09:02:41Z", note: "Information about the humanitarian situation in Gaza has been updated to version 5.0.", pdf_url: "https://assets/x.pdf", pdf_title: "Humanitarian situation, September 2026" },
+      { date: "2023-10-31T13:15:26Z", note: "Information about the humanitarian situation in Gaza has been removed as it no longer accurately reflects the current situation." },
+      { date: "2022-07-26T14:43:12Z", note: "The humanitarian situation in Gaza version 3.0 added." },
+    ] };
+  const tl = buildTimeline(series);
+  assert.deepEqual(tl.stops.map((s) => (s.kind === "edition" ? "edition" : updateKind(s))), ["not-held", "removed", "edition", "pdf"]);
+  assert.deepEqual(tl.stops.at(-1).pdf, { url: "https://assets/x.pdf", title: "Humanitarian situation, September 2026" });
+  assert.equal(currentPdf(series).month, "2026-09");
+  assert.equal(currentPdf({ current_pdf_only: false, pdf_editions: [{ current: false }] }), null);
+  assert.equal(currentPdf({}), null);
+});
+
+test("a note tied to a PDF-only edition is never folded into the edition held, however close in date", () => {
+  const v = { id: "a", body: "<p>x</p>", version: "3.0", published: "2022-05-01T00:00:00Z", date: "2022-05-01T00:00:00Z" };
+  const plain = buildTimeline({ versions: [v], history: [{ date: "2022-05-10T00:00:00Z", note: "Updated." }] });
+  assert.equal(plain.events.length, 0, "an ordinary note within the window is the held edition's own");
+  const pdf = buildTimeline({ versions: [v], history: [{ date: "2022-05-10T00:00:00Z", note: "Updated (pdf).", pdf_url: "https://assets/y.pdf" }] });
+  assert.equal(pdf.events.length, 1);
+  assert.equal(updateKind(pdf.events[0]), "pdf");
+});
+
+test("a removal is only what the note itself calls one", () => {
+  for (const note of [
+    "Information about the humanitarian situation in Gaza has been removed as it no longer accurately reflects the current situation.",
+    "Removed the following country policy and information notes: ‘Women fearing domestic violence’ and ‘Illegal drugs’.",
+    "The note has been withdrawn.",
+  ]) assert.equal(isRemovalNote(note), true, note);
+  for (const note of [
+    "Removed the 2019 note and added a new version.",
+    "Published the country bulletin. This replaces the country policy and information note, which has been removed.",
+    "Updated to remove section 4.",
+    "Version 3.0 added.",
+    "Accessible version added; PDF removed.",
+    "",
+  ]) assert.equal(isRemovalNote(note), false, note);
+});
+
+test("sections named in a change statement are found, and only whole names", () => {
+  const headings = [
+    { text: "Executive summary", level: 2 }, { text: "Assessment", level: 2 }, { text: "About the assessment", level: 3 },
+    { text: "1. Points to note", level: 3 }, { text: "Country information", level: 2 }, { text: "About the country information", level: 3 },
+    { text: "3. Legal framework", level: 3 }, { text: "General", level: 3 }, { text: "Bibliography", level: 2 }, { text: "Version control and feedback", level: 2 },
+  ];
+  const text = "Updated country information and assessment. After 21 September 2025, ‘Occupied Palestinian Territories (OPTs)’ changed to ‘Palestine’ and points to note updated.";
+  const found = findSectionNames(text, headings);
+  assert.deepEqual(found.map((f) => [text.slice(f.start, f.end), f.heading]), [
+    ["country information", "Country information"], ["assessment", "Assessment"], ["points to note", "1. Points to note"]]);
+  const names = (t) => findSectionNames(t, headings).map((f) => f.heading);
+  assert.deepEqual(names("Reassessment of the risk; assessments unchanged"), ["Assessment"], "whole words only; a plural is the same name");
+  assert.deepEqual(names("Updated the legal frameworks and Executive Summary"), ["3. Legal framework", "Executive summary"]);
+  assert.deepEqual(names("General tidying and an updated bibliography; version control and feedback moved"), [], "plain words and back matter are never linked");
+  assert.deepEqual(names("About the country information: clarified"), ["About the country information"], "the longest name wins where two overlap");
+  assert.deepEqual(findSectionNames("Updated assessment", []), []);
+  assert.deepEqual(findSectionNames("", headings), []);
+});
+
+test("of two headings with one name the higher level wins; numbers are not part of a name", () => {
+  const found = findSectionNames("Protection updated", [{ text: "5.2 Protection", level: 4 }, { text: "2. Protection", level: 3 }]);
+  assert.deepEqual(found.map((f) => f.heading), ["2. Protection"]);
+  assert.equal(headingName("  12.3   Freedom of  movement "), "Freedom of movement");
+  assert.equal(headingName("Assessment"), "Assessment");
+});
+
+
+// --- when an edition left GOV.UK, where this copy saw it go ---
+test("an edition replaced or withdrawn on our watch says when, and between which two checks", async () => {
+  const { leftGovuk } = await import("../../prototypes/shared/report-history.js");
+  const fmt = (iso) => iso.slice(0, 10);
+  assert.equal(leftGovuk(null, fmt), null);
+  assert.equal(leftGovuk({ at: null }, fmt), null, "an archive copy has no such date");
+  const replaced = leftGovuk({ at: "2026-10-14T06:17:00Z", last_seen: "2026-10-13T06:17:00Z", how: "replaced" }, fmt);
+  assert.deepEqual([replaced.how, replaced.when, replaced.label], ["replaced", "2026-10-14", "Archived 2026-10-14"]);
+  assert.equal(replaced.sentence, "GOV.UK replaced it with a newer edition between 2026-10-13 (last seen there) and 2026-10-14 (found replaced).");
+  const gone = leftGovuk({ at: "2026-10-14T06:17:00Z", last_seen: "2026-10-14T01:00:00Z", how: "withdrawn" }, fmt);
+  assert.equal(gone.sentence, "GOV.UK withdrew it by 2026-10-14 (found gone).", "seen and found gone on one day: no window to give");
+  assert.equal(leftGovuk({ at: "2026-10-14T06:17:00Z", how: "withdrawn" }, fmt).label, "Archived 2026-10-14");
+});
+
+/* ------------------------------------------------------------------ an edition's own date */
+
+const seriesFile = (path) => JSON.parse(readFileSync(new URL(`../../prototypes/data/series/${path}.json`, import.meta.url), "utf8"));
+test("an edition is dated by the note itself, never by GOV.UK's date for the country page", () => {
+  // China, medical treatment and healthcare: valid from 5 July 2022. GOV.UK dates it 1 September 2026, the day the
+  // country PAGE last changed. (Asserted as a property of the edition: the stored dates may move with the export.)
+  const china = seriesFile("china/note--healthcare-medical"), about = { topic: china.topic, countryName: china.country_name };
+  const live = china.versions.find((v) => v.current);
+  assert.equal(live.valid_from, "2022-07-05T00:00:00Z");
+  assert.deepEqual(ownDate(live, about), { date: "2022-07-05T00:00:00Z", precision: "day", from: "valid from" });
+  const tl = buildTimeline(china), E = tl.editions[tl.latest];
+  assert.deepEqual([E.own.date, E.prec, new Date(E.t).toISOString()], ["2022-07-05T00:00:00Z", "day", "2022-07-05T00:00:00.000Z"]);
+  assert.ok(tl.editions.every((e, i) => !i || e.t >= tl.editions[i - 1].t), "the editions keep their order");
+  // The export as it was (the page's date given as `published`) and as it is being changed (the note's own date as
+  // `published`, `published_from` saying which, the page's date apart as `page_updated`): the same answer from both.
+  const base = { id: "x", body: "<p>x</p>", title: "Country policy and information note: medical treatment and healthcare, China, July 2022 (accessible)", valid_from: "2022-07-05T00:00:00Z" };
+  const before = { ...base, published: "2026-09-01T14:41:42Z", published_precision: "day", date: "2026-09-01T14:41:42Z", captured_at: "2025-11-16T15:56:51Z" };
+  const after = { ...base, published: "2022-07-05T00:00:00Z", published_precision: "day", published_from: "valid from", page_updated: "2026-09-01T14:41:42Z", date: "2022-07-05T00:00:00Z" };
+  for (const v of [before, after]) {
+    assert.deepEqual(ownDate(v, about), { date: "2022-07-05T00:00:00Z", precision: "day", from: "valid from" });
+    assert.equal(editionTime(v, about), Date.parse("2022-07-05T00:00:00Z"));
+  }
+  // No "valid from": the month in the title, to the month; neither: no date of its own, and it sits where it was first captured.
+  const titled = { ...base, valid_from: null, published: "2026-09-01T14:41:42Z", date: "2026-09-01T14:41:42Z" };
+  assert.deepEqual(ownDate(titled, about), { date: "2022-07-01T00:00:00Z", precision: "month", from: "title" });
+  assert.deepEqual(ownDate({ ...titled, published: "2022-07-01T00:00:00Z", published_precision: "month", published_from: "title" }, about), { date: "2022-07-01T00:00:00Z", precision: "month", from: "title" });
+  assert.equal(buildTimeline({ topic: about.topic, country_name: "China", versions: [titled], history: [] }).editions[0].prec, "month");
+  const bare = { id: "y", body: "<p>x</p>", title: "country-bulletin-untitled", valid_from: null, published: "2026-08-26T14:14:12Z", date: "2026-08-26T14:14:12Z", captured_at: "2026-04-29T08:44:01Z", first_seen: "2026-10-02T12:09:19Z" };
+  assert.equal(ownDate(bare), null);
+  assert.equal(ownDate({ ...bare, published: null, published_precision: null, published_from: null, page_updated: "2026-08-26T14:14:12Z", date: "2026-04-29T08:44:01Z" }), null);
+  assert.equal(editionTime(bare), Date.parse("2026-04-29T08:44:01Z"));
+  // A note that misstates its own date does not jump the queue: the editions stay in the order they were published.
+  const odd = buildTimeline({ versions: [ed("a", "1.0", "2024-03-01T00:00:00Z"), ed("b", "2.0", "2023-01-01T00:00:00Z")], history: [] });
+  assert.deepEqual(odd.stops.map((s) => s.id), ["a", "b"]);
+});
+
+test("a citation's month is the month in the title, else the note's own date: never the page's", () => {
+  // Iran, protests of December 2025 to January 2026: no edition month in the title (those months are the topic), valid
+  // from 4 February 2026, on a page GOV.UK dated 26 August 2026. It was cited "(August 2026, web version)".
+  const iran = seriesFile("iran/bulletin--2025-2026-december-january-protests"), about = { topic: iran.topic, countryName: iran.country_name };
+  const v = iran.versions.find((x) => x.current);
+  assert.equal(v.valid_from, "2026-02-04T00:00:00Z");
+  assert.equal(titleMonth({ title: v.title, ...about }), null);
+  const E = buildTimeline(iran).editions.at(-1);
+  const month = titleMonth({ title: v.title, ...about }) || E.own?.date.slice(0, 7) || null;         // reader.js: monthOf
+  assert.equal(month, "2026-02");
+  const ctx = { title: v.title, kind: iran.kind, topic: iran.topic, countryName: iran.country_name, version: v.version, month, para: "1.1.1" };
+  assert.equal(formatCitation(ctx, "tribunal").text, "Country bulletin Iran: Protests of December 2025 to January 2026 (Feb 2026, web version) at [1.1.1]");
+  assert.match(formatCitation({ ...ctx, accessed: new Date(2026, 9, 4) }).text, /\(February 2026, web version\) para 1\.1\.1 accessed 4 October 2026\.$/);
+  // A title with its month is cited by that month, whatever the dates say.
+  assert.equal(titleMonth({ title: "Country policy and information note: Kurds, Turkey, July 2025 (accessible)", topic: "Kurds", countryName: "Turkey" }), "2025-07");
+  assert.equal(titleMonth({ title: "Country bulletin Iran: security situation, March 2026 (accessible)", topic: "security situation", countryName: "Iran" }), "2026-03");
+  assert.equal(titleMonth({ title: null }), null);
+});
+
+test("the live edition's words: when they were read on GOV.UK, not the time of the last check of any kind", () => {
+  const fmt = (iso) => iso.slice(0, 16).replace("T", " ");
+  // Only when this copy first read the text is known: say that, and report the check as a check.
+  const first = readOnGovuk({ first_seen: "2026-10-02T12:09:19Z" }, "2026-10-02T16:11:59Z", fmt);
+  assert.deepEqual([first.how, first.when], ["read", "2026-10-02 12:09"]);
+  assert.equal(first.check, "GOV.UK was last checked for changes on 2026-10-02 16:11. A check compares the dates GOV.UK gives each country page: it does not read every note again each time.");
+  assert.ok(!first.when.includes("16:11"), "the last check's time is never given as when the words were read");
+  // Where the export says when the note was last read live, that is the better answer.
+  const last = readOnGovuk({ first_seen: "2026-10-02T12:09:19Z", last_seen: "2026-10-09T03:00:00Z" }, "2026-10-10T16:00:00Z", fmt);
+  assert.deepEqual([last.how, last.when], ["last read", "2026-10-09 03:00"]);
+  // Nothing known: nothing claimed.
+  assert.deepEqual(readOnGovuk({}, null, fmt), { how: "", when: "", check: "" });
+  assert.deepEqual(readOnGovuk(null, undefined, fmt), { how: "", when: "", check: "" });
 });

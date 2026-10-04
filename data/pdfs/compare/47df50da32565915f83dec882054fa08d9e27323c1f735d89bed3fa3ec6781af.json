@@ -1,0 +1,652 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-christians-china-june-2026-accessible",
+ "pdf_sha256": "47df50da32565915f83dec882054fa08d9e27323c1f735d89bed3fa3ec6781af",
+ "body_sha256": "a018af0f067fef4329a1e9cdd7607dd39ed6bef0da2feab584d9bb459dab8df5",
+ "words": {
+  "web": 23148,
+  "pdf": 23039
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 54,
+   "pdf_words": 9,
+   "share": 0.001364,
+   "passages": 3,
+   "sizes": {
+    "passage": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 54,
+    "pdf_words": 9
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 106,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 5
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "caption": {
+    "differences": 1,
+    "web_words": 25,
+    "pdf_words": 0
+   },
+   "list marker": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 7
+   },
+   "picture in words": {
+    "differences": 3,
+    "web_words": 81,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 54,
+    "pdf_words": 9
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 15,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 15
+  },
+  "unresolved": {
+   "differences": 10,
+   "web_words": 0,
+   "pdf_words": 44
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": null,
+   "pdf": "5.0",
+   "pdf_date": "June 2026"
+  },
+  "section_updated": {
+   "web": [
+    "29 June 2026"
+   ],
+   "pdf": [
+    "29 June 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 135,
+   "pdf": 135,
+   "pdf_raw": 135,
+   "differ": false
+  },
+  "pictures": {
+   "web": 10,
+   "pdf": 13
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 54,
+   "pdf": 52
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Year\nNumber of Arrests\n2017\n2,930\n2018\n11,111\n2019\n6,132\n2020\n7,055\n2021\n11,156\n2022\n10,895\n2023\n12,520\n2024\n19,053\n2025\n19,191\n12.2.10 Using information from the same report, CPIT has produced the map below. The map shows the 10 provinces with the most recorded arrests of COAG members in 2025.",
+   "pdf": "",
+   "web_words": 28,
+   "pdf_words": 0,
+   "before": "released and 115 are recorded as status unknown.",
+   "after": "12.2 Church of Almighty God (COAG/CAG)",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.7",
+    "section": "Country information",
+    "page": 45
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Mainland China Administrative Deacon Station\nSpirit Church\nSouth China Church\nAnointed King\nLord God Church\nWorld Elijah Evangelic Mission\nYuandun Famen\nNew Testament Church\nDami Mission",
+   "pdf": "20.",
+   "web_words": 26,
+   "pdf_words": 1,
+   "before": "Church\nThree Grades of Servants\nTrue Buddha School",
+   "after": "Children of God.\nIt must be noted, however,",
+   "before_pdf": "Servants 19. Dami Mission\n10. True Buddha School",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "to greater scrutiny from authorities than ordinary worshipers.’",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "both registered and unregistered religious institutions were subject.",
+   "after": "9.1.2 The USCIRF Spotlight Podcast, a",
+   "before_pdf": "both registered and unregistered religious institutions were subject",
+   "where": {
+    "heading": "treatment-all-groups",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number of COAG Christians Arrested (2016–2022)\nYear\nNumber of Arrests\n2017\n2,930\n2018\n11,111\n2019\n6,132\n2020\n7,055\n2021\n11,156\n2022\n10,895\n2023\n12,520\n2024\n19,053\n2025\n19,191",
+   "pdf": "",
+   "web_words": 35,
+   "pdf_words": 0,
+   "before": "of arrests of COAG Christians from 2017-2025.",
+   "after": "12.2.10 Using information from the same",
+   "where": {
+    "heading": "church-of-almighty-god",
+    "paragraph": "12.2.9",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Official – sensitive: Not for disclosure – Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: Not for disclosure – End of section",
+   "web_words": 0,
+   "pdf_words": 33,
+   "before": "Humanitarian Protection and the instruction on Restricted Leave.",
+   "after": "2. Convention reason(s)\n2.1.1 Actual",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number of CAG Christians Sentenced, 2020–2025\nYear\nNumber of Persons Sentenced\n2020\n1,098\n2021\n1,452\n2022\n1,901\n2023\n2,212\n2024\n2,175\n2025\n2,291",
+   "pdf": "",
+   "web_words": 30,
+   "pdf_words": 0,
+   "before": "the actual sentencing situation is far more severe.",
+   "after": "12.3 The Local Church (Shouters or The",
+   "where": {
+    "heading": "church-of-almighty-god",
+    "paragraph": "12.2.11",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Protestant churches in China were concentrated in coastal areas, as of 2004. % of Protestant worship sites in each province, among all such sites in China.",
+   "pdf": "",
+   "web_words": 25,
+   "pdf_words": 0,
+   "before": "still gives a good snapshot of geographical patterns.",
+   "after": "11.1.2 The 2024 DFAT report noted:",
+   "where": {
+    "heading": "registered-groups-and-places-of-worship",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number of CAG Christians Arrested, 2017–2025\nYear\nNumber of Arrests\n2016\n18\n2017\n72\n2018\n88\n2019\n6\n2020\n0\n2021\n9\n2022\n19",
+   "pdf": "",
+   "web_words": 16,
+   "pdf_words": 0,
+   "before": "recorded arrests after 2022 in the USCIRF list.",
+   "after": "12.2.7 According to the USCIRF list,",
+   "where": {
+    "heading": "church-of-almighty-god",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "中国化)—",
+   "pdf": "中国 化)—",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "state. Since 2015, Xi has touted “sinicization” (zhongguohua,",
+   "after": "which emphasizes the need for PRC [People’s",
+   "where": {
+    "heading": "sinicization",
+    "paragraph": "7.3.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "include Falun Gong, folk religious practices, and Taoism.’",
+   "after": "The Online Spiritual Atlas of the Global East (",
+   "where": {
+    "heading": "religious-groups-in-general",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "11.3.7The",
+   "pdf": "11.3.7 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "of singing Christian hymns on all online media.”’",
+   "after": "USCIRF 2025 report noted: ‘Law enforcement also ramped",
+   "where": {
+    "heading": "protestants-unregistered",
+    "paragraph": "11.3.7",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.3.13",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to the Early Rain Church in Sichuan province.",
+   "after": "The chart below was produced by CPIT, based",
+   "where": {
+    "heading": "protestants-unregistered",
+    "paragraph": "11.3.12",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "June 2026",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 5.0",
+   "after": "Executive summary\nThe Chinese constitution guarantees freedom of",
+   "before_pdf": "Version 5.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.",
+   "pdf": "12.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "singing the national anthem, and participating in elections.”’",
+   "after": "4.3 The 2024 DFAT report noted:\nThere",
+   "where": {
+    "heading": "jehovahss-witnesses",
+    "paragraph": "14.4.3",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "be on guard against” the remaining nine groups:",
+   "after": "Falun Gong\nChurch of Almighty God\nShouters\nSociety",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "COAG, Annual Report Exposing the CCP’s Persecution of The Church of ..., 13 February 2026",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "Hua Foundation, Political Prisoner Database, 31 March 2025",
+   "after": "DFAT, Country Information Report- China (paragraphs 3.100-",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.5.6",
+    "section": "Version control and feedback",
+    "page": 44
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "11. Mainland China Administrative 2.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "guard against” the remaining nine groups:\nFalun Gong",
+   "after": "Church of Almighty God\nShouters\nSociety of Disciples",
+   "before_pdf": "against” the remaining nine groups:\n1. Falun Gong",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "13. South China Church\n5.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Church of Almighty God\nShouters\nSociety of Disciples",
+   "after": "Unification Church\nGuanyin Famen\nEvangelical Gospel Mission Armored",
+   "before_pdf": "Shouters 12. Spirit Church\n4. Society of Disciples",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "15. Lord God Church\n7.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Shouters\nSociety of Disciples\nUnification Church\nGuanyin Famen",
+   "after": "Evangelical Gospel Mission Armored with Blood and Holy",
+   "before_pdf": "Unification Church 14. Anointed King\n6. Guanyin Famen",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "Mission 16. World Elijah Evangelic",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "of Disciples\nUnification Church\nGuanyin Famen\nEvangelical Gospel",
+   "after": "Mission Armored with Blood and Holy Spirit\nFull",
+   "before_pdf": "Famen 15. Lord God Church\n7. Evangelical Gospel",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "18. New Testament Church\n9.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "with Blood and Holy Spirit\nFull Scope Church",
+   "after": "Three Grades of Servants\nTrue Buddha School\nMainland",
+   "before_pdf": "Spirit 17. Yuandun Famen\n8. Full Scope Church",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "12. Spirit Church\n4.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "groups:\nFalun Gong\nChurch of Almighty God\nShouters",
+   "after": "Society of Disciples\nUnification Church\nGuanyin Famen\nEvangelical",
+   "before_pdf": "Church of Almighty God Deacon Station\n3. Shouters",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "14. Anointed King\n6.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Almighty God\nShouters\nSociety of Disciples\nUnification Church",
+   "after": "Guanyin Famen\nEvangelical Gospel Mission Armored with Blood",
+   "before_pdf": "Disciples 13. South China Church\n5. Unification Church",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "17. Yuandun Famen\n8.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Gospel Mission Armored with Blood and Holy Spirit",
+   "after": "Full Scope Church\nThree Grades of Servants\nTrue",
+   "before_pdf": "Evangelic Mission\nArmored with Blood and Holy Spirit",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "19. Dami Mission\n10.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Spirit\nFull Scope Church\nThree Grades of Servants",
+   "after": "True Buddha School\nMainland China Administrative Deacon Station",
+   "before_pdf": "New Testament Church\n9. Three Grades of Servants",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "Deacon Station\n3.",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "nine groups:\nFalun Gong\nChurch of Almighty God",
+   "after": "Shouters\nSociety of Disciples\nUnification Church\nGuanyin Famen",
+   "before_pdf": "Mainland China Administrative 2. Church of Almighty God",
+   "where": {
+    "heading": "cults",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 10
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 182,
+  "different": {
+   "14.4.3": "12.4.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "12.2.10"
+  ],
+  "unconfirmed": []
+ }
+}

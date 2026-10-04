@@ -1,0 +1,235 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "brazil/country-policy-and-information-note-internal-relocation-brazil-august-2025-accessible",
+ "pdf_sha256": "e9ba2b6415fdf39b0043c530912319dbf101c9601cf30ee002248b4823ae07e8",
+ "body_sha256": "c4aefac8c45dc1d4bc6c31fadbd5845678c9dc8d4c1fc60d3522164eff29faa2",
+ "words": {
+  "web": 24787,
+  "pdf": 24536
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 253,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 1,
+    "web_words": 139,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 114,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "November 2025",
+   "pdf": "3.0",
+   "pdf_date": "November 2025"
+  },
+  "section_updated": {
+   "web": [
+    "2 December 2024"
+   ],
+   "pdf": [
+    "2 December 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 0,
+   "pdf_notices": 0
+  },
+  "footnotes": {
+   "web": 200,
+   "pdf": 200,
+   "pdf_raw": 200,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 7
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 110,
+   "pdf": 63
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Monthly rent in Brazil\nAccommodation Type\nAverage Price (BRL)*\nPrice Range (BRL)*\nAverage Price (GBP)*\nPrice Range (GBP)*\n1 Bedroom Apartment in City Centre\nR$1,550\nRS$1,000-2,750\n260\n165-450\n1 Bedroom Apartment outside City Centre\nR$1,000\nR$650-1,820\n165\n100-300\n3 Bedroom Apartment in City Centre\nR$3,000\nR$1,800-6,000\n500\n300-1,000\n3 Bedroom Apartment outside City Centre\nR$2,100\nR$1,250-4,000\n350\n200-650\nBuying an apartment in Brazil (prince per square metre)\nLocation\nAverage Price (BRL)*\nPrice Range (BRL)*\nAverage Price (GBP)*\nPrice Range (GBP)*\nApartment in City Centre\nR$8,200\nR$5,000-13,000\n1,350\n830-2,150\nApartment outside City Centre\nR$5,700\nR$3,700-10,000\n350\n200-650",
+   "pdf": "101\n102",
+   "web_words": 139,
+   "pdf_words": 0,
+   "before": "prices of renting or buying property in Brazil:",
+   "after": "9.2.4 For comparison, in June 2024",
+   "where": {
+    "heading": "monthly-rent-in-brazil",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Accommodation\nSão Paulo\nRio de Janeiro\nBrasilia\nFlorianopolis\nBelo Horizonte\nOne-bedroom apartment in the city centre\n560.14\n473.89\n366.37\n452.35\n392.95\nOne-bedroom apartment outside the centre\n357.70\n323.11\n214.87\n336.69\n262.16\nThree-bedroom apartment in the city centre\n1,175.53\n923.30\n1,059.70\n960.51\n708.22\nThree-bedroom apartment outside of the centre\n727.36\n712.07\n559.72\n736.78\n468.80",
+   "pdf": "104",
+   "web_words": 76,
+   "pdf_words": 0,
+   "before": "in US dollars. US$ 1 = GBP 0.79:",
+   "after": "9.2.5 The same source also estimated",
+   "where": {
+    "heading": "buying-an-apartment-in-brazil-prince-per-square-metre",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Accommodation\nBrazil\nUnited States\nPercentage Increase\nPrice per m2 (city centre)\n1.78\n7.75\n335 percent higher in the US\nPrice per m2 (outside the city centre)\n1.20\n5.26\n335 percent higher in the US",
+   "pdf": "105",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "in comparison to that of the United States:",
+   "after": "9.2.6 According to the AI 2024",
+   "where": {
+    "heading": "buying-an-apartment-in-brazil-prince-per-square-metre",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 31
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "189",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2024. CPIT redacted personal information from the image:",
+   "after": "14.2 Passports\n14.2.1 KPMG, in",
+   "where": {
+    "heading": "passports",
+    "paragraph": "14.1.3",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "192",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of the front cover of the new passport:",
+   "after": "15. Humanitarian situation\n15.1.1 In its",
+   "where": {
+    "heading": "Humanitarian_situation",
+    "paragraph": "14.2.2",
+    "section": "Country information",
+    "page": 48
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 196,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

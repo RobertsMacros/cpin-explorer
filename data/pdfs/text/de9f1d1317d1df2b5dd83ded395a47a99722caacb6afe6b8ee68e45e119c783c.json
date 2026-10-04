@@ -1,0 +1,38 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 66,
+ "paragraphs": 436,
+ "list_items": 39,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 75,
+ "bookmarks": 63,
+ "warnings": [
+  "page 21: bookmark not found in the text: '25'",
+  "page 21: bookmark not found in the text: '26'",
+  "page 37: bookmark not found in the text: '67'"
+ ],
+ "figure_pages": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": 39
+ },
+ "figure_sizes": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": [
+   333,
+   263
+  ]
+ },
+ "figure_text": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Ukraine: Military service",
+ "cover_version": "7.0",
+ "cover_date": "December 2020",
+ "pdf_sha256": "de9f1d1317d1df2b5dd83ded395a47a99722caacb6afe6b8ee68e45e119c783c",
+ "images": [
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png"
+ ]
+}

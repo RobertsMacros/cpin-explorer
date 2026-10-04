@@ -1,0 +1,559 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-bulletin-iran-security-situation-march-2026-accessible--2",
+ "pdf_sha256": "5940acabe153c6efb99be17c613340184b92328f3f19da6ff1b7b3d568f835cc",
+ "body_sha256": "fb73c381946fc95a335a67209e2760d2df2dc54780c914b22d123c80a0e22b19",
+ "words": {
+  "web": 18198,
+  "pdf": 17978
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 2,
+   "pdf_words": 2,
+   "share": 0.000111,
+   "passages": 0,
+   "sizes": {
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "picture": {
+    "differences": 14,
+    "web_words": 223,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 5,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 5,
+    "pdf_words": 5
+   },
+   "caption": {
+    "differences": 14,
+    "web_words": 223,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 6,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "March 2026",
+   "pdf": null,
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 312,
+   "pdf": 312,
+   "pdf_raw": 312,
+   "differ": false
+  },
+  "pictures": {
+   "web": 16,
+   "pdf": 16
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 21,
+   "pdf": 20
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "3.1.1 Death",
+   "pdf": "3.1 Deaths and",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "to daily updates, see Bibliography).\n3. Civilian impacts",
+   "after": "injuries\n3.1.1 A BBC News article,",
+   "where": {
+    "heading": "death-injuries",
+    "paragraph": "2.3.19",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Coalition strikes on Iranian naval facilities and Iranian attacks on maritime vessels. As of 14 March, 2026 at 8:00AM ET.\nUS and Israeli strikes on Iranian retaliatory capabilities. As of March 14, 2026 at 8:00AM ET.",
+   "pdf": "",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "missile and air bases, and air defence systems):",
+   "after": "2.2.36 A BBC News article, published",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.35",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes against Iran. Reported and confirmed airstrikes aggregated by target type. From February 28, 2026 to March 17, 2026 at 3:00PM ET.",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "on 17 March 2026, aggregated by target type:",
+   "after": "2.2.38 According to the above dataset,",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.37",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes targeting political institutions in Tehran. As of March 3, 2025 at 4:00 PM ET.",
+   "pdf": "",
+   "web_words": 19,
+   "pdf_words": 0,
+   "before": "zone in the US on 3 March 2026:",
+   "after": "2.2.13 For a larger version of",
+   "before_pdf": "zone in the US) on 3 March 2026:",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.12",
+    "section": "Country information",
+    "page": 4
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US-Israeli strikes to degrade the Iranian ballistic missile programme from February 28, 2026 to March 8, 2026.",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "struck between 28 February and 8 March 2026:",
+   "after": "2.2.24 A BBC News article, published",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.23",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes targeting internal security in Tehran. As of March 12, 2026 at 3:00PM ET.",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "as of 3pm ET on 12 March 2026:",
+   "after": "2.2.30 For a larger version of",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.29",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes targeting internal security institutions. As of March 9, 2026 at 3:00PM ET.",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "as of 3pm ET on 9 March 2026:",
+   "after": "2.2.28 An RFE/RL article, published",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.27",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes against Iranian nuclear facilities. As of March 12, 2026 at 3:00PM ET.",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "in addition to those struck in June 2025):",
+   "after": "2.2.32 Referring to an article that",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.31",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Iranian Supreme National Security Council (SNSC). As of 3:00PM ET on March 18, 2026.",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "as of 3pm ET on 18 March 2026:",
+   "after": "2.2.42 The same ISW-CTP update",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.41",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US-Israeli strikes targeting Artesh Air Force and ground forces aviation bases in Iran.",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "as of 8am ET on 10 March 2026:",
+   "after": "2.2.27 The ISW-CTP evening update",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.26",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The share of Iran's various provinces in the attacks carried out.",
+   "pdf": "",
+   "web_words": 12,
+   "pdf_words": 0,
+   "before": "by the provinces of Isfahan, Khuzestan, and Alborz:",
+   "after": "2.3.12 The ISW-CTP update of",
+   "where": {
+    "heading": "extent-and-locations",
+    "paragraph": "2.3.11",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Maps of distributions of attacks between February 28 and March 13.",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "cities, and along the south coast of Iran:",
+   "after": "2.3.11 The same HRANA report also",
+   "where": {
+    "heading": "extent-and-locations",
+    "paragraph": "2.3.10",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "mailto:cipu@homeoffice.gov.uk].",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 5,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the [",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "before_pdf": "to comment on this note, please email the",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "3.3.10",
+    "section": "Version control and feedback",
+    "page": 46
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "US and Israeli strikes on drone production and facilities.",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "2026 and 3pm ET on 9 March 2026:",
+   "after": "2.2.26 The ISW-CTP morning update",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.25",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Iranian senior leadership and defence figures",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "strikes on Iran began on 28 February 2026:",
+   "after": "2.2.41 The ISW-CTP update of",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.40",
+    "section": "Country information",
+    "page": 4
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Strikes in Tehran.",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "of 10:13 GMT on 16 March 2026:",
+   "after": "2.3.15 The below table was produced",
+   "where": {
+    "heading": "extent-and-locations",
+    "paragraph": "2.3.14",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.8",
+   "pdf": "3.1.18",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "622\n18 March 2026\n1,369\n207\n627",
+   "after": "According to the above dataset, as of 5pm",
+   "where": {
+    "heading": "death-injuries",
+    "paragraph": "3.1.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.2",
+   "pdf": "3.2.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "reported departing the capital mostly towards the North.’",
+   "after": "While a number of UNHCR publications reported IDP",
+   "where": {
+    "heading": "internal-displacements",
+    "paragraph": "3.2.2",
+    "section": "Country information",
+    "page": 33
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Aggregate no. of",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "minimum values:\nDate\nAggregate no. of civilian fatalities",
+   "after": "child fatalities (subset of civilian fatalities)\nAggregate no.",
+   "before_pdf": "minimum values:\nDate\nAggregate no. of\ncivilian fatalities",
+   "where": {
+    "heading": "death-injuries",
+    "paragraph": "3.1.17",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Aggregate no. of",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "no. of child fatalities (subset of civilian fatalities)",
+   "after": "reported fatalities under review pending verification and classification (",
+   "before_pdf": "civilian fatalities\nchild fatalities (subset of civilian fatalities)",
+   "where": {
+    "heading": "death-injuries",
+    "paragraph": "3.1.17",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "30",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "also] continued to target Iranian defense industrial sites.’",
+   "after": "2.1.9 On 4 March 2026, The",
+   "where": {
+    "heading": "targets",
+    "paragraph": "2.1.9",
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "70 71 72 73 74",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "facilities (bases/ logistics warehouse/ garrisons / barracks / intelligence headquarters)",
+   "after": "intelligence/ Ministry of Intelligence offices/ buildings\nBasij bases/",
+   "where": {
+    "heading": "developments",
+    "paragraph": "2.2.1",
+    "section": "Country information",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "251 252 253",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "limited to:\nhospitals/ other medical facilities/ emergency bases",
+   "after": "residential buildings or areas\nschools\nworkplaces\nsports facilities",
+   "where": {
+    "heading": "other-impacts",
+    "paragraph": "3.3.1",
+    "section": "Country information",
+    "page": 34
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 121,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "3.1.1",
+   "3.1.8",
+   "3.2.2"
+  ],
+  "unconfirmed": []
+ }
+}

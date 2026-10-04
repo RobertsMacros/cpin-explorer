@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 13,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 28,
+ "paragraphs": 76,
+ "list_items": 18,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 9,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "35f54f67de1201ce241d1fa57682ec7e99e260b7da0a9e15196452f1266dcaa9.jpg": 10
+ },
+ "figure_sizes": {
+  "35f54f67de1201ce241d1fa57682ec7e99e260b7da0a9e15196452f1266dcaa9.jpg": [
+   878,
+   1038
+  ]
+ },
+ "figure_text": {
+  "35f54f67de1201ce241d1fa57682ec7e99e260b7da0a9e15196452f1266dcaa9.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note China: Fear of punishment for crimes for which the person was already charged in another country (‘Double jeopardy’ or re-prosecution)",
+ "cover_version": "2.0",
+ "cover_date": "March 2018",
+ "pdf_sha256": "0017b65d9023c26d6a5ec2d9aad12b59bbc71e9309cc266a685d9f7b70b461f0",
+ "images": [
+  "35f54f67de1201ce241d1fa57682ec7e99e260b7da0a9e15196452f1266dcaa9.jpg"
+ ]
+}

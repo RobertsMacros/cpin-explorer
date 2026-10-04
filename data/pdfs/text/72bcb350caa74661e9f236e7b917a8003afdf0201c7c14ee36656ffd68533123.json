@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 14,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 35,
+ "paragraphs": 81,
+ "list_items": 29,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 21,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": 9
+ },
+ "figure_sizes": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": [
+   528,
+   326
+  ]
+ },
+ "figure_text": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Background information, including internal relocation",
+ "cover_version": "3.0",
+ "cover_date": "April 2020",
+ "pdf_sha256": "72bcb350caa74661e9f236e7b917a8003afdf0201c7c14ee36656ffd68533123",
+ "images": [
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png"
+ ]
+}

@@ -5,6 +5,7 @@
   "description": "Front-end toolchain: vendors COBE, map data and fonts into the prototypes (no CDN at runtime).",
   "scripts": {
     "vendor": "node build-vendor.mjs",
+    "mark": "node build-mark.mjs",
     "test": "node --test test/*.test.mjs",
     "borders": "node build-borders.mjs",
     "search-index": "PYTHONPATH=../src ${PYTHON:-../.venv/bin/python} -m cpin.search_records && node build-search.mjs",

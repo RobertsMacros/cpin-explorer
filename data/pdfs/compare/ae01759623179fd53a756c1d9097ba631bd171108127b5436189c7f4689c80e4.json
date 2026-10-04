@@ -1,0 +1,260 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-internal-relocation-pakistan-september-2026-accessible",
+ "pdf_sha256": "ae01759623179fd53a756c1d9097ba631bd171108127b5436189c7f4689c80e4",
+ "body_sha256": "2e2623153c6939ac5b68c50b598d1c9abfd4e3dc117fec13599b6ab6e25ff08e",
+ "words": {
+  "web": 8647,
+  "pdf": 8623
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 26,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 26,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "September 2026",
+   "pdf": "3.0",
+   "pdf_date": "September 2026"
+  },
+  "section_updated": {
+   "web": [
+    "16 September 2026"
+   ],
+   "pdf": [
+    "16 September 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 121,
+   "pdf": 121,
+   "pdf_raw": 121,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 39,
+   "pdf": 36
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Location\n2018-19\n2024-25\nPunjab\n16.5\n23.3\nSindh\n24.5\n32.6\nKyber Pakhtunkhwa\n28.7\n35.3\nBalochistan\n41.8\n47.0",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "to 2025 compared to 2018 to 2019 data:",
+   "after": "6.2.3 The May 2026 EUAA Pakistan",
+   "where": {
+    "heading": "economy",
+    "paragraph": "6.2.2",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "6.4.4The",
+   "pdf": "6.4.4 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "50.3%). Sindh had the lowest unemployment rate.",
+   "after": "following table was compiled by CPIT using LFS",
+   "before_pdf": "50.3%. Sindh had the lowest unemployment rate.",
+   "where": {
+    "heading": "employment",
+    "paragraph": "6.4.4",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "6.8.1The",
+   "pdf": "6.8.1 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Katchi Abadis [informal settlements].’\n6.8 Social welfare",
+   "after": "BTI 2026 Pakistan noted regarding the welfare system",
+   "where": {
+    "heading": "social-welfare",
+    "paragraph": "6.8.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2.5",
+   "pdf": "7.2.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ensure their initial comfort and connection with families.’",
+   "after": "The April 2025 DFAT report stated that:\nRepatriates",
+   "where": {
+    "heading": "reintegration",
+    "paragraph": "7.2.5",
+    "section": "Country information",
+    "page": 21
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Map.",
+   "pdf": "Map46.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "shown on the Ministry of Railway’s Route",
+   "after": "There were at least 12 international airports across",
+   "where": {
+    "heading": "transport-network",
+    "paragraph": "5.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Focus.",
+   "pdf": "Focus50.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "see Section 7 of the EUAA Pakistan – Country",
+   "after": "6.2 Economy\n6.2.1 The World",
+   "where": {
+    "heading": "about-this-section",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 12
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 92,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "7.2.5"
+  ],
+  "unconfirmed": []
+ }
+}

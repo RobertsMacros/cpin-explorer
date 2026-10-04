@@ -1,0 +1,1400 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "eritrea/country-policy-and-information-note-national-service-and-illegal-exit-eritrea-december-2025-accessible",
+ "pdf_sha256": "32fa87a13a1bbf62b449085fe8584cde0bf3d09326f6b8ccdf65dd76dede76bb",
+ "body_sha256": "408ee98800488283ff3f3fff0c50b5322ebd2160a6a152e965c4aacce18243d3",
+ "words": {
+  "web": 30584,
+  "pdf": 30635
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 3,
+   "pdf_words": 19,
+   "share": 0.000359,
+   "passages": 2,
+   "sizes": {
+    "word": 2,
+    "passage": 2
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 0,
+   "words": 3
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 3,
+    "pdf_words": 19
+   },
+   "numbering": {
+    "differences": 43,
+    "web_words": 44,
+    "pdf_words": 50
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 11,
+    "pdf_words": 1
+   },
+   "form": {
+    "differences": 15,
+    "web_words": 3,
+    "pdf_words": 17
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 11,
+    "pdf_words": 1
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "list marker": {
+    "differences": 12,
+    "web_words": 0,
+    "pdf_words": 12
+   },
+   "number format": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 43,
+    "web_words": 44,
+    "pdf_words": 50
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 19
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "7.0",
+   "web_date": "December 2025",
+   "pdf": "7.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "5 November 2025"
+   ],
+   "pdf": [
+    "05 November 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 197,
+   "pdf": 197,
+   "pdf_raw": 197,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 109,
+   "pdf": 74
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "force.",
+   "pdf": "forced to perform agricultural labor on government-owned farms.’",
+   "web_words": 1,
+   "pdf_words": 9,
+   "before": "4-week war simulation, and some conscripts are",
+   "after": "The same source further noted: Homeless and unaccompanied",
+   "where": {
+    "heading": "underage-recruitment",
+    "paragraph": "12.4.4",
+    "section": "Country information",
+    "page": 37
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the recent drive and sent off to military postings.’",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "1998-2000 border war, being rounded up in",
+   "after": "10.2.2 The GoN 2023 report noted:",
+   "where": {
+    "heading": "practice",
+    "paragraph": "10.2.2",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "About the",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "to demonstrate they face persecution or serious harm.",
+   "after": "assessment\nSection updated: 5 November 2025\nAbout the",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "About the assessment",
+    "page": 2
+   },
+   "size": "word",
+   "second": "cannot tell",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "vi) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "grounds\nPeople travelling abroad for medical treatment\nvi) ‘",
+   "after": "People travelling abroad for studies or for a",
+   "before_pdf": "v) ‘People travelling abroad for medical treatment\nvi)",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "About the assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "Eritrea](https://www.state.gov/reports/",
+   "pdf": "USSD,",
+   "web_words": 6,
+   "pdf_words": 1,
+   "before": "fifth and sixth ... (paragraph 47), 5 March 2025",
+   "after": "2025-trafficking-in-persons-report/eritrea/), (trafficking profile),",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "18.6.8",
+    "section": "Version control and feedback",
+    "page": 37
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "17.4.4",
+   "pdf": "1.1.3.",
+   "web_words": 3,
+   "pdf_words": 3,
+   "before": "the country without an exit visa or passport.’",
+   "after": "FH 2024 report noted that ‘... Eritreans young enough",
+   "where": {
+    "heading": "penalties-for-leaving-without-an-exit-visa",
+    "paragraph": "17.4.4",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "mailto:cipu@homeoffice.gov.uk).",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "please email the Country Policy and Information Team](",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "before_pdf": "please email the Country Policy and Information Team.",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "18.6.8",
+    "section": "Version control and feedback",
+    "page": 69
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.",
+   "pdf": "1.1.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "the National Service Registration Card.’\n12.2 School",
+   "after": "1 The FH 2024 report stated: ‘Students in",
+   "where": {
+    "heading": "school",
+    "paragraph": "12.2.1",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "About the assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "has been removed as it is restricted for",
+   "after": "internal Home Office use only.\nOfficial – sensitive: Not",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "About the assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "national",
+   "pdf": "nation al",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "seekers:\n8. Political context\n8.1 Establishment of",
+   "after": "service\n8.1.1 The National Service Proclamation",
+   "where": {
+    "heading": "establishment-of-national-service",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "8.1.2The",
+   "pdf": "8.1.2 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "hereafter Sawa), started to coincide with military training.’",
+   "after": "National Service Proclamation has provided these definitions:\nNational",
+   "where": {
+    "heading": "establishment-of-national-service",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.1.4",
+   "pdf": "1.1.2.",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "to confirm residents’ attendance at national service projects.’",
+   "after": "The BTI 2024 report stated: ‘... draft dodging is",
+   "before_pdf": "to confirm residents' attendance at national service projects.’",
+   "where": {
+    "heading": "family-of-evaders",
+    "paragraph": "16.1.4",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "number format",
+   "group": "form",
+   "verdict": "real",
+   "web": "5",
+   "pdf": "05",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or serious harm.\nAbout the assessment\nSection updated:",
+   "after": "November 2025\nAbout the assessment\nThis section considers",
+   "before_pdf": "face persecution or serious harm.\nAssessment\nSection updated:",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "About the assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.1.2",
+   "pdf": "7.1.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "evidential basis for decisions.\n7. Limitation of information",
+   "after": "Relevant and reliable information on the current situation",
+   "where": {
+    "heading": "limitation-of-information",
+    "paragraph": "7.1.2",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.2",
+   "pdf": "9.4.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of military age (18 to 60 years old).",
+   "after": "The Cedoca 2025 report observed:\nIn addition to",
+   "where": {
+    "heading": "peoples-militia",
+    "paragraph": "9.4.2",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.1.4",
+   "pdf": "12.1.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and conscientious objectors .\n12. Recruitment\n12.1 Registration",
+   "after": "Article 11 of the 1995 Proclamation on National",
+   "where": {
+    "heading": "registration",
+    "paragraph": "12.1.4",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.2",
+   "pdf": "12.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "physical and sexual abuse took place at Sawa.’",
+   "after": "The HRC 2025 report noted:\nThe education system",
+   "where": {
+    "heading": "school",
+    "paragraph": "12.2.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.5",
+   "pdf": "12.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "into military training or conscription by government officials.’",
+   "after": "Duration\n12.5.1 The Proclamation on National",
+   "where": {
+    "heading": "duration",
+    "paragraph": "12.4.4",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.5.",
+   "pdf": "12.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or conscription by government officials.’\n12.5 Duration",
+   "after": "1 The Proclamation on National Service No 82",
+   "before_pdf": "or conscription by government officials.’\n12.1 Duration",
+   "where": {
+    "heading": "duration",
+    "paragraph": "12.5.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.6",
+   "pdf": "12.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the statutory limit of 40 years of age ...’",
+   "after": "Discharge from national service\n12.6.1 The",
+   "where": {
+    "heading": "discharge",
+    "paragraph": "12.1.4",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.6.",
+   "pdf": "12.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of age ...’\n12.6 Discharge from national service",
+   "after": "1 The HRW 2023 report observed: ‘Once conscripted",
+   "before_pdf": "of age ...’\n12.2 Discharge from national service",
+   "where": {
+    "heading": "discharge",
+    "paragraph": "12.6.1",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.6.",
+   "pdf": "12.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "still minors, have very few options for discharge ...’",
+   "after": "2 The GoN 2023 report observed:\nIt was",
+   "where": {
+    "heading": "discharge",
+    "paragraph": "12.6.2",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.6.",
+   "pdf": "12.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in practice ... Previously issued exemptions were then reevaluated.’",
+   "after": "3 However, the USSD 2025 TiP report observed:",
+   "where": {
+    "heading": "discharge",
+    "paragraph": "12.6.3",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.6.",
+   "pdf": "12.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "with medical conditions hindering their ability to work.’",
+   "after": "4 The Cedoca 2025 report noted:\nEASO noted",
+   "where": {
+    "heading": "discharge",
+    "paragraph": "12.6.4",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.1.5",
+   "pdf": "16.1.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "protection against arbitrary confiscation of land and property ...’",
+   "after": "The HRC May 2024 report noted:\nThe families",
+   "where": {
+    "heading": "family-of-evaders",
+    "paragraph": "16.1.5",
+    "section": "Country information",
+    "page": 50
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.1.6",
+   "pdf": "16.1.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "demolished, their crops destroyed and their cattle starved.’",
+   "after": "The USCIRF 2025 report stated that the government ‘...",
+   "where": {
+    "heading": "family-of-evaders",
+    "paragraph": "16.1.6",
+    "section": "Country information",
+    "page": 50
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.1.7",
+   "pdf": "16.1.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "military service by enforcing severe penalties on them.’",
+   "after": "The Cedoca 2025 report observed:\nFamily members of",
+   "where": {
+    "heading": "family-of-evaders",
+    "paragraph": "16.1.7",
+    "section": "Country information",
+    "page": 50
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "17.4.5",
+   "pdf": "17.4.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "country without obtaining an exit visa face imprisonment.’",
+   "after": "The Cedoca 2025 report observed:\nArticle 37 of",
+   "where": {
+    "heading": "penalties-for-leaving-without-an-exit-visa",
+    "paragraph": "17.4.5",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.2",
+   "pdf": "18.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "forced deportations of Eritrean refugees and asylum seekers’.",
+   "after": "Diaspora tax and ‘letter of regret’\n18.2.",
+   "where": {
+    "heading": "diaspora-tax",
+    "paragraph": "18.1.4",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.2.",
+   "pdf": "18.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "18.2 Diaspora tax and ‘letter of regret’",
+   "after": "1 The Website of the Embassy of the",
+   "before_pdf": "18.1 Diaspora tax and ‘letter of regret’",
+   "where": {
+    "heading": "diaspora-tax",
+    "paragraph": "18.2.1",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.2.",
+   "pdf": "18.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "documents and obtaining your RRT clearance every year.’",
+   "after": "2 The GON 2023 report noted:\nIt is",
+   "where": {
+    "heading": "diaspora-tax",
+    "paragraph": "18.2.2",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.3",
+   "pdf": "18.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of property, renewal of licences and business transactions.’",
+   "after": "Treatment of returns - general\n18.3.1 The",
+   "where": {
+    "heading": "treatment-returnees",
+    "paragraph": "18.1.3",
+    "section": "Country information",
+    "page": 58
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.3.",
+   "pdf": "18.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "business transactions.’\n18.3 Treatment of returns - general",
+   "after": "1 The GoN 2023 report observed:\nAccording to [",
+   "before_pdf": "business transactions.’\n18.2 Treatment of returns - general",
+   "where": {
+    "heading": "treatment-returnees",
+    "paragraph": "18.3.1",
+    "section": "Country information",
+    "page": 58
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.3.",
+   "pdf": "18.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "inconsistent treatment, just as all other Eritrean citizens.’",
+   "after": "2 The Cedoca 2025 report noted:\nIn general,",
+   "where": {
+    "heading": "treatment-returnees",
+    "paragraph": "18.3.2",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.4",
+   "pdf": "18.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "important distinction exists between permanent and temporary return.’",
+   "after": "People with diaspora status\n18.4.1 The",
+   "where": {
+    "heading": "people-with-diaspora-status",
+    "paragraph": "18.3.2",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.4.",
+   "pdf": "18.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "temporary return.’\n18.4 People with diaspora status",
+   "after": "1 The GoN 2023 report observed:\nSources reported",
+   "before_pdf": "temporary return.’\n18.3 People with diaspora status",
+   "where": {
+    "heading": "people-with-diaspora-status",
+    "paragraph": "18.4.1",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.4.",
+   "pdf": "18.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and being sent back into compulsory national service.’",
+   "after": "2 The Cedoca 2025 report noted:\nAccording to",
+   "where": {
+    "heading": "people-with-diaspora-status",
+    "paragraph": "18.4.2",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.4.",
+   "pdf": "18.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "deliberately leave the country before the status lapses ...’",
+   "after": "3 The same source further observed:\nInterviews with",
+   "before_pdf": "deliberately leave the country before the status lapses ...",
+   "where": {
+    "heading": "people-with-diaspora-status",
+    "paragraph": "18.4.3",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.5",
+   "pdf": "18.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "border, after which they can re-enter Eritrea ...’",
+   "after": "Returnees subject to national service\n18.5.1",
+   "where": {
+    "heading": "returnees-subject-to-national-service",
+    "paragraph": "18.4.3",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.5.",
+   "pdf": "18.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Eritrea ...’\n18.5 Returnees subject to national service",
+   "after": "1 The GoN 2023 report further observed:\nPersons",
+   "before_pdf": "Eritrea ...’\n18.4 Returnees subject to national service",
+   "where": {
+    "heading": "returnees-subject-to-national-service",
+    "paragraph": "18.5.1",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.5.",
+   "pdf": "18.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "was able to buy the person’s freedom.’",
+   "after": "2 The Cedoca 2025 report noted:\nDuring Cedoca’",
+   "where": {
+    "heading": "returnees-subject-to-national-service",
+    "paragraph": "18.5.2",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6",
+   "pdf": "18.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "other entities that monitor returnees after their arrival.’",
+   "after": "Forced returns and treatment of failed asylum seekers",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.5.2",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Forced returns and treatment of failed asylum seekers",
+   "after": "1 The GoN 2023 report observed:\nThose forcibly",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.1",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "arbitrary detention, ill-treatment and compulsory national service...’",
+   "after": "2 A 13 July 2023 press release by",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.2",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "since their return to Eritrea,” the experts said.’",
+   "after": "3 The USSD 2025 TiP report noted: ‘Eritreans",
+   "before_pdf": "since their return to Eritrea,\" the experts said.’",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.3",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or forcibly recalling them into the National Service.’",
+   "after": "4 The HRC May 2025 report observed:\nThe",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.4",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "refugees without assessing the individual human rights risks ...’",
+   "after": "5 Amnesty International, in a standard letter as",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.5",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "reason to detain anyone forcibly returned to Eritrea ...’",
+   "after": "6 The Amnesty International 2024 report noted: ‘The [",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.6",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "as being detained and ill-treated on arrival.",
+   "after": "7 The FH 2024 report stated: ‘Eritrean refugees",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.7",
+    "section": "Country information",
+    "page": 63
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "18.6.",
+   "pdf": "18.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in the report that ‘Arbitrary detention is commonplace.’",
+   "after": "8 The Cedoca 2025 report observed:\nIt is",
+   "where": {
+    "heading": "forced-returns-and-treatment-of-failed-asylum-seekers",
+    "paragraph": "18.6.8",
+    "section": "Country information",
+    "page": 63
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "i) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "who can lawfully exit were likely to be:",
+   "after": "Men aged over 54\nWomen aged over 47",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ii) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "were likely to be:\nMen aged over 54",
+   "after": "Women aged over 47\nChildren aged under five (",
+   "before_pdf": "likely to be:\ni) ‘Men aged over 54",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iii) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Men aged over 54\nWomen aged over 47",
+   "after": "Children aged under five (with some scope for",
+   "before_pdf": "aged over 54\nii) ‘Women aged over 47",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iv) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "some scope for adolescents in family reunification cases)",
+   "after": "People exempt from national service on medical grounds",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "v) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "People exempt from national service on medical grounds",
+   "after": "People travelling abroad for medical treatment\nvi) ‘People",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "vii) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "travelling abroad for studies or for a conference",
+   "after": "Business and sportsmen\nFormer freedom fighters (Tegadelti) and",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "viii)‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "studies or for a conference\nBusiness and sportsmen",
+   "after": "Former freedom fighters (Tegadelti) and their family members",
+   "before_pdf": "or for a conference\nvii) ‘Business and sportsmen",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ix) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Former freedom fighters (Tegadelti) and their family members",
+   "after": "Authority representatives in leading positions and their family",
+   "where": {
+    "heading": "illegal-exit",
+    "paragraph": "3.6.3",
+    "section": "About the assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "to confirm residents’ attendance at national service projects.’",
+   "after": "1.4 The BTI 2024 report stated: ‘... draft",
+   "before_pdf": "to confirm residents' attendance at national service projects.’",
+   "where": {
+    "heading": "family-of-evaders",
+    "paragraph": "16.1.4",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and exit visa from Eritrea’. Paragraph 6 provides:",
+   "after": "No person can get out of Eritrea through",
+   "where": {
+    "heading": "requirements-to-leave",
+    "paragraph": "17.2.1",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "issued from time to time’. (Article 10 (1)).",
+   "after": "No one can leave Eritrea without being in",
+   "where": {
+    "heading": "requirements-to-leave",
+    "paragraph": "17.2.1",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "this Proclamation may be allowed to travel abroad:",
+   "after": "Upon giving evidence that he is exempted from",
+   "where": {
+    "heading": "requirements-to-leave",
+    "paragraph": "17.2.2",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "service by producing a Certificate of Service or",
+   "after": "By producing a registration card and entering into",
+   "where": {
+    "heading": "requirements-to-leave",
+    "paragraph": "17.2.2",
+    "section": "Country information",
+    "page": 52
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "6",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "are set out in the population pyramid below:",
+   "after": "7.2.3 According to the UNHCR the",
+   "where": {
+    "heading": "demography",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 15
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 240,
+  "different": {
+   "12.2.1": "1.1.1",
+   "12.5": "12.1",
+   "12.5.1": "12.1.1",
+   "12.6": "12.2",
+   "12.6.1": "12.2.1",
+   "12.6.2": "12.2.2",
+   "12.6.3": "12.2.3",
+   "12.6.4": "12.2.4",
+   "16.1.4": "1.1.2",
+   "16.1.5": "16.1.4",
+   "16.1.6": "16.1.5",
+   "16.1.7": "16.1.6",
+   "17.4.4": "1.1.3",
+   "17.4.5": "17.4.4",
+   "18.2": "18.1",
+   "18.2.1": "18.1.1",
+   "18.2.2": "18.1.2",
+   "18.3": "18.2",
+   "18.3.1": "18.2.1",
+   "18.3.2": "18.2.2",
+   "18.4": "18.3",
+   "18.4.1": "18.3.1",
+   "18.4.2": "18.3.2",
+   "18.4.3": "18.3.3",
+   "18.5": "18.4",
+   "18.5.1": "18.4.1",
+   "18.5.2": "18.4.2",
+   "18.6": "18.5",
+   "18.6.1": "18.5.1",
+   "18.6.2": "18.5.2",
+   "18.6.3": "18.5.3",
+   "18.6.4": "18.5.4",
+   "18.6.5": "18.5.5",
+   "18.6.6": "18.5.6",
+   "18.6.7": "18.5.7",
+   "18.6.8": "18.5.8"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "7.1.2",
+   "9.4.2",
+   "12.1.4",
+   "12.2.2",
+   "18.1.3"
+  ],
+  "unconfirmed": []
+ }
+}

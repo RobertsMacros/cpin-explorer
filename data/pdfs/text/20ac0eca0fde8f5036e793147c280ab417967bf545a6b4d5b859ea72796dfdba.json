@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 223,
+ "list_items": 19,
+ "tables": 2,
+ "figures": 2,
+ "footnotes": 150,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 53"
+ ],
+ "figure_pages": {
+  "0fa016c61cf7724358e7f37785dd0cecd3adfe76a30407e253a8c2c5a1f4df46.jpg": 32,
+  "14526fb8c0e6943f25e2daba66a493891a47df49f2da7c05e38a431f29a82738.png": 33
+ },
+ "figure_sizes": {
+  "0fa016c61cf7724358e7f37785dd0cecd3adfe76a30407e253a8c2c5a1f4df46.jpg": [
+   924,
+   1130
+  ],
+  "14526fb8c0e6943f25e2daba66a493891a47df49f2da7c05e38a431f29a82738.png": [
+   1037,
+   291
+  ]
+ },
+ "figure_text": {
+  "0fa016c61cf7724358e7f37785dd0cecd3adfe76a30407e253a8c2c5a1f4df46.jpg": 0,
+  "14526fb8c0e6943f25e2daba66a493891a47df49f2da7c05e38a431f29a82738.png": 156
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance India: Background information, including actors of protection, and internal relocation February 2015",
+ "cover_version": null,
+ "cover_date": "February 2015",
+ "pdf_sha256": "20ac0eca0fde8f5036e793147c280ab417967bf545a6b4d5b859ea72796dfdba",
+ "images": [
+  "0fa016c61cf7724358e7f37785dd0cecd3adfe76a30407e253a8c2c5a1f4df46.jpg",
+  "14526fb8c0e6943f25e2daba66a493891a47df49f2da7c05e38a431f29a82738.png"
+ ]
+}

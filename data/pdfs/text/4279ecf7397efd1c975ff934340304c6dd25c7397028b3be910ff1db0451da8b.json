@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 41,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 346,
+ "list_items": 50,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 114,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 48, 84"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Kenya: Actors of protection",
+ "cover_version": "1.0",
+ "cover_date": "May 2020",
+ "pdf_sha256": "4279ecf7397efd1c975ff934340304c6dd25c7397028b3be910ff1db0451da8b",
+ "images": []
+}

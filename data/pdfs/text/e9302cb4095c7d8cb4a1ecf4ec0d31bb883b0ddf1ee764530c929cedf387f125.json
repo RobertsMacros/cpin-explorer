@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 27,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 45,
+ "paragraphs": 201,
+ "list_items": 26,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 74,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "e4ea6db12de029d540ced162261d8e235997b1d3cbcdf15e23f1c2fcbad3854b.png": 10
+ },
+ "figure_sizes": {
+  "e4ea6db12de029d540ced162261d8e235997b1d3cbcdf15e23f1c2fcbad3854b.png": [
+   855,
+   743
+  ]
+ },
+ "figure_text": {
+  "e4ea6db12de029d540ced162261d8e235997b1d3cbcdf15e23f1c2fcbad3854b.png": 1115
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iraq: Sexual orientation, and gender identity and expression",
+ "cover_version": "1.0",
+ "cover_date": "October 2018",
+ "pdf_sha256": "e9302cb4095c7d8cb4a1ecf4ec0d31bb883b0ddf1ee764530c929cedf387f125",
+ "images": [
+  "e4ea6db12de029d540ced162261d8e235997b1d3cbcdf15e23f1c2fcbad3854b.png"
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 47,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 57,
+ "paragraphs": 333,
+ "list_items": 91,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 99,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Albania: Roma and Balkan Egyptians",
+ "cover_version": "4.0",
+ "cover_date": "October 2021",
+ "pdf_sha256": "0f11c9738c521cb8aee759a6f8292910bb939c16d30bc6fd527cea6ebb7f7225",
+ "images": []
+}

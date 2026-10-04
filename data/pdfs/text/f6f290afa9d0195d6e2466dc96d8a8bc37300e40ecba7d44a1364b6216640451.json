@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 31,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 31,
+ "paragraphs": 223,
+ "list_items": 28,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 51,
+ "bookmarks": 31,
+ "warnings": [
+  "footnotes with no mark found in the text: 51"
+ ],
+ "figure_pages": {
+  "2b33e3c5fa8064a16c3008d173fa153867fc707db3ed219605418042f045d073.jpg": 10
+ },
+ "figure_sizes": {
+  "2b33e3c5fa8064a16c3008d173fa153867fc707db3ed219605418042f045d073.jpg": [
+   557,
+   477
+  ]
+ },
+ "figure_text": {
+  "2b33e3c5fa8064a16c3008d173fa153867fc707db3ed219605418042f045d073.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note China: Christians",
+ "cover_version": "3.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "f6f290afa9d0195d6e2466dc96d8a8bc37300e40ecba7d44a1364b6216640451",
+ "images": [
+  "2b33e3c5fa8064a16c3008d173fa153867fc707db3ed219605418042f045d073.jpg"
+ ]
+}

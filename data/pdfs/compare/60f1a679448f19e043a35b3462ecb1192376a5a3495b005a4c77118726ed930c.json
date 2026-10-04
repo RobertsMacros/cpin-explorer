@@ -1,0 +1,274 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-sufficiency-of-protection-pakistan-september-2026-accessible",
+ "pdf_sha256": "60f1a679448f19e043a35b3462ecb1192376a5a3495b005a4c77118726ed930c",
+ "body_sha256": "f57f6c1c6073bf71abea3e164a24bf5e7b0f9ea3505b42793c0cc349f672c7f8",
+ "words": {
+  "web": 19167,
+  "pdf": 19172
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 5.2e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 4
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "September 2026",
+   "pdf": "5.0",
+   "pdf_date": "September 2026"
+  },
+  "section_updated": {
+   "web": [
+    "15 September 2026"
+   ],
+   "pdf": [
+    "15 September 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 218,
+   "pdf": 218,
+   "pdf_raw": 218,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 51,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "8.6 Information",
+   "pdf": "8.6 Informal",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Most death sentences were handed down for murder.",
+   "after": "justice systems and alternative dispute resolution\n8.6.",
+   "where": {
+    "heading": "information-justice-systems-and-alternative-dispute-resolution",
+    "paragraph": "8.5.3",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "cases falling under any of the following descriptions:",
+   "after": "When rape is committed by two or more",
+   "where": {
+    "heading": "sentence",
+    "paragraph": "9.1.7",
+    "section": "Annex A",
+    "page": 39
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "persons in furtherance of common intention of all.",
+   "after": "When the rape is committed of a minor",
+   "where": {
+    "heading": "sentence",
+    "paragraph": "9.1.7",
+    "section": "Annex A",
+    "page": 39
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "or a person with mental or physical disability.",
+   "after": "When the rape is committed by a public",
+   "where": {
+    "heading": "sentence",
+    "paragraph": "9.1.7",
+    "section": "Annex A",
+    "page": 39
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "or jailor, taking advantage of his official position.",
+   "after": "Where the rape is committed resulting in grievous",
+   "where": {
+    "heading": "sentence",
+    "paragraph": "9.1.7",
+    "section": "Annex A",
+    "page": 39
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Focus.",
+   "pdf": "Focus19.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "1 of the May 2026 EUAA Pakistan Country",
+   "after": "5.2 Resources and accessibility\n5.2.1",
+   "where": {
+    "heading": "police-service",
+    "paragraph": "5.1.4",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "92.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "there any domestic legislation specifically criminalising enforced disappearances.",
+   "after": "7.2.2 The USSD HR Report 2024",
+   "before_pdf": "there any domestic legislation specifically criminalising enforced disappearances",
+   "where": {
+    "heading": "enforced-disappearances",
+    "paragraph": "7.2.2",
+    "section": "Country information",
+    "page": 20
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 173,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

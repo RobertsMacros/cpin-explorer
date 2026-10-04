@@ -1,0 +1,365 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-christians-and-christian-converts-pakistan-july-2026-accessible",
+ "pdf_sha256": "3ed318d5411f99e58b20fc31cf157bb21233b39400f38bd630b0d5ae94f6f8d1",
+ "body_sha256": "eeb2106c6b69a57d49dfef471db9919231c51d08c1869d732593bc22b628b7f1",
+ "words": {
+  "web": 17984,
+  "pdf": 17988
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 4,
+   "share": 0.000111,
+   "passages": 0,
+   "sizes": {
+    "number": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 6
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 2,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "July 2026",
+   "pdf": "6.0",
+   "pdf_date": "July 2026"
+  },
+  "section_updated": {
+   "web": [
+    "10 June 2026"
+   ],
+   "pdf": [
+    "10 June 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 215,
+   "pdf": 215,
+   "pdf_raw": 215,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 51,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8. Background\n8.",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "COI as the evidential basis for decisions.\n8.",
+   "after": "1 Demography\n8.1.1 The Pakistan Bureau",
+   "before_pdf": "relevant COI as the evidential basis for decisions.",
+   "where": {
+    "heading": "demography",
+    "paragraph": "7.1.4",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "in practice",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "11.6 Protection of minorities and minority rights",
+   "after": "11.6.1 The USSD 2023 IRF Report",
+   "where": {
+    "heading": "protection",
+    "paragraph": "11.6.1",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.4",
+   "pdf": "6.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and no blasphemy charge is being actively pursued.",
+   "after": "Internal relocation is unlikely to be reasonable for",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.4",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.5",
+   "pdf": "6.1.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "blasphemy allegation against them by bringing formal charges.",
+   "after": "In the CG case of AK & SK, the",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.5",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.6",
+   "pdf": "6.1.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in general, no internal relocation alternative’ (paragraph 247).",
+   "after": "In analysing the evidence before it, the UT",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.6",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.7",
+   "pdf": "6.1.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "must be viewed against that background’ (paragraph 227).",
+   "after": "The country information in this note does not",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.7",
+    "section": "Assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.8",
+   "pdf": "6.1.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "evidence’ to justify a departure from these findings.",
+   "after": "Pakistan is a majority-Muslim country. According to",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.8",
+    "section": "Assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.1.9",
+   "pdf": "6.1.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in smaller communities in central Punjab (see Demography).",
+   "after": "For further guidance on internal relocation and factors",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "6.1.9",
+    "section": "Assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Total",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "share was in Islamabad Capital Territory.\nProvince\nChristian",
+   "after": "population\nTotal population\nChristian\nPunjab\n2,458,924",
+   "where": {
+    "heading": "demography",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Total",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "was in Islamabad Capital Territory.\nProvince\nChristian population",
+   "after": "population\nChristian\nPunjab\n2,458,924\n127,333,",
+   "before_pdf": "in Islamabad Capital Territory.\nProvince\nChristian\nTotal\npopulation",
+   "where": {
+    "heading": "demography",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Code.",
+   "pdf": "Code50.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the full legal text, see the Pakistan Penal",
+   "after": "9.5.3 A report on blasphemy trials",
+   "where": {
+    "heading": "legal-context-blasphemy",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 18
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 192,
+  "different": {
+   "6.1.4": "6.1.3",
+   "6.1.5": "6.1.4",
+   "6.1.6": "6.1.5",
+   "6.1.7": "6.1.6",
+   "6.1.8": "6.1.7",
+   "6.1.9": "6.1.8"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

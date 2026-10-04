@@ -1,0 +1,317 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sudan/country-policy-and-information-note-humanitarian-situation-sudan-september-2026-accessible",
+ "pdf_sha256": "9e6d75dc6860c94cc7c95bcac42d508041ba496358f813a304d2b06854dedaeb",
+ "body_sha256": "15bde6c11e69a8b632ddf953a5b219bf7568ee79e12763c150de9e1cbfd6730a",
+ "words": {
+  "web": 24896,
+  "pdf": 24735
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 4e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "kinds": {
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 168,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "3.0",
+   "pdf_date": "September 2026"
+  },
+  "section_updated": {
+   "web": [
+    "24 August 2026"
+   ],
+   "pdf": [
+    "24 August 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 215,
+   "pdf": 215,
+   "pdf_raw": 215,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 8,
+   "pdf": 7
+  },
+  "headings": {
+   "web": 63,
+   "pdf": 61
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "21.3.2 The",
+   "pdf": "21.3.2 he",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "assistance to those facing the most severe needs.’",
+   "after": "OCHA Sudan Humanitarian Operational Presence Dashboard reported that,",
+   "where": {
+    "heading": "humanitarian-actors",
+    "paragraph": "21.3.2",
+    "section": "Country information",
+    "page": 52
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 3.0,",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "",
+   "after": "September 2026\nExecutive summary\nSince conflict broke out",
+   "where": {
+    "heading": null,
+    "paragraph": null,
+    "section": null,
+    "page": null
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "2025while",
+   "pdf": "2025) while",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "2027.57 SDG per USD as of March",
+   "after": "increasing daily transfer limits through mobile banking applications",
+   "where": {
+    "heading": "banking",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "14.1.6The",
+   "pdf": "14.1.6 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "needs, resulting in starvation, destitution and potentially death.",
+   "after": "May 2026 IPC analysis of the food insecurity",
+   "where": {
+    "heading": "situation-including-people-in-need",
+    "paragraph": "14.1.6",
+    "section": "Country information",
+    "page": 31
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "State\nRegistered HSDUs\nAssessed HSDUs\nAt least partially operational HSDUs\nOperational share of assessed HSDUs\nOperational HSDUs per 100,000 population\nAbyei PCA\n8\n8\n4\n50%\n14.2\nAl Jazirah\n741\n471\n120\n25%\n2.2\nBlue Nile\n208\n199\n199\n87%\n18.7\nCentral Darfur\n115\n114\n114\n100%\n9.3\nEast Darfur\n42\n42\n42\n100%\n1.7\nGedaref\n337\n323\n316\n98%\n10.5\nKassala\n476\n455\n404\n89%\n14.9\nKhartoum\n801\n790\n161\n20%\n3\nNorth Darfur\n70\n70\n49\n70%\n1.5\nNorth Jordofan\n622\n487\n12\n2%\n0.3\nNorthern\n256\n249\n249\n100%\n16.3\nRed Sea\n277\n275\n218\n79%\n11.4\nRiver Nile\n373\n356\n302\n85%\n11.7\nSennar\n362\n310\n272\n88%\n14\nSouth Darfur\n435\n94\n94\n100%\n2.4\nSouth Kordofan\n128\n123\n122\n99%\n10.5\nWest Darfur\n97\n93\n91\n98%\n24.4\nWest Kordofan\n388\n7\n7\n100%\n0.3\nWhite Nile\n352\n343\n301\n88%\n8.7",
+   "pdf": "",
+   "web_words": 166,
+   "pdf_words": 0,
+   "before": "of HSDUs by state as of January 2026:",
+   "after": "15.3.9 The March 2026 Health Cluster",
+   "where": {
+    "heading": "access-to-healthcare",
+    "paragraph": "15.3.8",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2026",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Dashboard June 2026, July 2026. Accessed 27 July",
+   "after": "Sudan Humanitarian Operational Presence 1 January – 30 June",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "21.3.3",
+    "section": "Bibliography",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "1.1",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "CPINs), see About country policy and information notes.",
+   "after": "Material facts, credibility and other checks\n1.1.",
+   "before_pdf": "see About country policy and information notes.\n1.",
+   "where": {
+    "heading": "material-facts-credibility-and-other-checks",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "206",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Total\n1.59 billion\n532.4 million\n33.%",
+   "after": "21.1.7 OCHA reported in July 2026: ‘",
+   "where": {
+    "heading": "funding",
+    "paragraph": "21.1.7",
+    "section": "Country information",
+    "page": 50
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "215",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "6\n10\nTotal\n84\n166\n238\n74\n114",
+   "after": "Terms of Reference\nThe ‘Terms of Reference’ are",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "21.3.3",
+    "section": "Terms of Reference",
+    "page": 53
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 216,
+  "different": {},
+  "pdf_unnumbered": [
+   "1.1"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

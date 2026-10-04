@@ -1,0 +1,1610 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-healthcare-and-medical-treatment-pakistan-july-2024-accessible",
+ "pdf_sha256": "7c1c7bde1a92d53ff9bc1e61cee6fb7a51b83d0f5efae282d5cb5911b2b297e0",
+ "body_sha256": "d7f5351add60277c4727c42febf79a301a99f7d6241b90ace895d6386dcc0df1",
+ "words": {
+  "web": 15325,
+  "pdf": 15740
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0,
+   "share": 3.2e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 138,
+    "web_words": 0,
+    "pdf_words": 409
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 138,
+    "web_words": 0,
+    "pdf_words": 409
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 5,
+   "pdf_words": 5
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": null,
+   "pdf": "3.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [
+    "27 June 2024",
+    "4 June 2024"
+   ],
+   "pdf": [
+    "27 June 2024",
+    "4 June 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 299,
+   "pdf": 299,
+   "pdf_raw": 299,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 73,
+   "pdf": 65
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "liver],",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "neighbouring Liver Transplant Department [also see [Liver disease](#",
+   "after": "making a joint effort to provide the best",
+   "before_pdf": "neighbouring Liver Transplant Department [also see Liver disease],",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of the healthcare system\n1.1 General overview",
+   "after": "The World Health Organization Regional Office for the",
+   "where": {
+    "heading": "general-overview",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "demand than healthcare available through the public sector.’",
+   "after": "WHO EMRO noted that ‘The private health sector",
+   "where": {
+    "heading": "general-overview",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "decades.’\n1.2 Issues affecting the healthcare system",
+   "after": "WHO EMRO noted that ‘Despite an elaborate and",
+   "where": {
+    "heading": "issues-affecting-the-healthcare-system",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and limited access to quality health care services.’",
+   "after": "The Government of Pakistan’s Ministry of Finance",
+   "where": {
+    "heading": "issues-affecting-the-healthcare-system",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "expectancy at birth and HIV prevalence remained same.’",
+   "after": "The BTI 2024 report noted that:\nthe provision",
+   "where": {
+    "heading": "issues-affecting-the-healthcare-system",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "constraints have led to cuts to social services.’",
+   "after": "The BTI 2024 report further noted:\nWhile significant",
+   "where": {
+    "heading": "issues-affecting-the-healthcare-system",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Currently, the program benefits over three million children.’",
+   "after": "An article published on 10 June 2023 entitled ‘",
+   "where": {
+    "heading": "issues-affecting-the-healthcare-system",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "June 2024\n1.3 Affordability and health insurance",
+   "after": "According to a MedCOI response in January 2020:",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "at public facility but not in private facilities.’",
+   "after": "Information from June 2018 found on MedCOI described",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "province. Zakat funds are available at various hospitals.’",
+   "after": "The MedCOI response, dated 29 January 2020 noted",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "burns, complications from diabetes, infections and bypass surgeries.’",
+   "after": "The ITA noted in its healthcare resource guide",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "general public both from public and private hospitals.’",
+   "after": "The January 2020 MedCOI response noted: ‘Microloans can",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "policies in remote areas, the premiums are unaffordable.’",
+   "after": "An article published in The Lancet in October",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "had been covered since the SSP’s establishment.’",
+   "after": "The same source added:\nRecognizing the need for",
+   "before_pdf": "had been covered since the SSP's establishment.’",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.3.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "absorb these patients and bring in additional funds.’",
+   "after": "Academics Quratulain Muhammad and others noted that:\nPakistan,",
+   "where": {
+    "heading": "affordability-and-health-insurance",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.4.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "healthcare system.’\n1.4 NGOs (non-governmental organisations)",
+   "after": "MedCOI noted in a 2020 response that, ‘Charity",
+   "where": {
+    "heading": "ngos-non-governmental-organisations",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.4.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to cardiac surgery and treatment for paediatric cancer.’",
+   "after": "The BTI 2024 report noted that ‘Civil society",
+   "where": {
+    "heading": "ngos-non-governmental-organisations",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.4.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "associations of lawyers, [and] doctors... representing commercial interests...’",
+   "after": "NGO Source, a non-profit organisation and project",
+   "where": {
+    "heading": "ngos-non-governmental-organisations",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.4.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "NGOs [are] working in relief, development, and healthcare...’",
+   "after": "Also see the NGO Base, a website providing",
+   "where": {
+    "heading": "ngos-non-governmental-organisations",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "2. Pharmaceuticals\n2.1 Accessibility to pharmaceutical drugs",
+   "after": "WHO EMRO stated in an undated report entitled ‘",
+   "where": {
+    "heading": "accessibility-to-pharmaceutical-drugs",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "medicines instead of the current price-based procurement.’",
+   "after": "According to Muhammad Q and others ‘Most life-",
+   "where": {
+    "heading": "accessibility-to-pharmaceutical-drugs",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "medications are too expensive for people to afford...’",
+   "after": "An article on medicine costs published November 2023,",
+   "where": {
+    "heading": "accessibility-to-pharmaceutical-drugs",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Authority of Pakistan (DRAP) to properly regulate prices.’",
+   "after": "D. Watson chemist had numerous stores in Islamabad",
+   "where": {
+    "heading": "accessibility-to-pharmaceutical-drugs",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "website allows users to search for available medicines.",
+   "after": "The Aga Khan University Hospital had a network",
+   "where": {
+    "heading": "accessibility-to-pharmaceutical-drugs",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "infrastructure and staffing\n3.1 Hospitals and clinics",
+   "after": "The Pakistan Economic Survey 2021-22 noted that",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "health facilities have been estimated at 146,053.’",
+   "after": "The ITA report noted that the ‘National health",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Maternity & Child Health Centers, and 412 TB centers.’",
+   "after": "According to an April 2023 article by Samad",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "with 6142 primary care centers and 1282 hospitals.’",
+   "after": "WHO EMRO noted in an undated report entitled ‘",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and is contributing health services in the country.’",
+   "after": "For a list of public (state-run) and",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Clinics Businesses in Pakistan’.\n3.2 Medical personnel",
+   "after": "The Pakistan Economic Survey 2022-23 stated that",
+   "where": {
+    "heading": "medical-personnel",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "022 Lady Health workers, and 33,156 dentists.",
+   "after": "The BTI 2024 report noted that ...and there",
+   "where": {
+    "heading": "medical-personnel",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to-population ratio of 0.59 per 1000.’",
+   "after": "According to academics Quratulain Muhammad others, ‘Approximately 100,",
+   "where": {
+    "heading": "medical-personnel",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Each LHW covers a population of 1,000...’.",
+   "after": "See a list of physicians in all departments",
+   "where": {
+    "heading": "medical-personnel",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "4. Cancer (oncology)\n4.1 Treatment and resources",
+   "after": "Regarding cancer treatment, the Pakistan Economic Survey 2022-",
+   "where": {
+    "heading": "treatment-and-resources",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "free screening facilities to poor and needy patients.’",
+   "after": "In a research article published on 16 March",
+   "where": {
+    "heading": "treatment-and-resources",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "hospital management information system (HMIS) for data analysis.’",
+   "after": "According to a MedCOI response in 2019, cancer",
+   "where": {
+    "heading": "treatment-and-resources",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and Shifa International Hospital, Islamabad. Both private facilities.",
+   "after": "An article by Awan U A, Guo X,",
+   "where": {
+    "heading": "treatment-and-resources",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "practising in Pakistan.\n4.2 Cost of treatment",
+   "after": "Awan U A and others noted in a",
+   "where": {
+    "heading": "cost-of-treatment",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "irrespective of their capacity to pay for treatment.’",
+   "after": "On 17 April 2024, The Express Tribune reported",
+   "where": {
+    "heading": "cost-of-treatment",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.3.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Rs 15,000 per session.\n4.3 Leukaemia",
+   "after": "A MedCOI response from 2018 indicated that treatment",
+   "where": {
+    "heading": "leukaemia",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.3.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "follow-up treatment by an internal specialist (internist)’.",
+   "after": "Information on MedCOI indicated that the medication used",
+   "where": {
+    "heading": "leukaemia",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.4.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "hydrochloride monohydrate, Oncology: other.’\n4.4 Other cancers",
+   "after": "The Shaukat Khanum Memorial Cancer Hospital and Research",
+   "where": {
+    "heading": "other-cancers",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.4.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "transfer, breast reconstruction (implants & flaps), and nipple reconstruction.’",
+   "after": "Aga Khan University Hospital and the Shifa International",
+   "where": {
+    "heading": "other-cancers",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.4.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "both private facilities) provided treatment for breast cancer.",
+   "after": "The Aga Khan University Hospital noted in an",
+   "where": {
+    "heading": "other-cancers",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Cardiology (heart conditions)\n5.1 Treatment and resources",
+   "after": "Samad Z and Hanif B observed that:\nAt",
+   "where": {
+    "heading": "treatment-and-resources-1",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the National Institute of Cardiovascular Diseases, in Karachi.’",
+   "after": "A MedCOI response in 2019 noted that the",
+   "where": {
+    "heading": "treatment-and-resources-1",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "procedures\nOutpatient/Inpatient treatment by a cardiac surgeon’.",
+   "after": "A MedCOI response in 2019 noted the following",
+   "where": {
+    "heading": "treatment-and-resources-1",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Angioplasty [including a follow up]\nHeart Valve Surgery’.",
+   "after": "In February 2020, MedCOI listed the following treatments",
+   "where": {
+    "heading": "treatment-and-resources-1",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "a cardiac surgeon’\n5.2 Cost of treatment",
+   "after": "Samad Z and Hanif B noted in an",
+   "where": {
+    "heading": "cost-of-treatment-1",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "visits, medications, and preventive primary care.’\n6. Diabetes",
+   "after": "The Diabetes Centre, with clinics in Islamabad and",
+   "where": {
+    "heading": "diabetes",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "diabetes patients, irrespective of their ability to pay.",
+   "after": "The Diabetes Association of Pakistan, Karachi, noted that",
+   "where": {
+    "heading": "diabetes",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "consultation and treatment of infection due to diabetes.’",
+   "after": "MedCOI responses in 2019 noted that the following",
+   "where": {
+    "heading": "diabetes",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "research of blood glucose (incl: HbA1C/ glyc.Hb).’",
+   "after": "MedCOI noted that medications used in the treatment",
+   "where": {
+    "heading": "diabetes",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Sitagliptin - diabetes: oral/ tablets.’\n7. Eye treatment (ophthalmology)",
+   "after": "According to a MedCOI response in December 2019,",
+   "where": {
+    "heading": "eye-treatment-ophthalmology",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "International Hospital H-8, Islamabad, both private facilities.",
+   "after": "A MedCOI response dated May 2020 noted that",
+   "where": {
+    "heading": "eye-treatment-ophthalmology",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Aga Khan University Hospital, and Shifa International Hospital.",
+   "after": "The May 2020 MedCOI response noted that the",
+   "where": {
+    "heading": "eye-treatment-ophthalmology",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Bevacizumab and ranibizumab intra-ocular injections are available.’",
+   "after": "See eye treatments offered at the Al-Shifa",
+   "where": {
+    "heading": "eye-treatment-ophthalmology",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Hospital.\n8. Gastroenterology, internal medicine and diagnostic imaging",
+   "after": "The Aga Khan University Medical College, Pakistan, noted",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "hour ambulatory oesophageal pH monitoring and oesophageal manometry.’",
+   "after": "The Shifa International Hospital’s Department of Gastroenterology",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "consultancy to pre and post-liver transplant patients.’",
+   "after": "In February 2020 MedCOI noted that gastroenterological care/",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "A dietician was available at the same facilities.",
+   "after": "In January 2020 it was noted by MedCOI",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Hospital, Karachi and the Shifa International Hospital, Islamabad.",
+   "after": "A MedCOI response, dated December 2019, noted that",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "outpatient, and follow up treatment by an infectiologist’.",
+   "after": "The December 2019 MedCOI response noted that Inpatient,",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "University Hospital, Karachi and Shifa International Hospital, Islamabad.",
+   "after": "MedCOI further reported in December 2019 that diagnostic",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Karachi and the Shifa International Hospital in Islamabad .",
+   "after": "MedCOI noted in September 2018 that diagnostic imaging",
+   "where": {
+    "heading": "gastroenterology-internal-medicine-and-diagnostic-imaging",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "1 Physical therapy, assistance, and medical orthopaedic devices",
+   "after": "According to the Aga Khan University Hospital, it",
+   "where": {
+    "heading": "physical-therapy-assistance-and-medical-orthopaedic-devices",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "recovering from surgery, disabled or need specialised care.’",
+   "after": "The same source added that services included:\nLong",
+   "where": {
+    "heading": "physical-therapy-assistance-and-medical-orthopaedic-devices",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Medical equipment either for purchase or to rent.’",
+   "after": "The Shifa International Hospital noted its geriatric care",
+   "where": {
+    "heading": "physical-therapy-assistance-and-medical-orthopaedic-devices",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "or cognitive limitations, or\nMultiple, chronic medical conditions.’",
+   "after": "A MedCOI response in May 2020 noted that",
+   "where": {
+    "heading": "physical-therapy-assistance-and-medical-orthopaedic-devices",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "home assistance / care at home by a nurse.’",
+   "after": "Also see palliative care.\n10. HIV/AIDS\n10.",
+   "where": {
+    "heading": "physical-therapy-assistance-and-medical-orthopaedic-devices",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "10. HIV/AIDS\n10.1 Treatment and resources",
+   "after": "The Pakistan Economic Survey 2022-23 cited Pakistan’",
+   "where": {
+    "heading": "treatment-and-resources-2",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "ARV therapy.’\n11. Liver disease\n11.1 Treatment",
+   "after": "Alsa Pakistan, a private health company stated it",
+   "where": {
+    "heading": "treatment",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "providing quality and integrated care under one roof.’",
+   "after": "Also see Hepatitis.\n11.2 Hepatitis\nBoth the",
+   "where": {
+    "heading": "treatment",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "one roof.’\nAlso see Hepatitis.\n11.2 Hepatitis",
+   "after": "Both the Aga Khan University Hospital and the",
+   "before_pdf": "1.2 Also see Hepatitis.\n11.2 Hepatitis",
+   "where": {
+    "heading": "hepatitis",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Hepatitis B and C (also see Liver disease).",
+   "after": "A MedCOI response in December 2019 noted that",
+   "where": {
+    "heading": "hepatitis",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "facility).’\n12. Mental health\n12.1 General psychiatry",
+   "after": "A report published in 2020 on mental healthcare",
+   "where": {
+    "heading": "general-psychiatry",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "centers in the country are developing multidisciplinary services.’",
+   "after": "The Shifa Tameer- e Millat University’s Shifa,",
+   "where": {
+    "heading": "general-psychiatry",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and management of stress, anger and emotional dysregulation.’",
+   "after": "A 2019 MedCOI response noted that treatment and",
+   "where": {
+    "heading": "general-psychiatry",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Inpatient, outpatient and follow-up by a psychologist.’",
+   "after": "The 2019 MedCOI response noted that mental health",
+   "where": {
+    "heading": "general-psychiatry",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 23
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Pakistan.",
+   "pdf": "Pakistan29.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a list of organisations working for health in",
+   "after": "2. Pharmaceuticals\n2.1 Accessibility to pharmaceutical drugs",
+   "where": {
+    "heading": "ngos-non-governmental-organisations",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Marham",
+   "pdf": "Marham38",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "run) and private hospitals, see the healthcare platform",
+   "after": "and the property portal Graana. The UK Foreign",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Graana.",
+   "pdf": "Graana39.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the healthcare platform Marham and the property portal",
+   "after": "The UK Foreign and Commonwealth Office (FCO) also",
+   "before_pdf": "the healthcare platform Marham38 and the property portal",
+   "where": {
+    "heading": "hospitals-and-clinics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "centre.",
+   "pdf": "centre125.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ul- Maal Department services at its drug rehabilitation",
+   "after": "13. Musculoskeletal conditions\nNon- surgical laser treatments for",
+   "where": {
+    "heading": "drug-addiction",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Islamabad (",
+   "pdf": "Islamabad137 (",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "services)\nA list of obstetricians and gynaecologists in",
+   "after": "known as female or women’s health specialists)",
+   "where": {
+    "heading": "obstetrics",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 60,
+ "paragraphs": {
+  "same": 32,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 138,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 55,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 454,
+ "list_items": 33,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 189,
+ "bookmarks": 44,
+ "warnings": [],
+ "figure_pages": {
+  "09c731dd3ee62c4e85d798227e4e66402090c00cac5e905d188ec4a0b98a0cd9.jpg": 21,
+  "e06901c4a2e7cb9fab99d56b8d073671e351976d51361299d8b1d9b36c8080b8.jpg": 22,
+  "55510cf86cc3a169f21d05844906b37161f7ad7dabd0c01973d7990993a5dcfc.jpg": 45
+ },
+ "figure_sizes": {
+  "09c731dd3ee62c4e85d798227e4e66402090c00cac5e905d188ec4a0b98a0cd9.jpg": [
+   665,
+   560
+  ],
+  "e06901c4a2e7cb9fab99d56b8d073671e351976d51361299d8b1d9b36c8080b8.jpg": [
+   753,
+   642
+  ],
+  "55510cf86cc3a169f21d05844906b37161f7ad7dabd0c01973d7990993a5dcfc.jpg": [
+   651,
+   376
+  ]
+ },
+ "figure_text": {
+  "09c731dd3ee62c4e85d798227e4e66402090c00cac5e905d188ec4a0b98a0cd9.jpg": 0,
+  "e06901c4a2e7cb9fab99d56b8d073671e351976d51361299d8b1d9b36c8080b8.jpg": 0,
+  "55510cf86cc3a169f21d05844906b37161f7ad7dabd0c01973d7990993a5dcfc.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Afghanistan: Fear of the Taliban",
+ "cover_version": "1.0",
+ "cover_date": "October 2021",
+ "pdf_sha256": "2d63eeb4b8c4c6335e85b29ebb312a890f63c4f676dfa9fd7ddd0d42bc4308e1",
+ "images": [
+  "09c731dd3ee62c4e85d798227e4e66402090c00cac5e905d188ec4a0b98a0cd9.jpg",
+  "55510cf86cc3a169f21d05844906b37161f7ad7dabd0c01973d7990993a5dcfc.jpg",
+  "e06901c4a2e7cb9fab99d56b8d073671e351976d51361299d8b1d9b36c8080b8.jpg"
+ ]
+}

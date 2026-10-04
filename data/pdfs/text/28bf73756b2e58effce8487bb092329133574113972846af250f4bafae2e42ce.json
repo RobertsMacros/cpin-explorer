@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 40,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 246,
+ "list_items": 7,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 123,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 19, 45"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Pakistan: Background information, including actors of protection, and internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "June 2017",
+ "pdf_sha256": "28bf73756b2e58effce8487bb092329133574113972846af250f4bafae2e42ce",
+ "images": []
+}

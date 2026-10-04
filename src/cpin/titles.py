@@ -14,7 +14,11 @@ MONTHS = ["january", "february", "march", "april", "may", "june", "july", "augus
 _DATE_RE = re.compile(r"(,\s*|\s*\(|\s+)\b(" + "|".join(MONTHS) + r")\s+(\d{4})\)?\s*$", re.IGNORECASE)
 _RANGE_END_RE = re.compile(r"(\bto|[-–])$", re.IGNORECASE)
 # 'acces+ible' also matches GOV.UK's own typo '(accesible)' (Vietnam, September 2025).
+_FFM_RE = re.compile(r"^report of (?:a |the )?(?:home office )?fact[- ]finding mission\b", re.IGNORECASE)
 _ACCESSIBLE_RE = re.compile(r"\s*\(acces+ible(?: version)?\)\s*$", re.IGNORECASE)
+# A title with a comma where the colon should be, after the kind of document.
+_KIND_COMMA_RE = re.compile(r"^(country policy and information note|country information note|country information and guidance"
+                            r"(?: report)?|country bulletin),\s*", re.IGNORECASE)
 
 
 @dataclass(frozen=True)
@@ -27,8 +31,10 @@ class NoteTitle:
     accessible: bool
 
 
-# Spellings GOV.UK itself has used in titles or URLs.
-_KNOWN_VARIANTS = {"Colombia": ["Columbia"]}
+# Spellings GOV.UK itself has used in titles or URLs, and names a country page has gone by: Palestine's page
+# was 'Occupied Palestinian Territories' until 2 October 2025, and its older notes say 'OPT' or 'OPTs'.
+_KNOWN_VARIANTS = {"Colombia": ["Columbia"],
+                   "Palestine": ["Occupied Palestinian Territories", "Occupied Palestinian Territory", "OPTs", "OPT"]}
 
 
 def country_aliases(name: str) -> list[str]:
@@ -64,6 +70,10 @@ def _strip_country(text: str, country: str | None) -> tuple[str, str | None]:
             head = text[: -len(alias)]
             if not head or head.endswith((" ", ",")):
                 return head.rstrip(" ,"), text[len(head):]
+        # 'security and humanitarian situation, OPT (Gaza)': the country, then the part of it in brackets.
+        part = re.search(r"[,\s]\s*" + re.escape(alias) + r"\s+(\([^()]*\))$", text, re.IGNORECASE)
+        if part:
+            return f"{text[: part.start()].rstrip(' ,')} {part.group(1)}", alias
     return text, None
 
 
@@ -80,15 +90,28 @@ def parse_note_title(title: str, country: str | None = None) -> NoteTitle:
     if m:
         month = f"{m.group(3)}-{MONTHS.index(m.group(2).lower()) + 1:02d}"
         text = text[: m.start()].rstrip(" ,")
+    ffm = _FFM_RE.match(text) if ":" not in text else None
+    if ffm:
+        # 'Report of a Home Office fact-finding mission to Sri Lanka': no colon, and no topic but the mission itself.
+        rest, found = _strip_country(re.sub(r"^to\s+", "", text[ffm.end():].strip(" ,")), country)
+        return NoteTitle(raw=title, kind="report of a fact-finding mission", topic=rest.strip() or "Home Office fact-finding mission",
+                         country=found, month=month, accessible=accessible)
     kind, _, rest = text.partition(":") if ":" in text else ("", "", text)
+    comma = _KIND_COMMA_RE.match(text) if ":" not in text else None
+    if comma:                                          # 'Country Policy and Information Note, Russia, sexual orientation …'
+        kind, rest = comma.group(1), text[comma.end():]
     kind, found_in_kind = _strip_country(kind.strip(), country)
     rest, found_in_rest = _strip_country(rest.strip(), country)
     found_leading = None
-    for alias in country_aliases(country) if country else []:
-        # 'Country policy and information note: China: non-Christian religious groups'
-        if rest.lower().startswith(alias.lower() + ":"):
-            found_leading, rest = rest[: len(alias)], rest[len(alias) + 1:]
+    for alias in sorted(country_aliases(country), key=len, reverse=True) if country else []:
+        # 'Country policy and information note: China: non-Christian religious groups'; and, in older titles,
+        # the country first with a comma or nothing after it: 'Afghanistan, Hindus and Sikhs', 'Iraq ‘honour’ crimes'.
+        lead = re.match(re.escape(alias) + r"(?::\s*|,\s*|\s+)(?=\S)", rest, re.IGNORECASE)
+        if lead:
+            found_leading, rest = rest[: len(alias)], rest[lead.end():]
             break
+    if not rest.strip() and "background note" in kind.lower():
+        rest = "background note"                       # 'Country background note: Egypt, December 2020' names no topic
     return NoteTitle(raw=title, kind=kind.strip().lower(), topic=rest.strip(),
                      country=found_in_rest or found_in_kind or found_leading, month=month, accessible=accessible)
 
@@ -116,6 +139,19 @@ def series_key(note: NoteTitle) -> str:
 _RENAMED = {
     # China: 'Hong Kong national security law' v3.0 (June 2022) became '... legislation' v4.0 (April 2025).
     "note:hong-kong-legislation-national-security": "note:hong-kong-law-national-security",
+    # Albania: 'trafficking' v11.0 (September 2022) became 'human trafficking' v14.0 (February 2023).
+    # Mapped onto the shorter name, which Vietnam's live report still uses.
+    "note:human-trafficking": "note:trafficking",
+    # Nigeria: 'sexual orientation and gender identity or expression' v3.0 (February 2022) became
+    # 'sexual orientation, gender identity and expression, and sex characteristics' v4.0 (June 2025).
+    "note:characteristics-expression-gender-identity-orientation-sex-sexual": "note:expression-gender-identity-orientation-sexual",
+    # Palestine: 'security and humanitarian situation, OPT (Gaza)' v2.0 (March 2019) became 'the humanitarian
+    # situation in Gaza' v3.0 (July 2022). The security situation got a note of its own, v1.0, in November 2024.
+    "note:gaza-humanitarian-security-situation": "note:gaza-humanitarian-situation",
+    # Iraq: the live report's title names the country twice ('Iraq Blood feuds, honour crimes and tribal violence,
+    # Iraq, July 2024'). Its key was made when the first 'Iraq' still counted as a topic word, and is kept: the
+    # key is the report's address on the site, and saved highlights point at it.
+    "note:blood-crimes-feuds-honour-tribal-violence": "note:blood-crimes-feuds-honour-iraq-tribal-violence",
 }
 
 

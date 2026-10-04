@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 69,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 49,
+ "paragraphs": 432,
+ "list_items": 127,
+ "tables": 1,
+ "figures": 3,
+ "footnotes": 159,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 11, 12"
+ ],
+ "figure_pages": {
+  "6670a7678143c658ae4a87995430c1930e484b1adfdfa8e9bf15bbe85a9bc659.jpg": 62,
+  "0e4727b2dfdb4613b4fea648680af29b84f18c379bb8a9a97bca8c6349ad7b80.jpg": 63,
+  "27a40d1a5afb61828a6b6bdc78fe52b9a2e0d8133197ec65ac1069110380c1ee.jpg": 64
+ },
+ "figure_sizes": {
+  "6670a7678143c658ae4a87995430c1930e484b1adfdfa8e9bf15bbe85a9bc659.jpg": [
+   844,
+   977
+  ],
+  "0e4727b2dfdb4613b4fea648680af29b84f18c379bb8a9a97bca8c6349ad7b80.jpg": [
+   823,
+   954
+  ],
+  "27a40d1a5afb61828a6b6bdc78fe52b9a2e0d8133197ec65ac1069110380c1ee.jpg": [
+   757,
+   1048
+  ]
+ },
+ "figure_text": {
+  "6670a7678143c658ae4a87995430c1930e484b1adfdfa8e9bf15bbe85a9bc659.jpg": 0,
+  "0e4727b2dfdb4613b4fea648680af29b84f18c379bb8a9a97bca8c6349ad7b80.jpg": 0,
+  "27a40d1a5afb61828a6b6bdc78fe52b9a2e0d8133197ec65ac1069110380c1ee.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iraq: Internal relocation, civil documentation and returns",
+ "cover_version": "9.0",
+ "cover_date": "February 2019",
+ "pdf_sha256": "9a86d2b519c5b12b029fa24c59dfa05c8dfebb42369c2037f5241b74f9a44797",
+ "images": [
+  "0e4727b2dfdb4613b4fea648680af29b84f18c379bb8a9a97bca8c6349ad7b80.jpg",
+  "27a40d1a5afb61828a6b6bdc78fe52b9a2e0d8133197ec65ac1069110380c1ee.jpg",
+  "6670a7678143c658ae4a87995430c1930e484b1adfdfa8e9bf15bbe85a9bc659.jpg"
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+ "pdf_sha256": "39c705237e339a8b1be5c2c18a5c9a491ad7cb39a935eecf10dadb33a99aa046",
+ "body_sha256": "6ba563d148af440b299424846e6bb480bd90b3e73f30e83e8d494a4229897f52",
+ "words": {
+  "web": 22400,
+  "pdf": 22111
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 281,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 3,
+    "web_words": 248,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 33,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "July 2025",
+   "pdf": "3.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "21 July 2025"
+   ],
+   "pdf": [
+    "21 July 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 122,
+   "pdf": 122,
+   "pdf_raw": 122,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 79,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Ethnic Group\nNumber of Adults\nof All Muslim Ethnic Groups\nof All Chinese Adults\nHui\n8,291,749\n46%\n0.75%\nUyghur\n7,717,361\n43%\n0.69%\nKazakh\n1,094,518\n6%\n0.10%\nDongxiang\n466,976\n3%\n0.04%\nKirgiz\n140,601\n1%\n0.01%\nSalar\n101,781\n1%\n0.01%\nTajik\n35,771\n0.5%\n0.01%\nBaoan\n14,703\n0.5%\n0.01%\nUzbek\n8,766\n0.5%\n0.01%\nTatar\n2,646\n0.5%\n0.01%\nAll Muslim ethnic groups\n17,874,872\n100%\n1.61%\nNote: All Muslim ethnic groups account for 1.61% of China’s adult population. In surveys, a small share of people in these ethnic groups do not identify as Muslim and a small share of Han Chinese do identify as Muslim. Source: Census of China, 2020. “Measuring Religion in China”",
+   "pdf": "",
+   "web_words": 132,
+   "pdf_words": 0,
+   "before": "using data from the 2020 Census of China.",
+   "after": "7.2.3 The Pew Research report also",
+   "where": {
+    "heading": "muslims",
+    "paragraph": "7.2.2",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Birth rates in China’s Xinjiang region have fallen sharply\nIn 2008 the birth rate per 1000 people was 16 in Xinjiang, 23.2 in Kashgar (a prefecture within Xinjiang), 12.1 in China as a whole. In 2020 the birth rate was 7.6 in Kashgar. In 2022 the birth rate was 6.5 in Xinjiang and 6.8 across China as a whole.",
+   "pdf": "",
+   "web_words": 65,
+   "pdf_words": 0,
+   "before": "the birth rates for China as a whole.",
+   "after": "9.6.6 The 2024 DFAT report stated:",
+   "where": {
+    "heading": "birth-control-and-forced-sterilisation",
+    "paragraph": "9.6.5",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "China’s predominatly Muslim groups are heavily concentrated in the northwest.\nDistribution of Chinese Muslim-majority ethnic groups, by province:\n56% in Xinjiang\n10% in Ningxia\n8% in Gansu\nless than 5% across the rest of China\nSource: Census of China (2020), via Pew Research Center’s Measuring Religion in China.",
+   "pdf": "",
+   "web_words": 51,
+   "pdf_words": 0,
+   "before": "of Chinese Muslim-majority ethnic groups by province.",
+   "after": "7.2.5 The 2024 DFAT report stated:",
+   "where": {
+    "heading": "muslims",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nIndividuals Prosecuted\n2013\n21,853\n2014\n34,816\n2015\n49,075\n2016\n41,305\n2017\n215,823\n2018\n135,546\n2019\n96,596\n2020\n48,258\n2021\n44,603\n2022\n37,819",
+   "pdf": "",
+   "web_words": 33,
+   "pdf_words": 0,
+   "before": "regional procuratorate’s annual work report for 2023).",
+   "after": "9.8 Internment and imprisonment\n9.8.1",
+   "where": {
+    "heading": "arrests-and-prosecutions",
+    "paragraph": "9.7.3",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.3.2",
+    "section": "Version control and feedback",
+    "page": 55
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 173,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

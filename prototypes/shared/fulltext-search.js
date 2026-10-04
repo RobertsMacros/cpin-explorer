@@ -1,8 +1,10 @@
-// Full-text search of the reports: every section of every live note, word for word as stored.
+// Full-text search of the reports: every section of every live note, word for word as stored. A note
+// published as a PDF only is searched in the text read from its PDF: that is this site's reading of the
+// PDF, not the stored words of a web page, and its passages say so (passageFromPdf).
 // The index is Pagefind's (MIT, https://pagefind.app), built by `cd web && npm run search-index` into
 // prototypes/search/pagefind/ and run in the browser: a query fetches only the index chunks it needs.
 // One record per section, with meta { title, country, slug, note, kind, version, month, iso_a2,
-// section, anchor, type } and filters { country, kind, type: "text" | "title" }.
+// section, anchor, type, text_from_pdf } and filters { country, kind, type: "text" | "title" }.
 //
 // Used by the dashboard's search (the one search of the site). A passage opens the report page at
 // its section, with the words carried over to "Find in this report" (&q=).
@@ -71,4 +73,13 @@ export function excerptHtml(html) {
 export function readerHref(meta, q, base = "../reader/index.html") {
   return `${base}?country=${encodeURIComponent(meta.slug)}&note=${encodeURIComponent(meta.note)}`
     + `${q ? `&q=${encodeURIComponent(q)}` : ""}${meta.anchor ? `#${encodeURIComponent(meta.anchor)}` : ""}`;
+}
+
+/**
+ * Is a passage's text read from a PDF (a note with no web version)? The index says so in the record's meta
+ * (web/build-search.mjs carries `text_from_pdf` there). An index built before it did says nothing, so the
+ * dashboard's entry for the note is asked as well: pass the country from data.json. Pure.
+ */
+export function passageFromPdf(meta, country = null) {
+  return meta?.text_from_pdf === "true" || !!country?.notes?.some((n) => n.id === meta?.note && n.text_from_pdf);
 }

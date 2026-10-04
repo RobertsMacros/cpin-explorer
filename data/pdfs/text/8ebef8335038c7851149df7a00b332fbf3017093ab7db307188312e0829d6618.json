@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 56,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 60,
+ "paragraphs": 516,
+ "list_items": 58,
+ "tables": 2,
+ "figures": 1,
+ "footnotes": 122,
+ "bookmarks": 54,
+ "warnings": [
+  "footnotes with no mark found in the text: 106"
+ ],
+ "figure_pages": {
+  "78bf4069e678dfdfe827ea7d217d59ff6ae09eef7ad7dc9e24aa8b7f28d4a716.png": 13
+ },
+ "figure_sizes": {
+  "78bf4069e678dfdfe827ea7d217d59ff6ae09eef7ad7dc9e24aa8b7f28d4a716.png": [
+   705,
+   537
+  ]
+ },
+ "figure_text": {
+  "78bf4069e678dfdfe827ea7d217d59ff6ae09eef7ad7dc9e24aa8b7f28d4a716.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Nigeria: Biafran secessionist groups",
+ "cover_version": "2.0",
+ "cover_date": "March 2021",
+ "pdf_sha256": "8ebef8335038c7851149df7a00b332fbf3017093ab7db307188312e0829d6618",
+ "images": [
+  "78bf4069e678dfdfe827ea7d217d59ff6ae09eef7ad7dc9e24aa8b7f28d4a716.png"
+ ]
+}

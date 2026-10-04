@@ -96,3 +96,25 @@ def test_build_records_reads_live_notes_from_the_store(tmp_path):
     stats = sr.write_records(recs, out)
     assert stats["records"] == 4 and stats["notes"] == 1
     assert [json.loads(line)["meta"]["type"] for line in out.read_text("utf-8").splitlines()] == ["title", "text", "text", "text"]
+
+
+def test_every_record_of_text_read_from_a_pdf_says_so(tmp_path):
+    from cpin import pdftext
+    store = Store(tmp_path / "data")
+    sha = INDEX["current_sha256"]
+    write_json(store.note_dir("iran", NOTE["id"]) / "index.json", INDEX)
+    store.body_path("iran", NOTE["id"], sha).write_text(BODY, "utf-8")
+    pdf_sha = "cd" * 32                                         # a note published as a PDF only, its text extracted
+    pdftext.text_dir(store).mkdir(parents=True)
+    (pdftext.text_dir(store) / f"{pdf_sha}.html").write_text(BODY, "utf-8")
+    (pdftext.text_dir(store) / f"{pdf_sha}.json").write_text(json.dumps({"extractor": pdftext.EXTRACTOR}), "utf-8")
+    from_pdf = {**NOTE, "id": f"pdf-{pdf_sha[:16]}", "text_from_pdf": True, "pdf_sha256": pdf_sha}
+    recs = list(sr.build_records(store, {"countries": [{**COUNTRY, "notes": [NOTE, from_pdf]}]}))
+    web = [r for r in recs if r["meta"]["note"] == NOTE["id"]]
+    pdf = [r for r in recs if r["meta"]["note"] == from_pdf["id"]]
+    assert len(web) == len(pdf) == 4
+    assert all(r["text_from_pdf"] is True for r in pdf), "the title record and every section"
+    assert not any("text_from_pdf" in r for r in web), "a web version's text is GOV.UK's own: no flag"
+    out = tmp_path / "records.jsonl"
+    sr.write_records(recs, out)
+    assert sum(json.loads(line).get("text_from_pdf") is True for line in out.read_text("utf-8").splitlines()) == 4

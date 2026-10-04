@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 45,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 43,
+ "paragraphs": 303,
+ "list_items": 63,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 90,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "f45902ed12511ae5e56b528aa0370e5dce07534a93d8071199a354cf91ca3063.png": 39
+ },
+ "figure_sizes": {
+  "f45902ed12511ae5e56b528aa0370e5dce07534a93d8071199a354cf91ca3063.png": [
+   259,
+   201
+  ]
+ },
+ "figure_text": {
+  "f45902ed12511ae5e56b528aa0370e5dce07534a93d8071199a354cf91ca3063.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Sudan: Return of unsuccessful asylum seekers",
+ "cover_version": "4.0",
+ "cover_date": "July 2018",
+ "pdf_sha256": "a274c2e6d30939bc5865c700b35863da194a15a565c82c6e84bb7dc55ecf26ea",
+ "images": [
+  "f45902ed12511ae5e56b528aa0370e5dce07534a93d8071199a354cf91ca3063.png"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 71,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 55,
+ "paragraphs": 506,
+ "list_items": 103,
+ "tables": 0,
+ "figures": 7,
+ "footnotes": 155,
+ "bookmarks": 49,
+ "warnings": [
+  "footnotes with no mark found in the text: 6, 14, 129, 133"
+ ],
+ "figure_pages": {
+  "0cade9f172e28d25a8004fd062c673b03bf5d94cbaf9dfbea7c6e0a4c8875fa4.png": 13,
+  "5a0bac2fcf219945e2aaebb8c7c2ded2dee3a8b8c13955cde80cd25df2a17f54.jpg": 16,
+  "73eedaedba2e79760accd4443cd8fea157495560ac38f837b161560150079111.jpg": 40,
+  "734bce5e8b3b789bc90d85d72888faba5a73bd225c1b36add929b9a203e4011a.png": 51,
+  "c08fb133d80e455b6e2ed8a093689e13120394a24de34a9db6ff9fb36cfffd83.jpg": 52,
+  "61d7ec4fd3216fb8d435faa129b113486e912dc5594c6d692346c737c7953a6b.png": 54,
+  "c69347097b2bdfece6d08d3133d82b9f7199e35ee8d94788b28eb70f44d9ccb8.png": 55
+ },
+ "figure_sizes": {
+  "0cade9f172e28d25a8004fd062c673b03bf5d94cbaf9dfbea7c6e0a4c8875fa4.png": [
+   741,
+   694
+  ],
+  "5a0bac2fcf219945e2aaebb8c7c2ded2dee3a8b8c13955cde80cd25df2a17f54.jpg": [
+   589,
+   604
+  ],
+  "73eedaedba2e79760accd4443cd8fea157495560ac38f837b161560150079111.jpg": [
+   919,
+   876
+  ],
+  "734bce5e8b3b789bc90d85d72888faba5a73bd225c1b36add929b9a203e4011a.png": [
+   740,
+   318
+  ],
+  "c08fb133d80e455b6e2ed8a093689e13120394a24de34a9db6ff9fb36cfffd83.jpg": [
+   919,
+   624
+  ],
+  "61d7ec4fd3216fb8d435faa129b113486e912dc5594c6d692346c737c7953a6b.png": [
+   809,
+   495
+  ],
+  "c69347097b2bdfece6d08d3133d82b9f7199e35ee8d94788b28eb70f44d9ccb8.png": [
+   919,
+   614
+  ]
+ },
+ "figure_text": {
+  "0cade9f172e28d25a8004fd062c673b03bf5d94cbaf9dfbea7c6e0a4c8875fa4.png": 1,
+  "5a0bac2fcf219945e2aaebb8c7c2ded2dee3a8b8c13955cde80cd25df2a17f54.jpg": 2,
+  "73eedaedba2e79760accd4443cd8fea157495560ac38f837b161560150079111.jpg": 0,
+  "734bce5e8b3b789bc90d85d72888faba5a73bd225c1b36add929b9a203e4011a.png": 0,
+  "c08fb133d80e455b6e2ed8a093689e13120394a24de34a9db6ff9fb36cfffd83.jpg": 0,
+  "61d7ec4fd3216fb8d435faa129b113486e912dc5594c6d692346c737c7953a6b.png": 3,
+  "c69347097b2bdfece6d08d3133d82b9f7199e35ee8d94788b28eb70f44d9ccb8.png": 3
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Libya: Security and humanitarian situation",
+ "cover_version": "4.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "1e5168e3f9dae5275c01110bc4da63ee40a07966ea726ff35ea7c05b11808de0",
+ "images": [
+  "0cade9f172e28d25a8004fd062c673b03bf5d94cbaf9dfbea7c6e0a4c8875fa4.png",
+  "5a0bac2fcf219945e2aaebb8c7c2ded2dee3a8b8c13955cde80cd25df2a17f54.jpg",
+  "61d7ec4fd3216fb8d435faa129b113486e912dc5594c6d692346c737c7953a6b.png",
+  "734bce5e8b3b789bc90d85d72888faba5a73bd225c1b36add929b9a203e4011a.png",
+  "73eedaedba2e79760accd4443cd8fea157495560ac38f837b161560150079111.jpg",
+  "c08fb133d80e455b6e2ed8a093689e13120394a24de34a9db6ff9fb36cfffd83.jpg",
+  "c69347097b2bdfece6d08d3133d82b9f7199e35ee8d94788b28eb70f44d9ccb8.png"
+ ]
+}

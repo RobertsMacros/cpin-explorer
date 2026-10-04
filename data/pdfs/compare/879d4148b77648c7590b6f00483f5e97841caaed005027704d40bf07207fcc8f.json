@@ -1,0 +1,481 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-policy-and-information-note-tamil-separatism-sri-lanka-august-2025-accessible",
+ "pdf_sha256": "879d4148b77648c7590b6f00483f5e97841caaed005027704d40bf07207fcc8f",
+ "body_sha256": "3403c3745e5649c09bf62dcdad533e4e56f3d60c2130a298d44e30350c7ad76b",
+ "words": {
+  "web": 29062,
+  "pdf": 29117
+ },
+ "summary": {
+  "wording": {
+   "differences": 5,
+   "web_words": 3,
+   "pdf_words": 5,
+   "share": 0.000138,
+   "passages": 0,
+   "sizes": {
+    "spelling": 3,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 5,
+    "web_words": 3,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 14,
+    "pdf_words": 15
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 14,
+    "pdf_words": 15
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "9.0",
+   "web_date": "August 2025",
+   "pdf": "9.0",
+   "pdf_date": "August 2025"
+  },
+  "section_updated": {
+   "web": [
+    "20 August 2025"
+   ],
+   "pdf": [
+    "20 August 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 293,
+   "pdf": 293,
+   "pdf_raw": 293,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 148,
+   "pdf": 73
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 5,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "election",
+   "pdf": "elections",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "also Tamil political parties.\n8.3 2025 local",
+   "after": "8.3.1 Despite Tamil support at the",
+   "where": {
+    "heading": "local-election",
+    "paragraph": "8.2.4",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "separatists",
+   "pdf": "separatist",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "10. Treatment of Tamils with perceived links to",
+   "after": "groups\n10.1 Liberation Tigers of Tamil Eelam (",
+   "where": {
+    "heading": "treatment-of-tamils-with-perceived-links-to-separatists-groups",
+    "paragraph": "9.5.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Franc",
+   "pdf": "France",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and Immigration 1st Floor Clive House 70 Petty",
+   "after": "London SW1H 9EX\nEmail: chiefinspector@icibi.gov.uk",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.6",
+    "section": "Version control and feedback",
+    "page": 67
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to pass without incident.\n10.4 Arbitrary arrests,",
+   "after": "treatment in detention\n10.4.1 In its",
+   "before_pdf": "to pass without incident .\n10.4 Arbitrary arrests,",
+   "where": {
+    "heading": "arbitrary-arrests",
+    "paragraph": "10.3.8",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "failed",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "phases.’\n14.2 Treatment on return, including of",
+   "after": "asylum seekers\n14.2.1 According to May",
+   "where": {
+    "heading": "return-treatment",
+    "paragraph": "14.1.4",
+    "section": "Country information",
+    "page": 47
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.6 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.7",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.5",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.7",
+   "pdf": "14.6.5",
+   "web_words": 3,
+   "pdf_words": 3,
+   "before": "today, and recent returnees had not experienced this.’",
+   "after": "The same report, again citing ‘in-country sources’,",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.7",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.8",
+   "pdf": "14.6.6",
+   "web_words": 3,
+   "pdf_words": 3,
+   "before": "Lanka would unlikely be the subject of monitoring.’",
+   "after": "Two confidential sources consulted in February 2024, cited",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.8",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.9",
+   "pdf": "14.6.7",
+   "web_words": 3,
+   "pdf_words": 3,
+   "before": "home visit by the authorities after their return.’",
+   "after": "The IRB response (2022 to August 2024) cited",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.9",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.10",
+   "pdf": "14.6.8",
+   "web_words": 3,
+   "pdf_words": 3,
+   "before": "and harassment by security agencies after their release ...’",
+   "after": "Regarding the situation of returnees after involvement with",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.10",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "10.4.2The",
+   "pdf": "10.4.2 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "PTA) ‘permitt[ed] arbitrary arrests and prolonged detention.’",
+   "after": "May 2024 DFAT report noted that the PTA",
+   "where": {
+    "heading": "arbitrary-arrests",
+    "paragraph": "10.4.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "14.6.",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "returnees than in the period prior to 2015.’",
+   "after": "4.6 Citing ‘in-country sources’ in Sri",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.6",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "violations.\n12. Freedom of speech and expression\n12.",
+   "after": "Treatment of journalists\n12.1.1 The constitution",
+   "before_pdf": "rights violations .\n12. Freedom of speech and expression",
+   "where": {
+    "heading": "treatment-of-journalists",
+    "paragraph": "11.4.7",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.6",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "returnees than in the period prior to 2015.’",
+   "after": "Citing ‘in-country sources’ in Sri Lanka reporting",
+   "before_pdf": "the period prior to 2015.’\n14.6.4",
+   "where": {
+    "heading": "monitoring-returnees",
+    "paragraph": "16.4.6",
+    "section": "Country information",
+    "page": 53
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "27.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "elections would be held on 14 November 2024.",
+   "after": "8.2.3 The NPP won 159 seats",
+   "before_pdf": "elections would be held on 14 November 2024",
+   "where": {
+    "heading": "election--a-new-president-and-a-new-government",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "91 92",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "pro LTTE groups operating overseas (Year 2012-2020).’",
+   "after": "10.1.4 See also Diaspora groups proscribed",
+   "where": {
+    "heading": "liberation-tigers-of-tamil-eelam-ltte",
+    "paragraph": "10.1.4",
+    "section": "Country information",
+    "page": 27
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 268,
+  "different": {
+   "16.4.6": "14.6.4",
+   "16.4.7": "14.6.5",
+   "16.4.8": "14.6.6",
+   "16.4.9": "14.6.7",
+   "16.4.10": "14.6.8"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 3,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

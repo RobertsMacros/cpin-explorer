@@ -1,0 +1,392 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-children-syria-march-2026-accessible",
+ "pdf_sha256": "0ed1254cecccf3f6614218e2e9b3d808204975a532e6b1c85ccf578a1f2f0324",
+ "body_sha256": "a0faac83350dc0121d44a67cdf4e910787e795508724cca8b236991a796ee41e",
+ "words": {
+  "web": 22844,
+  "pdf": 22934
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 9,
+    "web_words": 9,
+    "pdf_words": 9
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 90
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 9,
+    "web_words": 9,
+    "pdf_words": 9
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 90
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "March 2026",
+   "pdf": "1.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "25 March 2026"
+   ],
+   "pdf": [
+    "25 March 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 7
+  },
+  "footnotes": {
+   "web": 137,
+   "pdf": 137,
+   "pdf_raw": 137,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 64,
+   "pdf": 62
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5\n1.2.6\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.7 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.8",
+   "web_words": 0,
+   "pdf_words": 66,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "8.2.1The",
+   "pdf": "8.2.1 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "the State”.’\n8.2 Definition of a child",
+   "after": "NRC, in its Guide to Children’s Rights",
+   "where": {
+    "heading": "definition-child",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.1.",
+   "pdf": "9.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "recruitment into armed groups.’\n9.5 Child poverty",
+   "after": "1 UNICEF noted in a report from March",
+   "where": {
+    "heading": "poverty",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.1.",
+   "pdf": "9.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2 million children are at risk of malnutrition.",
+   "after": "2 UNICEF additionally reported in August 2025 that",
+   "where": {
+    "heading": "poverty",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.1.",
+   "pdf": "9.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in Syria are affected by child food poverty.",
+   "after": "3 In relation to the food poverty the",
+   "where": {
+    "heading": "poverty",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2",
+   "pdf": "10.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "service office established by the Ministry of Justice.’",
+   "after": "Juvenile detention\n10.2.1 The NRC Guide",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the Ministry of Justice.’\n10.2 Juvenile detention",
+   "after": "1 The NRC Guide to Children’s Rights",
+   "before_pdf": "the Ministry of Justice.’\n10.1 Juvenile detention",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.2.1",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a term of hard labour or temporary detention.’",
+   "after": "2 The UN Security Council report of the",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.2.2",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Republic to Iraq during the period under review.’",
+   "after": "3 In a report published on 21 November",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "victims from March 2011 to November 20, 2025.’",
+   "after": "4 See the full SNHR report for more",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "See the full SNHR report for more information.",
+   "after": "5 In February 2026, the UN Office of",
+   "where": {
+    "heading": "juvenile-detention",
+    "paragraph": "10.2.5",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "irresponsible discussions, 6 January 2025. Accessed: 17 December",
+   "after": "DW, Disabilities in Syria: A ‘hidden’ crisis, 8",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "16.3.6",
+    "section": "Bibliography",
+    "page": 53
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 188,
+  "different": {
+   "9.1.2": "9.5.2",
+   "9.1.3": "9.5.3",
+   "10.2": "10.1",
+   "10.2.1": "10.1.1",
+   "10.2.2": "10.1.2",
+   "10.2.3": "10.1.3",
+   "10.2.4": "10.1.4",
+   "10.2.5": "10.1.5"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "9.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

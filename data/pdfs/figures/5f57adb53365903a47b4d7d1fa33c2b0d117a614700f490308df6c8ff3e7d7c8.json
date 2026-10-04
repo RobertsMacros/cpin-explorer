@@ -1,0 +1,47 @@
+{
+ "extractor": "pdftext-2",
+ "note": "iraq/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+ "pdf_sha256": "5f57adb53365903a47b4d7d1fa33c2b0d117a614700f490308df6c8ff3e7d7c8",
+ "body_sha256": "760227c18ba875e35dffa20225c387b85ee92df55911a5220ff10b1df27fe70a",
+ "figures": [
+  {
+   "image": "26b983907b2b6ecc9777c7d07447baee950cfcc97d76c2ae4355f4ad6c0b8c15.png",
+   "tag": "p",
+   "index": 108,
+   "key": "nearlyalliraqikurdsconsiderthemselvessunnimuslimsinoursurvey",
+   "page": 16
+  },
+  {
+   "image": "25e58ee7d19ac1512ab5571ec96b3ad9e6ec1a1cbce718da7702a4bc1b32f6ef.png",
+   "tag": "p",
+   "index": 486,
+   "key": "1519thefollowinggraphsshowthenumberofprotestsriotsacrosserbi",
+   "page": 63
+  },
+  {
+   "image": "9cc84ec5fa7f7211a4f1cbd2f83ce588a3c9ad868606cdd5aadd80dbae72a60c.png",
+   "tag": "p",
+   "index": 486,
+   "key": "1519thefollowinggraphsshowthenumberofprotestsriotsacrosserbi",
+   "page": 63
+  },
+  {
+   "image": "17939704a7563aa7560cacb7893ac6000b7b82f37245ba35bb73181a7f87a8af.png",
+   "tag": "p",
+   "index": 486,
+   "key": "1519thefollowinggraphsshowthenumberofprotestsriotsacrosserbi",
+   "page": 64
+  },
+  {
+   "image": "e3ad44e9a9bcb53bafb588b6d49f90b3dfc583915289448cc4a84afc3e890303.png",
+   "tag": "p",
+   "index": 486,
+   "key": "1519thefollowinggraphsshowthenumberofprotestsriotsacrosserbi",
+   "page": 64
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 11,
+ "web_figures": 6,
+ "left_in_pdf": {}
+}

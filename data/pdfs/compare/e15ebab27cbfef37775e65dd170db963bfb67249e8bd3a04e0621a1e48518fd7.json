@@ -1,0 +1,499 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "el-salvador/country-policy-and-information-note-fear-of-gangs-el-salvador-december-2025-accessible",
+ "pdf_sha256": "e15ebab27cbfef37775e65dd170db963bfb67249e8bd3a04e0621a1e48518fd7",
+ "body_sha256": "6e8e332b9a61cad8eda4fc17783597c712c6c4dc760e6304e992894c6b1f2083",
+ "words": {
+  "web": 25656,
+  "pdf": 25653
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 3.9e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 5,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 5,
+    "pdf_words": 7
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 11,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "December 2025",
+   "pdf": "5.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "14 October 2025"
+   ],
+   "pdf": [
+    "14 October 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 211,
+   "pdf": 211,
+   "pdf_raw": 211,
+   "differ": false
+  },
+  "pictures": {
+   "web": 4,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 95,
+   "pdf": 47
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Overview),",
+   "pdf": "E2),",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "House, El Salvador: Freedom in the World 2025 (",
+   "after": "2025\nTIME, How Nayib Bukele’s ‘Iron Fist’",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "14.1.12",
+    "section": "Version control and feedback",
+    "page": 51
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.2",
+   "pdf": "3.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "demonstrate a risk of persecution or serious harm.",
+   "after": "Two main gangs operate in El Salvador: Mara",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.2",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.1.9",
+   "pdf": "14.1.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "has gotten better. You can walk freely now.’",
+   "after": "In August 2024, TIME reported that:\nAfter decades",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "14.1.9",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.1.10",
+   "pdf": "14.1.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to have to pay gang members to enter.’",
+   "after": "The Freedom House 2025 report stated: ‘While freedom",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "14.1.10",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.1.11",
+   "pdf": "14.1.12",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to fear of police harassment or arbitrary arrest.’",
+   "after": "The same source noted that ‘Since 2022 ... Salvadorans -",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "14.1.11",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.1.12",
+   "pdf": "14.1.13",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "harassment or arrest by the police or military.’",
+   "after": "For further detail on freedom of movement within",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Material facts, credibility and other checks/referrals\n1.",
+   "after": "Credibility\n1.1.1 For information on assessing",
+   "before_pdf": "1. Material facts, credibility and other checks/referrals",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "i)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "formally suspended by the decree are, among others:",
+   "after": "the right to association and peaceful assembly;\nthe",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "others:\nthe right to association and peaceful assembly;",
+   "after": "the right to be informed immediately of their",
+   "before_pdf": "i) the right to association and peaceful assembly;",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "immediately of their rights and reasons for detention;",
+   "after": "the right against self-incrimination;\nthe right to",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iv)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "reasons for detention;\nthe right against self-incrimination;",
+   "after": "the right to the assistance of counsel in",
+   "before_pdf": "for detention;\niii) the right against self-incrimination;",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "v)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "proceedings before auxiliary bodies of the justice system;",
+   "after": "the right not to be administratively detained for",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "vi)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "hours before being brought before a competent judge;",
+   "after": "the right to the inviolability of correspondence and",
+   "where": {
+    "heading": "overview",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to gangs.”’\n10. Gangs’ size and reach\n10.",
+   "after": "Total number of gang members\n10.1.1",
+   "before_pdf": "ties to gangs.\"’\n10. Gangs’ size and reach",
+   "where": {
+    "heading": "total-number-of-gang-members",
+    "paragraph": "9.4.18",
+    "section": "Country information",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "members at large",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "MS-13 rank\nTotal members\nMembers at large",
+   "after": "Homeboys (gang members)\n30,381\n11,340\n37.",
+   "where": {
+    "heading": "number-at-large",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "37.3%",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "large\nHomeboys (gang members)\n30,381\n11,340",
+   "after": "Chequeos (aspiring gang members)\n4,547\n1,633",
+   "where": {
+    "heading": "number-at-large",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "35.9%",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Chequeos (aspiring gang members)\n4,547\n1,633",
+   "after": "Collaborators\n43,347\n12,761\n29.4%\nTotal",
+   "where": {
+    "heading": "number-at-large",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "29.4%",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "633\n35.9%\nCollaborators\n43,347\n12,761",
+   "after": "Total\n78,275\n25,734\n32.9%\nBarrio",
+   "before_pdf": "547\n1,633\nCollaborators\n43,347\n12,761",
+   "where": {
+    "heading": "number-at-large",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "32.9%",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "761\n29.4%\nTotal\n78,275\n25,734",
+   "after": "Barrio 18 Sureños rank\nTotal members\nMembers at",
+   "before_pdf": "347\n12,761\nTotal\n78,275\n25,734",
+   "where": {
+    "heading": "number-at-large",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 24
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 238,
+  "different": {
+   "14.1.10": "14.1.11",
+   "14.1.11": "14.1.12",
+   "14.1.12": "14.1.13"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "3.1.2",
+   "14.1.9"
+  ],
+  "unconfirmed": []
+ }
+}

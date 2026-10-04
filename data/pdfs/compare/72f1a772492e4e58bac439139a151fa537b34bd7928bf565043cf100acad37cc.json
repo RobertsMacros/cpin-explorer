@@ -1,0 +1,561 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "afghanistan/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible",
+ "pdf_sha256": "72f1a772492e4e58bac439139a151fa537b34bd7928bf565043cf100acad37cc",
+ "body_sha256": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+ "words": {
+  "web": 44242,
+  "pdf": 44189
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 0,
+   "share": 2.3e-05,
+   "passages": 0,
+   "sizes": {
+    "number": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 27,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 17,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 17,
+    "pdf_words": 5
+   },
+   "caption": {
+    "differences": 4,
+    "web_words": 27,
+    "pdf_words": 0
+   },
+   "repeated label": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 0
+   },
+   "table cell": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 8,
+   "web_words": 7,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "February 2026",
+   "pdf": "6.0",
+   "pdf_date": "February 2026"
+  },
+  "section_updated": {
+   "web": [
+    "16 February 2026"
+   ],
+   "pdf": [
+    "16 February 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 444,
+   "pdf": 444,
+   "pdf_raw": 444,
+   "differ": false
+  },
+  "pictures": {
+   "web": 6,
+   "pdf": 6
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 73,
+   "pdf": 70
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "August\nWomen’s photos on IDs made optional",
+   "after": "September\nBan on books authored by women from",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "on books authored by women from university curricula",
+   "after": "November\nNew restriction on UN female staff: UN",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 68
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://forum-asia.org/statement-afghanistan-protect-the-persecuted-shia-hazaras-in-afghanistan/),",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "Afghanistan: Protect the persecuted Shia Hazaras in Afghanistan](",
+   "after": "4 August 2023. Accessed: 5 January 2026\nBBC",
+   "before_pdf": "Afghanistan: Protect the persecuted Shia Hazaras in Afghanistan,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "16.3.9",
+    "section": "Bibliography",
+    "page": 57
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Illustrative map of the approximate demographic distribution of ethnic groups by region",
+   "pdf": "",
+   "web_words": 12,
+   "pdf_words": 0,
+   "before": "a 2003 publication by the National Geographic Society:",
+   "after": "Source: National Geographic Society, 2003, published by CRS",
+   "where": {
+    "heading": "overview",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "16.3.9",
+    "section": "Version control and feedback",
+    "page": 99
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Respondent's professions and locations (by number)",
+   "pdf": "188",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "answered that they would prefer not to say:",
+   "after": "10.5.14 Of the 231 Affected Afghans,",
+   "where": {
+    "heading": "people-associated-with-international-forces",
+    "paragraph": "10.5.13",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Afghanistan ethnolinguistic composition (2004)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Britannica provided estimates on ethnic composition for 2004:",
+   "after": "Source: Britannica\n12.1.3 An illustrative map",
+   "where": {
+    "heading": "overview",
+    "paragraph": "12.1.2",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Afghanistan religious affiliation (2009)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Britannica provided estimates on religious affiliation for 2009:",
+   "after": "Source: Britannica\n12.1.6 UNHCR’s September",
+   "where": {
+    "heading": "overview",
+    "paragraph": "12.1.5",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2021",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "school beyond 6th grade Women’s shelters closed",
+   "after": "September\nMinistry of Women’s Affairs replaced by",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 66
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2021",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "banned from sports participation Ban on unapproved protests",
+   "after": "November\nFemale TV reporters told to cover hair",
+   "before_pdf": "banned from sports participation\nBan on unapproved protests",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2021",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "stations banned from airing entertainment shows with women",
+   "after": "December\nWomen banned from travelling beyond 72 km (",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "rulings Women banned from health centres without mahram",
+   "after": "May\nWomen ordered to cover faces in public,",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Issuing of driver’s licenses to women stopped",
+   "after": "July\nFemale employees at Ministry of Finance asked",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "asked to suggest male relatives to replace them",
+   "after": "November\nWomen banned from gyms and parks\n2022",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2022\nNovember\nWomen banned from gyms and parks",
+   "after": "December\nWomen banned from working in international and",
+   "before_pdf": "them\nNovember Women banned from gyms and parks",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "high schools for girls would reopen in March",
+   "after": "February\nSome public universities reopen with strict segregation",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "universities reopen with strict segregation and hijab rules",
+   "after": "March\nWomen banned from travelling abroad without mahram",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2023",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Afghan women banned from working for UN entities",
+   "after": "June\nBan on foreign NGOs providing education, affecting",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2023",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "300,000 female students and 5,000 teachers",
+   "after": "July\nNationwide ban on beauty salons, causing unemployment",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2024",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "women in public medical institutes in 11 provinces",
+   "after": "July\nPVPV law ratified: women must cover entire",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2024",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "must cover entire bodies and faces in public",
+   "after": "December\nBan on women’s medical education Ban",
+   "where": {
+    "heading": "situation-overview",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Support, ADBRS0010, 24 October 2025. Accessed 10 December",
+   "after": "Human Dignity Trust, Afghanistan, updated 31 October 2025.",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "16.3.9",
+    "section": "Bibliography",
+    "page": 90
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "310.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "One. Dr Wasi assured consideration of their petition .",
+   "after": "12.6.5 On 24 August 2025, independent",
+   "before_pdf": "One. Dr Wasi assured consideration of their petition",
+   "where": {
+    "heading": "hindus-and-sikhs",
+    "paragraph": "12.6.5",
+    "section": "Country information",
+    "page": 62
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 396,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

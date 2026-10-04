@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 37,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 28,
+ "paragraphs": 225,
+ "list_items": 21,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 81,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 40"
+ ],
+ "figure_pages": {
+  "d7195471cc107d7727025cb244717fa385d991707fda11dd41ba6bca9c3c0d9b.jpg": 23,
+  "53278db8fcf1fc42857852ed7efbedcdec80e6f7d71db5747f3914758d63231c.png": 33
+ },
+ "figure_sizes": {
+  "d7195471cc107d7727025cb244717fa385d991707fda11dd41ba6bca9c3c0d9b.jpg": [
+   707,
+   806
+  ],
+  "53278db8fcf1fc42857852ed7efbedcdec80e6f7d71db5747f3914758d63231c.png": [
+   919,
+   524
+  ]
+ },
+ "figure_text": {
+  "d7195471cc107d7727025cb244717fa385d991707fda11dd41ba6bca9c3c0d9b.jpg": 2,
+  "53278db8fcf1fc42857852ed7efbedcdec80e6f7d71db5747f3914758d63231c.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Nigeria: Fear of Boko Haram",
+ "cover_version": "1.0",
+ "cover_date": "June 2015",
+ "pdf_sha256": "274d9ec77cc1b332a25152393db37f8104fa4e2058fd8da0ace86619797868a0",
+ "images": [
+  "53278db8fcf1fc42857852ed7efbedcdec80e6f7d71db5747f3914758d63231c.png",
+  "d7195471cc107d7727025cb244717fa385d991707fda11dd41ba6bca9c3c0d9b.jpg"
+ ]
+}

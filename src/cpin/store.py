@@ -3,20 +3,28 @@ we saw it. Nothing is ever deleted: a note that disappears from GOV.UK changes s
 
 data/
   collection.json                          latest collection item (verbatim API JSON)
-  state.json                               collection ETag; per-country public_updated_at
+  state.json                               collection ETag; per-country public_updated_at; `pending`, the
+                                           countries the next sync must fetch again (sync.py)
   countries/<country>/publication.json     latest publication item (verbatim API JSON)
   countries/<country>/notes/<note>/
-      index.json                           every version of this note, oldest first
+      index.json                           every version of this note, oldest first; a version GOV.UK has
+                                           retitled or redated keeps each title and date in `title_log`
       <sha256[:16]>.html                   verbatim details.body of one version
       <sha256[:16]>.meta.json              the rest of that API item (or the archive capture)
-  pdfs/manifest.json                       PDF url -> sha256, size, ETag, first/last seen
+  pdfs/manifest.json                       PDF url -> sha256, size, ETag, first/last seen; a PDF recovered
+                                           from the Internet Archive has source 'wayback', its archive_url,
+                                           captured_at and when the country page listed it (recover.py)
   pdfs/files/<sha256>.pdf                  mirrored PDFs (not committed to git)
+  wayback-catalogue.json                   every edition the archived country pages ever listed, and whether
+                                           it is held, recoverable or lost (recover.py)
+  wayback-cache/                           what `recover` has read from the Archive (not committed to git)
   images/manifest.json                     image url -> sha256, type, ETag, the notes that use it
   images/files/<sha256>.<ext>              mirrored images (not committed to git)
   runs.jsonl                               one line per sync or backfill run
 """
 import json
 import os
+import sys
 import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
@@ -66,6 +74,21 @@ def version_date(v: dict) -> str:
     """Best available date for ordering: GOV.UK's own date, else the archive capture, else first seen."""
     captures = v.get("captures") or []
     return v.get("public_updated_at") or (captures[0]["captured_at"] if captures else None) or v["first_seen"]
+
+
+def _log_title(version: dict, title: str | None, public_updated_at: str | None, seen_at: str) -> bool:
+    """GOV.UK can give a note another title or date and leave its body alone. The title carries the month
+    a citation uses, so the change must not pass unseen. The version takes the title and date GOV.UK gives
+    now, and its `title_log` lists each pair it has carried and when this copy first saw it, oldest first:
+    [{at, title, public_updated_at}]. A version never retitled or redated has no log. Returns True when
+    something changed."""
+    now = {"title": title or version.get("title"), "public_updated_at": public_updated_at or version.get("public_updated_at")}
+    was = {key: version.get(key) for key in now}
+    if now == was:
+        return False
+    version.setdefault("title_log", [{"at": version["first_seen"], **was}]).append({"at": seen_at, **now})
+    version.update(now)
+    return True
 
 
 class Store:
@@ -138,6 +161,10 @@ class Store:
         A version is identified by the sha256 of its exact body. An archived copy whose visible
         text matches a version we already hold is recorded as a capture of that version rather
         than as a new one, because archive pages are re-serialised HTML.
+
+        The same body seen live again under another title, or with another date, is still the same
+        version: it takes the new title and date, and its `title_log` keeps what they were (see
+        `_log_title`).
         """
         sha = sha256_text(body)
         tsha = text_sha256(body)
@@ -151,6 +178,8 @@ class Store:
         if same is not None:
             if source == "live":
                 same["last_seen"] = max(same.get("last_seen") or seen_at, seen_at)
+                if _log_title(same, title, to_utc(public_updated_at), seen_at):
+                    index["title"] = same["title"]
             if capture and capture not in same.setdefault("captures", []):
                 same["captures"].append(capture)
                 same["captures"].sort(key=lambda c: c["captured_at"])
@@ -192,10 +221,14 @@ class Store:
         self.save_note(country, note, index)
         return previous
 
-    def mark_removed(self, country: str, note: str, *, at: str):
+    def mark_removed(self, country: str, note: str, *, at: str, last_listed: str | None = None, why: str | None = None):
+        """A note GOV.UK no longer lists: found gone at `at`; last known to be listed at `last_listed` (the
+        check before, when there was one), so it went between the two. `why` is given when it is not the
+        country page that stopped listing the note, but the collection that stopped listing the country page."""
         index = self.load_note(country, note)
         index["status"] = "removed"
-        index.setdefault("status_log", []).append({"status": "removed", "at": at})
+        index.setdefault("status_log", []).append({"status": "removed", "at": at, **({"last_listed": last_listed} if last_listed else {}),
+                                                   **({"why": why} if why else {})})
         self.save_note(country, note, index)
 
     # --- PDFs and run log ------------------------------------------------------------------
@@ -224,11 +257,34 @@ class Store:
     def append_run(self, record: dict):
         path = self.root / "runs.jsonl"
         path.parent.mkdir(parents=True, exist_ok=True)
+        # A run killed part-way through its line leaves no newline: start a fresh line, or this record
+        # would be joined to the damaged one and lost with it.
+        broken = False
+        if path.exists() and path.stat().st_size:
+            with path.open("rb") as f:
+                f.seek(-1, os.SEEK_END)
+                broken = f.read(1) != b"\n"
         with path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+            f.write(("\n" if broken else "") + json.dumps(record, ensure_ascii=False) + "\n")
 
     def runs(self) -> list[dict]:
+        """Every run on record, oldest first. A line that is not a run record (a half-written last line,
+        after a run was killed) is passed over and named on stderr: the log is bookkeeping, and one damaged
+        line must not stop every later sync and export. The line itself is left where it is."""
         path = self.root / "runs.jsonl"
         if not path.exists():
             return []
-        return [json.loads(line) for line in path.read_text("utf-8").splitlines() if line.strip()]
+        runs = []
+        for number, line in enumerate(path.read_text("utf-8", errors="replace").splitlines(), 1):
+            if not line.strip():
+                continue
+            try:
+                record = json.loads(line)
+            except ValueError:
+                print(f"cpin: {path.name} line {number} is not JSON; passed over", file=sys.stderr)
+                continue
+            if isinstance(record, dict):
+                runs.append(record)
+            else:
+                print(f"cpin: {path.name} line {number} is not a run record; passed over", file=sys.stderr)
+        return runs

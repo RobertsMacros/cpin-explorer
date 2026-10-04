@@ -7,7 +7,7 @@
 //
 // No login yet: records live in localStorage under "cpin-highlights-v1". Every access is wrapped,
 // and an in-memory copy keeps the page working where storage is blocked.
-import { formatCitation, formatSources, cleanQuote, longDate, STYLE_NAMES } from "./citation.js";
+import { cleanQuote, formatCitation, formatPinpoint, formatSources, longDate, quoteOf, sourceOf, STYLE_NAMES } from "./citation.js";
 
 export const STORAGE_KEY = "cpin-highlights-v1";
 export const CONTEXT_CHARS = 32;
@@ -29,13 +29,20 @@ function storage() {
 
 const isRecord = (r) => r && typeof r === "object" && typeof r.id === "string" && typeof r.quote === "string";
 
+/** The name an edition read from a PDF goes by. It has no note on GOV.UK to be named after, so it is
+ *  "pdf-<edition id>", as the dashboard lists it (the report itself is known by its series key). */
+export const pdfNoteId = (edition) => `pdf-${String(edition).slice(0, 16)}`;
+// Highlights saved from such an edition before it had a name were stored with an empty note: they were lost
+// to the reader on the next visit, and two reports of one country were filed together. They get their name here.
+const named = (r) => (r.note || !r.editionSha || sourceOf(r) !== "pdf" ? r : { ...r, note: pdfNoteId(r.editionSha) });
+
 export function loadHighlights() {
   try {
     const s = storage();
     if (s && !persistFailed) {
       const raw = s.getItem(STORAGE_KEY);
       const list = raw ? JSON.parse(raw) : [];
-      if (Array.isArray(list)) { memory = list.filter(isRecord); return memory.slice(); }
+      if (Array.isArray(list)) { memory = list.filter(isRecord).map(named); return memory.slice(); }
     }
   } catch { /* blocked or corrupt: fall back to memory */ }
   return (memory ?? []).slice();
@@ -149,6 +156,65 @@ export function makeSelector(text, start, end, n = CONTEXT_CHARS) {
   };
 }
 
+/* ---- the words as a reader sees them ---- */
+
+// Tags this site adds inside a note's text: link status, changed-link chips, badges, pictures from the PDF.
+// They are not the note's words. The reader's text index leaves them out, they cannot be selected
+// (reader.css), and nothing shown, copied or exported as a quote ever carries them.
+export const SITE_TAGS = ["linkstatus", "lc", "badge", "pdf-fig"];
+
+// A highlight is anchored in the text of the body with nothing between its text nodes, so two lines of
+// a table cell ("1890<br>447") or two cells with no white space between their tags run together there
+// ("1890447"). That text is how a highlight is found again, and it is not to change. What is shown,
+// copied or exported is this instead: the same characters, with one space wherever a line ended.
+const ENDS_LINE = new Set(("ADDRESS ARTICLE ASIDE BLOCKQUOTE CAPTION DD DETAILS DIV DL DT FIGCAPTION FIGURE FOOTER H1 H2 H3 H4 H5 H6 "
+  + "HEADER HR LI OL P PRE SECTION SUMMARY TABLE TBODY TD TFOOT TH THEAD TR UL").split(" "));
+const endsLine = (el) => ENDS_LINE.has(String(el.tagName).toUpperCase());
+/** The next node in document order that is not inside n. */
+const after = (n) => { for (; n && n.parentNode; n = n.parentNode) if (n.nextSibling) return n.nextSibling; return null; };
+
+/** Does a line end between two text nodes (a before b): a <br>, or the edge of a block or a table cell? */
+function lineBetween(a, b, skip) {
+  const above = new Set();
+  for (let p = b.parentNode; p; p = p.parentNode) above.add(p);
+  for (let p = a.parentNode; p && !above.has(p); p = p.parentNode) if (endsLine(p)) return true;      // a's block or cell ends before b
+  for (let n = after(a); n && n !== b;) {
+    const el = n.nodeType === 1 && !skip(n);
+    if (el && (String(n.tagName).toUpperCase() === "BR" || endsLine(n))) return true;                // a line break, or a block or cell opening
+    n = (el && n.childNodes[0]) || after(n);
+  }
+  return false;
+}
+
+/**
+ * The text [start, end) of an index as a reader sees it: exactly its characters, plus ONE space wherever a
+ * <br>, a table cell or a block boundary falls inside it and the text has no white space there already.
+ * Nothing else is added and nothing is dropped.
+ *   index  { nodes, starts }: the text nodes of the body in order, and the offset each starts at
+ *   skip   elements whose contents are not the note's (tags the site adds): never looked inside
+ */
+export function spacedText({ nodes, starts }, start, end, { skip = () => false } = {}) {
+  let lo = 0, hi = starts.length - 1;
+  while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (starts[mid] <= start) lo = mid; else hi = mid - 1; }
+  let out = "", prev = null;
+  for (let i = lo; i < nodes.length && starts[i] < end; i++) {
+    const piece = nodes[i].data.slice(Math.max(0, start - starts[i]), Math.max(0, end - starts[i]));
+    if (!piece) continue;
+    if (prev && !/\s$/.test(out) && !/^\s/.test(piece) && lineBetween(prev, nodes[i], skip)) out += " ";
+    out += piece;
+    prev = nodes[i];
+  }
+  return out;
+}
+
+/**
+ * What a plain copy (Cmd+C) of [start, end) puts on the clipboard: the words as they read, cleaned as a quote
+ * is (citation.js: cleanQuote), and nothing of this site's. lead: the paragraph number the passage opens with.
+ */
+export function copyText(index, start, end, { skip, lead = null } = {}) {
+  return cleanQuote(spacedText(index, start, end, { skip }), { lead });
+}
+
 function commonSuffixLen(a, b) {
   let n = 0;
   while (n < a.length && n < b.length && a[a.length - 1 - n] === b[b.length - 1 - n]) n++;
@@ -209,7 +275,7 @@ export function locateQuote(text, sel, { normalized = null } = {}) {
 /**
  * Compare a highlight with the edition now on record.
  *   current  made on this edition           (match: where it sits)
- *   still    a newer edition, words unchanged (match: where it sits now) -> re-anchor silently
+ *   still    a newer edition, words unchanged (match: where they sit there) -> said beside the highlight; its citation stays
  *   changed  a newer edition, words gone     (from/to versions for "Changed since you saved it")
  */
 export function checkHighlight(rec, { sha, version, text, normalized = null }) {
@@ -221,17 +287,59 @@ export function checkHighlight(rec, { sha, version, text, normalized = null }) {
 
 /* ------------------------------------------------------------------ citations and export */
 
-/** The citation context for a record. If the words are still in a newer edition ("still"), cite that
- *  edition where they now sit; if they have changed, cite the archived copy of the edition quoted. */
+/**
+ * The citation context for a record: always the edition it was saved from (the record's own title, version,
+ * month, paragraph, section and source). A lawyer cites what they read: a newer edition that still has the
+ * words is said beside the highlight (stillLine), never cited in its place, until they choose to
+ * (citeCurrent). Once that edition is no longer the one on GOV.UK the address is its archived copy, where
+ * one is held (`archivedCopy`, kept by the reader and the saved page); else the address it was saved with.
+ */
 export function citeContext(rec, { accessed = new Date() } = {}) {
-  const now = rec.check === "still" && rec.current ? rec.current : null;
-  const old = rec.check === "changed" && rec.archivedCopy?.url ? rec.archivedCopy : null;
+  const old = rec.check !== "current" && rec.archivedCopy?.url ? rec.archivedCopy : null;
   return {
-    title: now?.title || rec.title, kind: rec.kind, topic: rec.topic, countryName: rec.countryName,
-    version: now ? now.version : rec.version, month: now?.month || rec.month,
-    para: now ? now.para : rec.para, section: now ? now.section : rec.section,
-    url: old?.url || now?.url || rec.url, archived: old ? true : now ? now.archived : rec.archived,
-    capturedAt: old ? old.capturedAt : now ? now.capturedAt : rec.capturedAt, quote: rec.quote, accessed,
+    title: rec.title, kind: rec.kind, topic: rec.topic, countryName: rec.countryName,
+    version: rec.version, month: rec.month, para: rec.para, section: rec.section, paraTwice: rec.paraTwice,
+    url: old?.url || rec.url, archived: old ? true : rec.archived,
+    capturedAt: old ? old.capturedAt : rec.capturedAt, accessed,
+    quote: rec.quote, spaced: rec.spaced, lead: rec.lead,                                   // the words, as read, and the paragraph number they open with (citation.js: quoteOf)
+    source: rec.source, pdfPara: rec.pdfPara,                                               // web or PDF; the PDF's number where it differs
+  };
+}
+
+/** Are the words of a highlight from an older edition still in the current one (as last checked)? */
+export const stillCurrent = (rec) => rec.check === "still" && !!rec.current;
+
+/**
+ * What to say beside such a highlight: "Still in the current edition (v7.0, para 9.1.1)", with the paragraph
+ * the words have there, which may not be the one cited. "" for any other record.
+ *   word  "current", or "last" for a report no longer on GOV.UK
+ */
+export function stillLine(rec, { word = "current" } = {}) {
+  if (!stillCurrent(rec)) return "";
+  const c = rec.current;
+  const where = [c.version ? `v${c.version}` : "", c.para ? formatPinpoint(c.para) : ""].filter(Boolean).join(", ");
+  return `Still in the ${word} edition${where ? ` (${where})` : ""}`;
+}
+
+/**
+ * "Cite the current edition instead": what to write to a record so that it becomes a highlight of the current
+ * edition, where its words still are (`current`, as the last check left it). Only ever applied when the reader
+ * asks for it. Returns the patch for updateHighlight, or null where there is nothing to move to.
+ */
+export function citeCurrent(rec) {
+  if (!stillCurrent(rec) || !rec.current.sha) return null;
+  const c = rec.current;
+  const has = (k) => c[k] !== undefined;
+  return {
+    editionSha: c.sha, version: c.version ?? null, month: c.month || rec.month, title: c.title || rec.title,
+    para: c.para ?? null, section: c.section ?? null, paraTwice: !!c.paraTwice,
+    url: c.url || rec.url, archived: !!c.archived, capturedAt: c.capturedAt ?? null,
+    source: c.source || sourceOf(rec), pdfPara: c.pdfPara,
+    ...(c.pos ? { pos: c.pos } : {}),
+    // where the check kept them: the note that edition is filed under, the words either side, and how the quote reads there
+    ...(c.note ? { note: c.note } : {}), ...(has("prefix") ? { prefix: c.prefix, suffix: c.suffix } : {}),
+    ...(has("lead") ? { lead: c.lead } : {}), ...(has("spaced") ? { spaced: c.spaced } : {}),
+    check: "current", current: null, archivedCopy: null,
   };
 }
 
@@ -255,7 +363,7 @@ export function groupHighlights(records) {
 }
 
 const staleLine = (r) => r.check === "changed" ? `Changed since you saved it (v${r.version || "?"} → v${r.current?.version || r.checkedVersion || "?"})`
-  : r.check === "still" && r.current?.version ? `Still in v${r.current.version}` : "";
+  : stillLine(r);
 
 /** Markdown export of every highlight, grouped by country and note. */
 export function exportMarkdown(records, { style = "oscola", accessed = new Date() } = {}) {
@@ -265,7 +373,7 @@ export function exportMarkdown(records, { style = "oscola", accessed = new Date(
     for (const n of c.notes) {
       out.push(`### ${n.title}`, ``);
       for (const r of n.items) {
-        out.push(`> ${cleanQuote(r.quote)}`, ``, formatCitation(citeContext(r, { accessed }), style).md, ``);
+        out.push(`> ${quoteOf(r)}`, ``, formatCitation(citeContext(r, { accessed }), style).md, ``);
         const s = formatSources(r.sources);
         if (s.md) out.push(s.md, ``);
         const stale = staleLine(r);

@@ -1,0 +1,161 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-internal-relocation-india-september-2025-accessible",
+ "pdf_sha256": "dfc59e3087895fc30e6002c2eb9cbea9e7ccdcf73fe898e5f051ee6bf337e1f7",
+ "body_sha256": "da307b2104bee723e564c6bd3493991f9d386f37b9d5c0b36cbfc836badc97b3",
+ "words": {
+  "web": 12604,
+  "pdf": 12605
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "September 2025",
+   "pdf": "3.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "29 September 2025"
+   ],
+   "pdf": [
+    "29 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 87,
+   "pdf": 87,
+   "pdf_raw": 87,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 38,
+   "pdf": 36
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "6.4.4",
+    "section": "Version control and feedback",
+    "page": 33
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 108,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

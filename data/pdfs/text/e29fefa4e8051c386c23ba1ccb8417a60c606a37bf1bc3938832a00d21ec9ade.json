@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 25,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 151,
+ "list_items": 22,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 57,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Military service",
+ "cover_version": "1.0",
+ "cover_date": "October 2016",
+ "pdf_sha256": "e29fefa4e8051c386c23ba1ccb8417a60c606a37bf1bc3938832a00d21ec9ade",
+ "images": []
+}

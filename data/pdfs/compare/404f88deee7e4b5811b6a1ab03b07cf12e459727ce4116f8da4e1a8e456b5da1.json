@@ -1,0 +1,316 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible",
+ "pdf_sha256": "404f88deee7e4b5811b6a1ab03b07cf12e459727ce4116f8da4e1a8e456b5da1",
+ "body_sha256": "dfae6893e4e2f093ca96d7bc24f9044cb428551f021da277e04850746b92a7aa",
+ "words": {
+  "web": 13210,
+  "pdf": 13221
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 5,
+   "share": 0.000189,
+   "passages": 1,
+   "sizes": {
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 5,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "list marker": {
+    "differences": 5,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "February 2025",
+   "pdf": "3.0",
+   "pdf_date": "February 2025"
+  },
+  "section_updated": {
+   "web": [
+    "21 January 2025"
+   ],
+   "pdf": [
+    "21 January 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 92,
+   "pdf": 92,
+   "pdf_raw": 92,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 44,
+   "pdf": 42
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Assessing Credibility and Refugee Status.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Asylum Instruction on Assessing Credibility and Refugee Status.",
+   "after": "5. Internal relocation\n5.1.1 In general,",
+   "before_pdf": "Asylum Instruction on Assessing Credibility and Refugee Status",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "4.1.8",
+    "section": "5. Internal relocation",
+    "page": 8
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.3.5",
+    "section": "Version control and feedback",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "institutions states:\nArticle 12.- Types of credit institutions",
+   "after": "The Vietnamese credit institutions include: State credit institutions,",
+   "where": {
+    "heading": "laws-and-policy-developments-on-loanspawnbrokers",
+    "paragraph": "7.1.1",
+    "section": "7. Legal position",
+    "page": 10
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "State and the people, and cooperative credit organizations.",
+   "after": "Depending on the demands of the country’s",
+   "where": {
+    "heading": "laws-and-policy-developments-on-loanspawnbrokers",
+    "paragraph": "7.1.1",
+    "section": "7. Legal position",
+    "page": 10
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Vietnam.\nArticle 14. Right to conduct banking operations",
+   "after": "Organizations that fully meet the conditions under this",
+   "where": {
+    "heading": "laws-and-policy-developments-on-loanspawnbrokers",
+    "paragraph": "7.1.1",
+    "section": "7. Legal position",
+    "page": 10
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "conduct one or some banking operations in Vietnam.",
+   "after": "Individuals and organizations other than credit institutions are",
+   "where": {
+    "heading": "laws-and-policy-developments-on-loanspawnbrokers",
+    "paragraph": "7.1.1",
+    "section": "7. Legal position",
+    "page": 10
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Vietnam states:\nArticle 201. Usury in civil transactions",
+   "after": "Any person who offers loans at an interest",
+   "where": {
+    "heading": "laws-and-policy-developments-on-loanspawnbrokers",
+    "paragraph": "7.1.2",
+    "section": "7. Legal position",
+    "page": 11
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "September 2022",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Debt Bondage Gamble, 13 June 2022, Accessed: 6",
+   "after": "Hong Kong Business Association Vietnam, VCCI Suggests Central",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "10.3.5",
+    "section": "Bibliography",
+    "page": 32
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "September 2022",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Kong Business Association Vietnam, VCCI Suggests Central Bank",
+   "after": "Reconsider Cash Loan Proposals, undated, Accessed: 21 September",
+   "before_pdf": "Kong Business Association Vietnam,\"VCCI Suggests Central Bank",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "10.3.5",
+    "section": "Bibliography",
+    "page": 34
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 118,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "2.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

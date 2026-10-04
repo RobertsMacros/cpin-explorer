@@ -6,7 +6,7 @@
 .brand-mark { width: 2.1rem; height: 2.1rem; color: var(--blue); flex: none; transition: transform var(--t-slow, 520ms) var(--ease, ease); }
 .brand:hover .brand-mark { transform: rotate(-12deg); }
 /* Wordmark (owner's choice, 2026-10-03): two fonts at one size, "CPIN" in square pixel and blue, "EXPLORER" in mono. */
-.brand-name { font-family: var(--font-mono); font-size: .95rem; letter-spacing: .22em; white-space: nowrap; }
+.brand-name { font-family: var(--font-mono); font-size: .95rem; line-height: normal; letter-spacing: .22em; white-space: nowrap; }
 .brand-name b { font-family: var(--font-pixel); font-weight: 400; font-size: 1em; letter-spacing: .16em; color: var(--blue); margin-right: .55em; }
 
 /* Footer: the RM mark alone at the bottom left, in line with the source credit; "Report a bug"
@@ -14,10 +14,12 @@
 footer.foot, footer.site-foot { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; gap: .6rem 1.1rem; }
 footer.foot > span:not(.foot-rm):not(.foot-end), footer.site-foot > span:not(.foot-rm):not(.foot-end) { flex: 1 1 auto; min-width: 0; }
 .foot-rm { flex: none; }
-.foot-end { display: inline-flex; align-items: center; gap: 1.1rem; margin-left: auto; flex: none; }
+.foot-end { display: inline-flex; align-items: center; gap: 1.1rem; margin-left: auto; flex: none; line-height: normal; }
 .foot-end:not(:has(> :not([hidden]))) { display: none; }
 .foot-bug { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; padding: .45rem .7rem; white-space: nowrap; }
 .foot-bug[hidden] { display: none; }
+.foot-link { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; transition: color var(--t-fast, 140ms) var(--ease, ease); }
+.foot-link:hover, .foot-link:focus-visible { color: var(--blue); text-decoration: underline; text-underline-offset: .35em; }
 .foot-rm { display: inline-flex; align-items: center; color: var(--ink-2); text-decoration: none; }
 .foot-rm img { width: auto; height: 1.7rem; display: block; }
 .foot-rm .rm-light { display: none; }
@@ -28,4 +30,36 @@ footer.foot > span:not(.foot-rm):not(.foot-end), footer.site-foot > span:not(.fo
 :root[data-theme="dark"] .foot-rm .rm-ink { display: none; }
 :root[data-theme="dark"] .foot-rm .rm-light { display: block; }
 @media (prefers-reduced-motion: reduce) { .brand-mark { transition: none; } }
-@media (max-width: 600px) { .brand-mark { width: 1.8rem; height: 1.8rem; } .brand-name { font-size: .8rem; letter-spacing: .16em; } .brand-name b { letter-spacing: .12em; } .foot-rm img { height: 1.4rem; } footer.foot, footer.site-foot { flex-wrap: wrap; align-items: flex-start; } footer.foot > span:not(.foot-rm):not(.foot-end), footer.site-foot > span:not(.foot-rm):not(.foot-end) { flex: 1 1 0; } .foot-end { margin-left: 0; width: 100%; } }
+@media (max-width: 600px) {
+  .brand-mark { width: 1.8rem; height: 1.8rem; } .brand-name { font-size: .8rem; letter-spacing: .16em; } .brand-name b { letter-spacing: .12em; }
+  /* Phones: the RM mark larger, at the left and centred on the height of the credit beside it (owner's choice); the links beneath. */
+  footer.foot, footer.site-foot { flex-wrap: wrap; align-items: center; gap: .9rem 1rem; }
+  .foot-rm img { height: 2.3rem; }
+  footer.foot > span:not(.foot-rm):not(.foot-end), footer.site-foot > span:not(.foot-rm):not(.foot-end) { flex: 1 1 0; }
+  .foot-end { margin-left: 0; width: 100%; flex-wrap: wrap; gap: .7rem 1.3rem; }
+}
+
+/* --- Moving between pages ------------------------------------------------------------------------
+   Opening a report from the globe is a new page, but it should not feel like one. Where the browser
+   supports view transitions between pages (Chrome, Edge, Safari), the globe draws in to the header
+   mark, which is the same globe in miniature turned to the same place, while one page gives way to
+   the other; going back, the mark opens out into the globe. Quick and plain: a quarter of a second,
+   no flourish. Other browsers simply navigate. Reduced motion: no transition. */
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+
+/* One name for "the globe" on every page: the whole globe (its dots, the lit country, its labels) on
+   the start page, the mark elsewhere. */
+body:not(.dash) .brand-mark { view-transition-name: cpin-globe; }
+.dash .globe-wrap { view-transition-name: cpin-globe; }
+/* Until the real globe has drawn, a stand-in of the same dots in the same places (brand-mark.js) holds
+   its place, so the mark has a globe to open out into; it fades as the globe appears. */
+.globe-ghost { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; transition: opacity var(--t, 280ms) var(--ease, ease); }
+.globe-wrap:has(#globe.ready) .globe-ghost { opacity: 0; }
+
+::view-transition-group(cpin-globe) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.3, 0, .1, 1); }
+::view-transition-old(cpin-globe), ::view-transition-new(cpin-globe) { height: 100%; width: 100%; object-fit: contain; animation-duration: 260ms; }
+::view-transition-old(root) { animation: vt-out 140ms ease both; }
+::view-transition-new(root) { animation: vt-in 220ms ease 40ms both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; } }

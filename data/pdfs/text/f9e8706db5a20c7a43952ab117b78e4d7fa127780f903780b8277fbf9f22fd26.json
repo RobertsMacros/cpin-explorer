@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 37,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 303,
+ "list_items": 25,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 62,
+ "bookmarks": 36,
+ "warnings": [
+  "footnotes with no mark found in the text: 4"
+ ],
+ "figure_pages": {
+  "97f75fb7ac57ccb8cbf06970d1d6d47a0f6dec45a93cf9736fa4f20527676e7b.jpg": 10
+ },
+ "figure_sizes": {
+  "97f75fb7ac57ccb8cbf06970d1d6d47a0f6dec45a93cf9736fa4f20527676e7b.jpg": [
+   822,
+   654
+  ]
+ },
+ "figure_text": {
+  "97f75fb7ac57ccb8cbf06970d1d6d47a0f6dec45a93cf9736fa4f20527676e7b.jpg": 1
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Sunni Arabs",
+ "cover_version": "3.0",
+ "cover_date": "January 2021",
+ "pdf_sha256": "f9e8706db5a20c7a43952ab117b78e4d7fa127780f903780b8277fbf9f22fd26",
+ "images": [
+  "97f75fb7ac57ccb8cbf06970d1d6d47a0f6dec45a93cf9736fa4f20527676e7b.jpg"
+ ]
+}

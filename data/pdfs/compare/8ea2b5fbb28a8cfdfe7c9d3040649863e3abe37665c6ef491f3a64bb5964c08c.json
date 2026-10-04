@@ -1,0 +1,252 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-iran-june-2022-accessible",
+ "pdf_sha256": "8ea2b5fbb28a8cfdfe7c9d3040649863e3abe37665c6ef491f3a64bb5964c08c",
+ "body_sha256": "472e932ae238603fb8511ba8451608921b9c1db5bcaedfb367da837d393e14c4",
+ "words": {
+  "web": 30919,
+  "pdf": 30926
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 1.6e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "kinds": {
+   "back to contents": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "December 2025",
+   "pdf": "5.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "19 December 2025"
+   ],
+   "pdf": [
+    "19 December 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 349,
+   "pdf": 349,
+   "pdf_raw": 349,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 55,
+   "pdf": 53
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "colleagues",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "institutions\n10\n5\nEmployers or colleagues\n7\n3",
+   "after": "8.6.4 The 6Rang report added that, ‘...",
+   "before_pdf": "military institutions\n10\n5\nEmployers or 7 3",
+   "where": {
+    "heading": "correctiveconversion-therapy",
+    "paragraph": "8.6.4",
+    "section": "Country information",
+    "page": 38
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Back to Contents",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to demonstrate they face persecution or serious harm.",
+   "after": "Assessment\nSection updated: 19 December 2025\nAbout the",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 2
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of this provision being used against LGBTQ+ individuals.’",
+   "after": "See also State protection for information about laws",
+   "where": {
+    "heading": "Other_laws_affecting",
+    "paragraph": "7.6.8",
+    "section": "Country information",
+    "page": 18
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "colleagues",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Judicial or military institutions\n10\n5\nEmployers or",
+   "after": "7\n3\n8.6.4 The 6Rang report",
+   "where": {
+    "heading": "correctiveconversion-therapy",
+    "paragraph": "8.6.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "166.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "communicating with anti-Islamic networks’ and ‘promoting Christianity’ .",
+   "after": "At the time of the death sentences being",
+   "before_pdf": "communicating with anti-Islamic networks’ and ‘promoting Christianity’",
+   "where": {
+    "heading": "Prosecutions_convictions_and",
+    "paragraph": "8.5.15",
+    "section": "Country information",
+    "page": 34
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 276,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "11.2.1",
+   "11.2.2",
+   "11.2.3"
+  ],
+  "unconfirmed": []
+ }
+}

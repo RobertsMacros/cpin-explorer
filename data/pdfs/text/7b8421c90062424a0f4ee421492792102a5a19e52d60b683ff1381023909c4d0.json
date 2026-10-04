@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 150,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 104,
+ "paragraphs": 1268,
+ "list_items": 47,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 387,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 2
+ },
+ "figure_sizes": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": [
+   246,
+   169
+  ]
+ },
+ "figure_text": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a Home Office Fact-Finding Mission Occupied Palestinian Territories: freedom of movement, security and human rights situation",
+ "cover_version": null,
+ "cover_date": "23 September 2019",
+ "pdf_sha256": "7b8421c90062424a0f4ee421492792102a5a19e52d60b683ff1381023909c4d0",
+ "images": [
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png"
+ ]
+}

@@ -1,0 +1,421 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-women-syria-december-2025-accessible",
+ "pdf_sha256": "43616cf0f7950c52420883cb0ca2963fc1a3e693ef155f8ad8f9fb1cd6f5e43f",
+ "body_sha256": "15839c0085d1dfa6470ae9103a692e6c1e0e0e26df2095ca30be3b7439a9cfe4",
+ "words": {
+  "web": 39815,
+  "pdf": 39818
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 2,
+   "pdf_words": 5,
+   "share": 8.8e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 2,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 7
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 4,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "December 2025",
+   "pdf": "1.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "19 November 2025"
+   ],
+   "pdf": [
+    "19 November 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 231,
+   "pdf": 231,
+   "pdf_raw": 231,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 173,
+   "pdf": 73
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and child marriage",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "most associated with them.\n12.6 Forced marriage",
+   "after": "12.6.1 The January 2024 UNFPA report",
+   "where": {
+    "heading": "forced-marriage",
+    "paragraph": "12.6.1",
+    "section": "Country information",
+    "page": 47
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "ang",
+   "pdf": "and",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "safe among participants, increasing the number of women",
+   "after": "girls who use it.’\n13.5.7 The",
+   "where": {
+    "heading": "shelters",
+    "paragraph": "13.5.6",
+    "section": "Country information",
+    "page": 56
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "support",
+   "pdf": "income",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "information about HLP issues.\n15.4 Employment and",
+   "after": "15.4.1 In a section about women’",
+   "where": {
+    "heading": "employment",
+    "paragraph": "15.3.5",
+    "section": "Country information",
+    "page": 70
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "outletThe",
+   "pdf": "outlet The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "In February 2025, London-based ‘non-partisan’ news",
+   "after": "New Arab published an article entitled ‘Why Syrian",
+   "where": {
+    "heading": "dress-codes",
+    "paragraph": "10.3.2",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.8",
+   "pdf": "3.1.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "head coverings (see Dress codes and gender segregation).",
+   "after": "In April 2025, the governor of Idlib and",
+   "where": {
+    "heading": "risk-from-the-state",
+    "paragraph": "3.1.8",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.9",
+   "pdf": "3.1.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "charges (see Treatment by police and security forces).",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "risk-from-the-state",
+    "paragraph": "3.1.9",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and dispute resolution mechanisms in DAANES-controlled areas",
+   "after": "6.1 Most sources cited in this section –",
+   "where": {
+    "heading": "dispute-resolution",
+    "paragraph": "16.6.1",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "objective information in the sources consulted (see Bibliography).",
+   "after": "6.2 The November 2019 RIC report stated:",
+   "where": {
+    "heading": "dispute-resolution",
+    "paragraph": "16.6.2",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "becoming an integral and accepted part of society.’",
+   "after": "6.3 According to various sources, Mala Jin",
+   "where": {
+    "heading": "dispute-resolution",
+    "paragraph": "16.6.3",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "safely, alternative housing and employment opportunities are arranged.’",
+   "after": "6.9 In December 2024, Women Defend Rojava,",
+   "where": {
+    "heading": "dispute-resolution",
+    "paragraph": "16.6.9",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.3.6",
+   "pdf": "14.3.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "homeless face unique challenges in obtaining civil documentation.’",
+   "after": "The October 2025 UNFPA report stated: ‘Widows and",
+   "where": {
+    "heading": "widows",
+    "paragraph": "14.3.6",
+    "section": "Country information",
+    "page": 67
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "since 2011",
+   "pdf": "s roles",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "guardian.’\n8.3 Impact of conflict on women",
+   "after": "8.3.1 The February 2023 EUAA report",
+   "before_pdf": "guardian.’\n8.3 Impact of conflict on women’",
+   "where": {
+    "heading": "impact-of-conflict",
+    "paragraph": "8.2.5",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "GBP].",
+   "pdf": "GBP105].",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "14,000 (USD) [7,593 to 10,630",
+   "after": "Only one of these families was able to",
+   "where": {
+    "heading": "kidnappings-alawite",
+    "paragraph": "12.3.1",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "attitude and assistance to eliminate discrimination\ngovernment statements",
+   "after": "government departments, policies and programmes\nState protection\nsecurity",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "16.1.1",
+    "section": "Terms of reference",
+    "page": 81
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 288,
+  "different": {
+   "3.1.9": "3.1.10",
+   "16.6.1": "13.6.1",
+   "16.6.2": "13.6.2",
+   "16.6.3": "13.6.3",
+   "16.6.9": "13.6.9"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "3.1.8",
+   "14.3.6"
+  ],
+  "unconfirmed": []
+ }
+}

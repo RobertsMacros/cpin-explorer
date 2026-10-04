@@ -1,0 +1,109 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 92,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 64,
+ "paragraphs": 575,
+ "list_items": 189,
+ "tables": 0,
+ "figures": 13,
+ "footnotes": 118,
+ "bookmarks": 67,
+ "warnings": [
+  "page 53: bookmark not found in the text: 'Annex B: Letter from the British Embassy in Baghdad, ‘Renewa'",
+  "page 76: bookmark not found in the text: 'Annex F: Letter from the British Embassy in Baghdad, ‘Intern'",
+  "page 80: bookmark not found in the text: 'Annex G: Letter from the British Embassy in Baghdad, ‘Freedo'",
+  "footnotes with no mark found in the text: 95, 113"
+ ],
+ "figure_pages": {
+  "de05b96fe80a009448df67b573decf50c61eaa7310be19eeed1cb1e03799d0f8.jpg": 52,
+  "fc18e4dfb12eec5b827d593722753de11739cbb1bc3ae9a0fae34934b4449802.png": 66,
+  "fb7198fd08d888ea0607ed93f15250dc955d3233d3029f91587f0224d4991786.png": 76,
+  "541eb8fd46f83bba21940f091aa702ca064c8c0b1066ea8ec0f9a772b3dde10c.png": 60,
+  "12090347580b455bddb1883396750ed5b4edcd29318f86a585fd8e27e46ee34e.png": 61,
+  "80f2d15568f63330deba930bcf088536fbc8a7ad4f1f3cca57d407333e121805.png": 63,
+  "fa0f1dedce699cec0e757d65622d58c59b4ab11e9d9a7c346edd4eb37fdd4f2f.jpg": 68,
+  "216967f66b9c83d4671f877bac852e81331b0f4c2f3b47f55afc336e7eb3c18b.jpg": 71,
+  "acb9917cc93e35272cf7a46808a6a5306e3b0f2b93a814a0a6ded6138c63d479.png": 80,
+  "b8bc4c4c7eed151bea119d5a39373db2804a50b5ad61803530b0da5b7c1a5544.png": 83,
+  "e2c879fe6c83980f873e53dabe90106f99c98c4f470781a1c5c537e7e83ed2e3.jpg": 85
+ },
+ "figure_sizes": {
+  "de05b96fe80a009448df67b573decf50c61eaa7310be19eeed1cb1e03799d0f8.jpg": [
+   1026,
+   917
+  ],
+  "fc18e4dfb12eec5b827d593722753de11739cbb1bc3ae9a0fae34934b4449802.png": [
+   284,
+   219
+  ],
+  "fb7198fd08d888ea0607ed93f15250dc955d3233d3029f91587f0224d4991786.png": [
+   284,
+   218
+  ],
+  "541eb8fd46f83bba21940f091aa702ca064c8c0b1066ea8ec0f9a772b3dde10c.png": [
+   918,
+   1237
+  ],
+  "12090347580b455bddb1883396750ed5b4edcd29318f86a585fd8e27e46ee34e.png": [
+   918,
+   773
+  ],
+  "80f2d15568f63330deba930bcf088536fbc8a7ad4f1f3cca57d407333e121805.png": [
+   285,
+   218
+  ],
+  "fa0f1dedce699cec0e757d65622d58c59b4ab11e9d9a7c346edd4eb37fdd4f2f.jpg": [
+   884,
+   581
+  ],
+  "216967f66b9c83d4671f877bac852e81331b0f4c2f3b47f55afc336e7eb3c18b.jpg": [
+   917,
+   653
+  ],
+  "acb9917cc93e35272cf7a46808a6a5306e3b0f2b93a814a0a6ded6138c63d479.png": [
+   300,
+   263
+  ],
+  "b8bc4c4c7eed151bea119d5a39373db2804a50b5ad61803530b0da5b7c1a5544.png": [
+   622,
+   205
+  ],
+  "e2c879fe6c83980f873e53dabe90106f99c98c4f470781a1c5c537e7e83ed2e3.jpg": [
+   697,
+   465
+  ]
+ },
+ "figure_text": {
+  "de05b96fe80a009448df67b573decf50c61eaa7310be19eeed1cb1e03799d0f8.jpg": 0,
+  "fc18e4dfb12eec5b827d593722753de11739cbb1bc3ae9a0fae34934b4449802.png": 0,
+  "fb7198fd08d888ea0607ed93f15250dc955d3233d3029f91587f0224d4991786.png": 0,
+  "541eb8fd46f83bba21940f091aa702ca064c8c0b1066ea8ec0f9a772b3dde10c.png": 1198,
+  "12090347580b455bddb1883396750ed5b4edcd29318f86a585fd8e27e46ee34e.png": 762,
+  "80f2d15568f63330deba930bcf088536fbc8a7ad4f1f3cca57d407333e121805.png": 0,
+  "fa0f1dedce699cec0e757d65622d58c59b4ab11e9d9a7c346edd4eb37fdd4f2f.jpg": 82,
+  "216967f66b9c83d4671f877bac852e81331b0f4c2f3b47f55afc336e7eb3c18b.jpg": 0,
+  "acb9917cc93e35272cf7a46808a6a5306e3b0f2b93a814a0a6ded6138c63d479.png": 0,
+  "b8bc4c4c7eed151bea119d5a39373db2804a50b5ad61803530b0da5b7c1a5544.png": 0,
+  "e2c879fe6c83980f873e53dabe90106f99c98c4f470781a1c5c537e7e83ed2e3.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Iraq: Internal relocation, civil documentation and returns",
+ "cover_version": "11.0",
+ "cover_date": "June 2020",
+ "pdf_sha256": "2c81201c7b5ee623ecbaffaa84edfe1af3cb444fe5e5830e2eaff64dc492a40e",
+ "images": [
+  "12090347580b455bddb1883396750ed5b4edcd29318f86a585fd8e27e46ee34e.png",
+  "216967f66b9c83d4671f877bac852e81331b0f4c2f3b47f55afc336e7eb3c18b.jpg",
+  "541eb8fd46f83bba21940f091aa702ca064c8c0b1066ea8ec0f9a772b3dde10c.png",
+  "80f2d15568f63330deba930bcf088536fbc8a7ad4f1f3cca57d407333e121805.png",
+  "acb9917cc93e35272cf7a46808a6a5306e3b0f2b93a814a0a6ded6138c63d479.png",
+  "b8bc4c4c7eed151bea119d5a39373db2804a50b5ad61803530b0da5b7c1a5544.png",
+  "de05b96fe80a009448df67b573decf50c61eaa7310be19eeed1cb1e03799d0f8.jpg",
+  "e2c879fe6c83980f873e53dabe90106f99c98c4f470781a1c5c537e7e83ed2e3.jpg",
+  "fa0f1dedce699cec0e757d65622d58c59b4ab11e9d9a7c346edd4eb37fdd4f2f.jpg",
+  "fb7198fd08d888ea0607ed93f15250dc955d3233d3029f91587f0224d4991786.png",
+  "fc18e4dfb12eec5b827d593722753de11739cbb1bc3ae9a0fae34934b4449802.png"
+ ]
+}

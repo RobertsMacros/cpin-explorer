@@ -1,0 +1,366 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sudan/country-policy-and-information-note-non-arab-darfuri-august-2024-accessible",
+ "pdf_sha256": "779f9979942cc5f35e99043510152684fc06d44356423afc47e22c886ea76cfc",
+ "body_sha256": "28fea0f44c6d088f214532ee8c39c132f4fe44cfa02425b29a8373a9b3306970",
+ "words": {
+  "web": 17978,
+  "pdf": 18063
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 2,
+   "pdf_words": 93,
+   "share": 0.002636,
+   "passages": 5,
+   "sizes": {
+    "word": 2,
+    "passage": 5
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 2,
+    "pdf_words": 93
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 5,
+    "web_words": 0,
+    "pdf_words": 91
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 4,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "7.0",
+   "web_date": "October 2024",
+   "pdf": "7.0",
+   "pdf_date": "October 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 107,
+   "pdf": 107,
+   "pdf_raw": 107,
+   "differ": false
+  },
+  "pictures": {
+   "web": 4,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 58,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 4,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Flint, J. SAS, ‘Beyond Janjaweed’: Understanding the Militias of Darfur’, 2009 Last accessed 4 June 2024\nGlobal security .org ‘Sudan Tribes’ no date Last accessed 4 June 2024",
+   "web_words": 0,
+   "pdf_words": 28,
+   "before": "25 April 2024. Last accessed 4 June 2024",
+   "after": "Guardian (The) ‘Rape, murder, looting: massacre in Ardamata",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.1.1",
+    "section": "Bibliography",
+    "page": 42
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Rosenhart, E., JSE, ‘Exploiting tribal identity: Evidence from the Darfur the Darfur conflict (2001-) and Chad-Sudan proxy war (2005-2010)’ 2024. Last accessed 4 June 2024",
+   "web_words": 0,
+   "pdf_words": 27,
+   "before": "Jan/Feb 2022. Last accessed 4 June 2024",
+   "after": "Sudan Tribune,\nChallenges mount for Darfur Joint Force",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.1.1",
+    "section": "Bibliography",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Morton, J., HTSPE, ‘Conflict in Darfur a different perspective’, June 2004. Last accessed 4 June 2024",
+   "web_words": 0,
+   "pdf_words": 16,
+   "before": "Khartoum’, February 2020. Last accessed 4 June 2024",
+   "after": "New Aran (The), ‘In the chaos of war,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.1.1",
+    "section": "Bibliography",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "South Darfur tribes plan for reconciliation’ 26 January 2024. Last accessed 13 August 2024.",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "7 August 2023. Last accessed 13 August 2024",
+   "after": "Raoul Wallenberg Centre for Human Rights (RWCHR), ‘Breaches",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.1.1",
+    "section": "Bibliography",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "political and security dynamics in Darfur’,",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "What next for the Juba Peace Agreement? Evolving ...’,",
+   "after": "Jan/Feb 2022. Last accessed 4 June 2024",
+   "before_pdf": "What next for the Juba Peace Agreement? Evolving",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "14.1.1",
+    "section": "Bibliography",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "very strong",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "by the RSF, there is an absence of",
+   "after": "cogent evidence to depart from the UT’s",
+   "where": {
+    "heading": "situation-elsewhere-in-sudan",
+    "paragraph": "3.4.2",
+    "section": "Assessment",
+    "page": 9
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "and Nuba",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Qadarif) and Gezira states. He concludes that Darfuris",
+   "after": "are settling in places where there is a",
+   "before_pdf": "Qadarif) and Gezira states. He concludes that Darfuris ...",
+   "where": {
+    "heading": "nads-outside-darfur-and-khartoum",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 12
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "1.1.4",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "and enforced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "gender based violence (see Arbitrary arrests and detention",
+   "after": "disappearances, Ethnic based attacks and Sexual and gender",
+   "before_pdf": "gender based violence (see Arbitrary arrests and detention,",
+   "where": {
+    "heading": "situation-in-darfur",
+    "paragraph": "3.3.3",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Darfur.",
+   "pdf": "Darfur77.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "73 in Central Darfur and 14 in East",
+   "after": "ACLED has produced below graph showing civilian targeting",
+   "where": {
+    "heading": "armed-attacks-on-civilians-1",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "12",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "outside their regions ...’ (page 35), 28 June 2021",
+   "after": "Morton, J. HTSPE – ‘Conflict in Darfur a different",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "14.1.1",
+    "section": "Version control and feedback",
+    "page": 12
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 150,
+  "different": {},
+  "pdf_unnumbered": [
+   "1.1.4"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

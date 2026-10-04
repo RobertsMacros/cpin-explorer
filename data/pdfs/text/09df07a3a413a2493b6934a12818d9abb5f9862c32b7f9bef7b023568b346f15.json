@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 32,
+ "paragraphs": 186,
+ "list_items": 39,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 83,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iraq: Ba’athists",
+ "cover_version": "1.0",
+ "cover_date": "November 2016",
+ "pdf_sha256": "09df07a3a413a2493b6934a12818d9abb5f9862c32b7f9bef7b023568b346f15",
+ "images": []
+}

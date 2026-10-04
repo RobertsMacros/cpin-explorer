@@ -1,0 +1,180 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "brazil/report-of-a-fact-finding-mission-organised-criminal-groups-ocgs-brazil-accessible",
+ "pdf_sha256": "5c3813c50e547c45a4fd2e4b0fc56ffeb630806576126d73a9ad9b0f7ea2fdc9",
+ "body_sha256": "bd203452305e8507303ad240217808054439a8578ae004f649a93678bd9e1cf6",
+ "words": {
+  "web": 28356,
+  "pdf": 28362
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "December 2024",
+   "pdf": null,
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 0,
+   "pdf": 0,
+   "web_notices": 0,
+   "pdf_notices": 0
+  },
+  "footnotes": {
+   "web": 0,
+   "pdf": 0,
+   "pdf_raw": null,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 192,
+   "pdf": 25
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "",
+   "pdf": "GOV.UK (www.gov.uk).",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "on our website: Country policy and information notes.",
+   "after": "Format of the fact-finding mission\nDuring our",
+   "before_pdf": "on our website: Country policy and information notes -",
+   "where": {
+    "heading": "format-of-the-fact-finding-mission",
+    "paragraph": null,
+    "section": "FFM introductory note",
+    "page": 9
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "its",
+   "pdf": "it’s",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Embassy official; 1 interpreter\nPresentation on the CNMP,",
+   "after": "aims and objectives:\nCNMP’s role is the",
+   "where": {
+    "heading": "presentation-on-the-cnmp-its-aims-and-objectives",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 11
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 0,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -59,3 +59,19 @@ def test_missing_image_is_reported_not_fatal(site, client, store):
     report = sync(client, store)
     assert any(e["url"] == SVG_URL for e in report.errors)
     assert verify.check_complete(store)["problems"][0]["problem"] == "image not mirrored"
+
+
+def test_pictures_of_archived_and_replaced_editions_are_mirrored_when_every_edition_is_asked_for(site, client, store):
+    from cpin.images import current_image_refs, every_image_ref
+    govuk(site, body=BODY_WITH_MAP)
+    serve_map(site)
+    sync(client, store)
+    note = NOTE_PATH.rsplit("/", 1)[-1]
+    # An earlier edition: other words, and its own map. (An archive copy with the same words as an edition held
+    # is kept as a capture of that edition, not as another edition.)
+    old = BODY_WITH_MAP.replace(SVG_URL, "https://assets.publishing.service.gov.uk/media/old/map-2022.svg").replace("able to offer", "able to provide")
+    store.record_version("kenya", note, body=old, meta={}, seen_at="2026-10-02T09:00:00Z", source="wayback", title="An earlier edition",
+                         base_path=NOTE_PATH, capture={"captured_at": "2022-11-21T00:00:00Z", "archive_url": "https://web.archive.org/web/2022/x"})
+    assert set(current_image_refs(store)) == {SVG_URL}
+    assert set(every_image_ref(store)) == {SVG_URL, "https://assets.publishing.service.gov.uk/media/old/map-2022.svg"}
+    assert every_image_ref(store)[SVG_URL] == {f"kenya/{note}"}

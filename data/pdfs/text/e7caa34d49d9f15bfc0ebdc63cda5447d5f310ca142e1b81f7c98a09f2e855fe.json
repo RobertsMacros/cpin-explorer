@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 21,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 166,
+ "list_items": 33,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 34,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "1ce21ca5670ca1a351b5f41d815554464ec669b9203e9056add9ca979dd666a9.png": 8
+ },
+ "figure_sizes": {
+  "1ce21ca5670ca1a351b5f41d815554464ec669b9203e9056add9ca979dd666a9.png": [
+   469,
+   519
+  ]
+ },
+ "figure_text": {
+  "1ce21ca5670ca1a351b5f41d815554464ec669b9203e9056add9ca979dd666a9.png": 37
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Ukraine: Internal relocation",
+ "cover_version": null,
+ "cover_date": "1 May 2019",
+ "pdf_sha256": "e7caa34d49d9f15bfc0ebdc63cda5447d5f310ca142e1b81f7c98a09f2e855fe",
+ "images": [
+  "1ce21ca5670ca1a351b5f41d815554464ec669b9203e9056add9ca979dd666a9.png"
+ ]
+}

@@ -1,7 +1,10 @@
 /* Saved highlights. Builds on ../shared/theme.css and the reader's shared pieces (../reader/reader.css):
    header, footer, .cite, .seg, .sources, .badge, .comment, .toast. */
 
-.top-crumb { font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding-left: .9rem; border-left: 1px solid var(--line); }
+/* The crumb's box is as tall as its line was; its words stand on a baseline set half a cap height below the
+   box's middle (the ::before, of no width, reaches down to it), so their capitals are centred in it exactly. */
+.top-crumb { display: flex; align-items: baseline; height: 1.55em; font-family: var(--font-pixel); font-size: .7rem; line-height: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding-left: .9rem; border-left: 1px solid var(--line); }
+.top-crumb::before { content: ""; height: calc(50% + var(--half-cap)); }
 .top .theme-btn { margin-left: auto; }
 
 .sv { width: 100%; max-width: 64rem; margin: 0 auto; padding: 2.4rem var(--pad-x) 6rem; }
@@ -33,7 +36,7 @@
 .sv-export { position: relative; display: inline-flex; }
 .sv-export > .btn[aria-expanded="true"] { border-color: var(--blue); color: var(--blue); }
 .sv-export > .btn[aria-busy="true"] { cursor: progress; color: var(--ink-2); }
-.sv-export .caret { font-size: .7em; transition: transform var(--t) var(--ease); }
+.sv-export .caret { font-size: .7em; position: relative; top: -.095em; transform-origin: 50% calc(50% + .095em); transition: transform var(--t) var(--ease); }   /* the ▾ is drawn .095em below the middle of the capitals: lifted by that, and it turns about its own middle */
 .sv-export > .btn[aria-expanded="true"] .caret { transform: rotate(180deg); }
 .sv-menu { position: absolute; top: calc(100% + .35rem); left: 0; z-index: 30; min-width: 19rem; display: grid;
   background: var(--surface); border: 1px solid var(--line-strong); box-shadow: 0 14px 34px -16px color-mix(in oklab, var(--ink) 35%, transparent);
@@ -56,7 +59,7 @@
 .sv-country-head .tag { margin-left: auto; }
 .sv-note { margin-top: 1.6rem; }
 .sv-note-head { display: grid; gap: .35rem; padding: 0 0 .9rem; }
-.sv-note-top { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; }
+.sv-note-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .7rem; }   /* the tag's lettering and the words beside it are of a size: one baseline levels them */
 .sv-note-when { font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .05em; color: var(--ink-2); }
 .sv-note-title { margin: 0; font-size: 1.3rem; font-weight: 620; letter-spacing: -.015em; line-height: 1.25; }
 .sv-note-head .note-verbatim { margin: 0; }
@@ -71,7 +74,7 @@
 .sv-item.is-target { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); }
 .sv-item.is-changed { background: var(--sunken); }
 .sv-item.leaving { opacity: 0; transform: scale(.985); filter: blur(3px); }
-.sv-item-top { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; }
+.sv-item-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem .7rem; }
 .sv-item-top .eyebrow { min-width: 0; }
 .sv-item-top .saved-when { margin-left: auto; }
 .sv-quote { margin: 0; padding: .1rem 0 .1rem 1rem; border-left: 2px solid var(--blue); font-size: 1.02rem; line-height: 1.65; color: var(--ink); }
@@ -89,9 +92,12 @@
 .sv-empty { margin-top: 2.4rem; display: grid; gap: 1.6rem; max-width: 46rem; }
 .sv-empty > * { animation: pop-in var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 70ms); }
 .sv-steps { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); }
-.sv-steps li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: .8rem; padding: 1rem 1.1rem; border-bottom: 1px solid var(--line); }
-.sv-steps li:last-child { border-bottom: 0; }
-.sv-steps .numeral { font-size: 1.8rem; line-height: 1; color: var(--blue); }
+.sv-steps li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); align-items: baseline; gap: .8rem; min-height: calc(3.8rem + 1px); padding: 1rem 1.1rem; border-bottom: 1px solid var(--line); }
+.sv-steps li:last-child { min-height: 3.8rem; border-bottom: 0; }
+/* The numeral stands on the first line's baseline, then drops until the tops of its capitals and the
+   line's are level: by the difference of the two cap heights (its own, less the words' .71 of 1rem). Its
+   top margin takes the same back; the row keeps the height the numeral's 1.8rem line gave it (min-height). */
+.sv-steps .numeral { --drop: calc(2 * var(--half-cap) - .71rem); font-size: 1.8rem; line-height: 1; color: var(--blue); position: relative; top: var(--drop); margin-top: calc(-1 * var(--drop)); }
 .sv-steps p { margin: 0; color: var(--ink-2); }
 .sv-steps b { color: var(--ink); font-weight: 600; }
 .sv-demo { display: inline-flex; justify-self: start; max-width: 100%; overflow: hidden; background: var(--blue); color: var(--blue-ink); font-family: var(--font-mono); font-size: .74rem; box-shadow: var(--shadow); }
@@ -100,9 +106,11 @@
 .sv-demo .st-pin { font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .1em; }
 .sv-start h2 { margin: 0 0 .7rem; }
 .sv-start ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--line); }
-.sv-start a.row { display: flex; align-items: center; gap: .65rem; padding: .65rem .1rem; border-bottom: 1px solid var(--line); color: var(--ink); transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease); }
+.sv-start a.row { display: flex; align-items: baseline; gap: .65rem; padding: .65rem .1rem; border-bottom: 1px solid var(--line); color: var(--ink); transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease); }
 .sv-start a.row:hover { color: var(--blue); padding-left: .45rem; text-decoration: none; }
 .sv-start a.row small { margin-left: auto; font-family: var(--font-mono); font-size: .7rem; color: var(--ink-2); }
+/* The flag stands on the title's baseline, level with its capitals (as on the start page: see .dotflag in dashboard.css). */
+.sv-start a.row > .dotflag { --drop: calc(1.35rem * 3 / 8 - var(--half-cap)); position: relative; top: var(--drop); margin-top: calc(-1 * var(--drop)); }
 
 @media (max-width: 899px) {
   .top { flex-wrap: nowrap; height: var(--top-h); padding-top: 0; padding-bottom: 0; }

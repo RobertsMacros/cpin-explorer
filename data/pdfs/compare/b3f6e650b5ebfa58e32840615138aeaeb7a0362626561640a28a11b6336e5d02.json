@@ -1,0 +1,373 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/country-policy-and-information-note-gender-based-violence-albania-april-2026-accessible",
+ "pdf_sha256": "b3f6e650b5ebfa58e32840615138aeaeb7a0362626561640a28a11b6336e5d02",
+ "body_sha256": "03c3f3bf9f6bfa3348c260a4217f5b4bd53721b07a8a4ea914e59488c68293bc",
+ "words": {
+  "web": 37387,
+  "pdf": 37411
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 6,
+   "share": 9.4e-05,
+   "passages": 1,
+   "sizes": {
+    "spelling": 1,
+    "passage": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 12
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 12
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 84,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 82
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "5.0",
+   "pdf_date": "April 2026"
+  },
+  "section_updated": {
+   "web": [
+    "5 March 2026"
+   ],
+   "pdf": [
+    "5 March 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 347,
+   "pdf": 347,
+   "pdf_raw": 347,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 67,
+   "pdf": 66
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.3",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "etween",
+   "pdf": "between",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "approximately 809-899 convictions of GBV each year",
+   "after": "2021 and 2023 out of 2,046 criminal",
+   "where": {
+    "heading": "protection",
+    "paragraph": "4.1.11",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "IPV)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "10.2 Domestic violence, including intimate partner violence",
+   "after": "10.2.1 The latest official data specifically",
+   "before_pdf": "10.2 Domestic violence, including Intimate Partner Violence (",
+   "where": {
+    "heading": "domestic-violence",
+    "paragraph": "10.2.1",
+    "section": "Country information",
+    "page": 37
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4\n1.2.5",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 5.0, April 2026",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nAlbania is a patriarchal society with",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "Actionagainst",
+   "pdf": "Action against",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Council of Europe (CoE) Group of Experts on",
+   "after": "Violence against Women and Domestic Violence (GREVIO) is",
+   "where": {
+    "heading": "criminal-code",
+    "paragraph": "7.4.3",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "8.5.3The",
+   "pdf": "8.5.3 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "2.1%, other 5.7%, unspecified 16.2%.",
+   "after": "INSTAT report, Men and Women in Albania, 2022,",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "8.5.3",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "In general, the state is willing and able to provide protection.\nIn general, internal relocation is likely to be viable, particularly to larger cities such as Tirana, Durres, Fier, Vlora and Shkoder.\nIn general, where a claim is refused, it is likely to be certifiable as ‘clearly unfounded’ under section 94 of the Nationality, Immigration and Asylum Act 2002.\nAll cases must be considered on their individual facts, with the onus on the person to demonstrate they face persecution or serious harm.",
+   "pdf": "",
+   "web_words": 82,
+   "pdf_words": 0,
+   "before": "it has been reviewed by a human editor.",
+   "after": "1. Material facts, credibility and other checks/referrals",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Discrimination,",
+   "pdf": "Discrimination122,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Article 12 of the Law on Protection from",
+   "after": "sexual harassment in the workplace is prohibited. Under",
+   "where": {
+    "heading": "employment-economic-participation",
+    "paragraph": "9.3.1",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Albania",
+   "pdf": "Albania188",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2021 – 2030 is available on the UN Women –",
+   "after": "website.\n11.1.5 GREVIO also referred to",
+   "where": {
+    "heading": "government-attitudes-policies-and-funding",
+    "paragraph": "11.1.4",
+    "section": "Country information",
+    "page": 44
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 360,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,429 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-mental-healthcare-vietnam-september-2025-accessible",
+ "pdf_sha256": "51a0620ddd8fe4fba794cecd3050088744d3844db0b535012fbfef130bb5c516",
+ "body_sha256": "0fdea48f10c78e24dbf324463bc2ef80b5e35b86df15ef82e73aef0cbad5cc19",
+ "words": {
+  "web": 12805,
+  "pdf": 12466
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 7.9e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 153,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 2,
+    "web_words": 79,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 74,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 22,
+   "web_words": 163,
+   "pdf_words": 43
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "September 2025",
+   "pdf": "2.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 93,
+   "pdf": 93,
+   "pdf_raw": 93,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 6
+  },
+  "tables": {
+   "web": 13,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 49,
+   "pdf": 36
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "view",
+   "pdf": "views",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "not intended to reflect the UK Government’s",
+   "after": "of any boundaries.\n6.1 Mental health facilities",
+   "before_pdf": "not intended to reflect the UK Government's",
+   "where": {
+    "heading": "availability-of-treatment-for-common-mental-health-conditions",
+    "paragraph": "5.4.1",
+    "section": "Country information",
+    "page": 15
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Professionals\nSector\nWorkplaces\nMental Health Services\nPsychiatrists\nHealth\nPsychiatric hospitals and psychiatric wards\nAssessment, diagnosis, treatment, and care at the specialized level\nMental health doctors\nHealth\nPsychiatric hospitals and psychiatric wards\nAssessment, diagnosis, treatment, and care at the specialized level\nMental health nurses\nHealth\nPsychiatric hospitals and psychiatric wards\nScreening, assessment, and care at the specialized level\nPsychologists\nSocial, health and education\nCounselling centres, social welfare centres, hospitals, and schools\nPrevention, promotion, screening, assessment, counselling, and psychotherapy\nSocial service workers\nSocial and health\nSocial welfare centres, hospitals, and community-based organizations\nPrevention, promotion, screening, and social assistance in recovery",
+   "pdf": "",
+   "web_words": 74,
+   "pdf_words": 0,
+   "before": "they work and the mental health services provided.",
+   "after": "5.2 Psychiatrists, psychologists and mental health doctors",
+   "where": {
+    "heading": "overview",
+    "paragraph": "5.1.2",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Distribution of psychiatric beds across regions in Viet Nam, 2021\nRegion\nPsychiatric hospital beds (per 100,000 population)\nPsychiatric welfare beds (per 100,000 population)\nRed River Delta region\n16.3\n18.2\nSoutheast region\n12.4\n26.1\nNorth Central and South Coastal regions\n8.3\n18.8\nSouthwest region\n7.6\n9.7\nNorthern Upland region\n6.1\n5.8\nCentral Highlands region\n3.5\n10.3",
+   "pdf": "",
+   "web_words": 46,
+   "pdf_words": 0,
+   "before": "psychiatric beds in 2021 across regions in Vietnam.",
+   "after": "6.1.3 The map below is taken",
+   "where": {
+    "heading": "distribution-of-psychiatric-beds-across-regions-in-viet-nam-2021",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Mental health nurses per 100,000 population in Vietnam, by geo-economic region, 2021:\nRegion\nNumber of nurses, per 100,000\nRed River Delta Region\n5.7\nCentral and Coastal region\n2.7\nSoutheast region\n2.4\nSouthwest region\n2.1\nNorthern Upland region\n1.8\nCentral Highlands region\n1.4",
+   "pdf": "",
+   "web_words": 33,
+   "pdf_words": 0,
+   "before": "000 of the population by geo-economic region.",
+   "after": "5.3.3 See also Psychiatric hospitals and",
+   "where": {
+    "heading": "mental-health-nurses",
+    "paragraph": "5.3.2",
+    "section": "Country information",
+    "page": 11
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "label use for Post Traumatic Stress Disorder (PTSD)",
+   "after": "Alfuzosin (also with prostate complaints\nXatral XL\n10",
+   "where": {
+    "heading": "medication-off-label-use-for-post-traumatic-stress-disorder-ptsd",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "60\n360,000 VND £10.09\nAntipsychotics; classic",
+   "after": "Amisulpride\nSolian\n200 mg\nTablet\n60\n900,000",
+   "where": {
+    "heading": "antipsychotics-classic",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "900,000 VND £25.27\nAntipsychotics; modern atypical",
+   "after": "Clozapine\nClozapyl-100\n100 mg\nTablet\n100\n640,",
+   "where": {
+    "heading": "antipsychotics-modern-atypical",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "VND £39.24\nDepot injections with classic antipsychotics",
+   "after": "Haloperidol decanoate depot injection\nHaldol Decanoas\n50 mg/",
+   "where": {
+    "heading": "depot-injections-with-classic-antipsychotics",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "5\n1,000,000 VND £28.03\nAnxiolytics",
+   "after": "Bromazepam\nBromazepam Viatris\n6 mg\nPill\n30\n270,",
+   "where": {
+    "heading": "anxiolytics",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "VND £14.01\nMedication for sleeping disorder; sedatives",
+   "after": "Melatonin\nNatrol Melatonin\n3 mg\nTablet\n90\n270,",
+   "where": {
+    "heading": "medication-for-sleeping-disorder-sedatives",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "20\nMedication to treat side effects of antipsychotics",
+   "after": "Trihexyphenidyl\nTrihexyphenidyl\n2 mg\nPill\n100\n250,000",
+   "where": {
+    "heading": "medication-to-treat-side-effects-of-antipsychotics",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "7.00\nMedication for opioid addiction/substitution therapy",
+   "after": "Morphine hydrochloride trihydrate (retard)\nMorphine hydrochloride\n10 mg/",
+   "where": {
+    "heading": "medication-for-opioid-addictionsubstitution-therapy",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic name\nBrand name\nStrength of unit\nForm\nNumber of units in the container\nPrice per box",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "000 VND £49.05\nMedication for alcohol addiction",
+   "after": "Acamprosate\nCampral\n333 mg\nTablet\n84\n500,000",
+   "where": {
+    "heading": "medication-for-alcohol-addiction",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Antidepressants",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Pounds (GBP) (1.00 GBP = 35,665 VND)",
+   "after": "Generic name\nBrand name\nStrength of unit\nForm",
+   "where": {
+    "heading": "antidepressants",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "VND £",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Fluvoxamine\nLuvox\n100 mg\nTablet\n30\n245,000",
+   "after": "6.87\nImipramine\nImipramine\n10 mg\nTablet\n28",
+   "before_pdf": "Fluvoxamine\nLuvox\n100 mg\nTablet\n30\n245,000 £",
+   "where": {
+    "heading": "antidepressants",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Antidepressants",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of units in the container\nPrice per box",
+   "after": "Amitriptyline\nAmitriptyline\n25 mg\nTablet\n60\n100,000",
+   "where": {
+    "heading": "antidepressants",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 24
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 106,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

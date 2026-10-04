@@ -1,0 +1,235 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-actors-of-protection-nigeria-august-2024-accessible",
+ "pdf_sha256": "db2fa0d951e94fb23f9319eafef41151fc308f4a838b0befb8cdb50e0ae6ab61",
+ "body_sha256": "22b69f4c4861c1f19f97945e92b4879464d13b8be0cedf6ca542e819cc6bd4fe",
+ "words": {
+  "web": 23805,
+  "pdf": 23809
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 4.2e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "August 2024",
+   "pdf": "3.0",
+   "pdf_date": "August 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 245,
+   "pdf": 243,
+   "pdf_raw": 245,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 55,
+   "pdf": 53
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "April",
+   "pdf": "Aprl",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in an entry on its website dated 7",
+   "after": "2020, stated:\nThe importance of ADR [Alternative Dispute",
+   "where": {
+    "heading": "alternative-dispute-resolution",
+    "paragraph": "7.7.1",
+    "section": "7. Judicial system",
+    "page": 45
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "extremistgroups",
+   "pdf": "extremist groups",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "the Country Policy and Information Note Nigeria: Islamist",
+   "after": "in North East Nigeria and the AI report",
+   "where": {
+    "heading": "armed_forces",
+    "paragraph": "8.3.9",
+    "section": "8. Oversight and accountability",
+    "page": 42
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "IIfejika,",
+   "pdf": "I Ifejika,",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "government or private companies.’\n8.8.2 Solomon",
+   "after": "lecturer at Anchor University, Lagos, in the abstract",
+   "where": {
+    "heading": "public-complaints-commission",
+    "paragraph": "8.8.2",
+    "section": "8. Oversight and accountability",
+    "page": 52
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "136",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "treatment remained pervasive within the criminal justice system.’",
+   "after": "6.3.3 The BBC, in an article, ‘",
+   "where": {
+    "heading": "torture",
+    "paragraph": "6.3.3",
+    "section": "6. Human rights violations by security forces",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "139",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "there were credible reports government officials employed them.’",
+   "after": "The source did not specify which reports or",
+   "where": {
+    "heading": "torture",
+    "paragraph": "6.3.5",
+    "section": "6. Human rights violations by security forces",
+    "page": 31
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 283,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

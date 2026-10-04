@@ -1,0 +1,299 @@
+/* Guide and glossary. Builds on ../shared/theme.css (tokens, .tag, .btn, .eyebrow, pop-in) and on the
+   reader's stylesheet (../reader/reader.css) for the header, the footer and the real controls the guide
+   shows as examples: .switch, .vseg, .seg, .seltool, .chip, .ed-chip, the history caption (.wc) and the
+   redline legend (.edition-note). ../shared/link-status.css gives the Dead / Moved tags. The few dashboard
+   controls shown (search box, legend, status line) are restated under .demo at the end of this file,
+   because the dashboard's stylesheet lays out a whole app shell.
+   Everything eases (no jumps): rows and groups of the glossary fold with grid rows, the nav marker glides,
+   anchors scroll smoothly. Reduced motion is honoured by theme.css. */
+
+:root {
+  --nav-w: 13.5rem;
+  --row-pad: .9rem;                        /* glossary rows reach this far past the text on each side */
+  --gl-stick: 0rem;                        /* height of the glossary's sticky filter bar (0 when it is not sticky) */
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+/* Theme switch: no colour transitions for the one frame the colours change. */
+.theme-switching *, .theme-switching *::before, .theme-switching *::after { transition: none !important; }
+
+/* --- Header (as the Saved page) ---------------------------------------------------------------------- */
+.top { flex-wrap: nowrap; height: var(--top-h); padding-top: 0; padding-bottom: 0; }
+/* As on the Saved page: the words' capitals centred exactly in the crumb's box (a baseline half a cap height below its middle). */
+.top-crumb { display: flex; align-items: baseline; height: 1.55em; font-family: var(--font-pixel); font-size: .7rem; line-height: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding-left: .9rem; border-left: 1px solid var(--line); white-space: nowrap; }
+.top-crumb::before { content: ""; height: calc(50% + var(--half-cap)); }
+.top .theme-btn { margin-left: auto; }
+
+/* --- Layout: nav rail | text --------------------------------------------------------------------------- */
+.gd {
+  width: 100%; max-width: 92rem; margin: 0 auto; padding: 2.4rem var(--pad-x) 6rem;
+  display: grid; grid-template-columns: var(--nav-w) minmax(0, 1fr); column-gap: clamp(2rem, 4vw, 5rem); align-items: start;
+}
+.gd-body { min-width: 0; max-width: 70rem; }
+#guide { scroll-margin-top: 8rem; }      /* "Guide" goes to the very top of the page, back button and all */
+
+/* --- In-page nav ------------------------------------------------------------------------------------------
+   Wide: a rail that stays beside the text, with every section; a blue marker glides to the one on screen.
+   Narrow (below 900px): two tabs under the header, the marker a line under the current one. */
+.gd-nav {
+  position: sticky; top: calc(var(--top-h) + 2.4rem); max-height: calc(100vh - var(--top-h) - 4rem); overflow: auto;
+  overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+  font-size: .8rem; animation: pop-in var(--t-slow) var(--ease) both;
+}
+.gd-nav > .eyebrow { margin: 0 0 .75rem; }
+.gd-nav ol { list-style: none; margin: 0; padding: 0; }
+.gd-nav-list { position: relative; border-left: 1px solid var(--line); }
+.gd-nav a {
+  display: block; padding: .34rem .6rem .34rem 1.25rem; color: var(--ink-2); line-height: 1.3;
+  transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), opacity var(--t) var(--ease);
+}
+.gd-nav a:hover { color: var(--ink); background: var(--sunken); text-decoration: none; }
+.gd-nav a.is-active { color: var(--blue); background: var(--blue-wash); }
+.gd-nav a.is-off { opacity: .4; }
+.gd-nav-part > a { padding: .5rem .6rem .45rem; font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+.gd-nav-part + .gd-nav-part { margin-top: .9rem; }
+.gd-nav-ind {
+  position: absolute; left: -1px; top: 0; width: 2px; height: var(--h, 0px); background: var(--blue); pointer-events: none;
+  transform: translateY(var(--y, 0px)); opacity: 0;
+  transition: transform var(--t) var(--ease), height var(--t) var(--ease), width var(--t) var(--ease), opacity var(--t) var(--ease);
+}
+.gd-nav-ind.is-on { opacity: 1; }
+
+/* --- Titles ------------------------------------------------------------------------------------------------ */
+.gd-hero > * { animation: pop-in var(--t-slow) var(--ease) both; animation-delay: calc(var(--i, 0) * 60ms); }
+.gl-hero > * { animation: none; }
+.gd-hero .back { margin-bottom: 1.5rem; }
+.gd-hero .back:hover { text-decoration: none; }
+.hero-title { margin: .35rem 0 .4rem; font-family: var(--font-display); font-size: clamp(2.4rem, 4.2vw, 4.4rem); font-weight: 400; letter-spacing: .07em; line-height: 1; color: var(--blue); text-transform: uppercase; }
+.lede { margin: .2rem 0 0; color: var(--ink-2); max-width: 40rem; text-wrap: pretty; }
+.lede a { text-decoration: underline; text-decoration-color: var(--blue-line); text-underline-offset: .2em; }
+
+/* --- Guide: numbered sections, the words on the left and the real control beside them ------------------- */
+.gd-secs { counter-reset: sec; margin-top: 2.4rem; }
+.gd-sec {
+  counter-increment: sec; display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: 1.2rem 1.2rem;
+  padding: 2rem 0 2.2rem; border-top: 1px solid var(--line);
+}
+.gd-sec::before {
+  content: counter(sec, decimal-leading-zero); grid-column: 1; grid-row: 1 / span 2;
+  font-family: var(--font-pixel); font-size: 1.5rem; line-height: 1.15; letter-spacing: .02em; color: var(--blue); font-variant-numeric: tabular-nums;
+}
+.gd-text, .gd-sec > .demo { grid-column: 2; min-width: 0; }
+.gd-text h3 { margin: 0 0 .55rem; font-size: 1.32rem; line-height: 1.25; font-weight: 620; letter-spacing: -.018em; text-wrap: balance; }
+.gd-text p { margin: 0; max-width: 40rem; font-size: 1.02rem; line-height: 1.65; color: var(--ink); text-wrap: pretty; }
+.gd-text b { font-weight: 600; }
+/* A word explained in the glossary: plain ink with a dotted blue rule, so a paragraph is not a field of links. */
+a.term { color: inherit; text-decoration: underline dotted var(--blue); text-decoration-thickness: 1px; text-underline-offset: .22em; transition: color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease); }
+a.term:hover, a.term:focus-visible { color: var(--blue); background: var(--blue-wash); text-decoration-style: solid; }
+.gd-text p.gd-go { margin-top: .85rem; font-family: var(--font-pixel); font-size: .68rem; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; }
+.gd-go a:hover { text-decoration: underline; text-underline-offset: .35em; }
+.gd-go a span { display: inline-block; transition: transform var(--t) var(--ease); }
+.gd-go a:hover span { transform: translateX(.2rem); }
+
+@media (min-width: 1200px) {
+  .gd-sec { grid-template-columns: 3rem minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(1.4rem, 2.4vw, 3rem); }
+  .gd-sec::before { grid-row: 1; }
+  .gd-sec > .demo { grid-column: 3; }
+}
+
+/* --- Examples of the real controls ------------------------------------------------------------------------
+   Built from the pages' own classes and markup, on a quiet plate. They are pictures: `inert` keeps them out
+   of the tab order and away from the pointer, and the caption says where the real one is. */
+.demo { margin: 0; display: grid; gap: .5rem; align-content: start; container-type: inline-size; }
+.demo figcaption { font-family: var(--font-pixel); font-size: .62rem; line-height: 1.5; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.demo-stage {
+  display: flex; flex-wrap: wrap; align-items: center; gap: .7rem .8rem; min-width: 0; padding: 1rem 1.1rem; overflow: hidden;
+  border: 1px solid var(--line); background: var(--sunken);
+}
+.demo-stage--stack { flex-direction: column; align-items: stretch; flex-wrap: nowrap; gap: .85rem; }
+.demo-stage > * { max-width: 100%; margin: 0; }
+.demo-stage[inert], .demo-stage[inert] * { cursor: default; -webkit-user-select: none; user-select: none; }
+.demo-line { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem .7rem; }
+.demo--live:has([data-report-bug][hidden]) { display: none; }
+
+/* What CPIN stands for: the wordmark's four letters, a word under each, then the name in full. */
+.spell { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.spell > span { display: grid; gap: .55rem; min-width: 0; padding: .9rem .8rem .95rem; border-right: 1px solid var(--line); }
+.spell > span:nth-child(4) { border-right: 0; }
+.spell b { font-family: var(--font-pixel); font-weight: 400; font-size: clamp(1.9rem, 2.4vw, 2.6rem); line-height: 1; color: var(--blue); }
+.spell i { font-style: normal; font-family: var(--font-pixel); font-size: .6rem; line-height: 1.2; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); overflow-wrap: anywhere; }
+.spell > p { grid-column: 1 / -1; margin: 0; padding: .6rem .8rem .65rem; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .78rem; line-height: 1.4; color: var(--ink); }
+
+/* Reader pieces, loosened from the one-line bars they live in. */
+.demo .demo-hist { color: var(--blue); }
+.demo .wc { max-width: none; overflow: visible; }
+.demo .wc-meta { flex-wrap: wrap; height: auto; white-space: normal; }
+.demo .wc-text { max-height: none; }
+.demo .wc-calc { height: auto; align-items: baseline; white-space: normal; line-height: 1.5; }
+.demo .wc-calc .tag { position: relative; top: var(--rise); }   /* level with the first line's capitals (--rise: theme.css) */
+.demo .wc-calc-t { overflow: visible; }
+.demo .vseg { display: inline-grid; }
+.demo .edition-note { flex: 1 1 100%; height: auto; margin: 0; padding: .6rem .8rem; align-items: baseline; white-space: normal; line-height: 1.55; }
+.demo .edition-note .tag { position: relative; top: var(--rise); }
+.demo .edition-note .en-t { overflow: visible; }
+.demo .seltool { position: static; flex-wrap: wrap; max-width: 100%; }
+.demo .seltool::after { display: none; }
+.demo .seltool .st-pin { min-height: 2.35rem; }
+.demo .ed-chip { flex-wrap: wrap; overflow: visible; white-space: normal; gap: .35rem .5rem; }
+.demo .ed-chip > .ed-when { overflow: visible; }
+.demo .ed-chip .tag-x { display: inline; }
+.demo .ed-chip .tag-s { display: none; }
+/* Little room (a phone, or the column beside the text): the pieces take the form they have on a phone. */
+@container (max-width: 40rem) {
+  .demo .ed-chip .tag-x { display: none; }
+  .demo .ed-chip .tag-s { display: inline; }
+  .demo .seltool { width: 100%; }
+  .demo .seltool .st-pin { flex: 1 1 100%; min-height: 2rem; border-right: 0; }
+  .demo .seltool button { flex: 1 1 auto; justify-content: center; gap: .4rem; min-height: 2.6rem; padding: 0 .4rem; font-size: .72rem; border-left: 0; box-shadow: 0 -1px 0 color-mix(in oklab, var(--blue-ink) 28%, transparent), -1px 0 0 color-mix(in oklab, var(--blue-ink) 22%, transparent); }
+}
+.demo .note-actions .btn, .demo-stage > .btn { min-height: 2.1rem; font-size: .74rem; }
+.demo .linkstatus { margin-left: 0; }
+.demo .foot-bug { min-height: 0; }
+.demo .caret { position: relative; top: -.095em; }       /* the ▾, lifted to the middle of the capitals (as on the Saved page) */
+
+/* --- Glossary ---------------------------------------------------------------------------------------------- */
+/* Once drawn, at least a screen tall: the filter keeps its place however few terms are left. */
+.gl { margin-top: 5.5rem; }
+:root[data-guide="ready"] .gl { min-height: calc(100vh - var(--top-h) - var(--bar-h, 0px)); min-height: calc(100svh - var(--top-h) - var(--bar-h, 0px)); }
+.gl-tools {
+  position: sticky; top: calc(var(--top-h) - 1px); z-index: 15; display: flex; align-items: center; gap: .6rem 1.2rem;
+  margin: 1.8rem 0 0; padding: .7rem 0;
+  background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-block: 1px solid var(--line);
+}
+.gl-tools[hidden] { display: none; }
+.gl-find {
+  flex: 1 1 auto; max-width: 30rem; display: flex; align-items: center; gap: .45rem; height: 2.5rem; padding: 0 .4rem 0 .7rem;
+  border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2); cursor: text;
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.gl-find:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); color: var(--blue); }
+.gl-find svg { width: 1rem; height: 1rem; flex: none; }
+.gl-find input { flex: 1; min-width: 0; height: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; font-size: .92rem; }
+.gl-find input::placeholder { color: var(--ink-3); }
+.gl-find input::-webkit-search-cancel-button { display: none; }
+.gl-clear {
+  display: grid; place-items: center; width: 1.7rem; height: 1.7rem; padding: 0; border: 0; background: none; color: var(--ink-2); cursor: pointer;
+  opacity: 0; visibility: hidden; transform: scale(.8);
+  transition: opacity var(--t-fast) var(--ease), transform var(--t) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease), visibility 0s linear var(--t-fast);
+}
+.gl-clear svg { width: .8rem; height: .8rem; }
+.gl-clear:hover { color: var(--blue); background: var(--blue-wash); }
+.gl-find.has-text .gl-clear { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.gl-kbd { margin-right: .25rem; }
+.gl-find:focus-within .gl-kbd, .gl-find.has-text .gl-kbd { display: none; }
+.gl-count { margin: 0 0 0 auto; font-family: var(--font-pixel); font-size: .68rem; line-height: normal; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; font-variant-numeric: tabular-nums; transition: color var(--t) var(--ease); }
+.gl-count.is-none { color: var(--ink-3); }
+
+/* A group (The notes, Asylum law, This site) and its rows. Both fold away smoothly when the filter leaves
+   them out: a grid row easing from 1fr to 0fr, with the padding and rules inside the part that is clipped. */
+.gl-groups { overflow-anchor: none; }
+.gl-group, .gl-row, .gl-empty { display: grid; grid-template-rows: 1fr; }
+.gl-group { margin-inline: calc(-1 * var(--row-pad)); scroll-margin-top: var(--gl-stick); transition: grid-template-rows var(--t-slow) var(--ease), opacity var(--t) var(--ease), visibility 0s; }
+.gl-group-in, .gl-row-in, .gl-empty-in { min-height: 0; overflow: hidden; }
+.gl-group-in { padding: 0 var(--row-pad); }         /* no padding above or below: a folded group must reach no height */
+.gl-group-head { margin-top: 2.6rem; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: .6rem; border-bottom: 1px solid var(--blue); }
+.gl-group-head h3 { color: var(--blue); }
+.gl-group-n { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.gl-list { list-style: none; margin: 0 calc(-1 * var(--row-pad)); padding: 0; }
+.gl-row { transition: grid-template-rows var(--t) var(--ease), opacity var(--t) var(--ease), visibility 0s; }
+.gl-row.is-off, .gl-group.is-off { grid-template-rows: 0fr; opacity: 0; visibility: hidden; }
+.gl-row.is-off { transition: grid-template-rows var(--t) var(--ease), opacity var(--t-fast) var(--ease), visibility 0s linear var(--t); }
+.gl-group.is-off { transition: grid-template-rows var(--t-slow) var(--ease), opacity var(--t) var(--ease), visibility 0s linear var(--t-slow); }
+.gl-instant .gl-row, .gl-instant .gl-group, .gl-instant .gl-empty { transition: none; }
+.gl-entry {
+  display: grid; grid-template-columns: minmax(0, 17rem) minmax(0, 1fr); align-items: baseline; gap: .4rem clamp(1.4rem, 2.6vw, 3rem);   /* the term and the first line of its explanation on one baseline */
+  position: relative; padding: 1.05rem var(--row-pad) 1.15rem;
+}
+/* The rule under a row is as wide as the text; the row itself (and its mark on arrival) reaches a little further. */
+.gl-entry::after { content: ""; position: absolute; left: var(--row-pad); right: var(--row-pad); bottom: 0; height: 1px; background: var(--line); transition: opacity var(--t) var(--ease); }
+.gl-row.is-last .gl-entry::after { opacity: 0; }
+.gl-term { margin: 0; font-size: 1.06rem; line-height: 1.3; font-weight: 620; letter-spacing: -.01em; }
+.gl-term dfn { font-style: normal; }
+.gl-term a { color: var(--ink); transition: color var(--t-fast) var(--ease); }
+.gl-term a::after { content: "#"; margin-left: .4em; font-family: var(--font-mono); font-weight: 400; font-size: .8em; color: var(--blue); opacity: 0; transition: opacity var(--t-fast) var(--ease); }
+.gl-term a:hover, .gl-term a:focus-visible { color: var(--blue); text-decoration: none; }
+.gl-term a:hover::after, .gl-term a:focus-visible::after { opacity: 1; }
+.gl-full { margin: .3rem 0 0; font-family: var(--font-mono); font-size: .74rem; line-height: 1.45; color: var(--ink-2); }
+.gl-def { margin: 0; max-width: 46rem; font-size: 1rem; line-height: 1.62; color: var(--ink); text-wrap: pretty; }
+::highlight(guide-filter) { background-color: color-mix(in oklab, var(--blue) 16%, transparent); }
+
+/* Arriving at a term (a link in the guide, a search result): its row is marked for a moment, as the reader marks a target. */
+.gl-row.is-target .gl-entry { animation: term-flash 2.6s var(--ease) both; }
+@keyframes term-flash {
+  0%, 40% { background-color: color-mix(in oklab, var(--blue) 13%, var(--bg)); box-shadow: inset 2px 0 0 var(--blue); }
+  100% { background-color: transparent; box-shadow: inset 2px 0 0 transparent; }
+}
+
+/* Nothing matches: said plainly, with two ways on. Folds in and out like the rows. */
+.gl-empty { grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows var(--t-slow) var(--ease), opacity var(--t) var(--ease), visibility 0s linear var(--t-slow); }
+.gl-empty.is-on { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition-delay: 0s; }
+.gl-empty-box { max-width: 46rem; margin-top: 2.2rem; padding: 1.3rem 1.2rem 1.2rem; border: 1px solid var(--line); background: var(--sunken); }
+.gl-empty-say { margin: .8rem 0 .4rem; font-size: 1.1rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.gl-empty-say q { quotes: "“" "”"; }
+.gl-empty-do { margin: 0 0 1rem; font-size: .92rem; color: var(--ink-2); }
+.gl-empty-do a { white-space: nowrap; }
+.gl-noscript { margin: 2rem 0 0; padding: .9rem 1rem; border-left: 2px solid var(--blue); background: var(--blue-wash); max-width: 46rem; }
+
+/* --- Narrower windows ------------------------------------------------------------------------------------- */
+@media (min-width: 900px) { :root { --gl-stick: 4.6rem; } }
+@media (max-width: 899px) {
+  :root { --bar-h: 2.9rem; }               /* the tabs under the header: anchors land clear of both (see reader.css, html) */
+  .top-crumb { display: none; }
+  .gd { display: block; padding-top: 0; }
+  .gd-nav {
+    top: var(--top-h); z-index: 20; max-height: none; overflow: visible; margin: 0 calc(-1 * var(--pad-x)); padding: 0 var(--pad-x);
+    background: color-mix(in oklab, var(--bg) 88%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--line); animation: none;
+  }
+  .gd-nav > .eyebrow, .gd-nav-part ol { display: none; }
+  .gd-nav-list { display: flex; gap: 1.6rem; height: var(--bar-h); border-left: 0; }
+  .gd-nav-part + .gd-nav-part { margin-top: 0; }
+  .gd-nav-part > a { display: flex; align-items: center; height: 100%; padding: 0; color: var(--ink-2); }
+  .gd-nav-part > a:hover, .gd-nav-part > a.is-active { background: none; }
+  .gd-nav-part > a.is-active { color: var(--blue); }
+  .gd-nav-ind { left: 0; top: auto; bottom: -1px; width: var(--w, 0px); height: 2px; transform: translateX(var(--x, 0px)); }
+  .gd-part:first-child { padding-top: 1.8rem; }
+  .gl { margin-top: 4rem; }
+  .gl-tools { position: static; }
+}
+@media (max-width: 760px) {
+  .gl-entry { grid-template-columns: minmax(0, 1fr); gap: .55rem; }
+}
+@media (max-width: 599px) {
+  .gd-sec { grid-template-columns: minmax(0, 1fr); row-gap: .9rem; padding: 1.6rem 0 1.8rem; }
+  .gd-sec::before { grid-row: auto; font-size: 1.05rem; }
+  .gd-text, .gd-sec > .demo { grid-column: 1; }
+  .gd-text h3 { font-size: 1.22rem; }
+  .demo-stage { padding: .85rem .8rem; }
+  .gl-tools { flex-wrap: wrap; }
+  .gl-find { flex-basis: 100%; max-width: none; }
+  .gl-count { margin-left: 0; }
+  .gl-kbd { display: none; }
+  .gl-group-head { margin-top: 2.1rem; }
+}
+@media (max-width: 420px) {
+  .spell { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spell > span:nth-child(2) { border-right: 0; }
+  .spell > span:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+}
+@media print {
+  .gd-nav, .gl-tools, .gd-go, .back { display: none !important; }
+  .gd { display: block; }
+}
+
+/* --- Dashboard controls, restated for the examples (from ../dashboard/dashboard.css) -------------------- */
+.demo .legend { display: flex; flex-wrap: wrap; gap: .4rem 1.4rem; font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.demo .legend span { display: inline-flex; align-items: baseline; gap: .45rem; }
+.demo .key { width: .55rem; height: .55rem; border-radius: 50%; background: #6c7a99; display: inline-block; position: relative; top: calc(.275rem - var(--half-cap)); }
+.demo .key--recent { background: var(--blue); }
+.demo .legend-hint { color: var(--ink-3); }
+.demo .section-head { flex: 1 1 100%; display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: .55rem; border-bottom: 1px solid var(--line); }
+.demo .search { display: flex; align-items: center; gap: .55rem; height: 2.35rem; padding: 0 .7rem; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2); }
+.demo .search svg { width: 1rem; height: 1rem; flex: none; }
+.demo .search-ph { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: .9rem; color: var(--ink-3); }
+.demo .rgroup-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem 1rem; font-size: 1rem; font-weight: 560; line-height: 1.3; }
+.demo .rgroup-n { font-family: var(--font-pixel); font-weight: 400; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.demo .all-results { align-self: flex-start; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.demo .sync-status { display: inline-flex; align-items: baseline; gap: .5rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); white-space: nowrap; }
+.demo .live-dot { width: .5rem; height: .5rem; background: var(--blue); flex: none; position: relative; top: calc(.25rem - var(--half-cap)); }
+.demo .check-btn { min-height: 2rem; font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; }

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 48,
+ "paragraphs": 270,
+ "list_items": 49,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 89,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 77, 85"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Christians and Christian converts",
+ "cover_version": "5.0",
+ "cover_date": "May 2019",
+ "pdf_sha256": "65b130f2eb3b1b467a3d40313efeaa6ef1c263cf4d2ed2112427c9900e99b254",
+ "images": []
+}

@@ -1,0 +1,55 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 113,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 41,
+ "paragraphs": 1235,
+ "list_items": 89,
+ "tables": 4,
+ "figures": 4,
+ "footnotes": 24,
+ "bookmarks": 41,
+ "warnings": [],
+ "figure_pages": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,
+  "8dcea8dbe6e29ef3bdcab42b728dbdd60fc2346f53ababc27f9895db00deac03.png": 68,
+  "123af16c744afcc30e9ea18c39bc74bac78295d46e709bb1df14cd6f37738526.png": 73,
+  "e51af89f50c84facb08315eb18716d91e841945b6bf05ded0905f8fa9e9ae40b.png": 112
+ },
+ "figure_sizes": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": [
+   246,
+   168
+  ],
+  "8dcea8dbe6e29ef3bdcab42b728dbdd60fc2346f53ababc27f9895db00deac03.png": [
+   144,
+   119
+  ],
+  "123af16c744afcc30e9ea18c39bc74bac78295d46e709bb1df14cd6f37738526.png": [
+   146,
+   120
+  ],
+  "e51af89f50c84facb08315eb18716d91e841945b6bf05ded0905f8fa9e9ae40b.png": [
+   1024,
+   288
+  ]
+ },
+ "figure_text": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 0,
+  "8dcea8dbe6e29ef3bdcab42b728dbdd60fc2346f53ababc27f9895db00deac03.png": 0,
+  "123af16c744afcc30e9ea18c39bc74bac78295d46e709bb1df14cd6f37738526.png": 0,
+  "e51af89f50c84facb08315eb18716d91e841945b6bf05ded0905f8fa9e9ae40b.png": 223
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Report of a fact-finding mission Albania: Human trafficking",
+ "cover_version": null,
+ "cover_date": "12 October 2022",
+ "pdf_sha256": "e1a635f18224257069d9029e0b741bf2ae957fbe25f0d9e58682df3bc6eb75c5",
+ "images": [
+  "123af16c744afcc30e9ea18c39bc74bac78295d46e709bb1df14cd6f37738526.png",
+  "8dcea8dbe6e29ef3bdcab42b728dbdd60fc2346f53ababc27f9895db00deac03.png",
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png",
+  "e51af89f50c84facb08315eb18716d91e841945b6bf05ded0905f8fa9e9ae40b.png"
+ ]
+}

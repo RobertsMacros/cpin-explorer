@@ -1,0 +1,1942 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iraq/country-policy-and-information-note-iraq-blood-feuds-honour-crimes-and-tribal-violence-iraq-july-2024-accessible",
+ "pdf_sha256": "a5b474a995fb09e6dd06af9695e32cb6937a1641773badfe04e04660180276f2",
+ "body_sha256": "331f1d5cec9f43a5a200537bc91278f5411ebec1dbe6c863c5b7689670d9f408",
+ "words": {
+  "web": 27678,
+  "pdf": 27935
+ },
+ "summary": {
+  "wording": {
+   "differences": 9,
+   "web_words": 20,
+   "pdf_words": 263,
+   "share": 0.005089,
+   "passages": 5,
+   "sizes": {
+    "passage": 5,
+    "number": 2,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 1,
+   "words": 249
+  },
+  "groups": {
+   "wording": {
+    "differences": 9,
+    "web_words": 20,
+    "pdf_words": 263
+   },
+   "numbering": {
+    "differences": 178,
+    "web_words": 187,
+    "pdf_words": 193
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 17,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 178,
+    "web_words": 187,
+    "pdf_words": 193
+   },
+   "section updated": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 15
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 245
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 11,
+   "web_words": 9,
+   "pdf_words": 9
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "1.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "24 June 2024",
+    "6 June 2024",
+    "6 June 2024"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 205,
+   "pdf": 205,
+   "pdf_raw": 205,
+   "differ": false
+  },
+  "pictures": {
+   "web": 9,
+   "pdf": 9
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 86,
+   "pdf": 64
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 5,
+   "cannot_tell": 4,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.3.4 Sources suggest that the rise of honour crimes in the KRI is attributable to the failure of the authorities to fully enforce the law, particularly if the culprit is affiliated with powerful political parties or tribes.\n4.3.5 Within the KRI there are constitutional and legal protections against ‘honour’ offences, with the passing of a law in 2004 prohibiting mitigating sentences for perpetrators of honour crimes and the enacting of the Law for Combatting Domestic Violence in 2011. However, sources indicate that this has not yet been effectively implemented (see Kurdistan Region of Iraq (KRI)).\n4.3.6 After the passing of the Domestic Violence law in 2011, the KRI set up women’s centres for combating domestic violence, but sources suggest there is limited space and poor psychological provision.\n4.3.7 Although there are some government-run women’s shelters, sources have described them as “like prisons”. These shelters favour mediation with the women’s family over legal remedies and other than marrying or returning to their families, there were few options for women accommodated at shelters.\n4.3.8 Sources indicate NGO-run women’s shelters are stigmatised and targeted by various ac …",
+   "web_words": 0,
+   "pdf_words": 244,
+   "before": "by escaping punishment through bribery (see Protection).\n4.",
+   "after": "4. Non-state protection from honour crimes\n4.",
+   "before_pdf": "unpunished by escaping punishment through bribery (see Protection).",
+   "where": {
+    "heading": "non-state-protection-from-honour-crimes",
+    "paragraph": "4.3.4",
+    "section": "Assessment",
+    "page": 11
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024BasNews, ‘Three People Killed, Injured in Tribal Fight in Iraq’, 19 September 2021. Last accessed: 14 May",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "immolate”’, 28 May 2013. Last accessed: 14 May",
+   "after": "2024\nBerghof Foundation and Peace Paradigms Organisation (PPO), ‘",
+   "where": {
+    "heading": "bbc",
+    "paragraph": "11.1.10",
+    "section": "Bibliography",
+    "page": 67
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 24 June 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "unlikely to be reasonable without family support.\nAssessment",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 6 June 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "About the country information\nThis section contains publicly",
+   "where": {
+    "heading": "about-the-country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 14
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 6 June 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "to creating secure spaces for survivors of violence.’",
+   "after": "Annex A: Glossary of terms\nThe following table",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 57
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "25\n9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "using the information taken from the TCF paper:",
+   "after": "1.3 The same source additionally stated ‘Traditional",
+   "where": {
+    "heading": "tribal-structure",
+    "paragraph": "8.1.3",
+    "section": "Country information",
+    "page": 19
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "42\n9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "entitled ‘Society of Iraq’ from 2 February 2021:",
+   "after": "4. Tribes in urban areas\n8.4.1",
+   "where": {
+    "heading": "tribes-in-urban-areas",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and feedback",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "1992. Last accessed: 14 May 2024\nVersion control",
+   "after": "Clearance\nBelow is information on when this note",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "11.1.10",
+    "section": "Version control",
+    "page": 74
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "the",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Not for disclosure – End of section\nChanges from",
+   "after": "last version of this note\nFirst version of",
+   "where": {
+    "heading": "changes-from-the-last-version-of-this-note",
+    "paragraph": "11.1.10",
+    "section": "Version control",
+    "page": 74
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 1.0, July 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nWomen fearing ‘honour’ crimes, and victims",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2",
+   "pdf": "8.1",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "more information see Notions of Honour].’\nLegal context",
+   "after": "Constitution\n7.2.1 Article 45(2) of",
+   "before_pdf": "information see Notions of Honour].’\n8. Legal context",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "7.1.7",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2.",
+   "pdf": "8.1.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "Notions of Honour].’\nLegal context\n7.2 Constitution",
+   "after": "1 Article 45(2) of the 2005 Iraqi",
+   "before_pdf": "of Honour].’\n8. Legal context\n8.1 Constitution",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "7.2.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2.",
+   "pdf": "8.1.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "traditions that are in contradiction with human rights.’",
+   "after": "2 Article 14 of the 2005 Iraqi constitution",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "7.2.2",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2.",
+   "pdf": "8.1.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "belief or opinion, or economic or social status.’",
+   "after": "3 The Iraqi Constitution also covers the Kurdistan",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3",
+   "pdf": "8.2",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "also covers the Kurdistan Region of Iraq (KRI).",
+   "after": "Penal Code\n7.3.1 The following table",
+   "before_pdf": "also covers the Kurdistan Region of Iraq (KRI) .",
+   "where": {
+    "heading": "penal-code",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.",
+   "pdf": "8.2.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "Region of Iraq (KRI).\n7.3 Penal Code",
+   "after": "1 The following table shows relevant Articles from",
+   "before_pdf": "Region of Iraq (KRI) .\n8.2 Penal Code",
+   "where": {
+    "heading": "penal-code",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4",
+   "pdf": "8.3",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "the rules of aggravating circumstance apply against him.",
+   "after": "Tribal law\n7.4.1 The Project on",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.",
+   "pdf": "8.3.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "circumstance apply against him.\n7.4 Tribal law",
+   "after": "1 The Project on Middle East Political Science (",
+   "before_pdf": "circumstance apply against him.\n8.3 Tribal Law",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.4.1",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.",
+   "pdf": "8.3.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "settlement (sahl) and payment of a tribute (fasel).’",
+   "after": "2 In November 2019, The Century Foundation (TCF),",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.4.2",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.",
+   "pdf": "8.3.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "ranking sheikhs at the level of the tribe.’",
+   "after": "3 The EUAA report ‘Targeting of Individuals’ from",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.4.3",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.",
+   "pdf": "8.3.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "to fill gaps not addressed by the state.’",
+   "after": "4 The April 2023 EUAA report noted:\nTribal",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.4.4",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.",
+   "pdf": "8.3.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "it, but rather to prevent it from escalating.’",
+   "after": "5 For explanations of the different terminologies involved",
+   "where": {
+    "heading": "Tribal-law",
+    "paragraph": "7.4.5",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.8.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "encounter harsh treatment for transgression of tribal customs.’",
+   "after": "The April 2023 EUAA report noted: ‘Hamoudi et",
+   "where": {
+    "heading": "tribal-dispute-mechanisms",
+    "paragraph": "10.8.3",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.10.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the family home, tribes will pursue the woman.’",
+   "after": "For information on internal relocation see the CPIN",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "10.10.2",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "4.3.2",
+   "pdf": "4.3.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to persons at real risk of honour crimes.",
+   "after": "There is no available evidence on the state",
+   "where": {
+    "heading": "state-protection-from-honour-crimes",
+    "paragraph": "4.3.2",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "4.3.3",
+   "pdf": "4.3.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "how these cases are treated by the authorities.",
+   "after": "Article 409 of the Iraqi Penal Code permits ‘",
+   "where": {
+    "heading": "state-protection-from-honour-crimes",
+    "paragraph": "4.3.3",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "4.3.4",
+   "pdf": "4.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "scope for wide interpretation (see Domestic violence laws).",
+   "after": "Available evidence suggests that ‘honour’ crimes often go",
+   "where": {
+    "heading": "state-protection-from-honour-crimes",
+    "paragraph": "4.3.4",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "system see the CPIN Iraq: Actors of Protection.",
+   "after": "Structure, prominence and locations of Tribes in Iraq",
+   "where": {
+    "heading": "structure-prominence-and-locations-of-tribes-in-iraq",
+    "paragraph": "7.4.5",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Structure, prominence and locations of Tribes in Iraq",
+   "after": "1. Tribal structure\n8.1.1 The TCF",
+   "where": {
+    "heading": "tribal-structure",
+    "paragraph": "7.4.5",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of Tribes in Iraq\n8.1. Tribal structure",
+   "after": "1.1 The TCF paper stated:\nThe largest",
+   "before_pdf": "of Tribes in Iraq\n9.1 Tribal structure",
+   "where": {
+    "heading": "tribal-structure",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "finally include a number of “awa’il” (families).’",
+   "after": "1.2 The below diagram of Arab tribal",
+   "where": {
+    "heading": "tribal-structure",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "leaders perceived to be implicated in corrupt dealings.’",
+   "after": "1.4 The April 2023 EUAA report noted: ‘",
+   "where": {
+    "heading": "tribal-structure",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "through the paternal line to the fifth generation.”’",
+   "after": "2. Prominent and minority tribes\n8.2.1",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "fifth generation.”’\n8.2. Prominent and minority tribes",
+   "after": "2.1 The Washington Institute for Near East",
+   "before_pdf": "fifth generation.”’\n9.2 Prominent and minority tribes",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Shia members holding a diverse array of loyalties.’",
+   "after": "2.2 The EUAA report ‘Targeting of Individuals’",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.2",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of Basrah, as well as in the KRI.’",
+   "after": "2.3 The April 2023 EUAA report noted (",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "genealogy, while Kurdish tribes are defined by territory.’",
+   "after": "2.4 The same EUAA report additionally stated,",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.4",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "migrated from Yemen, and “have a wide kinship”.’",
+   "after": "2.5 The same source additionally listed the",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.5",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Umtayr, Zoba, Midan, Al-Duriyeen, and Al-Suwarma.’",
+   "after": "2.6 The above country of origin information",
+   "where": {
+    "heading": "prominent-and-minority-tribes",
+    "paragraph": "8.2.6",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "across Iraq and should not be considered exhaustive.",
+   "after": "3. Locations\n8.3.1 On 7 April",
+   "where": {
+    "heading": "locations",
+    "paragraph": "8.2.6",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "should not be considered exhaustive.\n8.3. Locations",
+   "after": "3.1 On 7 April 2008, the Congressional",
+   "before_pdf": "should not be considered exhaustive.\n9.3 Locations",
+   "where": {
+    "heading": "locations",
+    "paragraph": "8.3.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the map in the sources consulted (see Bibliography).",
+   "after": "3.2 Fanack published the following map in",
+   "where": {
+    "heading": "locations",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "February 2021:\n8.4. Tribes in urban areas",
+   "after": "4.1 Fanack said in their article ‘Society",
+   "before_pdf": "2021:\n42\n9.4 Tribes in urban areas",
+   "where": {
+    "heading": "tribes-in-urban-areas",
+    "paragraph": "8.4.1",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "where others from the same tribe or area.’",
+   "after": "4.2 Alison Pargeter, a senior Research Fellow",
+   "where": {
+    "heading": "tribes-in-urban-areas",
+    "paragraph": "8.4.2",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of the urban elites of their own societies.’",
+   "after": "5. Politics\n8.5.1 The CSS paper ‘",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.4.2",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "elites of their own societies.’\n8.5. Politics",
+   "after": "5.1 The CSS paper ‘The Persisting Past",
+   "before_pdf": "elites of their own societies.’\n9.5 Politics",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.1",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and have shifted alliances depending on personal interests.’",
+   "after": "5.2 In September 2021, Rudaw media network,",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.2",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "influential figures within the Hardki and Bradosti tribes.’",
+   "after": "5.3 For more information on the KDP",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.3",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "PUK, see the CPIN Iraq: Actors of Protection.",
+   "after": "5.4 Alison Pargeter stated in her book",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.4",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "expansive role in the political and security arenas.’",
+   "after": "5.5 The April 2023 EUAA report noted,",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "strength over the state socially, politically, and legally.’",
+   "after": "5.6 Fanack stated in the article ‘Tribalism",
+   "where": {
+    "heading": "politics",
+    "paragraph": "8.5.6",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Mashahda tribes. Both usually secure two parliamentary seats.’",
+   "after": "6. Women in tribal society\n8.6.1",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.5.6",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "parliamentary seats.’\n8.6. Women in tribal society",
+   "after": "6.1 The United Nations University Centre for",
+   "before_pdf": "parliamentary seats.’\n9.6 Women in tribal society",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.6.1",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "by a husband, brother, or other male guardian.”’",
+   "after": "6.2 The EUAA report ‘Targeting of Individuals’",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.6.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "W]idows and divorced women face particular challenges.’",
+   "after": "6.3 Fanack, in their article ‘Women in",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.6.3",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Bedouin western desert region patriarchal customs rule supreme.’",
+   "after": "6.4 The April 2023 EUAA report noted,",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.6.4",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.",
+   "pdf": "9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "her own, without her parents’ consent or hers.”’",
+   "after": "6.5 The UK Foreign, Commonwealth and Development",
+   "where": {
+    "heading": "women-in-tribal-society",
+    "paragraph": "8.6.5",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "rates of gender-based violence, including honour killings.’",
+   "after": "Blood feuds and tribal disputes/violence\n9.1.",
+   "before_pdf": "rates of gender-based violence, including honour killings.'",
+   "where": {
+    "heading": "blood-feuds-and-tribal-disputes-violence",
+    "paragraph": "8.6.5",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "killings.’\n9. Blood feuds and tribal disputes/violence",
+   "after": "1. Definitions of blood feuds and tribal disputes/",
+   "before_pdf": "killings.'\n10. Blood feuds and tribal disputes/violence",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "8.6.5",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Definitions of blood feuds and tribal disputes/violence",
+   "after": "1.1 In November 2018, the Danish Immigration",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "not only the perpetrator, but his tribe too.’",
+   "after": "1.2 In January 2019, the Enabling Peace",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "tribes responsible illustrates the power these groups wield.’",
+   "after": "1.3 The TCF paper stated, citing other",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "dam butlob dam”), or through a negotiated solution.’",
+   "after": "1.4 Mohammed Mojtahedi, a PhD candidate in",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.4",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "simply forgiving the offender, or so-called ‘Afw’.’",
+   "after": "1.5 The EUAA report ‘Targeting of Individuals’",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "take land (or take back land) by force.’",
+   "after": "1.6 The April 2023 EUAA report noted (",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "political influence, as well as “potential marriage partners.”’",
+   "after": "1.7 A United Nations High Commissioner for",
+   "where": {
+    "heading": "definitions-of-blood-feuds",
+    "paragraph": "9.1.7",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to an ancient code of honour and behaviour.’",
+   "after": "2. Motives for blood feuds and tribal disputes/",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.1.7",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Motives for blood feuds and tribal disputes/violence",
+   "after": "2.1 Fanack, in their article ‘Society of",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "only the perpetrator, is responsible for his act.’",
+   "after": "2.2 In June 2021, France24 published an",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.2",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the Al-Zubeid, fired live rounds and grenades”.’",
+   "after": "2.3 In January 2022, the EUAA published",
+   "before_pdf": "the Al-Zubeid, fired live rounds and grenades\".’",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "future due to more intense periods of drought.’",
+   "after": "2.4 The Carnegie Endowment for International Peace,",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "tribal networks or are co-opted by them.’",
+   "after": "2.5 The April 2023 EUAA report noted (",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of daily issues can escalate into tribal issues.’",
+   "after": "2.6 The EUAA also noted ‘Thar [blood",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.6",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to others to refrain from trespassing against them.’",
+   "after": "2.7 The January 2024 UNHCR report stated,",
+   "where": {
+    "heading": "motives-for-blood-feuds",
+    "paragraph": "9.2.7",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "sometimes flare up after being dormant for years.’",
+   "after": "3. Prevalence of blood feuds and tribal disputes/",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.2.7",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Prevalence of blood feuds and tribal disputes/violence",
+   "after": "3.1 The UNHCR report published in January",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.3.1",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "migration and urbanization, also prevalent in urban areas.’",
+   "after": "3.2 The New Arab in their article ‘",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "tribal violence please see Annex B and C.",
+   "after": "3.3 The April 2023 EUAA report noted (",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "forces as well as with different tribal militias.’",
+   "after": "3.4 The EUAA further noted, quoting from",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.3.4",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "tribal system that can go on for years.",
+   "after": "3.5 The same report noted, citing sources",
+   "where": {
+    "heading": "prevalence-of-blood-feuds",
+    "paragraph": "9.3.5",
+    "section": "Country information",
+    "page": 32
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "asha’iriyah/ degge",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "obligation among a male’s khamsah group.\nDegge",
+   "after": "A tribal practice whereby the injured tribe sends",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "asha’iriyah/",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "practice whereby the injured tribe sends armed men",
+   "after": "to the home of the perpetrator and sprays",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "degge",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of the perpetrator and sprays it with some",
+   "after": "number of bullets as a warning.\nDira\nA",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 57
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Khamsa",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "in exile, the mediation process can start.\nKhamsah/",
+   "after": "A man’s khamsah group consists of all",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 58
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Khamsa",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "khamsah group consists of all male-born children",
+   "after": "who share the same great-great grandfather. The",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 58
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Khoulasiya",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "and thus are legitimate targets for reprisal.\nKhulasiyyah/",
+   "after": "A signed agreement that states that the conflict",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 59
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Khoulasiya",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "agreement that states that the conflict over a",
+   "after": "particular crime is settled.\nAl Mithaq\nA signed",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "11.1.10",
+    "section": "Annex A: Glossary of terms",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "system see the CPIN Iraq: Actors of Protection.",
+   "after": "5. Protection\n9.5.1 Citing another source",
+   "where": {
+    "heading": "protection-1",
+    "paragraph": "9.4.10",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "9.",
+   "pdf": "10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the tribal disputes, nor how they were resolved.",
+   "after": "5.5 The April 2023 EUAA report noted (",
+   "where": {
+    "heading": "protection-1",
+    "paragraph": "9.5.5",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "10.",
+   "pdf": "11.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "information see the CPIN Iraq: Actors of protection.",
+   "after": "10 Internal relocation\n10.10.1 The DFAT",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "10.9.12",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "11.",
+   "pdf": "12.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "CPIN Iraq: Internal relocation, civil documentation and returns.",
+   "after": "NGOs and shelters\n11.1.1. A press",
+   "where": {
+    "heading": "NGOs",
+    "paragraph": "10.10.2",
+    "section": "Country information",
+    "page": 53
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 108,
+ "paragraphs": {
+  "same": 79,
+  "different": {
+   "4.3.2": "4.3.1",
+   "4.3.3": "4.3.2",
+   "4.3.4": "4.3.3",
+   "7.2": "8.1",
+   "7.2.1": "8.1.1",
+   "7.2.2": "8.1.2",
+   "7.2.3": "8.1.3",
+   "7.3": "8.2",
+   "7.3.1": "8.2.1",
+   "7.4": "8.3",
+   "7.4.1": "8.3.1",
+   "7.4.2": "8.3.2",
+   "7.4.3": "8.3.3",
+   "7.4.4": "8.3.4",
+   "7.4.5": "8.3.5",
+   "8.1": "9.1",
+   "8.1.1": "9.1.1",
+   "8.1.2": "9.1.2",
+   "8.1.3": "9.1.3",
+   "8.1.4": "9.1.4",
+   "8.2": "9.2",
+   "8.2.1": "9.2.1",
+   "8.2.2": "9.2.2",
+   "8.2.3": "9.2.3",
+   "8.2.4": "9.2.4",
+   "8.2.6": "9.2.6",
+   "8.3": "9.3",
+   "8.3.1": "9.3.1",
+   "8.3.2": "9.3.2",
+   "8.4": "9.4",
+   "8.4.1": "9.4.1",
+   "8.4.2": "9.4.2",
+   "8.5": "9.5",
+   "8.5.1": "9.5.1",
+   "8.5.2": "9.5.2",
+   "8.5.3": "9.5.3",
+   "8.5.4": "9.5.4",
+   "8.5.5": "9.5.5",
+   "8.5.6": "9.5.6",
+   "8.6": "9.6",
+   "8.6.1": "9.6.1",
+   "8.6.2": "9.6.2",
+   "8.6.3": "9.6.3",
+   "8.6.4": "9.6.4",
+   "8.6.5": "9.6.5",
+   "9.1": "10.1",
+   "9.1.1": "10.1.1",
+   "9.1.2": "10.1.2",
+   "9.1.3": "10.1.3",
+   "9.1.4": "10.1.4",
+   "9.1.5": "10.1.5",
+   "9.1.6": "10.1.6",
+   "9.1.7": "10.1.7",
+   "9.2": "10.2",
+   "9.2.1": "10.2.1",
+   "9.2.2": "10.2.2",
+   "9.2.3": "10.2.3",
+   "9.2.4": "10.2.4",
+   "9.2.5": "10.2.5",
+   "9.2.6": "10.2.6",
+   "9.2.7": "10.2.7",
+   "9.3": "10.3",
+   "9.3.1": "10.3.1",
+   "9.3.2": "10.3.2",
+   "9.3.3": "10.3.3",
+   "9.3.4": "10.3.4",
+   "9.3.5": "10.3.5",
+   "9.3.6": "10.3.6",
+   "9.3.7": "10.3.7",
+   "9.3.8": "10.3.8",
+   "9.3.9": "10.3.9",
+   "9.3.10": "10.3.10",
+   "9.4": "10.4",
+   "9.4.1": "10.4.1",
+   "9.4.2": "10.4.2",
+   "9.4.3": "10.4.3",
+   "9.4.4": "10.4.4",
+   "9.4.5": "10.4.5",
+   "9.4.6": "10.4.6",
+   "9.4.7": "10.4.7",
+   "9.4.8": "10.4.8",
+   "9.4.9": "10.4.9",
+   "9.4.10": "10.4.10",
+   "9.5": "10.5",
+   "9.5.1": "10.5.1",
+   "9.5.2": "10.5.2",
+   "9.5.3": "10.5.3",
+   "9.5.4": "10.5.4",
+   "9.5.5": "10.5.5",
+   "9.5.6": "10.5.6",
+   "9.5.7": "10.5.7",
+   "9.6": "10.6",
+   "9.6.1": "10.6.1",
+   "9.6.2": "10.6.2",
+   "10.1": "11.1",
+   "10.1.1": "11.1.1",
+   "10.1.2": "11.1.2",
+   "10.1.3": "11.1.3",
+   "10.2": "11.2",
+   "10.2.1": "11.2.1",
+   "10.2.2": "11.2.2",
+   "10.2.3": "11.2.3",
+   "10.2.4": "11.2.4",
+   "10.2.5": "11.2.5",
+   "10.2.6": "11.2.6",
+   "10.3": "11.3",
+   "10.3.1": "11.3.1",
+   "10.3.2": "11.3.2",
+   "10.3.3": "11.3.3",
+   "10.4": "11.4",
+   "10.4.1": "11.4.1",
+   "10.5": "11.5",
+   "10.5.1": "11.5.1",
+   "10.5.2": "11.5.2",
+   "10.5.3": "11.5.3",
+   "10.6": "11.6",
+   "10.6.1": "11.6.1",
+   "10.6.2": "11.6.2",
+   "10.6.3": "11.6.3",
+   "10.6.4": "11.6.4",
+   "10.6.5": "11.6.5",
+   "10.6.6": "11.6.6",
+   "10.6.7": "11.6.7",
+   "10.6.8": "11.6.8",
+   "10.6.9": "11.6.9",
+   "16.6.11": "11.6.11",
+   "10.6.13": "11.6.13",
+   "10.6.14": "11.6.14",
+   "10.6.15": "11.6.15",
+   "10.6.16": "11.6.16",
+   "10.6.17": "11.6.17",
+   "10.7": "11.7",
+   "10.7.1": "11.7.1",
+   "10.7.2": "11.7.2",
+   "10.7.3": "11.7.3",
+   "10.7.4": "11.7.4",
+   "10.7.5": "11.7.5",
+   "10.7.6": "11.7.6",
+   "10.7.7": "11.7.7",
+   "10.8": "11.8",
+   "10.8.1": "11.8.1",
+   "10.8.2": "11.8.2",
+   "10.8.3": "11.8.3",
+   "10.8.4": "11.8.5",
+   "10.8.5": "11.8.6",
+   "10.9": "11.9",
+   "10.9.1": "11.9.1",
+   "10.9.2": "11.9.2",
+   "10.9.3": "11.9.3",
+   "10.9.4": "11.9.4",
+   "10.9.5": "11.9.5",
+   "10.9.6": "11.9.6",
+   "10.9.7": "11.9.7",
+   "10.9.8": "11.9.8",
+   "10.9.9": "11.9.9",
+   "10.9.10": "11.9.10",
+   "10.9.11": "11.9.11",
+   "10.9.12": "11.9.12",
+   "10.10": "11.10",
+   "10.10.1": "11.10.1",
+   "10.10.2": "11.10.2",
+   "11.1.1": "12.1.1",
+   "11.1.2": "12.1.2",
+   "11.1.3": "12.1.3",
+   "11.1.4": "12.1.4",
+   "11.1.5": "12.1.5",
+   "11.1.6": "12.1.6",
+   "11.1.7": "12.1.7",
+   "11.1.8": "12.1.8",
+   "11.1.9": "12.1.9",
+   "11.1.10": "12.1.10"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "10.6.10"
+  ],
+  "unconfirmed": [
+   "8.2.5"
+  ]
+ }
+}

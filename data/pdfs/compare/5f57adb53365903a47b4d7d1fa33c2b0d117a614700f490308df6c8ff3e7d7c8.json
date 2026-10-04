@@ -1,0 +1,1635 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iraq/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+ "pdf_sha256": "5f57adb53365903a47b4d7d1fa33c2b0d117a614700f490308df6c8ff3e7d7c8",
+ "body_sha256": "760227c18ba875e35dffa20225c387b85ee92df55911a5220ff10b1df27fe70a",
+ "words": {
+  "web": 28309,
+  "pdf": 27850
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 8,
+    "web_words": 478,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 68
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 65,
+    "web_words": 74,
+    "pdf_words": 73
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "arabic letters": {
+    "differences": 65,
+    "web_words": 74,
+    "pdf_words": 73
+   },
+   "picture in words": {
+    "differences": 5,
+    "web_words": 181,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 3,
+    "web_words": 297,
+    "pdf_words": 0
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 68
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 6,
+   "pdf_words": 8
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 5,
+   "web_words": 26,
+   "pdf_words": 19
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "July 2023",
+   "pdf": "3.0",
+   "pdf_date": "July 2023"
+  },
+  "section_updated": {
+   "web": [
+    "29 June 2023",
+    "29 June 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "26 April 2023",
+    "29 June 2023",
+    "29 June 2023",
+    "26 April 2023"
+   ],
+   "pdf": [
+    "29 June 2023",
+    "29 June 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "24 March 2023",
+    "26 April 2023",
+    "29 June 2023",
+    "29 June 2023",
+    "26 April 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 8
+  },
+  "footnotes": {
+   "web": 117,
+   "pdf": 117,
+   "pdf_raw": 117,
+   "differ": false
+  },
+  "pictures": {
+   "web": 6,
+   "pdf": 11
+  },
+  "tables": {
+   "web": 6,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 91,
+   "pdf": 54
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Month\nProtests in Erbil\nRiots in Erbil\nDec-15\n10\n1\nJan-16\n10\n0\nFeb-16\n2\n0\nMar-16\n4\n0\nApr-16\n2\n0\nMay-16\n3\n0\nJun-16\n2\n0\nJul-16\n6\n0\nAug-16\n1\n0\nSep-16\n1\n0\nOct-16\n1\n0\nNov-16\n0\n0\nDec-16\n1\n0\nJan-17\n3\n0\nFeb-17\n3\n1\nMonth\nProtests in Sulaymaniyah\nRiots in Sulaymaniyah\nDec-15\n4\n1\nJan-16\n9\n0\nFeb-16\n1\n0\nMar-16\n12\n0\nApr-16\n16\n0\nMay-16\n17\n2\nJun-16\n5\n3\nJul-16\n10\n3\nAug-16\n10\n0\nSep-16\n0\n0\nOct-16\n5\n0\nNov-16\n13\n24\nDec-16\n4\n0\nJan-17\n10\n0\nFeb-17\n9\n2\nMonth\nProtests in Dohuk\nRiots in Dohuk\nDec-15\n1\n0\nJan-16\n0\n0\nFeb-16\n0\n0\nMar-16\n1\n0\nApr-16\n2\n1\nMay-16\n1\n1\nJun-16\n1\n0\nJul-16\n2\n1\nAug-16\n0\n0\nSep-16\n0\n0\nOct-16\n2\n0\nNov-16\n1\n0\nDec-16\n0\n0\nJan-17\n0\n0\nFeb-17\n0\n0\nMonth\nProtests in Kirkuk\nRiots in Kirkuk\nDec-15\n3\n0\nJan-16\n4\n1\nFeb-16\n0\n0\nMar-16\n1\n0\nApr-16\n2\n0\nMay-16\n1\n0\nJun-16\n3\n0\nJul-16\n7\n1\nAug-16\n4\n0\nSep-16\n3\n0\nOct-16\n2\n0\nNov-16\n2\n0\nDec-16\n1\n0\nJan-17\n4\n0\nFeb-17\n3\n0",
+   "pdf": "",
+   "web_words": 227,
+   "pdf_words": 0,
+   "before": "minimal. For more information see the ACLED website.",
+   "after": "Section 10 updated: 26 April 2023\nAnnex A:",
+   "where": {
+    "heading": "protests",
+    "paragraph": "15.1.9",
+    "section": "15. 2020 protests",
+    "page": 62
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Kurdish referendum in Iraq\nThe semi-autonomous Kurdish region of northern Iraq plans to hold a nonbinding independence referendum on Sept 25.\nPopulation\n5.2 million\nCapital\nErbil\nGoverned by\nKurdistan Regional Government. Established in 1992, comprises the governorates of Duhok, Erbil, Sulaimaniya and Halabja.\nType of government\nParliamentary democracy\nArmed forces (Peshmerga)\nMore than 200,000\nAreas\nFrom north-east going south-westwards:\nOfficially under Kurdistan Regional Government (40,000 square kilometres)\nUnder Peshmerga control (disputed)\nClaimed by KRG (disputed)",
+   "pdf": "27",
+   "web_words": 81,
+   "pdf_words": 0,
+   "before": "the areas which are claimed by the KRG:",
+   "after": "10.2.4 On 27 September 2017 the",
+   "where": {
+    "heading": "kurdish-referendum-in-iraq",
+    "paragraph": "10.2.3",
+    "section": "10. Kurdistan Region of Iraq",
+    "page": 19
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 68,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "Kurdish_parties",
+    "paragraph": "11.6.2",
+    "section": "12. Kurdish parties",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Province\nISO 3166-2\nCapital\nArea (km2)\nPopulation\nDensity (pers/km2)\nDuhok\nIQ-DA\nDuhok\n10,956\n1,292,535\n118,0\nErbil\nIQ-AR\nErbil\n14,872\n1,854,778\n124,7\nSulaymaniya\nIQ-SU\nSulaymaniya\n20,144\n2,053,000\n101,9\nHalabja\nIQ-HL\nHalabja\n889\n109,000\n122,6\nTotal\n46,861\n5,309,313\n113,3",
+   "pdf": "16",
+   "web_words": 61,
+   "pdf_words": 0,
+   "before": "density of the KRI using data from 2018:",
+   "after": "9.2 Religion\n9.2.1 In an",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.4",
+    "section": "9. Kurds in Iraq",
+    "page": 14
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map shows disputed area controlled by Iraqi Kurds in north east. There are 4 areas retaken by Iraqi forces since 16 Oct along the border with the area under control of the Iraqi government]",
+   "pdf": "",
+   "web_words": 34,
+   "pdf_words": 0,
+   "before": "Iraqi military’s operations to retake disputed areas:",
+   "after": "Section 7 updated: 24 March 2023\n11. Kurdistan",
+   "where": {
+    "heading": "areas",
+    "paragraph": "10.2.6",
+    "section": "10. Kurdistan Region of Iraq",
+    "page": 20
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The map shows the four areas listed above, they cover the area from the northernmost part of Iraq to the easternmost part, along the north-eastern border with Turkey and Iran.]",
+   "pdf": "21",
+   "web_words": 31,
+   "pdf_words": 0,
+   "before": "four governorates, Dahuk, Irbil (Erbil), Sulaymaniyah and Halabja:",
+   "after": "10.1.2 The GBTKI stated the following",
+   "where": {
+    "heading": "map-and-background",
+    "paragraph": "10.1.1",
+    "section": "10. Kurdistan Region of Iraq",
+    "page": 17
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Iraqi Arabs are more diverse: 30% Sunni Muslim, 62% Shia Muslim, 8% Other. They make up 78% of Iraq’s population.",
+   "pdf": "18",
+   "web_words": 21,
+   "pdf_words": 0,
+   "before": "were split about evenly between Sunnis and Shias.",
+   "after": "9.3 Language\n9.3.1 Kurdish and",
+   "where": {
+    "heading": "religion",
+    "paragraph": "9.2.2",
+    "section": "9. Kurds in Iraq",
+    "page": 16
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map showing a region straddling the borders of Turkey, Iraq, Syria, Iran and Armenia.]",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "The same source also published the below map:",
+   "after": "8.1.3 The Kurdish Project, ‘a cultural-",
+   "where": {
+    "heading": "who-are-the-kurds",
+    "paragraph": "8.1.2",
+    "section": "8. Kurdish people",
+    "page": 12
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Location\nNumber (millions)\nTurkey\n18\nIran\n8\nIraq\n5\nSyria\n2\nRest of the world\n2",
+   "pdf": "9",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "Iraq, Iran and the rest of the world:",
+   "after": "8.1.4 The same source also produced",
+   "where": {
+    "heading": "who-are-the-kurds",
+    "paragraph": "8.1.3",
+    "section": "8. Kurdish people",
+    "page": 13
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الشباب والأفراد والأطفال وانطلاقاً",
+   "pdf": "ا لشباب واألفراد واألطفال وانطالقاً",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "الوسائل من أمور قد تؤثر سلبا على سلوك",
+   "after": "من نهج حكومة إقليم كوردستان في إقامة مجتمع",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "للأخلاق والآداب",
+   "pdf": "لألخالق واآلداب",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "ثابتة أو متحركة أو الرسائل القصيرة (المسج) المنافية",
+   "after": "العامة أو التقاط صور بلا رخصة أو إذن",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ثلاثة ملايين",
+   "pdf": "ثالثة ماليين",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "عن سبعمائة وخمسون ألف دينار ولا تزيد على",
+   "after": "دينار أو بإحدى هاتين العقوبتين كل من تسبب",
+   "before_pdf": "عن سبعمائة وخمسون ألف دينار وال تزيد على",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لاسلكية أو الانترنيت",
+   "pdf": "السلكية",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "الهاتف الخلوي أو أية أجهزة اتصال سلكية أو",
+   "after": "أو البريد الالكتروني في إزعاج غيره في غير",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات الالكترونية",
+   "pdf": "االتصاالت االلكترونية",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "ما يلي: أولا: تسجيل بطاقة الموبايل الالكترونية وأجهزة",
+   "after": "والهواتف النقالة الأخرى الصادرة منها قبل نفاذ هذا",
+   "before_pdf": "ما يلي\nأوال: تسجيل بطاقة الموبايل االلكترونية وأجهزة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاجتماعية والاقتصادية",
+   "pdf": "االجتماعية واالقتصادية",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "المجلس الوطني لكوردستان / العراق الأسباب الموجبة بالنظر للتطورات",
+   "after": "والسياسية التي طرأت على حياة المواطنين في إقليم",
+   "before_pdf": "المجلس الوطني لكوردستان / العراق\nاألسباب الموجبة\nبالنظر للتطورات",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الفسوق",
+   "pdf": "الفس وق",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "للشرف أو التحريض على ارتكاب الجرائم أو أفعال",
+   "after": "والفجور أو نشر معلومات تتصل بأسرار الحياة الخاصة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "وظيفته",
+   "pdf": "وظيفت ه",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "المطلعين على الأسرار الشخصية أو العائلية للأفراد بحكم",
+   "after": "أو مهنته وكل من استعمل جهاز اتصال غيره",
+   "before_pdf": "المطلعين على األسرار الشخصية أو العائلية لألفراد بحكم",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات",
+   "pdf": "االتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Region - Arabic Copy\nقانون منع إساءة استعمال أجهزة",
+   "after": "في إقليم كوردستان – العراق بسم الله الرحمن الرحيم",
+   "before_pdf": "Arabic Copy\nالعراق قانون منع إساءة استعمال أجهزة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الله",
+   "pdf": "هللا",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "استعمال أجهزة الاتصالات في إقليم كوردستان – العراق بسم",
+   "after": "الرحمن الرحيم باسم الشعب المجلس الوطني لكوردستان / العراق",
+   "before_pdf": "إساءة استعمال أجهزة االتصاالت في إقليم كوردستان–\nبسم",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات",
+   "pdf": "االتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "6) لسنة 2008 قانون منع إساءة استعمال أجهزة",
+   "after": "في إقليم كوردستان - العراق المادة الأولى: المكالمات الهاتفية",
+   "before_pdf": "قانون رقم6\nالعراق قانون منع إساءة استعمال أجهزة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأولى:",
+   "pdf": "األولى",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "استعمال أجهزة الاتصالات في إقليم كوردستان - العراق المادة",
+   "after": "المكالمات الهاتفية والاتصالات البريدية والالكترونية من الأمور الخاصة",
+   "before_pdf": "إساءة استعمال أجهزة االتصاالت في إقليم كوردستان -\nالمادة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "والاتصالات",
+   "pdf": "واالتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "في إقليم كوردستان - العراق المادة الأولى: المكالمات الهاتفية",
+   "after": "البريدية والالكترونية من الأمور الخاصة لا يجوز انتهاك",
+   "before_pdf": "االتصاالت في إقليم كوردستان -\nالمادة األولى\nالمكالمات الهاتفية",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "والالكترونية",
+   "pdf": "وااللكترونية",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "كوردستان - العراق المادة الأولى: المكالمات الهاتفية والاتصالات البريدية",
+   "after": "من الأمور الخاصة لا يجوز انتهاك حرمتها. المادة",
+   "before_pdf": "إقليم كوردستان -\nالمادة األولى\nالمكالمات الهاتفية واالتصاالت البريدية",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأمور",
+   "pdf": "األمور",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المادة الأولى: المكالمات الهاتفية والاتصالات البريدية والالكترونية من",
+   "after": "الخاصة لا يجوز انتهاك حرمتها. المادة الثانية: يعاقب",
+   "before_pdf": "المادة األولى\nالمكالمات الهاتفية واالتصاالت البريدية وااللكترونية من",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المكالمات الهاتفية والاتصالات البريدية والالكترونية من الأمور الخاصة",
+   "after": "يجوز انتهاك حرمتها. المادة الثانية: يعاقب بالحبس مدة",
+   "before_pdf": "المكالمات الهاتفية واالتصاالت البريدية وااللكترونية من األمور الخاصة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "يجوز انتهاك حرمتها. المادة الثانية: يعاقب بالحبس مدة",
+   "after": "تقل عن ستة اشهر ولا تزيد على خمس",
+   "before_pdf": "يجوز انتهاك .حرمتها\nالمادة الثانية\nيعاقب بالحبس مدة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ولا",
+   "pdf": "وال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "يعاقب بالحبس مدة لا تقل عن ستة اشهر",
+   "after": "تزيد على خمس سنوات وبغرامة لا تقل عن",
+   "before_pdf": "يعاقب بالحبس مدة ال تقل عن ستة اشهر",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ستة اشهر ولا تزيد على خمس سنوات وبغرامة",
+   "after": "تقل عن مليون دينار ولا تزيد على خمسة",
+   "before_pdf": "ستة اشهر وال تزيد على خمس سنوات وبغرامة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ولا",
+   "pdf": "وال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "خمس سنوات وبغرامة لا تقل عن مليون دينار",
+   "after": "تزيد على خمسة ملايين دينار أو بإحدى هاتين",
+   "before_pdf": "خمس سنوات وبغرامة ال تقل عن مليون دينار",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ملايين",
+   "pdf": "ماليين",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "تقل عن مليون دينار ولا تزيد على خمسة",
+   "after": "دينار أو بإحدى هاتين العقوبتين كل من أساء",
+   "before_pdf": "تقل عن مليون دينار وال تزيد على خمسة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لاسلكية",
+   "pdf": "السلكية",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "الهاتف الخلوي أو أية أجهزة اتصال سلكية أو",
+   "after": "أو الانترنيت أو البريد الالكتروني وذلك عن طريق",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الانترنيت",
+   "pdf": "االنترنيت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "أو أية أجهزة اتصال سلكية أو لاسلكية أو",
+   "after": "أو البريد الالكتروني وذلك عن طريق التهديد أو",
+   "before_pdf": "أو أية أجهزة اتصال سلكية أو السلكية أو",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الالكتروني",
+   "pdf": "االلكتروني",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "اتصال سلكية أو لاسلكية أو الانترنيت أو البريد",
+   "after": "وذلك عن طريق التهديد أو القذف أو السب",
+   "before_pdf": "اتصال سلكية أو السلكية أو االنترنيت أو البريد",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "بلا",
+   "pdf": "بال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المسج) المنافية للأخلاق والآداب العامة أو التقاط صور",
+   "after": "رخصة أو إذن أو إسناد أمور خادشة للشرف",
+   "before_pdf": "المسج) المنافية لألخالق واآلداب العامة أو التقاط صور",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "للأفراد",
+   "pdf": "لألفراد",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "نشر معلومات تتصل بأسرار الحياة الخاصة أو العائلية",
+   "after": "والتي حصل عليها بأية طريقة كانت ولو كانت",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الإساءة",
+   "pdf": "اإلساءة",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "صحيحة إذا كان من شأن نشرها وتسريبها وتوزيعها",
+   "after": "إليهم أو إلحاق الضرر بهم. المادة الثالثة: يعاقب",
+   "before_pdf": "صحيحة .إذا كان من شأن نشرها وتسريبها وتوزيعها",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "إلحاق الضرر بهم. المادة الثالثة: يعاقب بالحبس مدة",
+   "after": "تقل عن ثلاثة اشهر ولا تزيد على سنة",
+   "before_pdf": "إلحاق الضرر بهم\nالمادة الثالثة يعاقب بالحبس مدة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ثلاثة",
+   "pdf": "ثالثة",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المادة الثالثة: يعاقب بالحبس مدة لا تقل عن",
+   "after": "اشهر ولا تزيد على سنة و بغرامة لا",
+   "before_pdf": "المادة الثالثة يعاقب بالحبس مدة ال تقل عن",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ولا",
+   "pdf": "وال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "يعاقب بالحبس مدة لا تقل عن ثلاثة اشهر",
+   "after": "تزيد على سنة و بغرامة لا تقل عن",
+   "before_pdf": "يعاقب بالحبس مدة ال تقل عن ثالثة اشهر",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ثلاثة اشهر ولا تزيد على سنة و بغرامة",
+   "after": "تقل عن سبعمائة وخمسون ألف دينار ولا تزيد",
+   "before_pdf": "ثالثة اشهر وال تزيد على سنة و بغرامة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ولا",
+   "pdf": "وال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "بغرامة لا تقل عن سبعمائة وخمسون ألف دينار",
+   "after": "تزيد على ثلاثة ملايين دينار أو بإحدى هاتين",
+   "before_pdf": "بغرامة ال تقل عن سبعمائة وخمسون ألف دينار",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "واستغلال",
+   "pdf": "واستغالل",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "بإحدى هاتين العقوبتين كل من تسبب عمداً باستخدام",
+   "after": "الهاتف الخلوي أو أية أجهزة اتصال سلكية أو",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الالكتروني",
+   "pdf": "االلكتروني",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "اتصال سلكية أو لاسلكية أو الانترنيت أو البريد",
+   "after": "في إزعاج غيره في غير الحالات الواردة في",
+   "before_pdf": "أية أجهزة اتصال سلكية أو السلكية أو البريد",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الحالات",
+   "pdf": "الحاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "أو البريد الالكتروني في إزعاج غيره في غير",
+   "after": "الواردة في المادة الثانية من هذا القانون. المادة",
+   "before_pdf": "أو البريد االلكتروني في إزعاج غيره في غير",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لإغراض",
+   "pdf": "إلغراض",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المقررة للجريمة المرتكبة. المادة الخامسة: يعد ظرفاً مشدداً",
+   "after": "تطبيق أحكام هذا القانون ارتكاب إحدى الجرائم الواردة",
+   "before_pdf": "المقررة للجريمة المرتكبة\nالمادة الخامسة\nيعد ظرفاً مشدداً",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأمن",
+   "pdf": "األمن",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "كان مرتكبها من أفراد القوات المسلحة أو قوى",
+   "after": "الداخلي أو ممن يستغل صفة رسمية أو من",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأسرار",
+   "pdf": "األسرار",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ممن يستغل صفة رسمية أو من المطلعين على",
+   "after": "الشخصية أو العائلية للأفراد بحكم وظيفته أو مهنته",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "للأفراد",
+   "pdf": "لألفراد",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "أو من المطلعين على الأسرار الشخصية أو العائلية",
+   "after": "بحكم وظيفته أو مهنته وكل من استعمل جهاز",
+   "before_pdf": "أو من المطلعين على األسرار الشخصية أو العائلية",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لارتكاب",
+   "pdf": "الرتكاب",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "أو مهنته وكل من استعمل جهاز اتصال غيره",
+   "after": "احد الأفعال المذكورة. المادة السادسة: على شركات الاتصالات",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأفعال",
+   "pdf": "األفعال .",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "وكل من استعمل جهاز اتصال غيره لارتكاب احد",
+   "after": "المذكورة. المادة السادسة: على شركات الاتصالات العاملة في",
+   "before_pdf": "وكل من استعمل جهاز اتصال غيره الرتكاب احد",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات",
+   "pdf": "االتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "لارتكاب احد الأفعال المذكورة. المادة السادسة: على شركات",
+   "after": "العاملة في الإقليم اتخاذ ما يلي: أولا: تسجيل",
+   "before_pdf": "الرتكاب احد األفعال .المذكورة\nالمادة السادسة\nعلى شركات",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الإقليم",
+   "pdf": "اإلقليم",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المذكورة. المادة السادسة: على شركات الاتصالات العاملة في",
+   "after": "اتخاذ ما يلي: أولا: تسجيل بطاقة الموبايل الالكترونية",
+   "before_pdf": "المذكورة\nالمادة السادسة\nعلى شركات االتصاالت العاملة في",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "أولا:",
+   "pdf": "أوال:",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "شركات الاتصالات العاملة في الإقليم اتخاذ ما يلي:",
+   "after": "تسجيل بطاقة الموبايل الالكترونية وأجهزة الاتصالات الالكترونية والهواتف",
+   "before_pdf": "شركات االتصاالت العاملة في اإلقليم اتخاذ ما يلي",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الالكترونية",
+   "pdf": "االلكترونية",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "الإقليم اتخاذ ما يلي: أولا: تسجيل بطاقة الموبايل",
+   "after": "وأجهزة الاتصالات الالكترونية والهواتف النقالة الأخرى الصادرة منها",
+   "before_pdf": "اإلقليم اتخاذ ما يلي\nأوال: تسجيل بطاقة الموبايل",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأخرى",
+   "pdf": "األخرى",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "بطاقة الموبايل الالكترونية وأجهزة الاتصالات الالكترونية والهواتف النقالة",
+   "after": "الصادرة منها قبل نفاذ هذا القانون باسم الحائز",
+   "before_pdf": "بطاقة الموبايل االلكترونية وأجهزة االتصاالت االلكترونية والهواتف النقالة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "خلال",
+   "pdf": "خالل",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "نفاذ هذا القانون باسم الحائز غير المشترك وذلك",
+   "after": "مدة ستة اشهر من تاريخ نفاذه وإلغاء بطاقة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "خلال",
+   "pdf": "خالل",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "وإلغاء بطاقة الحائز الذي يتخلف عن مراجعة الشركة",
+   "after": "تلك المدة. ثانياً: تقديم أية معلومات متعلقة ببطاقة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاشتراك",
+   "pdf": "االشتراك",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "تلك المدة. ثانياً: تقديم أية معلومات متعلقة ببطاقة",
+   "after": "والمشترك إلى المحكمة المختصة عند الاقتضاء. ثالثاً: تعاقب",
+   "before_pdf": "تلك .المدة\nثانياً: تقديم أية معلومات متعلقة ببطاقة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاقتضاء.",
+   "pdf": "االقتضاء",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "متعلقة ببطاقة الاشتراك والمشترك إلى المحكمة المختصة عند",
+   "after": "ثالثاً: تعاقب الشركة المخالفة للفقرات (أولا وثانياً) من",
+   "before_pdf": "متعلقة ببطاقة االشتراك والمشترك إلى المحكمة المختصة عند .",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "أولا",
+   "pdf": "أوال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المختصة عند الاقتضاء. ثالثاً: تعاقب الشركة المخالفة للفقرات (",
+   "after": "وثانياً) من هذه المادة بغرامة لا تقل عن",
+   "before_pdf": "المختصة عند .االقتضاء\nثالثاً: تعاقب الشركة المخالفة للفقرات (",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "لا",
+   "pdf": "ال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المخالفة للفقرات (أولا وثانياً) من هذه المادة بغرامة",
+   "after": "تقل عن خمسون مليون دينار ولا تزيد على",
+   "before_pdf": "المخالفة للفقرات (أوال وثانياً) من هذه المادة بغرامة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "ولا",
+   "pdf": "وال",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "المادة بغرامة لا تقل عن خمسون مليون دينار",
+   "after": "تزيد على مائة مليون دينار. المادة السابعة: على",
+   "before_pdf": "المادة بغرامة ال تقل عن .خمسون مليون دينار",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "العلاقة",
+   "pdf": "العالقة",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "دينار. المادة السابعة: على مجلس الوزراء والجهات ذات",
+   "after": "تنفيذ أحكام هذا القانون. المادة الثامنة: ينفذ هذا",
+   "before_pdf": "دينار\nالمادة السابعة\nعلى مجلس الوزراء والجهات ذات",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأسباب",
+   "pdf": "األسباب",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "كوردستان). عدنان المفتي رئيس المجلس الوطني لكوردستان / العراق",
+   "after": "الموجبة بالنظر للتطورات الاجتماعية والاقتصادية والسياسية التي طرأت",
+   "before_pdf": "كوردستان عدنان المفتي\nرئيس المجلس الوطني لكوردستان / العراق",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات",
+   "pdf": "االتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "في العالم وما ترافق هذه التطورات من سهولة",
+   "after": "بين الشعوب وحيث ان الهواتف الخلوية والبريد الالكتروني",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الالكتروني",
+   "pdf": "االلكتروني",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "الاتصالات بين الشعوب وحيث ان الهواتف الخلوية والبريد",
+   "after": "ووسائل الاتصالات الحديثة هي ضرب من ضروب تلك",
+   "before_pdf": "االتصاالت بين الشعوب وحيث ان الهواتف الخلوية والبريد",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الاتصالات",
+   "pdf": "االتصاالت",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "الشعوب وحيث ان الهواتف الخلوية والبريد الالكتروني ووسائل",
+   "after": "الحديثة هي ضرب من ضروب تلك التطورات وما",
+   "before_pdf": "الشعوب وحيث ان الهواتف الخلوية والبريد االلكتروني ووسائل",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأجهزة",
+   "pdf": "األجهزة",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "على أسس سليمة وبغية معاقبة مسيئي استعمال تلك",
+   "after": "ومنعهم من التأثير على حريات الأفراد أو إفشاء",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأفراد",
+   "pdf": "األفراد",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "استعمال تلك الأجهزة ومنعهم من التأثير على حريات",
+   "after": "أو إفشاء أسرارهم الشخصية والإساءة إلى الأخلاق والنظام",
+   "before_pdf": "استعمال تلك األجهزة ومنعهم من التأثير على حريات",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "والإساءة",
+   "pdf": "واإلساءة",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "التأثير على حريات الأفراد أو إفشاء أسرارهم الشخصية",
+   "after": "إلى الأخلاق والنظام ولعام والآداب العامة لذا فقد",
+   "before_pdf": "التأثير على حريات األفراد أو إفشاء أسرارهم الشخصية",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "الأخلاق",
+   "pdf": "األخالق",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "حريات الأفراد أو إفشاء أسرارهم الشخصية والإساءة إلى",
+   "after": "والنظام ولعام والآداب العامة لذا فقد شرع هذا",
+   "before_pdf": "حريات األفراد أو إفشاء أسرارهم الشخصية واإلساءة إلى",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "والآداب",
+   "pdf": "واآلداب",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "إفشاء أسرارهم الشخصية والإساءة إلى الأخلاق والنظام ولعام",
+   "after": "العامة لذا فقد شرع هذا القانون.\nAnnex B:",
+   "before_pdf": "إفشاء أسرارهم الشخصية واإلساءة إلى األخالق والنظام ولعام",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 67
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "العراق",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "منع إساءة استعمال أجهزة الاتصالات في إقليم كوردستان –",
+   "after": "بسم الله الرحمن الرحيم باسم الشعب المجلس الوطني",
+   "before_pdf": "منع إساءة استعمال أجهزة االتصاالت في إقليم كوردستان–",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "real",
+   "web": "العراق",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "منع إساءة استعمال أجهزة الاتصالات في إقليم كوردستان -",
+   "after": "المادة الأولى: المكالمات الهاتفية والاتصالات البريدية والالكترونية من",
+   "before_pdf": "منع إساءة استعمال أجهزة االتصاالت في إقليم كوردستان -",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "العراق، قرر المجلس الوطني لكوردستان -",
+   "pdf": "تشريع 2008/5/ ) والمنعقدة بتأريخ19(",
+   "web_words": 5,
+   "pdf_words": 5,
+   "before": "وبناءاً على ما عرضه مجلس وزراء إقليم كوردستان -",
+   "after": "العراق بجلسته المرقمة (18) والمنعقدة بتأريخ 19/5/",
+   "before_pdf": "الوطني على ما عرضه مجلس وزراء إقليم كوردستان -",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "الثانية",
+   "pdf": "الثانيةاالنترنيت أو .",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "إزعاج غيره في غير الحالات الواردة في المادة",
+   "after": "من هذا القانون. المادة الرابعة: إذا نشأ عن",
+   "before_pdf": "إزعاج غيره في غير الحاالت الواردة في المادة",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 66
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "العراق",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of Communications Devices in Kurdistan Region - Arabic Copy",
+   "after": "قانون منع إساءة استعمال أجهزة الاتصالات في إقليم",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "unresolved",
+   "web": "الفقرة (1) من المادة (56) من القانون رقم (1) لسنة 1992 المعدل وبناءاً",
+   "pdf": "الفقرة1 العراق، قرر المجلس الوطني",
+   "web_words": 13,
+   "pdf_words": 5,
+   "before": "باسم الشعب المجلس الوطني لكوردستان / العراق استناداً لحكم",
+   "after": "على ما عرضه مجلس وزراء إقليم كوردستان - العراق،",
+   "before_pdf": "لسنة1992 ( ) من القانون رقم1( ) من المادة56( استناداً لحكم",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "unresolved",
+   "web": "المرقمة (18) والمنعقدة بتأريخ 19/5/2008 تشريع",
+   "pdf": "المرقمة18 لكوردستان- :اآلتي",
+   "web_words": 8,
+   "pdf_words": 3,
+   "before": "كوردستان - العراق، قرر المجلس الوطني لكوردستان - العراق بجلسته",
+   "after": "القانون الآتي: قانون رقم (6) لسنة 2008 قانون",
+   "before_pdf": "كوردستان - تشريع 2008/5/ ) والمنعقدة بتأريخ19( العراق بجلسته",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": null
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "المعدل وبناءا ) لسنة1992 ( ) من القانون رقم1( ) من المادة56(",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "الرحمن الرحيم باسم الشعب المجلس الوطني لكوردستان / العراق",
+   "after": "استناداً لحكم الفقرة (1) من المادة (56) من",
+   "before_pdf": "الرحمن الرحيم\nباسم الشعب\nالمجلس الوطني لكوردستان / العراق",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "unresolved",
+   "web": "رقم (6) لسنة 2008",
+   "pdf": "رقم6\nالعراق",
+   "web_words": 4,
+   "pdf_words": 2,
+   "before": "بتأريخ 19/5/2008 تشريع القانون الآتي: قانون",
+   "after": "قانون منع إساءة استعمال أجهزة الاتصالات في إقليم",
+   "before_pdf": "العراق بجلسته المرقمة18 لكوردستان- :اآلتي القانون\nلسنة2008( قانون",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": 65
+   }
+  },
+  {
+   "kind": "arabic letters",
+   "group": "form",
+   "verdict": "unresolved",
+   "web": "الآتي:",
+   "pdf": "لسنة2008(",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "18) والمنعقدة بتأريخ 19/5/2008 تشريع القانون",
+   "after": "قانون رقم (6) لسنة 2008 قانون منع إساءة",
+   "before_pdf": "والمنعقدة بتأريخ19( العراق بجلسته المرقمة18 لكوردستان- :اآلتي القانون",
+   "where": {
+    "heading": "Annex_A_Law",
+    "paragraph": "15.1.9",
+    "section": "Annex A: Law on Prevention of Misuse of Communications Devices in Kurdistan Region - Arabic Copy",
+    "page": null
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 173,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

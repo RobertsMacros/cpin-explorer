@@ -1,0 +1,268 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-bulletin-iran-protests-of-december-2025-to-january-2026-accessible",
+ "pdf_sha256": "7dd2ff2641d2f635f4ba66103c3aa177a501ab26d80e2c313002431722421cfb",
+ "body_sha256": "3f0d7fad6abb34a319998cc8ebc3b57fe9757f14d00dac981f00ba455b112366",
+ "words": {
+  "web": 15759,
+  "pdf": 15759
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 7
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "February 2026",
+   "pdf": null,
+   "pdf_date": "February 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 179,
+   "pdf": 179,
+   "pdf_raw": 179,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 23,
+   "pdf": 22
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a much wider movement” than previous flare-ups ...’",
+   "after": "14 The ISW and CTP Iran update of",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.14",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "as protests with more than 1,000 participants.’",
+   "after": "15 The ISW and CTP Iran update of",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.15",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "on January 11 [2026] compared to recent days.’",
+   "after": "16 The 13 January 2026 CBS News article",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.16",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the downfall of the country’s Islamic rulers.’",
+   "after": "17 The CNN News Article of 13 January",
+   "before_pdf": "the downfall of the country's Islamic rulers.’",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.17",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "all but impossible given the ongoing communications blackout.’",
+   "after": "18 BBC News articles, both published on 14",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.18",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and cities across all 31 provinces of Iran.",
+   "after": "19 Another BBC News article, also published on",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.19",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.",
+   "pdf": "2.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "between 28 December 2025 and 13 January 2026:",
+   "after": "20 A RFE/RL article published on 15",
+   "where": {
+    "heading": "number-size-and-locations",
+    "paragraph": "2.1.20",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 149,
+  "different": {
+   "2.1.14": "2.2.14",
+   "2.1.15": "2.2.15",
+   "2.1.16": "2.2.16",
+   "2.1.17": "2.2.17",
+   "2.1.18": "2.2.18",
+   "2.1.19": "2.2.19",
+   "2.1.20": "2.2.20"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

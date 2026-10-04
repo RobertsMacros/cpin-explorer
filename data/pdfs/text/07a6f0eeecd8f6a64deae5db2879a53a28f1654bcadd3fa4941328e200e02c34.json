@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 273,
+ "list_items": 24,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 51,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Libya: Ethnic minority groups",
+ "cover_version": "3.0",
+ "cover_date": "February 2019",
+ "pdf_sha256": "07a6f0eeecd8f6a64deae5db2879a53a28f1654bcadd3fa4941328e200e02c34",
+ "images": []
+}

@@ -4,10 +4,11 @@
 import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
-  capFirst, cleanQuote, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteWithCitation, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES,
+  capFirst, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteOf, quoteWithCitation, sourceOf, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, titleMonth,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
 import { analyseBody, describePassage, editionSource, fetchText, latestCapture, parseBody, paths, pickEdition } from "../shared/note-source.js";
+import { ukParts } from "../shared/uk-time.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
@@ -83,7 +84,7 @@ function noteHtml(g, group) {
       <h3 class="sv-note-title">${esc(capFirst(group.topic || n?.topic || group.title))}</h3>
       <p class="note-verbatim">${esc(n?.title || group.title)}</p>
       <div class="sv-note-links">
-        <a class="btn" href="${esc(paths.reader(g.country, group.note))}">${gone ? "Read the last edition" : "Read the latest guidance"} →</a>
+        <a class="btn" href="${esc(paths.report(first))}">${gone ? "Read the last edition" : "Read the latest guidance"} →</a>
         ${n?.compare_url && n.editions > 1 ? `<a class="btn" href="${esc(n.compare_url)}">Show changes across ${n.editions} editions</a>` : ""}
       </div>
     </div>
@@ -110,7 +111,7 @@ function itemHtml(r) {
       ${now.section ? `<span class="eyebrow" title="Section">${esc(now.section)}</span>` : ""}
       <span class="sv-status">${statusHtml(r)}</span>
       <time class="saved-when" datetime="${esc(r.createdAt || "")}">Saved ${esc(r.createdAt ? longDate(r.createdAt) : "")}</time></div>
-    <blockquote class="sv-quote">“${esc(cleanQuote(r.quote))}”</blockquote>
+    <blockquote class="sv-quote">“${esc(quoteOf(r))}”</blockquote>
     <div class="cite">${formatCitation(H.citeContext(r), style).html}</div>
     ${sources.length ? `<details class="sources"${sources.length <= 3 ? " open" : ""}><summary>Sources cited in this passage · ${sources.length}</summary><ol>${sources.map((s) =>
       `<li><b>[${s.n}]</b><span>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.text)}</a>` : esc(s.text)}</span></li>`).join("")}</ol></details>` : ""}
@@ -119,7 +120,7 @@ function itemHtml(r) {
     <div class="sv-actions">
       <button type="button" class="btn btn--primary" data-act="copy-both">Copy quote + citation</button>
       <button type="button" class="btn" data-act="copy-cite">Copy citation</button>
-      <a class="btn" href="${esc(paths.reader(r.country, r.note, `#h=${encodeURIComponent(r.id)}`))}">Open in reader →</a>
+      <a class="btn" href="${esc(paths.report(r, `#h=${encodeURIComponent(r.id)}`))}">Open in reader →</a>
       <button type="button" class="btn btn-del" data-act="delete">Delete</button>
     </div>
   </li>`;
@@ -242,7 +243,8 @@ function download(name, type, body) {
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
-const stamp = () => new Date().toISOString().slice(0, 10);
+/** Today's date for a file name, on the site's one clock (UK time): "2026-10-04". */
+const stamp = () => { const d = ukParts(new Date()); return `${d.year}-${String(d.month + 1).padStart(2, "0")}-${String(d.day).padStart(2, "0")}`; };
 $("#dlMd").addEventListener("click", () => download(`cpin-highlights-${stamp()}.md`, "text/markdown;charset=utf-8", H.exportMarkdown(H.loadHighlights(), { style })));
 $("#dlJson").addEventListener("click", () => download(`cpin-highlights-${stamp()}.json`, "application/json", H.exportJson(H.loadHighlights())));
 
@@ -379,6 +381,7 @@ async function checkAll() {
 }
 async function checkNote(key, recs) {
   const [country, note] = key.split("|");
+  if (!note || recs.every((r) => sourceOf(r) === "pdf")) return;   // read from a PDF: there is no note to check here (the reader checks it against the report's editions)
   const index = await fetchJson(paths.index(country, note));
   const edition = pickEdition(index);
   if (!edition) return;
@@ -398,7 +401,9 @@ async function checkNote(key, recs) {
     if (res.status === "still") {
       const info = describePassage(A, res.match.start, res.match.end);
       H.updateHighlight(r.id, { check: "still", current: { sha: edition.sha256, version: edition.version_banner || null, title: edition.title || index.title,
-        month: n?.month || (edition.public_updated_at || "").slice(0, 7) || null, para: info.para, section: info.section,
+        // the month in the edition's own title, else the dashboard's for the note: never GOV.UK's date for it, which is the country page's
+        month: titleMonth({ title: edition.title || index.title, topic: n?.topic, countryName: noteInfo(country, note).c?.name }) || n?.month || null,
+        para: info.para, section: info.section, ...(info.twice ? { paraTwice: true } : {}),
         url: src.url, archived: src.archived, capturedAt: src.capturedAt, pos: { start: res.match.start, end: res.match.end } } });
     } else if (res.status === "changed") {
       const cap = latestCapture(index.versions.find((v) => v.sha256 === r.editionSha));

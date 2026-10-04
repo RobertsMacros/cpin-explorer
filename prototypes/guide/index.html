@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guide and glossary · CPIN Explorer</title>
+<meta name="description" content="How to use CPIN Explorer, and what its terms mean. CPIN stands for Country Policy and Information Note: the Home Office’s guidance on asylum claims from one country.">
+<!-- Branding: RM mark from Roberts-Macros-assets @ 95e38faf099249376af855cf509967aa2e93ac0c (copied into
+     ../../assets/roberts-macros/, see SOURCE.txt there). -->
+<link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
+<link rel="stylesheet" href="../shared/theme.css">
+<link rel="stylesheet" href="../shared/link-status.css">
+<link rel="stylesheet" href="../reader/reader.css">
+<link rel="stylesheet" href="guide.css">
+<script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<script type="module" src="../shared/brand-mark.js" blocking="render"></script>
+<script type="module" src="guide.js"></script>
+<link rel="stylesheet" href="../shared/brand.css">
+</head>
+<body>
+<a class="skip" href="#guide">Skip to the guide</a>
+<header class="top">
+  <a class="brand" href="../dashboard/index.html" aria-label="CPIN Explorer home">
+    <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
+    <span class="brand-name"><b>CPIN</b>EXPLORER</span>
+  </a>
+  <span class="top-crumb">Guide and glossary</span>
+  <button class="btn theme-btn" id="theme" type="button">AUTO</button>
+</header>
+
+<main class="gd" id="main">
+  <h1 class="sr-only">Guide and glossary</h1>
+
+  <!-- In-page nav: a rail beside the text on wide screens, two tabs under the header on narrow ones.
+       The glossary's group links are added by guide.js. -->
+  <nav class="gd-nav" id="pageNav" aria-label="On this page">
+    <p class="eyebrow">On this page</p>
+    <ol class="gd-nav-list" id="navList">
+      <li class="gd-nav-part"><a href="#guide">Guide</a>
+        <ol>
+          <li><a href="#what-this-is">What this is</a></li>
+          <li><a href="#find-a-country">Find a country</a></li>
+          <li><a href="#read-the-latest-guidance">Read the latest guidance</a></li>
+          <li><a href="#see-what-changed">See what changed</a></li>
+          <li><a href="#compare-two-editions">Compare two editions</a></li>
+          <li><a href="#search">Search</a></li>
+          <li><a href="#save-and-cite">Save and cite</a></li>
+          <li><a href="#how-current-it-is">How current it is</a></li>
+          <li><a href="#earlier-editions">Where earlier editions come from</a></li>
+          <li><a href="#sources-and-dead-links">Sources and dead links</a></li>
+          <li><a href="#report-a-bug">Report a bug</a></li>
+        </ol>
+      </li>
+      <li class="gd-nav-part"><a href="#glossary">Glossary</a>
+        <ol id="navGroups"></ol>
+      </li>
+      <li class="gd-nav-ind" id="navInd" aria-hidden="true"></li>
+    </ol>
+  </nav>
+
+  <div class="gd-body">
+
+    <!-- ============================================================ Guide (plain HTML: reads without JavaScript) -->
+    <section class="gd-part" id="guide" aria-labelledby="guideTitle">
+      <header class="gd-hero">
+        <a class="btn back" href="../dashboard/index.html" style="--i:0">← Back to the globe</a>
+        <p class="eyebrow" style="--i:1">CPIN Explorer · how to use it</p>
+        <h2 class="hero-title" id="guideTitle" style="--i:2">Guide</h2>
+        <p class="lede" style="--i:3">How to find a country’s notes, read the current guidance, see what changed between editions and cite a passage. The <a href="#glossary">glossary</a> below explains the terms.</p>
+      </header>
+
+      <div class="gd-secs">
+
+        <section class="gd-sec" id="what-this-is" aria-labelledby="h-what-this-is">
+          <div class="gd-text">
+            <h3 id="h-what-this-is">What this is</h3>
+            <p><a class="term" href="#term-cpin">CPIN</a> stands for Country Policy and Information Note: the Home Office’s guidance for its decision makers on asylum and human rights claims from one country. The notes are written by its Country Policy and Information Team (<a class="term" href="#term-cpit">CPIT</a>) and published on GOV.UK. This site keeps a copy of every note, <a class="term" href="#term-verbatim">verbatim</a> (word for word), and of every earlier <a class="term" href="#term-edition">edition</a> it has seen. It is an independent mirror, not a Home Office service: always check the current edition on GOV.UK.</p>
+          </div>
+          <figure class="demo">
+            <figcaption>What the letters stand for</figcaption>
+            <div class="spell" role="img" aria-label="CPIN: Country Policy and Information Note">
+              <span><b>C</b><i>Country</i></span>
+              <span><b>P</b><i>Policy</i></span>
+              <span><b>I</b><i>Information</i></span>
+              <span><b>N</b><i>Note</i></span>
+              <p>Country Policy and Information Note</p>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="find-a-country" aria-labelledby="h-find-a-country">
+          <div class="gd-text">
+            <h3 id="h-find-a-country">Find a country</h3>
+            <p>The home page is a globe with a dot for each country that has notes. The dots are the targets: click or tap one, and that country’s reports open beside the globe (below it on a phone). Blue dots are countries updated in the last 30 days. Every country is also in the <b>All countries</b> list, and you can type its name in the search box.</p>
+            <p class="gd-go"><a href="../dashboard/index.html">Open the globe <span aria-hidden="true">→</span></a></p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>Under the globe, and above the list of countries</figcaption>
+            <div class="demo-stage" inert>
+              <p class="legend"><span><i class="key key--recent"></i>Updated in the last 30 days</span><span><i class="key"></i>Other countries</span><span class="legend-hint">Drag to turn · Click a country</span></p>
+              <div class="section-head"><span class="eyebrow">All countries</span><span class="eyebrow">47</span></div>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="read-the-latest-guidance" aria-labelledby="h-read-the-latest-guidance">
+          <div class="gd-text">
+            <h3 id="h-read-the-latest-guidance">Read the latest guidance</h3>
+            <p>Each report on a country’s page has a <b>Read the latest guidance</b> button. It opens the current edition laid out for reading, with its contents, numbered paragraphs and <b>Find in this report</b> in the header. The words are the Home Office’s, unchanged. A line under the title gives the <a class="term" href="#term-version">version</a>, the date it was published, and links to the same note and its PDF on GOV.UK.</p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>On each report in a country’s list</figcaption>
+            <div class="demo-stage note-actions" inert>
+              <button class="btn btn--primary" type="button">Read the latest guidance</button>
+              <button class="btn" type="button">History &amp; changes</button>
+              <button class="btn" type="button">GOV.UK ↗</button>
+              <button class="btn" type="button">PDF ↗</button>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="see-what-changed" aria-labelledby="h-see-what-changed">
+          <div class="gd-text">
+            <h3 id="h-see-what-changed">See what changed</h3>
+            <p>Above the text, <b>History</b> shows every edition held on a timeline. Drag the handle, or click any point on the timeline, to move through them: the text below becomes the report as it stood on that date. Each edition is captioned with the Home Office’s own sentence on what changed (its ‘<a class="term" href="#term-changes-from-last-version">Changes from last version</a>’), word for word. Anything this site worked out itself, such as how many words were added and removed, is labelled <a class="term" href="#term-computed">Computed</a>.</p>
+            <p class="gd-go"><a href="../reader/index.html?country=afghanistan&amp;series=note:fear-taliban">See it on Afghanistan: Fear of the Taliban <span aria-hidden="true">→</span></a></p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>Above the text of a report · example: Afghanistan, Fear of the Taliban</figcaption>
+            <div class="demo-stage demo-stage--stack" inert>
+              <div class="demo-line">
+                <span class="eyebrow demo-hist">History</span><span class="hist-count">6 editions held</span>
+              </div>
+              <div class="wc is-open">
+                <div class="wc-in">
+                  <p class="wc-meta"><span class="tag">What changed</span><span>in <b>v6.0</b></span><span class="tag tag--outline">Home Office</span></p>
+                  <div class="wc-box"><div class="wc-text"><p>Updated COI and Assessment.</p></div></div>
+                  <p class="wc-calc"><span class="tag tag--calc">Computed</span><span class="wc-calc-t"><b class="rw">Rewritten</b> · about 17% of the earlier wording kept · <span class="ni">+35,049</span> <span class="nd">−26,201</span> words</span></p>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="compare-two-editions" aria-labelledby="h-compare-two-editions">
+          <div class="gd-text">
+            <h3 id="h-compare-two-editions">Compare two editions</h3>
+            <p>Turn on <a class="term" href="#term-show-changes">Show changes</a> to see an edition compared with the one before: inserted words are underlined, deleted words struck through. Choose <b>Inline</b> to read the marks in the text, or <b>Side-by-side</b> (on a wider screen) to see the two editions next to each other; the <b>Old</b> and <b>New</b> handles on the timeline compare any two. <a class="term" href="#term-rewritten">Rewritten</a> means an edition keeps under a quarter of the earlier wording, so marks would cover almost everything. Those are offered side by side without marks, with the marked comparison one click away.</p>
+            <p class="gd-go"><a href="../reader/index.html?country=colombia&amp;series=note:actors-protection&amp;changes=1">See a comparison: Colombia, Actors of protection <span aria-hidden="true">→</span></a></p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>In the bar above the text</figcaption>
+            <div class="demo-stage" inert>
+              <button class="switch" type="button"><span class="sw"><i></i></span><span class="sw-lbl">Show changes</span></button>
+              <span class="vseg" data-value="inline"><span class="vseg-thumb"></span>
+                <button type="button" aria-checked="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h12M4 10h12M4 15h8"/></svg>Inline</button>
+                <button type="button" aria-checked="false"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="14" height="12"/><path d="M10 4v12"/></svg><span class="lbl-long">Side-by-side</span></button>
+              </span>
+              <div class="edition-note"><span class="tag tag--outline">Changes</span><span class="en-t"><ins>Inserted</ins> words are underlined, <del>deleted</del> words struck through; bars in the margin mark changed paragraphs</span></div>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="search" aria-labelledby="h-search">
+          <div class="gd-text">
+            <h3 id="h-search">Search</h3>
+            <p>There is one search box, in the header of the home page. As you type it lists countries, then reports grouped by subject, then passages from the text of the reports and any matching glossary term. The <b>All passages →</b> link under them opens the full list, which you can narrow by kind of report and by country. To search within one country, open it and use the box above its reports.</p>
+            <p class="gd-go"><a href="../dashboard/index.html?q=internal%20relocation">Try a search: internal relocation <span aria-hidden="true">→</span></a></p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>In the header of the home page, and in its results</figcaption>
+            <div class="demo-stage demo-stage--stack" inert>
+              <span class="search">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
+                <span class="search-ph">Search countries, reports and their text</span>
+                <kbd class="search-kbd">⌘K</kbd>
+              </span>
+              <p class="rgroup-head"><span class="rgroup-topic">Humanitarian situation</span><span class="rgroup-n">9 countries · 10 reports</span></p>
+              <span class="all-results">All 611 passages →</span>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="save-and-cite" aria-labelledby="h-save-and-cite">
+          <div class="gd-text">
+            <h3 id="h-save-and-cite">Save and cite</h3>
+            <p>In a report, select any passage and a small bar appears with its paragraph number. <a class="term" href="#term-highlight">Save highlight</a> keeps the passage in this browser, with a citation to the edition you read it in and the sources its footnotes cite. Choose <a class="term" href="#term-citation-styles">Full (OSCOLA)</a> or <b>Short (tribunal)</b> for the citation, and <b>Copy citation</b> to paste it into your own document. The Saved page lists everything you have kept and exports it to Word.</p>
+            <p class="gd-go"><a href="../saved/index.html">Open Saved <span aria-hidden="true">→</span></a></p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>When you select text in a report</figcaption>
+            <div class="demo-stage" inert>
+              <div class="seltool"><span class="st-pin">Para 3.1.2</span>
+                <button type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5h8v11l-4-3-4 3z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Save highlight</button>
+                <button type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 9.5c0-3 1.4-4.6 3.4-5M3 9.5h3v3.5H3zM9 9.5c0-3 1.4-4.6 3.4-5M9 9.5h3v3.5H9z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Copy quote + citation</button>
+                <button type="button"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 10.5h-1v-8h8v1" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>Copy citation</button>
+              </div>
+              <div class="seg" data-value="oscola"><span class="seg-thumb"></span>
+                <button type="button" aria-checked="true">Full (OSCOLA)</button>
+                <button type="button" aria-checked="false">Short (tribunal)</button></div>
+              <button class="btn" type="button">Export to Word <span class="caret" aria-hidden="true">▾</span></button>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="how-current-it-is" aria-labelledby="h-how-current-it-is">
+          <div class="gd-text">
+            <h3 id="h-how-current-it-is">How current it is</h3>
+            <p>The home page shows <a class="term" href="#term-accurate-as-of">Accurate as of</a> and a time: when this site last confirmed that GOV.UK had published nothing newer. Select that line, or <b>Check for changes</b> beside it, to ask GOV.UK again and see what was compared. A sync is scheduled every day to copy anything new, and one every week to re-read every note in full, which catches edits made without a new date. All times are UK time.</p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the controls. Where they are: </span>On the home page · the date and time here are an example</figcaption>
+            <div class="demo-stage" inert>
+              <span class="sync-status"><span class="live-dot"></span><span class="sync-words">ACCURATE AS OF 03 OCT 2026 · 08:37 BST</span></span>
+              <button class="btn check-btn" type="button">CHECK FOR CHANGES</button>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="earlier-editions" aria-labelledby="h-earlier-editions">
+          <div class="gd-text">
+            <h3 id="h-earlier-editions">Where earlier editions come from</h3>
+            <p>GOV.UK shows only the current edition of each note. Earlier editions here are either ones this site copied at the time, or <a class="term" href="#term-archived-copy">archived copies</a> recovered from the Internet Archive, labelled with the date the Archive captured them. Where GOV.UK recorded an update but no copy of that edition was captured, the timeline marks the date <a class="term" href="#term-not-held">Not held</a> and shows the edition then in force. Where that edition was published as a PDF with no web version the date is marked <b>PDF only</b>, with the PDF linked, and where the update took the report down it is marked <b>Removed</b>.</p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the labels. Where they are: </span>In the bar above the text, on an earlier edition</figcaption>
+            <div class="demo-stage demo-stage--stack" inert>
+              <span class="ed-chip"><span class="tag tag--muted"><span class="tag-x">Earlier edition · not current guidance</span><span class="tag-s">Not current</span></span><b>v4.0</b><span class="ed-when">12 Aug 2024 · archived copy</span></span>
+              <span class="ed-chip"><span class="tag tag--muted">Not held</span><span class="ed-when">6 Oct 2021 update · showing</span><b>v2.0</b><span class="ed-when">9 Feb 2022 · archived copy</span></span>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="sources-and-dead-links" aria-labelledby="h-sources-and-dead-links">
+          <div class="gd-text">
+            <h3 id="h-sources-and-dead-links">Sources and dead links</h3>
+            <p>The notes cite thousands of web pages, and some have since moved or gone. This site tests each cited link: one that now leads elsewhere is tagged <b>Moved</b>, and one that no longer works is tagged <b>Dead</b>, with the Internet Archive’s copy beside it where there is one. Some sites refuse automated checks; their links are tagged <b>Can’t verify</b>. The <a class="term" href="#term-sources">Sources</a> button under a report’s title gives the counts and steps to the next dead link.</p>
+          </div>
+          <figure class="demo">
+            <figcaption><span class="sr-only">Example of the labels. Where they are: </span>Under a report’s title, and after links in its text</figcaption>
+            <div class="demo-stage" inert>
+              <button type="button" class="chip">Sources<span class="chip-v is-dead">9 dead links</span></button>
+              <span class="linkstatus linkstatus--dead">Dead <span class="linkstatus-alt">archived 14 Mar 2024 ↗</span></span>
+              <span class="linkstatus linkstatus--moved">Moved <span class="linkstatus-alt">now at example.org ↗</span></span>
+              <span class="linkstatus linkstatus--unverified">Can't verify</span>
+            </div>
+          </figure>
+        </section>
+
+        <section class="gd-sec" id="report-a-bug" aria-labelledby="h-report-a-bug">
+          <div class="gd-text">
+            <h3 id="h-report-a-bug">Report a bug</h3>
+            <p>If something looks wrong on this site, use <b>Report a bug</b> at the foot of any page. It opens an email to the site’s owner with the page address and your browser already filled in; nothing is sent until you send it. A mistake in the wording of a note is the Home Office’s own: the text here is copied, never corrected.</p>
+          </div>
+          <figure class="demo demo--live">
+            <figcaption>At the foot of every page · this one works</figcaption>
+            <div class="demo-stage">
+              <a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a>
+            </div>
+          </figure>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ Glossary (drawn by guide.js from ../shared/glossary.js) -->
+    <section class="gd-part gl" id="glossary" aria-labelledby="glossaryTitle">
+      <header class="gd-hero gl-hero">
+        <p class="eyebrow">What the words mean</p>
+        <h2 class="hero-title" id="glossaryTitle">Glossary</h2>
+        <p class="lede">These explanations are this site’s own. They are not Home Office text, and they are not legal advice.</p>
+      </header>
+
+      <div class="gl-tools" id="glTools" hidden>
+        <label class="gl-find" for="glFilter">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M10.4 10.4 14 14" stroke="currentColor" stroke-width="1.4"/></svg>
+          <input id="glFilter" type="search" placeholder="Filter the glossary" autocomplete="off" spellcheck="false" enterkeyhint="search" aria-label="Filter the glossary by term or by a word in its explanation" aria-describedby="glCount">
+          <button class="gl-clear" id="glClear" type="button" aria-label="Clear the filter" tabindex="-1"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <kbd class="gl-kbd" aria-hidden="true">/</kbd>
+        </label>
+        <p class="gl-count" id="glCount" role="status"></p>
+      </div>
+
+      <div class="gl-groups" id="glGroups"></div>
+
+      <div class="gl-empty" id="glEmpty" aria-hidden="true">
+        <div class="gl-empty-in">
+          <div class="gl-empty-box">
+            <span class="tag tag--muted">No terms</span>
+            <p class="gl-empty-say">No terms match <q id="glEmptyQ"></q>.</p>
+            <p class="gl-empty-do">Try a shorter word or an abbreviation, such as CPIN or COI. The reports themselves may still use the word: <a id="glEmptySearch" href="../dashboard/index.html">search the reports <span aria-hidden="true">→</span></a></p>
+            <button class="btn" id="glEmptyClear" type="button">Show all terms</button>
+          </div>
+        </div>
+      </div>
+
+      <noscript><p class="gl-noscript">The glossary is drawn by JavaScript, which is switched off in this browser. The guide above reads without it.</p></noscript>
+    </section>
+
+  </div>
+</main>
+
+<footer class="foot">
+  <!--brand-rm--><span class="foot-rm"><img class="rm-ink" src="../../assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="261" height="128"><img class="rm-light" src="../../assets/roberts-macros/derived/rm-mark-light.png" alt="" width="261" height="128"></span><!--/brand-rm-->
+  <span>Sources: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
+  <!--brand-foot--><span class="foot-end"><a class="foot-link" href="../guide/index.html#guide">Guide</a><a class="foot-link" href="../guide/index.html#glossary">Glossary</a><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
+</footer>
+<script type="module" src="../shared/report-bug.js"></script>
+</body>
+</html>

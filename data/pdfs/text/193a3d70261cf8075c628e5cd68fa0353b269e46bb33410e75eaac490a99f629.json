@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 122,
+ "body_size": 12.0,
+ "body_font": "calibri",
+ "headings": 41,
+ "paragraphs": 833,
+ "list_items": 5,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 118,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 104"
+ ],
+ "figure_pages": {
+  "fc8a7221af0e98e7876b96c2847f507e5a403ebf3dc0221249a8b58c840eab8a.jpg": 122
+ },
+ "figure_sizes": {
+  "fc8a7221af0e98e7876b96c2847f507e5a403ebf3dc0221249a8b58c840eab8a.jpg": [
+   955,
+   1183
+  ]
+ },
+ "figure_text": {
+  "fc8a7221af0e98e7876b96c2847f507e5a403ebf3dc0221249a8b58c840eab8a.jpg": 3
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Sudan Situation of Persons from Darfur, Southern Kordofan and Blue Nile in Khartoum",
+ "cover_version": null,
+ "cover_date": "March 2016",
+ "pdf_sha256": "193a3d70261cf8075c628e5cd68fa0353b269e46bb33410e75eaac490a99f629",
+ "images": [
+  "fc8a7221af0e98e7876b96c2847f507e5a403ebf3dc0221249a8b58c840eab8a.jpg"
+ ]
+}

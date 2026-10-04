@@ -1,0 +1,52 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 116,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 91,
+ "paragraphs": 1051,
+ "list_items": 122,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 278,
+ "bookmarks": 93,
+ "warnings": [
+  "page 2: bookmark not found in the text: 'Contents'",
+  "page 2: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 1"
+ ],
+ "figure_pages": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,
+  "d7e1cbb55fb17a35fcd05e7b4bccfb477cbc136f4a947df8b6a1146ba8a256bb.jpg": 5,
+  "39e16bc0a5a2ad6208ddc2a5482e64744fc8426abd7e1c0c8d53c00f51f3b2a9.jpg": 16
+ },
+ "figure_sizes": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": [
+   246,
+   168
+  ],
+  "d7e1cbb55fb17a35fcd05e7b4bccfb477cbc136f4a947df8b6a1146ba8a256bb.jpg": [
+   985,
+   746
+  ],
+  "39e16bc0a5a2ad6208ddc2a5482e64744fc8426abd7e1c0c8d53c00f51f3b2a9.jpg": [
+   843,
+   680
+  ]
+ },
+ "figure_text": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 9,
+  "d7e1cbb55fb17a35fcd05e7b4bccfb477cbc136f4a947df8b6a1146ba8a256bb.jpg": 965,
+  "39e16bc0a5a2ad6208ddc2a5482e64744fc8426abd7e1c0c8d53c00f51f3b2a9.jpg": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Home Office Report of a Home Office Fact-Finding Mission Turkey: Kurds, the HDP and the PKK",
+ "cover_version": null,
+ "cover_date": "21 June 2019",
+ "pdf_sha256": "b0411eb80178c22a0425256b420b44e63eeeff035c0a70ead9f682eeea0844fd",
+ "images": [
+  "39e16bc0a5a2ad6208ddc2a5482e64744fc8426abd7e1c0c8d53c00f51f3b2a9.jpg",
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png",
+  "d7e1cbb55fb17a35fcd05e7b4bccfb477cbc136f4a947df8b6a1146ba8a256bb.jpg"
+ ]
+}

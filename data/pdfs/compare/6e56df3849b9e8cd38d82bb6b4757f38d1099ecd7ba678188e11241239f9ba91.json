@@ -1,0 +1,333 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/country-policy-and-information-note-actors-of-protection-albania-february-2025-accessible",
+ "pdf_sha256": "6e56df3849b9e8cd38d82bb6b4757f38d1099ecd7ba678188e11241239f9ba91",
+ "body_sha256": "e8b685ae4ef1ee9537c4562bea3022b4da221386fefdaa1ea205cdeb2ee16e82",
+ "words": {
+  "web": 14213,
+  "pdf": 14222
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 5,
+    "pdf_words": 11
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 5,
+    "pdf_words": 11
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "February 2025",
+   "pdf": "3.0",
+   "pdf_date": "February 2025"
+  },
+  "section_updated": {
+   "web": [
+    "6 February 2025"
+   ],
+   "pdf": [
+    "6 February 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 130,
+   "pdf": 130,
+   "pdf_raw": 130,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 51,
+   "pdf": 40
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.10",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for and receiving bribes (Articles 259 and 260).",
+   "after": "See relevant sections on Police and Judiciary for",
+   "where": {
+    "heading": "basic-rights-and-criminal-law",
+    "paragraph": "3.1.9",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.2.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is lower than the average for EU countries...’",
+   "after": "See Reform and accountability for further information on",
+   "where": {
+    "heading": "structure-and-size",
+    "paragraph": "5.2.6",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "longas",
+   "pdf": "long as",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "the Constitution stated, ‘Everyone is deemed innocent so",
+   "after": "his guilt is not proven by final judicial",
+   "where": {
+    "heading": "due-process",
+    "paragraph": "6.5.3",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.2.2",
+   "pdf": "6.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of first instance, which are established by law...’",
+   "after": "Article 12 of the Albanian Criminal Procedure Code",
+   "where": {
+    "heading": "structure-and-size-1",
+    "paragraph": "6.2.2",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.2.3",
+   "pdf": "6.2.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the courts of appeal;\nc) the High Court’",
+   "after": "Article 13 of the Criminal Procedure Code stated:",
+   "where": {
+    "heading": "structure-and-size-1",
+    "paragraph": "6.2.3",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.2",
+   "pdf": "7.4.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "seriousness with which authorities are addressing these issues...’",
+   "after": "On 26 July 2024, Gazeta Tema reported:\nA",
+   "where": {
+    "heading": "police-reform",
+    "paragraph": "7.4.2",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.3",
+   "pdf": "7.4.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "s serious efforts to enhance the police force.’",
+   "after": "In the report of November 2024, Global Initiative",
+   "where": {
+    "heading": "police-reform",
+    "paragraph": "7.4.3",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.4.4",
+   "pdf": "7.4.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "impartiality of the process and interference from politics.’",
+   "after": "In the Albania 2024 Report, covering the period",
+   "where": {
+    "heading": "police-reform",
+    "paragraph": "7.4.4",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "highest administrative and technical organ within the Police.",
+   "after": "The General Directorate of the Police is organized",
+   "where": {
+    "heading": "structure-and-size",
+    "paragraph": "5.2.2",
+    "section": "Country information",
+    "page": 12
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "21.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "population of England and Wales at mid-2023).",
+   "after": "5.2.5 The US Overseas Security Advisory",
+   "before_pdf": "population of England and Wales at mid-2023)",
+   "where": {
+    "heading": "structure-and-size",
+    "paragraph": "5.2.5",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 138,
+  "different": {
+   "6.2.2": "6.2.1",
+   "7.4.3": "7.4.4",
+   "7.4.4": "7.4.5"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "6.2.3",
+   "7.4.2"
+  ],
+  "unconfirmed": []
+ }
+}

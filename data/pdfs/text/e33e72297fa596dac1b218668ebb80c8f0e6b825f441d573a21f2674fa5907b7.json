@@ -1,0 +1,79 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 81,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 90,
+ "paragraphs": 613,
+ "list_items": 34,
+ "tables": 0,
+ "figures": 7,
+ "footnotes": 199,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 15, 42, 43, 157, 162"
+ ],
+ "figure_pages": {
+  "b5f99ef3582d06c1558e691d33ace8d9479becf62a2dc47d17cb3cb433a43c75.png": 9,
+  "9527dcf69eda6105241dd75a89b3b9a9e5313a17009a919ef732fcc1cf2d82de.png": 22,
+  "4811e225ae087dafded6c8f0e17d93ef36e2d9650fbc35854bade456824d133d.jpg": 68,
+  "cc3d1182de54b501b74f27850af43a9aaeba3d398ea5d1abf2cd4de2c9e5b7cb.jpg": 69,
+  "31247d4a5472e662d602b87066fa2fd0b8409edb16393ce708fbf4a0e09059a1.jpg": 70,
+  "af38fc2b229cecbbb8eaa2bcf19e32085729fa6a377f4252eb6836dbdf692038.jpg": 71,
+  "034a3c5d91661dd080078d66ca7156fefb7001ee9d343b4367bd632f324fcf16.jpg": 72
+ },
+ "figure_sizes": {
+  "b5f99ef3582d06c1558e691d33ace8d9479becf62a2dc47d17cb3cb433a43c75.png": [
+   413,
+   241
+  ],
+  "9527dcf69eda6105241dd75a89b3b9a9e5313a17009a919ef732fcc1cf2d82de.png": [
+   919,
+   353
+  ],
+  "4811e225ae087dafded6c8f0e17d93ef36e2d9650fbc35854bade456824d133d.jpg": [
+   908,
+   1292
+  ],
+  "cc3d1182de54b501b74f27850af43a9aaeba3d398ea5d1abf2cd4de2c9e5b7cb.jpg": [
+   919,
+   1308
+  ],
+  "31247d4a5472e662d602b87066fa2fd0b8409edb16393ce708fbf4a0e09059a1.jpg": [
+   919,
+   1308
+  ],
+  "af38fc2b229cecbbb8eaa2bcf19e32085729fa6a377f4252eb6836dbdf692038.jpg": [
+   919,
+   1308
+  ],
+  "034a3c5d91661dd080078d66ca7156fefb7001ee9d343b4367bd632f324fcf16.jpg": [
+   919,
+   1308
+  ]
+ },
+ "figure_text": {
+  "b5f99ef3582d06c1558e691d33ace8d9479becf62a2dc47d17cb3cb433a43c75.png": 0,
+  "9527dcf69eda6105241dd75a89b3b9a9e5313a17009a919ef732fcc1cf2d82de.png": 0,
+  "4811e225ae087dafded6c8f0e17d93ef36e2d9650fbc35854bade456824d133d.jpg": 0,
+  "cc3d1182de54b501b74f27850af43a9aaeba3d398ea5d1abf2cd4de2c9e5b7cb.jpg": 0,
+  "31247d4a5472e662d602b87066fa2fd0b8409edb16393ce708fbf4a0e09059a1.jpg": 0,
+  "af38fc2b229cecbbb8eaa2bcf19e32085729fa6a377f4252eb6836dbdf692038.jpg": 0,
+  "034a3c5d91661dd080078d66ca7156fefb7001ee9d343b4367bd632f324fcf16.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Background information, including actors of protection and internal relocation",
+ "cover_version": "5.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "e33e72297fa596dac1b218668ebb80c8f0e6b825f441d573a21f2674fa5907b7",
+ "images": [
+  "034a3c5d91661dd080078d66ca7156fefb7001ee9d343b4367bd632f324fcf16.jpg",
+  "31247d4a5472e662d602b87066fa2fd0b8409edb16393ce708fbf4a0e09059a1.jpg",
+  "4811e225ae087dafded6c8f0e17d93ef36e2d9650fbc35854bade456824d133d.jpg",
+  "9527dcf69eda6105241dd75a89b3b9a9e5313a17009a919ef732fcc1cf2d82de.png",
+  "af38fc2b229cecbbb8eaa2bcf19e32085729fa6a377f4252eb6836dbdf692038.jpg",
+  "b5f99ef3582d06c1558e691d33ace8d9479becf62a2dc47d17cb3cb433a43c75.png",
+  "cc3d1182de54b501b74f27850af43a9aaeba3d398ea5d1abf2cd4de2c9e5b7cb.jpg"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 81,
+ "paragraphs": 304,
+ "list_items": 56,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 121,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 57"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Albania: People trafficking",
+ "cover_version": "8.0",
+ "cover_date": "March 2019",
+ "pdf_sha256": "dbdcbc111ad0edeff39d379ec3e4725d60dfb8f73565c27ac31ba20cd52e170e",
+ "images": []
+}

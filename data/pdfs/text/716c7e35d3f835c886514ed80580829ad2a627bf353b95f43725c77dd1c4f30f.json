@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 76,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 72,
+ "paragraphs": 517,
+ "list_items": 99,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 205,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 35"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Pakistan: Ahmadis",
+ "cover_version": "4.0",
+ "cover_date": "March 2019",
+ "pdf_sha256": "716c7e35d3f835c886514ed80580829ad2a627bf353b95f43725c77dd1c4f30f",
+ "images": []
+}

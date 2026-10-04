@@ -1,0 +1,278 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "afghanistan/country-policy-and-information-note-humanitarian-situation-afghanistan-april-2026-accessible",
+ "pdf_sha256": "231aebdf3daf48e45cc9d997c300abe96818f2d8a5f7739ce1758eb378db3425",
+ "body_sha256": "537945e737aed705f1807f1051abc48b693f72445c83913fd8fe7cc0611b7974",
+ "words": {
+  "web": 10549,
+  "pdf": 10604
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 20,
+   "share": 0.000993,
+   "passages": 1,
+   "sizes": {
+    "spelling": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 20
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 20
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "April 2026",
+   "pdf": "4.0",
+   "pdf_date": "April 2026"
+  },
+  "section_updated": {
+   "web": [
+    "14 April 2026"
+   ],
+   "pdf": [
+    "14 April 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 90,
+   "pdf": 90,
+   "pdf_raw": 90,
+   "differ": false
+  },
+  "pictures": {
+   "web": 5,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 35,
+   "pdf": 33
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "NOTE: The maps in this section are not intended to reflect the UK Government's views of any boundaries.",
+   "web_words": 0,
+   "pdf_words": 19,
+   "before": "have seen similar upward trends.\n9. Humanitarian aid",
+   "after": "9.1 Funding and reach\n9.1.1",
+   "before_pdf": "have seen similar upward trends .\n9. Humanitarian aid",
+   "where": {
+    "heading": "funding",
+    "paragraph": "8.5.4",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Analysis",
+   "pdf": "Analyis",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "IPC map below.\nSource: IPC Acute Food Insecurity",
+   "after": "8.3 Water, sanitation and hygiene (WASH)\n8.",
+   "where": {
+    "heading": "food-insecurity",
+    "paragraph": "8.2.8",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 4
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.gov.uk/government/publications/considering -asylum-claims-and-assessing-credibility-instruction).",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "the instruction on Assessing Credibility and Refugee Status]",
+   "after": "1.1.2 Decision makers must also check",
+   "before_pdf": "the instruction on Assessing Credibility and Refugee Status.",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.1",
+    "section": "Assessment",
+    "page": 4
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "2Convention",
+   "pdf": "2. Convention",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Official – sensitive: Not for disclosure – End of section",
+   "after": "reason(s)\n2.1.1 A severe humanitarian",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 99,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

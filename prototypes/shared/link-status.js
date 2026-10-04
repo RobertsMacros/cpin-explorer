@@ -9,7 +9,7 @@ import { fetchJson } from "./fetch-json.js";
 
 const DATA = new URL("../data/links/", import.meta.url);
 
-const LABEL = {
+export const LABEL = {
   ok: null,
   moved: "Moved",
   broken: "Dead",
@@ -19,7 +19,7 @@ const LABEL = {
   robots: "Not checked",
   other: "Can't verify",
 };
-const EXPLAIN = {
+export const EXPLAIN = {
   ok: "Works",
   moved: "Works, but now redirects elsewhere",
   broken: "No longer available",
@@ -41,7 +41,8 @@ export async function loadLinkStatus(country) {
 
 const strip = (url) => url.split("#")[0];
 const host = (url) => { try { return new URL(url).hostname.replace(/^www\./, ""); } catch { return ""; } };
-const day = (iso) => (iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" }) : "");
+// The UK day, like every other date on the site (a check at 23:30 UTC in summer was made the next day here).
+const day = (iso) => (iso ? new Date(iso).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "Europe/London" }) : "");
 
 /** One line describing a link's state, for tooltips and lists. */
 export function describe(url, entry) {

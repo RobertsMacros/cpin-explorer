@@ -1,0 +1,82 @@
+{
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-contravention-of-the-population-and-family-planning-law-china-may-2022-accessible",
+ "pdf_sha256": "8aa60ecf96c3e463f50e820ea748ca56f1b824b1d8b5e2a66f4adaf3e94bba05",
+ "body_sha256": "f8f0cb44ab2d1b841851e269c259b024469f522abe0b0628d0ee83b2d6a2d26c",
+ "figures": [
+  {
+   "image": "980c04353480dffdda865ef714197227a63dd8e57136a1e90fa5c7c7747e2caf.png",
+   "tag": "p",
+   "index": 89,
+   "key": "712statisticsfromthechinastatisticalyearbook2024publishedbyt",
+   "page": 13
+  },
+  {
+   "image": "c5e08c428e29aa3a3c8be94cb04f0dd827c7f372438909e8255abfa123d31e8f.png",
+   "tag": "p",
+   "index": 92,
+   "key": "722using2023datafromthechinastatisticalyearbook2024cpitprodu",
+   "page": 14
+  },
+  {
+   "image": "97927ee0348563d1031043920149d8cbfbacbc8ef961abc72ff71a0000d2b59f.png",
+   "tag": "p",
+   "index": 93,
+   "key": "731using2023datafromthechinastatisticalyearbook2024cpitprodu",
+   "page": 15
+  },
+  {
+   "image": "81e5711dc764b4fe975d5347d31b8dd1942ec7003a2854b770c130b68f1624ab.png",
+   "tag": "p",
+   "index": 94,
+   "key": "741using2023datafromthechinastatisticalyearbook2024cpitprodu",
+   "page": 15
+  },
+  {
+   "image": "e23829d01ef42e89b906ac0abb35c87b7365198a5fce1dce8a0d675a8eb1e6d3.png",
+   "tag": "p",
+   "index": 100,
+   "key": "751thefollowingcharthasbeencomposedusing2023datafromthechina",
+   "page": 16
+  },
+  {
+   "image": "2830ff9479bf5c92f0a920624743e73ae6d1efd1dcfd106c9200bac99d57354d.jpg",
+   "tag": "h2",
+   "index": 3,
+   "key": "annexeadiplomaticsource",
+   "page": 45
+  },
+  {
+   "image": "e687853c9d9dd2f337eff38875784cfee333a93d3f11a105e1347bb6f60c4537.jpg",
+   "tag": "h2",
+   "index": 3,
+   "key": "annexeadiplomaticsource",
+   "page": 46
+  },
+  {
+   "image": "6ebabf54c9d1bcf1564a19032edf33ff8b6e416030181ebb4cb0a194b306d0cb.jpg",
+   "tag": "h2",
+   "index": 3,
+   "key": "annexeadiplomaticsource",
+   "page": 47
+  },
+  {
+   "image": "fbf8a9f32c7adb011e97695f05b128f2cd863ffbf72c0c21e92699c8eaaf9829.png",
+   "tag": "h2",
+   "index": 4,
+   "key": "annexbdiplomaticsource",
+   "page": 48
+  },
+  {
+   "image": "f692a86348cdd614508417760d310436f119bd0fff894a6b74e242f3fdf1f893.png",
+   "tag": "h2",
+   "index": 4,
+   "key": "annexbdiplomaticsource",
+   "page": 49
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 10,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

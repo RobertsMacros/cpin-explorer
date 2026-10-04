@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 12,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 24,
+ "paragraphs": 71,
+ "list_items": 3,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 23,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Pakistan: Shia Muslims February 2015",
+ "cover_version": null,
+ "cover_date": "February 2015",
+ "pdf_sha256": "e1091e5aefd97041a3b23875f2587a97e6dbe42a989c6d14ce386fb6f5f4ef77",
+ "images": []
+}

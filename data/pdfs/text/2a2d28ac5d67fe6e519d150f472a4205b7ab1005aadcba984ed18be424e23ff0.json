@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 54,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 71,
+ "paragraphs": 374,
+ "list_items": 65,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 164,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 61"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Afghanistan: Unaccompanied children",
+ "cover_version": "1.0",
+ "cover_date": "April 2018",
+ "pdf_sha256": "2a2d28ac5d67fe6e519d150f472a4205b7ab1005aadcba984ed18be424e23ff0",
+ "images": []
+}

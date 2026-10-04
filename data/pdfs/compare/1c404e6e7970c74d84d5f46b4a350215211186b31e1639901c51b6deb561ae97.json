@@ -1,0 +1,450 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-opposition-to-the-state-china-january-2026-accessible",
+ "pdf_sha256": "1c404e6e7970c74d84d5f46b4a350215211186b31e1639901c51b6deb561ae97",
+ "body_sha256": "c3fd8dce9ecb854a4c4f1e9272bdd1540992238df273326f59fe1a1e4f527c09",
+ "words": {
+  "web": 22790,
+  "pdf": 23005
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 210,
+   "share": 0.004607,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 209
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 210
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 4
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 209
+   },
+   "list marker": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 4,
+   "web_words": 6,
+   "pdf_words": 6
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "January 2026",
+   "pdf": "5.0",
+   "pdf_date": "January 2026"
+  },
+  "section_updated": {
+   "web": [
+    "27 January 2026"
+   ],
+   "pdf": [
+    "27 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 129,
+   "pdf": 129,
+   "pdf_raw": 129,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 100,
+   "pdf": 62
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.5 Family members of perceived opponents of the state\n3.5.1 Close family members of high-profile activists, journalists, former political prisoners and those critical of the state may be at real risk of persecution or serious harm. This will depend on a number of factors including the profile and activities of their family member and the nature of the state's interest in them, their own views and activities, and their experience of or with the state.\n3.5.2 Family members of perceived opponents of the state can be subject to loss of employment, experience difficulties in obtaining accommodation, harassment, physical abuse, detention, and face restrictions on freedom of movement. In some cases, authorities deny their children entry to pre-school and primary education (see Family members of perceived opponents).\n3.5.3 Where perceived opponents of the state have left China, their families who remain are sometimes harassed by authorities to pressure them to return. The Chinese government often targets relatives of overseas journalists and human rights defenders, especially Uyghur families in Xinjiang. This practice, known as state-sanctioned or collective punishment, is based solely on …",
+   "web_words": 0,
+   "pdf_words": 209,
+   "before": "limited evidential value.’ (paragraphs 127 to 128).\n3.",
+   "after": "6 Sur place activities\n3.6.1 A",
+   "before_pdf": "very limited evidential value.’ (paragraphs 127 to 128).",
+   "where": {
+    "heading": "sur-place-activities",
+    "paragraph": "3.4.7",
+    "section": "Assessment",
+    "page": 11
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "withwith",
+   "pdf": "with",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "leave the country, slapping them and their families",
+   "after": "exit bans, and using transnational repression methods to",
+   "where": {
+    "heading": "overseas-in-general",
+    "paragraph": "14.1.1",
+    "section": "Country information",
+    "page": 40
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.5.",
+   "pdf": "3.6.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and diaspora organisations (see Monitoring of the diaspora).",
+   "after": "4 High profile activists outside of China who",
+   "where": {
+    "heading": "sur-place-activities",
+    "paragraph": "3.5.4",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.",
+   "pdf": "15.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "abuse are often met with reprisals or imprisonment.’",
+   "after": "4.2 The 2024 USSD report noted: ‘Former",
+   "where": {
+    "heading": "political-prisoners",
+    "paragraph": "14.4.2",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.",
+   "pdf": "15.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "political and religious dissidents for particularly harsh treatment.’",
+   "after": "4.3 Dui Hua, a non-profit humanitarian",
+   "where": {
+    "heading": "political-prisoners",
+    "paragraph": "14.4.3",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.",
+   "pdf": "15.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ethnic minorities and petitioners seeking redress for grievances.",
+   "after": "4.4 The same source note that the",
+   "where": {
+    "heading": "political-prisoners",
+    "paragraph": "14.4.4",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "at family members commonly practised in China today:",
+   "after": "Loss of freedom: Prison, enforced disappearance, detention, involuntary",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "enforced disappearance, detention, involuntary psychiatric commitment, house arrest;",
+   "after": "Loss of income: Loss of job, freezing of",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "account, forced business closure, discontinued social welfare payments;",
+   "after": "Loss of education: Children kicked out of school,",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "kicked out of school, new school applications denied;",
+   "after": "Loss of shelter: Home eviction, even mothers with",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "shelter: Home eviction, even mothers with young children;",
+   "after": "Exit ban: Blocked at the border, confiscation of",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "border, confiscation of passport, denial of passport application;",
+   "after": "Physical violence: Beating, kicking, threats, even death.\nThese",
+   "where": {
+    "heading": "family-opponents",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 40
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "number of online interactions",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "the dissent monitor.\nDate\nMode of dissent and",
+   "after": "Group + Issue\nTarget of posts\nRepression type following",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "14.4.4",
+    "section": "Annex A: Table on cases of online dissent",
+    "page": 49
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "number of online\ninteractions",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Target of posts\nRepression type following online post",
+   "after": "Oct 23\nIndividual post on WeChat. 1-99",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "14.4.4",
+    "section": "Annex A: Table on cases of online dissent",
+    "page": 49
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Arrest/detention",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Censorship\nJune 24\nIndividual post\nActivists State repression",
+   "after": "June 24\nIndividual post on WeChat\nChristians State",
+   "before_pdf": "24\nIndividual post\nActivists\nArrest/detention\nState repression",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "14.4.4",
+    "section": "Annex A: Table on cases of online dissent",
+    "page": 50
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Arrest/detention",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "harassment\nUniversity\nCensorship\nJune 24\nIndividual post\nActivists",
+   "after": "State repression\nArrest/detention\nJune 24\nIndividual post",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "14.4.4",
+    "section": "Annex A: Table on cases of online dissent",
+    "page": 50
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 173,
+  "different": {
+   "3.5.4": "3.6.4",
+   "14.4.2": "15.4.2",
+   "14.4.3": "15.4.3",
+   "14.4.4": "15.4.4"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

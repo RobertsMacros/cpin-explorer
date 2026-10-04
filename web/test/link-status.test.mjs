@@ -18,3 +18,9 @@ test("summary line only mentions what is there", () => {
   assert.equal(summaryLine({ counts: { total: 3, ok: 3, moved: 0, dead: 0, archived: 0, unverified: 0, unchecked: 0 } }),
     "3 links · 3 work");
 });
+
+test("a check is dated by the UK day, like every other date on the site", () => {
+  // 23:30 UTC on 2 July is 00:30 on 3 July in the UK (BST); in winter the two days are the same.
+  assert.equal(describe("https://www.hrw.org/x", { status: "ok", checked_at: "2026-07-02T23:30:00Z" }), "hrw.org · Works · checked 3 Jul 2026");
+  assert.equal(describe("https://www.hrw.org/x", { status: "ok", checked_at: "2026-12-02T23:30:00Z" }), "hrw.org · Works · checked 2 Dec 2026");
+});

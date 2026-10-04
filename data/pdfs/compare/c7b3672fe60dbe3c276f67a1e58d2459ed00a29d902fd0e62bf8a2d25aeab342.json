@@ -1,0 +1,509 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "jamaica/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+ "pdf_sha256": "c7b3672fe60dbe3c276f67a1e58d2459ed00a29d902fd0e62bf8a2d25aeab342",
+ "body_sha256": "bff41793d411a7259a00df4f73c17de0c9d17adf40d1ddd0eb123c273e72def4",
+ "words": {
+  "web": 33573,
+  "pdf": 33526
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 0,
+   "pdf_words": 4,
+   "share": 6e-05,
+   "passages": 2,
+   "sizes": {
+    "passage": 2,
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 49,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 18,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 2,
+    "web_words": 49,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 18,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 27,
+   "web_words": 26,
+   "pdf_words": 24
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "July 2022",
+   "pdf": "4.0",
+   "pdf_date": "July 2022"
+  },
+  "section_updated": {
+   "web": [
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022"
+   ],
+   "pdf": [
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022",
+    "26 July 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 5,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 282,
+   "pdf": 282,
+   "pdf_raw": 282,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 10,
+   "pdf": 16
+  },
+  "headings": {
+   "web": 80,
+   "pdf": 71
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 3,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Crime\n2018\n2019\nchange",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "7.8%\nAggravated Assaults\n379\n361\n4.7%",
+   "after": "Rapes\n503\n484\n3.8%\nRobberies\n1,088",
+   "where": {
+    "heading": "Rates_of_murder",
+    "paragraph": "3.2.4",
+    "section": "3. Prevalence of crime",
+    "page": 16
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Situation\nof population reporting ‘observation of situations’ in community",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "9.2\nVandalism\n10.4\nShootings\n28.1",
+   "after": "Sale of marijuana/ganja in the streets\n34.",
+   "where": {
+    "heading": "Overview",
+    "paragraph": "3.1.2",
+    "section": "3. Prevalence of crime",
+    "page": 12
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Parish\n2010 No. of gangs\n2018 No. of gangs",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "6\nClarendon\n21\n17\nSt. Elizabeth\n10\n4",
+   "after": "Hanover\n8\nWestmoreland\n7\n15\nSt. James\n9",
+   "where": {
+    "heading": "areas-of-influence",
+    "paragraph": "5.3.1",
+    "section": "5. Organised criminal gangs",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "From East to West:\nSt Thomas\nPortland\nSt Andrew\nSt Mary\nSt Catherine\nSt Ann\nClarendon\nManchester\nTrelawny\nSt Elizabeth\nSt James\nWest Moreland\nHanver",
+   "pdf": "",
+   "web_words": 25,
+   "pdf_words": 0,
+   "before": "Map Collection webpage, the map shows Parish boundaries:",
+   "after": "3.2 Rates of murder and other serious",
+   "where": {
+    "heading": "Overview",
+    "paragraph": "3.1.8",
+    "section": "3. Prevalence of crime",
+    "page": 14
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Graph showing murder rates for the year 2001 to 2020. The table shows that murders have risen by 13.7% between 2018 and 2021.",
+   "pdf": "",
+   "web_words": 24,
+   "pdf_words": 0,
+   "before": "1,287\n1,339\n1,323\n1,463",
+   "after": "3.2.4 The OSAC report 2020 provided",
+   "where": {
+    "heading": "Rates_of_murder",
+    "paragraph": "3.2.3",
+    "section": "3. Prevalence of crime",
+    "page": 15
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "The information in this section has been removed as it is restricted for internal Home Office use only.",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "is restricted for internal Home Office use only.",
+   "after": "Official – sensitive: End of section\n2.2 Exclusion",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "2.1.1",
+    "section": "2. Consideration of issues",
+    "page": 6
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Female\n1\n0\n2\n1",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "2017\nPolice\nMale\n8\n2\n6\n5\n8",
+   "after": "0\nChildren\nMale\n35\n38\n45\n33\n35",
+   "before_pdf": "1\n2 0\n6 2\n5 1\n8",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Female\n15\n6\n16\n6",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "0\nChildren\nMale\n35\n38\n45\n33\n35",
+   "after": "20\nOther\nMale\n1,028\n865\n1,041",
+   "before_pdf": "15\n38 6\n45 16\n33 6\n35",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Female\n113\n94\n98\n128",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "028\n865\n1,041\n1,181\n1,443",
+   "after": "140\nTotal\nMale\n1,071\n905\n1,092",
+   "before_pdf": "1,041 98\n1,181 128\n1,443",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Female\n129\n100\n116\n135",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "071\n905\n1,092\n1,219\n1,486",
+   "after": "160\n4.1.5 The Caribbean Policy Research",
+   "before_pdf": "1,092 116\n1,219 135\n1,486",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Female",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Gender\n2013\n2014\n2015\n2016\n2017\nPolice\nMale",
+   "after": "8\n2\n6\n5\n8\nFemale\n1\n0",
+   "before_pdf": "Gender 2013\n2014\n2015\n2016\n2017\nPolice\nMale",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2013\n2014\n2015\n2016\n2017\nPolice\nMale\n8",
+   "after": "2\n6\n5\n8\nFemale\n1\n0\n2",
+   "before_pdf": "2014\n2015\n2016\n2017\nPolice\nMale Female\n8",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "0",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2014\n2015\n2016\n2017\nPolice\nMale\n8\n2",
+   "after": "6\n5\n8\nFemale\n1\n0\n2\n1",
+   "before_pdf": "2016\n2017\nPolice\nMale Female\n8 1\n2",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2015\n2016\n2017\nPolice\nMale\n8\n2\n6",
+   "after": "5\n8\nFemale\n1\n0\n2\n1\n0",
+   "before_pdf": "Police\nMale Female\n8 1\n2 0\n6",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2016\n2017\nPolice\nMale\n8\n2\n6\n5",
+   "after": "8\nFemale\n1\n0\n2\n1\n0\nChildren",
+   "before_pdf": "Female\n8 1\n2 0\n6 2\n5",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Female",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Female\n1\n0\n2\n1\n0\nChildren\nMale",
+   "after": "35\n38\n45\n33\n35\nFemale\n15\n6",
+   "before_pdf": "6 2\n5 1\n8 0\nChildren\nMale",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "15",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "1\n0\n2\n1\n0\nChildren\nMale\n35",
+   "after": "38\n45\n33\n35\nFemale\n15\n6\n16",
+   "before_pdf": "5 1\n8 0\nChildren\nMale Female\n35",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "6",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "0\n2\n1\n0\nChildren\nMale\n35\n38",
+   "after": "45\n33\n35\nFemale\n15\n6\n16\n6",
+   "before_pdf": "8 0\nChildren\nMale Female\n35 15\n38",
+   "where": {
+    "heading": "profile",
+    "paragraph": "4.1.4",
+    "section": "4. Victims of violence",
+    "page": 19
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 337,
+  "different": {},
+  "pdf_unnumbered": [
+   "4.1.5",
+   "5.5.6"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [
+   "2.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

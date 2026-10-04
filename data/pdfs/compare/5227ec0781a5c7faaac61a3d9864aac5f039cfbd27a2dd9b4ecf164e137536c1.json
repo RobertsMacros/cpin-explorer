@@ -1,0 +1,175 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "lebanon/country-policy-and-information-note-palestinians-in-lebanon-lebanon-march-2024",
+ "pdf_sha256": "5227ec0781a5c7faaac61a3d9864aac5f039cfbd27a2dd9b4ecf164e137536c1",
+ "body_sha256": "c3c5d82203d5bf23ab0d184f2662ceae8a34742fa15fbc7b1c277acaad120a30",
+ "words": {
+  "web": 36967,
+  "pdf": 36943
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 25,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 1,
+    "web_words": 25,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "March 2024",
+   "pdf": "2.0",
+   "pdf_date": "March 2024"
+  },
+  "section_updated": {
+   "web": [
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024"
+   ],
+   "pdf": [
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024",
+    "4 March 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 264,
+   "pdf": 264,
+   "pdf_raw": 264,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 97,
+   "pdf": 67
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map shows gatherings in the North, Beirut, Al Shouf, Saida, Tyre and Beka’a. Camps are shown to be mainly in Beirut, Saida and Tyre.]",
+   "pdf": "63",
+   "web_words": 25,
+   "pdf_words": 0,
+   "before": "Palestinian refugee camps and Palestinian gatherings in Lebanon:",
+   "after": "7.9.4 The same source noted the",
+   "where": {
+    "heading": "Demography",
+    "paragraph": "7.9.3",
+    "section": "Country information",
+    "page": 27
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 324,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

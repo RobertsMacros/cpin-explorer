@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 47,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 56,
+ "paragraphs": 378,
+ "list_items": 80,
+ "tables": 8,
+ "figures": 2,
+ "footnotes": 144,
+ "bookmarks": 56,
+ "warnings": [
+  "footnotes with no mark found in the text: 26, 27, 28, 41, 44, 57, 67, 68, 86, 113, 130, 131…"
+ ],
+ "figure_pages": {
+  "2d893a2c7699e9bdaf6b8cb49216e451c0ec0be942566f1de0a6d23caf7b9060.png": 6,
+  "c54d3e4a83d29a0b2dbb838de79aa3b30aebb27cb4ba5b2441e9793a508ed70f.jpg": 8
+ },
+ "figure_sizes": {
+  "2d893a2c7699e9bdaf6b8cb49216e451c0ec0be942566f1de0a6d23caf7b9060.png": [
+   447,
+   305
+  ],
+  "c54d3e4a83d29a0b2dbb838de79aa3b30aebb27cb4ba5b2441e9793a508ed70f.jpg": [
+   748,
+   706
+  ]
+ },
+ "figure_text": {
+  "2d893a2c7699e9bdaf6b8cb49216e451c0ec0be942566f1de0a6d23caf7b9060.png": 1,
+  "c54d3e4a83d29a0b2dbb838de79aa3b30aebb27cb4ba5b2441e9793a508ed70f.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Background Note: Kenya",
+ "cover_version": "2.0",
+ "cover_date": "May 2020",
+ "pdf_sha256": "1fe9c899926178f226e30521b6a22bb846c9b9bfa2f2c2c5007e76ba8711a32e",
+ "images": [
+  "2d893a2c7699e9bdaf6b8cb49216e451c0ec0be942566f1de0a6d23caf7b9060.png",
+  "c54d3e4a83d29a0b2dbb838de79aa3b30aebb27cb4ba5b2441e9793a508ed70f.jpg"
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "democratic-republic-of-the-congo/country-policy-and-information-note-opposition-to-the-government-democratic-republic-of-the-congo-november-2023-accessible",
+ "pdf_sha256": "9c87d1763d84b108e897f2c548d75263838c9afafa4122ff8ab26ebafbb5a762",
+ "body_sha256": "361103d385bb7e06274581f2e9a445a92feed3e75b248e850414856a66dc8270",
+ "words": {
+  "web": 10805,
+  "pdf": 10645
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 142,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 1,
+    "web_words": 24,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 118,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "November 2023",
+   "pdf": "4.0",
+   "pdf_date": "November 2023"
+  },
+  "section_updated": {
+   "web": [
+    "23 August 2023",
+    "23 August 2023",
+    "05 September 2023"
+   ],
+   "pdf": [
+    "23 August 2023",
+    "23 August 2023",
+    "05 September 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 58,
+   "pdf": 58,
+   "pdf_raw": 58,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 45,
+   "pdf": 37
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number\nregions\nNone\nSud-ubangi Kwango Haut-lomani\n1 to 11\nNord-ubangi Bas-uele Mongala Equateur Tshuapa Tshopo Sankuru Kasai Kinshasa Kongo-central Kasai-central Kasai-oriental Lomani Lualaba Haut-katanga\n12 to 23\nHaut-uele Maniema Kwilu Tanganyika\n24 to 47\nMai-ndombe\n48 to 99\n100 to 199\n200 to 399\nSud-kivu\n400 to 799\nIturi Nord kivu\n800 or more",
+   "pdf": "",
+   "web_words": 59,
+   "pdf_words": 0,
+   "before": "incidents with at least one fatality in 2022:",
+   "after": "10.1.3 ACCORD also produced a map,",
+   "where": {
+    "heading": "geographical-variation",
+    "paragraph": "10.1.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number\nregions\nNone\nSud-ubangi Kwango Haut-lomani\n1 to 11\nHaut-uele Nord-ubangi Bas-uele Mongala Equateur Tshuapa Tshopo Sankuru Kasai Kinshasa Kongo-central Kasai-central Kasai-oriental Lomani Lualaba Haut-katanga Tanganyika Maniema\n12 to 23\nKwilu\n24 to 47\n48 to 99\nMai-ndombe\n100 to 199\nSud-kivu\n200 to 399\n400 to 799\nIturi Nord kivu\n800 or more",
+   "pdf": "",
+   "web_words": 59,
+   "pdf_words": 0,
+   "before": "as a result of political violence in 2022:",
+   "after": "10.1.4 The UN Joint Human Rights",
+   "where": {
+    "heading": "geographical-variation",
+    "paragraph": "10.1.3",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Evolution of documented human rights violations related to democratic space per month\nSep 22\n29\nOct 22\n44\nNov 22\n19\nDec 22\n10\nJan 23\n9\nFeb 23\n36",
+   "pdf": "",
+   "web_words": 24,
+   "pdf_words": 0,
+   "before": "for this category of alleged perpetrators in February’",
+   "after": "10.2.18 A report by United Nations",
+   "where": {
+    "heading": "evolution-of-documented-human-rights-violations-related-to-democratic-space-per-month",
+    "paragraph": "10.2.17",
+    "section": "Country information",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 91,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.2.1",
+   "10.2.2",
+   "10.2.3"
+  ],
+  "unconfirmed": []
+ }
+}

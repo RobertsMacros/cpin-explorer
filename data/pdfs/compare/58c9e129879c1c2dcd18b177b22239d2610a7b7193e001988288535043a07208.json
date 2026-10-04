@@ -1,0 +1,423 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "palestine/country-bulletin-security-situation-in-gaza-palestine-june-2026-accessible",
+ "pdf_sha256": "58c9e129879c1c2dcd18b177b22239d2610a7b7193e001988288535043a07208",
+ "body_sha256": "7baca9ef06fb3c9ceb8327581c0e4ec3a34f95f75203910a3a6b4ac263900166",
+ "words": {
+  "web": 8707,
+  "pdf": 8466
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 227,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 3,
+    "web_words": 227,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 14,
+   "web_words": 43,
+   "pdf_words": 14
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 14
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "June 2026",
+   "pdf": null,
+   "pdf_date": "June 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 28,
+   "pdf": 28,
+   "pdf_raw": 66,
+   "differ": false
+  },
+  "pictures": {
+   "web": 4,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 6,
+   "pdf": 7
+  },
+  "headings": {
+   "web": 25,
+   "pdf": 23
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Israel has killed at least 947 Palestinians despite the ‘ceasefire’\nSince the “ceasefire” took effect at noon on October 10, near-daily Israeli attacks have killed at least 947 Palestinians and injured 2,935.\nJanuary 31\nIsraeli bombardment kills at least 31 Palestinians, two days before the Rafah border crossing reopens\nNovember 22\nAt least 21 people killed in a spate of Israeli drone and missile attacks throughout northern and central Gaza\nOctober 19\nIsrael launches air raids across Gaza, killing 45 people, after Hamas was accused of killing two Israeli soldiers\nSource: Palestinian Ministry of Health, Gaza Government Media Office, June 5, 2026",
+   "pdf": "16",
+   "web_words": 104,
+   "pdf_words": 0,
+   "before": "12 The same source published the following infographic:",
+   "after": "3. Key statistics\n3.1 Sources and definitions",
+   "where": {
+    "heading": "post-ceasefire-security-events-and-fatalities",
+    "paragraph": "2.4.12",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Israel Completes First Phase of Gaza Withdrawal\nThe plan states that two further withdrawal phases will follow.\nOn October 10, Israeli forces withdrew to an agreed upon line that kept them in control of 53% of Gaza. The White House plan includes two future Israeli withdrawals to around 40% and 15% of Gaza territory. The final stage keeps a security perimeter around the enclave.\nNote: Withdrawal line is approximate and based on a post by the White House account on X on October 4, 2025.",
+   "pdf": "",
+   "web_words": 85,
+   "pdf_words": 0,
+   "before": "first of three stages of Israel’s withdrawal.",
+   "after": "Future stages indicated withdrawals to around 40 percent",
+   "where": {
+    "heading": "israel-completes-first-phase-of-gaza-withdrawal",
+    "paragraph": "2.3.1",
+    "section": "Country information",
+    "page": 7
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Israel has attacked Gaza on most days during the ‘ceasefire’\nIsrael has carried out attacks on Gaza on 215 of the 239 days since the October 10, 2025 “ceasefire”, according to an Al Jazeera analysis of news reports.",
+   "pdf": "",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "between 10 October 2025 and 5 June 2026:",
+   "after": "2.4.11 The Al Jazeera article, last",
+   "where": {
+    "heading": "post-ceasefire-security-events-and-fatalities",
+    "paragraph": "2.4.10",
+    "section": "Country information",
+    "page": 4
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "1,184)",
+   "pdf": "1184)",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "2026 (165)\n35\n48\n35\n38\n9\nTotal (",
+   "after": "143\n391\n252\n278\n120\n3.5.6",
+   "before_pdf": "2026 (165)\n35\n48\n35\n38\n9\nTOTAL (",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.5",
+    "section": "Country information",
+    "page": 21
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "UNSC, Implementation of Security Council resolution 2334 (2016) (para 14-21), 11 December 2026",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "the Gaza Peace Deal, updated 24 February 2026",
+   "after": "BBC, Israel moves Yellow Line deeper into Gaza,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "3.5.7",
+    "section": "Version control and feedback",
+    "page": 8
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "9 Apr. 2025 –\n10 Oct. 2025 –",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "the introduction of the ceasefire.\n10 Oct. 2023 –",
+   "after": "30 Jun. 2024\n9 Apr. 2025 – 9 Oct.",
+   "where": {
+    "heading": "number-of-types-of-events-10-october-202330-june-2024-and-9-april-20259-october-2025",
+    "paragraph": "3.4.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Apr. 2025 – 9 Oct. 2025\n10",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "ceasefire.\n10 Oct. 2023 – 30 Jun. 2024\n9",
+   "after": "Oct. 2025 – 30 Apr. 2026\nBattles\n1,061",
+   "before_pdf": "2025 –\n10 Oct. 2025 –\n30 Jun. 2024\n9",
+   "where": {
+    "heading": "number-of-types-of-events-10-october-202330-june-2024-and-9-april-20259-october-2025",
+    "paragraph": "3.4.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Jun. 2024\n9 Oct. 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "2025 – 9 Oct. 2025\n10 Oct. 2025 – 30",
+   "after": "Apr. 2026\nFatalities\n39,276\n13,081\n1,",
+   "before_pdf": "30\n9 Apr. 2025 –\n10 Oct. 2025 – 30",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.7",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025 – 9 Oct.",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "10 Oct. 2023 – 30 Jun. 2024\n9 Apr.",
+   "after": "2025\n10 Oct. 2025 – 30 Apr. 2026\nFatalities",
+   "before_pdf": "the ceasefire.\n10 Oct. 2023 – 30\n9 Apr.",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.7",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Jun. 2024",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "introduction of the ceasefire.\n10 Oct. 2023 – 30",
+   "after": "9 Apr. 2025 – 9 Oct. 2025\n10 Oct.",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.7",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "civilians",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "83\n77\n66\n9\n39\n440\nViolence against",
+   "after": "23\n9\n22\n52\n49\n37\n59\n251",
+   "where": {
+    "heading": "number-of-types-of-security-events-october-2025april-2026",
+    "paragraph": "3.2.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "civilians",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "23\n9\n22\n52\n49\n37\n59\n251",
+   "after": "Total\n270\n444\n473\n475\n397\n245\n371",
+   "where": {
+    "heading": "number-of-types-of-security-events-october-2025april-2026",
+    "paragraph": "3.2.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Violence",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2026\nBattles\n1,061\n178\n75\nExplosions/Remote",
+   "after": "8,752\n5,019\n1,886\nProtests\n6",
+   "where": {
+    "heading": "number-of-types-of-events-10-october-202330-june-2024-and-9-april-20259-october-2025",
+    "paragraph": "3.4.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Violence",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Remote Violence\n8,752\n5,019\n1,886",
+   "after": "Protests\n6\n12\n23\nRiots\n1\n1\n0",
+   "before_pdf": "Explosions/Remote\n8,752\n5,019\n1,886",
+   "where": {
+    "heading": "number-of-types-of-events-10-october-202330-june-2024-and-9-april-20259-october-2025",
+    "paragraph": "3.4.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "civilians",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "0\n0\n0\n0\n0\n0\nViolence against",
+   "after": "26\n5\n16\n30\n18\n17\n19\n131",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.4",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "civilians",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "26\n5\n16\n30\n18\n17\n19\n131",
+   "after": "Total\n289\n177\n84\n175\n148\n146\n165",
+   "where": {
+    "heading": "fatalities",
+    "paragraph": "3.5.4",
+    "section": "Country information",
+    "page": 20
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 43,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

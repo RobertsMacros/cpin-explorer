@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-falun-gong-china-november-2025-accessible",
+ "pdf_sha256": "45ec0702543f64a2ed084f134ade168e8134bd2c6a04be4cacdfcdee4e69f9c9",
+ "body_sha256": "dc5cdb4c9f7b78703e74690131bf79c6f30e19837004d46a80cffcf5ca5e7295",
+ "figures": [
+  {
+   "image": "cd6bef28940a90b4c617790b0eff9aec1f68b86ca94931ee94e23b43a995e9dd.png",
+   "tag": "p",
+   "index": 122,
+   "key": "sincethepersecutionoffalungongstarted25yearsagomostofthenort",
+   "page": 18
+  },
+  {
+   "image": "1e0c722f2e85c0c9555b43d14f4806416888f2d8adab958b53649dd5b6985c07.png",
+   "tag": "p",
+   "index": 123,
+   "key": "thereported2828arrestsand2864incidentsofharassmentalltookpla",
+   "page": 19
+  },
+  {
+   "image": "db26ff44df84f87e3d0c82107e3a5e47fc1b9dac8e4a5ddc3f86281422280856.png",
+   "tag": "p",
+   "index": 132,
+   "key": "942thebelowchartistakenfromthejanuary2025minghuiarticleandsh",
+   "page": 20
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 5,
+ "web_figures": 2,
+ "left_in_pdf": {}
+}

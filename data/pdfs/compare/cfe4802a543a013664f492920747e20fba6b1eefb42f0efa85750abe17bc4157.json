@@ -1,0 +1,227 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "georgia/country-policy-and-information-note-political-parties-and-affiliation-georgia-september-2024-accessible--2",
+ "pdf_sha256": "cfe4802a543a013664f492920747e20fba6b1eefb42f0efa85750abe17bc4157",
+ "body_sha256": "c83c5f7f9374c3b6ce37bc43ada99a5a870f1d974ef7aa9ffa2861a4037bfff9",
+ "words": {
+  "web": 27144,
+  "pdf": 27147
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 3,
+   "share": 7.4e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1,
+    "number": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "September 2024",
+   "pdf": "3.0",
+   "pdf_date": "September 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 159,
+   "pdf": 159,
+   "pdf_raw": 159,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 29,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Garibashvil.",
+   "pdf": "Garibashvili.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2024 following the resignation of his predecessor, Irakli",
+   "after": "7.1.4 Carnegie Europe, which focuses on",
+   "where": {
+    "heading": "bookmark14",
+    "paragraph": "7.1.3",
+    "section": "Country information",
+    "page": 10
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2023.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "s real goals are themselves opaque, 14 March",
+   "after": "Accessed: 12 September 2024\nMinistry of Justice of",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "13.5.4",
+    "section": "Bibliography",
+    "page": 58
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2021.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "leader arrested, protesters set up camp, 23 February",
+   "after": "Accessed: 12 September 2024\nOC Media, nika-melia-",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "13.5.4",
+    "section": "Bibliography",
+    "page": 16
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "onGeorgia,",
+   "pdf": "on Georgia,",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Commission against Racism and Intolerance (ECRI), ECRI Report",
+   "after": "22 June 2023. Accessed: 13 September 2024\nEuropean",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "13.5.4",
+    "section": "Bibliography",
+    "page": 61
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 198,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

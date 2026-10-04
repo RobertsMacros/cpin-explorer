@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "jamaica/country-policy-and-information-note-fear-of-organised-criminal-groups-ocgs-jamaica-july-2022-accessible",
+ "pdf_sha256": "c7b3672fe60dbe3c276f67a1e58d2459ed00a29d902fd0e62bf8a2d25aeab342",
+ "body_sha256": "bff41793d411a7259a00df4f73c17de0c9d17adf40d1ddd0eb123c273e72def4",
+ "figures": [
+  {
+   "image": "8b2d383416a8a96152c41552263bc053cd340445bc8c3aafe0535987ac0f3401.jpg",
+   "tag": "p",
+   "index": 93,
+   "key": "318amapofjamaicareproducedbelowisavailableontheperrycastaned",
+   "page": 14
+  },
+  {
+   "image": "50fb341770232e410ba933f85f9729df172c7ec75f541a60e8622721f0a89db8.png",
+   "tag": "p",
+   "index": 102,
+   "key": "323annualmurderrateswerealsoprovidedinthesamejcpstatisticalr",
+   "page": 15
+  },
+  {
+   "image": "d4d4a1cd68f756d5ab5f1aad88542aee35dcb95c138c85061314e4bffd42e314.png",
+   "tag": "p",
+   "index": 121,
+   "key": "413thefollowingunitednationsofficeondrugsandcrimeunodcgraphs",
+   "page": 19
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 3,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

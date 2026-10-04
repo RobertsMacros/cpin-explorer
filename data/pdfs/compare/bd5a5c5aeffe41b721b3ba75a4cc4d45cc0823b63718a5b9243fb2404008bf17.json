@@ -1,0 +1,472 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-political-situation-bangladesh-december-2024-accessible",
+ "pdf_sha256": "bd5a5c5aeffe41b721b3ba75a4cc4d45cc0823b63718a5b9243fb2404008bf17",
+ "body_sha256": "245acf6702c0164de1bf9490fe1385d669e6536ab39ebbb2da89c134744af4c0",
+ "words": {
+  "web": 22778,
+  "pdf": 22782
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 38,
+   "pdf_words": 31,
+   "share": 0.001514,
+   "passages": 5,
+   "sizes": {
+    "word": 2,
+    "passage": 5
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 38,
+    "pdf_words": 31
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 5
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 10,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 4,
+    "web_words": 28,
+    "pdf_words": 29
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 5
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 2,
+   "web_words": 8,
+   "pdf_words": 12
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "1.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [
+    "9 December 2024"
+   ],
+   "pdf": [
+    "9 December 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 213,
+   "pdf": 213,
+   "pdf_raw": 213,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 80,
+   "pdf": 52
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 6,
+   "cannot_tell": 1,
+   "disputes": 1
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "The Business Standard, Demonstrators beat 7 people..., 10 November 2024\nBdnews24, People chanting...slogans beaten, handed over to police, 10 November 2024",
+   "pdf": "",
+   "web_words": 22,
+   "pdf_words": 0,
+   "before": "The Business Standard, About Business Standard, no date",
+   "after": "The Business Standard, Demonstrators beat 7 people..., 10",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.5",
+    "section": "Version control and feedback",
+    "page": 36
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "BAMF, Briefing Notes (page 10), 30 September 2024\nBAMF, Briefing Notes (page 1), 30 September 2024",
+   "web_words": 0,
+   "pdf_words": 16,
+   "before": "in Bangladesh? (Section A.D), 14 November 2024",
+   "after": "ICG, A New Era in Bangladesh? (Section II.",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.5",
+    "section": "Version control and feedback",
+    "page": 35
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Ap News, Rivals of ousted Bangladesh leader ...hold a rally, 11 November 2024",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "Awami League rally in Bangladesh..., 10 November 2024.",
+   "after": "Daily Star, Killing of shopkeeper: Salman and Anisul",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.5",
+    "section": "Version control and feedback",
+    "page": 32
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Three Months After Hasina’s Downfall: Opportunities and Challenges\nBangladesh",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "5 November 2024. Accessed: 13 November 2024\nBangladesh",
+   "after": "on Edge after Crushing Quota Protests, 25 July",
+   "where": {
+    "heading": "international-crisis-group-icg",
+    "paragraph": "13.4.5",
+    "section": "Bibliography",
+    "page": 51
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "New Age, About Us, no date",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "Awami League lawmaker Shahidul arrested, 4 October 2024",
+   "after": "Prothom Alo, Asaduzzaman Noor, Mahbub Ali arrested, 16",
+   "before_pdf": "150 cases in 45 days, 20 September 2024",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.5",
+    "section": "Version control and feedback",
+    "page": 33
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "BNP)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "worst-case scenario”.’\n12.4 Bangladesh Nationalist Party",
+   "after": "12.4.1 Chair of the Bangladesh Nationalist",
+   "before_pdf": "worst-case scenario”.’\n12.4 Bangladesh Nationalist Party (",
+   "where": {
+    "heading": "BNP",
+    "paragraph": "12.4.1",
+    "section": "Country information",
+    "page": 37
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Sunday, Nov. 10, 2024’\n13.3 Reform of",
+   "after": "security forces and judiciary\n13.3.1The police",
+   "where": {
+    "heading": "reform-of-security-forces-judiciary",
+    "paragraph": "13.2.10",
+    "section": "Country information",
+    "page": 40
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 1.0, December 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nPolitics in Bangladesh has historically been",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "13.3.1The",
+   "pdf": "13.3.1 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "13.3 Reform of security forces and judiciary",
+   "after": "police under the AL government were politicised with",
+   "before_pdf": "3 Reform of the security forces and judiciary",
+   "where": {
+    "heading": "reform-of-security-forces-judiciary",
+    "paragraph": "13.3.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.8",
+   "pdf": "11.3.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "by a comprehensive consultation with all interested parties.",
+   "after": "A livestream event held by International Crisis Group (",
+   "where": {
+    "heading": "interim-government-mandate",
+    "paragraph": "11.3.8",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.9",
+   "pdf": "11.3.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to implement reforms before an election is held.’",
+   "after": "In the same ICG event, Tom Kean noted",
+   "where": {
+    "heading": "interim-government-mandate",
+    "paragraph": "11.3.9",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.10",
+   "pdf": "11.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "support has been very strong [and also] helps...’",
+   "after": "In the same ICG event Tom Kean pointed",
+   "where": {
+    "heading": "interim-government-mandate",
+    "paragraph": "11.3.10",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.11",
+   "pdf": "11.3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a lack of experience, support, resource, and bureaucracy.",
+   "after": "The ICG report published 14 November 2024 noted: ‘",
+   "where": {
+    "heading": "interim-government-mandate",
+    "paragraph": "11.3.11",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.12",
+   "pdf": "11.3.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "now, Yunus and his colleagues have widespread support.’",
+   "after": "The same ICG report noted the interim 16-",
+   "where": {
+    "heading": "interim-government-mandate",
+    "paragraph": "11.3.12",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "Ex-Awami League lawmaker Shahidul arrested, 4 October",
+   "pdf": "Hasina sued in 150 cases in 45 days, 20 September",
+   "web_words": 8,
+   "pdf_words": 10,
+   "before": "sued for murder, 25 August 2024\nDhaka Tribune,",
+   "after": "2024\nNew Age, About Us, no date\nProthom",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.5",
+    "section": "Version control and feedback",
+    "page": 33
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "8.1 Structure\n8.1.",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "focus (July 2024)\n8. Political system\n8.1.",
+   "after": "1 The political structure of the Bangladesh is",
+   "before_pdf": "Bangladesh - Country focus (July 2024).\n8. Political system",
+   "where": {
+    "heading": "political-system",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 220,
+  "different": {
+   "11.3.8": "11.3.1",
+   "11.3.9": "11.3.2",
+   "11.3.10": "11.3.3",
+   "11.3.11": "11.3.4",
+   "11.3.12": "11.3.5"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 29,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 43,
+ "paragraphs": 189,
+ "list_items": 73,
+ "tables": 8,
+ "figures": 3,
+ "footnotes": 110,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 15, 16, 36, 46"
+ ],
+ "figure_pages": {
+  "454ebbf68a5a1d958d0d01501a48008cc83c07294a5ebf1a4d6b2b7c99038634.png": 6,
+  "18f416f7da22acca0549a5a9fa3abdbbe62899075993245f60ad4f4447695ad7.jpg": 8,
+  "753b4146f9ba5d2b91d32b47055b352296e50fc322b1090a6f2c9f27a0b21b6d.jpg": 11
+ },
+ "figure_sizes": {
+  "454ebbf68a5a1d958d0d01501a48008cc83c07294a5ebf1a4d6b2b7c99038634.png": [
+   463,
+   314
+  ],
+  "18f416f7da22acca0549a5a9fa3abdbbe62899075993245f60ad4f4447695ad7.jpg": [
+   831,
+   1016
+  ],
+  "753b4146f9ba5d2b91d32b47055b352296e50fc322b1090a6f2c9f27a0b21b6d.jpg": [
+   728,
+   651
+  ]
+ },
+ "figure_text": {
+  "454ebbf68a5a1d958d0d01501a48008cc83c07294a5ebf1a4d6b2b7c99038634.png": 1,
+  "18f416f7da22acca0549a5a9fa3abdbbe62899075993245f60ad4f4447695ad7.jpg": 0,
+  "753b4146f9ba5d2b91d32b47055b352296e50fc322b1090a6f2c9f27a0b21b6d.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Background Note India",
+ "cover_version": "1.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "c68918ac41e26e26afc75b79f0838e5a5ce086496247623bd168526bcd2f6685",
+ "images": [
+  "18f416f7da22acca0549a5a9fa3abdbbe62899075993245f60ad4f4447695ad7.jpg",
+  "454ebbf68a5a1d958d0d01501a48008cc83c07294a5ebf1a4d6b2b7c99038634.png",
+  "753b4146f9ba5d2b91d32b47055b352296e50fc322b1090a6f2c9f27a0b21b6d.jpg"
+ ]
+}

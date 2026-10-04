@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 61,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 83,
+ "paragraphs": 460,
+ "list_items": 82,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 193,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 52, 83, 120, 121"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Eritrea: National service and illegal exit",
+ "cover_version": "5.0",
+ "cover_date": "July 2018",
+ "pdf_sha256": "b4599ca3333067f2b44842141b774671d2e7da19b4f3056055c90e2741e625dc",
+ "images": []
+}

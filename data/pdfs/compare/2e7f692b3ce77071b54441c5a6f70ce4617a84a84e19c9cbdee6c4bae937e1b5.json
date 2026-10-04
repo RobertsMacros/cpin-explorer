@@ -1,0 +1,747 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-separatist-groups-in-the-south-east-nigeria-april-2026-accessible",
+ "pdf_sha256": "2e7f692b3ce77071b54441c5a6f70ce4617a84a84e19c9cbdee6c4bae937e1b5",
+ "body_sha256": "0da0fd71cde21d1fd2cc0f4e4d154c321c211b758319e3a48dcce9fee004e01b",
+ "words": {
+  "web": 42635,
+  "pdf": 42653
+ },
+ "summary": {
+  "wording": {
+   "differences": 10,
+   "web_words": 33,
+   "pdf_words": 28,
+   "share": 0.000715,
+   "passages": 5,
+   "sizes": {
+    "passage": 5,
+    "word": 4,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 2,
+   "words": 17
+  },
+  "groups": {
+   "wording": {
+    "differences": 10,
+    "web_words": 33,
+    "pdf_words": 28
+   },
+   "numbering": {
+    "differences": 15,
+    "web_words": 15,
+    "pdf_words": 24
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 9,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 9,
+    "pdf_words": 0
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 11,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 11,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 15,
+    "web_words": 15,
+    "pdf_words": 24
+   },
+   "text": {
+    "differences": 6,
+    "web_words": 10,
+    "pdf_words": 25
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 3,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "April 2026",
+   "pdf": "4.0",
+   "pdf_date": "April 2026"
+  },
+  "section_updated": {
+   "web": [
+    "2 April 2026"
+   ],
+   "pdf": [
+    "2 April 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 6,
+   "pdf": 6,
+   "web_notices": 7,
+   "pdf_notices": 8
+  },
+  "footnotes": {
+   "web": 367,
+   "pdf": 367,
+   "pdf_raw": 367,
+   "differ": false
+  },
+  "pictures": {
+   "web": 10,
+   "pdf": 10
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 86,
+   "pdf": 84
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 10,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "in which they noted that Umahi did not speak for the Igbo people.",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "the diaspora had issued a statement that day.",
+   "after": "The article quoted the statement as follows:\nSince",
+   "before_pdf": "the diaspora had issued a statement that day,",
+   "where": {
+    "heading": "political-context",
+    "paragraph": "8.1.22",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Submission on behalf of the family of Nnamdi Kanu to the ...,,",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "January 2026. Accessed: 4 February 2026\nBindmans LLP,",
+   "after": "7 March 2023. Accessed: 4 February 2026. Accessed",
+   "before_pdf": "January 2026. Accessed: 4 February 2026\nBindmans LLP, ,,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "17.5.3",
+    "section": "Bibliography",
+    "page": 93
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Submission on behalf of the family of Nnamdi Kanu to the ...,",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "Kanu to the ..., 7 March 2023\nBindmans LLP,",
+   "after": "7 March 2023\nBBC News, Nnamdi Kanu: Nigerian",
+   "before_pdf": "Kanu to the ..., 7 March 2023\nBindmans LLP, ,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.5.3",
+    "section": "Version control and feedback",
+    "page": 76
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the splinter faction ‘Biafra’ Republic Government in Exile (BRGIE)/Autopilot",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "MASSOB) the Indigenous People of ‘Biafra’ (IPOB), including",
+   "after": "1. Material facts, credibility and other checks/referrals",
+   "before_pdf": "MASSOB)\nthe Indigenous People of ‘Biafra’ (IPOB), including",
+   "where": {
+    "heading": "material-facts-credibility-and-other-checksreferrals",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 6
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "NetworkIndigenous People of ‘Biafra’ (IPOB)/Eastern Security",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "see Indigenous People of ‘Biafra’ (IPOB)/Eastern Security",
+   "after": "Network (ESN), below).\n3.2.3 In the",
+   "where": {
+    "heading": "movement-risk",
+    "paragraph": "3.2.2",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "7.3.4 In",
+   "pdf": "7.3.4 An",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "national anthem of Biafra, written by Nnamdi Azikiwe.",
+   "after": "undated entry on the IPOB Worldwide website featured",
+   "where": {
+    "heading": "biafra-emblems-and-anthem",
+    "paragraph": "7.3.4",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "he",
+   "pdf": "the",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "more information on:\nthe evolution and fragmentation of",
+   "after": "main separatist groups, see Nyor, GA, and others,",
+   "where": {
+    "heading": "overview-separatist",
+    "paragraph": "10.2.2",
+    "section": "Country information",
+    "page": 36
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and tracking",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Note Nigeria: Actors of Protection.\n11.2 Monitoring",
+   "after": "11.2.1 The 2025 EUAA country report",
+   "where": {
+    "heading": "monitoring",
+    "paragraph": "11.2.1",
+    "section": "Country information",
+    "page": 38
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "detentions",
+   "pdf": "detention",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "gathering in the State.’\n13.3 Arrests and",
+   "after": "13.3.1 Business Day, a Nigerian privately-",
+   "where": {
+    "heading": "arrests-detentions-massob",
+    "paragraph": "13.2.2",
+    "section": "Country information",
+    "page": 44
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "the [",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "he described MASSOB as ‘the proscribed movement for",
+   "after": "sic] Actualisation of Sovereign State of Biafra.’\n12.",
+   "before_pdf": "he described MASSOB as ‘the proscribed Movement for [",
+   "where": {
+    "heading": "legal-status",
+    "paragraph": "12.2.4",
+    "section": "Country information",
+    "page": 42
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://journals.sagepub.com/doi/epub/10.1177/14687968231208307) (",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "2024\nOnyemechalu, SJ, and others, Ethnicities, [Long-distance ...]",
+   "after": "page 322), June 2024\nHumAngle, The Internet Fundraising",
+   "before_pdf": "2024\nOnyemechalu, SJ, and others, Ethnicities, Long-distance ... (",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.5.3",
+    "section": "Version control and feedback",
+    "page": 85
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.6\n1.2.7",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.5",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.",
+   "pdf": "14.6.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "to IPOB globally or only to IPOB Ontario.",
+   "after": "4 Regarding membership, there was no information on",
+   "where": {
+    "heading": "funding",
+    "paragraph": "16.4.4",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.",
+   "pdf": "14.6.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "the sources consulted for this note (see Bibliography).",
+   "after": "5 Regarding IPOB identity cards, a press release",
+   "where": {
+    "heading": "funding",
+    "paragraph": "16.4.5",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "political-context",
+    "paragraph": "7.3.4",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3",
+   "pdf": "3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Asylum Instruction on Assessing Credibility and Refugee Status.",
+   "after": "Sur place activities\n3.3.1 An actual",
+   "where": {
+    "heading": "sur-place-activities",
+    "paragraph": "3.3.22",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and Refugee Status.\n3.3 Sur place activities",
+   "after": "1 An actual or perceived member or supporter",
+   "before_pdf": "and Refugee Status.\n3.4 Sur place activities",
+   "where": {
+    "heading": "sur-place-activities",
+    "paragraph": "3.3.1",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to be at risk on return to Nigeria.",
+   "after": "2 However, each case must be considered on",
+   "where": {
+    "heading": "sur-place-activities",
+    "paragraph": "3.3.2",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.",
+   "pdf": "9.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Official – sensitive: Not for disclosure – End of section",
+   "after": "21 The 2025 Cedoca report stated:\nFor four",
+   "where": {
+    "heading": "security-situation",
+    "paragraph": "9.2.21",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.",
+   "pdf": "9.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "government security forces, state militias and community militias ...",
+   "after": "22 The 2025 Cedoca report stated: ‘From January",
+   "where": {
+    "heading": "security-situation",
+    "paragraph": "9.2.22",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "influential of all these groups in recent times ...’",
+   "after": "2 For more information on:\nthe evolution and",
+   "where": {
+    "heading": "overview-separatist",
+    "paragraph": "10.2.2",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.4.5",
+   "pdf": "13.4.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "for Ralph Uwazuruike to appear before the AKU.",
+   "after": "For more information on the protests of 20",
+   "where": {
+    "heading": "discrimination-harassment",
+    "paragraph": "13.4.5",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.2.3",
+   "pdf": "15.2.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "nothing to do with Ekpa and his group.’",
+   "after": "The Atlantic Post, a Nigerian privately-owned digital",
+   "where": {
+    "heading": "relationship-to-ipob-and-the-directorate-of-state-faction",
+    "paragraph": "15.2.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.2.3",
+   "pdf": "15.2.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "fragmented movement teetering on the brink of chaos.’",
+   "after": "The same editorial also explained: ‘IPOB’s rejection",
+   "where": {
+    "heading": "relationship-to-ipob-and-the-directorate-of-state-faction",
+    "paragraph": "15.2.3",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.2.4",
+   "pdf": "15.2.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "information regarding the United States of ‘Biafra’ (USB).",
+   "after": "The 2025 SBM Intelligence report observed: ‘Sources repeatedly",
+   "where": {
+    "heading": "relationship-to-ipob-and-the-directorate-of-state-faction",
+    "paragraph": "15.2.4",
+    "section": "Country information",
+    "page": 68
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.2.5",
+   "pdf": "15.2.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "orders ‘despite public disavowals by IPOB’s leadership.’",
+   "after": "According to an article dated 10 July 2025",
+   "where": {
+    "heading": "relationship-to-ipob-and-the-directorate-of-state-faction",
+    "paragraph": "15.2.5",
+    "section": "Country information",
+    "page": 68
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "ESN),",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "NetworkIndigenous People of ‘Biafra’ (IPOB)/Eastern Security Network (",
+   "after": "below).\n3.2.3 In the early 2000s,",
+   "before_pdf": "Indigenous People of ‘Biafra’ (IPOB)/Eastern Security Network,",
+   "where": {
+    "heading": "movement-risk",
+    "paragraph": "3.2.2",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Codebook.",
+   "pdf": "Codebook84.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "further details on ACLED methodology, see the ACLED",
+   "after": "9.1.23 According to Cedoca’s 2025",
+   "where": {
+    "heading": "security-situation",
+    "paragraph": "9.2.22",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Jewish.",
+   "pdf": "Jewish191.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "both Nigerian and British passports and identifies as",
+   "after": "14.5.2 For information on the conviction",
+   "where": {
+    "heading": "ipob-structure",
+    "paragraph": "14.5.1",
+    "section": "Country information",
+    "page": 53
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 420,
+  "different": {
+   "9.2.21": "9.1.21",
+   "9.2.22": "9.1.22",
+   "10.2.2": "10.1.2",
+   "15.2.4": "15.2.6",
+   "15.2.5": "15.2.7"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 3,
+  "repeated": [
+   "3.3",
+   "3.3.1",
+   "3.3.2",
+   "13.4.5",
+   "16.4.4",
+   "16.4.5",
+   "15.2.3"
+  ],
+  "unconfirmed": []
+ }
+}

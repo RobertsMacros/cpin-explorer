@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 48,
+ "paragraphs": 273,
+ "list_items": 27,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 123,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Pakistan: Hazaras",
+ "cover_version": "2.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "2c0bc118585ef28aadc77f4c88d4733d9687950a8e1a97db280252efed1a0086",
+ "images": []
+}

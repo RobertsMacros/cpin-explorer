@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 49,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 41,
+ "paragraphs": 379,
+ "list_items": 36,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 78,
+ "bookmarks": 41,
+ "warnings": [
+  "footnotes with no mark found in the text: 13"
+ ],
+ "figure_pages": {
+  "c4a67293f86ba56d495d5b1d4dcdb7f679e68ad2b940c56a524ef9ab6b1235ef.png": 13,
+  "f39f906244ac55e7b197f983e1a1372f5bfbf4b6e49e9fede23c48be30be9866.png": 43
+ },
+ "figure_sizes": {
+  "c4a67293f86ba56d495d5b1d4dcdb7f679e68ad2b940c56a524ef9ab6b1235ef.png": [
+   901,
+   284
+  ],
+  "f39f906244ac55e7b197f983e1a1372f5bfbf4b6e49e9fede23c48be30be9866.png": [
+   919,
+   596
+  ]
+ },
+ "figure_text": {
+  "c4a67293f86ba56d495d5b1d4dcdb7f679e68ad2b940c56a524ef9ab6b1235ef.png": 0,
+  "f39f906244ac55e7b197f983e1a1372f5bfbf4b6e49e9fede23c48be30be9866.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note China: Opposition to the state",
+ "cover_version": "3.0",
+ "cover_date": "November 2018",
+ "pdf_sha256": "e6bc52dc9055120957bf06d9919106ad30cc8c103ed5109c90ec973f8f2c8070",
+ "images": [
+  "c4a67293f86ba56d495d5b1d4dcdb7f679e68ad2b940c56a524ef9ab6b1235ef.png",
+  "f39f906244ac55e7b197f983e1a1372f5bfbf4b6e49e9fede23c48be30be9866.png"
+ ]
+}

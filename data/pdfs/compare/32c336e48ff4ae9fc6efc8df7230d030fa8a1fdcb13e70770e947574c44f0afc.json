@@ -1,0 +1,290 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "russia/country-policy-and-information-note-critics-and-opponents-of-the-government-russia-august-2022-accessible",
+ "pdf_sha256": "32c336e48ff4ae9fc6efc8df7230d030fa8a1fdcb13e70770e947574c44f0afc",
+ "body_sha256": "05752539dee80a05ca3bfce22349dbc2d363837157437be8da15db2690790c29",
+ "words": {
+  "web": 26807,
+  "pdf": 26778
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 9,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 5,
+    "web_words": 20,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 9,
+    "pdf_words": 0
+   },
+   "attachment label": {
+    "differences": 5,
+    "web_words": 20,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "August 2022",
+   "pdf": "1.0",
+   "pdf_date": "August 2022"
+  },
+  "section_updated": {
+   "web": [
+    "9 August 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "19 January 2022"
+   ],
+   "pdf": [
+    "9 August 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "1 June 2022",
+    "19 January 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 6,
+   "pdf_notices": 6
+  },
+  "footnotes": {
+   "web": 207,
+   "pdf": 207,
+   "pdf_raw": 207,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 96,
+   "pdf": 74
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.iphronline.org/russia-s-silence-factory.html (",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "26), August 2021\nIPHR, [Russia’s Silence Factory...](",
+   "after": "p.10), August 2021\nIPHR, Russia’s Silence",
+   "before_pdf": "26), August 2021\nIPHR, Russia's Silence Factory... (",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 18
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 7.1 MB) (",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "this subject.\nFreedom House, Nations in Transit 2021 (",
+   "after": "p.5), 28 April 2021\nFreedom House, Russia:",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 13
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 7.1 MB) (",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "September 2021\nFreedom House, Nations in Transit 2021 (",
+   "after": "p.5), 28 April 2021\nUSSD, HR Report",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 13
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 7.1 MB) (",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "April 2022\nFreedom House, Nations in Transit 2021 (",
+   "after": "p.5), 28 April 2021\nFreedom House, Nations",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 13
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 7.1 MB) (",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "April 2021\nFreedom House, Nations in Transit 2021 (",
+   "after": "p.5), 28 April 2021\nUSSD, HR Report",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 13
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 7.1 MB) (",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "December 2021\nFreedom House, Nations in Transit 2021 (",
+   "after": "p.5), 28 April 2021\nUSSD, HR Report",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "12.1.4",
+    "section": "Version control",
+    "page": 13
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Ukraine.",
+   "pdf": "Ukraine94.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "connection with the actions against the war with",
+   "after": "8.6.2 An article by Alvina Hoffman,",
+   "where": {
+    "heading": "State_responses_to",
+    "paragraph": "8.6.1",
+    "section": "8. State treatment of critics and political opponents",
+    "page": 36
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 270,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

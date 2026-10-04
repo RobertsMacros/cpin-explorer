@@ -2,7 +2,7 @@
 // body file and the URL a citation should point at. Edition logic is pure (Node-testable); the fetch
 // helpers need a browser (or Node's fetch).
 import { fetchJson } from "./fetch-json.js";
-import { paraAt, paraDepth, paraNumber, paraRange } from "./citation.js";
+import { paraAt, paraDepth, paraNumbers, paraRange, splitRange, usedTwice } from "./citation.js";
 
 /** fetch() + text with quick retries, for flaky networks and busy dev servers. */
 export async function fetchText(url, { tries = 3 } = {}) {
@@ -50,6 +50,10 @@ export const paths = {
   body: (country, note, sha) => `../../data/countries/${country}/notes/${note}/${String(sha).slice(0, 16)}.html`,
   image: (entry) => `../../data/images/files/${entry.sha256}${entry.ext}`,
   reader: (country, note, hash = "") => `../reader/index.html?country=${encodeURIComponent(country)}&note=${encodeURIComponent(note)}${hash}`,
+  /** The report a highlight was saved from: by its series where the record has one (it outlives any one edition), else by its note. */
+  report: (rec, hash = "") => (rec.series
+    ? `../reader/index.html?country=${encodeURIComponent(rec.country)}&series=${encodeURIComponent(rec.series).replace(/%3A/gi, ":")}${hash}`
+    : paths.reader(rec.country, rec.note, hash)),
 };
 
 /**
@@ -126,18 +130,22 @@ export function analyseBody(root) {
     }
     return null;
   };
-  const ps = [...root.querySelectorAll("p")].filter((p) => !p.closest(PARA_EXCLUDE));
-  const depth = paraDepth(ps.map((p) => p.textContent));
-  const paras = [];
-  for (const p of ps) { const num = paraNumber(p.textContent, { minDepth: depth }); if (num) paras.push({ el: p, num }); }
-  const paraOf = new Map(paras.map((x) => [x.el, x.num]));
-  const anchors = [], sections = [];
-  for (const el of root.querySelectorAll("h2, h3, h4, p, .footnotes")) {
-    const isPara = el.tagName === "P";
-    if (isPara && !paraOf.has(el)) continue;
+  const ps = new Set([...root.querySelectorAll("p")].filter((p) => !p.closest(PARA_EXCLUDE)));
+  const depth = paraDepth([...ps].map((p) => p.textContent));
+  // The note's own paragraphs and its headings, in order: each paragraph's number is read in its place (citation.js: paraNumbers).
+  const blocks = [...root.querySelectorAll("h2, h3, h4, p, .footnotes")].filter((el) => el.tagName !== "P" || ps.has(el));
+  const numbers = paraNumbers(blocks.map((el) => (el.tagName === "P" ? { text: el.textContent } : { heading: true })), depth);
+  const paras = [], anchors = [], sections = [];
+  for (const [i, el] of blocks.entries()) {
+    const isPara = el.tagName === "P", n = numbers[i];
+    if (isPara && !n) continue;
     const at = firstTextAt(el);
     if (at == null) continue;
-    if (isPara) { anchors.push({ at, para: paraOf.get(el) }); continue; }
+    if (isPara) {
+      if (n.num) paras.push({ el, num: n.num, lead: n.lead });   // lead: the number as printed ("9.1.1."), hung in the margin and left out of a quote
+      anchors.push({ at, para: n.num, lead: n.lead });           // para null: a number that cannot be read, so no pinpoint from here on
+      continue;
+    }
     const fn = el.matches(".footnotes");
     const title = fn ? "Footnotes" : el.textContent.replace(/\s+/g, " ").trim();
     anchors.push({ at, heading: title });
@@ -145,6 +153,7 @@ export function analyseBody(root) {
   }
   anchors.sort((a, b) => a.at - b.at);
   sections.sort((a, b) => a.at - b.at);
+  const twice = usedTwice(paras.map((p) => p.num));
   const refs = [...root.querySelectorAll('a[role="doc-noteref"], sup a.footnote[href^="#fn"]')].map((a) => ({
     a, n: Number((a.getAttribute("href") || "").match(/(\d+)\s*$/)?.[1] || a.textContent.match(/\d+/)?.[0]),
     at: firstTextAt(a), len: a.textContent.trim().length,
@@ -158,13 +167,17 @@ export function analyseBody(root) {
     const link = clone.querySelector("a[href^='http']");
     fns.set(n, { n, text: clone.textContent.replace(/\s+/g, " ").trim(), url: link?.getAttribute("href") || null, html: clone.innerHTML.trim() });
   }
-  return { text, depth, paras, anchors, sections, refs, fns };
+  return { text, depth, paras, anchors, sections, refs, fns, twice };
 }
 
 /** Paragraph (or range), section and the footnote sources a passage [s, e) cites, including footnotes
- *  that follow it directly ("…Armed Forces.[footnote 12]"). */
+ *  that follow it directly ("…Armed Forces.[footnote 12]"). lead is the paragraph number the passage opens
+ *  with, as printed, when it begins at the very start of a numbered paragraph (a quote leaves it out: it is
+ *  in the pinpoint), else null: a number anywhere else is part of the words quoted. twice: the note uses the
+ *  paragraph's number for more than one paragraph, so a citation names the section too. */
 export function describePassage(a, s, e) {
   const para = paraRange(paraAt(a.anchors, s), paraAt(a.anchors, Math.max(s, e - 1)));
+  const lead = a.anchors.find((x) => x.at === s && x.para)?.lead ?? null;
   let section = null;
   for (const x of a.sections) { if (x.at > s) break; section = x.title; }
   const ns = [];
@@ -177,5 +190,20 @@ export function describePassage(a, s, e) {
     end = r.at + r.len;
   }
   const sources = ns.map((n) => { const f = a.fns.get(n); return { n, text: f?.text || `Footnote ${n}`, url: f?.url || null }; });
-  return { para, section, sources };
+  return { para, section, sources, lead, twice: !!para && splitRange(para).some((n) => a.twice?.has(n)) };
+}
+
+/** A selection that begins inside a paragraph's own number begins at the number: "1.2 In 2025" picked out of
+ *  "16.1.2 In 2025" is that paragraph from its start, not a quote opening with "1.2". Returns the new start. */
+export function snapToParaNumber(a, s) {
+  const inside = a.anchors.find((x) => x.para && x.at < s && s < x.at + (x.lead ?? x.para).length);
+  return inside ? inside.at : s;
+}
+
+/** A selection dragged a little too far ends in the next paragraph's number ("…and children. 16.1.3"). That
+ *  number is no part of the passage, and would make the pinpoint a range: the passage ends before it.
+ *  Returns the new end. A selection that takes any of the next paragraph's words is left as it is. */
+export function trimNextParaNumber(a, s, e) {
+  const next = a.anchors.find((x) => x.para && x.at > s && x.at < e && (x.lead ?? x.para).startsWith(a.text.slice(x.at, e).trim()));
+  return next ? s + a.text.slice(s, next.at).trimEnd().length : e;
 }

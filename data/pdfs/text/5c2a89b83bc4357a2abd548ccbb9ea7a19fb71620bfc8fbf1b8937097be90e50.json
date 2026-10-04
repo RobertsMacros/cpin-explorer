@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 34,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 22,
+ "paragraphs": 249,
+ "list_items": 95,
+ "tables": 10,
+ "figures": 3,
+ "footnotes": 123,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 4, 11, 19, 32"
+ ],
+ "figure_pages": {
+  "cc145c9d097928b81dfc99e032c0dd4981118854357fcf280a09655d1deff392.png": 5,
+  "185ed00ed8b2bcc647eb860c529ef2a0978faef32edfd417bd41f9c8ce5d5e84.jpg": 6,
+  "4f7c217ca10f729edd0272033e07e6730e4ff6b8a5683fe4f9ba3e8a023f604c.jpg": 7
+ },
+ "figure_sizes": {
+  "cc145c9d097928b81dfc99e032c0dd4981118854357fcf280a09655d1deff392.png": [
+   389,
+   208
+  ],
+  "185ed00ed8b2bcc647eb860c529ef2a0978faef32edfd417bd41f9c8ce5d5e84.jpg": [
+   813,
+   452
+  ],
+  "4f7c217ca10f729edd0272033e07e6730e4ff6b8a5683fe4f9ba3e8a023f604c.jpg": [
+   842,
+   633
+  ]
+ },
+ "figure_text": {
+  "cc145c9d097928b81dfc99e032c0dd4981118854357fcf280a09655d1deff392.png": 1,
+  "185ed00ed8b2bcc647eb860c529ef2a0978faef32edfd417bd41f9c8ce5d5e84.jpg": 0,
+  "4f7c217ca10f729edd0272033e07e6730e4ff6b8a5683fe4f9ba3e8a023f604c.jpg": 9
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Background Note Malaysia",
+ "cover_version": "1.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "5c2a89b83bc4357a2abd548ccbb9ea7a19fb71620bfc8fbf1b8937097be90e50",
+ "images": [
+  "185ed00ed8b2bcc647eb860c529ef2a0978faef32edfd417bd41f9c8ce5d5e84.jpg",
+  "4f7c217ca10f729edd0272033e07e6730e4ff6b8a5683fe4f9ba3e8a023f604c.jpg",
+  "cc145c9d097928b81dfc99e032c0dd4981118854357fcf280a09655d1deff392.png"
+ ]
+}

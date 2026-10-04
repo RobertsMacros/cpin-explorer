@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 51,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 67,
+ "paragraphs": 402,
+ "list_items": 7,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 100,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "1e24a8103961e6899643ee6692405f608d69562bea432d1f088429e0dd824a1a.png": 50
+ },
+ "figure_sizes": {
+  "1e24a8103961e6899643ee6692405f608d69562bea432d1f088429e0dd824a1a.png": [
+   243,
+   207
+  ]
+ },
+ "figure_text": {
+  "1e24a8103961e6899643ee6692405f608d69562bea432d1f088429e0dd824a1a.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Turkey: Gülenist movement",
+ "cover_version": "2.0",
+ "cover_date": "February 2018",
+ "pdf_sha256": "2549f8ee7643d05c0164679d8ac6933ba467fc23e372295abcfc9bc1432be826",
+ "images": [
+  "1e24a8103961e6899643ee6692405f608d69562bea432d1f088429e0dd824a1a.png"
+ ]
+}

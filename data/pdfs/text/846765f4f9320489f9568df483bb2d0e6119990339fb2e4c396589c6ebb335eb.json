@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 51,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 378,
+ "list_items": 76,
+ "tables": 7,
+ "figures": 1,
+ "footnotes": 119,
+ "bookmarks": 54,
+ "warnings": [
+  "footnotes with no mark found in the text: 7, 9, 22, 28, 79, 80, 81, 101, 102"
+ ],
+ "figure_pages": {
+  "5977284113182ad8647e16dcde0c92dec6fd70ac73ddb5423493cc67ffe8fe7b.jpg": 23
+ },
+ "figure_sizes": {
+  "5977284113182ad8647e16dcde0c92dec6fd70ac73ddb5423493cc67ffe8fe7b.jpg": [
+   822,
+   1161
+  ]
+ },
+ "figure_text": {
+  "5977284113182ad8647e16dcde0c92dec6fd70ac73ddb5423493cc67ffe8fe7b.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Kenya: Female Genital Mutilation (FGM)",
+ "cover_version": "1.0",
+ "cover_date": "June 2021",
+ "pdf_sha256": "846765f4f9320489f9568df483bb2d0e6119990339fb2e4c396589c6ebb335eb",
+ "images": [
+  "5977284113182ad8647e16dcde0c92dec6fd70ac73ddb5423493cc67ffe8fe7b.jpg"
+ ]
+}

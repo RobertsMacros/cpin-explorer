@@ -1,0 +1,219 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "colombia/country-policy-and-information-note-actors-of-protection-colombia-january-2025-accessible",
+ "pdf_sha256": "4a525119d637ccd935225bfab62a592147d24066780d06ad4a6ad6302c942d7d",
+ "body_sha256": "21bb81b53787f515f27a149aaee10ecd629069901cdc64b8569204f9d3e39dd7",
+ "words": {
+  "web": 26233,
+  "pdf": 26207
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 23,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 23,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 4,
+   "pdf_words": 4
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "March 2026",
+   "pdf": "2.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "2 February 2026"
+   ],
+   "pdf": [
+    "2 February 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 260,
+   "pdf": 260,
+   "pdf_raw": 260,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 19,
+   "pdf": 18
+  },
+  "headings": {
+   "web": 90,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Score changes\nYear\n2012\n36\n2013\n36\n2014\n37\n2015\n37\n2016\n37\n2017\n37\n2018\n36\n2019\n37\n2020\n39\n2021\n39\n2022\n39\n2023\n40",
+   "pdf": "",
+   "web_words": 23,
+   "pdf_words": 0,
+   "before": "perceived levels of corruption for Colombia since 2013:",
+   "after": "6.4.11 Originally in Spanish, on 13",
+   "where": {
+    "heading": "Corruption_misconduct_1",
+    "paragraph": "6.4.10",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.2.8",
+    "section": "Version control and feedback",
+    "page": 68
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "0.38 24 104",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "17\n66\nDue process of the law and",
+   "after": "rights of the accused\n0.38\n24\n104",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "0.38\n24\n104",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "of the law and rights of the accused",
+   "after": "9.3 Fair trial and access to justice",
+   "before_pdf": "0.38 24 104 rights of the accused",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 49
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 242,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

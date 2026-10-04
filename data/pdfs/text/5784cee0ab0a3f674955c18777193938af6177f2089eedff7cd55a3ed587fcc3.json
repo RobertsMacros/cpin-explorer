@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 68,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 60,
+ "paragraphs": 466,
+ "list_items": 17,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 163,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 134"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Sri Lanka: Tamil separatism",
+ "cover_version": "5.0",
+ "cover_date": "June 2017",
+ "pdf_sha256": "5784cee0ab0a3f674955c18777193938af6177f2089eedff7cd55a3ed587fcc3",
+ "images": []
+}

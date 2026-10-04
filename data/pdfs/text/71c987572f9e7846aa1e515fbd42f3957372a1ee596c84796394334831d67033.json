@@ -1,0 +1,86 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 59,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 131,
+ "paragraphs": 463,
+ "list_items": 60,
+ "tables": 0,
+ "figures": 8,
+ "footnotes": 200,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 1, 36, 37"
+ ],
+ "figure_pages": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 2,
+  "cc03083949849eb9e610b93a5a4391a58d1c7254a89b666a43338e3f3d437028.jpg": 4,
+  "26b05cef9874e7988cad39a10203fe4c41d1e9a4509748483a78e9264af634b0.jpg": 25,
+  "7c00bc7537ba4aa8a70b7114bd28e8fce596c8142236c7981b7d8a3be2aa594b.jpg": 26,
+  "3f40c0dd865a5b0d7299ad68cbe11c96594d3a761b0e9cf3b3c73ab668c243cf.jpg": 26,
+  "267b5817249f4e7045c8704d59194f6adf909441a2d814c43a595d218974d5a2.jpg": 26,
+  "732bd3ce3607134eaf704ca450ff406cded73a82a74cda27251af8cc23046b7d.jpg": 27,
+  "a4f75ac52327d06575e37b5e2e9eb41aebbe944e25d8d2c5e90f32e447ffcda2.jpg": 28
+ },
+ "figure_sizes": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": [
+   246,
+   169
+  ],
+  "cc03083949849eb9e610b93a5a4391a58d1c7254a89b666a43338e3f3d437028.jpg": [
+   919,
+   1096
+  ],
+  "26b05cef9874e7988cad39a10203fe4c41d1e9a4509748483a78e9264af634b0.jpg": [
+   481,
+   365
+  ],
+  "7c00bc7537ba4aa8a70b7114bd28e8fce596c8142236c7981b7d8a3be2aa594b.jpg": [
+   272,
+   357
+  ],
+  "3f40c0dd865a5b0d7299ad68cbe11c96594d3a761b0e9cf3b3c73ab668c243cf.jpg": [
+   403,
+   306
+  ],
+  "267b5817249f4e7045c8704d59194f6adf909441a2d814c43a595d218974d5a2.jpg": [
+   828,
+   319
+  ],
+  "732bd3ce3607134eaf704ca450ff406cded73a82a74cda27251af8cc23046b7d.jpg": [
+   331,
+   436
+  ],
+  "a4f75ac52327d06575e37b5e2e9eb41aebbe944e25d8d2c5e90f32e447ffcda2.jpg": [
+   606,
+   458
+  ]
+ },
+ "figure_text": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 0,
+  "cc03083949849eb9e610b93a5a4391a58d1c7254a89b666a43338e3f3d437028.jpg": 0,
+  "26b05cef9874e7988cad39a10203fe4c41d1e9a4509748483a78e9264af634b0.jpg": 0,
+  "7c00bc7537ba4aa8a70b7114bd28e8fce596c8142236c7981b7d8a3be2aa594b.jpg": 0,
+  "3f40c0dd865a5b0d7299ad68cbe11c96594d3a761b0e9cf3b3c73ab668c243cf.jpg": 0,
+  "267b5817249f4e7045c8704d59194f6adf909441a2d814c43a595d218974d5a2.jpg": 0,
+  "732bd3ce3607134eaf704ca450ff406cded73a82a74cda27251af8cc23046b7d.jpg": 0,
+  "a4f75ac52327d06575e37b5e2e9eb41aebbe944e25d8d2c5e90f32e447ffcda2.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a Home Office fact-finding mission to Sri Lanka",
+ "cover_version": null,
+ "cover_date": "5 October 2019",
+ "pdf_sha256": "71c987572f9e7846aa1e515fbd42f3957372a1ee596c84796394334831d67033",
+ "images": [
+  "267b5817249f4e7045c8704d59194f6adf909441a2d814c43a595d218974d5a2.jpg",
+  "26b05cef9874e7988cad39a10203fe4c41d1e9a4509748483a78e9264af634b0.jpg",
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png",
+  "3f40c0dd865a5b0d7299ad68cbe11c96594d3a761b0e9cf3b3c73ab668c243cf.jpg",
+  "732bd3ce3607134eaf704ca450ff406cded73a82a74cda27251af8cc23046b7d.jpg",
+  "7c00bc7537ba4aa8a70b7114bd28e8fce596c8142236c7981b7d8a3be2aa594b.jpg",
+  "a4f75ac52327d06575e37b5e2e9eb41aebbe944e25d8d2c5e90f32e447ffcda2.jpg",
+  "cc03083949849eb9e610b93a5a4391a58d1c7254a89b666a43338e3f3d437028.jpg"
+ ]
+}

@@ -1,19 +1,23 @@
 // CPIN Explorer dashboard: a COBE globe of the countries the Home Office publishes notes on,
 // with each country's reports, GOV.UK's own change history and the site's one search: countries,
-// report titles and the full text of the reports.
+// report titles, the full text of the reports and, last, the glossary's terms.
 // Data: data.json, written by `./cpin export` from the scraper's store.
 import { createGlobe, feature, geoBounds, geoContains } from "../vendor/globe-deps.js";
+import { brandMark, startCountry, startView } from "../shared/brand-mark.js";
 import { makeCountryLocator } from "../shared/country-locator.js";
 import { hydrateFlags, sampleFlag } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
-import { excerptHtml, loadIndex, readerHref, searchPassages } from "../shared/fulltext-search.js";
+import { excerptHtml, loadIndex, passageFromPdf, readerHref, searchPassages } from "../shared/fulltext-search.js";
 import { focus, project, shortestTurn, unproject } from "../shared/globe-math.js";
+import { GROUPS as TERM_GROUPS, glossaryEntry, glossaryHref, searchGlossary } from "../shared/glossary.js";
+import { leftGovuk } from "../shared/report-history.js";
 import { topicGroups, topicLabel } from "../shared/topic-groups.js";
 import { ukDate, ukDateTime } from "../shared/uk-time.js";
-import { createCountryGlow, createHoverIntent } from "./country-glow.js";
-import { MOUSE, TOUCH, dotRadius, pickCountry } from "./pick.js";
+import { ambientLevel, createCountryGlow, createHoverIntent } from "./country-glow.js";
+import { LAYOUT_STEP_PX, labelCap, viewShiftPx } from "./labels.js";
+import { MOUSE, TOUCH, dotRadius, dotsInReach, isAmbiguous, pickCountry, placeChooser } from "./pick.js";
 import { checkSummary, compareWithGovuk, isFresh, syncStatus } from "./sync-status.js";
-import { buildGroups, groupReports, matchCountries, matchReports, norm, parseQuery, rowNote } from "./search-query.js";
+import { buildGroups, glossaryHits, groupReports, kindTermId, kindTitle, matchCountries, matchReports, norm, parseQuery, rawWords, rowNote } from "./search-query.js";
 
 // The page places itself (globe at the top, or the chosen country's panel); the browser's own
 // restore would land after that, part-way down the previous page.
@@ -45,6 +49,10 @@ const countries = data.countries;
 const bySlug = new Map(countries.map((c) => [c.slug, c]));
 const liveNotes = (c) => c.notes.filter((n) => n.status === "live");
 const isRecent = (c) => c.updated && daysAgo(c.updated) <= 30;
+const liveCount = (c) => c.reports?.filter((r) => r.status === "live").length ?? liveNotes(c).length;
+// What a kind tag stands for, from the glossary ("CPIN" -> "Country Policy and Information Note"), as a tooltip.
+const kindFull = (kind) => kindTitle(kind, glossaryEntry(kindTermId(kind)));
+const kindTip = (kind) => { const full = kindFull(kind); return full ? ` title="${esc(full)}"` : ""; };
 const ALL_KINDS = [...new Set(countries.flatMap((c) => (c.reports || []).map((r) => r.kind)))];
 const parse = (text) => parseQuery(text, { countries, kinds: ALL_KINDS });
 const GROUPS = buildGroups(countries, topicGroups);         // every subject, with all its reports (search list headings)
@@ -58,14 +66,20 @@ let size = Math.round(wrap.getBoundingClientRect().width) || 600;
 // starts large gets fewer pixels per point; the canvas stays under about 2200px either way).
 const dpr = Math.max(1, Math.min(1.5, window.devicePixelRatio || 1, 2200 / size));
 // The globe follows its box (the window resizing, the shell's columns): redrawn at the new size, so it stays crisp.
-new ResizeObserver(() => { size = Math.round(wrap.getBoundingClientRect().width) || size; }).observe(wrap);
+new ResizeObserver(() => {
+  const now = Math.round(wrap.getBoundingClientRect().width) || size;
+  if (now !== size) { size = now; closeChooser(); }
+}).observe(wrap);
 
-let { phi, theta } = focus([24, 38]);                       // start over Africa and the Middle East
+// It opens where it is going to be: on the country the page opens with (the header mark and the
+// globe's stand-in are drawn there already: brand-mark.js), else over Africa and the Middle East.
+let { phi, theta } = startView(startCountry((slug) => bySlug.has(slug)));
 let zoom = 1, zoomTarget = 1;
 const MIN_ZOOM = 1, MAX_ZOOM = 3.2;
 const clampZoom = (z) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z));
 let vPhi = 0, dragging = false, moved = 0, lastX = 0, lastY = 0, lastInteract = 0, flight = null;
 let selected = null, hovered = null, filterKind = "all";
+let chooser = null, pressDismissed = false, tapAsked = false;   // the "Which country?" list (below), a press that put it away, a tap that opened it
 // Search: the header box's text, which view of it is open ("" = results as you type, "passages" =
 // every passage, with filters), how many report results are listed, and the country view's own box.
 let query = "", view = "", notesShown = 8, countryQuery = "";
@@ -98,8 +112,9 @@ const globe = createGlobe(canvas, {
   mapSamples: 16000, mapBaseBrightness: 0, markerElevation: 0.012, scale: zoom, offset: [0, 0],
   ...palette(), markers: markers(),
 });
+// (COBE's own style sheet is no longer rewritten on every update(): see the patch in web/build-vendor.mjs.)
 
-// The hovered (or selected) country lit up in its flag's colours, with its outline.
+// The hovered (or selected) country lit up in its flag's colours; zoomed in, every country in view.
 const isoToSlug = new Map(countries.map((c) => [c.iso_n3, c.slug]));
 const shapes = new Map();
 for (const f of feature(topo, topo.objects.countries).features) {
@@ -109,14 +124,22 @@ for (const f of feature(topo, topo.objects.countries).features) {
 const glow = createCountryGlow({ canvas: overlay, shapes, codeOf: (slug) => bySlug.get(slug)?.iso_a2,
   sampleFlag, geoBounds, isDark, reducedMotion: () => reduced.matches });
 
-let drawn = { phi: NaN, theta: NaN, size, zoom: NaN };
+let drawn = { phi: NaN, theta: NaN, size, zoom: NaN };   // the view the globe was last drawn for,
+let laid = drawn;                                         // and the one the labels were last laid out for
 // Changes for COBE wait for the next frame and go in one update(): each update() draws the globe, so a
 // separate one (new markers on a click, say) would draw it twice in a frame.
 let pinsDirty = true, markersDirty = false, paletteDirty = false;
+// COBE's land map arrives a moment after the globe is made, and COBE does not draw again when it
+// does. The globe may open perfectly still (on a country), so for its first moments it is drawn every frame.
+let drawUntil = performance.now() + 1500;
+// The globe rests while nobody can see it: scrolled out of sight (a phone, reading the panel: off the
+// top of the window, or under the header that stays there) or in a hidden tab. Nothing is drawn and
+// no pin is moved until it is back, when it is drawn afresh.
+let inSight = true, looping = false, sight = null;
 function frame(now) {
   step(now);
   const viewChanged = phi !== drawn.phi || theta !== drawn.theta || size !== drawn.size || zoom !== drawn.zoom;
-  if (viewChanged || markersDirty || paletteDirty) {
+  if (viewChanged || markersDirty || paletteDirty || now < drawUntil) {
     const u = { phi, theta, scale: zoom };
     if (size !== drawn.size) { u.width = size; u.height = size; }     // resizing reallocates: only when needed
     if (markersDirty || paletteDirty) u.markers = markers();
@@ -124,13 +147,68 @@ function frame(now) {
     markersDirty = paletteDirty = false;
     globe.update(u);
   }
-  if (viewChanged || pinsDirty) { placePins(); pinsDirty = false; } // labels only move when the globe does
+  if (viewChanged || pinsDirty || pinsLate) { placePins(now, pinsDirty || !viewChanged); flagsInView(); }   // pins only move when the globe does
+  // Which labels show, and on which side, is worked out afresh when something asks (pinsDirty), every few
+  // px the globe turns (the labels ride on their pins in between) and once more as it comes to rest.
+  const stale = phi !== laid.phi || theta !== laid.theta || size !== laid.size || zoom !== laid.zoom;
+  if (pinsDirty || (stale && (!viewChanged || viewShiftPx(laid, { phi, theta, zoom }, size) >= LAYOUT_STEP_PX || size !== laid.size))) {
+    layoutLabels();
+    laid = { phi, theta, size, zoom };
+  }
+  pinsDirty = false;
   glow.draw({ phi, theta, scale: zoom }, size, dpr, viewChanged);
   drawn = { phi, theta, size, zoom };
-  requestAnimationFrame(frame);
+  if (inSight && !document.hidden) requestAnimationFrame(frame);
+  else looping = false;
 }
-requestAnimationFrame(frame);
-requestAnimationFrame(() => canvas.classList.add("ready"));
+function wake() {
+  if (!inSight || document.hidden) return;
+  drawn = { ...drawn, phi: NaN };                          // the canvas may have been let go meanwhile: draw it afresh
+  drawUntil = Math.max(drawUntil, performance.now() + 250);
+  if (!looping) { looping = true; requestAnimationFrame(frame); }
+}
+wake();
+function watchSight() {
+  sight?.disconnect();
+  const under = narrow.matches ? Math.floor($(".top").getBoundingClientRect().height) : 0;   // one column: the header stays on top
+  sight = new IntersectionObserver((entries) => { inSight = entries[entries.length - 1].isIntersecting; wake(); }, { rootMargin: `${-under}px 0px 0px 0px` });
+  sight.observe(wrap);
+}
+new ResizeObserver(watchSight).observe($(".top"));          // now, and whenever the header's height changes
+narrow.addEventListener("change", watchSight);
+document.addEventListener("visibilitychange", wake);
+// Shown once its land has had time to arrive; until then its stand-in (the same dots) is in its place.
+setTimeout(() => requestAnimationFrame(() => canvas.classList.add("ready")), 120);
+// Brought back by Back or Forward, the canvas may have been let go while the page was away: draw it afresh.
+addEventListener("pageshow", (e) => { if (e.persisted) wake(); });
+// Going to or from another page, the globe draws in to the header mark (brand.css). Not when it is
+// scrolled out of sight (a phone, reading the panel): then the pages simply change over.
+const outOfSight = () => { const box = wrap.getBoundingClientRect(); return box.bottom <= 0 || box.top >= innerHeight; };
+addEventListener("pageswap", () => { if (outOfSight()) wrap.style.viewTransitionName = "none"; });
+addEventListener("pagereveal", (e) => {
+  if (!e.viewTransition || !outOfSight()) return;
+  wrap.style.viewTransitionName = "none";
+  e.viewTransition.finished.finally(() => { wrap.style.viewTransitionName = ""; });
+});
+addEventListener("pageshow", () => { if (!outOfSight()) wrap.style.viewTransitionName = ""; });
+
+// Zoomed in, every country in view shows its flag, more strongly the closer the zoom (country-glow.js:
+// ambientLevel). In view: its dot faces the viewer and its largest landmass could reach onto the canvas.
+const NO_FLAGS = new Set();
+let flagsOn = false;
+function flagsInView() {
+  const level = ambientLevel(zoom);
+  if (flagsOn !== level > 0.3) wrap.classList.toggle("flags-on", (flagsOn = level > 0.3));   // labels get a ground to sit on
+  if (!(level > 0)) return glow.ambient(NO_FLAGS, 0);
+  const radiusPx = 0.8 * (size / 2) * zoom, seen = [];
+  for (const p of pins) {
+    if (p.depth <= 0.05) continue;
+    const half = ((glow.extent(p.slug) * Math.PI) / 360) * radiusPx;      // half its width on screen
+    if (p.x > -half && p.x < size + half && p.y > -half && p.y < size + half) seen.push(p);
+  }
+  seen.sort((a, b) => b.depth - a.depth);                                 // flags not built yet are built in this order: the middle of the view first
+  glow.ambient(new Set(seen.map((p) => p.slug)), level);
+}
 
 const easeInOut = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 function step(now) {
@@ -141,7 +219,7 @@ function step(now) {
     if (t >= 1) flight = null;
   } else if (!dragging) {
     if (Math.abs(vPhi) > 1e-4) { phi += vPhi; vPhi *= 0.93; }          // inertia after a drag
-    else if (!reduced.matches && !selected && !hovered && now - lastInteract > 3500) phi += 0.0014 / zoom;
+    else if (!reduced.matches && !selected && !hovered && !chooser && now - lastInteract > 3500) phi += 0.0014 / zoom;
   }
   if (Math.abs(zoomTarget - zoom) > 0.0005) zoom += (zoomTarget - zoom) * (reduced.matches ? 1 : 0.16);
   else zoom = zoomTarget;
@@ -162,10 +240,10 @@ const pins = countries.map((c) => {
   el.dataset.slug = c.slug;
   el.dataset.place = "top";
   el.setAttribute("aria-label", `${c.name}: ${c.reports?.length ?? liveNotes(c).length} reports`);
-  el.innerHTML = `<span class="tag pin-label">${flagCanvas(c, 8, "dotflag--tag")}<span>${esc(c.name)}</span><b>${c.reports?.filter((r) => r.status === "live").length ?? liveNotes(c).length}</b></span>`;
+  el.innerHTML = `<span class="tag pin-label">${flagCanvas(c, 8, "dotflag--tag")}<span>${esc(c.name)}</span><b>${liveCount(c)}</b></span>`;
   pinsEl.append(el);
   return { c, slug: c.slug, el, label: el.firstElementChild, behind: null, visible: false, labelled: false, place: "top",
-           count: liveNotes(c).length, recent: isRecent(c), x: 0, y: 0, r: 0, ring: 0, depth: 0, w: 0, h: 0 };
+           count: liveNotes(c).length, recent: isRecent(c), x: 0, y: 0, r: 0, ring: 0, depth: 0, w: 0, h: 0, at: "", fade: "", rideUntil: 0 };
 });
 let labelOffset = 19;                     // px from a marker to its label's near edge (CSS: 1.2rem)
 function measureLabels() {
@@ -176,29 +254,47 @@ function measureLabels() {
 document.fonts.ready.then(() => hydrateFlags(pinsEl)).then(measureLabels);
 new ResizeObserver(measureLabels).observe(document.documentElement);
 
-function placePins() {
-  const view = { phi, theta, scale: zoom, elevation: 0.012 };
-  for (const p of pins) {
+// Where each pin is, every frame the globe moves. Moving 47 elements a frame is most of what a turning
+// globe costs the page, and most pins show nothing (no label, no ring: they are only a place for the
+// keyboard and for screen readers). So a pin that shows something rides the globe on every frame, and
+// goes on doing so while its label fades out; the rest take turns, a few a frame, and are all put
+// right when the globe comes to rest (`all`). One round the back or off the canvas is hidden and left.
+const LAZY_TURNS = 8, RIDE_ON_MS = 600;
+let turn = 0, pinsLate = false;
+function placePins(now, all) {
+  const view = { phi, theta, scale: zoom, elevation: 0.012 }, focused = document.activeElement;
+  turn = (turn + 1) % LAZY_TURNS;
+  pinsLate = false;
+  pins.forEach((p, i) => {
     const r = project(p.c.marker, view);
     p.x = r.x * size; p.y = r.y * size; p.depth = r.depth;
     p.r = dotRadius(markerSize(p.c), size, zoom);                  // the dot as COBE draws it, in px
-    const ring = Math.round(p.r + 3);                              // the hover ring hugs the dot
-    if (ring !== p.ring) { p.ring = ring; p.el.style.setProperty("--ring", `${ring}px`); }
     const offCanvas = p.x < -20 || p.y < -20 || p.x > size + 20 || p.y > size + 20;   // zoomed past the edge
-    p.el.style.transform = `translate3d(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px, 0)`;
-    p.el.style.setProperty("--vis", offCanvas ? "0" : Math.max(0, Math.min(1, r.depth / 0.2)).toFixed(3));
-    const behind = r.depth <= 0.03 || offCanvas;
+    const behind = r.depth <= 0.03 || offCanvas, turned = behind !== p.behind;
     p.visible = !behind;
-    if (behind !== p.behind) {
+    if (turned) {
       p.behind = behind;
       p.el.classList.toggle("is-behind", behind);
       p.el.tabIndex = behind ? -1 : 0;
     }
-  }
-  layoutLabels();
+    if (behind) return;
+    if (p.labelled || p.slug === selected || p.slug === hovered || p.el === focused || chooser?.slugs.includes(p.slug)) p.rideUntil = now + RIDE_ON_MS;
+    if (all || turned || now < p.rideUntil || i % LAZY_TURNS === turn) settlePin(p);
+    else pinsLate = true;
+  });
+}
+/** Tell the page where a pin is now; only what has changed is written. */
+function settlePin(p) {
+  const ring = Math.round(p.r + 3);                                // the hover ring hugs the dot
+  if (ring !== p.ring) { p.ring = ring; p.el.style.setProperty("--ring", `${ring}px`); }
+  const at = `translate3d(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px, 0)`;
+  if (at !== p.at) p.el.style.transform = p.at = at;
+  const fade = Math.max(0, Math.min(1, p.depth / 0.2)).toFixed(2);                    // it fades as it nears the horizon
+  if (fade !== p.fade) p.el.style.opacity = p.fade = fade;
 }
 
-// As many labels as fit (up to a cap that grows with zoom): highest priority first (selected,
+// As many labels as fit, up to a cap that goes with the globe's size on screen and the zoom (labels.js:
+// a calm handful on a phone, more on a large globe or zoomed in): highest priority first (selected,
 // hovered, recently updated, most notes, nearest the viewer), each trying its current side first so
 // labels don't flicker, then the others.
 const SIDES = ["top", "right", "left", "bottom"];
@@ -214,7 +310,7 @@ const overlaps = (a, b, pad = 5) =>
 function layoutLabels() {
   const rank = (p) => (p.c.slug === selected ? 1e4 : 0) + (p.c.slug === hovered ? 5e3 : 0) + (p.recent ? 200 : 0)
     + p.count * 4 + p.depth * 60;
-  const cap = Math.round(20 * zoom);
+  const cap = labelCap(size, zoom);
   const candidates = pins.filter((p) => p.w && !p.behind && (p.depth > 0.28 || p.c.slug === selected || p.c.slug === hovered))
     .sort((a, b) => rank(b) - rank(a));
   const placed = [], shown = new Set();
@@ -232,18 +328,25 @@ function layoutLabels() {
   }
   for (const p of pins) {
     const on = shown.has(p);
-    if (on !== p.labelled) { p.labelled = on; p.el.classList.toggle("is-labelled", on); }
+    if (on === p.labelled) continue;
+    p.labelled = on;
+    if (on) settlePin(p);                                          // its label fades in where the dot is now
+    p.el.classList.toggle("is-labelled", on);
   }
 }
 
 // Which country the pointer is on. The dots are the targets (pick.js): the whole dot plus a margin,
 // the nearest one where several are close, in screen pixels so it holds at any zoom; a fingertip
 // gets a larger margin. Only with no dot in reach does the border under the pointer decide.
-function hitAt(e) {
+const isFinger = (e) => e.pointerType === "touch" || e.pointerType === "pen";
+function canvasPoint(e) {
   const box = canvas.getBoundingClientRect();
   const k = size / (box.width || size);                        // the canvas eases in slightly small: layout px
-  const x = (e.clientX - box.left) * k, y = (e.clientY - box.top) * k;
-  const reach = e.pointerType === "touch" || e.pointerType === "pen" ? TOUCH : MOUSE;
+  return { x: (e.clientX - box.left) * k, y: (e.clientY - box.top) * k };
+}
+function hitAt(e) {
+  const { x, y } = canvasPoint(e);
+  const reach = isFinger(e) ? TOUCH : MOUSE;
   return pickCountry(pins, x, y, reach, () => {
     const latLon = unproject(x / size, y / size, { phi, theta, scale: zoom });
     return latLon ? countryAt(latLon) : null;
@@ -280,6 +383,9 @@ let pinch = null, wasPinch = false;
 canvas.addEventListener("pointerdown", (e) => {
   pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
   try { canvas.setPointerCapture(e.pointerId); } catch {}
+  const dismissed = closeChooser();                        // any touch of the globe puts the list away
+  if (pointers.size === 1) pressDismissed = dismissed;
+  tapAsked = false;
   if (pointers.size === 2) {
     const [a, b] = [...pointers.values()];
     pinch = { d: Math.hypot(a.x - b.x, a.y - b.y) || 1, z: zoomTarget };
@@ -316,6 +422,12 @@ function endPointer(e) {
   canvas.classList.remove("dragging");
   if (moved < 6 && !wasPinch && e.type === "pointerup") {   // a click or tap, not a drag
     vPhi = 0;
+    if (pressDismissed) return;                              // that tap put the list away: nothing else
+    if (isFinger(e)) {                                       // a fingertip among several dots: ask, don't guess
+      const { x, y } = canvasPoint(e);
+      const near = dotsInReach(pins, x, y, TOUCH);
+      if (isAmbiguous(near)) { tapAsked = e.pointerType === "touch"; return openChooser(near.slice(0, CHOOSER_MAX).map((d) => d.slug), e); }
+    }
     const slug = hitAt(e);
     if (slug) {
       if (e.pointerType === "mouse") hover.now(slug);        // a click answers at once: no waiting for the pointer to rest
@@ -325,9 +437,13 @@ function endPointer(e) {
 }
 canvas.addEventListener("pointerup", endPointer);
 canvas.addEventListener("pointercancel", endPointer);
+// A tap that opened the list ends there: without this the browser follows it with a mouse press and a
+// click of its own, which would take the focus back off the list, or land on the list as a choice.
+canvas.addEventListener("touchend", (e) => { if (tapAsked) { tapAsked = false; if (e.cancelable) e.preventDefault(); } }, { passive: false });
 canvas.addEventListener("pointerleave", () => { if (!dragging) { hover.leave(); canvas.classList.remove("over-country"); } });
 wrap.addEventListener("wheel", (e) => {
   e.preventDefault();
+  closeChooser();
   zoomTarget = clampZoom(zoomTarget * Math.exp(-e.deltaY * 0.0016));
   lastInteract = performance.now();
 }, { passive: false });
@@ -343,6 +459,85 @@ $("#zoomCtl")?.addEventListener("click", (e) => {
 pinsEl.addEventListener("click", (e) => { const pin = e.target.closest(".pin"); if (pin) openCountry(pin.dataset.slug); });
 pinsEl.addEventListener("focusin", (e) => { const pin = e.target.closest(".pin"); if (pin?.matches(":focus-visible")) hover.now(pin.dataset.slug); });
 pinsEl.addEventListener("focusout", (e) => { if (e.target.closest(".pin") && hovered === e.target.closest(".pin").dataset.slug) hover.now(null); });
+
+// --- Which country? --------------------------------------------------------------------------
+// On a phone the dots are closer together than a fingertip is wide (Lebanon and Palestine: 5 px). When
+// a tap lands among several (pick.js: isAmbiguous) a short list opens by the finger, nearest first,
+// instead of a guess. It is a menu of buttons: a tap opens that country; a tap anywhere else, turning
+// or pinching the globe, Escape, or going anywhere else puts it away. A mouse never meets it: its
+// pointer is exact, and hover already says which dot it is on.
+const CHOOSER_MAX = 5;
+let chooserSeq = 0;
+function openChooser(slugs, e) {
+  closeChooser();
+  const el = document.createElement("div"), id = `chooserHead${++chooserSeq}`;
+  el.className = "chooser";
+  el.innerHTML = `<p class="eyebrow chooser-head" id="${id}">Which country?</p>
+    <div class="chooser-list" role="menu" tabindex="-1" aria-labelledby="${id}">${slugs.map((slug) => {
+      const c = bySlug.get(slug), n = liveCount(c);
+      return `<button type="button" class="chooser-item" role="menuitem" data-slug="${slug}" aria-label="${esc(c.name)}: ${count(n, "report")}">
+        ${flagCanvas(c, 8, "dotflag--row")}<span class="chooser-name">${esc(c.name)}</span><span class="chooser-n numeral" aria-hidden="true">${n}</span></button>`;
+    }).join("")}</div>`;
+  wrap.append(el);
+  hydrateFlags(el);
+  // By the finger, inside the part of the globe's stage that is on screen (below the header, above the
+  // window's edge): above the finger if there is room, else below, where it may reach over the legend.
+  const box = wrap.getBoundingClientRect(), stage = wrap.parentElement.getBoundingClientRect(), head = $(".top").getBoundingClientRect();
+  const onScreen = { left: Math.max(stage.left, 0) - box.left, right: Math.min(stage.right, innerWidth) - box.left,
+    top: Math.max(stage.top, head.bottom) - box.top, bottom: Math.min(stage.bottom, innerHeight) - box.top };
+  el.style.maxHeight = `${Math.max(132, onScreen.bottom - onScreen.top - 16)}px`;
+  const x = e.clientX - box.left, y = e.clientY - box.top, w = el.offsetWidth, h = el.offsetHeight;
+  const at = placeChooser({ x, y, w, h, box: onScreen, pad: 8 });
+  el.style.left = `${at.left.toFixed(1)}px`;
+  el.style.top = `${at.top.toFixed(1)}px`;
+  el.dataset.side = at.side;
+  el.style.setProperty("--ax", `${Math.max(8, Math.min(w - 8, x - at.left)).toFixed(1)}px`);            // it grows from the finger
+  el.style.setProperty("--stem", `${Math.max(0, at.side === "above" ? y - at.top - h : at.top - y).toFixed(1)}px`);
+  for (const p of pins) p.el.classList.toggle("is-candidate", slugs.includes(p.slug));                 // the dots in question
+  chooser = { el, slugs, back: document.activeElement, openedAt: performance.now() };
+  lastInteract = chooser.openedAt;
+  void el.offsetWidth;                                     // so the entrance eases from its start
+  el.classList.add("is-open");
+  // Focus goes to the list as a whole, so no country looks chosen already; arrow keys then walk its rows.
+  $(".chooser-list", el).focus({ preventScroll: true });
+
+  el.addEventListener("click", (ev) => {
+    const item = ev.target.closest(".chooser-item");
+    if (!item || chooser?.el !== el) return;
+    if (performance.now() - chooser.openedAt < 300) return;  // the tap that opened the list is not a choice from it
+    const slug = item.dataset.slug, held = el.contains(document.activeElement);
+    closeChooser();
+    openCountry(slug);
+    if (held) pins.find((p) => p.slug === slug)?.el.focus({ preventScroll: true });   // focus goes on to the country's pin
+  });
+  el.addEventListener("keydown", (ev) => {
+    const items = [...el.querySelectorAll(".chooser-item")], n = items.length, i = items.indexOf(document.activeElement);
+    const to = ev.key === "ArrowDown" ? (i + 1) % n : ev.key === "ArrowUp" ? (Math.max(i, 0) - 1 + n) % n
+      : ev.key === "Home" ? 0 : ev.key === "End" ? n - 1 : -1;
+    if (to < 0) return;
+    ev.preventDefault();
+    items[to].focus({ preventScroll: true });
+  });
+  el.addEventListener("focusout", (ev) => {                 // Tab moves on: the list does not linger behind
+    if (chooser?.el === el && ev.relatedTarget && !el.contains(ev.relatedTarget)) closeChooser();
+  });
+}
+/** Put the list away (it eases out). True if it was open. `restore`: give focus back to where it was (Escape). */
+function closeChooser({ restore = false } = {}) {
+  if (!chooser) return false;
+  const { el, back } = chooser;
+  chooser = null;
+  for (const p of pins) p.el.classList.remove("is-candidate");
+  const hadFocus = el.contains(document.activeElement);
+  el.classList.remove("is-open");
+  el.inert = true;                                         // gone for the keyboard and the finger while it fades
+  setTimeout(() => el.remove(), reduced.matches ? 0 : 320);
+  if (restore && hadFocus && back?.isConnected && back !== document.body) back.focus({ preventScroll: true });
+  lastInteract = performance.now();
+  return true;
+}
+addEventListener("pointerdown", (e) => { if (chooser && !chooser.el.contains(e.target)) closeChooser(); });
+addEventListener("keydown", (e) => { if (e.key === "Escape" && chooser) { e.preventDefault(); closeChooser({ restore: true }); } });
 
 // --- Selection and routing -------------------------------------------------------------------
 // The address carries the place: #<country> for the country open, ?q= for a search, and for the
@@ -412,12 +607,14 @@ function showReport(key) {
 
 function select(slug, { fly = true, record = true, report = null } = {}) {
   if (slug && !bySlug.has(slug)) return;
+  closeChooser();
   selected = slug;
   filterKind = "all";
   countryQuery = "";
   for (const p of pins) p.el.classList.toggle("is-selected", p.c.slug === slug);
   markersDirty = true;
   glow.set(hovered || slug);                               // lights at once (it fades in; no waiting)
+  brandMark.show(slug);                                    // the header mark turns to it too
   pinsDirty = true;
   try { slug ? localStorage.setItem("cpin-last-country", slug) : localStorage.removeItem("cpin-last-country"); } catch {}
   if (slug && fly) flyTo(bySlug.get(slug).marker);
@@ -427,6 +624,7 @@ function select(slug, { fly = true, record = true, report = null } = {}) {
 /** Back, Forward, or an edited address: take the search and the country from it. */
 function applyUrl() {
   const s = urlState(), slug = bySlug.has(location.hash.slice(1)) ? location.hash.slice(1) : null;
+  closeChooser();
   query = s.q; q.value = s.q; view = s.view; notesShown = 8;
   pass.countries = new Set(s.countries); pass.kinds = new Set(s.kinds);
   if (slug !== selected) select(slug, { record: false });
@@ -468,14 +666,14 @@ function overview() {
   return `
     <p class="eyebrow">Home Office · GOV.UK</p>
     <h1 class="hero-title">Country notes</h1>
-    <p class="lede">Every country policy and information note, mirrored word for word from GOV.UK and checked daily, with earlier editions kept so changes can be compared.</p>
+    <p class="lede">The Home Office’s Country Policy and Information Notes (<a href="${esc(glossaryHref("cpin"))}" title="What a CPIN is: the glossary">CPINs</a>), mirrored word for word from GOV.UK and checked daily, with earlier editions kept so changes can be compared.</p>
     <div class="stats">${stat(t.countries, "Countries")}${stat(t.notes, "Notes")}${stat(t.pdfs, "PDF editions")}${stat(t.archived_editions, "Archived editions")}</div>
     <p class="meta-line"><span>COPY FETCHED ${ukDateTime(data.last_sync)}</span><a href="${esc(data.source)}" target="_blank" rel="noopener">SOURCE: GOV.UK ↗</a></p>
     <section class="section" style="margin-top:2.4rem">
       <div class="section-head"><h2 class="eyebrow">All countries</h2><span class="eyebrow">${countries.length}</span></div>
-      <div class="country-index">${countries.map((c) => `<button class="country-row" data-slug="${c.slug}">
+      <div class="country-index">${countries.map((c) => { const full = esc(`${c.name}: ${count(liveNotes(c).length, "report")}${isRecent(c) ? ", updated in the last 30 days" : ""}`); return `<button class="country-row${isRecent(c) ? " is-recent" : ""}" data-slug="${c.slug}" title="${full}" aria-label="${full}">
         <i class="fresh${isRecent(c) ? "" : " stale"}" title="${isRecent(c) ? "Updated in the last 30 days" : ""}"></i>
-        ${flagCanvas(c, 8, "dotflag--row")}<span class="name">${esc(c.name)}</span><span class="count">${liveNotes(c).length}</span></button>`).join("")}</div>
+        ${flagCanvas(c, 8, "dotflag--row")}<span class="name">${esc(c.name)}</span><span class="count">${liveNotes(c).length}</span></button>`; }).join("")}</div>
     </section>
     <section class="section">
       <div class="section-head"><h2 class="eyebrow">Recent changes</h2><span class="eyebrow">As published on GOV.UK</span></div>
@@ -500,6 +698,7 @@ function reportForNote(c, note) {
 
 /** When a report's latest edition was published, and its version: "15 MAY 2026 · V6.0". */
 function reportWhen(r) {
+  if (r.current_pdf_only) return fmtMonth(r.current_pdf?.month);   // the PDF's month: the edition held as text is an earlier one
   const L = r.latest || {};
   const published = L.published ? (L.published_precision === "month" ? fmtMonth(L.published.slice(0, 7)) : fmtDate(L.published)) : "";
   return [published, L.version ? `V${esc(L.version)}` : ""].filter(Boolean).join(" · ");
@@ -507,16 +706,26 @@ function reportWhen(r) {
 function reportCard(r, i) {
   const gone = r.status !== "live";
   const L = r.latest || {};
-  const status = r.status === "removed" ? `<span class="tag tag--muted">Removed from GOV.UK</span>`
+  const left = leftGovuk(r.left_govuk, fmtDate);                 // the day it was found gone, where this copy saw it go
+  const status = r.status === "removed" ? `<span class="tag tag--muted"${left ? ` title="${esc(left.sentence)}"` : ""}>Removed from GOV.UK${left ? ` · ${esc(left.when)}` : ""}</span>`
     : r.status === "archived" ? `<span class="tag tag--muted">Archived copy only</span>` : "";
   const editions = r.editions > 1 ? `${r.editions} EDITIONS ON RECORD · SINCE ${fmtDate(r.earliest)}` : "1 EDITION ON RECORD";
-  const change = r.latest_change ? `<p class="note-change"><span class="eyebrow">What changed${r.latest_change.version ? ` in v${esc(r.latest_change.version)}` : ""}</span> “${esc(r.latest_change.statement)}”${r.latest_change.has_table ? ' <span class="note-more">+ a table in the report</span>' : ""}</p>` : "";
-  const primary = r.read_url
+  // Its current edition is a PDF with no web version: the text held here is an earlier edition, and must not pass for the current one.
+  const pdfNow = r.current_pdf_only ? r.current_pdf : null;
+  // Its last edition was recovered as a PDF from the Internet Archive: the PDF to open is the Archive's copy, once.
+  const archivedPdf = !!(L.text_from_pdf && L.archive_url && L.pdf_url === L.archive_url);
+  const held = [L.version ? `v${esc(L.version)}` : "", L.published ? fmtDate(L.published) : ""].filter(Boolean).join(", ");
+  const change = pdfNow ? `<p class="note-change"><span class="eyebrow">Current edition</span> Published as a PDF only, so its text cannot be read or compared here.${r.read_url && held ? ` The last edition held as text is ${held}.` : ""}</p>`
+    : r.latest_change ? `<p class="note-change"><span class="eyebrow">What changed${r.latest_change.version ? ` in v${esc(r.latest_change.version)}` : ""}</span> “${esc(r.latest_change.statement)}”${r.latest_change.has_table ? ' <span class="note-more">+ a table in the report</span>' : ""}</p>` : "";
+  const primary = pdfNow ? `<a class="btn btn--primary" href="${esc(pdfNow.pdf_url)}" target="_blank" rel="noopener">Open the current PDF ↗</a>${
+      r.read_url ? `<a class="btn" href="${esc(r.read_url)}">Read the earlier edition${L.version ? ` (v${esc(L.version)})` : ""}</a>` : ""}`
+    : r.read_url
     ? `<a class="btn btn--primary" href="${esc(r.read_url)}">${gone ? "Read the last edition" : "Read the latest guidance"}</a>`
     : L.pdf_url ? `<a class="btn btn--primary" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">Open the PDF ↗</a>` : "";
   return `<article class="note${gone ? " is-gone" : ""}" data-card="${esc(r.key)}" style="--i:${i}">
-    <div class="note-top"><span class="tag ${gone ? "tag--muted" : "tag--outline"}">${esc(r.kind)}</span>
-      <span class="note-when">${reportWhen(r)}</span>${r.pdf_only ? `<span class="tag tag--muted">PDF only</span>` : ""}${status}</div>
+    <div class="note-top"><span class="tag ${gone ? "tag--muted" : "tag--outline"}"${kindTip(r.kind)}>${esc(r.kind)}</span>
+      <span class="note-when">${reportWhen(r)}</span>${r.pdf_only || pdfNow ? `<span class="tag tag--muted"${pdfNow ? ' title="The current edition is published as a PDF only"' : ""}>PDF only</span>`
+        : L.text_from_pdf ? `<span class="tag tag--muted" title="${archivedPdf ? "No longer on GOV.UK: the text here is taken from the Internet Archive’s copy of the PDF, with its layout rebuilt" : "Published as a PDF only: the text here is taken from the PDF, with its layout rebuilt"}">From the PDF</span>` : ""}${status}</div>
     <h3 class="note-title">${esc(r.topic)}</h3>
     ${change}
     <div class="note-meta">${editions}${r.history_count ? ` · ${plural(r.history_count, "GOV.UK UPDATE")}` : ""}</div>
@@ -524,8 +733,8 @@ function reportCard(r, i) {
       ${primary}
       ${r.read_url ? `<a class="btn" href="${esc(r.read_url)}#history">History${r.editions > 1 ? " & changes" : ""}</a>` : ""}
       ${L.govuk_url && !r.pdf_only ? `<a class="btn" href="${esc(L.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : ""}
-      ${L.pdf_url && r.read_url ? `<a class="btn" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
-      ${gone && L.archive_url ? `<a class="btn" href="${esc(L.archive_url)}" target="_blank" rel="noopener">Archived copy ↗</a>` : ""}
+      ${L.pdf_url && r.read_url && !pdfNow && !archivedPdf ? `<a class="btn" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
+      ${gone && L.archive_url ? `<a class="btn" href="${esc(L.archive_url)}" target="_blank" rel="noopener"${archivedPdf ? ' title="The Internet Archive’s copy of the PDF this edition is read from"' : ""}>Archived copy ↗</a>` : ""}
     </div></article>`;
 }
 function notesList(c) {
@@ -538,12 +747,13 @@ function notesList(c) {
 function countryView(c) {
   const reports = c.reports || [];
   const live = reports.filter((r) => r.status === "live");
-  const archived = c.notes.reduce((sum, n) => sum + n.archived_editions, 0);
+  // Editions held only as an archive copy: of a web page (counted on its note), or of a PDF (which has no note).
+  const archived = c.notes.reduce((sum, n) => sum + n.archived_editions, 0) + (c.archived_pdf_editions || 0);
   const kinds = [...new Set(reports.map((r) => r.kind))];
   const tally = (k) => (k === "all" ? reports.length : reports.filter((r) => r.kind === k).length);
   const filters = kinds.length > 1
     ? `<div class="filters" role="group" aria-label="Filter notes by kind">${["all", ...kinds].map((k) =>
-        `<button class="filter" data-kind="${esc(k)}" aria-pressed="${filterKind === k}">${k === "all" ? "All" : esc(k)} ${tally(k)}</button>`).join("")}</div>`
+        `<button class="filter" data-kind="${esc(k)}" aria-pressed="${filterKind === k}"${k === "all" ? "" : kindTip(k)}>${k === "all" ? "All" : esc(k)} ${tally(k)}</button>`).join("")}</div>`
     : `<div style="height:1.4rem"></div>`;
   return `
     <button class="btn back" data-action="back">← All countries</button>
@@ -570,13 +780,18 @@ function countryView(c) {
    many countries is one group) and passages from the full text of the reports (Pagefind, through
    ../shared/fulltext-search.js). The words are read forgivingly (search-query.js): "country report",
    "CPIN" and "notes" mean any report, a country's name picks the country, and when no title matches
-   the passages are the answer, so a search never comes to a dead end. */
+   the passages are the answer, so a search never comes to a dead end. Under them, last, come the
+   glossary's terms that the words name (../shared/glossary.js), each a link to the guide. */
 const possessive = (name) => (/s$/i.test(name) ? `${name}’` : `${name}’s`);
 const EXAMPLES = ["Iran", "internal relocation", "actors of protection", "fact-finding mission", "military service", "Kurdish"];
 /** Mark the query's words in a title (whole words from their start, as the matching does). */
 function highlight(text, parsed) {
-  const words = [...parsed.terms, ...parsed.soft].flatMap((term) => term.alts.flatMap((alt) => alt.split(" ")))
-    .flatMap((w) => [w, w.replace(/ies$/, "y"), w.length > 3 ? w.replace(/s$/, "") : w]).filter((w) => w.length > 1);   // the forms the matching accepts
+  return markWords(text, [...parsed.terms, ...parsed.soft].flatMap((term) => term.alts.flatMap((alt) => alt.split(" ")))
+    .flatMap((w) => [w, w.replace(/ies$/, "y"), w.length > 3 ? w.replace(/s$/, "") : w]));                              // the forms the matching accepts
+}
+/** Mark these words where they start a word of the text. */
+function markWords(text, list) {
+  const words = list.filter((w) => w.length > 1);
   if (!words.length) return esc(text);
   const re = new RegExp(`(^|[^\\p{L}\\p{N}])(${[...new Set(words)].sort((a, b) => b.length - a.length).map((w) => w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`, "giu");
   let out = "", last = 0;
@@ -594,7 +809,7 @@ const goneTag = (r) => (r.status === "live" ? "" : r.status === "removed" ? "REM
 /** One report as a result on its own: its title, then country, kind and date. */
 const reportHit = ({ c, r }, parsed, { country = true } = {}) => `<button class="hit${r.status === "live" ? "" : " is-gone"}" ${country ? `data-slug="${c.slug}" ` : ""}data-report="${esc(r.key)}">
   <span class="hit-text">${highlight(r.topic, parsed)}</span>
-  <small>${[country ? esc(c.name.toUpperCase()) : "", esc(r.kind.toUpperCase()), reportWhen(r), goneTag(r)].filter(Boolean).join(" · ")}</small></button>`;
+  <small>${[country ? esc(c.name.toUpperCase()) : "", `<span${kindTip(r.kind)}>${esc(r.kind.toUpperCase())}</span>`, reportWhen(r), goneTag(r)].filter(Boolean).join(" · ")}</small></button>`;
 /** A subject and its reports: the heading once (the same whatever was typed: its counts are the whole
     group's), then each matching report as a compact row, then one quiet control for the rest of the
     group. Which topics belong together is the reviewed table in ../shared/topic-groups.js. A row says
@@ -605,7 +820,7 @@ const noteOf = ({ r, qualifier }, label, parsed) => (parsed ? rowNote(parsed, { 
 function groupRow(row, label, parsed, hidden = false) {
   const { c, r } = row, note = noteOf(row, label, parsed);
   const when = [esc(kindShort(r.kind)), r.status === "live" ? reportWhen(r) : reportWhen(r).split(" · ")[0], goneTag(r)].filter(Boolean).join(" · ");
-  return `<button class="rhit${r.status === "live" ? "" : " is-gone"}" data-slug="${c.slug}" data-report="${esc(r.key)}"${hidden ? " hidden" : ""} title="${esc(`${c.name}: ${r.topic} (${r.kind}${r.status === "live" ? "" : `, ${goneTag(r).toLowerCase()}`})`)}">
+  return `<button class="rhit${r.status === "live" ? "" : " is-gone"}" data-slug="${c.slug}" data-report="${esc(r.key)}"${hidden ? " hidden" : ""} title="${esc(`${c.name}: ${r.topic} · ${kindFull(r.kind) || r.kind}${r.status === "live" ? "" : `, ${goneTag(r).toLowerCase()}`}`)}">
     ${flagCanvas(c, 8, "dotflag--row")}<span class="rhit-name">${esc(c.name)}${note ? `<i class="rhit-q"> · ${parsed ? highlight(note, parsed) : esc(note)}</i>` : ""}</span>
     <span class="rhit-when">${when}</span></button>`;
 }
@@ -616,6 +831,23 @@ function reportGroup(g, parsed) {
   <h3 class="rgroup-head"><span class="rgroup-topic">${highlight(g.label, parsed)}</span><span class="rgroup-n">${count(g.countries, "country", "countries")}${g.reports !== g.countries ? ` · ${count(g.reports, "report")}` : ""}</span></h3>
   <div class="rgroup-list${wide ? " rgroup-list--wide" : ""}">${g.rows.map((row) => groupRow(row, g.label, parsed)).join("")}${g.rest.map((row) => groupRow(row, g.label, null, true)).join("")}</div>
   ${g.rest.length ? `<button class="rgroup-all" type="button" data-action="group-all">Show all ${num(g.reports)} in this group</button>` : ""}</section>`;
+}
+
+/* The glossary, last: the terms the words name (CPIN, 15c, OSCOLA…), each a link to its place in the guide.
+   The words are taken as typed (search-query.js: glossaryHits), and only names are matched, never the
+   explanations, so an ordinary search gets no noise. It sits under everything else and never counts as
+   a result of the data, except that a search which finds only a term shows the term, not "Nothing matches". */
+const GLOSSARY_LIMIT = 3;
+let glossMatches = 0;                    // glossary terms matched by the search view as last drawn
+function glossaryGroupHtml(text) {
+  const g = glossaryHits(text, searchGlossary, GLOSSARY_LIMIT), words = rawWords(text);
+  glossMatches = g.total;
+  if (!g.total) return "";
+  return `<div class="results-group gloss-hits"><div class="section-head"><h2 class="eyebrow">Glossary</h2><span class="eyebrow">${g.total}</span></div>
+    ${g.entries.map((e) => `<a class="ghit" href="${esc(glossaryHref(e.id))}">
+      <span class="ghit-top"><span class="ghit-term">${markWords(e.term, words)}</span>${e.full ? `<span class="ghit-full">${markWords(e.full, words)}</span>` : ""}<span class="ghit-group">${esc(TERM_GROUPS[e.group] || "")}</span></span>
+      <span class="ghit-def">${esc(e.def)}</span></a>`).join("")}
+    ${g.more ? `<a class="all-results" href="../guide/index.html?q=${encodeURIComponent(text)}#glossary">All ${count(g.total, "term")} →</a>` : ""}</div>`;
 }
 
 let titleMatches = 0;                    // countries + reports matched by the search view as last drawn
@@ -641,20 +873,26 @@ function searchView() {
       ${elsewhere ? `<p class="empty">No report for ${esc(named)} has that title. The same topic in other countries:</p>` : ""}
       ${entries.slice(0, notesShown).map((e) => (e.rows ? reportGroup(e, parsed) : reportHit(e, parsed))).join("")}${more}</div>` : "";
   const none = !titleMatches ? `<p class="empty no-titles">No country or report title matches “${esc(text)}”. ${parsed.text ? "Looking inside the text of the reports instead." : ""}</p>` : "";
+  const glossary = glossaryGroupHtml(text);                  // before the passages are drawn: they ask whether a term matched
   return `
     <p class="eyebrow">Search</p>
     <h1 class="hero-title">“${esc(text)}”</h1>
     ${hint}${none}${countryGroup}${reportsGroup}
     <div class="results-group text-hits" id="textHits">${textGroupHtml()}</div>
-    <p class="source-note">Countries and reports match names and titles. Passages come from every section of the live reports, word for word as stored.</p>`;
+    ${glossary}
+    <p class="source-note">Countries and reports match names and titles. Passages come from every section of the live reports: word for word as stored, except those marked From the PDF, which are this site’s reading of a report published as a PDF only.${glossMatches ? " Glossary entries are this site’s own explanations." : ""}</p>`;
 }
 
 /* The passages: a Pagefind index of every section of the live notes, built by `npm run search-index`
-   into ../search/pagefind/ and loaded the first time a search box is used. */
+   into ../search/pagefind/ and loaded the first time a search box is used. A passage from a report that is
+   published as a PDF only is text read from the PDF, not stored words: it carries the same mark as the
+   report's card, so it never passes for verbatim. */
+const fromPdfTag = (m) => (passageFromPdf(m, bySlug.get(m.slug))
+  ? `<span class="tag tag--muted" title="Published as a PDF only: the text here is taken from the PDF, with its layout rebuilt">From the PDF</span>` : "");
 function textHitHtml(h, text, { country = true, i = 0 } = {}) {
   const m = h.meta, c = bySlug.get(m.slug) || { name: m.country, iso_a2: m.iso_a2 };
   return `<a class="thit" href="${esc(readerHref(m, text))}" data-hover="${esc(m.slug)}" style="--i:${i}">
-    <span class="thit-top">${country ? `<span class="tag tag--outline">${flagCanvas(c, 8, "dotflag--tag")}${esc(c.name)}</span>` : ""}<span class="thit-topic">${esc(m.title)}</span></span>
+    <span class="thit-top">${country ? `<span class="tag tag--outline">${flagCanvas(c, 8, "dotflag--tag")}${esc(c.name)}</span>` : ""}<span class="thit-topic">${esc(m.title)}</span>${fromPdfTag(m)}</span>
     ${m.section ? `<span class="thit-section">${esc(m.section)}</span>` : ""}
     <span class="thit-excerpt">${excerptHtml(h.excerpt)}</span></a>`;
 }
@@ -695,9 +933,13 @@ function textGroupHtml() {
   if (textRes.status === "missing" || textRes.status === "error") return head("") + noIndexHtml;
   if (!fresh) return `${head("…")}<p class="empty searching">Searching the text${esc(where)}…</p>`;
   if (!textRes.hits.length) {
-    return titleMatches ? `${head(0)}<p class="empty">No passages${esc(where)} contain “${esc(t.text)}”.</p>` : nothingHtml(query.trim());
+    // Nothing in the data. A glossary term still answers the search (it is listed below): no "Nothing matches" then.
+    if (titleMatches) return `${head(0)}<p class="empty">No passages${esc(where)} contain “${esc(t.text)}”.</p>`;
+    return glossMatches ? `<p class="empty only-glossary">Nothing in the text of the reports either. From the glossary:</p>` : nothingHtml(query.trim());
   }
-  return `${head(num(textRes.total))}<div class="thits">${textRes.hits.map((h, i) => textHitHtml(h, textRes.text, { i })).join("")}</div>
+  // No country or title, but passages and a glossary term: the term may well be the answer, and it is under the passages. Say so.
+  const toGlossary = !titleMatches && glossMatches ? `<p class="empty to-glossary-line"><button type="button" class="linkish to-glossary" data-action="to-glossary">${glossMatches === 1 ? "A glossary term matches" : `${glossMatches} glossary terms match`} ↓</button></p>` : "";
+  return `${toGlossary}${head(num(textRes.total))}<div class="thits">${textRes.hits.map((h, i) => textHitHtml(h, textRes.text, { i })).join("")}</div>
     <button class="all-results" type="button" data-action="all-passages">All ${count(textRes.total, "passage")}${esc(where)} →</button>`;
 }
 async function runTextSearch() {
@@ -825,7 +1067,7 @@ function passageGroupEl(m, i) {
   const when = [fmtMonth(m.month), m.version ? `V${esc(m.version)}` : ""].filter(Boolean).join(" · ");
   el.innerHTML = `
     <div class="pnote-top"><span class="tag tag--outline">${flagCanvas(c, 8, "dotflag--tag")}${esc(c.name)}</span>
-      <span class="pnote-kind">${esc(m.kind)}</span>${when ? `<span class="pnote-when">${when}</span>` : ""}</div>
+      <span class="pnote-kind"${kindTip(m.kind)}>${esc(m.kind)}</span>${when ? `<span class="pnote-when">${when}</span>` : ""}${fromPdfTag(m)}</div>
     <h2 class="pnote-title"><a class="pnote-open" href="${esc(readerHref({ ...m, anchor: "" }, P.text))}" data-hover="${esc(m.slug)}">${esc(m.title)}</a></h2>
     <ol class="phits"></ol>
     <button class="pmore-in" type="button" data-action="more-in-note" hidden></button>`;
@@ -1034,6 +1276,11 @@ panel.addEventListener("click", (e) => {
   if (action === "more-notes") { notesShown = Infinity; render(); return; }
   if (action === "group-all") return expandReportGroup(t.closest(".rgroup"), t);
   if (action === "clear-search") return setQuery("");
+  if (action === "to-glossary") {                            // down to the glossary group, gently
+    const first = $(".gloss-hits .ghit", panel);
+    $(".gloss-hits", panel)?.scrollIntoView({ behavior: smooth(), block: "nearest" });
+    return first?.focus({ preventScroll: true });
+  }
   if (action === "all-passages") { const tq = textQuery(); return openPassages({ countries: tq.parsed.countries, kinds: tq.kinds }); }
   if (action === "all-passages-country") {
     const tq = countryTextQuery();
@@ -1079,7 +1326,7 @@ panel.addEventListener("input", (e) => {
     for (const li of panel.querySelectorAll(".pmenu-countries li")) li.hidden = !!needle && !norm(li.textContent).includes(needle);
   }
 });
-const RESULT_ITEMS = ".hit, .rhit, .rgroup-all, .thit, .phit, .pnote-open, .more, .all-results, .pmore-in";
+const RESULT_ITEMS = ".hit, .rhit, .rgroup-all, .thit, .phit, .pnote-open, .more, .all-results, .pmore-in, .ghit";
 const focusItem = (el) => { el.focus({ preventScroll: true }); el.scrollIntoView({ block: "nearest", behavior: smooth() }); };
 panel.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && e.target.closest(".pmenu[open]")) { const menu = e.target.closest(".pmenu"); menu.open = false; $("summary", menu).focus(); return; }
@@ -1105,6 +1352,7 @@ panel.addEventListener("keydown", (e) => {
 const q = $("#q");
 q.addEventListener("focus", () => loadIndex(), { once: true });
 q.addEventListener("input", () => {
+  closeChooser();
   const starting = !query.trim() && q.value.trim();
   query = q.value; notesShown = 8;
   if (!query.trim()) view = "";
@@ -1115,7 +1363,12 @@ q.addEventListener("input", () => {
 });
 q.addEventListener("keydown", (e) => {
   if (e.key === "Escape") { setQuery(""); q.blur(); }
-  if (e.key === "Enter") panel.querySelector(".hit, .rhit, .thit, .phit")?.click();
+  if (e.key === "Enter") {
+    // The first result; a glossary term only when it is all there is (and the text search has finished looking).
+    const first = panel.querySelector(".hit, .rhit, .thit, .phit");
+    if (first) first.click();
+    else if (!$("#textHits .searching", panel)) panel.querySelector(".ghit")?.click();
+  }
   if (e.key === "ArrowDown" && query.trim()) {
     const first = [...panel.querySelectorAll(RESULT_ITEMS)].find((el) => el.offsetParent !== null);
     if (first) { e.preventDefault(); focusItem(first); }
@@ -1161,6 +1414,9 @@ if (new URLSearchParams(location.search).has("debug")) {
     /** Each dot on the page: centre (client px), drawn radius, whether it faces the viewer. */
     dots: () => { const b = canvas.getBoundingClientRect(); return pins.map((p) => ({ slug: p.slug, x: b.left + p.x, y: b.top + p.y, r: p.r, visible: p.visible })); },
     pick: (clientX, clientY, pointerType = "mouse") => hitAt({ clientX, clientY, pointerType }),
+    /** The dots a fingertip at this point reaches (nearest first), whether that is ambiguous, and the open chooser's countries. */
+    near: (clientX, clientY) => { const { x, y } = canvasPoint({ clientX, clientY }); const near = dotsInReach(pins, x, y, TOUCH); return { near, ambiguous: isAmbiguous(near) }; },
+    chooser: () => (chooser ? [...chooser.slugs] : null),
     glow: () => glow.levels,
   };
 }

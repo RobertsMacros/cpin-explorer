@@ -1,0 +1,72 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 24,
+ "body_size": 9.5,
+ "body_font": "arial",
+ "headings": 38,
+ "paragraphs": 171,
+ "list_items": 9,
+ "tables": 0,
+ "figures": 6,
+ "footnotes": 38,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 26"
+ ],
+ "figure_pages": {
+  "e8a6d0d7f5ce3a17acc456e6b548bea52af4843cce22ad4b203497ccc8ec8c30.png": 14,
+  "e3927e3ad1a7c575aab037a42b2a57db7d5476701c05cdeb15a63f3ea76cb478.png": 15,
+  "144a5dae10e5bfd0a4112a1eb2a0b85cba7dfd08ff4437bc407fc591d7a56b0d.png": 15,
+  "78796b5cc5e469bb6ac000b41cfccf8504e0342be29e9222a6f13b1c8544b4b6.png": 16,
+  "5259886fb6cd478037bafced8091d150558a698393db1c925f7276029948eca6.png": 17,
+  "89c972aeb9efd9d638281caa5d7e43a4ce9fa97f5f4ddbf8bc72dfd79a249ec8.png": 17
+ },
+ "figure_sizes": {
+  "e8a6d0d7f5ce3a17acc456e6b548bea52af4843cce22ad4b203497ccc8ec8c30.png": [
+   640,
+   126
+  ],
+  "e3927e3ad1a7c575aab037a42b2a57db7d5476701c05cdeb15a63f3ea76cb478.png": [
+   627,
+   412
+  ],
+  "144a5dae10e5bfd0a4112a1eb2a0b85cba7dfd08ff4437bc407fc591d7a56b0d.png": [
+   628,
+   200
+  ],
+  "78796b5cc5e469bb6ac000b41cfccf8504e0342be29e9222a6f13b1c8544b4b6.png": [
+   646,
+   98
+  ],
+  "5259886fb6cd478037bafced8091d150558a698393db1c925f7276029948eca6.png": [
+   647,
+   98
+  ],
+  "89c972aeb9efd9d638281caa5d7e43a4ce9fa97f5f4ddbf8bc72dfd79a249ec8.png": [
+   645,
+   183
+  ]
+ },
+ "figure_text": {
+  "e8a6d0d7f5ce3a17acc456e6b548bea52af4843cce22ad4b203497ccc8ec8c30.png": 0,
+  "e3927e3ad1a7c575aab037a42b2a57db7d5476701c05cdeb15a63f3ea76cb478.png": 0,
+  "144a5dae10e5bfd0a4112a1eb2a0b85cba7dfd08ff4437bc407fc591d7a56b0d.png": 0,
+  "78796b5cc5e469bb6ac000b41cfccf8504e0342be29e9222a6f13b1c8544b4b6.png": 0,
+  "5259886fb6cd478037bafced8091d150558a698393db1c925f7276029948eca6.png": 0,
+  "89c972aeb9efd9d638281caa5d7e43a4ce9fa97f5f4ddbf8bc72dfd79a249ec8.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Nigeria: Female Genital Mutilation (FGM)",
+ "cover_version": "1.0",
+ "cover_date": "February 2017",
+ "pdf_sha256": "4bb55f3d916f27680cea84c38ac31638985533d528d413e18758305553469aca",
+ "images": [
+  "144a5dae10e5bfd0a4112a1eb2a0b85cba7dfd08ff4437bc407fc591d7a56b0d.png",
+  "5259886fb6cd478037bafced8091d150558a698393db1c925f7276029948eca6.png",
+  "78796b5cc5e469bb6ac000b41cfccf8504e0342be29e9222a6f13b1c8544b4b6.png",
+  "89c972aeb9efd9d638281caa5d7e43a4ce9fa97f5f4ddbf8bc72dfd79a249ec8.png",
+  "e3927e3ad1a7c575aab037a42b2a57db7d5476701c05cdeb15a63f3ea76cb478.png",
+  "e8a6d0d7f5ce3a17acc456e6b548bea52af4843cce22ad4b203497ccc8ec8c30.png"
+ ]
+}

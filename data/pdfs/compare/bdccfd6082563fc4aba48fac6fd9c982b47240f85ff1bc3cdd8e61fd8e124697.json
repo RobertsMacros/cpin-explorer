@@ -1,0 +1,434 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-women-fearing-gender-based-violence-pakistan-november-2022-accessible",
+ "pdf_sha256": "bdccfd6082563fc4aba48fac6fd9c982b47240f85ff1bc3cdd8e61fd8e124697",
+ "body_sha256": "9b5407a4c5ffa332fb3b5abb404ccda17095ae1cb497df4f5049e4c11b4d9066",
+ "words": {
+  "web": 23841,
+  "pdf": 23856
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "repeated label": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "ours": {
+   "differences": 21,
+   "web_words": 11,
+   "pdf_words": 17
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "October 2025",
+   "pdf": "6.0",
+   "pdf_date": "October 2025"
+  },
+  "section_updated": {
+   "web": [
+    "22 October 2025"
+   ],
+   "pdf": [
+    "22 October 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 254,
+   "pdf": 254,
+   "pdf_raw": 254,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 6,
+   "pdf": 7
+  },
+  "headings": {
+   "web": 64,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.1.11",
+    "section": "Version control and feedback",
+    "page": 57
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "ICT\n22\n22\n22\n0\n0\n0\nRape",
+   "after": "Province\nRegistered cases\nChalland (charge sheet)\nUnder investigation",
+   "before_pdf": "22\n22\n22\n0\n0\n0\n224\nRape",
+   "where": {
+    "heading": "rape",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "176\n176\n636\n7\n338\n0\nAbduction\nProvince",
+   "after": "Registered cases\nChalland (charge sheet)\nUnder investigation\nUnder",
+   "where": {
+    "heading": "abduction",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "22\n136\n0\n17\n1\nICT\nDomestic violence",
+   "after": "Province\nRegistered cases\nChalland (charge sheet)\nUnder investigation",
+   "before_pdf": "136\n0\n17\n1\nICT\n226\nDomestic violence",
+   "where": {
+    "heading": "domestic-violence-1",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 43
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Withdrawn\ncharge\nsheet)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sheet)\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "after": "Punjab\n225\n200\n19\n90\n2\n25\n0",
+   "before_pdf": "Challand\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "where": {
+    "heading": "honour-killing",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Withdrawn\ncharge\nsheet)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sheet)\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "after": "Punjab\n4,641\n3,403\n276\n1,126",
+   "before_pdf": "Challand\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "where": {
+    "heading": "rape",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Withdrawn\ncharge\nsheet)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sheet)\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "after": "Punjab\n20,720\n5,865\n2,696\n2,",
+   "before_pdf": "Challand\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "where": {
+    "heading": "abduction",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Withdrawn\ncharge\nsheet)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sheet)\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "after": "Punjab\n1,167\n783\n345\n713\n3\n59",
+   "before_pdf": "Challand\nUnder investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn",
+   "where": {
+    "heading": "domestic-violence-1",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "charge sheet)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "final verdict:\nHonour killing\nProvince\nRegistered cases\nChalland (",
+   "after": "Under investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn\nPunjab",
+   "before_pdf": "verdict:\nHonour killing\nProvince\nProvince\nRegistered cases\nChalland",
+   "where": {
+    "heading": "honour-killing",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "charge sheet)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "0\n0\n0\nRape\nProvince\nRegistered cases\nChalland (",
+   "after": "Under investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn\nPunjab",
+   "before_pdf": "0\n224\nRape\nProvince\nProvince\nRegistered cases\nChalland",
+   "where": {
+    "heading": "rape",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "charge sheet)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "7\n338\n0\nAbduction\nProvince\nRegistered cases\nChalland (",
+   "after": "Under investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn\nPunjab",
+   "before_pdf": "338\n0\nAbduction\nProvince\nProvince\nRegistered cases\nChalland",
+   "where": {
+    "heading": "abduction",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "charge sheet)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "1\nICT\nDomestic violence\nProvince\nRegistered cases\nChalland (",
+   "after": "Under investigation\nUnder trial\nConviction\nAcquittals\nWithdrawn\nPunjab",
+   "before_pdf": "226\nDomestic violence\nProvince\nProvince\nRegistered cases\nChalland",
+   "where": {
+    "heading": "domestic-violence-1",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Province",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "abductions:\nNumber of registered GBV cases 2024\nProvince",
+   "after": "Honour killing\nRape\nAbduction\nDomestic violence\nPunjab\n225",
+   "where": {
+    "heading": "number-of-registered-gbv-cases-2024",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "killing",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Number of registered GBV cases 2024\nProvince\nHonour",
+   "after": "Rape\nAbduction\nDomestic violence\nPunjab\n225\n4,641",
+   "before_pdf": "of registered GBV cases 2024\nProvince\nProvince\nHonour",
+   "where": {
+    "heading": "number-of-registered-gbv-cases-2024",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "killing",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "cases 2024\nProvince\nHonour killing\nRape\nAbduction\nDomestic",
+   "after": "violence\nPunjab\n225\n4,641\n20,720\n1,",
+   "before_pdf": "cases 2024\nProvince\nProvince\nHonour\nRape\nAbduction\nDomestic",
+   "where": {
+    "heading": "number-of-registered-gbv-cases-2024",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Province",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Rate of GBV per 100,000 women\nProvince",
+   "after": "Population\nHonour killing\nRape\nAbduction\nDomestic violence\nPunjab",
+   "where": {
+    "heading": "rate-of-gbv-per-100000-women",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": 27
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 239,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

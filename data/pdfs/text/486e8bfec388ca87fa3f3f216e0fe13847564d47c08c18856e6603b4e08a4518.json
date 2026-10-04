@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 35,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 43,
+ "paragraphs": 218,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 4,
+ "footnotes": 86,
+ "bookmarks": 40,
+ "warnings": [
+  "footnotes with no mark found in the text: 48, 51"
+ ],
+ "figure_pages": {
+  "5138b88e5973d09bfd65be08d10f3fa6a02b749fad8c127432aea009dad16350.png": 22,
+  "ddf94c30b113fd6d3636da6d777b59d4aaf920a6f0ae4a59a2ca15113d21979c.png": 23,
+  "cd8fa26eef92c346c5482476f4954c26b76e0c0e4bf2d05273ff349dd525d9ca.png": 24,
+  "78a3018c7ebbad69af05b4e24ed184ce51efc7902afc6a360d2bc2e5d1bc0442.png": 25
+ },
+ "figure_sizes": {
+  "5138b88e5973d09bfd65be08d10f3fa6a02b749fad8c127432aea009dad16350.png": [
+   782,
+   707
+  ],
+  "ddf94c30b113fd6d3636da6d777b59d4aaf920a6f0ae4a59a2ca15113d21979c.png": [
+   782,
+   529
+  ],
+  "cd8fa26eef92c346c5482476f4954c26b76e0c0e4bf2d05273ff349dd525d9ca.png": [
+   782,
+   1235
+  ],
+  "78a3018c7ebbad69af05b4e24ed184ce51efc7902afc6a360d2bc2e5d1bc0442.png": [
+   782,
+   331
+  ]
+ },
+ "figure_text": {
+  "5138b88e5973d09bfd65be08d10f3fa6a02b749fad8c127432aea009dad16350.png": 655,
+  "ddf94c30b113fd6d3636da6d777b59d4aaf920a6f0ae4a59a2ca15113d21979c.png": 546,
+  "cd8fa26eef92c346c5482476f4954c26b76e0c0e4bf2d05273ff349dd525d9ca.png": 1426,
+  "78a3018c7ebbad69af05b4e24ed184ce51efc7902afc6a360d2bc2e5d1bc0442.png": 371
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Kurdish ‘honour’ crimes",
+ "cover_version": "1.0",
+ "cover_date": "August 2017",
+ "pdf_sha256": "486e8bfec388ca87fa3f3f216e0fe13847564d47c08c18856e6603b4e08a4518",
+ "images": [
+  "5138b88e5973d09bfd65be08d10f3fa6a02b749fad8c127432aea009dad16350.png",
+  "78a3018c7ebbad69af05b4e24ed184ce51efc7902afc6a360d2bc2e5d1bc0442.png",
+  "cd8fa26eef92c346c5482476f4954c26b76e0c0e4bf2d05273ff349dd525d9ca.png",
+  "ddf94c30b113fd6d3636da6d777b59d4aaf920a6f0ae4a59a2ca15113d21979c.png"
+ ]
+}

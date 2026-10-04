@@ -1,0 +1,252 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ukraine/country-policy-and-information-note-military-service-ukraine-june-2022-accessible",
+ "pdf_sha256": "b7c7039870a6f65b9b047682e56ac5af3e916a3af44e366e98a0bc39ca443226",
+ "body_sha256": "beca88c3c033fc2cdeeedc4b335ac09444a1dc40c226f3cdaf003117fb76d6f0",
+ "words": {
+  "web": 29034,
+  "pdf": 29036
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 7,
+   "pdf_words": 7
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "9.0",
+   "web_date": "September 2025",
+   "pdf": "9.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "11 September 2025"
+   ],
+   "pdf": [
+    "11 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 184,
+   "pdf": 184,
+   "pdf_raw": 184,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 103,
+   "pdf": 65
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "17.1.6",
+    "section": "Version control and feedback",
+    "page": 71
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "mobilisation, for a special period",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "3 years\nEvasion of reservists from conscription during",
+   "after": "Article 336\nImprisonment for 3 to 5 years",
+   "where": {
+    "heading": "Punishment",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "mobilisation, for a special period",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Article 336\nImprisonment for 3 to 5 years",
+   "after": "Evasion from civil defence service during mobilisation\nArticle",
+   "where": {
+    "heading": "Punishment",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "mobilisation,",
+   "pdf": "mobilisation25,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "1.1 The Law on mobilisation training and",
+   "after": "dated 21 October 1993 and subsequently amended regulates",
+   "where": {
+    "heading": "military-service-and-mobilisation-during-martial-law",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "system).",
+   "pdf": "system31].",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "digitally in Rezerv+ (mobile application for military registration",
+   "after": "Consular services for Ukrainian men of military age",
+   "before_pdf": "digitally in Rezerv+ [mobile application for military registration",
+   "where": {
+    "heading": "Age",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "160",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "that do not involve the use of weapons.’",
+   "after": "15.3 Punishments\n15.3.1 The 2023",
+   "where": {
+    "heading": "punishments",
+    "paragraph": "15.2.4",
+    "section": "Country information",
+    "page": 52
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 202,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "3.3.1",
+   "12.3.1",
+   "13.2.1"
+  ],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "somalia/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+ "pdf_sha256": "6586443fa9b73b3ddcc1bddea16ee9fae09eb3eae28600ec20fee569dda9ed1f",
+ "body_sha256": "88219eaa46581a04de5d86f1230df733d9bd4170801ee2f5bdc1913d2b8777a7",
+ "figures": [
+  {
+   "image": "bbcd995aeae0a4f2dc35deacb67e623c0a922777a73cc5f11898a73521358c94.png",
+   "tag": "p",
+   "index": 167,
+   "key": "944thetablebelowtakenfromthesdhs2020showsthepercentageofwome",
+   "page": 22
+  },
+  {
+   "image": "d1e9f24e8459b9103a8fa8858ae8471d6f3709b670cabaddb23e72ce44b17a4d.png",
+   "tag": "p",
+   "index": 170,
+   "key": "946thefigurebelowfromthesdhs2020showsofevermarriedwomenwhoha",
+   "page": 23
+  },
+  {
+   "image": "1becaec2734306e5b5fef8e6b710030f483baea0d96bccecef071f6b7c9e1230.png",
+   "tag": "p",
+   "index": 183,
+   "key": "963figurebelowshowspercentagedistributionofwomenaged15to49by",
+   "page": 25
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 3,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

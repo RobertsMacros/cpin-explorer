@@ -1,0 +1,409 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "colombia/country-policy-and-information-note-internal-relocation-colombia-march-2026-accessible",
+ "pdf_sha256": "5ab433f9ae30d0437ead4931a645003aea0b5583e8de728b1567e97eb7248678",
+ "body_sha256": "3db3bc2badbeb0941d2a95cb7dba807a6ce530d442795ddb81fc1fee49020798",
+ "words": {
+  "web": 26294,
+  "pdf": 26307
+ },
+ "summary": {
+  "wording": {
+   "differences": 5,
+   "web_words": 51,
+   "pdf_words": 54,
+   "share": 0.001996,
+   "passages": 3,
+   "sizes": {
+    "word": 2,
+    "passage": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 5,
+    "web_words": 51,
+    "pdf_words": 54
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 8
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 3,
+    "web_words": 51,
+    "pdf_words": 52
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 8
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "2.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "18 December 2024"
+   ],
+   "pdf": [
+    "18 December 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 200,
+   "pdf": 200,
+   "pdf_raw": 200,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 56,
+   "pdf": 54
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "OECD, Distributed renewable energy",
+   "pdf": "FH, Freedom in the World 2024 – Colombia (G2), 25 April 2024\nPLAAS, Who we are, no date\nPLAAS, Colombia’s expropriation without compensation and lessons..., 8 May 2024\nXe.com, 657,000,000 USD to GBP, 13 December 2024\nUN Verification Mission",
+   "web_words": 4,
+   "pdf_words": 42,
+   "before": "Building Generational Wealth in Colombia, 25 May 2025",
+   "after": "in Colombia (page 16), 11 May 2023\nOECD,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "97.94",
+    "section": "Version control and feedback",
+    "page": 31
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "30-34), 11 May 2023\nWorld Bank, Access to electricity (% of population) - Colombia, 2023\nWorld Bank, Access to electricity, urban (% of urban population) - Colombia, 2023\nWorld Bank, Access to electricity, rural (% of rural population) - Colombia, 2023",
+   "pdf": "4, 5), 27 June 2024",
+   "web_words": 36,
+   "pdf_words": 5,
+   "before": "2023\nOECD, Distributed renewable energy in Colombia (pages",
+   "after": "UN Verification Mission in Colombia, Report of the... (",
+   "before_pdf": "in Colombia, Report of the Secretary-General (pages",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "97.94",
+    "section": "Version control and feedback",
+    "page": 32
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "page 16), 11 May 2023\nOECD, Distributed renewable energy in Colombia (",
+   "pdf": "Report of the Secretary-General (",
+   "web_words": 11,
+   "pdf_words": 5,
+   "before": "May 2025\nOECD, Distributed renewable energy in Colombia (",
+   "after": "pages 30-34), 11 May 2023\nWorld Bank,",
+   "before_pdf": "13 December 2024\nUN Verification Mission in Colombia,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "97.94",
+    "section": "Version control and feedback",
+    "page": 32
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "country",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Credibility and Refugee Status.\nCountry information\nAbout the",
+   "after": "information\nThis contains publicly available or disclosable country",
+   "where": {
+    "heading": "about-the-information",
+    "paragraph": "2.1.15",
+    "section": "Country information",
+    "page": 9
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "IDPs)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "groups, and campesino communities.’\n15. Internally displaced persons",
+   "after": "15.1.1 The Internal Displacement Monitoring Centre (",
+   "before_pdf": "groups, and campesino communities.’\n15. Internally displaced persons (",
+   "where": {
+    "heading": "idps",
+    "paragraph": "15.1.1",
+    "section": "Country information",
+    "page": 48
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 2.0, March 2026",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nIn general, a person fearing ‘rogue’",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.3",
+   "pdf": "3.2.2",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "Santander, Sucre, Tolima, Valle del Cauca, Vaupes, Vichada.",
+   "after": "These departments are also sub-divided into municipalities.",
+   "where": {
+    "heading": "states-and-regions",
+    "paragraph": "3.1.3",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.4",
+   "pdf": "3.2.3",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "These departments are also sub-divided into municipalities.",
+   "after": "OnTheWorldMap, a collection of maps created by cartographers,",
+   "where": {
+    "heading": "states-and-regions",
+    "paragraph": "3.1.4",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "8.5.4The",
+   "pdf": "8.5.4 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "it provides service to 1,241,000 inhabitants ...’",
+   "after": "United Nations International Children’s Emergency Fund (UNICEF)",
+   "where": {
+    "heading": "water-sanitation-and-hygiene-wash",
+    "paragraph": "8.5.4",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.2.5The",
+   "pdf": "9.2.5 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "in recent years, but implementation has been uneven.’",
+   "after": "same source added that:\nOne of these reforms",
+   "where": {
+    "heading": "mental-healthcare",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "15.1.10",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "efforts to return, relocate, and formalize urban settlements.’",
+   "after": "For further information, see ODI’s full report",
+   "where": {
+    "heading": "idps",
+    "paragraph": "15.1.9",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "is Bogotá.\n3.2 States and regions\n3.",
+   "after": "1.2 Colombia’s administrative divisions consist of",
+   "before_pdf": "capital is Bogotá.\n3.2 States and regions",
+   "where": {
+    "heading": "states-and-regions",
+    "paragraph": "3.1.2",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.2",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "capital is Bogotá.\n3.2 States and regions",
+   "after": "Colombia’s administrative divisions consist of 32 departments",
+   "before_pdf": "3.2 States and regions\n3.2.1",
+   "where": {
+    "heading": "states-and-regions",
+    "paragraph": "3.1.2",
+    "section": "Country information",
+    "page": 9
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 178,
+  "different": {
+   "3.1.2": "3.2.1",
+   "3.1.3": "3.2.2",
+   "3.1.4": "3.2.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

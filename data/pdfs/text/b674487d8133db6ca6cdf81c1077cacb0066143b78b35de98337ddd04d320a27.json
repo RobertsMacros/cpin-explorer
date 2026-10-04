@@ -1,0 +1,50 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 38,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 45,
+ "paragraphs": 272,
+ "list_items": 58,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 65,
+ "bookmarks": 39,
+ "warnings": [
+  "footnotes with no mark found in the text: 3, 4, 49"
+ ],
+ "figure_pages": {
+  "01c153d99938b2e5db20098b314e2a4ded9c754089c8b489b44dc1143c3b5848.jpg": 10,
+  "5fcf98826dc2f648d4b5cc875d429e9686b788e2ff4b23287cb473f37ece08ec.jpg": 11,
+  "e635495038c16a2c14131a2b0769058dbc7aea4ef8e0461bdfaac1a0e8f59fe7.jpg": 26
+ },
+ "figure_sizes": {
+  "01c153d99938b2e5db20098b314e2a4ded9c754089c8b489b44dc1143c3b5848.jpg": [
+   942,
+   711
+  ],
+  "5fcf98826dc2f648d4b5cc875d429e9686b788e2ff4b23287cb473f37ece08ec.jpg": [
+   919,
+   824
+  ],
+  "e635495038c16a2c14131a2b0769058dbc7aea4ef8e0461bdfaac1a0e8f59fe7.jpg": [
+   919,
+   715
+  ]
+ },
+ "figure_text": {
+  "01c153d99938b2e5db20098b314e2a4ded9c754089c8b489b44dc1143c3b5848.jpg": 0,
+  "5fcf98826dc2f648d4b5cc875d429e9686b788e2ff4b23287cb473f37ece08ec.jpg": 0,
+  "e635495038c16a2c14131a2b0769058dbc7aea4ef8e0461bdfaac1a0e8f59fe7.jpg": 19
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Nigeria: Internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "b674487d8133db6ca6cdf81c1077cacb0066143b78b35de98337ddd04d320a27",
+ "images": [
+  "01c153d99938b2e5db20098b314e2a4ded9c754089c8b489b44dc1143c3b5848.jpg",
+  "5fcf98826dc2f648d4b5cc875d429e9686b788e2ff4b23287cb473f37ece08ec.jpg",
+  "e635495038c16a2c14131a2b0769058dbc7aea4ef8e0461bdfaac1a0e8f59fe7.jpg"
+ ]
+}

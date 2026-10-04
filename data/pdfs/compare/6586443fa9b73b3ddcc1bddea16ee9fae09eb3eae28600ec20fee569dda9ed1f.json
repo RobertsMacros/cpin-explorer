@@ -1,0 +1,208 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "somalia/country-policy-and-information-note-women-fearing-gender-based-violence-somalia-july-2024-accessible",
+ "pdf_sha256": "6586443fa9b73b3ddcc1bddea16ee9fae09eb3eae28600ec20fee569dda9ed1f",
+ "body_sha256": "88219eaa46581a04de5d86f1230df733d9bd4170801ee2f5bdc1913d2b8777a7",
+ "words": {
+  "web": 13673,
+  "pdf": 13500
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 142,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 1,
+    "web_words": 71,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 71,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "July 2024",
+   "pdf": "5.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024"
+   ],
+   "pdf": [
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024",
+    "30 May 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 74,
+   "pdf": 74,
+   "pdf_raw": 74,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 49,
+   "pdf": 43
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Percentage of women aged 15-49 who understand domestic violence to mean various specified acts, according to marital status:\nMarried\nNever married\nForced labour\n60.9\n72.2\nSexual harassment\n57.9\n68.5\nRape\n59.7\n74.9\nForced marriage\n62.1\n74.5\nDenial of education\n58.2\n70.8\nFailing to meet basic living costs\n47.5\n54.6\nBetter treatment of males than females\n52\n60.8\nNo participation in decision making for children\n52.9\n59.8\nNo participation in household decision-making\n51.3\n60.3\nPhysical abuse\n60.7\n66.6",
+   "pdf": "",
+   "web_words": 71,
+   "pdf_words": 0,
+   "before": "mean specific acts according to their marital status:",
+   "after": "9.4.5 The data in the table",
+   "where": {
+    "heading": "domestic-violence",
+    "paragraph": "9.4.4",
+    "section": "9. Types of gender-based violence (GBV) and prevalance",
+    "page": 22
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Education level\nRequired by religion\nNot required by religion\nDon’t know\nNo education\n73.5\n24\n2.5\nPrimary\n67.7\n30.9\n1.4\nSecondary\n59.8\n38.4\n1.7\nHigher Education\n44.1\n54.4\n1.6",
+   "pdf": "",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "according to their ages and other background characteristics.",
+   "after": "9.6.4 The UNFPA report 2022 noted:",
+   "where": {
+    "heading": "Female_genital_mutilation",
+    "paragraph": "9.6.3",
+    "section": "9. Types of gender-based violence (GBV) and prevalance",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Types of injury\nPercentage\nAny injury\n35\nCuts, bruises, or aches\n26.3\nEye injuries, sprains, dislocations, or burns\n19.4\nDeep wounds, broken bones, broken teeth, or any other serious injury\n17.8",
+   "pdf": "",
+   "web_words": 33,
+   "pdf_words": 0,
+   "before": "12%), the percentage of injuries they had received.",
+   "after": "9.4.7 The SDHS 2020 noted: ‘With",
+   "where": {
+    "heading": "domestic-violence",
+    "paragraph": "9.4.6",
+    "section": "9. Types of gender-based violence (GBV) and prevalance",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 128,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

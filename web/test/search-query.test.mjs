@@ -2,7 +2,8 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { buildGroups, groupReports, matchCountries, matchReports, norm, parseQuery, rowNote } from "../../prototypes/dashboard/search-query.js";
+import { buildGroups, glossaryHits, groupReports, kindTermId, kindTitle, matchCountries, matchReports, norm, parseQuery, rawWords, rowNote } from "../../prototypes/dashboard/search-query.js";
+import { glossaryEntry, searchGlossary } from "../../prototypes/shared/glossary.js";
 
 const data = JSON.parse(readFileSync(new URL("../../prototypes/dashboard/data.json", import.meta.url), "utf8"));
 const countries = data.countries;
@@ -270,4 +271,76 @@ test("live reports come before ones no longer on GOV.UK", () => {
   const hits = reports("actors of protection");
   const firstGone = hits.findIndex((x) => x.r.status !== "live");
   if (firstGone >= 0) assert.ok(hits.slice(firstGone).every((x) => x.r.status !== "live"));
+});
+
+// --- The glossary in the one search, and what the kind tags stand for ---------------------------------
+const gloss = (q, limit) => glossaryHits(q, searchGlossary, limit);
+const glossIds = (q) => gloss(q).entries.map((e) => e.id);
+
+test("glossary terms are found on the words as typed: 'cpin' and 'country report' are generic to the title search, and still find CPIN", () => {
+  for (const q of ["cpin", "CPIN", "CPINs", "country report", "Country Reports", "country policy and information note"]) {
+    assert.ok(parse(q).generic, `${q}: any report, to the title search`);
+    assert.equal(glossIds(q)[0], "cpin", q);
+  }
+  assert.equal(glossIds("fact finding")[0], "ffm", "a kind word to the title search; a term here");
+  assert.equal(glossIds("15c")[0], "article-15c");
+  assert.equal(glossIds("oscola")[0], "citation-styles");
+  assert.equal(glossIds("iagci")[0], "iagci");
+});
+
+test("a search that matches only a glossary term: no country, no report title, but one term", () => {
+  for (const q of ["oscola", "iagci", "wayback"]) {
+    const p = parse(q);
+    assert.equal(matchCountries(p, countries).length + reports(q).length, 0, `${q}: nothing in the titles`);
+    assert.equal(gloss(q).total, 1, q);
+  }
+});
+
+test("one or two letters only match a name typed in full, so the first keystrokes of a search list nothing", () => {
+  assert.ok(searchGlossary("c").length > 20, "the glossary's own matching: 'c' starts many names");
+  for (const q of ["c", "i", "co", "in", "ir"]) assert.equal(gloss(q).total, 0, q);
+  assert.deepEqual(glossIds("cg"), ["country-guidance"]);
+  assert.deepEqual(glossIds("HP"), ["humanitarian-protection"]);
+  assert.equal(glossIds("coi")[0], "coi", "three letters: the start of a name is enough again");
+  assert.equal(glossIds("iag")[0], "iagci");
+});
+
+test("ordinary searches get no glossary noise: a country, a place, an empty box", () => {
+  for (const q of ["iran", "Iran military service", "mogadishu", "kurdish", "", "   "]) {
+    assert.deepEqual(gloss(q), { entries: [], total: 0, more: false }, JSON.stringify(q));
+  }
+});
+
+test("at most three terms are listed, with the full count for the 'All N terms' link", () => {
+  const g = gloss("country");
+  assert.equal(g.entries.length, 3);
+  assert.ok(g.total > 3 && g.more);
+  assert.equal(g.total, searchGlossary("country").length);
+  const three = gloss("protection");
+  assert.equal(three.total, 3);
+  assert.equal(three.more, false, "exactly three: no link needed");
+  assert.equal(three.entries[0].id, "actors-of-protection", "the exact name first");
+  assert.equal(gloss("protection", 2).entries.length, 2);
+  assert.equal(gloss("oscola").more, false);
+  assert.deepEqual(rawWords("  Article 15(c)  "), ["article", "15", "c"]);
+  assert.deepEqual(rawWords(""), []);
+});
+
+test("every kind of report in the data that has a glossary entry maps to it; the tag's tooltip spells it out", () => {
+  const ids = Object.fromEntries(kinds.map((k) => [k, kindTermId(k)]));
+  assert.equal(ids.CPIN, "cpin");
+  assert.equal(ids["Country information note"], "cin");
+  assert.equal(ids["Country bulletin"], "country-bulletin");
+  assert.equal(ids["Report of a fact-finding mission"], "ffm");
+  assert.equal(ids["Country information and guidance (legacy)"], "cig");
+  for (const [kind, id] of Object.entries(ids)) if (id) assert.ok(glossaryEntry(id), `${kind}: ${id} is in the glossary`);
+  assert.equal(kindTermId("GOV.UK notice"), null, "a one-off notice has no entry");
+  assert.equal(kindTermId(undefined), null);
+  const tip = (kind) => kindTitle(kind, glossaryEntry(kindTermId(kind)));
+  assert.equal(tip("CPIN"), "Country Policy and Information Note");
+  assert.equal(tip("Report of a fact-finding mission"), "Report of a fact-finding mission (FFM)");
+  assert.equal(tip("Country information note"), "Country information note (CIN)");
+  assert.equal(tip("Country information and guidance (legacy)"), "Country information and guidance (CIG)");
+  assert.equal(tip("Country bulletin"), "", "already spelled out, and it has no abbreviation");
+  assert.equal(tip("GOV.UK notice"), "");
 });

@@ -1,0 +1,107 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 64,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 58,
+ "paragraphs": 550,
+ "list_items": 24,
+ "tables": 0,
+ "figures": 11,
+ "footnotes": 91,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 7, 9, 16, 18, 21, 27, 30, 57"
+ ],
+ "figure_pages": {
+  "025e2e5eaf55019c1ad2dbffe544d2b42eb753a203e1015412f7e58dffc2f490.jpg": 12,
+  "a8c76edcfd0324ce136432bde80f1471a832a1dba7acb4c26fe88b6da71b2d9d.png": 13,
+  "c716e8fbd87f8e76e7876f2db02a1a9b4b25da138da4a89ad5816dad0ea04bc0.jpg": 14,
+  "c1d80c3cca5094dc55d7d0a7a3885d124741ee2cffe0c49c2c53453790280883.png": 15,
+  "f5a5750c0dfb2bfab85c1ac527172c3cc8bc86f559a5f24d05dcf957813964ff.jpg": 16,
+  "8a8db85a4d2115ccad9d860fadfd400d41020ebe51b7672fa9a67c9a7a4f2d55.jpg": 18,
+  "eeafa1c83cc6a692cba327efcaf85134e13906c2b0d635e69b745beea53f7d2f.jpg": 20,
+  "f120d6d9b3052b6c6ee5f9e2baace9a5fe4d139557ff5f760b45180aa074c7da.png": 35,
+  "986c7a0f7a43076b06506cc094b390c251b11d905a8e498eece766e71ac0e195.png": 35,
+  "993953c360b774c1f12b9c9eeb422aed21360193b821aa52b18a49a3b2e1110c.png": 36,
+  "bd1337979acb4fea0e0d9994371ed298e02bd31a01bc98c59efeda6344af06c9.png": 36
+ },
+ "figure_sizes": {
+  "025e2e5eaf55019c1ad2dbffe544d2b42eb753a203e1015412f7e58dffc2f490.jpg": [
+   820,
+   467
+  ],
+  "a8c76edcfd0324ce136432bde80f1471a832a1dba7acb4c26fe88b6da71b2d9d.png": [
+   648,
+   489
+  ],
+  "c716e8fbd87f8e76e7876f2db02a1a9b4b25da138da4a89ad5816dad0ea04bc0.jpg": [
+   724,
+   711
+  ],
+  "c1d80c3cca5094dc55d7d0a7a3885d124741ee2cffe0c49c2c53453790280883.png": [
+   481,
+   556
+  ],
+  "f5a5750c0dfb2bfab85c1ac527172c3cc8bc86f559a5f24d05dcf957813964ff.jpg": [
+   792,
+   454
+  ],
+  "8a8db85a4d2115ccad9d860fadfd400d41020ebe51b7672fa9a67c9a7a4f2d55.jpg": [
+   747,
+   421
+  ],
+  "eeafa1c83cc6a692cba327efcaf85134e13906c2b0d635e69b745beea53f7d2f.jpg": [
+   835,
+   674
+  ],
+  "f120d6d9b3052b6c6ee5f9e2baace9a5fe4d139557ff5f760b45180aa074c7da.png": [
+   932,
+   561
+  ],
+  "986c7a0f7a43076b06506cc094b390c251b11d905a8e498eece766e71ac0e195.png": [
+   932,
+   562
+  ],
+  "993953c360b774c1f12b9c9eeb422aed21360193b821aa52b18a49a3b2e1110c.png": [
+   926,
+   569
+  ],
+  "bd1337979acb4fea0e0d9994371ed298e02bd31a01bc98c59efeda6344af06c9.png": [
+   926,
+   583
+  ]
+ },
+ "figure_text": {
+  "025e2e5eaf55019c1ad2dbffe544d2b42eb753a203e1015412f7e58dffc2f490.jpg": 1,
+  "a8c76edcfd0324ce136432bde80f1471a832a1dba7acb4c26fe88b6da71b2d9d.png": 1,
+  "c716e8fbd87f8e76e7876f2db02a1a9b4b25da138da4a89ad5816dad0ea04bc0.jpg": 1,
+  "c1d80c3cca5094dc55d7d0a7a3885d124741ee2cffe0c49c2c53453790280883.png": 1,
+  "f5a5750c0dfb2bfab85c1ac527172c3cc8bc86f559a5f24d05dcf957813964ff.jpg": 1,
+  "8a8db85a4d2115ccad9d860fadfd400d41020ebe51b7672fa9a67c9a7a4f2d55.jpg": 1,
+  "eeafa1c83cc6a692cba327efcaf85134e13906c2b0d635e69b745beea53f7d2f.jpg": 2,
+  "f120d6d9b3052b6c6ee5f9e2baace9a5fe4d139557ff5f760b45180aa074c7da.png": 0,
+  "986c7a0f7a43076b06506cc094b390c251b11d905a8e498eece766e71ac0e195.png": 0,
+  "993953c360b774c1f12b9c9eeb422aed21360193b821aa52b18a49a3b2e1110c.png": 0,
+  "bd1337979acb4fea0e0d9994371ed298e02bd31a01bc98c59efeda6344af06c9.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iraq: Opposition to the government in the Kurdistan Region of Iraq (KRI)",
+ "cover_version": "2.0",
+ "cover_date": "June 2021",
+ "pdf_sha256": "a4f07b4fe3130651608da00d0564315d5a469b1b6ac8bbcca8af3342094356e3",
+ "images": [
+  "025e2e5eaf55019c1ad2dbffe544d2b42eb753a203e1015412f7e58dffc2f490.jpg",
+  "8a8db85a4d2115ccad9d860fadfd400d41020ebe51b7672fa9a67c9a7a4f2d55.jpg",
+  "986c7a0f7a43076b06506cc094b390c251b11d905a8e498eece766e71ac0e195.png",
+  "993953c360b774c1f12b9c9eeb422aed21360193b821aa52b18a49a3b2e1110c.png",
+  "a8c76edcfd0324ce136432bde80f1471a832a1dba7acb4c26fe88b6da71b2d9d.png",
+  "bd1337979acb4fea0e0d9994371ed298e02bd31a01bc98c59efeda6344af06c9.png",
+  "c1d80c3cca5094dc55d7d0a7a3885d124741ee2cffe0c49c2c53453790280883.png",
+  "c716e8fbd87f8e76e7876f2db02a1a9b4b25da138da4a89ad5816dad0ea04bc0.jpg",
+  "eeafa1c83cc6a692cba327efcaf85134e13906c2b0d635e69b745beea53f7d2f.jpg",
+  "f120d6d9b3052b6c6ee5f9e2baace9a5fe4d139557ff5f760b45180aa074c7da.png",
+  "f5a5750c0dfb2bfab85c1ac527172c3cc8bc86f559a5f24d05dcf957813964ff.jpg"
+ ]
+}

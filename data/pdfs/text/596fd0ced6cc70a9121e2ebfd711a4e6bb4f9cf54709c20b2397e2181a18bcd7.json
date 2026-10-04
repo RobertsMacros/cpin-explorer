@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 42,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 58,
+ "paragraphs": 331,
+ "list_items": 34,
+ "tables": 4,
+ "figures": 2,
+ "footnotes": 156,
+ "bookmarks": 59,
+ "warnings": [
+  "page 4: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 4"
+ ],
+ "figure_pages": {
+  "8ab92c3564890ac42368506c5e17a9bc8e36cc544e916304a4e063ef58732f51.png": 6,
+  "fa003d7df55a58070b92e5b2900341749bb45a4fb72d88645d3e0587fc4cc1d5.jpg": 7
+ },
+ "figure_sizes": {
+  "8ab92c3564890ac42368506c5e17a9bc8e36cc544e916304a4e063ef58732f51.png": [
+   591,
+   339
+  ],
+  "fa003d7df55a58070b92e5b2900341749bb45a4fb72d88645d3e0587fc4cc1d5.jpg": [
+   576,
+   547
+  ]
+ },
+ "figure_text": {
+  "8ab92c3564890ac42368506c5e17a9bc8e36cc544e916304a4e063ef58732f51.png": 1,
+  "fa003d7df55a58070b92e5b2900341749bb45a4fb72d88645d3e0587fc4cc1d5.jpg": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Country Background Note Egypt",
+ "cover_version": "2.0",
+ "cover_date": "June 2022",
+ "pdf_sha256": "596fd0ced6cc70a9121e2ebfd711a4e6bb4f9cf54709c20b2397e2181a18bcd7",
+ "images": [
+  "8ab92c3564890ac42368506c5e17a9bc8e36cc544e916304a4e063ef58732f51.png",
+  "fa003d7df55a58070b92e5b2900341749bb45a4fb72d88645d3e0587fc4cc1d5.jpg"
+ ]
+}

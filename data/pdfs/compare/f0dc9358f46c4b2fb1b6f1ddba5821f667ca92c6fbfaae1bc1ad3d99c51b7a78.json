@@ -1,0 +1,241 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-internal-relocation-syria-december-2025-accessible",
+ "pdf_sha256": "f0dc9358f46c4b2fb1b6f1ddba5821f667ca92c6fbfaae1bc1ad3d99c51b7a78",
+ "body_sha256": "7596ed5d5e45f2fb1c56243f0166abfcffe9018cfaa166f688ea314502429ceb",
+ "words": {
+  "web": 20439,
+  "pdf": 20302
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2,
+   "share": 9.8e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 74,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 74,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "December 2025",
+   "pdf": "1.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "15 December 2025"
+   ],
+   "pdf": [
+    "15 December 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 103,
+   "pdf": 103,
+   "pdf_raw": 103,
+   "differ": false
+  },
+  "pictures": {
+   "web": 12,
+   "pdf": 13
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 115,
+   "pdf": 41
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "omparatively",
+   "pdf": "comparatively",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "ndividuals who returned to their original locations were",
+   "after": "more likely to have departed from European Union",
+   "where": {
+    "heading": "returnees-from-outside-of-syria",
+    "paragraph": "3.1.2",
+    "section": "Country information",
+    "page": 12
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "5. Transport",
+   "pdf": "5. Transportation",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "conditions vary significantly, even within the same region.’",
+   "after": "5.1 Responsible government agencies\n5.1.1",
+   "where": {
+    "heading": "transport",
+    "paragraph": "4.5.5",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Governorate\nTotal Population\nof IDPs\nof IDP returnees\nof Arrivals from abroad\nof Residents\nAleppo\n5,598,440\n24%\n8%\n3%\n65%\nAl-Hasakeh\n1,346,817\n24%\n2 %\n76%\nAr-Raqqa\n869,255\n21%\n2%\n2%\n75%\nAs-Sweida\n480,581\n22%\n5%\n1%\n72%\nDamascus\n1,887,173\n31%\n3%\n2%\n64%\nDar’a\n1,348,646\n5%\n1%\n6%\n88%\nDeir-ez-Zor\n1,356,851\n2%\n6%\n2%\n90%\nHama\n1,937,074\n6%\n16%\n3%\n75%\nHoms\n1,542,427\n8%\n11%\n9%\n72%\nIdleb\n2,628,615\n38%\n18%\n3%\n41%\nLattakia\n1,441,764\n10%\n1%\n1%\n88%\nQuneitra\n117,762\n6%\n2%\n2%\n90%\nRural Damascus\n5,110,762\n39%\n3%\n2%\n56%\nTartous\n1,260,720\n4%\n1%\n1%\n95%\nTotal\n26,926,887\n22%\n7%\n3%\n68%",
+   "pdf": "",
+   "web_words": 74,
+   "pdf_words": 0,
+   "before": "of the populations across the governorates in Syria:",
+   "after": "3.3.2 Using the data in the",
+   "where": {
+    "heading": "governorates-of-return",
+    "paragraph": "3.3.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "4.3.9",
+   "pdf": "4.3.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "for verification and prevented from continuing their journey.’",
+   "after": "In November 2025, when asked if civil documentation",
+   "where": {
+    "heading": "checkpoints",
+    "paragraph": "4.3.9",
+    "section": "Country information",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 129,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "4.3.9",
+   "5.1",
+   "6.1",
+   "6.2",
+   "7.1",
+   "7.2"
+  ],
+  "unconfirmed": []
+ }
+}

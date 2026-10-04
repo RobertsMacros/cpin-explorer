@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "georgia/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-georgia-december-2023-accessible",
+ "pdf_sha256": "99aace292bfde21422477991ad1e849c324d96dcfcb51033c848dc481af0989a",
+ "body_sha256": "a8342f80d00405bf8b7f7709e96149ddd3f2992d3be9b77d5df20ffca9ff064a",
+ "figures": [
+  {
+   "image": "36ecd603c2c7e8ccf21b201659d45e7e05731648f91399f0b280a5419cc41809.png",
+   "tag": "p",
+   "index": 258,
+   "key": "1115whenemclookedspecificallyatphysicalviolencethestudyfound",
+   "page": 38
+  },
+  {
+   "image": "0e8c2314f7973a8290f68c3d41d5f3b85dd63125529ef6bc630392dbdc350f23.png",
+   "tag": "p",
+   "index": 260,
+   "key": "1117thesubcategoriesofpsychologicalviolenceshowingthenatureo",
+   "page": 39
+  },
+  {
+   "image": "d7fd431e1355c368b172e81c1ed547e6da97896bd6fd0b35f402d6ba60290549.png",
+   "tag": "p",
+   "index": 318,
+   "key": "1312theemc2020surveyasked320respondentsareyouhappyornotthere",
+   "page": 46
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 3,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

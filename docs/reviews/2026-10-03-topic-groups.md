@@ -1,12 +1,12 @@
 # Review: which reports count as the same subject in search
 
-*3 October 2026. 193 reports, 110 distinct topics as parsed from GOV.UK titles.*
+*3 October 2026. 191 reports, 110 distinct topics as parsed from GOV.UK titles.*
 
 The search list groups reports on the same subject under one heading (owner's request). GOV.UK words the same subject many ways, and some different subjects look alike, so the grouping is an explicit table (`prototypes/shared/topic-groups.js`), not a similarity guess. A title joins a group only if it is listed, or is a listed topic plus a place or a bracketed note. Everything else stands alone, so a new title can never be merged wrongly; it just appears on its own until reviewed.
 
 ## Groups with more than one report (25)
 
-### Sexual orientation and gender identity or expression · 20 countries · 21 reports
+### Sexual orientation and gender identity or expression · 20 countries
 
 Titles merged: “sexual orientation and gender identity”, “sexual orientation and gender identity and expression”, “sexual orientation and gender identity or expression”, “sexual orientation and gender identity and expression in”, “sexual orientation, gender identity and expression, and sex characteristics”, “sexual orientation and gender identity / expression”, “sexual orientation and gender”, “sexual orientation, gender identity and expression”.
 
@@ -23,7 +23,6 @@ Titles merged: “sexual orientation and gender identity”, “sexual orientati
 - Malaysia
 - Namibia
 - Nigeria · Sexual orientation, gender identity and expression, and sex characteristics
-- Nigeria (archived)
 - Pakistan
 - Russia
 - Sri Lanka
@@ -129,18 +128,6 @@ Titles merged: “opposition to the state”, “opposition to the government”
 - Syria
 - Vietnam
 
-### Human trafficking · 5 countries · 7 reports
-
-Titles merged: “human trafficking”, “trafficking”, “modern slavery”, “trafficking of women”.
-
-- Albania
-- Albania (archived)
-- Albania (archived)
-- China · Modern slavery
-- Nigeria · Trafficking of women
-- Philippines (archived)
-- Vietnam
-
 ### Women fearing gender-based violence · 7 countries
 
 Titles merged: “gender-based violence”, “women fearing gender-based violence”.
@@ -176,6 +163,17 @@ Titles merged: “military service”, “national service and illegal exit”.
 - Syria
 - Turkey
 - Ukraine
+
+### Human trafficking · 5 countries · 6 reports
+
+Titles merged: “human trafficking”, “modern slavery”, “trafficking of women”, “trafficking”.
+
+- Albania
+- Albania (archived)
+- China · Modern slavery
+- Nigeria · Trafficking of women
+- Philippines (archived)
+- Vietnam
 
 ### Religious minorities · 5 countries
 
@@ -301,6 +299,16 @@ All five judgement calls were merged:
 | Documentation (Bangladesh) | Iraq’s internal relocation, civil documentation and returns | Only shares a word. |
 | PKK; Peoples’ Democratic Party (HDP) | Kurds; Political parties and affiliation | Reports about one organisation. |
 | Palestinians in Lebanon; Islamist extremist groups in North East; separatist groups in the South-East | (anything) | Here “in …” is part of the subject, not a place added to a general topic. |
+
+## Checked against GOV.UK's verbatim titles (second audit)
+
+Every row of every group was read against the title GOV.UK published, not only the topic parsed from it. All rows belong where they are. Fourteen groups list a country more than once; each case is one of:
+- **Two kinds of document on one subject** (a CPIN and a fact-finding mission report, or a CPIN and a country bulletin): Albania blood feuds, Brazil organised criminal groups, Ethiopia Tigrayans, Philippines domestic violence, Iran Kurds, Palestine Gaza, Iraq internal relocation, Albania human trafficking. Correctly listed separately.
+- **A successor with a new title and restarted numbering** (Syria returnees, Russia critics), or one report split into two (Somalia's 2022 Mogadishu note became separate security and humanitarian notes in 2025). Separate reports; listed together under the subject.
+- **One report renamed mid-lineage**, which had split its history in two. Fixed: Albania's “trafficking” v11.0 → “human trafficking” v14.0, v16.0, and Nigeria's sexual orientation note v3.0 → v4.0 (renamed to add “and sex characteristics”) are each one report again (`_RENAMED` in `src/cpin/titles.py`).
+- **France, safe third country:** the live edition is PDF-only and the archived one is HTML, so they still appear as two entries. Joining them needs text extraction from the PDF (roadmap).
+
+The audit also found a wrong version label: Albania's 2026 country bulletin on human trafficking was shown as “v16.0”, a number it only quotes from the CPIN it updates. The parser now accepts a version only from a note's own “Version control” section or opening banner; no other label in the store was affected.
 
 ## Found along the way
 

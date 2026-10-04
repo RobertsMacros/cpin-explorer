@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-christians-china-june-2026-accessible",
+ "pdf_sha256": "47df50da32565915f83dec882054fa08d9e27323c1f735d89bed3fa3ec6781af",
+ "body_sha256": "a018af0f067fef4329a1e9cdd7607dd39ed6bef0da2feab584d9bb459dab8df5",
+ "figures": [
+  {
+   "image": "79d04f8b64f70db2d694f8a9bc413d54b42e1a9adec03611e28ca4c37aefaf06.png",
+   "tag": "p",
+   "index": 295,
+   "key": "1226basedoninformationfromtheuscirflistcpithasproducedthecha",
+   "page": 47
+  },
+  {
+   "image": "aeadbe41928153bcb9c2e5c019fb8004fb4f2655c7f8ce6c1334bdbf55edb93d.png",
+   "tag": "p",
+   "index": 299,
+   "key": "1229thebelowgraphtakenfromthecoagsannualreportexposingtheccp",
+   "page": 48
+  },
+  {
+   "image": "73468b3e9acfc293d26328df5cc8c2574981b10224ae9d9d28c91b1bea195ccb.png",
+   "tag": "p",
+   "index": 303,
+   "key": "accordingtoincompletestatisticsatleast2291cagchristiansweres",
+   "page": 49
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 13,
+ "web_figures": 10,
+ "left_in_pdf": {}
+}

@@ -1,0 +1,350 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/country-policy-and-information-note-blood-feuds-albania-september-2022-accessible",
+ "pdf_sha256": "104d2239334abb1fcda283d44c3dabd19765ced8d01dc3e3ddef0a14a39ff5bb",
+ "body_sha256": "321b828a73c717c8c462b874c9af983c9f29153e6c9f1749e36e0ea3b341122d",
+ "words": {
+  "web": 28579,
+  "pdf": 28581
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 27,
+   "web_words": 23,
+   "pdf_words": 23
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "7.0",
+   "web_date": "July 2024",
+   "pdf": "7.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 256,
+   "pdf": 256,
+   "pdf_raw": 256,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 7,
+   "pdf": 7
+  },
+  "headings": {
+   "web": 67,
+   "pdf": 51
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "1999",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1998 to 2 in 2022.\nYear\n1998\n45",
+   "after": "41\n2000\n41\n2001\n32\n2002\n13\n2003",
+   "before_pdf": "2004\n2005\n2006\n2007\n2008\n2009\n2010\n45",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2000",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2 in 2022.\nYear\n1998\n45\n1999\n41",
+   "after": "41\n2001\n32\n2002\n13\n2003\n12\n2004",
+   "before_pdf": "2005\n2006\n2007\n2008\n2009\n2010\n45\n41",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2001",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2022.\nYear\n1998\n45\n1999\n41\n2000\n41",
+   "after": "32\n2002\n13\n2003\n12\n2004\n11\n2005",
+   "before_pdf": "2006\n2007\n2008\n2009\n2010\n45\n41\n41",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2002",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1998\n45\n1999\n41\n2000\n41\n2001\n32",
+   "after": "13\n2003\n12\n2004\n11\n2005\n5\n2006",
+   "before_pdf": "2007\n2008\n2009\n2010\n45\n41\n41\n32",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2003",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1999\n41\n2000\n41\n2001\n32\n2002\n13",
+   "after": "12\n2004\n11\n2005\n5\n2006\n4\n2007",
+   "before_pdf": "2008\n2009\n2010\n45\n41\n41\n32\n13",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2004",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2000\n41\n2001\n32\n2002\n13\n2003\n12",
+   "after": "11\n2005\n5\n2006\n4\n2007\n0\n2008",
+   "before_pdf": "2009\n2010\n45\n41\n41\n32\n13\n12",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2005",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2001\n32\n2002\n13\n2003\n12\n2004\n11",
+   "after": "5\n2006\n4\n2007\n0\n2008\n5\n2009",
+   "before_pdf": "2010\n45\n41\n41\n32\n13\n12\n11",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2006",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2002\n13\n2003\n12\n2004\n11\n2005\n5",
+   "after": "4\n2007\n0\n2008\n5\n2009\n1\n2010",
+   "before_pdf": "45\n41\n41\n32\n13\n12\n11\n5",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2007",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2003\n12\n2004\n11\n2005\n5\n2006\n4",
+   "after": "0\n2008\n5\n2009\n1\n2010\n5\n2011",
+   "before_pdf": "41\n41\n32\n13\n12\n11\n5\n4",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2008",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2004\n11\n2005\n5\n2006\n4\n2007\n0",
+   "after": "5\n2009\n1\n2010\n5\n2011\n5\n2012",
+   "before_pdf": "41\n32\n13\n12\n11\n5\n4\n0",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2009",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2005\n5\n2006\n4\n2007\n0\n2008\n5",
+   "after": "1\n2010\n5\n2011\n5\n2012\n5\n2013",
+   "before_pdf": "32\n13\n12\n11\n5\n4\n0\n5",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2010",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2006\n4\n2007\n0\n2008\n5\n2009\n1",
+   "after": "5\n2011\n5\n2012\n5\n2013\n4\n2014",
+   "before_pdf": "13\n12\n11\n5\n4\n0\n5\n1",
+   "where": {
+    "heading": "Number_of_blood_1",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 30
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 269,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

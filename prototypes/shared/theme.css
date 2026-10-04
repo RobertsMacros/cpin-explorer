@@ -40,10 +40,17 @@
   --t: 280ms;
   --t-slow: 520ms;
 
+  /* Half the height of a capital letter. A mark beside a line of capitals or digits (a dot, a flag, a
+     tick box) stands on their baseline and is then moved to their middle: up by this, less half its own
+     height. .355em is Geist's and Geist Mono's (Geist Pixel's is .361em); where the browser has the cap
+     unit (below) it is read from the font in use. */
+  --half-cap: .355em;
+
   /* Fluid sizing: 16px on a 1080p laptop, ~21px on a 4K monitor, 15px on a phone. */
   font-size: clamp(15px, 0.42vw + 8.6px, 22px);
   color-scheme: light;
 }
+@supports (width: 1cap) { :root { --half-cap: .5cap; } }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -80,13 +87,23 @@ a:hover { text-decoration: underline; text-underline-offset: .2em; }
 
 /* --- Components --------------------------------------------------------------------------- */
 
-/* Blue label tag, as on the COBE globe ("TOKYO"). */
+/* One-line labels in boxes (tags, buttons, chips) are set with no leading (line-height: normal). A taller
+   line carries leading above and below the letters, and browsers round the upper share down to a whole
+   pixel, which lifts the letters by up to a pixel in their box. With none, the line is the font's own
+   height, and centring it centres the capitals (Geist's ascent less its descent is its cap height). */
+
+/* Blue label tag, as on the COBE globe ("TOKYO"). As tall as a 1em line with .72em of padding. */
 .tag {
   display: inline-flex; align-items: center; gap: .4em;
-  font-family: var(--font-pixel); font-size: .72rem; line-height: 1; letter-spacing: .06em;
+  font-family: var(--font-pixel); font-size: .72rem; line-height: normal; letter-spacing: .06em;
   text-transform: uppercase; white-space: nowrap;
-  padding: .38em .55em .34em; background: var(--blue); color: var(--blue-ink);
+  height: 1.72em; padding: 0 .55em; background: var(--blue); color: var(--blue-ink);
 }
+/* A tag set on the baseline of a line of bigger words (a row whose words may run to more lines: the tag
+   keeps to the first). Its capitals are shorter than theirs, so it is raised by half the difference to be
+   level with them: .722em is the height of its own capitals, .71 of --words (the words' font size, set by
+   the row) the height of theirs. Used as: position: relative; top: var(--rise). */
+.tag { --rise: calc((.722em - .71 * var(--words, 1em)) / 2); }
 .tag--outline { background: var(--bg); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
 .tag--muted { background: var(--sunken); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
 
@@ -100,7 +117,7 @@ a:hover { text-decoration: underline; text-underline-offset: .2em; }
   display: inline-flex; align-items: center; justify-content: center; gap: .45em;
   min-height: 2.4rem; padding: 0 .85rem; border: 1px solid var(--line-strong); border-radius: 0;
   background: var(--surface); color: var(--ink); cursor: pointer;
-  font-family: var(--font-mono); font-size: .8rem; letter-spacing: .02em;
+  font-family: var(--font-mono); font-size: .8rem; line-height: normal; letter-spacing: .02em;
   transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
 }
 .btn:hover { border-color: var(--blue); color: var(--blue); }

@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 111,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 61,
+ "paragraphs": 1350,
+ "list_items": 15,
+ "tables": 1,
+ "figures": 2,
+ "footnotes": 145,
+ "bookmarks": 60,
+ "warnings": [
+  "page 2: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 1"
+ ],
+ "figure_pages": {
+  "bdb0dd451c19b3c785ab75669324b660bd96d35da2f2b3407590ccac52a601c2.png": 2,
+  "87e5f92c6549567adfd8c27c55456617d9e9d7eaa25adb2769b06f76f967dce0.jpg": 4
+ },
+ "figure_sizes": {
+  "bdb0dd451c19b3c785ab75669324b660bd96d35da2f2b3407590ccac52a601c2.png": [
+   246,
+   169
+  ],
+  "87e5f92c6549567adfd8c27c55456617d9e9d7eaa25adb2769b06f76f967dce0.jpg": [
+   693,
+   1158
+  ]
+ },
+ "figure_text": {
+  "bdb0dd451c19b3c785ab75669324b660bd96d35da2f2b3407590ccac52a601c2.png": 0,
+  "87e5f92c6549567adfd8c27c55456617d9e9d7eaa25adb2769b06f76f967dce0.jpg": 1
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Report of a Home Office fact-finding mission to Vietnam",
+ "cover_version": null,
+ "cover_date": "March 2019",
+ "pdf_sha256": "7b8de6493d62e9bbbbf3724e8158ed1fe618517b16477c2f83a88f209cd066d3",
+ "images": [
+  "87e5f92c6549567adfd8c27c55456617d9e9d7eaa25adb2769b06f76f967dce0.jpg",
+  "bdb0dd451c19b3c785ab75669324b660bd96d35da2f2b3407590ccac52a601c2.png"
+ ]
+}

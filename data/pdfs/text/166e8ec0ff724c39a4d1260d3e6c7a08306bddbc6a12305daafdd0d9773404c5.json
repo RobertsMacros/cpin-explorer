@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 312,
+ "list_items": 34,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 99,
+ "bookmarks": 50,
+ "warnings": [
+  "footnotes with no mark found in the text: 54"
+ ],
+ "figure_pages": {
+  "f72f071e7fddb6a5d043fe01d9c67c57a04be978b66c27aac1207fce700499a8.png": 29
+ },
+ "figure_sizes": {
+  "f72f071e7fddb6a5d043fe01d9c67c57a04be978b66c27aac1207fce700499a8.png": [
+   812,
+   538
+  ]
+ },
+ "figure_text": {
+  "f72f071e7fddb6a5d043fe01d9c67c57a04be978b66c27aac1207fce700499a8.png": 95
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note India: Actors of protection",
+ "cover_version": "2.0",
+ "cover_date": "June 2023",
+ "pdf_sha256": "166e8ec0ff724c39a4d1260d3e6c7a08306bddbc6a12305daafdd0d9773404c5",
+ "images": [
+  "f72f071e7fddb6a5d043fe01d9c67c57a04be978b66c27aac1207fce700499a8.png"
+ ]
+}

@@ -1,0 +1,585 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-women-fearing-gender-based-violence-bangladesh-january-2024-accessible",
+ "pdf_sha256": "6ba91d2f743f831f40504bf84259f25c354409ae16b5e763be467b04ffd701c8",
+ "body_sha256": "9d3e088b287b5300c5c11b3ca285d7c4c5d88156d4b739b0b54dc400b69bd44c",
+ "words": {
+  "web": 19803,
+  "pdf": 19821
+ },
+ "summary": {
+  "wording": {
+   "differences": 9,
+   "web_words": 2,
+   "pdf_words": 44,
+   "share": 0.001161,
+   "passages": 7,
+   "sizes": {
+    "passage": 7,
+    "spelling": 2
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 12
+  },
+  "groups": {
+   "wording": {
+    "differences": 9,
+    "web_words": 2,
+    "pdf_words": 44
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 33,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "caption": {
+    "differences": 3,
+    "web_words": 33,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "section updated": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 30
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 13
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 14,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 13
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "4.0",
+   "pdf_date": "January 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "8 January 2024",
+    "8 January 2024",
+    "8 January 2024",
+    "8 January 2024",
+    "8 January 2024",
+    "8 January 2024"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 208,
+   "pdf": 208,
+   "pdf_raw": 208,
+   "differ": false
+  },
+  "pictures": {
+   "web": 5,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 50,
+   "pdf": 48
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 2,
+   "disputes": 1
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "to women to who are financially independent or who have family support.",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "to live alone is likely to be limited.",
+   "after": "Assessment\nAbout the assessment\nThis section considers the",
+   "before_pdf": "to live alone is likely to be limited",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 4
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "relevant COI as the evidential basis for decisions.",
+   "after": "7. Legal context\n7.1 Constitution\n7.1.",
+   "where": {
+    "heading": "legal-context",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 11
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "3.8 See also Early and forced marriage.",
+   "after": "8. Social context\n8.1 Demography\n8.1.",
+   "where": {
+    "heading": "social-context",
+    "paragraph": "7.3.8",
+    "section": "Country information",
+    "page": 14
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Bangladesh: Sexual orientation and gender identity or expression.",
+   "after": "9. Socio-economic rights\n9.1 Global equality /",
+   "where": {
+    "heading": "socio-economic-rights",
+    "paragraph": "8.4.1",
+    "section": "Country information",
+    "page": 19
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Information Note on Bangladesh: Medical treatment and healthcare.",
+   "after": "10. Sexual and gender-based violence (SGBV)\n10.",
+   "where": {
+    "heading": "sexual-and-gender-based-violence",
+    "paragraph": "9.5.5",
+    "section": "Country information",
+    "page": 25
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "been stopped through calls received in helpline “109”.",
+   "after": "11. State protection\nFor general information on protection",
+   "before_pdf": "been stopped through calls received in helpline “109”.’",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "10.5.6",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "section updated: 8 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Most of them resolve the dispute by themselves.’",
+   "after": "12. Access to support services\n12.1 Support",
+   "where": {
+    "heading": "access-to-support-services",
+    "paragraph": "11.3.14",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Buddists:",
+   "pdf": "Buddhists:",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and Divorces (Registration) Act (1974)\nfor Hindus and",
+   "after": "the Hindu Married Women’s Right to Separate",
+   "where": {
+    "heading": "family-laws",
+    "paragraph": "7.3.3",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "WPS, ‘",
+   "pdf": "GIWPS, ‘",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Gender Gap Report 2023’ (page 29), June 2023",
+   "after": "WPS Index 2023-24’ (pages 2 and 91),",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.10",
+    "section": "Version control and feedback",
+    "page": 20
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Monthly trend: total count of GBV before and following the onset of COVID-19.",
+   "pdf": "104",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "that GBV trends have been rising since 2018:",
+   "after": "10.1.7 The UNDP study reported that ‘",
+   "where": {
+    "heading": "overview-of-data-on-sgbv",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Annual trends in types of GBV reported before and following the COVID-19 onset.",
+   "pdf": "108",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "recent years before picking up with the pandemic.’",
+   "after": "10.1.10 According to police headquarters data,",
+   "where": {
+    "heading": "overview-of-data-on-sgbv",
+    "paragraph": "10.1.9",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 4.0, January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nThe status of women in Bangladesh",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "UNDP main perpetrators of GBV.",
+   "pdf": "106",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "The UNDP recorded the main perpetrators of GBV:",
+   "after": "10.1.9 The UNDP study recorded annual",
+   "where": {
+    "heading": "overview-of-data-on-sgbv",
+    "paragraph": "10.1.8",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "graphedthe",
+   "pdf": "graphed the",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "perpetuate child marriage...’\n10.5.4 The BRAC",
+   "after": "child marriage prevalence at district level:\n10.5.",
+   "where": {
+    "heading": "early-and-forced-marriage",
+    "paragraph": "10.5.4",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "7 D),",
+   "pdf": "7D),",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "2022 Country Reports on Human Rights Practices’ (section",
+   "after": "20 March 2023\nIRB, ‘Bangladesh: The treatment by",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.10",
+    "section": "Version control and feedback",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.",
+   "pdf": "11.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "among the public.’\n11.3 Access to justice",
+   "after": "3.1 A 2022 report by the USAID,",
+   "where": {
+    "heading": "access-to-justice",
+    "paragraph": "13.3.1",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.",
+   "pdf": "11.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "confined to households with limited access to information.’",
+   "after": "3.2 Concluding her visit to Bangladesh, UN",
+   "where": {
+    "heading": "access-to-justice",
+    "paragraph": "13.3.2",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.",
+   "pdf": "11.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "August 2023, repeated the High Commissioner’s concerns.",
+   "after": "3.3 The OMCT PAHRA report noted that:",
+   "where": {
+    "heading": "access-to-justice",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 36
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "OCC clients up to September 2023’, no date. Last accessed 3 November 2023",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "8 October 2020. Last accessed: 14 November 2023",
+   "after": "Prothom Alo,\nRape, domestic violence dominate in violence",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "12.1.10",
+    "section": "Bibliography",
+    "page": 44
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "116",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "In Brief: Ending Violence Against Women’, June 2023",
+   "after": "HRW, ‘I Sleep in My Own Deathbed: Violence",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.10",
+    "section": "Version control and feedback",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "14",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Marriage Act (1872) and the Divorce Act (1869)",
+   "after": "7.3.4 To put into context the",
+   "where": {
+    "heading": "family-laws",
+    "paragraph": "7.3.4",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "2023",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Bangladesh’, 17 August 2022. Last accessed: 13 November",
+   "after": "UN Women,\nGender Equality Brief: Bangladesh’, October 2022.",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "12.1.10",
+    "section": "Bibliography",
+    "page": 47
+   },
+   "second": "disputes"
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 191,
+  "different": {
+   "13.3.1": "11.3.1",
+   "13.3.2": "11.3.2",
+   "13.3.3": "11.3.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

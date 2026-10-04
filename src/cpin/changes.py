@@ -80,17 +80,22 @@ def valid_from(body_html: str) -> str | None:
         return None
 
 
-def matching_change_notes(history: list[dict], date: str | None, topic_words: set[str], days: int = 21) -> list[dict]:
-    """GOV.UK change notes (verbatim) dated near an edition and mentioning its topic."""
+def matching_change_notes(history: list[dict], date: str | None, topic_words: set[str], days: int = 21,
+                          month: bool = False) -> list[dict]:
+    """GOV.UK change notes (verbatim) dated near an edition and mentioning its topic.
+
+    month: the edition's date is known only to the month (`date` is its first day). Any day of that month
+    may be the one, so the notes looked at run from `days` before the first to `days` after the last."""
     if not date or not topic_words:
         return []
     when = datetime.fromisoformat(date.replace("Z", "+00:00"))
+    last = (when.replace(day=28) + timedelta(days=4)).replace(day=1) if month else when       # the month's end
     hits = []
     for h in history:
         if not h.get("date"):
             continue
-        delta = datetime.fromisoformat(h["date"].replace("Z", "+00:00")) - when
+        at = datetime.fromisoformat(h["date"].replace("Z", "+00:00"))
         words = set(re.findall(r"[a-z0-9]+", h["note"].lower()))
-        if timedelta(days=-days) <= delta <= timedelta(days=days) and topic_words & words:
+        if when - timedelta(days=days) <= at <= last + timedelta(days=days) and topic_words & words:
             hits.append(h)
     return hits

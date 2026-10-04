@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 92,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 80,
+ "paragraphs": 758,
+ "list_items": 69,
+ "tables": 2,
+ "figures": 1,
+ "footnotes": 282,
+ "bookmarks": 74,
+ "warnings": [
+  "footnotes with no mark found in the text: 170, 196, 223"
+ ],
+ "figure_pages": {
+  "11918d04ee0352fcdce490a42d4f3bfb34f50c8091e3a142560e621b847c9b8d.jpg": 53
+ },
+ "figure_sizes": {
+  "11918d04ee0352fcdce490a42d4f3bfb34f50c8091e3a142560e621b847c9b8d.jpg": [
+   919,
+   707
+  ]
+ },
+ "figure_text": {
+  "11918d04ee0352fcdce490a42d4f3bfb34f50c8091e3a142560e621b847c9b8d.jpg": 3
+ },
+ "first_bookmark_page": 7,
+ "cover_title": "Country Policy and Information Note El Salvador: Fear of gangs",
+ "cover_version": "3.0",
+ "cover_date": "January 2021",
+ "pdf_sha256": "550b63406c695bb6c5bf739a0e57c1d2a0278ce2f425a3b58b453b50e4db7b95",
+ "images": [
+  "11918d04ee0352fcdce490a42d4f3bfb34f50c8091e3a142560e621b847c9b8d.jpg"
+ ]
+}

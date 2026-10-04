@@ -1,0 +1,1851 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version",
+ "pdf_sha256": "d792567bfb961eea4497fd647c73dfb303555b29342d84b8878ae1f17e9f461d",
+ "body_sha256": "842c9804c4fb4d2db55e324ec8776b7de57fbaf0174c0faf073e6329c444c540",
+ "words": {
+  "web": 22890,
+  "pdf": 23650
+ },
+ "summary": {
+  "wording": {
+   "differences": 155,
+   "web_words": 654,
+   "pdf_words": 1405,
+   "share": 0.044242,
+   "passages": 49,
+   "sizes": {
+    "passage": 49,
+    "number": 3,
+    "word": 103
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 155,
+    "web_words": 654,
+    "pdf_words": 1405
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 111,
+    "web_words": 268,
+    "pdf_words": 330
+   },
+   "footnote": {
+    "differences": 15,
+    "web_words": 9,
+    "pdf_words": 193
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "text": {
+    "differences": 29,
+    "web_words": 377,
+    "pdf_words": 882
+   }
+  },
+  "ours": {
+   "differences": 4,
+   "web_words": 3,
+   "pdf_words": 5
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 4
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "February 2025",
+   "pdf": "3.0",
+   "pdf_date": "February 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 111,
+   "pdf": 124,
+   "pdf_raw": 124,
+   "differ": true
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 64,
+   "pdf": 62
+  },
+  "drafts": [
+   "footnote count differs: web 111, PDF 124",
+   "passages of text on both sides that the other lacks: 8 on the web, 20 in the PDF"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 103,
+   "cannot_tell": 52,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "aspires to an inclusive social protection system relevant to its lower middle-income status and to better realize basic human rights. However, the current social protection system is fragmented, with limited coverage and an inadequate range of benefits neither progressive nor child sensitive. As a result, the system is unable to address the multiple disadvantages, risks and vulnerabilities affecting children’s well-being.\nJust 10 per cent of children can access social transfers, yet they are more affected by poverty than any other age group - accounting for 36.7 per cent of Viet Nam’s poor. There is a lack of basic cash support for children to address age-specific risks such as malnutrition, while eight-in-10 ethnic minority children are deprived from access to social services.’\n13.1.2 UNICEF noted in another undated article on social work development that:\nWith rapid economic development, Viet Nam is increasingly confronted with complex child-related challenges. In response, the government has prioritized development of the social work profession with UNICEF at the forefront providing strong advocacy and technical support to ensure the country meets its ambitious target of one soc …",
+   "pdf": "",
+   "web_words": 245,
+   "pdf_words": 0,
+   "before": "on social protection for children, noted:\nViet Nam",
+   "after": "This is especially the case for children who",
+   "before_pdf": "and inequities are still evident in Viet Nam...",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.1",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "11.1.3",
+   "pdf": "11.1.5 The Hanoi Times reported on 29 April 2020:\nVietnamese authorities uncovered and sanctioned 8,442 cases of child abuse between 2015 and 2019, with 8,709 children being the victims, local media cited the Vietnamese government's report read at a meeting of the Standing Committee of the National Assembly on April 27. The report showed that in the four-year period, 6,432 children were sexually abused, 857 fell victims to physical abuse, 106 were victims of human trafficking, kidnapping and 1,314 children suffered other abuses.\nAmong them, sexual abuse is the most common offense, accounting for 75.4% of the total number of child abuse cases. Child abuse perpetrators are often the child’s relatives or acquaintances, making up about 90% of offenders and cases of this kind tend to increase. The report showed that during the period, 337 children died (of them 191 were killed, 146 died as the consequence of maltreatment), 418 children became pregnant due to sexual abuse, and 193 children were left with mental disorders.’\n11.1.6 The same Hanoi Times article noted: ‘According to the Law on Children which took effect in June 2017, Vietnam now has as many as 17 entities tasked with protect …",
+   "web_words": 1,
+   "pdf_words": 236,
+   "before": "that physical punishment was necessary for educating children.’",
+   "after": "VnExpress International reported that:\nEvery year there are",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.3",
+    "section": "Country information",
+    "page": 28
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "14.3.3 The University of Texas Rio Grande Valley (UTRGV), in a report entitled ‘Changing Household Registration and Worker Welfare in China and Vietnam’, published on 22 June 2022, noted\ntemporarily registered migrants continue to face stark inequalities induced by the ho khau system... they continue to face substantial barriers in terms of accessing public services, including employment at the public sector, children’s health insurance and schooling, and other social services. They also face greater difficulties in accessing social protection compared to those with permanent registration. For example, it is in practice very rare for temporary migrants to be eligible for inclusion in the official list of ‘poor households’ as receivers of subsidies and social transfers, so that they are deprived of much of the very social protection that they need.’\nSee also Childcare and protection",
+   "web_words": 0,
+   "pdf_words": 138,
+   "before": "residence is possible at police stations on arrival.’",
+   "after": "15. Return and reintegration\n15.1 Returnees\n15.",
+   "where": {
+    "heading": "return-and-reintegration",
+    "paragraph": "14.3.2",
+    "section": "Country information",
+    "page": 47
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "11.1.2",
+   "pdf": "11.1.3 The same Guardian article of 19 June 2019, noted:\nA]fter several high-profile abuse cases, many involving the abuse of pupils by their teachers, the government has launched several initiatives to finally bring the issue out into the open. The move has included the creation of an “Ending physical violence against children at home and in school” initiative by the ministry of education and introducing mandatory sexual assault-prevention classes for those in first grade, as well as textbooks teaching children how to deal with assault and what parts of their bodies are private.’\n11.1.4",
+   "web_words": 1,
+   "pdf_words": 99,
+   "before": "worth, affront their dignity and hinder their development.’",
+   "after": "The Government Statistic Office and UNICEF’s joint",
+   "before_pdf": "lack of care and support services for victims.”’",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "15.1.3 Whilst not specifically referring to returnees, Viet Nam News, an English language daily newspaper published by the Vietnam News Agency , the news service of the government of Vietnam, reported on the situation for internal migrants in an online article, dated 21 December 2023 which noted that: ‘...migrant workers... increase the burden on the city infrastructure such as schools, hospitals, and utility demands, leading to challenges in social welfare, education and health care...Women and children are ....among the most vulnerable groups, with child migrants facing difficulty in accessing education, especially at the secondary and high school levels.’\n15.",
+   "web_words": 0,
+   "pdf_words": 100,
+   "before": "of trafficking rather than failed asylum applicants.’\n15.",
+   "after": "2 Reintegration\n15.2.1 On their website",
+   "before_pdf": "victims of trafficking rather than failed asylum applicants.’",
+   "where": {
+    "heading": "reintegration",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": 48
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "work development, noted:\nChildren in Viet Nam are yet to benefit from a functioning child protection system, which is critical to preventing and protecting children from violence, child exploitation, abuse and neglect. Gaps in child protection service coverage are compounded by a severe shortage of trained social workers and the lack of a professional case management system, which constrain the identification of children at risk and provision of services. This leaves children in vulnerable situations or unnecessarily placed in institutional care.’\n13.1.2 An undated UNICEF article reporting on social",
+   "web_words": 0,
+   "pdf_words": 91,
+   "before": "1 An undated UNICEF article reporting on social",
+   "after": "protection for children, noted:\nViet Nam aspires to",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.1",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "home by their parents or caregivers. In many families, violence is used as a means to establish male hierarchies and reinforce masculinity. Such behaviour is influenced by parents’ financial security, level of education and issues such as alcohol or drug abuse.\nWith violent discipline still a socially accepted norm, children remain especially vulnerable when they have limited understanding of their rights to speak out and seek help when violence occurs. All children have the right to protection from violence, regardless",
+   "pdf": "fast growth",
+   "web_words": 80,
+   "pdf_words": 2,
+   "before": "reported experiencing some form of violence in the",
+   "after": "of the nature or severity of the act",
+   "before_pdf": "Rana Flowers, Unicef representative in Vietnam, said “The",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2024\nData Warehouse, undated. Accessed: 13 March 2024\nInclusive Education: Quality learning and education for every child, undated: Accessed: 10 January 2025\nJustice for every child: Strengthening access to a child-friendly justice system, undated. Accessed: 13 January 2025\nSocial Protection: A fair start for every child, undated. Accessed: 13 January 2025\nSocial Work Development: On the frontlines for children, undated. Accessed: 13 January 2025\nViet Nam (VNM) - Demographics, Health & Infant Mortality, undated. Accessed: 17 April",
+   "web_words": 0,
+   "pdf_words": 76,
+   "before": "Viet Nam’, December 2021. Last accessed: 4 March",
+   "after": "2024\nViet Nam takes significant steps toward a",
+   "before_pdf": "in Viet Nam, December 2021. Accessed: 4 March",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Child Protection System’, undated. Accessed: 19 March 2024\nHow many children are there in Vietnam?, undated. Accessed: 14 January 2025\nLegal Review Social Work in the Criminal Justice System, November 2023. Accessed: 12 March 2024\nThe State Of The World's Children 2019-Growing well in a changing world Children, food and nutrition, 2019. Accessed: 14 January 2025",
+   "web_words": 0,
+   "pdf_words": 58,
+   "before": "February 2022. Last accessed: 12 March 2024\nUNICEF,",
+   "after": "Viet Nam is Committed to Improve Justice for",
+   "before_pdf": "14 February 2022. Accessed: 12 March 2024\nUNICEF,",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 58
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "17 April 2024\nVietnam- Child Justice’, no date. Last accessed: 16 April 2024\nSocial Protection’, no date. Last accessed: 16 April 2024\nSocial Work Development’, no date. Last accessed: 26 February 2024\nInclusive Education for Children with Disabilities’, no date. Last accessed: 12 March 2024\nChild Labour’, no date. Last accessed: 12 March 2024",
+   "pdf": "14 January 2025",
+   "web_words": 54,
+   "pdf_words": 3,
+   "before": "Children in Viet Nam’, no date. Last accessed:",
+   "after": "Current situation and trends of Multi-Dimensional Child",
+   "before_pdf": "January 2025\nChildren in Viet Nam, undated. Accessed:",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "experience violence, exploitation, neglect, disability, drug abuse or",
+   "pdf": "fare worse than the rest of the population across virtually every Sustainable Development Goal indicator.\nDespite this need, only one-in-10 children and fewer than 1 per cent of those aged under 36 months",
+   "web_words": 8,
+   "pdf_words": 35,
+   "before": "This is especially the case for children who",
+   "after": "are in conflict with the law.’\n13.1.",
+   "before_pdf": "especially the case for ethnic minority children who",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "abuse and child exploitation’:\nExploitation of children, including child labour, sexual exploitation and trafficking are serious concerns that remain largely in the shadows. Online child abuse is an alarming and growing threat... Nearly three-quarters of children experience",
+   "web_words": 0,
+   "pdf_words": 38,
+   "before": "an undated article on ‘Protecting Children from Violence’:",
+   "after": "violent discipline is still widespread in Viet Nam",
+   "before_pdf": "Childhoods free from violence: Protecting children from violence,",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Consortium for Street Children, The Legal Atlas for Street Children, last updated April 2019\nBlue Dragon, Street Children Fact Sheet, March 2020\nUNICEF, Justice for every child: Strengthening access to a child-friendly justice system, no date",
+   "web_words": 0,
+   "pdf_words": 37,
+   "before": "combined fifth and sixth periodic ... ’, 21 October 2022",
+   "after": "Vietnam Law & legal Forum, ‘Community-based conciliation for",
+   "before_pdf": "combined fifth and sixth periodic ..., 21 October 2022",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 18
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024\nData Warehouse’, no date. Last accessed: 13 March 2024\nChild Labour’, no date. Last accessed: 19 March 2024\nViet Nam (VNM) - Demographics, Health & Infant Mortality’, no date. Last accessed: 17 April",
+   "pdf": "",
+   "web_words": 32,
+   "pdf_words": 0,
+   "before": "law’, 31 August 2022. Last accessed: 11 March",
+   "after": "2024\nUNICEF (co-funded by the European Union",
+   "before_pdf": "justice law, 31 August 2022. Accessed: 11 March",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 56
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The Guardian, Shame and pain': Vietnam starts to grapple with child abuse ..., 19 June 2019\nThe Guardian, ‘Shame and pain': Vietnam starts to grapple with child abuse ..., 19 June 2019",
+   "web_words": 0,
+   "pdf_words": 30,
+   "before": "2023\nUNICEF, ‘Protecting Children from Violence’, no date",
+   "after": "GSO & UNICEF, ‘Survey measuring Viet Nam sustainable ...’ (pages",
+   "before_pdf": "Protecting children from violence, abuse and ..., no date",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Hanoi Times, Vietnam handles 8,400 child abuse cases in 2015-2019, 29 April 2020\nHanoi Times, Vietnam handles 8,400 child abuse cases in 2015-2019, 29 April 2020",
+   "web_words": 0,
+   "pdf_words": 30,
+   "before": "measuring Viet Nam sustainable ...’ (pages 358), December 2021",
+   "after": "VnExpress International, ‘Fatal child abuse shines light on",
+   "before_pdf": "measuring Viet Nam sustainable ... (pages 358), December 2021",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Lin, J. Mao, J, University of Texas Rio Grande Valley (UTRGV), Changing Household Registration and Worker Welfare in China and Vietnam, 22 June 2022. Accessed: 13 January 2025",
+   "web_words": 0,
+   "pdf_words": 28,
+   "before": "Mission’, no date. Last accessed: 26 February 2024",
+   "after": "Loving Kindness Vietnam, ‘Who we help- orphanages’, no",
+   "before_pdf": "D.S., Mission, undated. Accessed: 26 February 2024",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Viet Nam News,\nAbout us, undated. Accessed: 13 January 2025\nRegulatory measures needed to address internal migration challenges in Việt Nam, 21 December 2023. Accessed: 14 January 2025",
+   "web_words": 0,
+   "pdf_words": 28,
+   "before": "24 June 2024. Last accessed: 9 July 2024",
+   "after": "Vietnam Human Rights Network (VHRN) and Defend the",
+   "before_pdf": "Vietnam, 24 June 2024. Accessed: 9 July 2024",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 56
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "March 2024\nLegal Review Social Work in the Criminal Justice System’, November 2023. Last accessed: 12 March 2024\nChild Protection System’, no date. Last accessed: 19",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "to justice’, 24 July 2019. Last accessed: 11",
+   "after": "March 2024\nUS Aid, ‘Health, Vietnam’, 18 July",
+   "before_pdf": "access to justice, 24 July 2019. Accessed: 11",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 58
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "26 February 2024",
+   "pdf": "13 January 2025\nHanoi Times, Vietnam handles 8,400 child abuse cases in 2015-2019, 29 April 2020. Accessed: 13 January 2025",
+   "web_words": 3,
+   "pdf_words": 22,
+   "before": "Where we work- Vietnam’, no date, Last accessed:",
+   "after": "Humanium, ‘Children of Vietnam’, no date. Last accessed:",
+   "before_pdf": "Hagar International, Where we work- Vietnam, undated. Accessed:",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Child Labour, undated. Accessed: 19 March 2024\nChildhoods free from violence: Protecting children from violence, abuse and child exploitation, undated. Accessed: 13 January 2025",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "February 2024. Last accessed: 18 June 2024\nUNICEF,",
+   "after": "Children in Viet Nam’, no date. Last accessed:",
+   "before_pdf": "27 February 2024. Accessed: 18 June 2024\nUNICEF,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "eligible for cash transfer support, hampering access to key social services. ...social assistance policies heavily rely on local revenues. This means only children",
+   "web_words": 0,
+   "pdf_words": 23,
+   "before": "violence, exploitation, neglect, disability, drug abuse or are",
+   "after": "in conflict with the law.’\n13.1.3",
+   "before_pdf": "cent of those aged under 36 months are",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The Guardian, 'Shame and pain': Vietnam starts to grapple with child abuse epidemic, 19 June 2019. Accessed: 13 January 2025",
+   "web_words": 0,
+   "pdf_words": 20,
+   "before": "report’, December 2021. Last accessed: 23 April 2024",
+   "after": "Hagar International, ‘Where we work- Vietnam’, no date,",
+   "before_pdf": "findings report, December 2021. Accessed: 23 April 2024",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Viet Nam News, About us, no date\nViet Nam News, Regulatory measures needed to address internal ..., 21 December 2023",
+   "web_words": 0,
+   "pdf_words": 19,
+   "before": "Report Vietnam’ (paragraph 5.32), 11 January 2022",
+   "after": "IOM Viet Nam, ‘Migrant Integration’, no date\nThu",
+   "before_pdf": "Report Vietnam (paragraph 5.32), 11 January 2022",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 48
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Viet Nam with 68.4 per cent",
+   "pdf": "child labour – half in hazardous work – one-in-five are victims",
+   "web_words": 7,
+   "pdf_words": 11,
+   "before": "from Violence’:\nviolent discipline is still widespread in",
+   "after": "of children aged 1-14 having reported experiencing",
+   "before_pdf": "at home, one million children are engaged in",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "social networks also increasing,” she said. “Vietnam still lacks a strong legal framework to protect children from",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "the nature or severity of the act and",
+   "after": "all forms of violence can cause harm to",
+   "before_pdf": "of abuse and exploitation on the internet and",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Fulbright University Vietnam, Life @ Fulbright: On equality of Educational Opportunity, 24 February 2020. Accessed: 10 January 2025",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "Shelter’, no date. Last accessed: 26 February 2024",
+   "after": "Girls Not Brides,\nChild marriage atlas’, no date.",
+   "before_pdf": "Children’s Shelter, undated. Accessed: 26 February 2024",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "conflict with the law.’",
+   "pdf": "better-off cities and provinces can benefit from this much-needed assistance.’",
+   "web_words": 4,
+   "pdf_words": 12,
+   "before": "exploitation, neglect, disability, drug abuse or are in",
+   "after": "13.1.3 The UN Convention on the",
+   "before_pdf": "on local revenues. This means only children in",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "UNICEF, Justice for every child: Strengthening access to a child-friendly justice system, no date",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "Republic of Vietnam Criminal Code’, 27 November 2015",
+   "after": "Vietnam Times, ‘About us’, no date\nVietnam Times, ‘",
+   "before_pdf": "Republic of Vietnam Criminal Code, 27 November 2015",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "children aged",
+   "pdf": "cyberbullying, and one-in-five adolescents face a mental health issue.’\n11.",
+   "web_words": 2,
+   "pdf_words": 12,
+   "before": "Viet Nam with 68.4 per cent of",
+   "after": "1-14 having reported experiencing some form of",
+   "before_pdf": "hazardous work – one-in-five are victims of",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "nature or severity",
+   "pdf": "internet in Vietnam poses a new risk for children with cases",
+   "web_words": 3,
+   "pdf_words": 11,
+   "before": "right to protection from violence, regardless of the",
+   "after": "of the act and all forms of violence",
+   "before_pdf": "in Vietnam, said “The fast growth of the",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Central Intelligence Agency (CIA), World Factbook: Vietnam, 2 January 2025. Accessed: 10 January 2025",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "7 April 2023. Last accessed: 16 April 2024",
+   "after": "Children of the Mekong,\nWhat we do at",
+   "before_pdf": "Vietnam, 7 April 2023. Accessed: 16 April 2024",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Lin, J, and other, UTRGV, Changing Household Registration and ...(page 5), 22 June 2022",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "19- 5.24 & 5.40), 11 January 2022",
+   "after": "DFAT, ‘Country Information Report Vietnam’ (paragraph 5.32),",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 47
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "experiencing some form of violence",
+   "pdf": "on 19 June 2019: ‘Rana Flowers, Unicef representative",
+   "web_words": 5,
+   "pdf_words": 8,
+   "before": "cent of children aged 1-14 having reported",
+   "after": "in the home by their parents or caregivers.",
+   "before_pdf": "health issue.’\n11.1.2 The Guardian reported",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Fulbright University Vietnam, Life @ Fulbright: On equality of Educational ..., 24 February 2020",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "on Human Rights Practices: Vietnam’, 25 March 2024",
+   "after": "UNICEF Data ‘Viet Nam (VNM) - Demographics, Health & Infant",
+   "before_pdf": "on Human Rights Practices: Vietnam, 25 March 2024",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 18
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "is still widespread",
+   "pdf": "at home, one million children are engaged",
+   "web_words": 3,
+   "pdf_words": 7,
+   "before": "article on ‘Protecting Children from Violence’:\nviolent discipline",
+   "after": "in Viet Nam with 68.4 per cent",
+   "before_pdf": "Nearly three-quarters of children experience violent discipline",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "CIA, World Factbook: Vietnam (People and Society), 2 January 2025",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "Inspector’s pages of the gov.uk website.",
+   "after": "UNICEF, ‘Children in Viet Nam’, no date\nUMASS, ‘",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 13
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "can cause harm",
+   "pdf": "especially sexual abuse. This also extends",
+   "web_words": 3,
+   "pdf_words": 6,
+   "before": "of the act and all forms of violence",
+   "after": "to children, reduce their sense of self-worth,",
+   "before_pdf": "to protect children from all forms of violence,",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Multi-dimensional poverty and inequities are still evident in",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "article reporting on social protection for children, noted:",
+   "after": "Viet Nam aspires to an inclusive social protection",
+   "where": {
+    "heading": "Government_support_and",
+    "paragraph": "13.1.1",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Work Development’,",
+   "pdf": "Protection: A fair start for every child,",
+   "web_words": 2,
+   "pdf_words": 7,
+   "before": "2024\nUNICEF ‘Social Protection’, no date\nUNICEF, ‘Social",
+   "after": "no date\nUN CRC,‘Concluding observations on the",
+   "before_pdf": "the frontlines for children, no date\nUNICEF, Social",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Oxfam, Workers’ Rights, undated. Accessed: 13 January 2025",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "31 January 2024. Last accessed: 26 February 2024",
+   "after": "Poverty Child, ‘Child marriage and its drivers in",
+   "before_pdf": "Vietnam, 31 January 2024. Accessed: 26 February 2024",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 58
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Protection’,",
+   "pdf": "Work Development: On the frontlines for children,",
+   "web_words": 1,
+   "pdf_words": 7,
+   "before": "Rights Practices: Vietnam’, 25 March 2024\nUNICEF ‘Social",
+   "after": "no date\nUNICEF, ‘Social Work Development’, no date",
+   "before_pdf": "Rights Practices: Vietnam, 25 March 2024\nUNICEF, Social",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "hinder their development.’",
+   "pdf": "support services for victims.”’",
+   "web_words": 3,
+   "pdf_words": 4,
+   "before": "sense of self-worth, affront their dignity and",
+   "after": "11.1.2 The Government Statistic Office and",
+   "before_pdf": "also extends to the lack of care and",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "children, reduce their sense",
+   "pdf": "the lack",
+   "web_words": 4,
+   "pdf_words": 2,
+   "before": "all forms of violence can cause harm to",
+   "after": "of self-worth, affront their dignity and hinder",
+   "before_pdf": "violence, especially sexual abuse. This also extends to",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "self-worth, affront their dignity",
+   "pdf": "care",
+   "web_words": 5,
+   "pdf_words": 1,
+   "before": "cause harm to children, reduce their sense of",
+   "after": "and hinder their development.’\n11.1.2 The",
+   "before_pdf": "abuse. This also extends to the lack of",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "14 having",
+   "pdf": "11.1.2 The Guardian",
+   "web_words": 2,
+   "pdf_words": 3,
+   "before": "68.4 per cent of children aged 1-",
+   "after": "reported experiencing some form of violence in the",
+   "before_pdf": "in-five adolescents face a mental health issue.’",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Children with Disabilities’,",
+   "pdf": "every child,",
+   "web_words": 3,
+   "pdf_words": 2,
+   "before": "Viet Nam’, no date\nUNICEF, ‘Inclusive Education for",
+   "after": "no date\nMOLISA, ‘Caring for and ensuring the",
+   "before_pdf": "UNICEF, Inclusive Education: Quality learning and education for",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 19
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Childhoods free from violence:",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "1 UNICEF noted in an undated article on ‘",
+   "after": "Protecting Children from Violence’:\nviolent discipline is still",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "abuse and exploitation on",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "violence, regardless of the nature or severity of",
+   "after": "the act and all forms of violence can",
+   "before_pdf": "a new risk for children with cases of",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "on 9 January 2022,",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "educating children.’\n11.1.3 VnExpress International reported",
+   "after": "that:\nEvery year there are around 2,000",
+   "before_pdf": "and organizations.’\n11.1.7 VnExpress International reported",
+   "where": {
+    "heading": "Child_abuse",
+    "paragraph": "11.1.3",
+    "section": "Country information",
+    "page": 28
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "26 February 2024\nAlliance Anti-Trafic, ‘AAT Vietnam’,",
+   "after": "accessed: 26 February 2024\nAlliance 8.7, ‘ A",
+   "before_pdf": "26 February 2024\nAlliance Anti-Trafic, AAT Vietnam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "What we do at Children of the Mekong’,",
+   "after": "accessed: 22 April 2024\nEducation in Vietnam - A",
+   "before_pdf": "What we do at Children of the Mekong,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Catalyst for Tackling the Issue of Street Children’,",
+   "after": "accessed: 22 April 2024\nChildren of Vietnam, ‘Children",
+   "before_pdf": "Catalyst for Tackling the Issue of Street Children,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "April 2024\nChildren of Vietnam, ‘Children of Vietnam’,",
+   "after": "accessed: 26 February 2024\nChildren of Vietnam Benevolent",
+   "before_pdf": "April 2024\nChildren of Vietnam, Children of Vietnam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "February 2024\nChildren of Vietnam Benevolent Foundation, ‘Orphanages’,",
+   "after": "accessed: 4 March 2024\nConsortium for Street Children, ‘",
+   "before_pdf": "February 2024\nChildren of Vietnam Benevolent Foundation, Orphanages,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "for Women and Development (CWD), ‘Peace House Shelters’,",
+   "after": "accessed: 19 March 2024\nEnd Corporal Punishment,\nWho",
+   "before_pdf": "for Women and Development (CWD), Peace House Shelters,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "March 2024\nEnd Corporal Punishment,\nWho we are’,",
+   "after": "accessed: 18 June 2024\nViet Nam’, last updated",
+   "before_pdf": "March 2024\nEnd Corporal Punishment,\nWho we are,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "2024\nFriends of Hue Foundation, ‘ Children’s Shelter’,",
+   "after": "accessed: 26 February 2024\nGirls Not Brides,\nChild",
+   "before_pdf": "2024\nFriends of Hue Foundation, Children’s Shelter,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "February 2024\nGirls Not Brides,\nChild marriage atlas’,",
+   "after": "accessed: 12 March 2024\nAbout us’, no date.",
+   "before_pdf": "January 2025\nGirls Not Brides,\nChild marriage atlas,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "date. Last accessed: 12 March 2024\nAbout us’,",
+   "after": "accessed: 12 March 2024\nGeneral Statistic Office (GSO) &",
+   "before_pdf": "atlas, undated. Accessed: 12 March 2024\nAbout us,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date, Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "April 2024\nHagar International, ‘Where we work- Vietnam’,",
+   "after": "accessed: 26 February 2024\nHumanium, ‘Children of Vietnam’,",
+   "before_pdf": "January 2025\nHagar International, Where we work- Vietnam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "accessed: 26 February 2024\nHumanium, ‘Children of Vietnam’,",
+   "after": "accessed: 22 April 2024\nInternational Committee of the",
+   "before_pdf": "Accessed: 13 January 2025\nHumanium, Children of Vietnam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Red Cross of Viet Nam, Restoring Family Links’,",
+   "after": "accessed: 18 June 2024\nInternational Organization for Migration (",
+   "before_pdf": "Red Cross of Viet Nam | Restoring Family Links,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Organization for Migration (IOM) Viet Nam, ‘Migrant Integration’,",
+   "after": "accessed: 20 March 2024\nJournal of Police and",
+   "before_pdf": "Organization for Migration (IOM) Viet Nam, Migrant Integration,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "13 March 2024\nK.I.D.S., ‘Mission’,",
+   "after": "accessed: 26 February 2024\nLoving Kindness Vietnam, ‘Who",
+   "before_pdf": "13 March 2024\nK.I.D.S., Mission,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "2024\nLoving Kindness Vietnam, ‘Who we help- orphanages’,",
+   "after": "accessed: 26 February 2024\nMOLISA, ‘Caring for and",
+   "before_pdf": "2025\nLoving Kindness Vietnam, Who we help- orphanages,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "accessed: 30 January 2024\nNhan Dan,\nAbout Us’,",
+   "after": "accessed: 18 June 2024\nHotline for child protection",
+   "before_pdf": "Accessed: 30 January 2024\nNhan Dan,\nAbout Us,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date, Last",
+   "pdf": "undated,",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "January 2024\nPacific Links Foundation, Modern Slavery Prevention’,",
+   "after": "accessed: 26 February 2024\nRefworld, ‘Law No. 07/",
+   "before_pdf": "January 2024\nPacific Links Foundation, Modern Slavery Prevention,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "the Children, ‘Donate to Help Children in Vietnam’,",
+   "after": "accessed: 4 March 2024\nLuat Vietnam, ‘[Children Law",
+   "before_pdf": "the Children, Donate to Help Children in Vietnam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "July 2024\nSouth East Asia Globe,\nAbout Us’,",
+   "after": "accessed: 18 June 2024\nGirl’s fatal beating",
+   "before_pdf": "July 2024\nSouth East Asia Globe,\nAbout Us,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "March 2024\nTe-Phan Orphanage, ‘Who are we?’,",
+   "after": "accessed: 26 February 2024\nThu Vien Phap Luat, ‘",
+   "before_pdf": "March 2024\nTe-Phan Orphanage, Who are we?,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "30 January 2024\nTourism Watch,\nAbout Tourism Watch’,",
+   "after": "accessed: 16 April 2024\nVietnam: Connecting Child Protection",
+   "before_pdf": "30 January 2024\nTourism Watch,\nAbout Tourism Watch,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "18 June 2024\nUNICEF,\nChildren in Viet Nam’,",
+   "after": "accessed: 17 April 2024\nVietnam- Child Justice’, no",
+   "before_pdf": "Accessed: 13 January 2025\nChildren in Viet Nam,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "accessed: 19 March 2024\nVietnam Times,\nAbout us’,",
+   "after": "accessed: 18 June 2024\nVietnam Develops Juvenile Justice",
+   "before_pdf": "Accessed: 19 March 2024\nVietnam Times,\nAbout us,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Accessed: 9 July 2024",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "000,000 VND to GBP’,9 July 2024",
+   "after": "Xuan, ‘XUAN - Children of the Future’, no date.",
+   "before_pdf": "000,000 VND to GBP, 9 July 2024.",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "July 2024\nXuan, ‘XUAN - Children of the Future’,",
+   "after": "accessed: 26 February 2024\nSources consulted but not",
+   "before_pdf": "July 2024\nXuan, XUAN - Children of the Future,",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Disease Control and Prevention (CDC) ‘CDC in Vietnam’,",
+   "after": "accessed: 16 April 2024\nChild helpline International, ‘Vietnam:",
+   "before_pdf": "Disease Control and Prevention (CDC) CDC in Vietnam,",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "International, ‘Vietnam: National Hotline for Child Protection 111’,",
+   "after": "accessed: 19 March 2024\nChild Rights International ‘Children’",
+   "before_pdf": "International, Vietnam: National Hotline for Child Protection 111,",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last",
+   "pdf": "undated.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Labour Organization (ILO), ‘Child Labour in Viet Nam’,",
+   "after": "accessed: 19 March 2024\nIOM, ‘Viet Nam Country",
+   "before_pdf": "Labour Organization (ILO), Child Labour in Viet Nam,",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "15.3.2",
+    "section": "Bibliography",
+    "page": 58
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Quality learning and education",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "in Viet Nam’, no date\nUNICEF, ‘Inclusive Education",
+   "after": "for Children with Disabilities’, no date\nMOLISA, ‘Caring",
+   "before_pdf": "in Viet Nam, no date\nUNICEF, Inclusive Education:",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 19
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "undated",
+   "pdf": "no date",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Lists’, 2021\nTe-Phan Orphanage, ‘Who are we?’,",
+   "after": "Loving Kindness Vietnam, ‘Who we help- orphanages’, undated",
+   "before_pdf": "Lists, 2021\nTe-Phan Orphanage, Who are we?,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 43
+   }
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "undated",
+   "pdf": "no date",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "undated\nLoving Kindness Vietnam, ‘Who we help- orphanages’,",
+   "after": "National Legislative Bodies, ‘Law No. 07/1998/QH10",
+   "before_pdf": "date\nLoving Kindness Vietnam, Who we help- orphanages,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.3.2",
+    "section": "Version control and feedback",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "107.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "area on their page- ‘Who we help- orphanages’.",
+   "after": "14. Documentation\n14.1 Citizenship\n14.1.1",
+   "before_pdf": "area on their page- ‘Who we help-orphanages’",
+   "where": {
+    "heading": "documentation",
+    "paragraph": "13.4.4",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "31’",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "3 per cent of schools have suitable infrastructure.’",
+   "after": "9.3.3 A Ministry of Labour – Invalids",
+   "where": {
+    "heading": "Children_with_disabilities",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 19
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "7.1.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "basis for decisions.\n7. Demography\n7.1 Population",
+   "after": "The Central Intelligence Agency (CIA), in its ‘World",
+   "where": {
+    "heading": "Population",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "not_listed": 78,
+ "paragraphs": {
+  "same": 187,
+  "different": {
+   "11.1.2": "11.1.4",
+   "11.1.3": "11.1.7",
+   "11.1.4": "11.1.8",
+   "11.1.5": "11.1.9",
+   "11.1.6": "11.1.10"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

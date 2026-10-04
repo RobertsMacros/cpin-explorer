@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 47,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 52,
+ "paragraphs": 327,
+ "list_items": 35,
+ "tables": 2,
+ "figures": 2,
+ "footnotes": 165,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 28, 29, 33, 125, 155, 157"
+ ],
+ "figure_pages": {
+  "89a230972668ba8c7286624c3c2ed47538c431860f6e2a2f326301ab4c16a98c.png": 16,
+  "0b2e3935dd84f698dec54752eefac8ced2a2599172075147c7e1ad8b4ff88a8d.png": 16
+ },
+ "figure_sizes": {
+  "89a230972668ba8c7286624c3c2ed47538c431860f6e2a2f326301ab4c16a98c.png": [
+   918,
+   456
+  ],
+  "0b2e3935dd84f698dec54752eefac8ced2a2599172075147c7e1ad8b4ff88a8d.png": [
+   902,
+   533
+  ]
+ },
+ "figure_text": {
+  "89a230972668ba8c7286624c3c2ed47538c431860f6e2a2f326301ab4c16a98c.png": 0,
+  "0b2e3935dd84f698dec54752eefac8ced2a2599172075147c7e1ad8b4ff88a8d.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Ethiopia: Opposition to the government",
+ "cover_version": "2.0",
+ "cover_date": "October 2017",
+ "pdf_sha256": "1dd943e7bba22a1ad1826e946a33e28f59c65f23d96b40f71c49575a6fc16b25",
+ "images": [
+  "0b2e3935dd84f698dec54752eefac8ced2a2599172075147c7e1ad8b4ff88a8d.png",
+  "89a230972668ba8c7286624c3c2ed47538c431860f6e2a2f326301ab4c16a98c.png"
+ ]
+}

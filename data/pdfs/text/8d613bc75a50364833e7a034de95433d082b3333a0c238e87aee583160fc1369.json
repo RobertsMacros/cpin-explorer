@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 32,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 246,
+ "list_items": 65,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 74,
+ "bookmarks": 40,
+ "warnings": [
+  "page 4: bookmark not found in the text: 'Contents'"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 2,
+ "cover_title": "Country Policy and Information Note Ghana: Actors of Protection",
+ "cover_version": "1.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "8d613bc75a50364833e7a034de95433d082b3333a0c238e87aee583160fc1369",
+ "images": []
+}

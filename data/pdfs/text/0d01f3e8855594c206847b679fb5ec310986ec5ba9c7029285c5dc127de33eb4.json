@@ -1,0 +1,99 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 73,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 73,
+ "paragraphs": 560,
+ "list_items": 58,
+ "tables": 3,
+ "figures": 10,
+ "footnotes": 279,
+ "bookmarks": 67,
+ "warnings": [
+  "footnotes with no mark found in the text: 134, 269"
+ ],
+ "figure_pages": {
+  "52c9fb8460c00fe46fdf057d31d3da43e75fea4a9b2092f4a18644f443131f27.png": 25,
+  "315e44b257f5185b02abb309907eff40e37e85eac9a9392d656488c159133ebb.jpg": 27,
+  "f72508a4e31d2fcc2ac33ebe08b787ea1cdeed3f7b3617882f5a8bd715e3d9d4.png": 52,
+  "6f95977bfc05c507d4aad2a8776cc1b3344218e4dc551b4d5e19bcce3779c2d3.jpg": 57,
+  "7fa9f28864d4ec4a7532e8208b786957c9ffcb5de4f8a94296fc9c18c8814f7b.jpg": 58,
+  "9b2ff80547b02519e47f609730ab46f4cc3283bb05764ef2cbb2ee18c5da380c.jpg": 59,
+  "3feef8634f939f47df2858f9b12e68a16c9d7d546cadaaca2aebac7750e9d210.jpg": 60,
+  "b5ba5666481eda1c934180b991dc69ee07f96cb19428221e7afc2f0d8e52f480.jpg": 61,
+  "fcd9a7787bd6dcc2feb7afdc95fbbf138aa38c85dadede45fa45d8626138c078.jpg": 62,
+  "02f5833738db2bb6086636bd4ad89d20dc9100773e93371e85073a1c02e0d369.jpg": 63
+ },
+ "figure_sizes": {
+  "52c9fb8460c00fe46fdf057d31d3da43e75fea4a9b2092f4a18644f443131f27.png": [
+   823,
+   337
+  ],
+  "315e44b257f5185b02abb309907eff40e37e85eac9a9392d656488c159133ebb.jpg": [
+   749,
+   436
+  ],
+  "f72508a4e31d2fcc2ac33ebe08b787ea1cdeed3f7b3617882f5a8bd715e3d9d4.png": [
+   803,
+   300
+  ],
+  "6f95977bfc05c507d4aad2a8776cc1b3344218e4dc551b4d5e19bcce3779c2d3.jpg": [
+   758,
+   965
+  ],
+  "7fa9f28864d4ec4a7532e8208b786957c9ffcb5de4f8a94296fc9c18c8814f7b.jpg": [
+   919,
+   1108
+  ],
+  "9b2ff80547b02519e47f609730ab46f4cc3283bb05764ef2cbb2ee18c5da380c.jpg": [
+   919,
+   1156
+  ],
+  "3feef8634f939f47df2858f9b12e68a16c9d7d546cadaaca2aebac7750e9d210.jpg": [
+   919,
+   1155
+  ],
+  "b5ba5666481eda1c934180b991dc69ee07f96cb19428221e7afc2f0d8e52f480.jpg": [
+   919,
+   1009
+  ],
+  "fcd9a7787bd6dcc2feb7afdc95fbbf138aa38c85dadede45fa45d8626138c078.jpg": [
+   919,
+   1014
+  ],
+  "02f5833738db2bb6086636bd4ad89d20dc9100773e93371e85073a1c02e0d369.jpg": [
+   904,
+   591
+  ]
+ },
+ "figure_text": {
+  "52c9fb8460c00fe46fdf057d31d3da43e75fea4a9b2092f4a18644f443131f27.png": 0,
+  "315e44b257f5185b02abb309907eff40e37e85eac9a9392d656488c159133ebb.jpg": 0,
+  "f72508a4e31d2fcc2ac33ebe08b787ea1cdeed3f7b3617882f5a8bd715e3d9d4.png": 0,
+  "6f95977bfc05c507d4aad2a8776cc1b3344218e4dc551b4d5e19bcce3779c2d3.jpg": 0,
+  "7fa9f28864d4ec4a7532e8208b786957c9ffcb5de4f8a94296fc9c18c8814f7b.jpg": 0,
+  "9b2ff80547b02519e47f609730ab46f4cc3283bb05764ef2cbb2ee18c5da380c.jpg": 0,
+  "3feef8634f939f47df2858f9b12e68a16c9d7d546cadaaca2aebac7750e9d210.jpg": 0,
+  "b5ba5666481eda1c934180b991dc69ee07f96cb19428221e7afc2f0d8e52f480.jpg": 0,
+  "fcd9a7787bd6dcc2feb7afdc95fbbf138aa38c85dadede45fa45d8626138c078.jpg": 0,
+  "02f5833738db2bb6086636bd4ad89d20dc9100773e93371e85073a1c02e0d369.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Somalia: Al Shabaab",
+ "cover_version": "3.0",
+ "cover_date": "November 2020",
+ "pdf_sha256": "0d01f3e8855594c206847b679fb5ec310986ec5ba9c7029285c5dc127de33eb4",
+ "images": [
+  "02f5833738db2bb6086636bd4ad89d20dc9100773e93371e85073a1c02e0d369.jpg",
+  "315e44b257f5185b02abb309907eff40e37e85eac9a9392d656488c159133ebb.jpg",
+  "3feef8634f939f47df2858f9b12e68a16c9d7d546cadaaca2aebac7750e9d210.jpg",
+  "52c9fb8460c00fe46fdf057d31d3da43e75fea4a9b2092f4a18644f443131f27.png",
+  "6f95977bfc05c507d4aad2a8776cc1b3344218e4dc551b4d5e19bcce3779c2d3.jpg",
+  "7fa9f28864d4ec4a7532e8208b786957c9ffcb5de4f8a94296fc9c18c8814f7b.jpg",
+  "9b2ff80547b02519e47f609730ab46f4cc3283bb05764ef2cbb2ee18c5da380c.jpg",
+  "b5ba5666481eda1c934180b991dc69ee07f96cb19428221e7afc2f0d8e52f480.jpg",
+  "f72508a4e31d2fcc2ac33ebe08b787ea1cdeed3f7b3617882f5a8bd715e3d9d4.png",
+  "fcd9a7787bd6dcc2feb7afdc95fbbf138aa38c85dadede45fa45d8626138c078.jpg"
+ ]
+}

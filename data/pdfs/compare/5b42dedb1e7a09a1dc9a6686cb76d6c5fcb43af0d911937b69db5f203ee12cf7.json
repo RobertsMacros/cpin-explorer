@@ -1,0 +1,748 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sudan/country-policy-and-information-note-security-situation-sudan-july-2026-accessible",
+ "pdf_sha256": "5b42dedb1e7a09a1dc9a6686cb76d6c5fcb43af0d911937b69db5f203ee12cf7",
+ "body_sha256": "37c3fc359832b7d543d472f9ccc813fcaee41c4a02ad609888539adafcdc5dec",
+ "words": {
+  "web": 23085,
+  "pdf": 22910
+ },
+ "summary": {
+  "wording": {
+   "differences": 11,
+   "web_words": 3,
+   "pdf_words": 122,
+   "share": 0.002718,
+   "passages": 10,
+   "sizes": {
+    "spelling": 1,
+    "passage": 10
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 11,
+    "web_words": 3,
+    "pdf_words": 122
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 1,
+    "pdf_words": 8
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 90,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 8
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 1,
+    "pdf_words": 8
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 90,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 11,
+    "web_words": 3,
+    "pdf_words": 122
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 8
+   }
+  },
+  "ours": {
+   "differences": 59,
+   "web_words": 508,
+   "pdf_words": 298
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "July 2026",
+   "pdf": "3.0",
+   "pdf_date": "July 2026"
+  },
+  "section_updated": {
+   "web": [
+    "8 May 2026"
+   ],
+   "pdf": [
+    "8 May 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 165,
+   "pdf": 165,
+   "pdf_raw": 165,
+   "differ": false
+  },
+  "pictures": {
+   "web": 6,
+   "pdf": 10
+  },
+  "tables": {
+   "web": 10,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 57,
+   "pdf": 56
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 10,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Al Jazirah Blue Nile Central Darfur East Darfur Gedaref Kassala Khartou m North Darfur North Kordofa n",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "states from January 2024 to June 2026:\nState",
+   "after": "Q1 2024\nQ2 2024\nQ3 2024\nQ4 2024",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Darfur 28 238 54 872 430 532 291 1,931 125 95 4596\nNorth",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "464\n288\n10\n2\n3\n6\n2009\nNorth",
+   "after": "Kordofan\n96\n114\n16\n87\n247\n169\n121",
+   "before_pdf": "464 288 10 2 3 6 2009\nNorth",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Blue Nile 0 0 3 125 12 3 5 0 41 20 209",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "827\n450\n3\n2\n2\n7\n1\n2358",
+   "after": "Central Darfur\n7\n5\n14\n12\n6\n27",
+   "before_pdf": "827 450 3 2 2 7 1 2358",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "East Darfur 25 6 31 8 15 7 7 8 99 25 231",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "12\n6\n27\n3\n27\n9\n32\n142",
+   "after": "Gedaref\n1\n1\n3\n11\n0\n0\n5",
+   "before_pdf": "12 6 27 3 27 9 32 142",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "River Nile 13 0 8 3 0 15 0 11 1 0 51",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "0\n0\n2\n0\n1\n0\n30\n33",
+   "after": "Sennar\n60\n30\n248\n381\n3\n47\n0",
+   "before_pdf": "0 0 2 0 1 0 30 33",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "White Nile 6 10 22 83 345 18 2 2 20 18 526",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "38\n7\n202\n162\n37\n237\n74\n856",
+   "after": "Total\n1,006\n1,145\n1,134\n3,",
+   "before_pdf": "38 7 202 162 37 237 74 856",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Northern 0 1 0 0 0 14 1 3 0 0 19",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "87\n247\n169\n121\n543\n173\n89\n1655",
+   "after": "Red Sea\n0\n0\n0\n0\n0\n2",
+   "before_pdf": "87 247 169 121 543 173 89 1655",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Darfur 5 29 11 102 112 39 29 44 25 90 486\nSouth",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "3\n47\n0\n0\n3\n0\n772\nSouth",
+   "after": "Kordofan\n150\n32\n29\n28\n14\n102\n27",
+   "before_pdf": "3 47 0 0 3 0 772\nSouth",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Darfur 2 0 2 11 20 1 3 85 25 15 164\nWest",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "14\n102\n27\n206\n314\n117\n1019\nWest",
+   "after": "Kordofan\n41\n25\n33\n38\n7\n202\n162",
+   "before_pdf": "14 102 27 206 314 117 1019\nWest",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.10",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Kordofan\n339\n149\n40\n31\n110\n511\n51\n626\n679\n336\n559\n1298\n739\n132.20",
+   "pdf": "Kordofa n",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "240\n89\n226\n404\n909\n505\n125\nSouth",
+   "after": "West Darfur\n13\n0\n29\n114\n33\n4",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "althogh",
+   "pdf": "although",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "has affected all of Sudan’s 18 states,",
+   "after": "the nature and severity vary across states. Following",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 2
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Period\nProcedure\nResult\nApril–May 2023\nEid El Fitr truce attempt\nQuickly collapsed\nMay 2023\nFirst Jeddah negotiations\nOne-week truce + 5-day extension, then collapse\nMay 30–June 1, 2023\nArmy withdrawal from talks\nDue to RSF violations and mutual failure to comply\nOct–Dec 2023\nJeddah and Juba negotiations\nOnly humanitarian corridor agreed, no truce\nDec 2023\nSecond Jeddah round\nTalks permanently suspended\nJuly 2024\nGeneva meeting under UN envoy Lamamra\nArmy refused participation before RSF withdrawal\n2024–2025\nBritish-led confidential talks with RSF\nSuspended after political backlash",
+   "pdf": "",
+   "web_words": 90,
+   "pdf_words": 0,
+   "before": "of major negotiation efforts between 2023 and 2025:",
+   "after": "9.2.3 In September 2025, the foreign",
+   "where": {
+    "heading": "peace-talks",
+    "paragraph": "9.2.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Country Policy and Information Note\nSudan: Security Situation",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "",
+   "after": "Version 3.0, July 2026\nExecutive summary\nThe",
+   "where": {
+    "heading": null,
+    "paragraph": null,
+    "section": null,
+    "page": 1
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.3.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of Sudan showing territorial control by various groups",
+   "after": "On 22 June 2026, Sudans Post published the",
+   "where": {
+    "heading": "map-of-sudan-showing-territorial-control-by-various-groups",
+    "paragraph": "12.2.3",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "13.7.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "same location/area is the most suitable approach.’",
+   "after": "According to ACLED’s conflict exposure tool, 18,",
+   "where": {
+    "heading": "conflict-exposure",
+    "paragraph": "13.7.2",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.43",
+   "pdf": "13.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "contribute to political dynamics within and across states’.",
+   "after": "ACLED has grouped battles, explosions/remote violence, violence",
+   "where": {
+    "heading": "acled-data",
+    "paragraph": "13.1.43",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "facts, credibility and other checks/referrals\n1.1",
+   "after": "Decision makers must:\nassess credibility (see the Asylum",
+   "before_pdf": "1. Material facts, credibility and other checks/referrals",
+   "where": {
+    "heading": "material-facts-credibility-and-other-checksreferrals",
+    "paragraph": "1.1",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "1964",
+   "pdf": "19.64",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "20\n18\n13\n22\n20\n56\n67\n11",
+   "after": "East Darfur\n10\n5\n21\n20\n25\n23",
+   "where": {
+    "heading": "violence-events",
+    "paragraph": "13.2.3",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "00",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "0\n16\n2\n0\n100\n41\n59\n59.",
+   "after": "Sennar\n121\n111\n361\n452\n9\n47\n0",
+   "before_pdf": "0\n16\n2\n0\n100\n41\n59\n59",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "State\n1km\n2km\n5km\nBest\nTotal Events\nAbyei\n14,383\n24,385\n36,083\n35,963\n28\nAl Jazirah\n330,050\n678,003\n1,265,408\n1,118,397\n32\nBlue Nile\n151,240\n300,037\n658,618\n658,618\n134\nCentral Darfur\n175,222\n340,043\n404,286\n381,239\n82\nEast Darfur\n123,090\n299,529\n534,241\n425,160\n72\nGedaref\n115,289\n362,461\n993,734\n616,428\n11\nKassala\n27,461\n124,699\n616,911\n339,516\n8\nKhartoum\n1,190,531\n2,757,927\n4,977,072\n4,442,363\n87\nNorth Darfur\n321,656\n713,468\n1,404,674\n1,357,922\n554\nNorthern\n45,607\n107,663\n267,558\n267,558\n44\nRed Sea\n33,405\n129,096\n513,051\n185,881\n14\nRiver Nile\n100,979\n283,656\n651,697\n651,697\n16\nSennar\n158,882\n326,949\n479,876\n478,260\n9\nSouth Darfur\n563,520\n1,255,681\n2,995,590\n2,915,368\n386\nSouth Kordofan\n228,671\n492,486\n805,095\n794,310\n448\nWest Darfur\n195,811\n594,793\n840,363\n819,959\n86\nWest Kordofan\n300,666\n660,477\n908,105\n872,566\n477\nWhite Nile\n252,230\n615,797\n1,516,222\n1,516,222\n65",
+   "pdf": "",
+   "web_words": 212,
+   "pdf_words": 0,
+   "before": "as calculated by ACLED conflict exposure calculator tool.",
+   "after": "14. Impact of the conflict\n14.1 Damage",
+   "where": {
+    "heading": "conflict-exposure",
+    "paragraph": "13.7.2",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "State\nQ1 2024\nQ2 2024\nQ3 2024\nQ4 2024\nQ1 2025\nQ2 2025\nQ3 2025\nQ4 2025\nQ1 2026\nQ2 2026\nTotal\nAl Jazirah\n240\n188\n124\n301\n149\n8\n5\n3\n8\n1\n1027\nCentral Darfur\n8\n6\n18\n17\n14\n17\n15\n11\n15\n14\n135\nGedaref\n3\n6\n2\n3\n0\n0\n6\n0\n1\n1\n22\nKhartoum\n92\n96\n154\n130\n156\n48\n13\n7\n8\n7\n711\nNorth Kordofan\n22\n38\n14\n14\n56\n53\n30\n31\n33\n32\n323\nRed Sea\n1\n1\n0\n2\n0\n1\n3\n1\n0\n5\n14\nSennar\n10\n10\n59\n29\n3\n3\n0\n0\n4\n0\n118\nSouth Kordofan\n34\n16\n13\n9\n4\n30\n15\n31\n47\n33\n232\nWest Kordofan\n10\n19\n9\n10\n5\n50\n37\n45\n58\n33\n276\nTotal\n463\n521\n526\n855\n696\n391\n263\n282\n298\n244\n4539",
+   "pdf": "",
+   "web_words": 148,
+   "pdf_words": 0,
+   "before": "2024 and June 2026 by quarter and state:",
+   "after": "13.6.9 CPIT analysis of the table",
+   "where": {
+    "heading": "acled-data-on-civilian-targeting",
+    "paragraph": "13.6.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "25.50",
+   "pdf": "25.5\n69\n13.3.6 CPIT analysis of the table indicated that fatalities were highly geographically concentrated:\nKhartoum consistently recorded the highest fatality in 2024 but showed a marked decline through 2025 and into 2026\nDarfur states - particularly North Darfur and West Darfur - experienced sustained or increasing levels of fatalities, with significant spikes in late 2024 and 2025, indicating a shift in the centre of violence westwards\nKordofan states, especially North and South Kordofan, showed rising or persistently high fatality levels into 2025–2026, suggesting continued or expanding conflict intensity in these areas\nSome states, including Al Jazirah and Gedaref, saw sharp declines after peaks in 2024, indicating a contraction of violence in those regions\nEastern and northern states such as Kassala, River Nile, Northern and Red Sea consistently recorded low and stable fatality levels throughout the period.",
+   "web_words": 1,
+   "pdf_words": 137,
+   "before": "4709\n2887\n5789\n3239\n1901\n14754\n18663\n3909",
+   "after": "13.4 Relationship between organised political violence events",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Al Jazirah\n474\n708\n396\n1534\n537\n15\n5\n2\n13\n8\n3112\n559\n2553",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "change 2024 to 2025\nChange 2024 to 2025",
+   "after": "82.04\nBlue Nile\n0\n1\n29\n165",
+   "before_pdf": "11 -1512 3736 2400\nChange 2024 to 2025 -",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Blue Nile\n0\n1\n29\n165\n32\n45\n5\n0\n352\n260\n195\n82\n113",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "2\n13\n8\n3112\n559\n2553\n82.04",
+   "after": "57.95\nCentral Darfur\n7\n9\n18\n14",
+   "before_pdf": "3736 2400\nChange 2024 to 2025 -82.04 -",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Central Darfur\n7\n9\n18\n14\n9\n35\n7\n41\n83\n55\n48\n92\n44",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "0\n352\n260\n195\n82\n113\n57.95",
+   "after": "91.67\nEast Darfur\n28\n6\n38\n29",
+   "before_pdf": "Change 2024 to 2025 -82.04 -57.95",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "East Darfur\n28\n6\n38\n29\n20\n11\n7\n8\n167\n41\n101\n46\n55",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "41\n83\n55\n48\n92\n44\n91.67",
+   "after": "54.46\nGedaref\n21\n17\n4\n34\n0",
+   "before_pdf": "to 2025 -82.04 -57.95 91.67 -",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "North Darfur\n181\n1163\n927\n2191\n2471\n1684\n1075\n2968\n584\n245\n4462\n8198\n3736",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "29\n7\n36\n2861\n1349\n1512\n52.85",
+   "after": "83.73\nNorth Kordofan\n181\n300\n115\n173",
+   "before_pdf": "67 -54.46 -93.42 1100 -52.85",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "North Kordofan\n181\n300\n115\n173\n458\n507\n1141\n1063\n435\n363\n769\n3169\n2400",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "2968\n584\n245\n4462\n8198\n3736\n83.73",
+   "after": "312.09\nNorthern\n0\n1\n0\n5\n1",
+   "before_pdf": "46 -93.42 1100 -52.85 83.73",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Gedaref\n21\n17\n4\n34\n0\n0\n5\n0\n1\n1\n76\n5\n71",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "8\n167\n41\n101\n46\n55\n54.46",
+   "after": "93.42\nKassala\n0\n0\n1\n0\n1",
+   "before_pdf": "82.04 -57.95 91.67 -54.46 -",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Kassala\n0\n0\n1\n0\n1\n11\n0\n0\n0\n6\n1\n12\n11",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "0\n1\n1\n76\n5\n71\n93.42",
+   "after": "1100\nKhartoum\n908\n441\n844\n668\n936\n367",
+   "before_pdf": "57.95 91.67 -54.46 -93.42",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Khartoum\n908\n441\n844\n668\n936\n367\n17\n29\n7\n36\n2861\n1349\n1512",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "0\n0\n0\n6\n1\n12\n11\n1100",
+   "after": "52.85\nNorth Darfur\n181\n1163\n927\n2191",
+   "before_pdf": "95 91.67 -54.46 -93.42 1100 -",
+   "where": {
+    "heading": "conflict-fatalities",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": null
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 193,
+  "different": {
+   "1.1": "1.1.1",
+   "13.1.43": "13.1.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

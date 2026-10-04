@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "note": "zimbabwe/country-policy-and-information-note-sexual-orientation-gender-identity-and-expression-zimbabwe-july-2024-accessible",
+ "pdf_sha256": "3db58b21bd66e1b001c9c172f53f2ae00e8f97ee3a8ad3621750a4218b359769",
+ "body_sha256": "5f5e3dca341e8291227f2e2fb2818b1d41f63e90edeace209780d330ec8374d3",
+ "figures": [
+  {
+   "image": "0ac5ecf34fcb7aca6ab69adb584e30a8c74318db3982a147cc2e5f02e2aae0e7.png",
+   "tag": "p",
+   "index": 141,
+   "key": "1214afrobarometeranonprofitcorporationwithheadquartersinghan",
+   "page": 22
+  },
+  {
+   "image": "ef7b495a01be50a1aa958a9c956a8ac07ef4ca0dbcf883ff4986bf0d9e020f0f.png",
+   "tag": "p",
+   "index": 155,
+   "key": "1314thepiechartbelowwaspublishedinthegalzreport2021showsthee",
+   "page": 24
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 2,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

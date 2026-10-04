@@ -1,0 +1,27 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 46,
+ "paragraphs": 368,
+ "list_items": 42,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 205,
+ "bookmarks": 49,
+ "warnings": [
+  "page 42: bookmark not found in the text: '9.3'",
+  "page 42: bookmark not found in the text: '9.3'",
+  "page 42: bookmark not found in the text: '9.3'"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Iran: Women – Early and forced marriage",
+ "cover_version": "3.0",
+ "cover_date": "February 2021",
+ "pdf_sha256": "73649b15cccf79e6ec1ee49eb6df8fc0a28633d181d521038d5024693c30bd43",
+ "images": []
+}

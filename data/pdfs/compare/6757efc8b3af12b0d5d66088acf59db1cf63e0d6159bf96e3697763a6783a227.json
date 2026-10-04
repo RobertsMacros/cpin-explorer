@@ -1,0 +1,426 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "brazil/country-policy-and-information-note-actors-of-protection-brazil-june-2025-accessible",
+ "pdf_sha256": "6757efc8b3af12b0d5d66088acf59db1cf63e0d6159bf96e3697763a6783a227",
+ "body_sha256": "814ced2d85cf34059b8d451a8c6ce6602a998e8aeaace45e6ea78b334eb1ed67",
+ "words": {
+  "web": 27605,
+  "pdf": 27545
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 11,
+   "share": 0.000218,
+   "passages": 2,
+   "sizes": {
+    "passage": 2,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 11
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 35,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 26,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 26,
+    "pdf_words": 5
+   },
+   "footnote": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 5,
+    "pdf_words": 6
+   },
+   "picture in words": {
+    "differences": 2,
+    "web_words": 31,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "June 2025",
+   "pdf": "2.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "24 June 2025"
+   ],
+   "pdf": [
+    "24 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 237,
+   "pdf": 237,
+   "pdf_raw": 237,
+   "differ": false
+  },
+  "pictures": {
+   "web": 5,
+   "pdf": 6
+  },
+  "tables": {
+   "web": 7,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 129,
+   "pdf": 47
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Assessing Credibility and Refugee Status.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Asylum Instruction on Assessing Credibility and Refugee Status.",
+   "after": "Country information\nAbout the country information\nThis section",
+   "before_pdf": "Asylum Instruction on Assessing Credibility and Refugee Status",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "2.1.15",
+    "section": "Country information",
+    "page": 8
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Agencia Brasil, Lethality of the",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "27 September 2024\nAgencia Brasil, Homepage, no date",
+   "after": "São Paulo military police increased in 2024](https://",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.1",
+    "section": "Version control and feedback",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "nsight",
+   "pdf": "Insight",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "no date\nInsight Crime, About Us, no date",
+   "after": "Crime, Local Police Could Disrupt Attempts to Remove",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.1",
+    "section": "Version control and feedback",
+    "page": 21
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://agenciabrasil.ebc.com.br/direitos-humanos/noticia/2025-01/letalidade-da-policia-militar-paulista-aumentou-em-2024?utm_source=chatgpt.com),",
+   "pdf": "",
+   "web_words": 22,
+   "pdf_words": 0,
+   "before": "date\nSão Paulo military police increased in 2024](",
+   "after": "15 January 2025\nConstitute Project, Constitution of Brazil (",
+   "before_pdf": "the São Paulo military police increased in 2024,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "12.1.1",
+    "section": "Version control and feedback",
+    "page": 16
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nVictims\n2022\n41,001\n2023\n39,814\n2024\n37,501\n2025\n11,143\n2025: data from January to April",
+   "pdf": "",
+   "web_words": 20,
+   "pdf_words": 0,
+   "before": "intentional homicide and bodily injury followed by death:",
+   "after": "5.2.16 The same source also illustrated",
+   "where": {
+    "heading": "effectiveness",
+    "paragraph": "5.2.15",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Warrant enforcement arrests per year:\nYear\nArrests\n2022\n236,175\n2023\n256,646\n2024\n278,048",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "does not include arrests made without a warrant:",
+   "after": "6.2.2 The same source also breaks",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "6.2.1",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "12.1.1",
+    "section": "Version control and feedback",
+    "page": 69
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nNumber of deaths\n2022\n6,452\n2023\n6,392\n2024\n6,137",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "police interventions in Brazil, between 2022 and 2024:",
+   "after": "8.1.8 The same source also illustrated",
+   "where": {
+    "heading": "human-rights-violations",
+    "paragraph": "8.1.7",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.15",
+   "pdf": "7.1.5",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "in a standardized way at the national level.”...’",
+   "after": "The below graph was created by CPIT using",
+   "where": {
+    "heading": "investigations",
+    "paragraph": "7.15",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.3.2",
+   "pdf": "9.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "issues and a lack of digital literacy barriers.’",
+   "after": "A 2024 research paper by 3 academics based",
+   "where": {
+    "heading": "accessibility",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.1.5",
+   "pdf": "11.1.15",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and more than 450 officers have been arrested.”’",
+   "after": "The HRW 2025 report stated that:\nIn May [",
+   "where": {
+    "heading": "accountability",
+    "paragraph": "11.1.5",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.4",
+   "pdf": "11.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "need to approve or reject the final resolution ...’",
+   "after": "The UNHRC 2024 report stated: ‘The Mechanism heard",
+   "where": {
+    "heading": "the-public-prosecutors-office-mp-and-national-council-of-the-public-prosecutors-office-cnmp",
+    "paragraph": "11.3.4",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.3.5",
+   "pdf": "11.3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "external oversight bodies, including the Public Prosecution offices ...’",
+   "after": "The CNMP told the UK HO FFM team",
+   "where": {
+    "heading": "the-public-prosecutors-office-mp-and-national-council-of-the-public-prosecutors-office-cnmp",
+    "paragraph": "11.3.5",
+    "section": "Country information",
+    "page": 56
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "in Brazil, 1 December 2023. Accessed: 4 June",
+   "after": "Wilson Center\nAbout the Wilson Center, no date.",
+   "where": {
+    "heading": "washington-brazil-office",
+    "paragraph": "12.1.1",
+    "section": "Bibliography",
+    "page": 64
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 216,
+  "different": {
+   "7.15": "7.1.5",
+   "11.3.4": "11.3.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "9.3.2",
+   "11.1.5",
+   "11.3.5"
+  ],
+  "unconfirmed": []
+ }
+}

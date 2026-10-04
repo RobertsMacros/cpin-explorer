@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 41,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 46,
+ "paragraphs": 205,
+ "list_items": 13,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 132,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "13fa2e7cd25d24fbed13275b258946c645ead9922cd5ffe972739ca043a5af2f.png": 24
+ },
+ "figure_sizes": {
+  "13fa2e7cd25d24fbed13275b258946c645ead9922cd5ffe972739ca043a5af2f.png": [
+   872,
+   415
+  ]
+ },
+ "figure_text": {
+  "13fa2e7cd25d24fbed13275b258946c645ead9922cd5ffe972739ca043a5af2f.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Pakistan: Women fearing gender- based harm / violence",
+ "cover_version": "3.0",
+ "cover_date": "February 2016",
+ "pdf_sha256": "2acd9610fddedea197663e101bb50cc2af284ed0297d881c25e0117c839f1eb9",
+ "images": [
+  "13fa2e7cd25d24fbed13275b258946c645ead9922cd5ffe972739ca043a5af2f.png"
+ ]
+}

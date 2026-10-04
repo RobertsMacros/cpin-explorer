@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 59,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 51,
+ "paragraphs": 408,
+ "list_items": 82,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 134,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 68"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Democratic Republic of Congo: Opposition to government",
+ "cover_version": "3.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "6188b79f1528dc29e13b668fc5461fc5dbbbbeae1c1031f1751846fc657023ed",
+ "images": []
+}

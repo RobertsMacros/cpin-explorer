@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 40,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 31,
+ "paragraphs": 246,
+ "list_items": 31,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 478,
+ "bookmarks": 31,
+ "warnings": [
+  "footnotes with no mark found in the text: 13"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Nigeria: Medical and healthcare issues",
+ "cover_version": "3.0",
+ "cover_date": "January 2020",
+ "pdf_sha256": "95b7eb9ab8487bd5692cb9a3ed4ed9d5dc08326dff3fecca74125f4d98aa69a4",
+ "images": []
+}

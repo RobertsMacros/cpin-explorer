@@ -1,0 +1,46 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 64,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 67,
+ "paragraphs": 515,
+ "list_items": 42,
+ "tables": 2,
+ "figures": 1,
+ "footnotes": 309,
+ "bookmarks": 35,
+ "warnings": [
+  "page 3: bookmark not found in the text: 'Independent Advisory Group on Country'",
+  "page 3: bookmark not found in the text: 'Information'",
+  "page 6: bookmark not found in the text: 'Introduction'",
+  "page 6: bookmark not found in the text: 'Consideration of issues'",
+  "page 7: bookmark not found in the text: 'Overview'",
+  "page 15: bookmark not found in the text: 'History a'",
+  "page 15: bookmark not found in the text: 'origins'",
+  "page 15: bookmark not found in the text: 'Christian'",
+  "page 15: bookmark not found in the text: 'in Pakistan'",
+  "page 52: bookmark not found in the text: 'The Constitutional position of non'",
+  "page 52: bookmark not found in the text: 'Muslims in Pakistan'"
+ ],
+ "figure_pages": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 1
+ },
+ "figure_sizes": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": [
+   318,
+   148
+  ]
+ },
+ "figure_text": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 0
+ },
+ "first_bookmark_page": 1,
+ "cover_title": "Country Policy and Information Note Pakistan: Christians and Christian converts",
+ "cover_version": "4.0",
+ "cover_date": "February 2021",
+ "pdf_sha256": "a0d0ea75cba887b053057c99ffd9bd31ca15e111310bc1188d23c3357ff7ef55",
+ "images": [
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png"
+ ]
+}

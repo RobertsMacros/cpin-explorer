@@ -1,0 +1,327 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-contravention-of-the-population-and-family-planning-law-china-may-2022-accessible",
+ "pdf_sha256": "8aa60ecf96c3e463f50e820ea748ca56f1b824b1d8b5e2a66f4adaf3e94bba05",
+ "body_sha256": "f8f0cb44ab2d1b841851e269c259b024469f522abe0b0628d0ee83b2d6a2d26c",
+ "words": {
+  "web": 23471,
+  "pdf": 21557
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 7,
+    "web_words": 1895,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 2,
+    "web_words": 1687,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 5,
+    "web_words": 208,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "June 2025",
+   "pdf": "5.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "10 June 2025"
+   ],
+   "pdf": [
+    "10 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 158,
+   "pdf": 158,
+   "pdf_raw": 158,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 10
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 87,
+   "pdf": 62
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "From: [Redacted]\nSent on: Wednesday, March 16, 2022 1:34:30 AM\nTo: [Redacted]@homeoffice.gov.uk\nSubject: RE: Official Sensitive - Request for information on the family planning policy\nHi [Redacted],\nPlease see below.\nKind regards,\nRedacted]\nOriginal Message:\nFrom: [Redacted]@homeoffice.gov.uk\nSent on: 01 February 2022 17:32\nSubject: Official Sensitive - Request for information on the family planning policy\nHi [Redacted],\nI am currently updating our CPIN on China’s family planning policy and believe there may be a country guidance case in the pipeline too so just wanted to ask some questions regarding the updated family planning policy.\nQ) If couples wish to have a 3rd child do they still have to obtain a birth permit/ family planning certificate?\nAccording to open source research and the Birth Control Office in Beijing, there is no official China-wide policy on the administrative requirements following the birth of a child, which suggests parental obligations differ from province to province. Taking Beijing as an example, every birth must be registered, regardless of whether it is the first, second, or third child – this can be done in person or online. The local Community Office s …",
+   "pdf": "",
+   "web_words": 1209,
+   "pdf_words": 0,
+   "before": "other areas of China.’\nAnnexe A: Diplomatic source",
+   "after": "Annex B: Diplomatic source\nFrom: [Redacted]\nSent: 15",
+   "where": {
+    "heading": "Annexe_A_Diplomatic",
+    "paragraph": "12.1.3",
+    "section": "Annexe A: Diplomatic source",
+    "page": 45
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "From: [Redacted]\nSent: 15 April 2025 07:29\nTo: [Redacted]@homeoffice.gov.uk\nSubject: RE: Official Sensitive - Request for information on the family planning policy\nOFFICIAL-SENSITIVE\nHi [REDACTED]\nApologies on the delay. Got some very general details back [REDACTED] Like many things here the reality on the ground is difficult to gauge against the Official Laws. It seems to be a rather “flexible” approach now on this policy.\nQ) Are you aware of any reports of fees being applied to those who have children in excess of the policy? – not aware of any such case, imagine it would be fairly rare Q) Are you aware of any reports, since the updated family planning policy was introduced, of forced sterilisation/ abortions undertaken to comply with family planning restrictions (I am aware of reports of these occurring in Xinjiang but could find no recent reports that these practices have been occurring elsewhere). Not aware of anything [Redacted] Q) Since the introduction of the 3-child policy and the shift towards encouraging births are single mothers still liable to pay social compensation fees and do they face any difficulties registering their children once born? Believe situation for sing …",
+   "pdf": "",
+   "web_words": 478,
+   "pdf_words": 0,
+   "before": "Office\nRedacted]\nukhomeoffice\nRedacted]\nAnnex B: Diplomatic source",
+   "after": "Research methodology\nThe country of origin information (COI)",
+   "before_pdf": "Annexe A: Diplomatic source\nAnnex B: Diplomatic source",
+   "where": {
+    "heading": "Annex_B_Diplomatic",
+    "paragraph": "12.1.3",
+    "section": "Annex B: Diplomatic source",
+    "page": 27
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nBirth rate\nDeath rate\nNatural population growth\n1980\n18.21%\n6.34%\n11.87%\n1985\n21.04%\n6.78%\n14.26%\n1990\n21.06%\n6.67%\n14.39%\n1995\n17.12%\n6.57%\n10.55%\n2000\n14.03%\n6.45%\n7.58\n2005\n12.40%\n6.54%\n5.89%\n2010\n11.9%\n7.11%\n4.79%\n2015\n11.99%\n7.07%\n4.93%\n2020\n8.52%\n7.07%\n1.45%\n2023\n6.39%\n7.87%\n1.48%",
+   "pdf": "",
+   "web_words": 75,
+   "pdf_words": 0,
+   "before": "rate (% of the population) from 1980 to 2023.",
+   "after": "7.4.2 CNN, noted in a November",
+   "where": {
+    "heading": "Birth_rates",
+    "paragraph": "7.4.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\n0-14 years\n15-64 years\n65 and over\n1982\n33.6\n61.5\n4.9\n1993\n27.2\n66.7\n6.2\n1998\n25.7\n67.6\n6.7\n2003\n22.1\n70.4\n7.5\n2008\n19\n72.7\n8.3\n2013\n16.4\n73.9\n9.7\n2018\n16.9\n71.2\n11.9\n2023\n16.3\n68.3\n15.4",
+   "pdf": "",
+   "web_words": 47,
+   "pdf_words": 0,
+   "before": "gradual incline of those aged 65 and over.",
+   "after": "7.3 Number of married couples\n7.3.",
+   "where": {
+    "heading": "Age_structure",
+    "paragraph": "7.2.2",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Size\nPercentage\none person\n17.84%\ntwo persons\n23.44%\nthree persons\n21.06%\nfour persons\n18.41%\nfive persons\n9.65%\nsix persons\n5.93%\nseven persons\n2.18%\neight persons\n0.80%\nnine persons\n0.34%\nten persons and over\n0.35%",
+   "pdf": "",
+   "web_words": 44,
+   "pdf_words": 0,
+   "before": "the number of people per households by size.",
+   "after": "7.6 Single parent families\n7.6.1",
+   "where": {
+    "heading": "family-composition",
+    "paragraph": "7.5.1",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nPopulation (in 10,000s)\n1970\n82992\n1975\n92420\n1980\n98705\n1985\n105851\n1990\n114333\n1995\n121121\n2000\n126743\n2005\n130756\n2010\n134091\n2015\n138326\n2020\n141212\n2023\n140967",
+   "pdf": "",
+   "web_words": 29,
+   "pdf_words": 0,
+   "before": "China in the following graph created by CPIT.",
+   "after": "7.1.3 Population Matters, a UK-based",
+   "where": {
+    "heading": "population",
+    "paragraph": "7.1.2",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Never married\n19.89%\nMarried\n71.15%\nDivorced\n2.67%\nWidowed\n6.28%",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "status of the population aged 15 and over.",
+   "after": "7.4 Birth rates\n7.4.1 Using",
+   "where": {
+    "heading": "number-of-married-couples",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "12.1.3",
+    "section": "Version control and feedback",
+    "page": 57
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Refworld.",
+   "pdf": "Refworld24.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the changes to the law is available on",
+   "after": "The amendments to the law are explained below.",
+   "where": {
+    "heading": "Legislation",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "68.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "issued in 2021 abolished the social maintenance fee .",
+   "after": "9.6.2 The US State Department (USSD)",
+   "before_pdf": "issued in 2021 abolished the social maintenance fee",
+   "where": {
+    "heading": "Enforcement_of_the",
+    "paragraph": "9.6.2",
+    "section": "Country information",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 199,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

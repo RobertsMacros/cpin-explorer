@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 51,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 62,
+ "paragraphs": 373,
+ "list_items": 39,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 166,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "83edb1bdc10b18fe319a56de10c959fa3ab0e40a11700174e5da96d85cb8c0cb.png": 17
+ },
+ "figure_sizes": {
+  "83edb1bdc10b18fe319a56de10c959fa3ab0e40a11700174e5da96d85cb8c0cb.png": [
+   794,
+   505
+  ]
+ },
+ "figure_text": {
+  "83edb1bdc10b18fe319a56de10c959fa3ab0e40a11700174e5da96d85cb8c0cb.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Pakistan: Christians and Christian converts",
+ "cover_version": "3.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "d1892e53baf271427e2f64066add1b46f4201538a8b43112c91ce6e5e17d42be",
+ "images": [
+  "83edb1bdc10b18fe319a56de10c959fa3ab0e40a11700174e5da96d85cb8c0cb.png"
+ ]
+}

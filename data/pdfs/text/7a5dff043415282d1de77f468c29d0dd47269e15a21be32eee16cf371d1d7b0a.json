@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 37,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 326,
+ "list_items": 40,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 58,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "20d5bcbc499d647183926fbb292fd1e86d653732e7038377bde470ae63b44341.png": 29
+ },
+ "figure_sizes": {
+  "20d5bcbc499d647183926fbb292fd1e86d653732e7038377bde470ae63b44341.png": [
+   262,
+   206
+  ]
+ },
+ "figure_text": {
+  "20d5bcbc499d647183926fbb292fd1e86d653732e7038377bde470ae63b44341.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Turkey: Military service",
+ "cover_version": "2.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "7a5dff043415282d1de77f468c29d0dd47269e15a21be32eee16cf371d1d7b0a",
+ "images": [
+  "20d5bcbc499d647183926fbb292fd1e86d653732e7038377bde470ae63b44341.png"
+ ]
+}

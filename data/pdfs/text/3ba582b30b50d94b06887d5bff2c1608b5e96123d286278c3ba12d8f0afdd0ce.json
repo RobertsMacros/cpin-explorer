@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 38,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 58,
+ "paragraphs": 210,
+ "list_items": 176,
+ "tables": 4,
+ "figures": 0,
+ "footnotes": 311,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 114"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Ghana: Medical and healthcare issues",
+ "cover_version": "1.0",
+ "cover_date": "June 2019",
+ "pdf_sha256": "3ba582b30b50d94b06887d5bff2c1608b5e96123d286278c3ba12d8f0afdd0ce",
+ "images": []
+}

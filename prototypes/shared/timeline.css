@@ -41,7 +41,7 @@
 .rs-bar.is-base { background: color-mix(in oklab, var(--blue) 55%, var(--surface)); }
 .rs-bar.in-range { background: color-mix(in oklab, var(--blue) 45%, var(--surface)); }
 .rs[data-mode="compare"] .rs-bar.in-range, .rs-bar.is-cur { background: var(--blue); }
-.rs-bar:hover { outline-color: var(--blue); }
+.rs-bar.is-hot { outline-color: var(--blue); }
 /* GOV.UK updates whose edition is not held: a hollow tick on the baseline. */
 .rs-ev {
   position: absolute; bottom: 0; width: .55rem; height: 1.15rem; margin-left: -.275rem; padding: 0; border: 0; border-radius: 0;
@@ -49,30 +49,45 @@
   transition: outline-color var(--t-fast) var(--ease);
 }
 .rs-ev::before { content: ""; position: absolute; left: 50%; bottom: 0; width: 1px; height: 100%; margin-left: -.5px; background: repeating-linear-gradient(to top, var(--ink-3) 0 2px, transparent 2px 4px); transition: background var(--t) var(--ease); }
-.rs-ev.in-range::before, .rs-ev.is-cur::before { background: repeating-linear-gradient(to top, var(--blue) 0 2px, transparent 2px 4px); }
-.rs-ev:hover { outline-color: var(--blue); }
+.rs-ev.in-range::before, .rs-ev.is-cur::before, .rs-ev.is-hot::before { background: repeating-linear-gradient(to top, var(--blue) 0 2px, transparent 2px 4px); }
 .rs[data-mode="compare"] .rs-ev { opacity: .45; }
-.rs-bar::after, .rs-ev::after { /* tooltip: a blue tag that pops in; line 2 is the stop's change sentence */
-  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + .55rem); z-index: 3;
-  transform: translate(-50%, .3rem) scale(.97); filter: blur(3px); opacity: 0;
-  white-space: pre-line; width: max-content; max-width: 23rem; text-align: left; pointer-events: none;
+/* The tooltip of the stop the pointer is on (timeline.js: showTip): a blue tag above its mark, its
+   facts on top and, under a hairline, what the edition or update says. */
+.rs-tip {
+  position: absolute; z-index: 3; transform: translate(-50%, .3rem) scale(.97); filter: blur(3px); opacity: 0;
+  width: max-content; max-width: min(23rem, 86vw); text-align: left; pointer-events: none;
   font-family: var(--font-mono); font-size: .66rem; letter-spacing: 0; line-height: 1.4;
   padding: .42em .6em .38em; background: var(--blue); color: var(--blue-ink);
   transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
 }
-.rs-bar[data-tip=""]::after, .rs-ev[data-tip=""]::after { display: none; }
-.rs-bar:hover::after, .rs-bar.tip::after, .rs-ev:hover::after, .rs-ev.tip::after { opacity: 1; transform: translate(-50%, 0); filter: none; }
-.rs-bar.edge-l::after, .rs-ev.edge-l::after { left: -.3rem; transform: translate(0, .3rem) scale(.97); }
-.rs-bar.edge-r::after, .rs-ev.edge-r::after { left: auto; right: -.3rem; transform: translate(0, .3rem) scale(.97); }
-.rs-bar.edge-l:hover::after, .rs-bar.edge-l.tip::after, .rs-ev.edge-l:hover::after, .rs-ev.edge-l.tip::after,
-.rs-bar.edge-r:hover::after, .rs-bar.edge-r.tip::after, .rs-ev.edge-r:hover::after, .rs-ev.edge-r.tip::after { transform: none; }
+.rs-tip.is-on { opacity: 1; transform: translate(-50%, 0); filter: none; }
+.rs-tip.edge-l { transform: translate(-.3rem, .3rem) scale(.97); }
+.rs-tip.edge-r { transform: translate(calc(-100% + .3rem), .3rem) scale(.97); }
+.rs-tip.edge-l.is-on { transform: translate(-.3rem, 0); }
+.rs-tip.edge-r.is-on { transform: translate(calc(-100% + .3rem), 0); }
+.rs-tip span { display: block; white-space: pre-line; }
+.rs-tip-says { margin-top: .5em; padding-top: .45em; border-top: 1px solid color-mix(in oklab, var(--blue-ink) 55%, transparent); }
 .rs-base { position: absolute; left: 0; right: 0; top: calc(4.6rem - 1px); height: 2px; background: var(--line); }
 .rs-node {
   position: absolute; top: 4.6rem; width: .5rem; height: .5rem; margin: -.25rem 0 0 -.25rem;
   background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--ink-3);
-  transition: background-color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+  transition: background-color var(--t) var(--ease), box-shadow var(--t) var(--ease), transform var(--t) var(--ease);
 }
 .rs-node.is-ev { width: .36rem; height: .36rem; margin: -.18rem 0 0 -.18rem; transform: rotate(45deg); }
+/* The stop the pointer is on: its mark fills, grows, and sparkles: four specks leave its points and
+   fade, again and again while the pointer stays, so a mark a few pixels across is plainly the thing a
+   click will go to. (The specks are one small square's shadows, set on the diagonals of the mark's
+   own frame, which for the tilted diamond is up, down, left and right.) */
+.rs-node.is-hot { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue), 0 0 0 2.5px color-mix(in oklab, var(--blue) 16%, transparent); transform: scale(1.45); }
+.rs-node.is-ev.is-hot { transform: rotate(45deg) scale(1.9); }
+.rs-node::after { content: ""; position: absolute; left: 50%; top: 50%; width: 2px; height: 2px; margin: -1px 0 0 -1px; color: var(--blue); opacity: 0; pointer-events: none; }
+.rs-node:not(.is-ev)::after { transform: rotate(45deg); }
+.rs-node.is-hot::after { animation: rs-sparkle 1.25s var(--ease) infinite; }
+@keyframes rs-sparkle {
+  0% { opacity: 0; box-shadow: -3px -3px 0 0 currentColor, 3px -3px 0 0 currentColor, 3px 3px 0 0 currentColor, -3px 3px 0 0 currentColor; }
+  12%, 40% { opacity: 1; }
+  78%, 100% { opacity: 0; box-shadow: -5.5px -5.5px 0 -.5px currentColor, 5.5px -5.5px 0 -.5px currentColor, 5.5px 5.5px 0 -.5px currentColor, -5.5px 5.5px 0 -.5px currentColor; }
+}
 .rs-node.is-base { box-shadow: inset 0 0 0 1.5px var(--blue); }
 .rs-node.in-range, .rs-node.is-cur { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue); }
 .rs-label {
@@ -82,7 +97,8 @@
 }
 .rs-label b { display: block; font-family: var(--font-pixel); font-weight: 400; font-size: .76rem; letter-spacing: .05em; color: var(--ink-2); margin-bottom: .1rem; }
 .rs-label.is-ev { font-size: .58rem; }
-.rs-label.in-range b, .rs-label.is-base b, .rs-label.is-cur b { color: var(--blue); }
+.rs-label.in-range b, .rs-label.is-base b, .rs-label.is-cur b, .rs-label.is-hot b { color: var(--blue); }
+.rs-label.is-hot { color: var(--blue); }
 .rs-label.is-cur { color: var(--ink-2); }
 .rs-label.crowded { opacity: 0; pointer-events: none; }
 
@@ -119,5 +135,6 @@
   .rs-today span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .slot, .slot .col, .rs-bar, .rs-handle, .rs-handle .knob { transition: none; }
+  .slot, .slot .col, .rs-bar, .rs-handle, .rs-handle .knob, .rs-node, .rs-tip { transition: none; }
+  .rs-node.is-hot::after { animation: none; }
 }

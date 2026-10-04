@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 62,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 66,
+ "paragraphs": 521,
+ "list_items": 115,
+ "tables": 8,
+ "figures": 1,
+ "footnotes": 123,
+ "bookmarks": 60,
+ "warnings": [
+  "footnotes with no mark found in the text: 34, 35, 39"
+ ],
+ "figure_pages": {
+  "65a08de889be18deda539f3dc0b283198364fdec02a6877d9544051a656b1594.png": 10
+ },
+ "figure_sizes": {
+  "65a08de889be18deda539f3dc0b283198364fdec02a6877d9544051a656b1594.png": [
+   553,
+   392
+  ]
+ },
+ "figure_text": {
+  "65a08de889be18deda539f3dc0b283198364fdec02a6877d9544051a656b1594.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Information Note Brazil: Background information, including internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "November 2020",
+ "pdf_sha256": "62a15ff213f242895d4bc9476341b0e722eb09e34aae12480326a5a8cde2cefe",
+ "images": [
+  "65a08de889be18deda539f3dc0b283198364fdec02a6877d9544051a656b1594.png"
+ ]
+}

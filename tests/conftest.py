@@ -71,7 +71,7 @@ BODY = ('<div class="govspeak"><h2 id="assessment">Assessment</h2>\n'
 
 
 def govuk(site, *, body=BODY, pub_updated="2026-07-27T15:09:18+01:00", collection_etag='W/"c1"',
-          with_note=True, pdf=b"%PDF-1.4 fake"):
+          with_note=True, with_pdf=True, pdf=b"%PDF-1.4 fake"):
     """Populate the fake site with one country (Kenya) holding one HTML note and its PDF."""
     site.json(COLLECTION_URL, {"links": {"documents": [{
         "title": "Kenya: country policy and information notes", "base_path": PUB_PATH,
@@ -80,9 +80,11 @@ def govuk(site, *, body=BODY, pub_updated="2026-07-27T15:09:18+01:00", collectio
     if with_note:
         attachments.append({"attachment_type": "html", "url": NOTE_PATH,
                             "title": "Country policy and information note: actors of protection, Kenya, July 2026 (accessible)"})
-    attachments.append({"attachment_type": "file", "url": PDF_URL, "content_type": "application/pdf",
-                        "title": "Country policy and information note: actors of protection, Kenya, July 2026"})
+    if with_pdf:
+        attachments.append({"attachment_type": "file", "url": PDF_URL, "content_type": "application/pdf",
+                            "title": "Country policy and information note: actors of protection, Kenya, July 2026"})
     site.json(config.CONTENT_API + PUB_PATH, {"title": "Kenya: country policy and information notes",
+                                              "schema_name": "publication", "base_path": PUB_PATH,
                                               "public_updated_at": pub_updated,
                                               "details": {"attachments": attachments, "change_history": []}})
     site.json(config.CONTENT_API + NOTE_PATH, {

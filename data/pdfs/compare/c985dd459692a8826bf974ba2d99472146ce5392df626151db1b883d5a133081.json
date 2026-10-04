@@ -1,0 +1,694 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-policy-and-information-note-minority-religious-groups-sri-lanka-february-2025-accessible",
+ "pdf_sha256": "c985dd459692a8826bf974ba2d99472146ce5392df626151db1b883d5a133081",
+ "body_sha256": "9f9bed679d4a6e9cdd4330d2b60b68e51ae6677715c546865e70fdc7848c13a0",
+ "words": {
+  "web": 25073,
+  "pdf": 24889
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 16,
+   "pdf_words": 21,
+   "share": 0.000741,
+   "passages": 5,
+   "sizes": {
+    "passage": 5,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 5
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 16,
+    "pdf_words": 21
+   },
+   "numbering": {
+    "differences": 12,
+    "web_words": 13,
+    "pdf_words": 13
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 116,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 4,
+    "web_words": 16,
+    "pdf_words": 12
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 12,
+    "web_words": 13,
+    "pdf_words": 13
+   },
+   "picture in words": {
+    "differences": 3,
+    "web_words": 93,
+    "pdf_words": 0
+   },
+   "section updated": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 23,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 15,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "February 2025",
+   "pdf": "3.0",
+   "pdf_date": "February 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "24 February 2025"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 149,
+   "pdf": 149,
+   "pdf_raw": 149,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 6
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 83,
+   "pdf": 66
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 3,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "DFAT, Country Information Report Sri Lanka (paragraph 3.30), 2 May 2024",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "Freedom in the World 2024, 29 February 2024",
+   "after": "HRC, Concluding observations on the sixth periodic report",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.3",
+    "section": "Version control and feedback",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024\nFreedom House, Freedom in the World 2024, 29 February",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "BTI, BTI 2024 Sri Lanka Country Report, March",
+   "after": "2024\nFreedom House, Freedom in the World 2024,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.3",
+    "section": "Version control and feedback",
+    "page": 25
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 24 February 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "demonstrate they face persecution or serious harm.\nAssessment",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "gov.au/sites/default/files/",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "rights of the other religions\nhttps://www.dfat.",
+   "after": "country-information-report-sri-lanka.pdf) (paragraph 3.",
+   "before_pdf": "respecting the rights of the other religions\nDFAT,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.3",
+    "section": "Version control and feedback",
+    "page": 14
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 14
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "pdf) (",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "sites/default/files/country-information-report-sri-lanka.",
+   "after": "paragraph 3.24), 2 May 2024\nUSSD, 2023",
+   "before_pdf": "other religions\nDFAT, Country Information Report Sri Lanka (",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.3",
+    "section": "Version control and feedback",
+    "page": 14
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Percentage of incidences of violence against Christians where non-state actors were the perpetrators:\nTime period\nBuddhist clergy\nIdentifiable individuals\nSeptember 2019 to September 2020\n22%\n24%\nOctober 2020 to October 2021\n24%\n32%\nNovember 2021 to October 2022\n28%\n44%\nNovember 2022 to October 2023\n17%\n22%",
+   "pdf": "",
+   "web_words": 35,
+   "pdf_words": 0,
+   "before": "total more than 100 for each time period.",
+   "after": "12.3.8 CSW noted in their General",
+   "where": {
+    "heading": "christians",
+    "paragraph": "12.3.7",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Percentage of incidences of violence against Christians where state officials were the perpetrators:\nTime period\nPercentage\nSeptember 2019 to September 2020\n65%\nOctober 2020 to October 2021\n68%\nNovember 2021 to October 2022\n56%\nNovember 2022 to October 2023\n49%",
+   "pdf": "",
+   "web_words": 31,
+   "pdf_words": 0,
+   "before": "total more than 100 for each time period.",
+   "after": "10.3 Muslims\n10.3.1 In March",
+   "where": {
+    "heading": "christians",
+    "paragraph": "10.2.11",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Percentage breakdown of the harm inflicted in incidents\nTime period\nPhysical violence and property damage\nThreats, intimidation or coercion\nDiscriminatory actions\nSeptember 2019 to September 2020\n29%\n79%\n70%\nOctober 2020 to October 2021\n13%\n64%\n65%\nNovember 2021 to October 2022\n13%\n29%\n72%\nNovember 2022 to October 2023\n21%\n54%\n52%",
+   "pdf": "",
+   "web_words": 27,
+   "pdf_words": 0,
+   "before": "total more than 100 for each time period.",
+   "after": "10.2.11 CPIT have used the data",
+   "where": {
+    "heading": "christians",
+    "paragraph": "10.2.10",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Time period\nNumber of reported incidents against Christians\nSeptember 2019 to September 2020\n63\nOctober 2020 to October 2021\n72\nNovember 2021 to October 2022\n75\nNovember 2022 to October 2023\n63",
+   "pdf": "",
+   "web_words": 23,
+   "pdf_words": 0,
+   "before": "state actors) from September 2019 to October 2023.",
+   "after": "10.2.7 Verité Research produced the map",
+   "where": {
+    "heading": "christians",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "14.2.",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "response to traffic-related incidents can be inefficient.’",
+   "after": "2 The DFAT report 2024 noted:\nSri Lanka",
+   "where": {
+    "heading": "police-effectiveness",
+    "paragraph": "12.4.2",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4",
+   "pdf": "10.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "advanced-level exam wearing a hijab or headscarf.’",
+   "after": "Hindus\n10.4.1 The DFAT report 2024",
+   "where": {
+    "heading": "hindus-1",
+    "paragraph": "10.3.10",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "wearing a hijab or headscarf.’\n10.4 Hindus",
+   "after": "1 The DFAT report 2024 noted:\nIn-country",
+   "before_pdf": "wearing a hijab or headscarf.’\n10.1 Hindus",
+   "where": {
+    "heading": "hindus-1",
+    "paragraph": "10.4.1",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or discrimination on the basis of their religion.’",
+   "after": "2 Human Rights Watch noted in an article",
+   "where": {
+    "heading": "hindus-1",
+    "paragraph": "10.4.2",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "allegations were dismissed at their third court appearance.’",
+   "after": "3 See also Land disputes and the country",
+   "where": {
+    "heading": "hindus-1",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5",
+   "pdf": "10.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "whom a majority are of the Hindu faith).",
+   "after": "State reaction to the Easter 2019 bombings\n10.",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "5 State reaction to the Easter 2019 bombings",
+   "after": "1 On 21 April 2019 (Easter Sunday), suicide",
+   "before_pdf": "1 State reaction to the Easter 2019 bombings",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.1",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "across Sri Lanka, in an attack targeting Christians.",
+   "after": "2 For more information see the archived CPIN",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.2",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Religious Minorities, August 2021 available on Ecoi.net.",
+   "after": "3 The New Indian Express, an online and",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "million [£271,289]as compensation to the victims.’",
+   "after": "4 The DFAT report 2024 noted:\nAround 2,",
+   "before_pdf": "million [£271,289] as compensation to the victims.’",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.4",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "were granted, may be subjected to strip searches.’",
+   "after": "5 The USSD 2023 IRF report noted:\nAccording",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.5",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the trials (see sources consulted in the Bibliography).",
+   "after": "6 The Daily FT noted in November 2024",
+   "where": {
+    "heading": "easter-bombings",
+    "paragraph": "10.5.6",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "while respecting the rights of the other religions",
+   "after": "dfat.gov.au/sites/default/files/country-information-",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.1.3",
+    "section": "Version control and feedback",
+    "page": 22
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Page 9 of 65",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "drafting of new legislation allowing families to choose",
+   "after": "between burial and cremation based on personal or",
+   "where": {
+    "heading": "risk-to-muslims-from-state-actors",
+    "paragraph": "3.3.3",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Page 10 of 65",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "60% (282) of the posts were aimed at",
+   "after": "Christians, 29% (136 posts) were aimed at Muslims",
+   "where": {
+    "heading": "risk-from-non-state-actors-overview",
+    "paragraph": "3.5.3",
+    "section": "Assessment",
+    "page": 9
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Page 11 of 65",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "country Christian sources informed DFAT in 2023 they",
+   "after": "did not consider Muslims a threat to their",
+   "where": {
+    "heading": "risk-to-christians-from-non-state-actors",
+    "paragraph": "3.6.4",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "land-disputes)).",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "religious minorities- Treatment of Hindus and [Land disputes(#",
+   "after": "3.5 Risk from non-state actors: overview",
+   "before_pdf": "religious minorities- Treatment of Hindus and Land disputes).",
+   "where": {
+    "heading": "risk-to-hindus-from-state-actors",
+    "paragraph": "3.4.3",
+    "section": "Assessment",
+    "page": 9
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "ruling.",
+   "pdf": "ruling13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to protecting it under a 2003 Supreme Court",
+   "after": "8.1.2 The USSD 2023 IRF report",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 17
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 221,
+  "different": {
+   "10.4": "10.1",
+   "10.4.1": "10.1.1",
+   "10.4.2": "10.1.2",
+   "10.4.3": "10.1.3",
+   "10.5": "10.1",
+   "10.5.1": "10.1.1",
+   "10.5.2": "10.1.2",
+   "10.5.3": "10.1.3",
+   "10.5.4": "10.1.4",
+   "10.5.5": "10.1.5",
+   "10.5.6": "10.1.6"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "12.4.2"
+  ],
+  "unconfirmed": []
+ }
+}

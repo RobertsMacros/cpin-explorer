@@ -11,12 +11,13 @@
 <link rel="stylesheet" href="../shared/theme.css">
 <link rel="stylesheet" href="dashboard.css">
 <script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<script type="module" src="../shared/brand-mark.js" blocking="render"></script>
 <script type="module" src="app.js"></script>
 <link rel="stylesheet" href="../shared/brand.css">
 </head>
 <body class="dash">
 <header class="top">
-  <a class="brand" href="./" aria-label="CPIN Explorer home">
+  <a class="brand" href="./" aria-label="CPIN Explorer home" data-mark="start">
     <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
     <span class="brand-name"><b>CPIN</b>EXPLORER</span>
   </a>
@@ -26,6 +27,7 @@
     <kbd class="search-kbd">⌘K</kbd>
   </label>
   <a class="btn saved-link" href="../saved/index.html" title="Highlights you have saved">SAVED <span id="savedCount" class="numeral"></span></a>
+  <a class="btn guide-link" href="../guide/index.html#guide" title="Guide and glossary" aria-label="Guide and glossary"><span class="guide-word">GUIDE</span><span class="guide-q" aria-hidden="true">?</span></a>
   <div class="sync"><button class="sync-status" id="sync" type="button" aria-controls="checkPop"><span class="live-dot" aria-hidden="true"></span><span class="sync-words"></span></button>
     <button class="btn check-btn" id="checkBtn" type="button">CHECK FOR CHANGES</button></div>
   <div class="check-pop" id="checkPop" hidden aria-live="polite"></div>
@@ -35,13 +37,14 @@
 <main class="layout">
   <section class="stage" aria-label="Globe of countries with notes">
     <div class="globe-wrap" id="globeWrap">
+      <canvas class="globe-ghost" aria-hidden="true"></canvas>
       <canvas id="globe" aria-hidden="true"></canvas>
       <canvas id="globeGlow" class="globe-glow" aria-hidden="true"></canvas>
       <div class="pins" id="pins"></div>
       <div class="zoom" id="zoomCtl" role="group" aria-label="Zoom">
-        <button class="btn zoom-btn" type="button" data-zoom="in" aria-label="Zoom in">+</button>
-        <button class="btn zoom-btn" type="button" data-zoom="out" aria-label="Zoom out">−</button>
-        <button class="btn zoom-btn" type="button" data-zoom="reset" aria-label="Reset zoom">⟲</button>
+        <button class="btn zoom-btn" type="button" data-zoom="in" aria-label="Zoom in"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 4v8M4 8h8" fill="none" stroke="currentColor" stroke-width="1.12"/></svg></button>
+        <button class="btn zoom-btn" type="button" data-zoom="out" aria-label="Zoom out"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.4 8h7.2" fill="none" stroke="currentColor" stroke-width="1.12"/></svg></button>
+        <button class="btn zoom-btn" type="button" data-zoom="reset" aria-label="Reset zoom"><svg viewBox="-10.5 -9.5 43 43" aria-hidden="true"><path d="M1 4v6h6M3.51 15a9 9 0 1 0 2.13-9.36L1 10" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
       </div>
     </div>
     <p class="legend">
@@ -57,7 +60,7 @@
 <footer class="foot site-foot">
   <!--brand-rm--><span class="foot-rm"><img class="rm-ink" src="../../assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="261" height="128"><img class="rm-light" src="../../assets/roberts-macros/derived/rm-mark-light.png" alt="" width="261" height="128"></span><!--/brand-rm-->
   <span>Sources: <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">Home Office, GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0</a>. An independent mirror, not affiliated with or endorsed by the Home Office; always check the current edition on GOV.UK.</span>
-  <!--brand-foot--><span class="foot-end"><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
+  <!--brand-foot--><span class="foot-end"><a class="foot-link" href="../guide/index.html#guide">Guide</a><a class="foot-link" href="../guide/index.html#glossary">Glossary</a><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
 </footer>
 <noscript><p class="noscript">This page needs JavaScript for the globe. The notes themselves are on <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes">GOV.UK</a>.</p></noscript>
 <script type="module" src="../shared/report-bug.js"></script>

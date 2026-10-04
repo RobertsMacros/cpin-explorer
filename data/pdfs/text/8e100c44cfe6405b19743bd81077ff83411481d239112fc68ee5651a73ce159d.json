@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 93,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 81,
+ "paragraphs": 782,
+ "list_items": 75,
+ "tables": 2,
+ "figures": 1,
+ "footnotes": 283,
+ "bookmarks": 75,
+ "warnings": [
+  "footnotes with no mark found in the text: 171, 197, 224"
+ ],
+ "figure_pages": {
+  "50c59ee14917b23924b80003499e834de8f34533507e42bb3936fb6db330556f.jpg": 54
+ },
+ "figure_sizes": {
+  "50c59ee14917b23924b80003499e834de8f34533507e42bb3936fb6db330556f.jpg": [
+   919,
+   735
+  ]
+ },
+ "figure_text": {
+  "50c59ee14917b23924b80003499e834de8f34533507e42bb3936fb6db330556f.jpg": 3
+ },
+ "first_bookmark_page": 7,
+ "cover_title": "Country Policy and Information Note El Salvador: Gangs",
+ "cover_version": "4.0",
+ "cover_date": "December 2022",
+ "pdf_sha256": "8e100c44cfe6405b19743bd81077ff83411481d239112fc68ee5651a73ce159d",
+ "images": [
+  "50c59ee14917b23924b80003499e834de8f34533507e42bb3936fb6db330556f.jpg"
+ ]
+}

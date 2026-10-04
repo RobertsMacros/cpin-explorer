@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 39,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 44,
+ "paragraphs": 256,
+ "list_items": 147,
+ "tables": 4,
+ "figures": 0,
+ "footnotes": 127,
+ "bookmarks": 44,
+ "warnings": [
+  "footnotes with no mark found in the text: 80"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Zimbabwe: Medical treatment and healthcare",
+ "cover_version": "2.0",
+ "cover_date": "April 2021",
+ "pdf_sha256": "3c81f8bb5869b40dc1289f599c490db31af65a124cadc4a068534fb57af9724e",
+ "images": []
+}

@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 66,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 74,
+ "paragraphs": 452,
+ "list_items": 89,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 157,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "08cede8c8814e65c7301633ea31d2d17bc5a96fb6b95e4fea0cd1601502eafa9.jpg": 16,
+  "6d998d0fce914c47be76e7a44eb230cd430ff60832d83e46c2c73ef2d1ee9bfd.jpg": 20
+ },
+ "figure_sizes": {
+  "08cede8c8814e65c7301633ea31d2d17bc5a96fb6b95e4fea0cd1601502eafa9.jpg": [
+   866,
+   1216
+  ],
+  "6d998d0fce914c47be76e7a44eb230cd430ff60832d83e46c2c73ef2d1ee9bfd.jpg": [
+   919,
+   1294
+  ]
+ },
+ "figure_text": {
+  "08cede8c8814e65c7301633ea31d2d17bc5a96fb6b95e4fea0cd1601502eafa9.jpg": 0,
+  "6d998d0fce914c47be76e7a44eb230cd430ff60832d83e46c2c73ef2d1ee9bfd.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Occupied Palestinian Territories: Background information, including actors of protection, and internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "December 2018",
+ "pdf_sha256": "2a397fd3078814d99472f102ee17b1517d0dec2d928305f0de94d28bdd9a9b3a",
+ "images": [
+  "08cede8c8814e65c7301633ea31d2d17bc5a96fb6b95e4fea0cd1601502eafa9.jpg",
+  "6d998d0fce914c47be76e7a44eb230cd430ff60832d83e46c2c73ef2d1ee9bfd.jpg"
+ ]
+}

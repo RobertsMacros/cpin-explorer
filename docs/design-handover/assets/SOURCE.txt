@@ -1,0 +1,16 @@
+Artwork copied into this handover so that specimen.html works on its own. These are copies, not originals.
+
+rm-mark-ink.png, rm-mark-light.png
+  The Roberts Macros mark alone (no slogan), for the light and the dark theme. 261 x 128 px, transparent.
+  Copied on 3 October 2026 from cpin-explorer/assets/roberts-macros/derived/.
+  Source:   https://github.com/RobertsMacros/Roberts-Macros-assets
+  Revision: 95e38faf099249376af855cf509967aa2e93ac0c
+  Derived from originals/image.png at that revision: cropped to the mark, original colours and
+  transparency (ink); the same shape in light ink (light).
+  For another tool, take the artwork from the assets repository again and record the revision you used.
+  Do not copy it from this folder.
+
+cpin-explorer-mark.svg
+  CPIN Explorer's product mark, the dotted globe: a <symbol id="mark"> drawn in currentColor.
+  Copied on 3 October 2026 from cpin-explorer/assets/cpin-explorer/mark.svg (written by web/build-mark.mjs).
+  It is CPIN Explorer's own mark. Another tool makes its own, in the same style: see README.md, "Branding".

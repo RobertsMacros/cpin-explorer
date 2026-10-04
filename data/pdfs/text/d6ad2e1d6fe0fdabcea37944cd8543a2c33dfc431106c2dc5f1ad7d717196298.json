@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 51,
+ "paragraphs": 228,
+ "list_items": 42,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 94,
+ "bookmarks": 5,
+ "warnings": [
+  "footnotes with no mark found in the text: 91"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note India: Prison conditions",
+ "cover_version": "3.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "d6ad2e1d6fe0fdabcea37944cd8543a2c33dfc431106c2dc5f1ad7d717196298",
+ "images": []
+}

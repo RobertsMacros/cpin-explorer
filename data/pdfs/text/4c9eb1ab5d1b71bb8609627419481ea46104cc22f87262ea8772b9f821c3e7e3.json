@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 38,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 67,
+ "paragraphs": 273,
+ "list_items": 40,
+ "tables": 4,
+ "figures": 2,
+ "footnotes": 128,
+ "bookmarks": 66,
+ "warnings": [
+  "footnotes with no mark found in the text: 6, 23, 24, 25, 27, 28"
+ ],
+ "figure_pages": {
+  "f622d934e0dd09e03682435b0a2703b47b9be9eca48bbdafe4fe8dcf02f016f2.png": 8,
+  "a63508f6c0732a915e7aa77e95db7495a4d37861617a568e4ae1b231fe189216.jpg": 9
+ },
+ "figure_sizes": {
+  "f622d934e0dd09e03682435b0a2703b47b9be9eca48bbdafe4fe8dcf02f016f2.png": [
+   211,
+   196
+  ],
+  "a63508f6c0732a915e7aa77e95db7495a4d37861617a568e4ae1b231fe189216.jpg": [
+   513,
+   548
+  ]
+ },
+ "figure_text": {
+  "f622d934e0dd09e03682435b0a2703b47b9be9eca48bbdafe4fe8dcf02f016f2.png": 1,
+  "a63508f6c0732a915e7aa77e95db7495a4d37861617a568e4ae1b231fe189216.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Pakistan: Background information, including internal relocation",
+ "cover_version": "3.0",
+ "cover_date": "June 2020",
+ "pdf_sha256": "4c9eb1ab5d1b71bb8609627419481ea46104cc22f87262ea8772b9f821c3e7e3",
+ "images": [
+  "a63508f6c0732a915e7aa77e95db7495a4d37861617a568e4ae1b231fe189216.jpg",
+  "f622d934e0dd09e03682435b0a2703b47b9be9eca48bbdafe4fe8dcf02f016f2.png"
+ ]
+}

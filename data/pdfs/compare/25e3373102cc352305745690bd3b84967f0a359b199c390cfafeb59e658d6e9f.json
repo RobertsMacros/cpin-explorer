@@ -1,0 +1,256 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-tigrayans-and-the-tigrayan-peoples-liberation-front-ethiopia-december-2024-accessible",
+ "pdf_sha256": "25e3373102cc352305745690bd3b84967f0a359b199c390cfafeb59e658d6e9f",
+ "body_sha256": "82cc7e2d35e8c2415ddb5e7fb786b44359ecd7af9e5bc57696346a4b880cac72",
+ "words": {
+  "web": 39062,
+  "pdf": 39176
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 105,
+   "share": 0.001342,
+   "passages": 2,
+   "sizes": {
+    "passage": 2
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 9
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 105
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 14
+   }
+  },
+  "kinds": {
+   "text": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 105
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 14
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 6,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "December 2024",
+   "pdf": "1.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 348,
+   "pdf": 348,
+   "pdf_raw": 348,
+   "differ": false
+  },
+  "pictures": {
+   "web": 8,
+   "pdf": 8
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 92,
+   "pdf": 92
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Region Q1 2022 Q2 2022 Q3 2022 Q4 2022 Q1 2023 Q2 2023 Q3 2023 Q4 2023 Q1 2024 TOTAL\nEU 15 25 25 25 30 35 30 30 40 255\nGermany 0 0 0 0 0 0 5 5 0 10\nAustria 0 0 5 0 0 0 5 5 5 20\nPoland 0 0 5 0 0 0 0 : 0 5\nRomania 0 0 0 0 0 0 0 5 0 5\nSweden 10 20 10 20 25 30 20 10 30 175\nNorway 0 5 0 10 0 0 5 0 0 20",
+   "web_words": 0,
+   "pdf_words": 96,
+   "before": "27 countries between October 2022 and March 2024:",
+   "after": "19.2 Treatment on return\n19.2.1",
+   "where": {
+    "heading": "treatment-on-return",
+    "paragraph": "19.1.6",
+    "section": "Country information",
+    "page": 83
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "person is reasonably able to relocate within Ethiopia\na",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "from the state (or quasi state bodies)\na",
+   "after": "claim is likely to justify granting asylum, humanitarian",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 6
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Country Policy and Information Note\nEthiopia: Tigrayans and the Tigrayan People’s Liberation Front",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "",
+   "after": "Version 1.0, December 2024\nExecutive summary\nTigrayans",
+   "where": {
+    "heading": null,
+    "paragraph": null,
+    "section": null,
+    "page": 1
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "artefact",
+   "web": "Back to contents",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "formed alliances with Agew and Oromo armed groups.",
+   "after": "10.3 State of emergency: arrest and detention",
+   "where": {
+    "heading": "Armed_groups",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "artefact",
+   "web": "Back to contents",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "reported the end of the state of emergency.",
+   "after": "10.4 Treatment of TPLF\n10.4.1",
+   "where": {
+    "heading": "state-of-emergency-arrest-and-detention",
+    "paragraph": "10.3.2",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "221",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "33 (16.67%) of them are completely damaged.’",
+   "after": "15.8 Other services\n15.8.1 On",
+   "where": {
+    "heading": "Other_services",
+    "paragraph": "15.7.6",
+    "section": "Country information",
+    "page": 63
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 379,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

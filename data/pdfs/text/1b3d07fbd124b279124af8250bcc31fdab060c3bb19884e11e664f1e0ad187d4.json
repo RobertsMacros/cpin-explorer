@@ -1,0 +1,50 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 126,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 77,
+ "paragraphs": 870,
+ "list_items": 63,
+ "tables": 14,
+ "figures": 6,
+ "footnotes": 344,
+ "bookmarks": 77,
+ "warnings": [
+  "footnotes with no mark found in the text: 334, 337, 338"
+ ],
+ "figure_pages": {
+  "58af2e87331a5d43c86183dea1830c7a362ee96574171a5b3ca6df1f017d89e3.png": 108,
+  "69d4c46683d4dafc1c62819f6a6b50856bf0f3a25e80db1363bb35eb6ccc63d2.jpg": 97,
+  "7780c74c4ab2e8d56c93f71b39fd7d9e2012a6eb7a500b9ec5c0a81e23b28bea.png": 112
+ },
+ "figure_sizes": {
+  "58af2e87331a5d43c86183dea1830c7a362ee96574171a5b3ca6df1f017d89e3.png": [
+   276,
+   226
+  ],
+  "69d4c46683d4dafc1c62819f6a6b50856bf0f3a25e80db1363bb35eb6ccc63d2.jpg": [
+   918,
+   1292
+  ],
+  "7780c74c4ab2e8d56c93f71b39fd7d9e2012a6eb7a500b9ec5c0a81e23b28bea.png": [
+   276,
+   225
+  ]
+ },
+ "figure_text": {
+  "58af2e87331a5d43c86183dea1830c7a362ee96574171a5b3ca6df1f017d89e3.png": 0,
+  "69d4c46683d4dafc1c62819f6a6b50856bf0f3a25e80db1363bb35eb6ccc63d2.jpg": 0,
+  "7780c74c4ab2e8d56c93f71b39fd7d9e2012a6eb7a500b9ec5c0a81e23b28bea.png": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Albania: Human trafficking",
+ "cover_version": "15.0",
+ "cover_date": "March 2024",
+ "pdf_sha256": "1b3d07fbd124b279124af8250bcc31fdab060c3bb19884e11e664f1e0ad187d4",
+ "images": [
+  "58af2e87331a5d43c86183dea1830c7a362ee96574171a5b3ca6df1f017d89e3.png",
+  "69d4c46683d4dafc1c62819f6a6b50856bf0f3a25e80db1363bb35eb6ccc63d2.jpg",
+  "7780c74c4ab2e8d56c93f71b39fd7d9e2012a6eb7a500b9ec5c0a81e23b28bea.png"
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 41,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 68,
+ "paragraphs": 270,
+ "list_items": 15,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 82,
+ "bookmarks": 71,
+ "warnings": [
+  "page 8: bookmark not found in the text: 'Back to Contents'",
+  "page 8: bookmark not found in the text: 'Back to Contents'",
+  "page 23: bookmark not found in the text: 'Back to Contents'",
+  "page 32: bookmark not found in the text: 'Back to Contents'",
+  "page 33: bookmark not found in the text: 'Back to Contents'",
+  "page 39: bookmark not found in the text: 'Back to Contents'",
+  "footnotes with no mark found in the text: 35"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Ethiopia: Background information, including actors of protection and internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "October 2017",
+ "pdf_sha256": "63cfcf2a32667b446ab7bb38fac6392e6be9841d870d05ab129032e4ee51e32c",
+ "images": []
+}

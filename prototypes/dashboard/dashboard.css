@@ -23,15 +23,15 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
 .search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; font-size: .9rem; }
 .search input::placeholder { color: var(--ink-3); }
 .search input::-webkit-search-cancel-button { display: none; }
-.sync { display: flex; align-items: center; gap: .5rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); white-space: nowrap; }
+.sync { display: flex; align-items: center; gap: .5rem; font-family: var(--font-mono); font-size: .72rem; line-height: normal; color: var(--ink-2); white-space: nowrap; }
 /* How current the copy is (sync-status.js): a still dot and one line, which opens the check pop-up. */
-.sync-status { display: inline-flex; align-items: center; gap: .5rem; border: 0; padding: 0; background: none; color: inherit; font: inherit; white-space: nowrap; cursor: pointer; text-align: left; transition: color var(--t-fast) var(--ease); }
+.sync-status { display: inline-flex; align-items: baseline; gap: .5rem; border: 0; padding: 0; background: none; color: inherit; font: inherit; white-space: nowrap; cursor: pointer; text-align: left; transition: color var(--t-fast) var(--ease); }
 .sync-status:hover, .sync-status[data-state="newer"] { color: var(--blue); }
 .sync-words { display: inline-block; transition: opacity 170ms var(--ease); }
 .sync-words.is-changing { opacity: 0; }
 #sync .sync-words { min-width: 38ch; }        /* its longest wording: nothing in the header moves when it changes */
 .stage-sync { display: none; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); }
-.live-dot { width: .5rem; height: .5rem; background: var(--blue); }   /* static: "accurate as of" must not flash */
+.live-dot { width: .5rem; height: .5rem; background: var(--blue); position: relative; top: calc(.25rem - var(--half-cap)); }   /* static: "accurate as of" must not flash; level with the capitals (see --half-cap) */
 @keyframes live { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--blue) 45%, transparent); } 75%, 100% { box-shadow: 0 0 0 .55rem transparent; } }
 .theme-btn { min-height: 2.35rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; min-width: 4.6rem; }
 
@@ -43,11 +43,15 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
   padding: 1.5rem clamp(1rem, 2vw, 2.5rem); border-right: 1px solid var(--line); overflow: hidden;
 }
 .globe-wrap { position: relative; width: min(100%, calc(100vh - 10rem)); max-width: 62rem; aspect-ratio: 1; }
+/* The globe is for turning, not for reading: a long press on it (or on the labels, the buttons and the
+   lines under it) starts a drag at most, never a text selection or the phone's Copy | Look Up callout.
+   The panel's text stays selectable. */
+.stage { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 #globe {
   display: block; width: 100%; height: 100%; cursor: grab; touch-action: none;
-  opacity: 0; transform: scale(.94); transition: opacity 1.2s var(--ease), transform 1.4s var(--ease);
+  opacity: 0; transition: opacity var(--t) var(--ease);   /* over its stand-in (.globe-ghost): the same dots, so it settles in rather than arriving */
 }
-#globe.ready { opacity: 1; transform: none; }
+#globe.ready { opacity: 1; }
 #globe.dragging { cursor: grabbing; }
 #globe.over-country { cursor: pointer; }
 
@@ -56,7 +60,7 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
 .pin {
   position: absolute; left: 0; top: 0; width: 1.5rem; height: 1.5rem; margin: -.75rem 0 0 -.75rem; padding: 0;
   border: 0; border-radius: 50%; background: none; cursor: pointer; pointer-events: none;
-  opacity: var(--vis, 1); will-change: transform;
+  will-change: transform;                                  /* its place, and its fading as it nears the horizon, are set by app.js (placePins) */
 }
 .pin.is-behind { visibility: hidden; }
 .pin:focus-visible { outline: 2px solid var(--blue); outline-offset: 0; }
@@ -69,9 +73,16 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
   background: none; box-shadow: none; padding-left: 0; padding-right: 0; color: var(--ink-2);
   text-shadow: 0 0 2px var(--bg), 0 0 4px var(--bg), 0 0 8px var(--bg), 0 0 12px var(--bg);
   opacity: 0; filter: blur(5px); pointer-events: none;
+  /* A label that is not showing is not there to be painted or blurred (47 of them ride on the pins every
+     frame): it goes once it has faded out, and is back before it starts to fade in. */
+  visibility: hidden;
   transition: opacity var(--t) var(--ease), filter var(--t) var(--ease), transform var(--t-slow) var(--ease),
-              color var(--t-fast) var(--ease);
+              color var(--t-fast) var(--ease), background-color var(--t) var(--ease), box-shadow var(--t) var(--ease),
+              visibility 0s linear var(--t);
 }
+/* Zoomed in, the countries in view are filled with their flags: a halo is no longer enough, so the
+   lettering gets a plain ground (a shadow's spread rather than padding, so no label changes size). */
+.globe-wrap.flags-on .pin-label { background: var(--bg); box-shadow: 0 0 0 .3em var(--bg); text-shadow: none; }
 .pin[data-place="bottom"] .pin-label { --dx: -50%; --dy: var(--gap); }
 .pin[data-place="right"] .pin-label { --dx: var(--gap); --dy: -50%; }
 .pin[data-place="left"] .pin-label { --dx: calc(-100% - var(--gap)); --dy: -50%; }
@@ -82,7 +93,7 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
 .pin[data-place="bottom"] .pin-label::after { left: 50%; bottom: 100%; width: 1px; height: .7rem; }
 .pin[data-place="right"] .pin-label::after { right: 100%; top: 50%; height: 1px; width: .7rem; }
 .pin[data-place="left"] .pin-label::after { left: 100%; top: 50%; height: 1px; width: .7rem; }
-.pin.is-labelled .pin-label, .pin.is-hover .pin-label, .pin.is-selected .pin-label, .pin:focus-visible .pin-label { opacity: 1; filter: none; --s: 1; }
+.pin.is-labelled .pin-label, .pin.is-hover .pin-label, .pin.is-selected .pin-label, .pin:focus-visible .pin-label { opacity: 1; filter: none; --s: 1; visibility: inherit; transition-delay: 0s; }
 .pin.is-recent .pin-label { color: var(--blue); }
 .pin.is-hover .pin-label, .pin.is-selected .pin-label, .pin:focus-visible .pin-label { color: var(--blue); z-index: 2; --s: 1.12; }
 .pin.is-selected .pin-label::after, .pin.is-hover .pin-label::after { opacity: 1; }
@@ -93,12 +104,13 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
   opacity: 0; transform: scale(.4); transition: opacity var(--t-fast) var(--ease), transform var(--t) var(--ease);
 }
 .pin.is-hover::before, .pin.is-selected::before { opacity: 1; transform: scale(1); }
+.pin.is-candidate::before { opacity: 1; transform: scale(1); }       /* the dots a "Which country?" list is asking about */
 .pin.is-selected::before { animation: ping 1.8s var(--ease) infinite; }
 @keyframes ping { 0% { box-shadow: 0 0 0 0 color-mix(in oklab, var(--blue) 45%, transparent); } 80%, 100% { box-shadow: 0 0 0 .8rem transparent; } }
 
 .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.4rem; margin: 0; font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
-.legend span { display: inline-flex; align-items: center; gap: .45rem; }
-.key { width: .55rem; height: .55rem; border-radius: 50%; background: #6c7a99; display: inline-block; }
+.legend span { display: inline-flex; align-items: baseline; gap: .45rem; }
+.key { width: .55rem; height: .55rem; border-radius: 50%; background: #6c7a99; display: inline-block; position: relative; top: calc(.275rem - var(--half-cap)); }   /* level with the capitals (see --half-cap) */
 .key--recent { background: var(--blue); }
 .legend-hint { color: var(--ink-3); }
 
@@ -126,22 +138,33 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
 .odo-strip { display: flex; flex-direction: column; transition: transform 1.3s var(--ease); transition-delay: calc(var(--k, 0) * 70ms); }
 .odo-strip > span { height: 1em; line-height: 1; }
 
-/* Country index: every country, with counts, as a fallback to the globe (and for tiny states). */
+/* Country index: every country, with counts, as a fallback to the globe (and for tiny states). A row's
+   name and count share a baseline; its dot and flag stand on it, level with the capitals (see --half-cap). */
 .country-index { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); column-gap: 1.4rem; }
 .country-row {
-  display: flex; align-items: center; gap: .55rem; width: 100%; padding: .5rem .1rem; border: 0; border-bottom: 1px solid var(--line);
+  display: flex; align-items: baseline; gap: .55rem; width: 100%; padding: .5rem .1rem; border: 0; border-bottom: 1px solid var(--line);
   background: none; color: var(--ink); font: inherit; font-size: .92rem; text-align: left; cursor: pointer;
   transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease);
 }
 .country-row:hover, .country-row:focus-visible { color: var(--blue); padding-left: .4rem; }
 .country-row .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .country-row .count { font-family: var(--font-pixel); font-size: .78rem; color: var(--ink-2); }
-.country-row .fresh { width: .4rem; height: .4rem; border-radius: 50%; background: var(--blue); flex: none; }
+.country-row .fresh { width: .4rem; height: .4rem; border-radius: 50%; background: var(--blue); flex: none; position: relative; top: calc(.2rem - var(--half-cap)); }
 .country-row .fresh.stale { background: transparent; }
+/* A phone: two columns, so twice the countries fit on a screen, in the same order (across, then down).
+   minmax(0, …): a long name is cut short (the row's title has it in full) rather than widening its
+   column. There is no room for the "updated in the last 30 days" dot: the count is blue instead, as
+   the globe's labels are. Rows stay a comfortable target for a finger (40px and more). */
+@media (max-width: 480px) {
+  .country-index { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 1rem; }
+  .country-row { gap: .5rem; padding-top: .62rem; padding-bottom: .62rem; }
+  .country-row .fresh { display: none; }
+  .country-row.is-recent .count { color: var(--blue); }
+}
 
 .changes { list-style: none; margin: 0; padding: 0; }
-.change { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr); gap: .9rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
-.change-date { font-family: var(--font-pixel); font-size: .74rem; letter-spacing: .04em; color: var(--ink-2); padding-top: .15rem; }
+.change { display: grid; grid-template-columns: 6.6rem minmax(0, 1fr); align-items: baseline; gap: .9rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }   /* the date on the country's baseline */
+.change-date { font-family: var(--font-pixel); font-size: .74rem; line-height: normal; letter-spacing: .04em; color: var(--ink-2); }
 .change-body { display: grid; gap: .35rem; justify-items: start; }
 .change-body p { margin: 0; font-size: .92rem; }
 .linkish { border: 0; padding: 0; background: none; cursor: pointer; }
@@ -167,7 +190,7 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
   animation: pop-in var(--t) var(--ease) both; animation-delay: calc(var(--i, 0) * 35ms);
 }
 .note:hover { border-color: var(--blue); }
-.note-top { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .7rem; }
+.note-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem .7rem; }   /* the tag's lettering and the date beside it are of a size: one baseline levels them */
 .note-when { font-family: var(--font-pixel); font-size: .72rem; letter-spacing: .05em; color: var(--ink-2); }
 .note-title { margin: 0; font-size: 1.06rem; font-weight: 560; line-height: 1.35; }
 .note-title::first-letter { text-transform: uppercase; }
@@ -178,10 +201,21 @@ body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid
 .note.is-gone .note-title { color: var(--ink-2); }
 .empty { color: var(--ink-2); font-size: .92rem; }
 
-.history { list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 1px solid var(--line-strong); }
-.history li { position: relative; padding: 0 0 1rem .4rem; }
-.history li::before { content: ""; position: absolute; left: -1.27rem; top: .35rem; width: .5rem; height: .5rem; background: var(--bg); border: 1.5px solid var(--blue); }
-.history li:first-child::before { background: var(--blue); }
+/* A country's updates: a rule down the left and a square on it for each entry. The square is set in the
+   date's own line, standing on its baseline and exactly as tall as its capitals (--mark: the cap height;
+   .722em is Geist Pixel's, for browsers without the cap unit), so its top, middle and foot are the
+   digits' at any text size and on any screen. Its margins put its middle on the middle of the rule
+   (--to-rule: the list's padding, the entry's, and half the 1px rule) and leave the date where it was. */
+.history { --to-rule: calc(1rem + .4rem + .5px); list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 1px solid var(--line-strong); }
+.history li { padding: 0 0 1rem .4rem; }
+.history time::before {
+  --mark: .722em;
+  content: ""; display: inline-block; width: var(--mark); height: var(--mark);
+  margin: 0 calc(var(--to-rule) - var(--mark) / 2) 0 calc(-1 * var(--to-rule) - var(--mark) / 2);
+  background: var(--bg); border: 1.5px solid var(--blue);
+}
+@supports (width: 1cap) { .history time::before { --mark: 1cap; } }
+.history li:first-child time::before { background: var(--blue); }
 .history time { display: block; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .05em; color: var(--ink-2); }
 .history p { margin: .2rem 0 0; font-size: .9rem; }
 
@@ -211,8 +245,8 @@ mark { background: color-mix(in oklab, var(--blue) 16%, transparent); color: inh
 .thit:hover, .thit:focus-visible { text-decoration: none; background: var(--blue-wash); padding-left: .5rem; padding-right: .3rem; }
 .thit:focus-visible { outline-offset: -2px; }
 .is-fresh .thit, .csearch-results .thit { animation: pop-in var(--t) var(--ease) both; animation-delay: calc(var(--i, 0) * 40ms); }
-.thit-top { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; min-width: 0; }
-.thit-topic { font-weight: 560; font-size: .95rem; line-height: 1.3; }
+.thit-top { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; min-width: 0; line-height: normal; }
+.thit-topic { font-weight: 560; font-size: .95rem; }
 .thit-topic::first-letter { text-transform: uppercase; }
 .thit:hover .thit-topic, .thit:focus-visible .thit-topic { color: var(--blue); }
 .thit-section { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -272,27 +306,45 @@ mark { background: color-mix(in oklab, var(--blue) 16%, transparent); color: inh
 
 /* Dotted flags (dot-flag.js): COBE-style dot matrices. */
 canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height: auto; }
-.dotflag--tag { width: 1.25em; }
-.dotflag--row { width: 1.35rem; }
+.dotflag--tag { --w: 1.25em; width: var(--w); }
+.dotflag--row { --w: 1.35rem; width: var(--w); }
+/* A flag beside a line of words (one inside a tag is centred by the tag): it stands on their baseline, then
+   moves down to be level with their capitals, by half its height (it is 4:3: three eighths of its width)
+   less half the cap height. Its top margin takes the same back, so the line is no taller for it. */
+.country-row > .dotflag, .rhit > .dotflag, .hit > .dotflag, .opt > .dotflag, .chooser-item > .dotflag, .country-link > .dotflag {
+  --drop: calc(var(--w) * 3 / 8 - var(--half-cap)); position: relative; top: var(--drop); margin-top: calc(-1 * var(--drop));
+}
 .dotflag--hero { width: clamp(5.5rem, 7vw, 8rem); }
 .country-head { display: flex; align-items: center; gap: 1.2rem; }
 .country-head .country-title { margin-bottom: .2rem; }
-.hit { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.hit { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
 .hit small { flex-basis: 100%; }
 .hit-text::first-letter { text-transform: uppercase; }
 
 .note-change { margin: .1rem 0 .1rem; font-size: .9rem; color: var(--ink); }
 .note-change .eyebrow { display: block; margin-bottom: .2rem; color: var(--blue); }
 .saved-link { min-height: 2.35rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; }
-.country-link { display: inline-flex; align-items: center; gap: .45em; font-family: var(--font-pixel); font-size: .72rem;
+/* The guide and glossary: a word in the header; on a phone a "?" at the end of the search row. */
+.guide-link { min-height: 2.35rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; }
+.guide-link:hover { text-decoration: none; }
+.guide-q { display: none; }
+@media (max-width: 900px) {
+  .top .search { flex: 1 1 calc(100% - 3.35rem); width: auto; min-width: 0; }
+  .guide-link { order: 4; flex: none; width: 2.35rem; padding: 0; justify-content: center; font-size: .82rem; }
+  .guide-word { display: none; }
+  .guide-q { display: inline; }
+}
+.country-link { display: inline-flex; align-items: baseline; gap: .45em; font-family: var(--font-pixel); font-size: .72rem;
   letter-spacing: .06em; text-transform: uppercase; color: var(--blue); }
 .country-link:hover { text-decoration: underline; text-underline-offset: .25em; }
 
 /* Flag-coloured glow over the hovered/selected country (country-glow.js). */
 .globe-glow { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
-/* Zoom controls: square COBE buttons. */
+/* Zoom controls: square COBE buttons. Their signs are drawn (not letters, which sit on a font's baseline
+   and below the middle of a square), each centred in its own box, so the button centres them. */
 .zoom { position: absolute; right: .2rem; bottom: .2rem; display: grid; gap: .3rem; z-index: 5; }
-.zoom-btn { min-height: 2rem; min-width: 2rem; padding: 0; font-family: var(--font-mono); font-size: .95rem; background: color-mix(in oklab, var(--bg) 85%, transparent); }
+.zoom-btn { min-height: 2rem; min-width: 2rem; padding: 0; font-family: var(--font-mono); font-size: .95rem; background: var(--bg); }
+.zoom-btn svg { width: .95rem; height: .95rem; flex: none; }
 /* Check for changes */
 .check-btn { min-height: 2rem; font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; margin-left: .3rem; }
 .check-pop {
@@ -336,6 +388,7 @@ canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height:
 .search-hint { margin: .5rem 0 1.4rem; padding: .7rem .9rem; border-left: 2px solid var(--blue); background: var(--blue-wash); font-size: .9rem; max-width: 44rem; }
 .no-titles { margin: .5rem 0 1.3rem; }
 .no-titles:has(~ #textHits .nomatch) { display: none; }       /* the "nothing matches" block says it all */
+.results-group > .only-glossary { margin: 0; }                /* only a glossary term matched: one line, then the term */
 .results-group > .empty { margin: 0 0 .5rem; }
 .hit.is-gone, .rhit.is-gone { color: var(--ink-2); }
 /* One topic that many countries have a report on: the topic once, then the countries, compactly. */
@@ -347,14 +400,14 @@ canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height:
 .rgroup-list--wide { grid-template-columns: minmax(0, 1fr); }      /* a row has a long note: one report per line */
 .rgroup-list--wide .rhit-name { white-space: normal; line-height: 1.3; }   /* and room to say it (a phone has no tooltip) */
 .rhit {
-  display: flex; align-items: center; gap: .55rem; width: 100%; min-width: 0; padding: .36rem .1rem; border: 0; background: none;
+  display: flex; align-items: baseline; gap: .55rem; width: 100%; min-width: 0; padding: .36rem .1rem; border: 0; background: none;
   color: var(--ink); font: inherit; font-size: .9rem; text-align: left; cursor: pointer;
   transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease);
 }
 .rhit:hover, .rhit:focus-visible { color: var(--blue); padding-left: .4rem; }
 .rhit-name { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }   /* the full title is the row's tooltip */
 .rhit-q { font-style: normal; font-size: .82rem; color: var(--ink-2); }      /* how this report's title differs from the heading */
-.rhit-when { flex: none; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); white-space: nowrap; }
+.rhit-when { flex: none; font-family: var(--font-mono); font-size: .68rem; line-height: normal; color: var(--ink-2); white-space: nowrap; }
 .rhit[hidden], .rgroup-all[hidden] { display: none; }
 .rhit.is-new { animation: pop-in var(--t) var(--ease) both; }
 .rgroup-all {
@@ -369,7 +422,7 @@ button.all-results { text-align: left; }
 .nomatch h2 { margin: .8rem 0 .4rem; font-size: 1.1rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
 .nomatch p { margin: 0 0 .9rem; color: var(--ink-2); font-size: .92rem; }
 .nomatch p .btn { margin: 0 .5rem .3rem 0; }
-.examples { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0 0 1rem; }
+.examples { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; line-height: normal; margin: 0 0 1rem; }
 .examples .eyebrow { margin-right: .2rem; }
 .examples .tag { border: 0; cursor: pointer; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease); }
 .examples .tag:hover, .examples .tag:focus-visible { background: var(--blue); color: var(--blue-ink); }
@@ -392,7 +445,8 @@ button.all-results { text-align: left; }
 .pmenu { position: relative; }
 .pmenu-btn { list-style: none; min-height: 2.1rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; user-select: none; }
 .pmenu-btn::-webkit-details-marker { display: none; }
-.pmenu-btn::after { content: "▾"; font-family: var(--font-mono); transition: transform var(--t) var(--ease); }
+/* The ▾ is drawn .095em below the middle of the capitals (it comes from the system's mono font): it is lifted by that, and turns about its own middle. */
+.pmenu-btn::after { content: "▾"; font-family: var(--font-mono); position: relative; top: -.095em; transform-origin: 50% calc(50% + .095em); transition: transform var(--t) var(--ease); }
 .pmenu[open] .pmenu-btn::after { transform: rotate(180deg); }
 .pmenu[open] .pmenu-btn, .pmenu.is-on .pmenu-btn { border-color: var(--blue); color: var(--blue); }
 .pmenu-n:not(:empty) { padding: .15em .4em; background: var(--blue); color: var(--blue-ink); }
@@ -410,13 +464,13 @@ button.all-results { text-align: left; }
 .pmenu-find input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); }
 .pmenu-find input::-webkit-search-cancel-button { display: none; }
 .opt {
-  position: relative; display: flex; align-items: center; gap: .55rem; padding: .42rem .1rem; border-bottom: 1px solid var(--line);
+  position: relative; display: flex; align-items: baseline; gap: .55rem; padding: .42rem .1rem; border-bottom: 1px solid var(--line);
   font-size: .88rem; cursor: pointer; transition: color var(--t-fast) var(--ease), opacity var(--t) var(--ease), padding var(--t) var(--ease);
 }
 li:last-child > .opt { border-bottom: 0; }
 .opt:hover { color: var(--blue); padding-left: .3rem; }
 .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
-.opt-box { flex: none; position: relative; width: .85rem; height: .85rem; border: 1.5px solid var(--line-strong); background: var(--bg); transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease); }
+.opt-box { flex: none; position: relative; top: calc(.425rem - var(--half-cap)); width: .85rem; height: .85rem; border: 1.5px solid var(--line-strong); background: var(--bg); transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease); }
 .opt-box::after { content: ""; position: absolute; inset: 2px; background: var(--blue-ink); transform: scale(0); transition: transform var(--t) var(--ease); }
 .opt input:checked + .opt-box { background: var(--blue); border-color: var(--blue); }
 .opt input:checked + .opt-box::after { transform: scale(1); clip-path: polygon(14% 52%, 0 68%, 38% 100%, 100% 22%, 86% 8%, 38% 70%); }
@@ -440,7 +494,7 @@ li:last-child > .opt { border-bottom: 0; }
   animation: pop-in var(--t) var(--ease) both; animation-delay: calc(min(var(--i, 0), 6) * 40ms);
 }
 .pnote:hover, .pnote:focus-within { border-color: var(--blue); }
-.pnote-top { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; }
+.pnote-top { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .7rem; line-height: normal; }
 .pnote-kind, .pnote-when { font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
 .pnote-title { margin: .55rem 0 .35rem; font-size: 1.08rem; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; }
 .pnote-title a { color: var(--ink); }
@@ -462,6 +516,56 @@ li:last-child > .opt { border-bottom: 0; }
   font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue);
 }
 .pmore-in:hover { text-decoration: underline; text-underline-offset: .35em; }
-.pfoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; margin-top: 1.4rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+.pfoot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .8rem; line-height: normal; margin-top: 1.4rem; padding-top: .9rem; border-top: 1px solid var(--line); }
 .pfoot[hidden] { display: none; }
 .pshowing { font-family: var(--font-mono); font-size: .74rem; color: var(--ink-2); }
+
+/* --- "Which country?" ------------------------------------------------------------------------------
+   The short list a fingertip gets when it lands among several dots (app.js: openChooser). It sits by
+   the finger inside the globe's stage, eases in from the tap and out again, and points back at the spot. */
+.chooser {
+  position: absolute; left: 0; top: 0; z-index: 8; display: flex; flex-direction: column;
+  min-width: 12.5rem; max-width: min(19rem, calc(100% - 12px)); background: var(--bg); border: 1px solid var(--blue);
+  opacity: 0; transform: translateY(6px) scale(.97); transform-origin: var(--ax, 50%) 100%; pointer-events: none;
+  transition: opacity var(--t-fast) var(--ease), transform var(--t) var(--ease);
+}
+.chooser[data-side="below"] { transform: translateY(-6px) scale(.97); transform-origin: var(--ax, 50%) 0; }
+.chooser.is-open { opacity: 1; transform: none; pointer-events: auto; }
+.chooser::after { content: ""; position: absolute; left: var(--ax, 50%); top: 100%; width: 1px; height: var(--stem, 0px); background: var(--blue); }
+.chooser[data-side="below"]::after { top: auto; bottom: 100%; }
+.chooser-head { flex: none; padding: .6rem .8rem .5rem; border-bottom: 1px solid var(--line); }
+.chooser-list { display: grid; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.chooser-list:focus { outline: 0; }                      /* the list itself holds focus when it opens: its blue box says so */
+.chooser-item {
+  display: flex; flex-wrap: wrap; align-items: baseline; align-content: center; gap: .6rem; width: 100%; min-height: 44px; padding: .3rem .8rem; border: 0; border-bottom: 1px solid var(--line);
+  background: none; color: var(--ink); font: inherit; font-size: .95rem; line-height: 1.25; text-align: left; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.chooser-item:last-child { border-bottom: 0; }
+.chooser-item:active, .chooser-item:focus-visible { background: var(--blue-wash); color: var(--blue); }
+@media (hover: hover) { .chooser-item:hover { background: var(--blue-wash); color: var(--blue); } }
+.chooser-item:focus-visible { outline-offset: -2px; }
+.chooser-name { flex: 1; min-width: 0; }
+.chooser-n { flex: none; font-size: .78rem; color: var(--ink-2); }
+
+/* --- Glossary terms: the search's last group -------------------------------------------------------
+   A term, what it stands for, and two lines of its explanation; each a link to its place in the guide. */
+.ghit {
+  display: grid; gap: .25rem; padding: .7rem .1rem .75rem; border-bottom: 1px solid var(--line); color: var(--ink);
+  transition: background var(--t-fast) var(--ease), padding var(--t) var(--ease);
+}
+.ghit:hover, .ghit:focus-visible { text-decoration: none; background: var(--blue-wash); padding-left: .5rem; padding-right: .3rem; }
+.ghit:focus-visible { outline-offset: -2px; }
+.ghit-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .6rem; min-width: 0; }
+.ghit-term { font-weight: 560; font-size: .95rem; line-height: 1.3; }
+.ghit:hover .ghit-term, .ghit:focus-visible .ghit-term { color: var(--blue); }
+.ghit-full { font-size: .9rem; line-height: 1.3; color: var(--ink-2); }
+.ghit-group { margin-left: auto; font-family: var(--font-mono); font-size: .68rem; text-transform: uppercase; color: var(--ink-2); white-space: nowrap; }
+.ghit-def { font-size: .88rem; line-height: 1.5; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.results-group > .to-glossary-line { margin: -.9rem 0 1.1rem; }   /* sits with the "no title matches" line above it */
+.to-glossary { font: inherit; color: var(--blue); }
+.to-glossary:hover { text-decoration: underline; text-underline-offset: .2em; }
+.gloss-hits { scroll-margin: 1rem 0; }
+@media (max-width: 900px) { .gloss-hits { scroll-margin-top: 8.5rem; } }
+@media (max-width: 600px) { .ghit-group { display: none; } }   /* a phone has no room for it beside a long name */
+.ghit mark { background: color-mix(in oklab, var(--blue) 15%, transparent); color: inherit; }

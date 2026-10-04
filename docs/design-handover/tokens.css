@@ -1,0 +1,836 @@
+/* =================================================================================================
+   Roberts Macros work tools · design tokens and base components
+   Lifted from CPIN Explorer (snapshot: 3 October 2026). Framework-free: link it and it works.
+
+   Sources, in the CPIN Explorer repo:
+     prototypes/shared/theme.css        tokens, fonts, base elements, .tag .eyebrow .btn .numeral .pop-in
+     prototypes/shared/brand.css        header mark + wordmark, footer
+     prototypes/dashboard/dashboard.css start page: app shell, search, stats, rows, cards, callouts
+     prototypes/reader/reader.css       report page: chips, segmented control, switch, popovers, toasts,
+                                        tables, long-form text, sticky bar, skeleton, error
+     prototypes/saved/saved.css         menu
+     prototypes/shared/timeline.css     blue tooltip, sparkle
+     prototypes/shared/link-status.css  status tags
+
+   Rules are copied with their declarations unchanged. Class names are kept where the source name is
+   general (.btn, .tag, .eyebrow, .chip, .seg, .switch, .toast, .pop, .top, .brand, .foot ...). Where the
+   source name was about countries or notes, the rule has a general name here and a "source:" note
+   says where it came from. Anything that is not a straight copy is marked "generalised".
+
+   Contents
+     1. Fonts            5. Buttons and links     9. Rows, cards, frames     13. Layout: page and app shell
+     2. Tokens           6. Tags, chips, badges   10. Tables and long text   14. Motion
+     3. Base elements    7. Controls              11. Overlays
+     4. Type recipes     8. Search and fields     12. States
+   ================================================================================================= */
+
+
+/* --- 1. Fonts ------------------------------------------------------------------------------------
+   FONT PATH. The four url()s below are the only file paths in this stylesheet, and they are relative
+   to this file. CSS cannot read a url() from a custom property inside @font-face, so change them here:
+
+     in the CPIN Explorer repo (docs/design-handover/)   ../../prototypes/vendor/fonts/
+     in the self-contained copy of this folder            fonts/
+     in a Vite app with the files in public/fonts/        /fonts/
+
+   Files: Geist-Variable.woff2, GeistMono-Variable.woff2, GeistPixel-Square.woff2, GeistPixel-Line.woff2
+   (npm package "geist" 1.7.2, SIL Open Font License 1.1; keep GEIST-LICENSE.txt beside them).
+   All four are kept: do not swap or drop a family. No CDN at runtime. */
+@font-face { font-family: "Geist"; src: url("../../prototypes/vendor/fonts/Geist-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Mono"; src: url("../../prototypes/vendor/fonts/GeistMono-Variable.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Geist Pixel"; src: url("../../prototypes/vendor/fonts/GeistPixel-Square.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Geist Pixel Line"; src: url("../../prototypes/vendor/fonts/GeistPixel-Line.woff2") format("woff2"); font-display: swap; }
+
+
+/* --- 2. Tokens (same names as theme.css) ----------------------------------------------------------- */
+:root {
+  /* Type families */
+  --font-text: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;      /* reading text, titles of things */
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;        /* buttons, dates, meta lines, credit */
+  --font-pixel: "Geist Pixel", "Geist Mono", ui-monospace, monospace;          /* tags, eyebrows, numerals, small labels */
+  --font-display: "Geist Pixel Line", "Geist Pixel", ui-monospace, monospace;  /* big page titles only */
+
+  /* Colour: white page, one electric blue, cool greys */
+  --bg: #ffffff;                           /* the page */
+  --surface: #ffffff;                      /* boxes on the page: cards, inputs, popovers */
+  --sunken: #f6f7f9;                       /* set-back areas: table heads, empty-state boxes, muted tags */
+  --ink: #171d24;                          /* text */
+  --ink-2: #66717c;                        /* secondary text, labels, meta */
+  --ink-3: #9aa3ad;                        /* tertiary: placeholders, separators, timestamps */
+  --line: #e4e7eb;                         /* hairlines, card borders */
+  --line-strong: #cfd4da;                  /* borders of controls: buttons, inputs, popovers */
+  --blue: #2a3cf5;                         /* fallback for browsers without lab() */
+  --blue: lab(36 55.64 -107.68);           /* the one accent; draws as about #0034ff in sRGB */
+  --blue-ink: #ffffff;                     /* text on blue */
+  --blue-wash: color-mix(in oklab, var(--blue) 7%, var(--bg));     /* hover and selected backgrounds, focus halo */
+  --blue-line: color-mix(in oklab, var(--blue) 35%, var(--bg));    /* quiet underlines, "in range" edges */
+
+  /* Change marking: never colour alone. Added is blue and underlined; removed is red and struck through. */
+  --ins: var(--blue);
+  --ins-wash: color-mix(in oklab, var(--blue) 10%, var(--bg));
+  --del: #c2262e;                          /* the only red: removed, dead, negative */
+  --del-wash: color-mix(in oklab, #e0434b 12%, var(--bg));
+
+  --focus: var(--blue);
+
+  /* Motion */
+  --ease: cubic-bezier(.2, .8, .2, 1);     /* everything: quick start, long soft landing */
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);   /* loops that go back and forth (skeleton shimmer) */
+  --t-fast: 160ms;                         /* colour, border, opacity on hover and focus */
+  --t: 280ms;                              /* things that move or appear: thumbs, popovers, rows, pop-in */
+  --t-slow: 520ms;                         /* large moves: folding a section, a sheet, the first paint of a page head */
+
+  /* Layout (source: reader.css :root) */
+  --top-h: 3.75rem;                        /* header height */
+  --pad-x: clamp(1rem, 2.4vw, 2.75rem);    /* page gutter, left and right */
+  --shadow: 0 1px 2px rgb(16 24 40 / .04), 0 14px 36px -14px rgb(16 24 40 / .22);   /* floating things only */
+  --mark: var(--ins-wash);                 /* a saved or highlighted passage */
+  --mark-strong: color-mix(in oklab, var(--blue) 22%, var(--bg));
+  --doc-fs: 1.06rem;                       /* long-form reading size */
+  --doc-lh: 1.7;
+  --measure: 70ch;                         /* long-form line length */
+
+  /* Fluid sizing. Everything is in rem, so the whole interface scales with the window:
+     15px up to about 1520px wide, 16.7px at 1920, 19.4px at 2560, 22px from about 3190 (4K). */
+  font-size: clamp(15px, 0.42vw + 8.6px, 22px);
+  color-scheme: light;
+}
+
+/* Dark: follows the system unless data-theme="light" is set; data-theme="dark" forces it. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0c10; --surface: #10131a; --sunken: #151922;
+    --ink: #e7eaf0; --ink-2: #9aa4b2; --ink-3: #6b7480;
+    --line: #232834; --line-strong: #323949;
+    --blue: #6b7cff; --blue: lab(58 38 -82);            /* draws as about #7f77ff in sRGB */
+    --ins: var(--blue); --ins-wash: color-mix(in oklab, var(--blue) 22%, var(--bg));
+    --del: #ff7b81; --del-wash: color-mix(in oklab, #e0434b 22%, var(--bg));
+    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 14px 36px -14px rgb(0 0 0 / .7);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a0c10; --surface: #10131a; --sunken: #151922;
+  --ink: #e7eaf0; --ink-2: #9aa4b2; --ink-3: #6b7480;
+  --line: #232834; --line-strong: #323949;
+  --blue: #6b7cff; --blue: lab(58 38 -82);
+  --ins: var(--blue); --ins-wash: color-mix(in oklab, var(--blue) 22%, var(--bg));
+  --del: #ff7b81; --del-wash: color-mix(in oklab, #e0434b 22%, var(--bg));
+  --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 14px 36px -14px rgb(0 0 0 / .7);
+  color-scheme: dark;
+}
+
+
+/* --- 3. Base elements ------------------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-text); line-height: 1.55; letter-spacing: .005em;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: .2em; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }       /* the focus ring, everywhere */
+::selection { background: color-mix(in oklab, var(--blue) 22%, transparent); }
+kbd {
+  font-family: var(--font-mono); font-size: .7em; padding: .1em .4em; border: 1px solid var(--line-strong);
+  color: var(--ink-2); background: var(--sunken);
+}
+/* A search match in a list of results. */
+mark { background: color-mix(in oklab, var(--blue) 16%, transparent); color: inherit; padding: 0 .05em; }
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.spacer { flex: 1; }
+/* "Skip to the text": the first thing Tab reaches on a page. */
+.skip { position: absolute; left: -999px; top: .5rem; z-index: 60; background: var(--blue); color: var(--blue-ink); padding: .5rem .8rem; font-family: var(--font-mono); font-size: .8rem; }
+.skip:focus { left: .5rem; }
+
+
+/* --- 4. Type recipes ------------------------------------------------------------------------------- */
+/* Small uppercase section label. */
+.eyebrow {
+  font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-2); margin: 0;
+}
+/* Big pixel numerals (counts, a date that rolls). */
+.numeral { font-family: var(--font-pixel); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: .08em; color: var(--blue); }
+/* Page title: Geist Pixel Line, blue, uppercase. One per page. (source: .hero-title, dashboard.css;
+   the saved and guide pages use clamp(2.4rem, 4.2vw, 4.4rem) with line-height 1.) */
+.hero-title { margin: .35rem 0 .2rem; font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3.4rem); font-weight: 400; letter-spacing: .07em; line-height: 1.02; color: var(--blue); text-transform: uppercase; overflow-wrap: anywhere; }
+/* One or two plain sentences under the title. */
+.lede { margin: .3rem 0 1.4rem; color: var(--ink-2); max-width: 38rem; }
+/* Meta line: mono, uppercase, parts separated by a middle dot. (source: .meta-line, reader.css.
+   The start page's version is the same without the uppercase, the spacing and the dots: its text is already
+   written in capitals and its parts are spaced by a gap of .4rem .9rem.) */
+.meta-line { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .02em; color: var(--ink-2); text-transform: uppercase; }
+.meta-line > * + *::before { content: "·"; margin-right: .6rem; color: var(--ink-3); display: inline-block; text-decoration: none; }
+.meta-line b { font-weight: 500; color: var(--ink); }
+.meta-line a { font-family: var(--font-mono); white-space: nowrap; }
+/* The smallest print: where a figure came from. (source: .source-note) */
+.source-note { font-family: var(--font-mono); font-size: .7rem; color: var(--ink-3); margin: .6rem 0 0; }
+
+
+/* --- 5. Buttons and links -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .45em;
+  min-height: 2.4rem; padding: 0 .85rem; border: 1px solid var(--line-strong); border-radius: 0;
+  background: var(--surface); color: var(--ink); cursor: pointer;
+  font-family: var(--font-mono); font-size: .8rem; letter-spacing: .02em;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+}
+.btn:hover { border-color: var(--blue); color: var(--blue); }
+a.btn:hover { text-decoration: none; }
+.btn--primary { background: var(--blue); border-color: var(--blue); color: var(--blue-ink); }
+.btn--primary:hover { color: var(--blue-ink); filter: brightness(1.08); }
+.btn svg { width: .9rem; height: .9rem; flex: none; }
+.btn:disabled { opacity: .4; cursor: default; }
+/* Quiet: no box until hovered. For the less important buttons beside a boxed one.
+   (source: .clog-btn, .hist-toggle, reader.css) */
+.btn--quiet { gap: .35rem; padding: 0 .65rem; border-color: transparent; background: none; color: var(--ink-2); }
+.btn--quiet:hover, .btn--quiet[aria-haspopup][aria-expanded="true"] { border-color: transparent; background: var(--blue-wash); color: var(--blue); }   /* a menu button stays washed while its menu is open */
+/* Small: inside cards and popovers. (source: .note-actions .btn) */
+.btn--sm { min-height: 2.1rem; font-size: .74rem; }
+/* Label button: pixel capitals, for header controls ("SAVED", "LIGHT"). (source: .theme-btn, .saved-link) */
+.btn--label { min-height: 2.35rem; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+/* The theme button: AUTO, LIGHT, DARK in turn. As wide as its longest word, so the header never shifts. */
+.theme-btn { min-width: 4.6rem; }
+/* Remove / delete: the quietest button; it never shouts. (source: .pop-actions .btn-del) */
+.btn--del { color: var(--ink-2); border-color: transparent; }
+.btn--del:hover { color: var(--ink); border-color: var(--line-strong); }
+/* A link that is a button, inside a sentence. (source: .linklike) */
+.linklike { border: 0; padding: 0; background: none; color: var(--blue); font: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: var(--blue-line); text-underline-offset: .2em; }
+.linklike:hover { text-decoration-color: currentColor; }
+/* "All 613 passages →": a text link in pixel capitals, at the foot of a list. (source: .more, .all-results) */
+.more {
+  display: inline-flex; align-items: center; margin-top: .7rem; padding: 0; border: 0; background: none; cursor: pointer;
+  font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue);
+}
+.more:hover { text-decoration: underline; text-underline-offset: .35em; }
+
+
+/* --- 6. Tags, chips, badges ------------------------------------------------------------------------ */
+/* Blue label tag: says what kind of thing this is. Not clickable (unless it is a <button class="tag">). */
+.tag {
+  display: inline-flex; align-items: center; gap: .4em;
+  font-family: var(--font-pixel); font-size: .72rem; line-height: 1; letter-spacing: .06em;
+  text-transform: uppercase; white-space: nowrap;
+  padding: .38em .55em .34em; background: var(--blue); color: var(--blue-ink);
+}
+.tag--outline { background: var(--bg); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }
+.tag--muted { background: var(--sunken); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line); }
+/* "Computed": marks something this tool worked out, as opposed to the source's own words. (source: .tag--calc) */
+.tag--calc { background: var(--surface); color: var(--ink-2); box-shadow: inset 0 0 0 1px var(--line-strong); }
+/* A problem. (source: .linkstatus--dead, link-status.css) */
+.tag--dead { background: var(--del-wash); color: var(--del); box-shadow: inset 0 0 0 1px var(--del); }
+/* A tag that is a button: a filter that is on (with "×"), or a suggestion. (source: .pchip, .examples .tag) */
+button.tag { border: 0; cursor: pointer; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease), filter var(--t-fast) var(--ease); }
+button.tag:not(.tag--outline):hover { filter: brightness(1.12); }
+button.tag--outline:hover, button.tag--outline:focus-visible { background: var(--blue); color: var(--blue-ink); }
+
+/* Chip: a small boxed label that opens a panel of detail. The caret turns when it is open. */
+.chip {
+  display: inline-flex; align-items: center; gap: .55em; height: 1.75rem; padding: 0 .6rem; border: 1px solid var(--line-strong); border-radius: 0;
+  background: var(--surface); color: var(--ink-2); cursor: pointer; white-space: nowrap;
+  font-family: var(--font-pixel); font-size: .62rem; line-height: 1; letter-spacing: .1em; text-transform: uppercase;
+  transition: border-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease), background-color var(--t-fast) var(--ease);
+}
+.chip[hidden] { display: none; }
+.chip::after { content: ""; width: .32rem; height: .32rem; margin: -.15rem 0 0 .1rem; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); opacity: .7; transition: transform var(--t) var(--ease), margin var(--t) var(--ease); }
+.chip[aria-expanded="true"]::after { transform: rotate(225deg); margin-top: .15rem; }
+.chip:hover, .chip[aria-expanded="true"] { border-color: var(--blue); color: var(--blue); }
+.chip[aria-expanded="true"] { background: var(--blue-wash); }
+.chip--blue { border-color: var(--blue); color: var(--blue); }                /* source: #verbatimChip */
+.chip-v { color: var(--ink); }                                                /* the value after the label */
+.chip-v::before { content: "·"; margin-right: .55em; color: var(--ink-3); }
+.chip-v.is-dead { color: var(--del); }
+.chip:hover .chip-v:not(.is-dead), .chip[aria-expanded="true"] .chip-v:not(.is-dead) { color: inherit; }
+
+/* Badge: a quiet status in mono with a small square. Solid = as saved; hollow = changed since. */
+.badge { display: inline-flex; align-items: center; gap: .35em; font-family: var(--font-mono); font-size: .68rem; line-height: 1.3; color: var(--ink-2); }
+.badge::before { content: ""; width: .45rem; height: .45rem; background: var(--blue); flex: none; }
+.badge--changed { color: var(--ink); }
+.badge--changed::before { background: transparent; box-shadow: inset 0 0 0 1.5px var(--blue); }
+
+/* Status line: a still square and one line of mono capitals ("ACCURATE AS OF 03 OCT 2026 · 11:52 BST").
+   The dot does not pulse: a statement of fact must not flash. When the words change they crossfade
+   (.is-changing for 170ms, swap the text, remove it), and the box is as wide as its longest wording
+   (min-width in ch on .sync-words). (source: .sync and .sync-status, dashboard.css, folded into one class) */
+.sync-status { display: inline-flex; align-items: center; gap: .5rem; border: 0; padding: 0; background: none; color: var(--ink-2); font-family: var(--font-mono); font-size: .72rem; white-space: nowrap; cursor: pointer; text-align: left; transition: color var(--t-fast) var(--ease); }
+.sync-status:hover, .sync-status[data-state="newer"] { color: var(--blue); }
+.sync-words { display: inline-block; transition: opacity 170ms var(--ease); }
+.sync-words.is-changing { opacity: 0; }
+.live-dot { width: .5rem; height: .5rem; background: var(--blue); flex: none; }
+/* Legend: what the dots mean. (source: .legend, .key) */
+.legend { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.4rem; margin: 0; font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.legend span { display: inline-flex; align-items: center; gap: .45rem; }
+.key { width: .55rem; height: .55rem; border-radius: 50%; background: #6c7a99; display: inline-block; }
+.key--recent { background: var(--blue); }
+.legend-hint { color: var(--ink-3); }
+
+
+/* --- 7. Controls ----------------------------------------------------------------------------------- */
+/* Segmented control: one blue thumb slides behind the chosen option; the labels change colour as it passes.
+   role="radiogroup" on .seg, role="radio" + aria-checked on each button.
+   Generalised: the source has two options (thumb width 50%, and .seg[data-value="tribunal"] moves it by
+   100%). Here the same rule serves any number of equal options: set --n (how many) and --i (which, from 0)
+   on .seg. */
+.seg { position: relative; display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line-strong); background: var(--surface); isolation: isolate; }
+.seg button {
+  position: relative; z-index: 1; min-height: 1.9rem; padding: 0 .7rem; border: 0; border-radius: 0; background: none; cursor: pointer;
+  font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); white-space: nowrap;
+  transition: color var(--t) var(--ease);
+}
+.seg button[aria-checked="true"] { color: var(--blue-ink); }
+.seg button:not([aria-checked="true"]):not(:disabled):hover { color: var(--blue); }
+.seg button:disabled { opacity: .45; cursor: not-allowed; }
+.seg-thumb { position: absolute; z-index: 0; top: 0; bottom: 0; left: 0; width: calc(100% / var(--n, 2)); background: var(--blue); transform: translateX(calc(var(--i, 0) * 100%)); transition: transform var(--t) var(--ease); }
+/* The larger one, with icons and mono labels. (source: .vseg) */
+.seg--mono button { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; min-height: 2.15rem; padding: 0 .8rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: 0; text-transform: none; }
+.seg--mono button svg { width: .95rem; height: .95rem; flex: none; }
+
+/* Switch: square. Off it is an outlined blue button; on it fills blue and its label says what pressing it
+   will now do ("Show changes" becomes "Hide changes"). role="switch" + aria-checked. */
+.switch {
+  display: inline-flex; align-items: center; gap: .6rem; min-height: 2.4rem; padding: 0 .9rem 0 .65rem;
+  border: 1px solid var(--blue); border-radius: 0; background: var(--surface); color: var(--blue); cursor: pointer;
+  font-family: var(--font-mono); font-size: .8rem; letter-spacing: .02em; white-space: nowrap;
+  transition: background-color var(--t) var(--ease), color var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.switch .sw { position: relative; width: 2.15rem; height: 1.15rem; box-shadow: inset 0 0 0 1.5px currentColor; flex: none; }
+.switch .sw i { position: absolute; top: 3px; left: 3px; width: calc(1.15rem - 6px); height: calc(1.15rem - 6px); background: currentColor; transition: transform var(--t) var(--ease); }
+.switch:hover { background: var(--blue-wash); }
+.switch[aria-checked="true"] { background: var(--blue); color: var(--blue-ink); }
+.switch[aria-checked="true"] .sw i { transform: translateX(1rem); }
+.switch:disabled { border-color: var(--line-strong); color: var(--ink-3); background: var(--surface); cursor: not-allowed; opacity: .7; }
+.switch:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+/* Filter bar: a blue band of pixel labels; the chosen one is underlined, the rest are dimmed. aria-pressed. */
+.filters { display: flex; flex-wrap: wrap; gap: 0 1.3rem; margin: 1.4rem 0 0; padding: .55rem .9rem; background: var(--blue); }
+.filter {
+  border: 0; padding: .2rem 0; background: none; color: var(--blue-ink); cursor: pointer; opacity: .62;
+  font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+  transition: opacity var(--t-fast) var(--ease);
+}
+.filter:hover, .filter[aria-pressed="true"] { opacity: 1; }
+.filter[aria-pressed="true"] { text-decoration: underline; text-underline-offset: .35em; }
+
+/* Tabs: pixel labels on a hairline; the current one is blue with a blue line under it. (source: .sheet-tabs) */
+.tabs { display: flex; align-items: center; gap: 1.2rem; border-bottom: 1px solid var(--line); }
+.tab { border: 0; background: none; padding: .7rem 0 .6rem; margin-bottom: -1px; cursor: pointer; font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); border-bottom: 2px solid transparent; transition: color var(--t-fast) var(--ease), border-color var(--t) var(--ease); }
+.tab[aria-selected="true"] { color: var(--blue); border-bottom-color: var(--blue); }
+
+/* Navigation list: the sections of a page, or the pages of an app, down a hairline. The current one is
+   blue on a blue wash, and a 2px blue marker glides along the hairline to it (set --y and --h on .nav-ind
+   from the current link's offsetTop and offsetHeight, and add .is-on). A count sits at the right as a
+   small blue tag. (source: .toc in reader.css; the marker and the part headings from .gd-nav in guide.css) */
+.nav { font-size: .8rem; }
+.nav > .eyebrow { margin: 0 0 .75rem; }
+.nav-list { position: relative; list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--line); }
+.nav-list ol, .nav-list ul { list-style: none; margin: 0; padding: 0; }
+.nav a, .nav button {
+  display: flex; align-items: center; gap: .5rem; width: 100%; padding: .34rem .6rem; border: 0; background: none; color: var(--ink-2); font: inherit; line-height: 1.3; text-align: left; cursor: pointer;
+  transition: background-color var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.nav a:hover, .nav button:hover { color: var(--ink); background: var(--sunken); text-decoration: none; }
+.nav .is-active { color: var(--blue); background: var(--blue-wash); }
+.nav .l3 > a, .nav .l3 > button { padding-left: 1.25rem; font-size: .77rem; }       /* one level down */
+.nav .cnt { margin-left: auto; font-family: var(--font-pixel); font-size: .62rem; line-height: 1; letter-spacing: .04em; padding: .32em .4em .28em; background: var(--blue); color: var(--blue-ink); }
+.nav-part > a, .nav-part > button { padding: .5rem .6rem .45rem; font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }   /* a group's heading */
+.nav-part + .nav-part { margin-top: .9rem; }
+.nav-ind {
+  position: absolute; left: -1px; top: 0; width: 2px; height: var(--h, 0px); background: var(--blue); pointer-events: none;
+  transform: translateY(var(--y, 0px)); opacity: 0;
+  transition: transform var(--t) var(--ease), height var(--t) var(--ease), opacity var(--t) var(--ease);
+}
+.nav-ind.is-on { opacity: 1; }
+
+/* Checkbox: a square that fills blue and draws a pixel tick. The real input is visually hidden inside
+   the label. <label class="opt"><input type="checkbox"><span class="opt-box"></span><span class="opt-name">…</span></label> */
+.opt {
+  position: relative; display: flex; align-items: center; gap: .55rem; padding: .42rem .1rem; border-bottom: 1px solid var(--line);
+  font-size: .88rem; cursor: pointer; transition: color var(--t-fast) var(--ease), opacity var(--t) var(--ease), padding var(--t) var(--ease);
+}
+.opt:hover { color: var(--blue); padding-left: .3rem; }
+.opt input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.opt-box { flex: none; position: relative; width: .85rem; height: .85rem; border: 1.5px solid var(--line-strong); background: var(--bg); transition: background var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease); }
+.opt-box::after { content: ""; position: absolute; inset: 2px; background: var(--blue-ink); transform: scale(0); transition: transform var(--t) var(--ease); }
+.opt input:checked + .opt-box { background: var(--blue); border-color: var(--blue); }
+.opt input:checked + .opt-box::after { transform: scale(1); clip-path: polygon(14% 52%, 0 68%, 38% 100%, 100% 22%, 86% 8%, 38% 70%); }
+.opt input:focus-visible + .opt-box { outline: 2px solid var(--blue); outline-offset: 2px; }
+.opt input:checked ~ .opt-name { color: var(--blue); }
+.opt-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.opt-count { font-size: .74rem; color: var(--ink-2); }
+.opt.is-zero { opacity: .42; }
+
+
+/* --- 8. Search and fields -------------------------------------------------------------------------- */
+/* The search box: a <label class="search"> holding an icon, the input and a <kbd>. One per page.
+   Focus: blue border, a 3px halo in --blue-wash, the icon turns blue. */
+.search {
+  display: flex; align-items: center; gap: .55rem; width: min(30rem, 38vw); height: 2.35rem;
+  padding: 0 .7rem; border: 1px solid var(--line-strong); background: var(--surface); color: var(--ink-2);
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease), color var(--t-fast) var(--ease);
+}
+.search:focus-within { border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); color: var(--blue); }
+.search svg { width: 1rem; height: 1rem; flex: none; }
+.search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--ink); font: inherit; font-size: .9rem; }
+.search input::placeholder { color: var(--ink-3); }
+.search input::-webkit-search-cancel-button { display: none; }
+/* Inside the content rather than the header: full width, a little taller. (source: .csearch-box) */
+.search--block { width: auto; height: 2.5rem; padding: 0 .75rem; }
+
+/* Text input and textarea: the same box and the same focus as the search. (source: .pmenu-find input, .comment) */
+.field {
+  display: block; width: 100%; height: 2.1rem; padding: 0 .6rem; border: 1px solid var(--line-strong); border-radius: 0; background: var(--surface); color: var(--ink);
+  font: inherit; font-size: .84rem; outline: 0; transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+textarea.field { height: auto; min-height: 4.2rem; resize: vertical; padding: .55rem .65rem; background: var(--bg); font-size: .86rem; line-height: 1.5; }
+.field:focus { outline: 0; border-color: var(--blue); box-shadow: 0 0 0 3px var(--blue-wash); }
+.field::placeholder { color: var(--ink-3); }
+/* Its label: an eyebrow on the left, and on the right a quiet "Saved" that fades in and out. */
+.field-label { display: flex; justify-content: space-between; align-items: baseline; gap: .5rem; margin-bottom: .35rem; }
+.field-label .saved-flag { font-family: var(--font-mono); font-size: .68rem; color: var(--blue); opacity: 0; transition: opacity var(--t) var(--ease); }
+.field-label .saved-flag.on { opacity: 1; }
+
+
+/* --- 9. Rows, cards, frames ------------------------------------------------------------------------ */
+/* Section heading: an eyebrow on the left, a count or a note on the right, a hairline under both. */
+.section { margin: 0 0 2.2rem; }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 .8rem; padding-bottom: .55rem; border-bottom: 1px solid var(--line); }
+/* A group inside a list of results: its name in text weight 560, its size in blue pixel capitals. (source: .rgroup-head) */
+.group-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin: 0 0 .4rem; font-size: 1rem; font-weight: 560; line-height: 1.3; }
+.group-n { flex: none; font-family: var(--font-pixel); font-weight: 400; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+
+/* List row: no box, a hairline under it. Hover: the text turns blue and the row slides .3rem to the right.
+   A <button> or <a>. (source: .country-row) */
+.row {
+  display: flex; align-items: center; gap: .55rem; width: 100%; padding: .5rem .1rem; border: 0; border-bottom: 1px solid var(--line);
+  background: none; color: var(--ink); font: inherit; font-size: .92rem; text-align: left; cursor: pointer;
+  transition: color var(--t-fast) var(--ease), padding var(--t) var(--ease);
+}
+.row:hover, .row:focus-visible { color: var(--blue); padding-left: .4rem; text-decoration: none; }
+.row .name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .count { font-family: var(--font-pixel); font-size: .78rem; color: var(--ink-2); }
+.row .when { flex: none; font-family: var(--font-mono); font-size: .68rem; color: var(--ink-2); white-space: nowrap; }   /* source: .rhit-when */
+/* A column of rows that fills the width. (source: .country-index) */
+.row-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr)); column-gap: 1.4rem; }
+
+/* Block row: a title line, a mono line, two or three lines of excerpt. Hover: a blue wash and the same slide.
+   An <a>. (source: .thit) */
+.hit {
+  display: grid; gap: .3rem; padding: .75rem .1rem .8rem; border-bottom: 1px solid var(--line); color: var(--ink);
+  transition: background var(--t-fast) var(--ease), padding var(--t) var(--ease);
+}
+.hit:hover, .hit:focus-visible { text-decoration: none; background: var(--blue-wash); padding-left: .5rem; padding-right: .3rem; }
+.hit:focus-visible { outline-offset: -2px; }
+.hit-top { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .6rem; min-width: 0; }
+.hit-title { font-weight: 560; font-size: .95rem; line-height: 1.3; }
+.hit:hover .hit-title, .hit:focus-visible .hit-title { color: var(--blue); }
+.hit-where { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hit-excerpt { font-size: .88rem; line-height: 1.5; color: var(--ink-2); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.hit-excerpt mark { background: color-mix(in oklab, var(--blue) 15%, transparent); color: var(--ink); box-shadow: inset 0 -1px 0 var(--blue-line); }
+
+/* Card: a hairline box on the page. No shadow, no radius. Hover: the border turns blue. (source: .note) */
+.card {
+  display: grid; gap: .55rem; padding: 1rem 1.1rem 1.05rem; border: 1px solid var(--line); background: var(--surface);
+  transition: border-color var(--t-fast) var(--ease);
+}
+.card:hover { border-color: var(--blue); }
+.card.is-gone { background: var(--sunken); }                    /* no longer current */
+.card.is-gone .card-title { color: var(--ink-2); }
+.card-top { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem .7rem; }
+.card-when { font-family: var(--font-pixel); font-size: .72rem; letter-spacing: .05em; color: var(--ink-2); }
+.card-title { margin: 0; font-size: 1.06rem; font-weight: 560; line-height: 1.35; }
+.card-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); }
+.card-actions { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .2rem; }
+.cards { display: grid; gap: .7rem; }
+
+/* Stats: a hairline grid of big blue pixel numerals, each with an eyebrow under it. (source: .stats, .stat) */
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid var(--line); margin-bottom: 1rem; }
+.stat { padding: 1rem 1.1rem 1.05rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stat:nth-child(2n) { border-right: 0; }
+.stat:nth-last-child(-n + 2) { border-bottom: 0; }
+.stat .numeral { display: block; font-size: clamp(2rem, 2.7vw, 3rem); line-height: 1; color: var(--blue); margin-bottom: .45rem; }
+
+/* Frame: a larger hairline box with a head row (blue eyebrow, a mono count, quiet buttons at the right)
+   and a body under a hairline. (source: .hist-frame, .hist-head, .hist-count) */
+.frame { border: 1px solid var(--line); background: var(--surface); }
+.frame-head { position: relative; display: flex; align-items: center; gap: .4rem .5rem; min-height: 3.5rem; padding: .6rem 1.1rem; }
+.frame-head .eyebrow { color: var(--blue); margin-right: .4rem; }
+.frame-count { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.frame-head .btn { min-height: 2.25rem; flex: none; }
+.frame-body { border-top: 1px solid var(--line); padding: 1.15rem 1.1rem; }
+
+/* Callout: a note that matters, said once. A 2px blue rule on the left and a blue wash.
+   (source: .caveat; .search-hint, .notice--gone and .edition-note are the same thing) */
+.callout { margin: 1rem 0 0; padding: .75rem .9rem; border-left: 2px solid var(--blue); background: var(--blue-wash); font-size: .9rem; }
+/* A quotation or the source's own statement: the rule without the wash. (source: .sv-quote) */
+.quote { margin: 0; padding: .1rem 0 .1rem 1rem; border-left: 2px solid var(--blue); font-size: 1.02rem; line-height: 1.65; color: var(--ink); }
+
+/* History list: dated entries down a rule; square markers, the newest filled. (source: .history, dashboard.css) */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1rem; border-left: 1px solid var(--line-strong); }
+.timeline li { position: relative; padding: 0 0 1rem .4rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.27rem; top: .35rem; width: .5rem; height: .5rem; background: var(--bg); border: 1.5px solid var(--blue); }
+.timeline li:first-child::before { background: var(--blue); }
+.timeline time { display: block; font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .05em; color: var(--ink-2); }
+.timeline p { margin: .2rem 0 0; font-size: .9rem; }
+
+/* Dotted pictures (flags in CPIN Explorer): a <canvas> drawn as a matrix of round dots. Sizes only; the
+   drawing is script (see the specimen and prototypes/shared/dot-flag.js). */
+canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height: auto; }
+.dotflag--tag { width: 1.25em; }
+.dotflag--row { width: 1.35rem; }
+.dotflag--hero { width: clamp(5.5rem, 7vw, 8rem); }
+
+
+/* --- 10. Tables and long text ---------------------------------------------------------------------- */
+/* A table always sits in a scroller with a hairline box, so a wide one never widens the page. */
+.tbl-scroll { margin: 1.3rem 0 1.6rem; overflow-x: auto; border: 1px solid var(--line); background: var(--surface); scrollbar-width: thin; }
+.tbl { border-collapse: collapse; width: 100%; font-size: .86rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+.tbl th, .tbl td { text-align: left; padding: .5rem .85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.tbl th { font-family: var(--font-mono); font-weight: 500; font-size: .74rem; letter-spacing: .02em; color: var(--ink-2); background: var(--sunken); }
+.tbl tbody th { background: transparent; color: var(--ink); }
+.tbl tr:last-child > * { border-bottom: 0; }
+/* Compact data table: mono figures, a pixel-capital head that stays put, a blue wash on the row under the pointer.
+   (source: .wc-tbl) */
+.tbl--data { width: auto; font-family: var(--font-mono); font-size: .74rem; font-weight: 400; line-height: 1.35; letter-spacing: 0; }
+.tbl--data th, .tbl--data td { padding: .24rem .8rem .22rem; white-space: nowrap; }
+.tbl--data thead th { position: sticky; top: 0; z-index: 1; background: var(--sunken); font-family: var(--font-pixel); font-weight: 400; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); box-shadow: inset 0 -1px 0 var(--line); }
+.tbl--data tbody th { font-weight: 500; color: var(--ink); }
+.tbl--data td { color: var(--ink-2); }
+.tbl--data tbody tr:hover > * { background: var(--blue-wash); }
+/* Figures that went up or down: blue or red, and always with their sign. (source: .ni, .nd) */
+.ni { color: var(--ins); } .nd { color: var(--del); }
+
+/* Long-form text. (source: .doc, reader.css) */
+.prose { font-family: var(--font-text); font-size: var(--doc-fs); line-height: var(--doc-lh); color: var(--ink); letter-spacing: 0; max-width: var(--measure); }
+.prose a { text-decoration: underline; text-decoration-color: var(--blue-line); text-decoration-thickness: 1px; text-underline-offset: .2em; }
+.prose a:hover { text-decoration-color: currentColor; }
+.prose h2, .prose h3, .prose h4 { text-wrap: balance; }
+.prose h2 { font-size: 1.5rem; line-height: 1.25; font-weight: 620; letter-spacing: -.022em; margin: 3rem 0 1rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { font-size: 1.16rem; line-height: 1.35; font-weight: 620; letter-spacing: -.012em; margin: 2.2rem 0 .7rem; }
+.prose h4 { font-size: 1.03rem; line-height: 1.4; font-weight: 600; margin: 1.8rem 0 .55rem; color: var(--ink); }
+.prose p { margin: 0 0 1.05rem; }
+.prose ul, .prose ol { margin: 0 0 1.05rem; padding-left: 1.4rem; }
+.prose ul { list-style: square; }
+.prose li { margin: .32rem 0; }
+.prose ul > li::marker { color: var(--blue); }
+.prose ol > li::marker { font-family: var(--font-mono); font-size: .8em; color: var(--ink-3); }
+.prose blockquote { margin: 1.2rem 0 1.4rem; padding: .1rem 0 .1rem 1.2rem; border-left: 2px solid var(--line-strong); color: var(--ink-2); }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 2rem 0; }
+/* Added and removed text. Underline and strike-through carry the meaning; the colour only helps. */
+ins.chg, .prose ins { padding: .02em .1em; background: var(--ins-wash); color: var(--ins); text-decoration: underline; text-decoration-color: var(--ins); text-decoration-thickness: .08em; text-underline-offset: .2em; }
+del.chg, .prose del { padding: .02em .1em; background: var(--del-wash); color: var(--del); text-decoration: line-through; text-decoration-color: var(--del); text-decoration-thickness: .08em; }
+/* A saved highlight in the text. (source: mark.hl) */
+mark.hl {
+  background-color: var(--mark); color: inherit; cursor: pointer; padding: .06em 0;
+  text-decoration: underline; text-decoration-color: var(--blue); text-decoration-thickness: 1.5px; text-underline-offset: .24em;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+  transition: background-color var(--t-fast) var(--ease), text-decoration-color var(--t-fast) var(--ease);
+}
+mark.hl:hover { background-color: var(--mark-strong); }
+
+
+/* --- 11. Overlays ---------------------------------------------------------------------------------- */
+/* Tooltip. Put .has-tip on the thing and a .tip inside it. It eases in (fade, 0.3rem rise, de-blur) on
+   hover and on keyboard focus, and out again. (source: .lc and .lc-tip, reader.css) */
+.has-tip { position: relative; }
+.tip {
+  position: absolute; z-index: 30; bottom: calc(100% + .55rem); left: 50%; width: max-content; max-width: min(26rem, 86vw);
+  transform: translate(-50%, .3rem) scale(.98); filter: blur(4px); opacity: 0; pointer-events: none;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line-strong); box-shadow: var(--shadow);
+  padding: .6rem .75rem; font-family: var(--font-text); font-size: .78rem; font-weight: 400; letter-spacing: 0; text-transform: none; line-height: 1.45; white-space: normal; text-align: left;
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease), filter var(--t-fast) var(--ease);
+}
+.tip b { display: block; font-family: var(--font-pixel); font-weight: 400; font-size: .6rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); margin-bottom: .35rem; }
+.has-tip:hover .tip, .has-tip:focus .tip, .has-tip:focus-within .tip { opacity: 1; transform: translate(-50%, 0); filter: none; }
+/* The short one: a blue tag in mono, for a point on a chart or a timeline: its facts on top and, under a
+   hairline, what it says. <span class="tip tip--tag"><span>facts</span><span class="tip-says">…</span></span>
+   (source: .rs-tip and .rs-tip-says, timeline.css) */
+.tip--tag {
+  max-width: min(23rem, 86vw); padding: .42em .6em .38em; border: 0; box-shadow: none; background: var(--blue); color: var(--blue-ink);
+  font-family: var(--font-mono); font-size: .66rem; line-height: 1.4;
+  transform: translate(-50%, .3rem) scale(.97); filter: blur(3px);
+}
+.tip--tag span { display: block; white-space: pre-line; }
+.tip-says { margin-top: .5em; padding-top: .45em; border-top: 1px solid color-mix(in oklab, var(--blue-ink) 55%, transparent); }
+/* Near an edge of the page a tooltip hangs from that side of its anchor, so it never leaves the page.
+   (generalised from .rs-tip.edge-l and .rs-tip.edge-r, which shift a script-placed tooltip the same way) */
+.tip.edge-l { left: -.3rem; transform: translate(0, .3rem) scale(.98); }
+.tip.edge-r { left: auto; right: -.3rem; transform: translate(0, .3rem) scale(.98); }
+.has-tip:hover .tip.edge-l, .has-tip:focus .tip.edge-l, .has-tip:focus-within .tip.edge-l,
+.has-tip:hover .tip.edge-r, .has-tip:focus .tip.edge-r, .has-tip:focus-within .tip.edge-r { transform: none; }
+
+/* Popover: detail about one thing, opened by a click. Position it with script; add .is-in as it opens. */
+.pop {
+  position: absolute; z-index: 45; left: 0; top: 0; width: min(28rem, calc(100vw - 1.5rem));
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line-strong); box-shadow: var(--shadow);
+  font-size: .86rem; line-height: 1.5;
+}
+.pop[hidden] { display: none; }
+.pop.is-in { animation: pop-in var(--t) var(--ease) both; }
+/* On a phone the same popover is a sheet that slides up from the bottom edge. */
+.pop.is-sheet { position: fixed; left: 0; right: 0; top: auto; bottom: 0; width: auto; border-inline: 0; border-bottom: 0; padding-bottom: env(safe-area-inset-bottom); }
+.pop.is-sheet.is-in { animation: sheet-in var(--t-slow) var(--ease) both; }
+@keyframes sheet-in { from { transform: translateY(100%); } }
+.pop-head { display: flex; align-items: center; gap: .55rem; padding: .7rem .85rem .6rem; border-bottom: 1px solid var(--line); }
+.pop-head .eyebrow { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pop-x { margin-left: auto; width: 1.8rem; height: 1.8rem; display: grid; place-items: center; border: 0; background: none; color: var(--ink-2); cursor: pointer; font-size: 1.1rem; line-height: 1; }
+.pop-x:hover { color: var(--blue); background: var(--blue-wash); }
+.pop-body { padding: .8rem .85rem .9rem; display: grid; gap: .8rem; max-height: min(70vh, 34rem); overflow: auto; }
+.pop-actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+.pop-actions .btn { min-height: 2.15rem; font-size: .74rem; }
+.pop-actions .btn--del { margin-left: auto; }
+/* A small one with a blue border, under the control that opened it. (source: .check-pop, .pmenu-pop) */
+.pop--blue { border-color: var(--blue); box-shadow: none; padding: 1rem 1.1rem; font-size: .9rem; }
+
+/* Menu: a few choices under a button; each has a mono name and one line saying what it does. (source: .sv-menu) */
+.menu { position: absolute; top: calc(100% + .35rem); left: 0; z-index: 30; min-width: 19rem; display: grid;
+  background: var(--surface); border: 1px solid var(--line-strong); box-shadow: 0 14px 34px -16px color-mix(in oklab, var(--ink) 35%, transparent);
+  transform-origin: top left; animation: pop-in var(--t) var(--ease) both; }
+.menu[hidden] { display: none; }
+.menu.out { animation: menu-out var(--t-fast) var(--ease) both; pointer-events: none; }
+@keyframes menu-out { to { opacity: 0; transform: translateY(-.25rem) scale(.985); filter: blur(2px); } }
+.menu button { display: grid; gap: .2rem; padding: .75rem .9rem; border: 0; border-bottom: 1px solid var(--line); background: none; color: var(--ink);
+  font: inherit; text-align: left; cursor: pointer; transition: background var(--t-fast) var(--ease), color var(--t-fast) var(--ease); }
+.menu button:last-child { border-bottom: 0; }
+.menu button:hover, .menu button:focus-visible { background: var(--blue-wash); color: var(--blue); outline: none; }
+.menu b { font-family: var(--font-mono); font-size: .78rem; font-weight: 500; letter-spacing: .02em; }
+.menu small { font-size: .74rem; line-height: 1.4; color: var(--ink-2); }
+
+/* Toast: one line at the bottom centre, ink on the page colour reversed, with at most one action.
+   It eases in (pop-in) and out (.out), then is removed. Container: <div class="toasts" aria-live="polite">. */
+.toasts { position: fixed; z-index: 70; left: 50%; bottom: calc(1.2rem + env(safe-area-inset-bottom)); transform: translateX(-50%); display: grid; gap: .45rem; justify-items: center; pointer-events: none; }
+.toast {
+  display: inline-flex; align-items: center; gap: .9rem; padding: .6rem .7rem .6rem .9rem; pointer-events: auto;
+  background: var(--ink); color: var(--bg); box-shadow: var(--shadow); font-family: var(--font-mono); font-size: .78rem;
+  animation: pop-in var(--t) var(--ease) both;
+}
+.toast.out { animation: toast-out var(--t) var(--ease) both; }
+@keyframes toast-out { to { opacity: 0; transform: translateY(.4rem) scale(.98); filter: blur(3px); } }
+.toast button { border: 0; padding: .25rem .5rem; background: var(--blue); color: var(--blue-ink); font-family: var(--font-pixel); font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; cursor: pointer; }
+
+/* Sheet backdrop (phones). (source: .sheet-backdrop) */
+.backdrop { position: fixed; inset: 0; z-index: 50; background: rgb(10 12 16 / .28); opacity: 0; transition: opacity var(--t) var(--ease); }
+.backdrop.on { opacity: 1; }
+.backdrop[hidden] { display: none; }
+
+
+/* --- 12. States ------------------------------------------------------------------------------------ */
+/* Empty, in a list: one plain sentence. */
+.empty { color: var(--ink-2); font-size: .92rem; }
+/* Nothing found: a sunken box that says so (a tag, a sentence) and offers ways on. (source: .nomatch) */
+.empty-box { padding: 1.3rem 1.2rem 1.2rem; border: 1px solid var(--line); background: var(--sunken); max-width: 46rem; animation: pop-in var(--t) var(--ease) both; }
+.empty-box h2 { margin: .8rem 0 .4rem; font-size: 1.1rem; font-weight: 600; line-height: 1.35; overflow-wrap: anywhere; }
+.empty-box p { margin: 0 0 .9rem; color: var(--ink-2); font-size: .92rem; }
+.examples { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0; }
+.examples .eyebrow { margin-right: .2rem; }
+/* Nothing yet: a dashed box that says how to start. (source: .rail-empty) */
+.empty-start { margin: 0; padding: 1rem .9rem; border: 1px dashed var(--line-strong); color: var(--ink-2); font-size: .84rem; line-height: 1.55; }
+.empty-start b { color: var(--ink); font-weight: 600; }
+
+/* Loading: grey bars where the text will be, breathing slowly. Never a spinner. */
+.skeleton { display: grid; gap: .9rem; padding-top: .4rem; }
+.skeleton i { display: block; height: .9rem; background: var(--sunken); animation: shimmer 1.4s var(--ease-in-out) infinite alternate; }
+.skeleton i:nth-child(3n) { width: 82%; } .skeleton i:nth-child(4n) { width: 64%; } .skeleton i:nth-child(5n) { width: 91%; }
+@keyframes shimmer { from { opacity: .55; } to { opacity: 1; } }
+/* Working on what is already shown: it dims in place and comes back; nothing is removed. (source: .presults.is-busy) */
+.busy { transition: opacity var(--t) var(--ease); }
+.busy.is-busy { opacity: .5; }
+/* A 2px blue line along the bottom edge of a bar, for work with a known length: set --f from 0 to 1. (source: .busy-bar) */
+.busy-bar { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--blue); transform-origin: 0 50%; transform: scaleX(var(--f, 0)); opacity: 0; transition: transform .35s var(--ease), opacity .3s var(--ease); pointer-events: none; }
+.is-busy > .busy-bar { opacity: 1; }
+
+/* Something failed: a plain box that says what, and one button to try again. (source: .load-error) */
+.load-error { padding: 1.2rem 1.3rem; border: 1px solid var(--line-strong); }
+.load-error h2 { margin: .4rem 0 .5rem; font-size: 1.2rem; font-weight: 620; }
+.load-error p { margin: 0 0 .9rem; color: var(--ink-2); }
+
+/* Arrived from a link: the target is marked for a moment, then the mark fades. (source: .note.is-target) */
+.is-target { animation: target-flash 1.8s var(--ease) both; }
+@keyframes target-flash {
+  0%, 30% { border-color: var(--blue); background: var(--blue-wash); box-shadow: 0 0 0 3px var(--blue-wash); }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+
+/* --- 13. Layout: page and app shell ----------------------------------------------------------------
+   .page is the three rows of every page: header, content, footer. On its own the page scrolls and the
+   header sticks (phones, and pages that are a document).
+   .page--shell, from 901px wide: the page itself does not scroll. Header on top, footer always in view,
+   and the content column (.panel) scrolls inside. Up to 900px it is an ordinary scrolling page again.
+   (source: body and body.dash in dashboard.css; put the classes on <body>, or on the root element of an
+   app that renders into one, with the header, main and footer as its direct children.) */
+.page { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; grid-template-columns: minmax(0, 1fr); }
+.page > * { min-width: 0; }               /* a long line must never widen the page: it is cut short instead */
+
+/* Header */
+.top {
+  position: sticky; top: 0; z-index: 30; display: flex; align-items: center; gap: .9rem;
+  height: var(--top-h); padding: 0 var(--pad-x);
+  background: color-mix(in oklab, var(--bg) 86%, transparent); backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid var(--line);
+}
+.top .search { margin-left: auto; }
+.top:not(:has(.search)) .theme-btn { margin-left: auto; }     /* a page with no search: the theme button still sits at the right */
+/* The product mark and wordmark: top left, a link to the start page. (source: brand.css) */
+.brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none; flex: none; }
+.brand:hover { text-decoration: none; }
+.brand-mark { width: 2.1rem; height: 2.1rem; color: var(--blue); flex: none; transition: transform var(--t-slow, 520ms) var(--ease, ease); }
+.brand:hover .brand-mark { transform: rotate(-12deg); }
+/* Wordmark: two fonts at one size. The first word in square pixel and blue (<b>), the second in mono. */
+.brand-name { font-family: var(--font-mono); font-size: .95rem; letter-spacing: .22em; white-space: nowrap; }
+.brand-name b { font-family: var(--font-pixel); font-weight: 400; font-size: 1em; letter-spacing: .16em; color: var(--blue); margin-right: .55em; }
+/* Which page this is, beside the wordmark, on pages other than the start page. (source: .top-crumb) */
+.top-crumb { font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding-left: .9rem; border-left: 1px solid var(--line); white-space: nowrap; }
+
+/* Sticky bar under the header: what is being shown, and the one switch that changes it. One line, always:
+   it never wraps, so it has one height; the less important parts drop out as the window narrows. (source: .bar) */
+.bar {
+  position: sticky; top: var(--top-h); z-index: 25;
+  background: color-mix(in oklab, var(--bg) 90%, transparent); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  border-block: 1px solid var(--line); transition: box-shadow var(--t) var(--ease);
+}
+.bar.is-stuck { box-shadow: 0 10px 22px -20px rgb(16 24 40 / .55); }
+.bar-in { display: flex; flex-wrap: nowrap; align-items: center; gap: .55rem .9rem; min-height: 3.3rem; padding: .45rem var(--pad-x); }
+.bar-in > * { flex: none; }
+.bar-in > .spacer { flex: 1 1 0; min-width: 0; }
+/* What is shown: a tag, a pixel version or name, a mono date. (source: .ed-chip) */
+.bar-what { flex: 0 1 auto; display: inline-flex; align-items: center; gap: .5rem; min-width: 0; overflow: hidden; font-family: var(--font-mono); font-size: .76rem; color: var(--ink-2); white-space: nowrap; }
+.bar-what b { font-family: var(--font-pixel); font-weight: 400; font-size: .86rem; letter-spacing: .05em; color: var(--ink); }
+.bar-what .tag { font-size: .58rem; }
+
+/* Two columns under the header: a stage for the main picture, a panel for the words. (source: .layout, .stage, .panel) */
+.layout { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(25rem, .82fr); align-items: start; }
+.stage {
+  position: sticky; top: var(--top-h); height: calc(100vh - var(--top-h)); min-height: 34rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;
+  padding: 1.5rem clamp(1rem, 2vw, 2.5rem); border-right: 1px solid var(--line); overflow: hidden;
+}
+.panel { padding: clamp(1.25rem, 2.4vw, 2.75rem); min-width: 0; }
+/* What is in the panel pops in, one thing after another (set --i: 0, 1, 2 ... on each child). */
+.panel > * { animation: pop-in var(--t) var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+.panel > :nth-child(n + 9) { animation: none; }      /* only what is on screen */
+.panel.no-anim > * { animation: none; }
+
+/* Footer: the Roberts Macros mark alone at the left, in line with the credit; links and "Report a bug" at the right.
+   <footer class="foot"><span class="foot-rm">…two <img>…</span><span>Sources: …</span><span class="foot-end">…</span></footer> */
+.foot { display: flex; flex-wrap: nowrap; align-items: center; justify-content: flex-start; gap: .6rem 1.1rem;
+  padding: 1.1rem var(--pad-x); border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: .7rem; line-height: 1.6; color: var(--ink-2); background: var(--bg); }
+.foot > span:not(.foot-rm):not(.foot-end) { flex: 1 1 auto; min-width: 0; }
+.foot-rm { flex: none; display: inline-flex; align-items: center; color: var(--ink-2); text-decoration: none; }
+.foot-rm img { width: auto; height: 1.7rem; display: block; }
+.foot-rm .rm-light { display: none; }                 /* the light version of the mark shows in dark mode */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .foot-rm .rm-ink { display: none; }
+  :root:not([data-theme="light"]) .foot-rm .rm-light { display: block; }
+}
+:root[data-theme="dark"] .foot-rm .rm-ink { display: none; }
+:root[data-theme="dark"] .foot-rm .rm-light { display: block; }
+.foot-end { display: inline-flex; align-items: center; gap: 1.1rem; margin-left: auto; flex: none; }
+.foot-end:not(:has(> :not([hidden]))) { display: none; }
+.foot-link { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; transition: color var(--t-fast, 140ms) var(--ease, ease); }
+.foot-link:hover, .foot-link:focus-visible { color: var(--blue); text-decoration: underline; text-underline-offset: .35em; }
+.foot-bug { min-height: 0; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; padding: .45rem .7rem; white-space: nowrap; }
+.foot-bug[hidden] { display: none; }
+
+/* The app shell: 901px and wider. */
+@media (min-width: 901px) {
+  .page--shell { height: 100vh; height: 100dvh; min-height: 0; overflow: hidden; grid-template-rows: auto minmax(0, 1fr) auto; }
+  .page--shell > .top { position: relative; top: auto; background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }   /* nothing scrolls under it now */
+  .page--shell > .layout { min-height: 0; grid-template-rows: minmax(0, 1fr); align-items: stretch; }
+  .page--shell .stage { position: relative; top: auto; height: auto; min-height: 0; container-type: size; padding-top: 1rem; padding-bottom: 1rem; gap: .8rem; }
+  .page--shell .panel { min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+  .page--shell > .foot { padding-top: .55rem; padding-bottom: .55rem; }
+}
+
+/* Narrower: one column, the page scrolls, the search drops to a row of its own under the header. */
+@media (max-width: 900px) {
+  .top { flex-wrap: wrap; height: auto; padding-top: .6rem; padding-bottom: .6rem; row-gap: .6rem; }
+  .top .search { order: 3; width: 100%; margin-left: 0; }
+  .top .search kbd { display: none; }
+  .top .theme-btn { margin-left: auto; }
+  .top-crumb { display: none; }
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .stage { position: relative; top: 0; height: auto; min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); padding: 1rem; }
+  .bar-in { gap: .45rem .6rem; padding-block: .35rem; }
+  .switch { padding: 0 .7rem 0 .55rem; min-height: 2.6rem; }
+}
+/* Phones. */
+@media (max-width: 600px) {
+  /* A frame's head wraps: the count drops to a line of its own, the buttons stay at the right. (source: .hist-head at 599px) */
+  .frame-head { flex-wrap: wrap; padding: .6rem .8rem; }
+  .frame-head .eyebrow { margin-right: auto; }
+  .frame-head .spacer { display: none; }
+  .frame-count { flex-basis: 100%; order: 5; }
+  .brand-mark { width: 1.8rem; height: 1.8rem; }
+  .brand-name { font-size: .8rem; letter-spacing: .16em; }
+  .brand-name b { letter-spacing: .12em; }
+  .foot-rm img { height: 1.4rem; }
+  .foot { flex-wrap: wrap; align-items: flex-start; }
+  .foot > span:not(.foot-rm):not(.foot-end) { flex: 1 1 0; }
+  .foot-end { margin-left: 0; width: 100%; }
+}
+
+
+/* --- 14. Motion ------------------------------------------------------------------------------------
+   "No snaps". Everything eases; nothing jumps, flashes or moves what is around it. */
+/* Entrance: things pop in (a small rise, a slight scale and a de-blur), never jump. Stagger with --i. */
+@keyframes pop-in { from { opacity: 0; transform: translateY(.35rem) scale(.985); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+.pop-in { animation: pop-in var(--t) var(--ease) both; animation-delay: calc(var(--i, 0) * 45ms); }
+
+/* Fold: open and close a section by easing a grid row between 1fr and 0fr, so the height needs no
+   measuring and nothing jumps. The inner element clips. (source: .hist-body and .hist-clip, reader.css)
+   <div class="fold"><div class="fold-in">…</div></div>, and .is-closed on .fold. */
+.fold { display: grid; grid-template-rows: 1fr; transition: grid-template-rows var(--t-slow) var(--ease); }
+.fold.is-closed { grid-template-rows: 0fr; }
+.fold-in { min-height: 0; overflow: hidden; }
+
+/* Crossfade: old and new content share one grid cell; the old fades out as the new fades in, and the box
+   keeps one height throughout. Put both in .swap and toggle .is-out.
+   Generalised: the source stacks them the same way (.wc and .wc-in, reader.css: grid-area 1 / 1) but runs
+   the fade from script with element.animate(): old out over 230ms, new in over 260ms after 40ms, each
+   with a 4px blur, easing --ease; and if the two differ in height the box eases between them over 240ms. */
+.swap { display: grid; }
+.swap > * { grid-area: 1 / 1; min-width: 0; transition: opacity var(--t) var(--ease), filter var(--t) var(--ease); }
+.swap > .is-out { opacity: 0; filter: blur(4px); pointer-events: none; }
+
+/* Sparkle: the small mark under the pointer fills, grows, and four specks leave it and fade, again and
+   again while the pointer stays, so a mark a few pixels across is plainly the thing a click will go to.
+   Add .is-hot to the mark while the pointer or the keyboard focus is on its target (the target is much
+   larger than the mark). The specks are the shadows of one 1.5px square.
+   (source: .rs-node, .rs-node.is-hot and @keyframes rs-sparkle, timeline.css; here the mark sits in
+   the flow of the page instead of being placed on a timeline) */
+.mark-dot {
+  position: relative; display: inline-block; width: .5rem; height: .5rem;
+  background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--ink-3);
+  transition: background-color var(--t) var(--ease), box-shadow var(--t) var(--ease), transform var(--t) var(--ease);
+}
+.mark-dot.is-on { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue); }             /* the current one */
+.mark-dot.is-hot { background: var(--blue); box-shadow: inset 0 0 0 1.5px var(--blue); transform: scale(1.45); }
+.mark-dot::after { content: ""; position: absolute; left: 50%; top: 50%; width: 1.5px; height: 1.5px; margin: -.75px 0 0 -.75px; color: var(--blue); opacity: 0; pointer-events: none; transform: rotate(45deg); }
+.mark-dot.is-hot::after { animation: sparkle 1.5s var(--ease) infinite; }
+@keyframes sparkle {
+  0% { opacity: 0; box-shadow: -2px -2px 0 0 currentColor, 2px -2px 0 0 currentColor, 2px 2px 0 0 currentColor, -2px 2px 0 0 currentColor; }
+  14% { opacity: 1; }
+  60%, 100% { opacity: 0; box-shadow: -5.5px -5.5px 0 -.2px currentColor, 5.5px -5.5px 0 -.2px currentColor, 5.5px 5.5px 0 -.2px currentColor, -5.5px 5.5px 0 -.2px currentColor; }
+}
+
+/* Changing theme: colours switch in one frame, with transitions off for that frame (add the class to
+   <html>, remove it two animation frames later). Easing hundreds of colours at once is slow and smeary. */
+.theme-switching *, .theme-switching *::before, .theme-switching *::after { transition: none !important; }
+
+/* Reduced motion: everything still happens, at once. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .brand-mark { transition: none; }
+  .mark-dot { transition: none; }
+  .mark-dot.is-hot::after { animation: none; }
+}
+
+@media print {
+  .top, .bar, .toasts, .pop, .menu { display: none !important; }
+}

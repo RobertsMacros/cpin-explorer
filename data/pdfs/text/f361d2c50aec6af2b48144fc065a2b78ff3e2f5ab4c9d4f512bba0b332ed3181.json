@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 74,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 67,
+ "paragraphs": 595,
+ "list_items": 88,
+ "tables": 3,
+ "figures": 4,
+ "footnotes": 316,
+ "bookmarks": 67,
+ "warnings": [
+  "footnotes with no mark found in the text: 132"
+ ],
+ "figure_pages": {
+  "7370bc6d26b19adfb29566e00fe636505a0ebff6c95dfa98a0c03dec7886bbe3.png": 25,
+  "dc947fd711dc3d887b0e3f67c052314d2e98448a01d9af88d781388ec244bcf6.png": 28,
+  "0d534adbadd8e049cc43587c3d71255ebbbe1e69e964b48c1869fbc72bb4c073.png": 36,
+  "d9d42c751fa82c896ceb2a26938724a50ecd7811832fcb2fd7aa638ae41e718b.png": 37
+ },
+ "figure_sizes": {
+  "7370bc6d26b19adfb29566e00fe636505a0ebff6c95dfa98a0c03dec7886bbe3.png": [
+   821,
+   371
+  ],
+  "dc947fd711dc3d887b0e3f67c052314d2e98448a01d9af88d781388ec244bcf6.png": [
+   805,
+   325
+  ],
+  "0d534adbadd8e049cc43587c3d71255ebbbe1e69e964b48c1869fbc72bb4c073.png": [
+   823,
+   373
+  ],
+  "d9d42c751fa82c896ceb2a26938724a50ecd7811832fcb2fd7aa638ae41e718b.png": [
+   798,
+   419
+  ]
+ },
+ "figure_text": {
+  "7370bc6d26b19adfb29566e00fe636505a0ebff6c95dfa98a0c03dec7886bbe3.png": 199,
+  "dc947fd711dc3d887b0e3f67c052314d2e98448a01d9af88d781388ec244bcf6.png": 88,
+  "0d534adbadd8e049cc43587c3d71255ebbbe1e69e964b48c1869fbc72bb4c073.png": 122,
+  "d9d42c751fa82c896ceb2a26938724a50ecd7811832fcb2fd7aa638ae41e718b.png": 166
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Afghanistan: Unaccompanied children",
+ "cover_version": "2.0",
+ "cover_date": "April 2021",
+ "pdf_sha256": "f361d2c50aec6af2b48144fc065a2b78ff3e2f5ab4c9d4f512bba0b332ed3181",
+ "images": [
+  "0d534adbadd8e049cc43587c3d71255ebbbe1e69e964b48c1869fbc72bb4c073.png",
+  "7370bc6d26b19adfb29566e00fe636505a0ebff6c95dfa98a0c03dec7886bbe3.png",
+  "d9d42c751fa82c896ceb2a26938724a50ecd7811832fcb2fd7aa638ae41e718b.png",
+  "dc947fd711dc3d887b0e3f67c052314d2e98448a01d9af88d781388ec244bcf6.png"
+ ]
+}

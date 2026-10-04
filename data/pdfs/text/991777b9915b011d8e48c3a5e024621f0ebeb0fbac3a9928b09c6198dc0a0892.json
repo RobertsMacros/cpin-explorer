@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 45,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 430,
+ "list_items": 14,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 128,
+ "bookmarks": 54,
+ "warnings": [
+  "footnotes with no mark found in the text: 120"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Information Note Honduras: Background Note",
+ "cover_version": "1.0",
+ "cover_date": "March 2021",
+ "pdf_sha256": "991777b9915b011d8e48c3a5e024621f0ebeb0fbac3a9928b09c6198dc0a0892",
+ "images": []
+}

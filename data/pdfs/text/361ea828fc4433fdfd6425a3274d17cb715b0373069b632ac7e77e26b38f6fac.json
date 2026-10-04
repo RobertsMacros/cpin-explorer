@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 99,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 92,
+ "paragraphs": 846,
+ "list_items": 85,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 232,
+ "bookmarks": 86,
+ "warnings": [
+  "footnotes with no mark found in the text: 151"
+ ],
+ "figure_pages": {
+  "c31f0bd02c44a4422ef6a8448bfa9a8b09e0728a424142c53e7bebbef01d34c5.jpg": 81
+ },
+ "figure_sizes": {
+  "c31f0bd02c44a4422ef6a8448bfa9a8b09e0728a424142c53e7bebbef01d34c5.jpg": [
+   796,
+   525
+  ]
+ },
+ "figure_text": {
+  "c31f0bd02c44a4422ef6a8448bfa9a8b09e0728a424142c53e7bebbef01d34c5.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Russia: Sexual orientation and gender identity or expression",
+ "cover_version": "1.0",
+ "cover_date": "November 2020",
+ "pdf_sha256": "361ea828fc4433fdfd6425a3274d17cb715b0373069b632ac7e77e26b38f6fac",
+ "images": [
+  "c31f0bd02c44a4422ef6a8448bfa9a8b09e0728a424142c53e7bebbef01d34c5.jpg"
+ ]
+}

@@ -1,0 +1,544 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-medical-treatment-and-healthcare-bangladesh-july-2022-accessible",
+ "pdf_sha256": "3b468bbd7e52dcf5c4eb60ba7d7e948a5ad59449ac74062b4cd522c5aa7c869c",
+ "body_sha256": "d5eaece702f03d7faa2b3c96429b71266a3d56e6fd90ad9eeee6267b5398a179",
+ "words": {
+  "web": 11089,
+  "pdf": 11072
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 2,
+   "pdf_words": 1,
+   "share": 0.000135,
+   "passages": 0,
+   "sizes": {
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 13,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "stray characters": {
+    "differences": 13,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 6,
+   "web_words": 8,
+   "pdf_words": 5
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "July 2022",
+   "pdf": "2.0",
+   "pdf_date": "July 2022"
+  },
+  "section_updated": {
+   "web": [
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022"
+   ],
+   "pdf": [
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022",
+    "30 June 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 2,
+   "web_notices": 2,
+   "pdf_notices": 2
+  },
+  "footnotes": {
+   "web": 113,
+   "pdf": 113,
+   "pdf_raw": 113,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 42,
+   "pdf": 37
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Bangladesh(06).",
+   "pdf": "Bangladesh106.",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "private) palliative care services in Bangladesh include Hospice",
+   "after": "The Cancer Care Centre at the private Apollo",
+   "where": {
+    "heading": "palliative-care",
+    "paragraph": "15.1.1",
+    "section": "15. Palliative care",
+    "page": 29
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "00)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "aid such as a walker or a cane(",
+   "after": "12.1.5 Information found on MedCOI indicated",
+   "before_pdf": "aid such as a walker or a cane",
+   "where": {
+    "heading": "neurology-including-epilepsy",
+    "paragraph": "12.1.4",
+    "section": "12. Neurology, including epilepsy",
+    "page": 28
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "01)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "endocrinology: thyroid hormones\nHydrocortisone – endocrinology: hormones: corticosteroids(",
+   "after": "Section 13 updated: 30 June 2022\n13. Obstetrics",
+   "before_pdf": "4-endocrinology: thyroid hormones\nHydrocortisone- endocrinology: hormones: corticosteroids",
+   "where": {
+    "heading": "neurology-including-epilepsy",
+    "paragraph": "12.1.5",
+    "section": "12. Neurology, including epilepsy",
+    "page": 28
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "02)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "public health facilities (excluding community clinics) in Bangladesh...’(",
+   "after": "Section 14 updated: 30 June 2022\n14. Paediatrics",
+   "before_pdf": "public health facilities (excluding community clinics) in Bangladesh...’",
+   "where": {
+    "heading": "obstetrics",
+    "paragraph": "13.1.1",
+    "section": "13. Obstetrics",
+    "page": 28
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "03)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Development] centre, audiometry unit, physiotherapy unit and emergencies.’(",
+   "after": "14.1.2 Information found on MedCOI indicated",
+   "before_pdf": "Development] centre, audiometry unit, physiotherapy unit and emergencies.’",
+   "where": {
+    "heading": "paediatrics",
+    "paragraph": "14.1.1",
+    "section": "14. Paediatrics",
+    "page": 29
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "04)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Diagnostic research: urine cytology\nCheck up by cystoscopy(",
+   "after": "14.1.3 Information found on MedCOI indicated",
+   "before_pdf": "Diagnostic research: urine cytology\nCheck up by cystoscopy",
+   "where": {
+    "heading": "paediatrics",
+    "paragraph": "14.1.2",
+    "section": "14. Paediatrics",
+    "page": 29
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "05)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Outpatient and follow up by a speech therapist(",
+   "after": "Section 15 updated: 30 June 2022\n15. Palliative",
+   "before_pdf": "Outpatient and follow up by a speech therapist",
+   "where": {
+    "heading": "paediatrics",
+    "paragraph": "14.1.3",
+    "section": "14. Paediatrics",
+    "page": 29
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "07).",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "palliative care to its adult and child patients(",
+   "after": "Section 16 updated: 30 June 2022\n16. Orthopaedics",
+   "before_pdf": "palliative care to its adult and child patients.",
+   "where": {
+    "heading": "palliative-care",
+    "paragraph": "15.1.1",
+    "section": "15. Palliative care",
+    "page": 29
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "08)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Home assistance/ care at home by a nurse(",
+   "after": "Section 17 updated: 30 June 2022\n17. Renal (",
+   "before_pdf": "Home assistance/ care at home by a nurse",
+   "where": {
+    "heading": "orthopaedics",
+    "paragraph": "16.1.1",
+    "section": "16. Orthopaedics",
+    "page": 30
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "09)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "with little or no resources received treatment free.’(",
+   "after": "17.1.2 Information found on MedCOI indicated",
+   "before_pdf": "with little or no resources received treatment free.’",
+   "where": {
+    "heading": "renal-kidney-failure-and-dialysis",
+    "paragraph": "17.1.1",
+    "section": "17. Renal (kidney) failure and dialysis",
+    "page": 30
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "10)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Transplantation for kidney including all pre-and aftercare(",
+   "after": "Section 17 updated: 30 June 2022\n18. Tuberculosis",
+   "before_pdf": "Transplantation for kidney including all pre- and aftercare",
+   "where": {
+    "heading": "renal-kidney-failure-and-dialysis",
+    "paragraph": "17.1.2",
+    "section": "17. Renal (kidney) failure and dialysis",
+    "page": 30
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "11).",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "hospital for between 9 months and 2 years(",
+   "after": "18.1.2 MedCOI, in the 25 April",
+   "before_pdf": "hospital for between 9 months and 2 years.",
+   "where": {
+    "heading": "tuberculosis",
+    "paragraph": "18.1.1",
+    "section": "18. Tuberculosis",
+    "page": 31
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "12).",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "etc.) and resistance for tuberculosis drugs are available(",
+   "after": "18.1.3 In a medical report entitled ‘",
+   "before_pdf": "etc.) and resistance for tuberculosis drugs are available.",
+   "where": {
+    "heading": "tuberculosis",
+    "paragraph": "18.1.2",
+    "section": "18. Tuberculosis",
+    "page": 31
+   }
+  },
+  {
+   "kind": "stray characters",
+   "group": "form",
+   "verdict": "real",
+   "web": "13)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "population) and 80 000 TB deaths in 2018...’(",
+   "after": "Terms of Reference\nA ‘Terms of Reference’ (ToR)",
+   "before_pdf": "population) and 80 000 TB deaths in 2018...’",
+   "where": {
+    "heading": "tuberculosis",
+    "paragraph": "18.1.3",
+    "section": "18. Tuberculosis",
+    "page": 31
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Costs_and_currency)]",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "done at lower charges [^see costs and currency](#_",
+   "after": "than other hospitals.’\n5.1.2 The National",
+   "before_pdf": "done at lower charges [see costs and currency]",
+   "where": {
+    "heading": "cardiology-heart-conditions",
+    "paragraph": "5.1.1",
+    "section": "5. Cardiology (heart conditions)",
+    "page": 16
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Healthcare,",
+   "pdf": "Healthcare29,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "wide range of medical departments and services. Madre",
+   "after": "Thehospitalinfo.com, and MyBangla24.Com provide comprehensive lists",
+   "where": {
+    "heading": "private-sector",
+    "paragraph": "2.3.5",
+    "section": "2. Structure of the healthcare system",
+    "page": 9
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "com,",
+   "pdf": "com30,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of medical departments and services. Madre Healthcare, Thehospitalinfo.",
+   "after": "and MyBangla24.Com provide comprehensive lists of private",
+   "before_pdf": "of medical departments and services. Madre Healthcare29, Thehospitalinfo.",
+   "where": {
+    "heading": "private-sector",
+    "paragraph": "2.3.5",
+    "section": "2. Structure of the healthcare system",
+    "page": 9
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Com",
+   "pdf": "Com31",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and services. Madre Healthcare, Thehospitalinfo.com, and MyBangla24.",
+   "after": "provide comprehensive lists of private facilities which provide",
+   "before_pdf": "and services. Madre Healthcare29, Thehospitalinfo.com30, and MyBangla24.",
+   "where": {
+    "heading": "private-sector",
+    "paragraph": "2.3.5",
+    "section": "2. Structure of the healthcare system",
+    "page": 9
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Bangladesh.",
+   "pdf": "Bangladesh58.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "provide oncology treatment, see the Cancer Awareness Foundation",
+   "after": "4.2 Breast cancer\n4.2.1 Information",
+   "where": {
+    "heading": "oncology-treatment",
+    "paragraph": "4.1.5",
+    "section": "4. Cancer (oncology)",
+    "page": 15
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Hospital.",
+   "pdf": "Hospital74.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "eye hospitals in Bangladesh including Al Noor Eye",
+   "after": "7.1.3 The Bangladesh Eye Hospital in",
+   "where": {
+    "heading": "eye-treatment-ophthalmology",
+    "paragraph": "7.1.2",
+    "section": "7. Eye treatment (ophthalmology)",
+    "page": 21
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 109,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

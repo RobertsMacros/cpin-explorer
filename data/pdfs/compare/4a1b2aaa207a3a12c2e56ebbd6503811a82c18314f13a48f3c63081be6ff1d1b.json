@@ -1,0 +1,239 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-smugglers-iran-february-2022-accessible",
+ "pdf_sha256": "4a1b2aaa207a3a12c2e56ebbd6503811a82c18314f13a48f3c63081be6ff1d1b",
+ "body_sha256": "4d92a0a57dac50b5502c99672c9d52c7c93f474eb4825399c3e415261183cb39",
+ "words": {
+  "web": 20149,
+  "pdf": 20087
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 80,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "caption": {
+    "differences": 3,
+    "web_words": 80,
+    "pdf_words": 0
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "September 2025",
+   "pdf": "5.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "19 September 2025"
+   ],
+   "pdf": [
+    "19 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 192,
+   "pdf": 192,
+   "pdf_raw": 192,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 39,
+   "pdf": 37
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map produced in the April 2019 GIATOC report showing smuggling points visited by the report’s author and other known smuggling points along the Iran-Iraq Kurdistan border",
+   "pdf": "",
+   "web_words": 28,
+   "pdf_words": 0,
+   "before": "known smuggling points along the Iran-Iraq border:",
+   "after": "9.2.3 A further report about Iran’",
+   "where": {
+    "heading": "Maps",
+    "paragraph": "9.2.2",
+    "section": "9. Law enforcement",
+    "page": 5
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map produced in the October 2020 GIATOC report of the Iran-Iraq border, showing official border crossings, major points of entry and exit, and hotspots for informal crossings",
+   "pdf": "",
+   "web_words": 28,
+   "pdf_words": 0,
+   "before": "and entry points, and hotspots for informal crossings:",
+   "after": "9.2.4 CPIT was unable to verify",
+   "where": {
+    "heading": "Maps",
+    "paragraph": "9.2.3",
+    "section": "9. Law enforcement",
+    "page": 30
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Graph produced by CPIT showing the numbers of kolbars reportedly killed or injured by direct fire from Iranian military sources between 2012 and 2023.",
+   "pdf": "",
+   "web_words": 24,
+   "pdf_words": 0,
+   "before": "has placed limited evidential value on the increase.",
+   "after": "9.5.13 The EUAA query response, published",
+   "where": {
+    "heading": "Excessive_use_of",
+    "paragraph": "9.5.12",
+    "section": "9. Law enforcement",
+    "page": 38
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information on this page has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "Excessive_use_of",
+    "paragraph": "9.5.19",
+    "section": "9. Law enforcement",
+    "page": 5
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "9.5.19",
+    "section": "Version control and feedback",
+    "page": 50
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 155,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

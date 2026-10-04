@@ -4,7 +4,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { geoBounds, geoContains } from "d3-geo";
 import { feature } from "topojson-client";
-import { FADE_IN_MS, FADE_OUT_MS, createHoverIntent, easeFade, fadeAt, gridInPolygon, retarget } from "../../prototypes/dashboard/country-glow.js";
+import { FADE_IN_MS, FADE_OUT_MS, FLAGS_FROM_ZOOM, FLAGS_FULL_ZOOM, FLAGS_STRENGTH, OUTLINE_FULL_PX, OUTLINE_GONE_PX, ambientLevel, createCountryGlow, createHoverIntent, easeFade, fadeAt, gridInPolygon, outlineLevel, retarget } from "../../prototypes/dashboard/country-glow.js";
 
 const near = (a, b, eps = 1e-9) => Math.abs(a - b) <= eps;
 
@@ -213,4 +213,83 @@ test("holes are left empty and a polygon across the antimeridian is filled on bo
   const wrapped = gridInPolygon([across], [[170, 60], [-170, 70]], 2);
   assert.ok(wrapped.some((d) => d.lon > 170) && wrapped.some((d) => d.lon < -170), "dots either side of 180°");
   assert.ok(wrapped.every((d) => d.lon >= -180 && d.lon <= 180 && (d.lon >= 170 || d.lon <= -170)));
+});
+
+test("the outline is for countries too small on screen for their flag to read, and melts away as they grow", () => {
+  assert.equal(outlineLevel(6), 1, "Lebanon on the whole globe: a few pixels across");
+  assert.equal(outlineLevel(OUTLINE_FULL_PX), 1);
+  assert.equal(outlineLevel(OUTLINE_GONE_PX), 0);
+  assert.equal(outlineLevel(400), 0, "Brazil: no outline");
+  let prev = 2;
+  for (let px = 0; px <= 60; px += 0.5) { const v = outlineLevel(px); assert.ok(v <= prev && v >= 0 && v <= 1, "never steps up, never jumps"); assert.ok(prev === 2 || prev - v < 0.05); prev = v; }
+});
+
+test("zoomed in, the flags of the countries in view come up with the zoom", () => {
+  assert.equal(ambientLevel(1), 0, "the whole globe: only the country pointed at");
+  assert.equal(ambientLevel(FLAGS_FROM_ZOOM), 0);
+  assert.equal(ambientLevel(FLAGS_FULL_ZOOM), FLAGS_STRENGTH);
+  assert.equal(ambientLevel(3.2), FLAGS_STRENGTH, "as close as it goes");
+  assert.ok(FLAGS_STRENGTH > 0 && FLAGS_STRENGTH <= 1 && FLAGS_FROM_ZOOM > 1 && FLAGS_FULL_ZOOM > FLAGS_FROM_ZOOM);
+  let prev = 0;
+  for (let z = 1; z <= 3.2; z += 0.01) { const v = ambientLevel(z); assert.ok(v >= prev - 1e-12 && v - prev < 0.05, "eased: no step"); prev = v; }
+});
+
+// The glow itself, with a stand-in for the canvas: which countries it builds, and when.
+function glowFor(slugs) {
+  const square = (x) => ({ type: "Feature", geometry: { type: "Polygon", coordinates: [[[x, 0], [x, 8], [x + 8, 8], [x + 8, 0], [x, 0]]] } });
+  const built = [], calls = [];
+  const ctx = new Proxy({}, { get: (_, name) => (...args) => { calls.push(name); } });
+  const canvas = { getContext: () => ctx, dataset: {}, width: 0, height: 0 };
+  const glow = createCountryGlow({ canvas, shapes: new Map(slugs.map((slug, i) => [slug, [square(i * 10)]])), codeOf: (slug) => slug,
+    sampleFlag: async (code) => { built.push(code); return null; }, geoBounds, isDark: () => false, reducedMotion: () => true });
+  return { glow, built, calls, canvas };
+}
+/** Wait until `done()` holds (the builds take their turns on timers), or a second at most; then one turn more. */
+async function settle(done = () => true) {
+  for (let i = 0; i < 100 && !done(); i++) await new Promise((resolve) => setTimeout(resolve, 10));
+  await new Promise((resolve) => setTimeout(resolve, 20));
+}
+
+test("zoomed in, the countries in view are built one at a time, in the order asked; the one pointed at never waits", async () => {
+  const { glow, built } = glowFor(["a", "b", "c", "d", "e"]);
+  glow.ambient(new Set(["a", "b", "c", "d", "e"]), 0.9);
+  assert.deepEqual(built, ["a"], "one country at once, not the whole view");
+  glow.set("d");                                           // pointed at while it waits its turn: now
+  assert.deepEqual(built, ["a", "d"]);
+  glow.warm("e");                                          // the pointer is heading for it: now, too
+  assert.deepEqual(built, ["a", "d", "e"]);
+  await settle(() => Object.keys(glow.levels).length === 5);
+  assert.deepEqual(built, ["a", "d", "e", "b", "c"], "the rest in their turn, and nothing built twice");
+  assert.deepEqual(Object.keys(glow.levels).sort(), ["a", "b", "c", "d", "e"], "all of them lit");
+  glow.ambient(new Set(["a", "b", "c", "d", "e"]), 0.9);   // asked again every frame: nothing more to build
+  await settle();
+  assert.equal(built.length, 5);
+});
+
+test("a country pointed at is built at once, and one no longer wanted by the time it is built is not lit", async () => {
+  const { glow, built } = glowFor(["a", "b", "c"]);
+  glow.set("b");
+  assert.deepEqual(built, ["b"], "no waiting for the pointed-at country");
+  glow.ambient(new Set(["a", "c"]), 0.9);
+  glow.ambient(new Set(), 0);                              // zoomed out again before they were built
+  await settle(() => built.length === 3);
+  assert.deepEqual(Object.keys(glow.levels), ["b"]);
+});
+
+test("with nothing lit the overlay is left alone: a turning globe wipes and draws nothing", async () => {
+  const { glow, calls } = glowFor(["a"]);
+  const view = { phi: -Math.PI / 2, theta: 0, scale: 1 }, size = 2000;   // facing the country, large enough to need no outline
+  for (let i = 0; i < 5; i++) glow.draw({ ...view, phi: view.phi + i * 0.01 }, size, 1, true);
+  assert.deepEqual(calls, [], "blank from the start: not even cleared");
+  glow.set("a");
+  await settle(() => "a" in glow.levels);
+  glow.draw(view, size, 1, true);
+  assert.ok(calls.includes("clearRect") && calls.includes("arc"), "lit: drawn");
+  glow.set(null);
+  await settle();
+  glow.draw(view, size, 1, true);                          // faded out (reduced motion: at once): wiped, the layer dropped
+  assert.equal(calls.at(-1), "clearRect", "wiped once");
+  calls.length = 0;
+  for (let i = 0; i < 5; i++) glow.draw({ ...view, phi: view.phi + i * 0.01 }, size, 1, true);
+  assert.deepEqual(calls, [], "blank again: left alone");
 });

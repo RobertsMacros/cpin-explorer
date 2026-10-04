@@ -24,9 +24,10 @@ def mirror_pdfs(client: PoliteClient, store: Store, publications: dict[str, dict
             url = attachment["url"]
             stats["checked"] += 1
             entry = manifest.get(url)
-            # The manifest, not the local disk, says what we hold: on a scheduled runner the files
-            # live in R2, so an unchanged PDF must cost a 304, not a re-download.
-            r = client.get(url, etag=entry.get("etag") if entry else None, follow=True)
+            # Only ask "changed since?" when our copy is actually on disk, as images.py does: a fresh
+            # checkout has the manifest (in git) but not the files, and a 304 would leave the file missing.
+            held = entry and store.pdf_path(entry["sha256"]).exists()
+            r = client.get(url, etag=entry.get("etag") if held else None, follow=True)
             if r.not_modified:
                 entry["last_seen"] = seen_at
                 stats["unchanged"] += 1

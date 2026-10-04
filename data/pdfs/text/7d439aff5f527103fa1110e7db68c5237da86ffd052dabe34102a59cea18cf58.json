@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 21,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 135,
+ "list_items": 27,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 48,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 25, 26"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Women fearing domestic abuse",
+ "cover_version": "2.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "7d439aff5f527103fa1110e7db68c5237da86ffd052dabe34102a59cea18cf58",
+ "images": []
+}

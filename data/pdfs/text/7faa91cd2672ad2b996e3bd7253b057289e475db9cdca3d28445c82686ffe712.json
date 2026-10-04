@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 57,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 60,
+ "paragraphs": 406,
+ "list_items": 38,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 253,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 40"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Sexual orientation and gender identity and expression",
+ "cover_version": "4.0",
+ "cover_date": "April 2020",
+ "pdf_sha256": "7faa91cd2672ad2b996e3bd7253b057289e475db9cdca3d28445c82686ffe712",
+ "images": []
+}

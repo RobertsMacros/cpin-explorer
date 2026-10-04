@@ -1,0 +1,47 @@
+{
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+ "pdf_sha256": "71f533941ad36da478c848395a44d2e34cf3a7d5e5f0776a0330e963515f1507",
+ "body_sha256": "009cdf433e00ab841c452915329a83dee65d436755855e1a7312399d338f3cbc",
+ "figures": [
+  {
+   "image": "933d652c17491e5ca461cfaaf51c523dee7b4f2c7f302598bdef3e075c9e8229.jpg",
+   "tag": "p",
+   "index": 54,
+   "key": "222themohreportalsoprovidedagraphicwhichshowedtheinstitution",
+   "page": 11
+  },
+  {
+   "image": "a73712042a8906823b691efcaf85c707eb659fd62ad8ee37e4d90d39f75c0c33.png",
+   "tag": "p",
+   "index": 102,
+   "key": "353themohsannualperformanceandprogressreportfor2023recordedt",
+   "page": 19
+  },
+  {
+   "image": "78eaa3414be5e221d7d183a83e9cfb7fab06ec734b69feca8a6a92ef701a55fd.png",
+   "tag": "p",
+   "index": 158,
+   "key": "511inmarch2021themohpublisheditsnationalmentalhealthpolicy20",
+   "page": 27
+  },
+  {
+   "image": "c5e7a49ad33b22c2f64311b47b67153a1a94f9b2c75539b7158b4b0c43babcc4.jpg",
+   "tag": "p",
+   "index": 206,
+   "key": "533themohsannualperformanceandprogressreportfor2023provideda",
+   "page": 32
+  },
+  {
+   "image": "f99b7432f98ed500b6f142f5c64a229cee6104ce004f55ffadf9aaa281c92357.png",
+   "tag": "p",
+   "index": 222,
+   "key": "562themohprovideddataonthenumberofnewpatientstreatedinmental",
+   "page": 34
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 5,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

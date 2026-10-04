@@ -14,11 +14,19 @@ data/pdfs/files/
 # Mirrored images, like PDFs, go to R2 rather than git.
 data/images/files/
 
+# What `cpin recover` has already read from the Internet Archive (index answers, archived listing pages).
+# A cache: everything in it can be asked for again. The catalogue built from it is data/wayback-catalogue.json.
+data/wayback-cache/
+
 # Derived by ./cpin export (large: every edition of every comparable report).
 prototypes/data/
 
 # Rewritten by every `cpin verify` (timestamped); derived, so not committed.
 data/verify-report.json
+# Rewritten by every `cpin pdftext --check`; its findings are written up in docs/reviews/.
+data/pdftext-check.json
+# Rewritten by every `cpin compare`: the summary table. The records it is made from are in data/pdfs/compare/.
+data/pdf-web-compare.json
 
 # Full-text search index (Pagefind), rebuilt by `cd web && npm run search-index`.
 prototypes/search/pagefind/

@@ -1,0 +1,99 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 80,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 44,
+ "paragraphs": 705,
+ "list_items": 53,
+ "tables": 1,
+ "figures": 10,
+ "footnotes": 320,
+ "bookmarks": 44,
+ "warnings": [
+  "footnotes with no mark found in the text: 45"
+ ],
+ "figure_pages": {
+  "c5ac59146d0098f94fc55465674a0e256c26d524c38f7b83fc63abcd6b2a7b6b.jpg": 17,
+  "cbdd58d238de76a7eb0e8d75ce391dfec8a6b28b6a882f33116fdf47042c36c4.png": 40,
+  "d3db54a72ae5d24ef268971d8590c652d8fc70b6d920c00211e8a64745a9e3ee.png": 43,
+  "bbd14565062a5b86b9c5b697dd918393f2bcfc02a63aaf98cd141483a0972a2a.png": 47,
+  "04c92b684fb37d6cd28c10812e7263e76f1dded5facdfd4431248bb5d592cb1a.png": 47,
+  "dada35764f5b45a33c93a3ad696604c4df74c5c5290ad6e5ad59ac7755895f8d.jpg": 51,
+  "ad6a0d83432ad10625a65baea9bacddb838a2ca81ce6a40c8a52addf540a101c.png": 61,
+  "6a90458d06dd4dfffe3d9e5387d7283c0b373bec37c6ad59d1586619273cca39.png": 67,
+  "694c621ad50084673705febbb24d4b33af2d90087aab83157049ef25a2e2370d.png": 67,
+  "213f7156cb63b8683a55f4a84020e66ef08abf232d977df33594292dedbfc0fc.png": 69
+ },
+ "figure_sizes": {
+  "c5ac59146d0098f94fc55465674a0e256c26d524c38f7b83fc63abcd6b2a7b6b.jpg": [
+   455,
+   507
+  ],
+  "cbdd58d238de76a7eb0e8d75ce391dfec8a6b28b6a882f33116fdf47042c36c4.png": [
+   569,
+   305
+  ],
+  "d3db54a72ae5d24ef268971d8590c652d8fc70b6d920c00211e8a64745a9e3ee.png": [
+   820,
+   342
+  ],
+  "bbd14565062a5b86b9c5b697dd918393f2bcfc02a63aaf98cd141483a0972a2a.png": [
+   385,
+   431
+  ],
+  "04c92b684fb37d6cd28c10812e7263e76f1dded5facdfd4431248bb5d592cb1a.png": [
+   771,
+   247
+  ],
+  "dada35764f5b45a33c93a3ad696604c4df74c5c5290ad6e5ad59ac7755895f8d.jpg": [
+   803,
+   607
+  ],
+  "ad6a0d83432ad10625a65baea9bacddb838a2ca81ce6a40c8a52addf540a101c.png": [
+   840,
+   414
+  ],
+  "6a90458d06dd4dfffe3d9e5387d7283c0b373bec37c6ad59d1586619273cca39.png": [
+   681,
+   569
+  ],
+  "694c621ad50084673705febbb24d4b33af2d90087aab83157049ef25a2e2370d.png": [
+   697,
+   537
+  ],
+  "213f7156cb63b8683a55f4a84020e66ef08abf232d977df33594292dedbfc0fc.png": [
+   782,
+   545
+  ]
+ },
+ "figure_text": {
+  "c5ac59146d0098f94fc55465674a0e256c26d524c38f7b83fc63abcd6b2a7b6b.jpg": 0,
+  "cbdd58d238de76a7eb0e8d75ce391dfec8a6b28b6a882f33116fdf47042c36c4.png": 0,
+  "d3db54a72ae5d24ef268971d8590c652d8fc70b6d920c00211e8a64745a9e3ee.png": 0,
+  "bbd14565062a5b86b9c5b697dd918393f2bcfc02a63aaf98cd141483a0972a2a.png": 0,
+  "04c92b684fb37d6cd28c10812e7263e76f1dded5facdfd4431248bb5d592cb1a.png": 0,
+  "dada35764f5b45a33c93a3ad696604c4df74c5c5290ad6e5ad59ac7755895f8d.jpg": 0,
+  "ad6a0d83432ad10625a65baea9bacddb838a2ca81ce6a40c8a52addf540a101c.png": 0,
+  "6a90458d06dd4dfffe3d9e5387d7283c0b373bec37c6ad59d1586619273cca39.png": 0,
+  "694c621ad50084673705febbb24d4b33af2d90087aab83157049ef25a2e2370d.png": 0,
+  "213f7156cb63b8683a55f4a84020e66ef08abf232d977df33594292dedbfc0fc.png": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Country Policy and Information Note Palestine: Humanitarian situation in Gaza",
+ "cover_version": "5.0",
+ "cover_date": "September 2026",
+ "pdf_sha256": "c769bfa4982ca24f8b35464d3179f71e3c8b2a753f708729c8140fd97fb49aff",
+ "images": [
+  "04c92b684fb37d6cd28c10812e7263e76f1dded5facdfd4431248bb5d592cb1a.png",
+  "213f7156cb63b8683a55f4a84020e66ef08abf232d977df33594292dedbfc0fc.png",
+  "694c621ad50084673705febbb24d4b33af2d90087aab83157049ef25a2e2370d.png",
+  "6a90458d06dd4dfffe3d9e5387d7283c0b373bec37c6ad59d1586619273cca39.png",
+  "ad6a0d83432ad10625a65baea9bacddb838a2ca81ce6a40c8a52addf540a101c.png",
+  "bbd14565062a5b86b9c5b697dd918393f2bcfc02a63aaf98cd141483a0972a2a.png",
+  "c5ac59146d0098f94fc55465674a0e256c26d524c38f7b83fc63abcd6b2a7b6b.jpg",
+  "cbdd58d238de76a7eb0e8d75ce391dfec8a6b28b6a882f33116fdf47042c36c4.png",
+  "d3db54a72ae5d24ef268971d8590c652d8fc70b6d920c00211e8a64745a9e3ee.png",
+  "dada35764f5b45a33c93a3ad696604c4df74c5c5290ad6e5ad59ac7755895f8d.jpg"
+ ]
+}

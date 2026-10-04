@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 54,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 59,
+ "paragraphs": 441,
+ "list_items": 60,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 259,
+ "bookmarks": 53,
+ "warnings": [
+  "footnotes with no mark found in the text: 15, 113"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Pakistan: Political parties and affiliation",
+ "cover_version": "1.0",
+ "cover_date": "December 2020",
+ "pdf_sha256": "f5e2ddf8d48e0fde5a91bcdb7c22190f5232a6ffa96ba995a10e649ef4f8f13a",
+ "images": []
+}

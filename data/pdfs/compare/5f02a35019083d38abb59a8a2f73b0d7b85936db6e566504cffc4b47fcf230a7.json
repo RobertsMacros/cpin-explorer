@@ -1,0 +1,628 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-and-policy-information-note-humanitarian-situation-syria-june-2026-accessible",
+ "pdf_sha256": "5f02a35019083d38abb59a8a2f73b0d7b85936db6e566504cffc4b47fcf230a7",
+ "body_sha256": "fc683672349c2dc8bae729e6dee12ff26b799387099784261525661efaf10e44",
+ "words": {
+  "web": 28375,
+  "pdf": 27465
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 24,
+   "pdf_words": 2,
+   "share": 0.000466,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 24,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 13,
+    "web_words": 786,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 8,
+    "web_words": 593,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 5,
+    "web_words": 193,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 24,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 11,
+   "web_words": 4,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "June 2026",
+   "pdf": "3.0",
+   "pdf_date": "June 2026"
+  },
+  "section_updated": {
+   "web": [
+    "29 June 2026"
+   ],
+   "pdf": [
+    "29 June 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 2
+  },
+  "footnotes": {
+   "web": 174,
+   "pdf": 174,
+   "pdf_raw": 174,
+   "differ": false
+  },
+  "pictures": {
+   "web": 10,
+   "pdf": 24
+  },
+  "tables": {
+   "web": 10,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 72,
+   "pdf": 57
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "People in need: 12.8 million\nPeople targeted: 8.2 million\nPeople prioritised: 4.0 million\nRequirements (US$): $291.6M\nPrioritised requirements: $142.7M",
+   "pdf": "",
+   "web_words": 24,
+   "pdf_words": 0,
+   "before": "on health, the April 2026 OCHA report stated:",
+   "after": "After 14 years of conflict, Syria’s health",
+   "where": {
+    "heading": "overview-2",
+    "paragraph": "11.1.4",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Categorisation Description",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "an area. The following table provides these definitions:",
+   "after": "1. Minimal\nArea has: Essential basic services and",
+   "where": {
+    "heading": "minimal",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 25
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Phase 1: Minimal\nHouseholds are able to meet essential food and non-food needs without engaging in atypical and unsustainable strategies to access food and income.\nPhase 2: Stressed\nHouseholds have minimally adequate food consumption but are unable to afford some essential non-food expenditures without engaging in stress-coping strategies.\nPhase 3: Crisis\nHouseholds either:\nHave food consumption gaps that are reflected by high or above-usual acute malnutrition; or\nAre marginally able to meet minimum food needs but only by depleting essential livelihood assets or through crisis-coping strategies.\nPhase 4: Emergency\nHouseholds either:\nHave large food consumption gaps which are reflected in very high acute malnutrition and excess mortality; or\nAre able to mitigate large food consumption gaps but only by employing emergency livelihood strategies and asset liquidation.\nPhase 5: Famine\nHouseholds have an extreme lack of food and/or other basic needs even after full employment of coping strategies. Starvation, death, destitution, and extremely critical acute malnutrition levels are evident. (For Famine Classification, area needs to have extreme critical levels of acute malnutrition and mo …",
+   "pdf": "98",
+   "web_words": 179,
+   "pdf_words": 0,
+   "before": "Scale, which is outlined in the table below:",
+   "after": "10.1.4 FEWS NET’s explanation of",
+   "where": {
+    "heading": "phase-1-minimal",
+    "paragraph": "10.1.3",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Negligible damage\nPartial damage\nComplete damage\nDamascus (N=1)\nN/A\nN/A\nN/A\nHama (N=94)\n39%\n33%\n27%\nldleb (N=193)\n37%\n41%\n22%\nRural Damaiscus (N=55)\n48%\n32%\n19%\nHoms (N=48)\n50%\n31%\n19%\nQuneitil’a (N=8)\n32%\n52%\n16%\nAleppo (N=299)\n47%\n37%\n16%\nLattakia (N=60)\n45%\n39%\n16%\nAs-Sweida (N=42)\n48%\n36%\n16%\nDeir-ez-Zor (N=67)\n53%\n33%\n14%\nAr-Raqqa (N=57)\n69%\n19%\n12%\nDar’a (N=49)\n61%\n2.9%\n10%\nAI-Hasakeh (N=74)\n54%\n39%\n7%\nTartous (N=36)\n58%\n38%\n4%\nQualitative severity catiegories adopted for the assessment and the corresponding definitions applied to community-level housing damage\nNegligible damage: Cosmetic or aestlhetic damage only; safe and functional; Fully habitable\nPartial damage: lncludes minor, moderate, or heavy damage; structure may remain safe or require rehabilitation; Conditionally habitable\nComplete damage: Fully or largely collapsed; requires major structural works or full reconstruction: Not habitable",
+   "pdf": "",
+   "web_words": 133,
+   "pdf_words": 0,
+   "before": "table provides definitions for the different severity levels.’",
+   "after": "9.3 Housing, land and property (HLP) rights",
+   "before_pdf": "table provides definitions for the different severity levels.",
+   "where": {
+    "heading": "condition-of-housing",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Table 3: Description of the overall WFP food security classifications\nFood secure: Able to meet food needs without engaging in reduced and livelihood coping strategies for food security.\nMarginally food secure: Has minimally inadequate food consumption, relies on reduced coping and applies stress coping strategies to secure food needs.\nModerately food insecure: Has food consumption gaps and unable to meet required food needs without applying crisis coping strategies.\nSeverely food insecure: Has extreme food consumption gaps, or has extreme loss of livelihood assets will lead to food consumption gaps, or worse.",
+   "pdf": "96",
+   "web_words": 91,
+   "pdf_words": 0,
+   "before": "table defining the four food security classification levels:",
+   "after": "10.1.2 The January 2026 Government of",
+   "where": {
+    "heading": "table-3-description-of-the-overall-wfp-food-security-classifications",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "99% of households have access to some form of functional toilet\n98% have exclusive private toilet access (highest JMP category)\n1% report no access to a toilet (open defecation risk context)\n78% of village households have access to functioning sewer lines\n20% of households report open sewage channels in their area\n73% of households have access to a funct ioning waste collection system\n77% have a designated waste disposal point in proximity to their home\n27% lack any functioning waste collection service",
+   "pdf": "",
+   "web_words": 82,
+   "pdf_words": 0,
+   "before": "n=314), and weak water pressure (n=245).",
+   "after": "12.1.2 For detailed tables showing the",
+   "where": {
+    "heading": "access-to-improved-water-sources",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 51
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Skills/positions\nMedium enterprise\nSmall enterprise\nUnskilled\n55-64 USD per week or 100 USD per month\n45-55 USD per week\nSkilled\n82-136 USD per week\n100-127 USD per week\nEngineer\nAbout 90 USD per week or 350 U5D per month\nNot available\nProject manager\nA broad range between 273 and 1,000 U5D per month\nNot available",
+   "pdf": "",
+   "web_words": 61,
+   "pdf_words": 0,
+   "before": "rate of 11,000 SYP to the dollar:",
+   "after": "Construction workers who participated in focus group discussions",
+   "where": {
+    "heading": "Salaries_and_income",
+    "paragraph": "7.3.9",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Governorate\nN\nFood secure\nMarginal\nModerate\nSevere\nModerate and severe\nHama\n698\n1%\n32%\n58%\n9%\n67%\nAleppo\n648\n6%\n41%\n45%\n8%\n53%\nAs-Sweida\n131\n9%\n42%\n47%\n2%\n49%\nLattakia\n363\n5%\n47%\n45%\n4%48%\nHoms\n810\n5%\n47%\n43%\n4%\n47%\nAr-Raqqa\n441\n14%\n43%\n42%\n2%\n44%\nDamascus\n146\n12%\n45%\n40%\n4%\n43%\nDeir-ez-Zor\n372\n10%\n48%\n38%\n5%\n43%\nldleb\n743\n7%\n58%\n35%\n1%\n36%\nRural Damascus\n496\n18%\n54%\n26%\n3%\n28%\nDar’a\n454\n22%\n64%\n13%\n1%\n14%",
+   "pdf": "",
+   "web_words": 48,
+   "pdf_words": 0,
+   "before": "9.1.1 for an explanation of CARI):",
+   "after": "11. Health\n11.1 Overview\n11.1.1",
+   "where": {
+    "heading": "by-governorate",
+    "paragraph": "10.2.5",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Access to improved water sources\n96% of households use an improved drinking water source (including water tankers)\n73% use strictly improved sources (piped network, bottled, protected spring/well)\n67% rely on the piped/mains network as their primary source",
+   "pdf": "",
+   "web_words": 39,
+   "pdf_words": 0,
+   "before": "the humanitarian context per WASH Cluster Syria norms.",
+   "after": "The piped water network is the dominant primary [",
+   "where": {
+    "heading": "access-to-improved-water-sources",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 51
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "rCSI Behaviour (7-day recall)\nPercentage using\nRelative frequency\nRely on less preferred/cheaper foods\n44%\n9\nReduce number of meals per day\n22%\n4\nLimit portion sizes\n14%\n3\nReduce aduIt consumption for chi ldren\n11%\n2\nRely on aid from friends/family\n10%\n2",
+   "pdf": "",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "food coping behaviours in the preceding seven days ...",
+   "after": "The Livelihood Coping Strategies Index (LCSI) classifies households",
+   "where": {
+    "heading": "phase-5-famine",
+    "paragraph": "10.1.7",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "CARI category\nFood secure (1)\nMarginally food insecure (2)\nModerate (3)\nSevere (4)\nAll households (N=5,302)\n9%\n47%\n40%\n4%\nFood insecure (Marginal+ Moderate+ Severe): 91% of assessed households\nModerate and Severe food insecure: 44% of assessed households’",
+   "pdf": "",
+   "web_words": 30,
+   "pdf_words": 0,
+   "before": "definitions of the CARI food security classification levels]",
+   "after": "10.1.8 For detailed tables showing the",
+   "where": {
+    "heading": "phase-5-famine",
+    "paragraph": "10.1.7",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Skills/positions\nMedium enterprise\nSmall enterprise\nUnskilled\n100-150 USD per month\n23-45 USD per week\nSkilled\n300-400 USD per month\n45-60 USD per week\nMiddle management or supervisor\nUp to 800 USD per month\n45-55 USD per week",
+   "pdf": "",
+   "web_words": 27,
+   "pdf_words": 0,
+   "before": "rate of 11,000 SYP to the dollar:",
+   "after": "Agricultural work is precarious and cash-based, with",
+   "where": {
+    "heading": "Salaries_and_income",
+    "paragraph": "7.3.9",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need: 12 million\nPeople targeted: 7. 7 million\nPeople prioritised: 4.0 million\nRequirements (US$): $325.3M\nPrioritised requirements: $168.7M",
+   "pdf": "133",
+   "web_words": 23,
+   "pdf_words": 0,
+   "before": "included the following infographic about the WASH sector:",
+   "after": "12.1.5 The November 2025 MSF report",
+   "where": {
+    "heading": "access-to-improved-water-sources",
+    "paragraph": "12.1.4",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "FCS category\nPercentage of households\nPoor (<28)\n8% (N=424)\nBorderline (28.5-42)\n24% (N=3,273)\nAcceptable (>42)\n68% (N=3,605)\nTotal\n100%",
+   "pdf": "",
+   "web_words": 19,
+   "pdf_words": 0,
+   "before": "N=5,302), the distribution was as follows:",
+   "after": "FGDs participants confirmed that food physical availability is",
+   "where": {
+    "heading": "phase-5-famine",
+    "paragraph": "10.1.7",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need: 15.6 million\nPeople targeted: 8.6 million\nPeople prioritised. 4.3 million",
+   "pdf": "67",
+   "web_words": 16,
+   "pdf_words": 0,
+   "before": "3 The same source included the following infographic:",
+   "after": "8.3 Vulnerable groups\n8.3.1 In",
+   "where": {
+    "heading": "catastrophic",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "15.6.4",
+    "section": "Version control and feedback",
+    "page": 77
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "24.8% (2022 estimate)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "GBP] per day, 2017 PPP [Purchasing Power Parity]),",
+   "after": "Population living below Lower Middle Income poverty line (",
+   "where": {
+    "heading": "basic-indicators",
+    "paragraph": "7.1.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "24.8% (2022 estimate)",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "in extreme poverty (less than 2.15 USD [",
+   "after": "1.60 GBP] per day, 2017 PPP [Purchasing",
+   "before_pdf": "in extreme poverty (less than 2.15 USD",
+   "where": {
+    "heading": "basic-indicators",
+    "paragraph": "7.1.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "65",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "meet basic needs for survival, protection, and dignity.",
+   "after": "8.2.2 The April 2026 OCHA report",
+   "where": {
+    "heading": "catastrophic",
+    "paragraph": "8.2.2",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "104",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "IPC scale outlined in paragraph 9.1.3:",
+   "after": "10.2.3 For information on the factors",
+   "where": {
+    "heading": "by-governorate",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "105",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "a section on ‘Food Security and Agricultural Livelihoods’:",
+   "after": "10.2.5 The April 2026 GOAL report",
+   "where": {
+    "heading": "by-governorate",
+    "paragraph": "10.2.5",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "116",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "the following map in its section on health:",
+   "after": "11.4 Access to healthcare\n11.4.1",
+   "where": {
+    "heading": "access-to-healthcare",
+    "paragraph": "11.3.1",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "129",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "that recorded the highest percentages for each question:",
+   "after": "11.4.5 The May 2026 WHO report",
+   "where": {
+    "heading": "access-to-healthcare",
+    "paragraph": "11.4.5",
+    "section": "Country information",
+    "page": 50
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "141",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "included the following map about the WASH sector:",
+   "after": "13. Internally displaced persons (IDPs)\n13.1 Numbers",
+   "where": {
+    "heading": "Internally_displaced_persons",
+    "paragraph": "12.2.1",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "153",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "3 The same source included the following map:",
+   "after": "15.1.4 In February 2026, the OCHA",
+   "where": {
+    "heading": "numbers-of-people-receiving-aid",
+    "paragraph": "15.1.4",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "154",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "people who received different kinds of humanitarian assistance:",
+   "after": "15.1.5 For more detailed information regarding",
+   "where": {
+    "heading": "numbers-of-people-receiving-aid",
+    "paragraph": "15.1.5",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "162",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "and December. The report included the following infographic:",
+   "after": "15.3.2 In March 2026, the WFP",
+   "where": {
+    "heading": "food-security-assistance",
+    "paragraph": "15.3.2",
+    "section": "Country information",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 179,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

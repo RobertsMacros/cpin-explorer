@@ -1,0 +1,527 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "egypt/country-policy-and-information-note-christians-egypt-august-2026-accessible",
+ "pdf_sha256": "932135a0435d76d4afafe5666bcfb64749c9d65c353aeb6ca521f936c35040d4",
+ "body_sha256": "92cc19ca04d6e563138672b88d00d05ae5f647ce6791b2584af7f61951eb6bd0",
+ "words": {
+  "web": 25111,
+  "pdf": 25116
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 2e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 12,
+    "web_words": 11,
+    "pdf_words": 10
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 12,
+    "web_words": 11,
+    "pdf_words": 10
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 5,
+   "pdf_words": 5
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "August 2026",
+   "pdf": "6.0",
+   "pdf_date": "August 2026"
+  },
+  "section_updated": {
+   "web": [
+    "23 July 2026"
+   ],
+   "pdf": [
+    "23 July 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 180,
+   "pdf": 180,
+   "pdf_raw": 180,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 55,
+   "pdf": 53
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Bibliography",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Inspector’s pages of the GOV.UK website.",
+   "after": "Encyclopaedia Britannica, Editors, Copt, updated 11 February 2026",
+   "before_pdf": "Inspector’s pages of the gov.uk website.",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.5",
+    "section": "Version control and feedback",
+    "page": 61
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.2.3",
+   "pdf": "11.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "media platforms and preaching carried out within mosques.’",
+   "after": "In February 2026, the Eternal World Television Network (",
+   "where": {
+    "heading": "hate-speech-1",
+    "paragraph": "11.2.3",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.2.4",
+   "pdf": "11.2.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the scope of incitement and contempt of religion.’",
+   "after": "CPIT has been unable to find any further",
+   "where": {
+    "heading": "hate-speech-1",
+    "paragraph": "11.2.4",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.5.6",
+   "pdf": "11.5.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the authorities continue to look the other way.’",
+   "after": "In January 2025, Coptic Solidarity, a Coptic advocacy",
+   "where": {
+    "heading": "treatment-christian-women",
+    "paragraph": "11.5.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.5.7",
+   "pdf": "11.5.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "cases. For more information, see the full report.",
+   "after": "The Open Doors January 2025 report stated:\nDuring",
+   "where": {
+    "heading": "treatment-christian-women",
+    "paragraph": "11.5.7",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.5.8",
+   "pdf": "11.5.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "preventing Christian women from returning to their families.’",
+   "after": "The DFAT 2025 report stated:\nIn-country sources",
+   "where": {
+    "heading": "treatment-christian-women",
+    "paragraph": "11.5.8",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.5.9",
+   "pdf": "11.5.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "shifted from “abduction to deception, luring or grooming”.’",
+   "after": "The table below was produced by CPIT to",
+   "where": {
+    "heading": "treatment-christian-women",
+    "paragraph": "11.5.9",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.1.",
+   "pdf": "11.6.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of equality and equal opportunity is strictly prohibited.’",
+   "after": "2 The DFAT 2025 report stated:\nWhether or",
+   "where": {
+    "heading": "employment",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.1.",
+   "pdf": "11.6.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "representative of the religious breakdown of the population.’",
+   "after": "3 In January 2026, ADF International published an",
+   "where": {
+    "heading": "employment",
+    "paragraph": "11.1.3",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.1.",
+   "pdf": "11.6.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "continued to operate as normal on Easter Sunday.’",
+   "after": "4 The Open Doors 2026 Egypt Country Dossier",
+   "where": {
+    "heading": "employment",
+    "paragraph": "11.1.4",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "i)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Article 3, at least in their home area:",
+   "after": "converts to Coptic Christianity;\npersons who are involved",
+   "where": {
+    "heading": "risk",
+    "paragraph": "4.1.2",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "in their home area:\nconverts to Coptic Christianity;",
+   "after": "persons who are involved in construction or reconstruction/",
+   "before_pdf": "their home area:\ni) converts to Coptic Christianity;",
+   "where": {
+    "heading": "risk",
+    "paragraph": "4.1.2",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "been the target for an attack or attacks;",
+   "after": "those accused of proselytising where the accusation is",
+   "where": {
+    "heading": "risk",
+    "paragraph": "4.1.2",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iv)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "where the accusation is serious and not casual;",
+   "after": "those accused of being physically or emotionally involved",
+   "where": {
+    "heading": "risk",
+    "paragraph": "4.1.2",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.7.5",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "540 requests submitted since the law was enacted.’",
+   "after": "State media and social media\n10.7.1",
+   "before_pdf": "submitted since the law was enacted.’\n10.7",
+   "where": {
+    "heading": "state-media-and-social-media",
+    "paragraph": "10.6.5",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2\n2\nNo data\n11.6 Employment\n11.",
+   "after": "1.6 Soliman, Hashish & Partners (SH&P), an",
+   "before_pdf": "2\n2\n2\nNo data\n11.6 Employment",
+   "where": {
+    "heading": "employment",
+    "paragraph": "11.1.6",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.1.6",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "2\n2\n2\nNo data\n11.6 Employment",
+   "after": "Soliman, Hashish & Partners (SH&P), an Egyptian corporate",
+   "before_pdf": "No data\n11.6 Employment\n11.6.1",
+   "where": {
+    "heading": "employment",
+    "paragraph": "11.1.6",
+    "section": "Country information",
+    "page": 45
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "including beatings and death threats)",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "No data\nChristians otherwise physically or mentally abused (",
+   "after": "19\n51\n19\n44\n46\n14\nChurches or",
+   "before_pdf": "No data\nChristians otherwise physically or mentally abused",
+   "where": {
+    "heading": "societal-violence",
+    "paragraph": "11.1.17",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "including beatings and death threats)",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "death threats)\n19\n51\n19\n44\n46\n14",
+   "after": "Churches or Christian buildings (schools, hospitals, etc.) attacked,",
+   "before_pdf": "mentally abused\n19\n51\n19\n44\n46\n14",
+   "where": {
+    "heading": "societal-violence",
+    "paragraph": "11.1.17",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "6",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Assuit-Souhag, 3: Cairo-Giza-Kalyubia, 4: Luxor.",
+   "after": "8.2.2 Minority Rights Group International (MRG),",
+   "where": {
+    "heading": "christian-community",
+    "paragraph": "8.2.2",
+    "section": "Country information",
+    "page": null
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 202,
+  "different": {
+   "11.2.3": "11.2.1",
+   "11.2.4": "11.2.2",
+   "11.5.6": "11.5.4",
+   "11.5.7": "11.5.5",
+   "11.5.8": "11.5.6",
+   "11.5.9": "11.5.1"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.7.5",
+   "11.1.2",
+   "11.1.3",
+   "11.1.4",
+   "11.1.6"
+  ],
+  "unconfirmed": []
+ }
+}

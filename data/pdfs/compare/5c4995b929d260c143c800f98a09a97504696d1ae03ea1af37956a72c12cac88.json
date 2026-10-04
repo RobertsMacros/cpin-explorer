@@ -1,0 +1,311 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-religious-minorities-excluding-alawites-syria-february-2026-accessible",
+ "pdf_sha256": "5c4995b929d260c143c800f98a09a97504696d1ae03ea1af37956a72c12cac88",
+ "body_sha256": "28254b3cba0230d675dca46aab3e62fb02038a2ef367c3589defef37ddee72e2",
+ "words": {
+  "web": 24897,
+  "pdf": 25200
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 9,
+   "pdf_words": 2,
+   "share": 0.00022,
+   "passages": 1,
+   "sizes": {
+    "spelling": 2,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 9,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 303
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 6
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 1,
+    "web_words": 7,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "withheld notice": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 303
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "2.0",
+   "pdf_date": "11 February 2026"
+  },
+  "section_updated": {
+   "web": [
+    "14 January 2026"
+   ],
+   "pdf": [
+    "14 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 20
+  },
+  "footnotes": {
+   "web": 152,
+   "pdf": 151,
+   "pdf_raw": 152,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 130,
+   "pdf": 46
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "03_2020_Syria_Targeting_of_individuals.pdf",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "are they fighting in Syria?, 20 July 2025",
+   "after": "The Conversation, Who we are, no date\nThe",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.5.11",
+    "section": "Version control and feedback",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "10.1 Notes",
+   "pdf": "10.1 Note",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "but not cited).\n10. Shia Muslims (excluding Alawites)",
+   "after": "on Alawites\n10.1.1 Alawism is generally",
+   "where": {
+    "heading": "notes-on-alawites",
+    "paragraph": "9.8.4",
+    "section": "Country information",
+    "page": 44
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "location",
+   "pdf": "locations",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or perceived Assadists.\n10.2 Population numbers and",
+   "after": "10.2.1 Demographic data for Syria is",
+   "where": {
+    "heading": "shia-population",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 44
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nThe information in this section has been removed as it i …",
+   "web_words": 0,
+   "pdf_words": 234,
+   "before": "is restricted for internal Home Office use only.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "druze-population",
+    "paragraph": "9.2",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.6 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.7",
+   "web_words": 0,
+   "pdf_words": 45,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 2.0, 11 February 2026",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "",
+   "after": "Executive summary\nIn general, Christians and Shia Muslims (",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "60",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "called upon Druze men to join the SAA.’",
+   "after": "9.3.2 In December 2024, The Conversation,",
+   "where": {
+    "heading": "under-the-al-assad-regime",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 30
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 178,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

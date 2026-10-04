@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 61,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 68,
+ "paragraphs": 570,
+ "list_items": 68,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 172,
+ "bookmarks": 68,
+ "warnings": [
+  "footnotes with no mark found in the text: 16, 17, 65, 145, 153"
+ ],
+ "figure_pages": {
+  "92aa730992123cea39fd49061443321c71fe69d5f7b5ef11f41ef41c3babe5c3.jpg": 39
+ },
+ "figure_sizes": {
+  "92aa730992123cea39fd49061443321c71fe69d5f7b5ef11f41ef41c3babe5c3.jpg": [
+   753,
+   810
+  ]
+ },
+ "figure_text": {
+  "92aa730992123cea39fd49061443321c71fe69d5f7b5ef11f41ef41c3babe5c3.jpg": 0
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note India: Political parties and affiliation",
+ "cover_version": "1.0",
+ "cover_date": "December 2023",
+ "pdf_sha256": "c9152b18f17de7b411052711533d641251c667233ea380100f21cc3a3e83a4c2",
+ "images": [
+  "92aa730992123cea39fd49061443321c71fe69d5f7b5ef11f41ef41c3babe5c3.jpg"
+ ]
+}

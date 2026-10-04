@@ -1,0 +1,612 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-amhara-and-amhara-opposition-groups-ethiopia-june-2025-accessible",
+ "pdf_sha256": "ed9b72c76b086656339f63f0c39b5240517140263882c5ca6736ca1f026107f5",
+ "body_sha256": "716fb72690a99f0e2c6bb406e70535357889cc1a5f17c134daa40b3fcb37f6bd",
+ "words": {
+  "web": 30300,
+  "pdf": 30157
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 2,
+   "pdf_words": 20,
+   "share": 0.000364,
+   "passages": 2,
+   "sizes": {
+    "number": 1,
+    "passage": 2,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 1,
+   "words": 17
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 20
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 9,
+    "pdf_words": 15
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 71,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 9,
+    "pdf_words": 15
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 71,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 15
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 127,
+   "pdf_words": 6
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": null,
+   "pdf": "1.0",
+   "pdf_date": null
+  },
+  "section_updated": {
+   "web": [
+    "13 May 2025"
+   ],
+   "pdf": [
+    "13 May 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 228,
+   "pdf": 228,
+   "pdf_raw": 228,
+   "differ": false
+  },
+  "pictures": {
+   "web": 10,
+   "pdf": 12
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 123,
+   "pdf": 59
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a claim, if refused, is likely or not to be certified as ‘clearly unfounded’ under",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "relocation is possible to avoid persecution/serious harm",
+   "after": "section 94 of the Nationality, Immigration and Asylum",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 12
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "elites",
+   "pdf": "parties",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and violations).\n3.4 Treatment of Amhara political",
+   "after": "3.4.1 There are 3 political parties",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.7",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Version 1.0,",
+   "after": "Executive summary\nThe Amhara are the second most",
+   "before_pdf": "Version 1.0",
+   "where": {
+    "heading": null,
+    "paragraph": null,
+    "section": null,
+    "page": 4
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number\nAmhara\nNational\nHealth posts\n3,565\n1:6,321\n1:5,811\nHealth centres\n872\n1:25,845\n1:27,231\nHospitals\n88\n1:256,090\n1:280,247\nMedical doctors*\n2,516\n1:8,957\n1:8,4848\nNurses, midwives, health officers\n21,033\n1:1,071\n1:963\nHealth extension workers (HEWs)\n8,496\n1:2,653\n1:2,413\nSources: Ministry of Health (2020/21), Annual Performance Report, CSA population estimate for 2020.\nGeneral practitioners, specialists, sub-specialists, dental surgeons",
+   "pdf": "102",
+   "web_words": 71,
+   "pdf_words": 0,
+   "before": "in the Amhara region relative to national figures:",
+   "after": "10.4.3 In March 2025 OCHA Humanitarian",
+   "before_pdf": "in the Amhara region relative to national figures:.",
+   "where": {
+    "heading": "healthcare",
+    "paragraph": "10.3.8",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Official – sensitive: Not for disclosure – Start of section\nThe information on this page has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: Not for disclosure – End of section",
+   "web_words": 0,
+   "pdf_words": 33,
+   "before": "Humanitarian Protection and the instruction on Restricted Leave",
+   "after": "2. Convention reason(s)\n2.1.1 Race",
+   "before_pdf": "Humanitarian Protection and the instruction on Restricted Leave.",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "14.1.7",
+    "section": "Version control and feedback",
+    "page": 72
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.8",
+   "pdf": "10.4.1",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "many working across multiple sectors.\n10.4 Healthcare",
+   "after": "An article by the Primary Health Care Performance",
+   "where": {
+    "heading": "healthcare",
+    "paragraph": "10.3.8",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "1.1.2Decision",
+   "pdf": "1.1.2 Decision",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "the instruction on Assessing Credibility and Refugee Status",
+   "after": "makers must also check if there has been",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.2",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.4.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "primary health care units are typically health centres.’",
+   "after": "According to a 2021 UNICEF report in the",
+   "where": {
+    "heading": "healthcare",
+    "paragraph": "10.3.8",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.3.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "80 people were killed, including some buried elsewhere.’",
+   "after": "On 21 February 2024 the Global Centre for",
+   "where": {
+    "heading": "extra-judicial-killing",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "including arrests in Addis Ababa under the SoE.",
+   "after": "3 In general, membership or support for EZEMA",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.3",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "persecution (see Ethiopia Citizens for Social Change (EZEMA).",
+   "after": "4 The National Movement of the Amhara (NaMA)",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.4",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "7 months before being charged with terrorism offences.",
+   "after": "5 In general, membership or perceived links to",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.5",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "persecution (see National Movement of the Amhara (NaMa)).",
+   "after": "6 Balderas party is reported to be Amhara-",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.6",
+    "section": "Assessment",
+    "page": 10
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and detained between February 2023 and August 2024.",
+   "after": "7 There is a history of state repression",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.7",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.3.",
+   "pdf": "3.4.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the state which amounts to persecution (see Balderas).",
+   "after": "8 For further guidance on assessing risk, see",
+   "where": {
+    "heading": "treatment-of-amhara-political-elites",
+    "paragraph": "3.3.8",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.2",
+   "pdf": "10.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of the deaths occurring in the Amhara region.",
+   "after": "The OCHA humanitarian update report March 2025 noted: ‘",
+   "where": {
+    "heading": "humanitarian-access",
+    "paragraph": "10.3.2",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Region\nTotal\nMale\nFemale\nNorth Gondar\n925,739\n462,711\n463,028\nSouth Gondar\n2,761,265\n1,395,567\n1,365,628\nNorth Wello\n1,876,155\n940,143\n936,012\nSouth Wello\n3,423,557\n1,697,149\n1,726,408\nNorth Shewa (AM)\n2,535,452\n1,280,413\n1,255,040\nEast Gojam\n2,946,832\n1,460,020\n1,486,812\nWest Gojam\n2,803,308\n1,405,666\n1,397,642\nWag Hamra\n566,892\n283,087\n283,805\nAwi\n1,666,413\n835,438\n830,975\nOromia\n559,314\n277,955\n281,359\nCentral Gondar\n2,48,355\n1,220,093\nWest Gondar\n383,708\n204,753\n178,955\nTotal\n22,876,990\n11,462,995\n11,413,996",
+   "pdf": "",
+   "web_words": 126,
+   "pdf_words": 0,
+   "before": "showing the population in each of the zones:",
+   "after": "8.2.4 Although the majority of Amharas",
+   "where": {
+    "heading": "demography",
+    "paragraph": "8.2.3",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "the",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "in Addis Ababa (see Bibliography).\n9. Conflict in",
+   "after": "Amhara region\n9.1 Causes of the conflict",
+   "where": {
+    "heading": "conflict-in-the-amhara-region",
+    "paragraph": "8.2.5",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Health post Hospital Health Centre Clinic",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "data:\nZone\nHealth post\nHospital\nHealth Centre\nClinic",
+   "after": "Pharmacy\nAwi\n197\n5\n51\n3\nCentral Gondor",
+   "before_pdf": "data:\nZone\nHealth post Hospital Health Centre Clinic",
+   "where": {
+    "heading": "healthcare",
+    "paragraph": "10.4.4",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "95",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "was either ‘partially accessible’ or ‘hard to reach:",
+   "after": "10.3.5 However, January 2025 UNHCR report",
+   "where": {
+    "heading": "humanitarian-access",
+    "paragraph": "10.3.5",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "176",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Amhara civilians from January 2020 to April 2020.",
+   "after": "12.2.4 With respect to Oromia the",
+   "where": {
+    "heading": "oromia-benshangul-gumuz",
+    "paragraph": "12.2.4",
+    "section": "Country information",
+    "page": 50
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 242,
+  "different": {
+   "3.3.8": "3.4.8",
+   "10.3.8": "10.4.1"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "3.3.3",
+   "3.3.4",
+   "3.3.5",
+   "3.3.6",
+   "3.3.7",
+   "10.3.2"
+  ],
+  "unconfirmed": []
+ }
+}

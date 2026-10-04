@@ -1,0 +1,58 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 49,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 328,
+ "list_items": 51,
+ "tables": 1,
+ "figures": 4,
+ "footnotes": 144,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 10, 11, 12, 13, 144"
+ ],
+ "figure_pages": {
+  "320241991499bc5ed4f3bad6be15aecdc6eb051cfa711f897fdf60d92601acaf.png": 25,
+  "45331d0e0add4b2cb4e527663b47c3810131818252f0f68cab18b0192eded821.png": 26,
+  "4eabe786490bae32cca41d97777f74dd1f3fdd8891f601e873c64305d98c652c.png": 27,
+  "491591134ce88e6a05e3f3c1dba796490a2e9ca6733d08e1a18e4c2d1b8a03ec.jpg": 30
+ },
+ "figure_sizes": {
+  "320241991499bc5ed4f3bad6be15aecdc6eb051cfa711f897fdf60d92601acaf.png": [
+   852,
+   494
+  ],
+  "45331d0e0add4b2cb4e527663b47c3810131818252f0f68cab18b0192eded821.png": [
+   857,
+   519
+  ],
+  "4eabe786490bae32cca41d97777f74dd1f3fdd8891f601e873c64305d98c652c.png": [
+   650,
+   595
+  ],
+  "491591134ce88e6a05e3f3c1dba796490a2e9ca6733d08e1a18e4c2d1b8a03ec.jpg": [
+   919,
+   504
+  ]
+ },
+ "figure_text": {
+  "320241991499bc5ed4f3bad6be15aecdc6eb051cfa711f897fdf60d92601acaf.png": 0,
+  "45331d0e0add4b2cb4e527663b47c3810131818252f0f68cab18b0192eded821.png": 0,
+  "4eabe786490bae32cca41d97777f74dd1f3fdd8891f601e873c64305d98c652c.png": 0,
+  "491591134ce88e6a05e3f3c1dba796490a2e9ca6733d08e1a18e4c2d1b8a03ec.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Afghanistan: security and humanitarian situation",
+ "cover_version": "6.0",
+ "cover_date": "July 2019",
+ "pdf_sha256": "11cd4c88868d1e96a570c96884508b643154539a5bf39fd183ea8876037d5864",
+ "images": [
+  "320241991499bc5ed4f3bad6be15aecdc6eb051cfa711f897fdf60d92601acaf.png",
+  "45331d0e0add4b2cb4e527663b47c3810131818252f0f68cab18b0192eded821.png",
+  "491591134ce88e6a05e3f3c1dba796490a2e9ca6733d08e1a18e4c2d1b8a03ec.jpg",
+  "4eabe786490bae32cca41d97777f74dd1f3fdd8891f601e873c64305d98c652c.png"
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-actors-of-protection-bangladesh-november-2023-accessible",
+ "pdf_sha256": "bb4757056f0b2d2a524a0ef84efe40072ca33851c231bc76405b5ad76214d5b3",
+ "body_sha256": "af1c2f32cfa125917091e113037ec66768c052c376b5d9b2debd28f8179b1531",
+ "words": {
+  "web": 15283,
+  "pdf": 15283
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "November 2023",
+   "pdf": "2.0",
+   "pdf_date": "November 2023"
+  },
+  "section_updated": {
+   "web": [
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023"
+   ],
+   "pdf": [
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023",
+    "4 September 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 158,
+   "pdf": 158,
+   "pdf_raw": 158,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 65,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 158,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

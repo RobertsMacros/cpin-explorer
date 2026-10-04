@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 28,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 40,
+ "paragraphs": 157,
+ "list_items": 10,
+ "tables": 4,
+ "figures": 0,
+ "footnotes": 101,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Baha’i",
+ "cover_version": "2.0",
+ "cover_date": "November 2016",
+ "pdf_sha256": "8cbeefde0265c20353f280f1f6dc77dfd9146639d4f708f93324506bc91c4547",
+ "images": []
+}

@@ -1,0 +1,375 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+ "pdf_sha256": "cf3bcb034e800531f2d2e786f38a112261c1bd00ed769551a29666708d085e7c",
+ "body_sha256": "937777001f75b6bcecf4f7362ba6a51a899a305edfde30a9201c3f305cc9392f",
+ "words": {
+  "web": 26594,
+  "pdf": 26494
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 4,
+   "share": 7.5e-05,
+   "passages": 0,
+   "sizes": {
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 4
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 75,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 18,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 26,
+    "pdf_words": 0
+   },
+   "section updated": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 49,
+    "pdf_words": 0
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 18,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 9
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": null,
+   "pdf": "6.0",
+   "pdf_date": "September 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "25 September 2024"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 4,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 215,
+   "pdf": 216,
+   "pdf_raw": 216,
+   "differ": true
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 59,
+   "pdf": 57
+  },
+  "drafts": [
+   "footnote count differs: web 215, PDF 216"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 1
+  }
+ },
+ "differences": [
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Updated: 25 September 2024",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "the Nationality, Immigration and Asylum Act 2002.\nAssessment",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "number",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Sexual orientation\nFrequency\nPercent\nHeterosexual\n60\n25.53%\nNot indicated\n52\n22.13%\nGay\n49\n20.85%\nBisexual\n36\n15.32%\nLesbian\n24\n10.21%\nHomosexual\n7\n2.98%\nPansexual\n3\n1.28%\nQueer\n2\n0.85%\nOther\n2\n0.85%",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "of the person who reported experiencing the HRV .",
+   "after": "9.2.12. The most common sexual orientation",
+   "before_pdf": "of the person who reported experiencing the HRV.",
+   "where": {
+    "heading": "bookmark91",
+    "paragraph": "9.2.11",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The image shows people walking through Colombo with pride flags in their hands.\nThe image shows people holding up a banner for Colombo 2024 Pride festival.",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "images are from the June 2024 EFE report:",
+   "after": "Research methodology\nThe country of origin information (COI)",
+   "where": {
+    "heading": "bookmark256",
+    "paragraph": "13.3.7",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Gender identity\nFrequency\nPercent\nTranswoman\n87\n37.02%\nMale\n85\n36.17%\nTransman\n32\n13.62%\nFemale\n21\n8.94%\nNon binary\n9\n3.83%\nNot inidcated\n1\n0.43%",
+   "pdf": "",
+   "web_words": 23,
+   "pdf_words": 0,
+   "before": "of the person who reported experiencing the HRV .",
+   "after": "9.2.11. The following table produced by",
+   "before_pdf": "of the person who reported experiencing the HRV.",
+   "where": {
+    "heading": "bookmark91",
+    "paragraph": "9.2.10",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "1.1.5. The information in this section has been removed as it is restricted for internal Home Office use only.",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "is restricted for internal Home Office use only.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "before_pdf": "internal Home Office use only.\n1.1.5",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.5",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "September 2024",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "version 6.0",
+   "after": "Executive summary\nSri Lanka is about half the",
+   "before_pdf": "Version 6.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "166]",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "report 2023, repeating information from its 2022 report[",
+   "after": "noted: ‘Transgender persons continued to face societal discrimination,",
+   "before_pdf": "report 2023, repeating information from its 2022 report",
+   "where": {
+    "heading": "bookmark200",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": 31
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "68",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "5\nInvestigation pending\n429\nPending in Magistrates Courts",
+   "after": "Pending with the Attorney General\n68\nPending with",
+   "before_pdf": "Investigation pending\n429\nPending in Magistrates\n68\nCourts",
+   "where": {
+    "heading": "bookmark133",
+    "paragraph": "9.5.8",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "109",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "offenses” and “sexual abuse” in their official reporting.’",
+   "after": "9.5.2. The same ILGA report noted:",
+   "where": {
+    "heading": "bookmark133",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "68",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of\n5\nInvestigation pending\n429\nPending in Magistrates",
+   "after": "Courts\n68\nPending with the Attorney General\n68",
+   "where": {
+    "heading": "bookmark133",
+    "paragraph": "9.5.8",
+    "section": "Country information",
+    "page": 33
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "USSD, ‘USSD report 2023’ (section 6), 22 April 2024",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "and Support for the LGBTQI+ ...’, 14 February 2023",
+   "after": "USSD, ‘USSD report 2022’ (section 6), 20 March",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.3.7",
+    "section": "Version control and feedback",
+    "page": 44
+   },
+   "second": "disputes"
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 278,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

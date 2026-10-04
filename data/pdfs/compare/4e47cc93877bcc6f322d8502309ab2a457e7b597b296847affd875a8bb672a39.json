@@ -1,0 +1,401 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-kurdistan-workers-party-pkk-turkey-october-2023-accessible",
+ "pdf_sha256": "4e47cc93877bcc6f322d8502309ab2a457e7b597b296847affd875a8bb672a39",
+ "body_sha256": "9e87f39dcb6735cc2caf055ff1a2ac5277d5e3dbfc208f48c841755b951a6e11",
+ "words": {
+  "web": 27317,
+  "pdf": 27176
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 4,
+   "pdf_words": 2,
+   "share": 0.00011,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1,
+    "number": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 4,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 142,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 5,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 5,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 4,
+    "web_words": 142,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 4,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "July 2025",
+   "pdf": "6.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 176,
+   "pdf": 176,
+   "pdf_raw": 176,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 70,
+   "pdf": 66
+  },
+  "drafts": [
+   "a year differs in the text: web 2013, PDF 2024"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "casualities.",
+   "pdf": "causalities.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Turkish Army base, which resulted in dozens of",
+   "after": "Also in 2018, a roadside bomb struck a",
+   "where": {
+    "heading": "bookmark28",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2013.",
+   "pdf": "2024.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "s (ACCORD), Researching Country Origin Information – Training Manual,",
+   "after": "Namely, taking into account the COI’s relevance,",
+   "where": {
+    "heading": "bookmark21",
+    "paragraph": "13.5.2",
+    "section": "Research methodology",
+    "page": 58
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "and contrasted",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "multiple sourcing is used and the COI compared",
+   "after": "to ensure that it is accurate and balanced,",
+   "where": {
+    "heading": "bookmark21",
+    "paragraph": "13.5.2",
+    "section": "Research methodology",
+    "page": 58
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Violence in Iraq, calm in Turkey.\nThe chart, captioned ‘Violence in Iraq, calm in Turkey’, shows the number of engagements in Turkey gradually dropping between 2016 and 2021. Engagements in Iraq rise gradually, overtaking Turkey in 2019 and spiking sharply in 2021 before beginning to fall again.",
+   "pdf": "",
+   "web_words": 47,
+   "pdf_words": 0,
+   "before": "Turkey into northern Iraq between 2016 and 2021:",
+   "after": "9.3.3 The report published by the",
+   "where": {
+    "heading": "bookmark30",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Security events between Turkish authorities and the PKK in the Iraqi Kurdistan region, 1 January 2023 to 21 July 2023\nThe bar chart shows more than 300 events, the maximum, in June 2023. The lowest number is in February 2023, just over 100.",
+   "pdf": "",
+   "web_words": 43,
+   "pdf_words": 0,
+   "before": "information obtained from ACLED’s data export tool.",
+   "after": "9.5.7 Of the 1506 security events",
+   "where": {
+    "heading": "security-events-between-turkish-authorities-and-the-pkk-in-the-iraqi-kurdistan-region-1-january-2023-to-21-july-2023",
+    "paragraph": "9.5.6",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Security events between Turkish authorities and the PKK, 1 January 2023 to 21 July 2023\nJan 2023\n245\nFeb 2023\n110\nMar 2023\n175\nApr 2023\n180\nMay 2023\n255\nJun 2023\n310\nJul 2023\n240",
+   "pdf": "",
+   "web_words": 34,
+   "pdf_words": 0,
+   "before": "information obtained from ACLED’s data export tool.",
+   "after": "9.5.4 Of the 32 security events",
+   "where": {
+    "heading": "security-events-between-turkish-authorities-and-the-pkk-1-january-2023-to-21-july-2023",
+    "paragraph": "9.5.3",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The map shows that engagements are concentrated in the southeast of the country, around the border with Iraq.",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "between 1 January 2020 and 20 June 2020:",
+   "after": "9.2.4 On 16 December 2021, the",
+   "where": {
+    "heading": "bookmark29",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1- ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "by the police when a person enters Turkey:",
+   "after": "Extended Background Search (Genişletilmiş Bilgi Tarama-GBT) reveals",
+   "where": {
+    "heading": "returnees-to-turkey",
+    "paragraph": "7.6.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2-",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "reveals whether the person has any criminal records.",
+   "after": "Law Enforcement Procedures Project (Emniyet Kolluk İşlemleri Projesi,",
+   "where": {
+    "heading": "returnees-to-turkey",
+    "paragraph": "7.6.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3-",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "reveals whether the person has any criminal records.",
+   "after": "National Judicial Network Project (Ulusal Yargı Ağı Projesi,",
+   "where": {
+    "heading": "returnees-to-turkey",
+    "paragraph": "7.6.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4-",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "any legal investigations or prosecutions against her/him.",
+   "after": "Guidelines for Collecting Intelligence, Operations and Information against",
+   "where": {
+    "heading": "returnees-to-turkey",
+    "paragraph": "7.6.2",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5-",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "KİHBİ) reveals whether the person has any records.",
+   "after": "KOMBS - reveals whether the person has any records",
+   "where": {
+    "heading": "returnees-to-turkey",
+    "paragraph": "7.6.2",
+    "section": "Country information",
+    "page": 15
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "1991.",
+   "pdf": "199163.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "4 For more information, Law No. 3717 of",
+   "after": "CPIT was unable to find any amended iterations",
+   "where": {
+    "heading": "counter-terrorism-law-law-no-3713-of-1991",
+    "paragraph": "10.1.4",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Code.",
+   "pdf": "Code65.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2 For more information, see the Turkish Penal",
+   "after": "10.3 Anti-terror Law No. 7145\n10.",
+   "where": {
+    "heading": "turkish-penal-code",
+    "paragraph": "10.2.2",
+    "section": "Country information",
+    "page": 30
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 224,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

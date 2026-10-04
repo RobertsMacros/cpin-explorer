@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 57,
+ "paragraphs": 401,
+ "list_items": 39,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 91,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 38"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Uganda: Sexual orientation and gender identity and expression",
+ "cover_version": "4.0",
+ "cover_date": "April 2019",
+ "pdf_sha256": "4ec339e6e9a009309551950c96b450b256c1b27ddcd0634e7f5209c3502e8db8",
+ "images": []
+}

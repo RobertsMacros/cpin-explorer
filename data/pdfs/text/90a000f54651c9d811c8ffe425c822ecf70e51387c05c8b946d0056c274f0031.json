@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 50,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 48,
+ "paragraphs": 397,
+ "list_items": 51,
+ "tables": 0,
+ "figures": 4,
+ "footnotes": 81,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "0de41819808ca29ac135fdaafdc171ac090e99509f57d41f371970376cfd863f.jpg": 11,
+  "9c6e50f7abb1cd425726945e981a822bd129450c1290bef348487cda00ba9d7f.jpg": 18,
+  "02ccafec48c4a86d1ec9d6f7a75209c28b0ea3575cf49a289a456e51294d2d6c.jpg": 19,
+  "5d30b84d043e11c5dac51d316e0b2998c00d5deed4ce44a0a6beaa7659bd4fb8.png": 20
+ },
+ "figure_sizes": {
+  "0de41819808ca29ac135fdaafdc171ac090e99509f57d41f371970376cfd863f.jpg": [
+   916,
+   689
+  ],
+  "9c6e50f7abb1cd425726945e981a822bd129450c1290bef348487cda00ba9d7f.jpg": [
+   919,
+   732
+  ],
+  "02ccafec48c4a86d1ec9d6f7a75209c28b0ea3575cf49a289a456e51294d2d6c.jpg": [
+   919,
+   513
+  ],
+  "5d30b84d043e11c5dac51d316e0b2998c00d5deed4ce44a0a6beaa7659bd4fb8.png": [
+   846,
+   627
+  ]
+ },
+ "figure_text": {
+  "0de41819808ca29ac135fdaafdc171ac090e99509f57d41f371970376cfd863f.jpg": 0,
+  "9c6e50f7abb1cd425726945e981a822bd129450c1290bef348487cda00ba9d7f.jpg": 54,
+  "02ccafec48c4a86d1ec9d6f7a75209c28b0ea3575cf49a289a456e51294d2d6c.jpg": 0,
+  "5d30b84d043e11c5dac51d316e0b2998c00d5deed4ce44a0a6beaa7659bd4fb8.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Nigeria: Boko Haram",
+ "cover_version": "2.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "90a000f54651c9d811c8ffe425c822ecf70e51387c05c8b946d0056c274f0031",
+ "images": [
+  "02ccafec48c4a86d1ec9d6f7a75209c28b0ea3575cf49a289a456e51294d2d6c.jpg",
+  "0de41819808ca29ac135fdaafdc171ac090e99509f57d41f371970376cfd863f.jpg",
+  "5d30b84d043e11c5dac51d316e0b2998c00d5deed4ce44a0a6beaa7659bd4fb8.png",
+  "9c6e50f7abb1cd425726945e981a822bd129450c1290bef348487cda00ba9d7f.jpg"
+ ]
+}

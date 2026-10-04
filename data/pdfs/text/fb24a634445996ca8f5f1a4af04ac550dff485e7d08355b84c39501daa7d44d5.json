@@ -1,0 +1,66 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 40,
+ "paragraphs": 332,
+ "list_items": 21,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 75,
+ "bookmarks": 63,
+ "warnings": [
+  "page 6: bookmark not found in the text: '1.2 Points to note'",
+  "page 6: bookmark not found in the text: '2. Consideration of issues'",
+  "page 6: bookmark not found in the text: '2.1 Credibility'",
+  "page 7: bookmark not found in the text: '2.4 Risk'",
+  "page 7: bookmark not found in the text: 'a. Requirement to undertake national service'",
+  "page 8: bookmark not found in the text: 'c. Conditions of military service, and whether the requireme'",
+  "page 12: bookmark not found in the text: '2.5 Protection'",
+  "page 12: bookmark not found in the text: '2.6 Internal relocation'",
+  "page 13: bookmark not found in the text: '4. Military service'",
+  "page 13: bookmark not found in the text: '4.1 Legal context'",
+  "page 14: bookmark not found in the text: '4.4 Women'",
+  "page 15: bookmark not found in the text: '4.6 Length of service'",
+  "page 15: bookmark not found in the text: '4.7 Registration and call-up'",
+  "page 16: bookmark not found in the text: '4.8 Contractors'",
+  "page 18: bookmark not found in the text: '4.10 Mobilisation'",
+  "page 20: bookmark not found in the text: '4.12 Crimea'",
+  "page 21: bookmark not found in the text: '25'",
+  "page 21: bookmark not found in the text: '26'",
+  "page 22: bookmark not found in the text: '5. Exemptions and postponement'",
+  "page 22: bookmark not found in the text: '5.1 Exemptions'",
+  "page 24: bookmark not found in the text: '6. Conscientious objection'",
+  "page 24: bookmark not found in the text: '6.1 Religious groups'",
+  "page 25: bookmark not found in the text: '6.2 Alternative service'",
+  "page 26: bookmark not found in the text: '6.3 Court cases, convictions and sentences'",
+  "page 28: bookmark not found in the text: '7.2 Mistreatment (‘hazing’)'",
+  "page 30: bookmark not found in the text: '7.4 Measures taken to address mistreatment'",
+  "page 31: bookmark not found in the text: '7.5 Avenues of redress'",
+  "page 35: bookmark not found in the text: '8.3 Desertion'",
+  "page 35: bookmark not found in the text: '8.4 Numbers of evaders and deserters'",
+  "page 37: bookmark not found in the text: '67'",
+  "page 45: bookmark not found in the text: 'Sources consulted but not cited'"
+ ],
+ "figure_pages": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": 39
+ },
+ "figure_sizes": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": [
+   333,
+   263
+  ]
+ },
+ "figure_text": {
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "This document was archived on 24 02 2022 Country Policy and Information Note archivedUkraine: Military service Version 7.0 December 2020",
+ "cover_version": "7.0",
+ "cover_date": "December 2020",
+ "pdf_sha256": "fb24a634445996ca8f5f1a4af04ac550dff485e7d08355b84c39501daa7d44d5",
+ "images": [
+  "587de2ca1732203a1f36f52ef16025a154d09a687911b89e038f2cd4704b4bc6.png"
+ ]
+}

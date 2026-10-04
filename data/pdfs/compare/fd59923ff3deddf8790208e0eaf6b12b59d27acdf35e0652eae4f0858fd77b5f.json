@@ -1,0 +1,215 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-peoples-democratic-party-hdp-october-2023-accessible--2",
+ "pdf_sha256": "fd59923ff3deddf8790208e0eaf6b12b59d27acdf35e0652eae4f0858fd77b5f",
+ "body_sha256": "2b57e33bfc8908517d65e1440326bd698806dc8b0252517138b9687708a6c589",
+ "words": {
+  "web": 19439,
+  "pdf": 19302
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 113,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 1,
+    "web_words": 24,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 89,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "October 2023",
+   "pdf": "5.0",
+   "pdf_date": "October 2023"
+  },
+  "section_updated": {
+   "web": [
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023"
+   ],
+   "pdf": [
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023",
+    "18 August 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 116,
+   "pdf": 116,
+   "pdf_raw": 116,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 63,
+   "pdf": 48
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Party\nVoting rate (%)\nVotes\nNumber of seats\nJustice and Development Party (AKP) AK Party: 264 MP Free Cause Party: 3MPs Democratic Left Party: 1 MP\n35.62\n19,392,462\n268\nRepbublican People’s Party CHP: 130 MPs DEVA Party: 15 MPs Future Party: 10 MPs Felicity Party: 10 MPs Democratic Party: 4 MPs\n25.35\n13,802,183\n169\nNationalist Movement Party\n10.07\n5,484,820\n50\nGood Party\n9.69\n5,275,981\n43\nGreen Left Party\n8.82\n4,803,922\n61\nNew Welfare Party\n2.80\n1,527,048\n5\nWorkers’ Party of Turkey\n1.76\n956,057\n4",
+   "pdf": "",
+   "web_words": 89,
+   "pdf_words": 0,
+   "before": "2023)’ which provided the following breakdown of votes:",
+   "after": "11.1.4 The same source additionally stated",
+   "where": {
+    "heading": "figure-2-turkish-2023-parliamentary-election-results",
+    "paragraph": "11.1.3",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 2. Turkish 2023 Parliamentary Election Results\nout of 600 total seats)\nParty\nSeats\nof vote\nPeople’s Alliance\n323\n49.9%\nNation Alliance\n212\n35.4%\nLabor and Freedom Alliance\n25\n10.7%",
+   "pdf": "",
+   "web_words": 24,
+   "pdf_words": 0,
+   "before": "or remove presidential term limits via constitutional amendment.",
+   "after": "Note: The various alliances and parties that received",
+   "where": {
+    "heading": "figure-2-turkish-2023-parliamentary-election-results",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 24
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "42",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2023\n10. Green Left Party (Yeşil Sol Parti)",
+   "after": "10.1.1 According to an article published",
+   "where": {
+    "heading": "green-left-party-yeil-sol-parti",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 9
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 167,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

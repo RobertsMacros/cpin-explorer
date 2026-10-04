@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 26,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 31,
+ "paragraphs": 166,
+ "list_items": 19,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 45,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Journalists and internet based media",
+ "cover_version": "2.0",
+ "cover_date": "October 2016",
+ "pdf_sha256": "ae9179e8f70c2ed5e6a8e4482f96e697cd6f8b3879666a4a0ae6dbea4aff313a",
+ "images": []
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 41,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 37,
+ "paragraphs": 376,
+ "list_items": 23,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 66,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 19"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Smugglers",
+ "cover_version": "3.0",
+ "cover_date": "August 2019",
+ "pdf_sha256": "cbb295b20f4edc7e664d1badd55c9d3772158694dea3129419f887f029330a7d",
+ "images": []
+}

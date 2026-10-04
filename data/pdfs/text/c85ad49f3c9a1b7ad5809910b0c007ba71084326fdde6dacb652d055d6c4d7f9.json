@@ -1,0 +1,50 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 42,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 51,
+ "paragraphs": 255,
+ "list_items": 16,
+ "tables": 2,
+ "figures": 3,
+ "footnotes": 141,
+ "bookmarks": 48,
+ "warnings": [
+  "footnotes with no mark found in the text: 1, 6, 19"
+ ],
+ "figure_pages": {
+  "f0223be1460b138b6363cbdd1219684966294c0f878a930cb681f875c5d4857f.jpg": 9,
+  "0dcbb1c867d67c09660554a2ccaf70561e5aef81f7d566a9636364057c622088.jpg": 10,
+  "ee21725998dde89f6ac68dbd0d1208774acc6a747d0ad7d5630694e68b23454b.jpg": 13
+ },
+ "figure_sizes": {
+  "f0223be1460b138b6363cbdd1219684966294c0f878a930cb681f875c5d4857f.jpg": [
+   735,
+   575
+  ],
+  "0dcbb1c867d67c09660554a2ccaf70561e5aef81f7d566a9636364057c622088.jpg": [
+   751,
+   476
+  ],
+  "ee21725998dde89f6ac68dbd0d1208774acc6a747d0ad7d5630694e68b23454b.jpg": [
+   857,
+   489
+  ]
+ },
+ "figure_text": {
+  "f0223be1460b138b6363cbdd1219684966294c0f878a930cb681f875c5d4857f.jpg": 1,
+  "0dcbb1c867d67c09660554a2ccaf70561e5aef81f7d566a9636364057c622088.jpg": 1,
+  "ee21725998dde89f6ac68dbd0d1208774acc6a747d0ad7d5630694e68b23454b.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Political opinion in the Kurdistan Region of Iraq (KRI)",
+ "cover_version": "1.0",
+ "cover_date": "August 2017",
+ "pdf_sha256": "c85ad49f3c9a1b7ad5809910b0c007ba71084326fdde6dacb652d055d6c4d7f9",
+ "images": [
+  "0dcbb1c867d67c09660554a2ccaf70561e5aef81f7d566a9636364057c622088.jpg",
+  "ee21725998dde89f6ac68dbd0d1208774acc6a747d0ad7d5630694e68b23454b.jpg",
+  "f0223be1460b138b6363cbdd1219684966294c0f878a930cb681f875c5d4857f.jpg"
+ ]
+}

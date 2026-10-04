@@ -1,0 +1,59 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 84,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 752,
+ "list_items": 65,
+ "tables": 2,
+ "figures": 4,
+ "footnotes": 132,
+ "bookmarks": 50,
+ "warnings": [
+  "page 10: bookmark not found in the text: 'a. NADs in Khartoum'",
+  "page 12: bookmark not found in the text: 'b. Darfur'",
+  "footnotes with no mark found in the text: 111"
+ ],
+ "figure_pages": {
+  "2a233ed2d2f6b688cb425b013c917cf76762f379422b6f90d587406e23500b1e.png": 54,
+  "14a558915c9c504341d7e05c0fe6222a285f766367ce58cc4f5adb36fcb00713.png": 55,
+  "ae7cc55601ad5283c43f94fcdd0e27f8e4a5b84af001d3c18db67a59b54ec802.png": 55,
+  "6e74c0780fd0034571102fb3571811506812b8b4c6d94f64c0b1f9d608f4d25c.jpg": 56
+ },
+ "figure_sizes": {
+  "2a233ed2d2f6b688cb425b013c917cf76762f379422b6f90d587406e23500b1e.png": [
+   919,
+   317
+  ],
+  "14a558915c9c504341d7e05c0fe6222a285f766367ce58cc4f5adb36fcb00713.png": [
+   919,
+   323
+  ],
+  "ae7cc55601ad5283c43f94fcdd0e27f8e4a5b84af001d3c18db67a59b54ec802.png": [
+   377,
+   352
+  ],
+  "6e74c0780fd0034571102fb3571811506812b8b4c6d94f64c0b1f9d608f4d25c.jpg": [
+   918,
+   678
+  ]
+ },
+ "figure_text": {
+  "2a233ed2d2f6b688cb425b013c917cf76762f379422b6f90d587406e23500b1e.png": 0,
+  "14a558915c9c504341d7e05c0fe6222a285f766367ce58cc4f5adb36fcb00713.png": 0,
+  "ae7cc55601ad5283c43f94fcdd0e27f8e4a5b84af001d3c18db67a59b54ec802.png": 0,
+  "6e74c0780fd0034571102fb3571811506812b8b4c6d94f64c0b1f9d608f4d25c.jpg": 3
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Sudan: Non-Arab Darfuris",
+ "cover_version": "5.0",
+ "cover_date": "October 2021",
+ "pdf_sha256": "7d24e69ce8b748149e095938502cacb96ae0aae5022182b46dedbd53d5b5f56a",
+ "images": [
+  "14a558915c9c504341d7e05c0fe6222a285f766367ce58cc4f5adb36fcb00713.png",
+  "2a233ed2d2f6b688cb425b013c917cf76762f379422b6f90d587406e23500b1e.png",
+  "6e74c0780fd0034571102fb3571811506812b8b4c6d94f64c0b1f9d608f4d25c.jpg",
+  "ae7cc55601ad5283c43f94fcdd0e27f8e4a5b84af001d3c18db67a59b54ec802.png"
+ ]
+}

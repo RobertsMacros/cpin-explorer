@@ -9,9 +9,10 @@ import * as docx from "../../prototypes/vendor/docx.js";
 import {
   bookmarkNamer, buildCitationsDocx, docxFileName, FONT_FILES, FONTS, highlightHeading, htmlRuns,
 } from "../../prototypes/shared/citations-docx.js";
-import { cleanQuote, formatCitation } from "../../prototypes/shared/citation.js";
+import { formatCitation, quoteOf } from "../../prototypes/shared/citation.js";
 import { citeContext } from "../../prototypes/shared/highlights.js";
 import { docxAssets, readBytes, sampleHighlights, textOf } from "../build-docx.mjs";
+import { readFileSync } from "node:fs";
 
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
 const ACCESSED = new Date(2026, 9, 2);
@@ -67,7 +68,7 @@ test("full export: quotes, citations with real links, sources, notes and the sta
   const doc = xml(full, "word/document.xml"), rels = xml(full, "word/_rels/document.xml.rels");
   const text = docText(doc);
   for (const r of highlights) {
-    assert.ok(text.includes(`“${cleanQuote(r.quote)}”`), `quote ${r.para}`);
+    assert.ok(text.includes(`“${quoteOf(r)}”`), `quote ${r.para}`);
     const c = formatCitation(citeContext(r, { accessed: ACCESSED }), "oscola");
     assert.ok(text.includes(c.text), `citation ${r.para}: ${c.text}`);
     const id = new RegExp(`Id="([^"]+)"[^>]*Target="${c.url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}" TargetMode="External"`).exec(rels)?.[1];
@@ -163,7 +164,7 @@ test("citations only: the same look, a numbered list grouped by country and note
   assert.equal((doc.match(/<w:numPr><w:ilvl w:val="0"\/><w:numId w:val="(\d+)"\/><\/w:numPr>/g) || []).length, 4);
   assert.equal(new Set(all(doc, /<w:numId w:val="(\d+)"\/>/g)).size, 1, "one list, numbered 1–4 across the groups");
   assert.match(xml(cites, "word/numbering.xml"), /<w:numFmt w:val="decimal"\/>/);
-  for (const r of highlights) assert.ok(!text.includes(cleanQuote(r.quote)), "no quotes");
+  for (const r of highlights) assert.ok(!text.includes(quoteOf(r)), "no quotes");
   assert.ok(styled(doc, "CpinLabel").some((t) => t.includes("Para 2.4.5") && t.includes("Changed since saved")));
   assert.ok(doc.includes(' TOC \\o &quot;1-2&quot; \\h'), "a TOC field, two levels");
   const anchors = new Set(all(doc, /<w:hyperlink w:history="1" w:anchor="([^"]+)"/g));
@@ -194,5 +195,88 @@ test("helpers: file names, bookmark names, citation runs", () => {
   assert.deepEqual(runs.filter((r) => r.italic).map((r) => r.text), ["Country Policy and Information Note: Military Service, Iran"]);
   assert.deepEqual(runs.filter((r) => r.href).map((r) => r.href), [c.url]);
   const t = formatCitation(citeContext(highlights[0], { accessed: ACCESSED }), "tribunal");
-  assert.deepEqual(htmlRuns(t.html).map((r) => [r.text, !!r.href]), [["CPIN Iran: Military service", true], [" (v4.0, Aug 2026) at [9.1.1]", false]]);
+  assert.deepEqual(htmlRuns(t.html).map((r) => [r.text, !!r.href]), [["CPIN Iran: Military service", true], [" (v4.0, Aug 2026, web version) at [9.1.1]", false]]);
+});
+
+/* ------------------------------------------------------------------ what a quote is, and where it is from */
+
+const dashboard = JSON.parse(readFileSync(join(ROOT, "prototypes/dashboard/data.json"), "utf8"));
+/** A highlight as the reader saves it from an edition read from a PDF (one of the dashboard's "pdf-…" notes). */
+const pdfHighlight = (id, slug, topic, extra = {}) => {
+  const c = dashboard.countries.find((x) => x.slug === slug), n = c.notes.find((x) => x.text_from_pdf && x.topic === topic);
+  return { id, country: slug, countryName: c.name, iso: c.iso_a2, note: n.id, series: n.series, title: n.title, kind: n.kind, topic: n.topic, version: n.version, month: n.month,
+    editionSha: n.pdf_sha256.slice(0, 16), url: n.pdf_url, source: "pdf", archived: false, quote: `Words read from the PDF on ${topic}.`, lead: null, para: "2.4.1",
+    section: "2. Assessment", pos: { start: 10, end: 60 }, sources: [], comment: "", check: "current", createdAt: "2026-10-04T08:00:00Z", ...extra };
+};
+const VERBATIM = "Quotes are verbatim from the Home Office notes on GOV.UK; each link opens the note at the quoted words.";
+
+test("a quote in the Word file is the words as they read: a figure kept, lines of a table apart", async () => {
+  const web = highlights.find((r) => r.para === "9.1.1");
+  const figure = { ...web, id: "hf", quote: "2.86 million Afghans returned to Afghanistan", lead: null, para: "16.1.2", sources: [] };
+  const old = { ...figure, id: "ho", lead: undefined, para: "16.1.3" };                          // saved before `lead` was recorded
+  const table = { ...web, id: "ht", quote: "18904471443", spaced: "1890 447 1443", lead: null, para: "7.6.5", sources: [] };
+  const whole = { ...web, id: "hw", quote: "16.1.2     In 2025, approximately 2.86 million", lead: "16.1.2", para: "16.1.2", sources: [] };
+  const files = unzip(await buildCitationsDocx(docx, [figure, old, table, whole], { mode: "full", accessed: ACCESSED, ...assets, output: "nodebuffer" }));
+  const quotes = styled(xml(files, "word/document.xml"), "CpinQuote");
+  assert.deepEqual(quotes.sort(), ["“1890 447 1443”", "“2.86 million Afghans returned to Afghanistan”", "“2.86 million Afghans returned to Afghanistan”", "“In 2025, approximately 2.86 million”"]);
+});
+
+test("quotes read from a PDF are marked, and the header calls only the others verbatim", async () => {
+  const text = (files) => docText(xml(files, "word/document.xml"));
+  // Web notes only: as before.
+  assert.ok(text(full).includes(VERBATIM));
+  assert.ok(!text(full).includes("From the PDF"));
+  // A mixed set: the header says which are not verbatim, and each of those carries the mark on its card.
+  const zim = [pdfHighlight("hz1", "zimbabwe", "opposition to the government"), pdfHighlight("hz2", "zimbabwe", "medical treatment and healthcare")];
+  const mixedFiles = await build("full"), mixedSet = [...highlights, ...zim];
+  const mixed = unzip(await buildCitationsDocx(docx, mixedSet, { mode: "full", accessed: ACCESSED, ...assets, output: "nodebuffer" }));
+  const t = text(mixed);
+  assert.ok(!t.includes(VERBATIM), "the plain claim is not made of a mixed set");
+  assert.ok(t.includes("Quotes are verbatim from the Home Office notes on GOV.UK, except the 2 marked “From the PDF”: those are this site’s reading of a note published as a PDF only, so check the PDF where exact wording matters."));
+  assert.equal((t.match(/From the PDF/g) || []).length, 1 + 2, "once in the header, once on each of the two cards");
+  assert.ok(t.includes("The Home Office publishes this edition as a PDF only."));
+  assert.ok(t.includes("“Words read from the PDF on opposition to the government.”") && t.includes("(version 5.0, September 2021, PDF version) para 2.4.1"));
+  assert.ok(text(mixedFiles).includes(VERBATIM), "and the web-only export is unchanged by it");
+  // Two reports of one country, each read from a PDF: two notes, each under its own title, linked to its own PDF.
+  const doc = xml(mixed, "word/document.xml");
+  assert.deepEqual(styled(doc, "Heading2"), ["Humanitarian situation", "Illegal exit", "Military service", "Medical treatment and healthcare", "Opposition to the government"]);
+  assert.ok(styled(doc, "CpinVerbatim").includes(zim[0].title) && styled(doc, "CpinVerbatim").includes(zim[1].title));
+  assert.ok(styled(doc, "CpinMeta").some((m) => m.includes("Version 5.0") && m.includes(zim[0].url)));
+  assert.ok(styled(doc, "CpinMeta").some((m) => m.includes("Version 2.0") && m.includes(zim[1].url)));
+  // One PDF quote among web ones, and PDF quotes only: the wording stays true.
+  const one = text(unzip(await buildCitationsDocx(docx, [...highlights, zim[0]], { mode: "full", accessed: ACCESSED, ...assets, output: "nodebuffer" })));
+  assert.ok(one.includes("except the one marked “From the PDF”: that is this site’s reading"));
+  const only = text(unzip(await buildCitationsDocx(docx, zim, { mode: "full", accessed: ACCESSED, ...assets, output: "nodebuffer" })));
+  assert.ok(only.includes("Quotes are this site’s reading of notes the Home Office publishes as a PDF only (marked “From the PDF”)") && !only.includes("verbatim"));
+  // Citations only: no quotes, so no claim about them; the PDF citations are marked and the link line is true.
+  const list = unzip(await buildCitationsDocx(docx, mixedSet, { mode: "citations", accessed: ACCESSED, ...assets, output: "nodebuffer" }));
+  assert.ok(text(list).includes("a link to a PDF (marked “From the PDF”) opens the PDF."));
+  assert.equal(styled(xml(list, "word/document.xml"), "CpinLabel").filter((l) => l.includes("From the PDF")).length, 2);
+  assert.ok(docText(xml(cites, "word/document.xml")).includes("Each link opens the note at the quoted words."));
+});
+
+test("a note's heading gives the edition its highlights cite, not the one on GOV.UK the day of the export", () => {
+  // The illegal exit passage was saved from v6.0 (May 2022) and has changed since; the dashboard knows v7.0.
+  const saved = highlights.find((r) => r.para === "2.4.5"), today = assets.noteInfo(saved.country, saved.note);
+  assert.equal(saved.version, "6.0");
+  assert.notEqual(today.version, saved.version, "the dashboard has moved on from the edition quoted");
+  const doc = xml(full, "word/document.xml");
+  const meta = styled(doc, "CpinMeta").find((m) => m.includes("illegal-exit"));
+  assert.match(meta, /^Version 6\.0 /);
+  assert.ok(!meta.startsWith(`Version ${today.version}`), "today's version is not passed off as the highlight's");
+  assert.ok(docText(doc).includes("May 2022 · v6.0"));
+  assert.ok(styled(doc, "CpinVerbatim").includes(saved.title), "and the title is the one that edition was published under");
+  // The card under it still says what has happened since.
+  assert.ok(docText(doc).includes("v6.0 → v7.0: these words are not in the edition now on GOV.UK."));
+  // Citations only: the same edition line.
+  assert.ok(styled(xml(cites, "word/document.xml"), "CpinMeta").some((m) => m.includes("May 2022 · v6.0")));
+});
+
+test("highlights from two editions of one note: the heading names both", async () => {
+  const a = highlights.find((r) => r.para === "2.4.5");                                       // v6.0, May 2022
+  const b = { ...a, id: "hb", version: "7.0", month: "2026-08", title: a.title.replace("May 2022", "August 2026"), check: "current", current: null, archivedCopy: null, para: "2.4.6", pos: { start: a.pos.start + 900, end: a.pos.end + 900 } };
+  const files = unzip(await buildCitationsDocx(docx, [a, b], { mode: "full", accessed: ACCESSED, ...assets, output: "nodebuffer" }));
+  const doc = xml(files, "word/document.xml");
+  assert.ok(docText(doc).includes("May 2022 · v6.0  /  Aug 2026 · v7.0"));
+  assert.ok(styled(doc, "CpinMeta").some((m) => m.startsWith("Versions 6.0 and 7.0")));
 });

@@ -1,0 +1,397 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-security-situation-syria-july-2025-accessible",
+ "pdf_sha256": "a9a4fca1298a03d17fda0311e8f1650f2bc1782bff82804a04dc5025682331bd",
+ "body_sha256": "aec3907c97c425d2333511bf6a2ba5c95d04f8672cf2f23af525f274b1c70e9a",
+ "words": {
+  "web": 12430,
+  "pdf": 12445
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 7,
+   "pdf_words": 2,
+   "share": 0.000362,
+   "passages": 1,
+   "sizes": {
+    "spelling": 2,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 7,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 15,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 15,
+    "pdf_words": 5
+   },
+   "caption": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 5,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "July 2025",
+   "pdf": "2.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "7 June 2025"
+   ],
+   "pdf": [
+    "7 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 6
+  },
+  "footnotes": {
+   "web": 89,
+   "pdf": 89,
+   "pdf_raw": 89,
+   "differ": false
+  },
+  "pictures": {
+   "web": 11,
+   "pdf": 11
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 84,
+   "pdf": 52
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024-7-Oct.-2024.pdf) (",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "content/uploads/dlm_uploads/2024/10/ACLED-Codebook-",
+   "after": "page 18), no date\nACLED, Codebook (page 20),",
+   "before_pdf": "ACLED, Codebook (page 16), no date\nACLED, Codebook (",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.6.1",
+    "section": "Version control and feedback",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "governate",
+   "pdf": "governorate",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "towns.\nMap of Syria\n8.2 Population by",
+   "after": "and city\n8.2.1 The below table",
+   "before_pdf": "governorates, cities and towns.\n8.2 Population by",
+   "where": {
+    "heading": "population-by-governate-and-city",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 12
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "10.1 Territorial",
+   "pdf": "10.1 Terriorial",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the UK Government’s views of any boundaries.",
+   "after": "control under the Assad regime\n10.1.1",
+   "before_pdf": "the UK Government's views of any boundaries.",
+   "where": {
+    "heading": "territorial-control-under-the-assad-regime",
+    "paragraph": "9.8.4",
+    "section": "Country information",
+    "page": 22
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://acleddata.com/acleddatanew/wp-content/uploads/dlm_uploads/2024/10/",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "no date\nACLED, Codebook (page 16), no date",
+   "after": "ACLED-Codebook-2024-7-Oct.-2024.pdf) (page",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.6.1",
+    "section": "Version control and feedback",
+    "page": 27
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.6.1",
+    "section": "Version control and feedback",
+    "page": 41
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map of Syria",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "2022, shows Syria’s governorates, cities and towns.",
+   "after": "8.2 Population by governate and city\n8.",
+   "where": {
+    "heading": "governorates",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.2",
+   "pdf": "9.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "forces and Kurdish-led forces in the northeast.’",
+   "after": "The 19 December 2024 TIMEP article stated: ‘The",
+   "where": {
+    "heading": "turkish-backed-syrian-national-army-sna",
+    "paragraph": "9.2.2",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.3",
+   "pdf": "9.2.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "areas, particularly in the eastern countryside of Aleppo.’",
+   "after": "On 13 January 2025, BBC Monitoring described the",
+   "where": {
+    "heading": "turkish-backed-syrian-national-army-sna",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.4",
+   "pdf": "9.2.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "have retained a high degree of mutual autonomy.’",
+   "after": "The same BBC Monitoring article named the main",
+   "where": {
+    "heading": "turkish-backed-syrian-national-army-sna",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 14
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "11.1.1",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "recent ISIS activity.\n11. Sources of conflict data",
+   "after": "Syrian Network for Human Rights\n11.1.1",
+   "before_pdf": "activity .\n11. Sources of conflict data\n11.1",
+   "where": {
+    "heading": "syrian-network-for-human-rights",
+    "paragraph": "10.2.6",
+    "section": "Country information",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 134,
+  "different": {
+   "9.2.2": "9.2.1",
+   "9.2.3": "9.2.2"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "9.2.4",
+   "11.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

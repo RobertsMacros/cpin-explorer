@@ -1,0 +1,522 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-social-media-surveillance-and-sur-place-activities-iran-april-2025-accessible",
+ "pdf_sha256": "6a5a6c3611f01e305e3cd36c9d03b1e0fac2343a540066c6da8a56bd9f52c235",
+ "body_sha256": "e245594e6ac617ab236beb7f9d55ae1cb180e96f5e792764c041d2d2f756915d",
+ "words": {
+  "web": 25043,
+  "pdf": 24983
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 131,
+   "pdf_words": 56,
+   "share": 0.003738,
+   "passages": 6,
+   "sizes": {
+    "passage": 6,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 3,
+   "passages": 2,
+   "words": 40
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 131,
+    "pdf_words": 56
+   },
+   "numbering": {
+    "differences": 8,
+    "web_words": 8,
+    "pdf_words": 8
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 13,
+    "pdf_words": 8
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 13,
+    "pdf_words": 8
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 114,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 2,
+    "web_words": 15,
+    "pdf_words": 14
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 8,
+    "web_words": 8,
+    "pdf_words": 8
+   },
+   "section updated": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 33
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 18
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": null,
+   "pdf": "2.0",
+   "pdf_date": "April 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "26 March 2025"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 168,
+   "pdf": 168,
+   "pdf_raw": 168,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 73,
+   "pdf": 40
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2025About Us, no date. Accessed: 19 February 2025\nIran Arrests Four Over Sharing Video Of Hijab Incident With IITV, 12 March 2024. Accessed: 5 February 2025\nIran Orders Social Media Influencers To Get Advertising License, 15 February 2024. Accessed: 5 February 2025\nIran Unleashes Cyber Campaign To Expose Dissident Accounts, 6 January 2024. Accessed: 4 February 2025\nState-backed poll shows most Iranian students use foreign social media Iran International, 17 October 2024. Accessed: 5 February 2025\n100,000 Iranians use Starlink to defy internet curbs, 6 January 2025, updated 7 January 2025. Accessed: 7 February 2025\nRestrictions on Freedom of Expression in the Islamic Republic of Iran, 25 March 2016. Accessed: 28 January",
+   "pdf": "",
+   "web_words": 114,
+   "pdf_words": 0,
+   "before": "2025, updated 7 January 2025. Accessed: 7 February",
+   "after": "2025\nIran News Update (INU)\nAbout Us, 25",
+   "where": {
+    "heading": "iran-international",
+    "paragraph": "10.4.15",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "A person who participates ‘sur place’ in demonstrations which are deemed critical of the Iranian state may be subject to treatment on return to Iran",
+   "web_words": 0,
+   "pdf_words": 25,
+   "before": "the size of audience of their online activity",
+   "after": "that is sufficiently serious, by its nature or",
+   "before_pdf": "the size of audience of their online activity.",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 4
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "NIAC Action, Social media users who go viral given harsh prison sentences ..., 9 February 2023",
+   "pdf": "",
+   "web_words": 15,
+   "pdf_words": 0,
+   "before": "2024\nNIAC Action, Mission and Vision, no date",
+   "after": "NIAC Action, Social media users who go viral",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.4.15",
+    "section": "Version control and feedback",
+    "page": 33
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Detailed findings of ... mission (paragraph 1182), 19 March 2024, updated 8 July 2024\nHRC,",
+   "web_words": 0,
+   "pdf_words": 14,
+   "before": "Tied to Iranian Police ..., 27 April 2023\nHRC,",
+   "after": "Report of the ... International Fact-Finding Mission ... (paragraph",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.4.15",
+    "section": "Version control and feedback",
+    "page": 33
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "notes).",
+   "pdf": "Note on Iran: Kurds and Kurdish political parties.",
+   "web_words": 1,
+   "pdf_words": 8,
+   "before": "uk/government/publications/iran-country-policy-and-information-",
+   "after": "3.3.20 For further guidance on assessing",
+   "before_pdf": "19 See also the Country Policy and Information",
+   "where": {
+    "heading": "sur-place-activities--online",
+    "paragraph": "3.3.19",
+    "section": "About the assessment",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Assessment\nSection updated: 26 March 2025",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "to demonstrate they face persecution or serious harm.",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "About the assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "use",
+   "pdf": "usage in Iran",
+   "web_words": 1,
+   "pdf_words": 3,
+   "before": "among other offences, was overturned\n9. Social media",
+   "after": "9.1 Social media platforms\n9.1.1",
+   "where": {
+    "heading": "social-media",
+    "paragraph": "8.6.11",
+    "section": "Country information",
+    "page": 37
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "3.3.19 political parties](https://www.gov.uk/government/publications/iran-",
+   "pdf": "3.3.19 See also the",
+   "web_words": 9,
+   "pdf_words": 3,
+   "before": "evidence’ to justify a departure from these findings.",
+   "after": "country-policy-and-information-notes).\n3.3.20",
+   "where": {
+    "heading": "sur-place-activities--online",
+    "paragraph": "3.3.19",
+    "section": "About the assessment",
+    "page": 16
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.4.15",
+    "section": "Version control and feedback",
+    "page": 61
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "April 2025",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 2.0",
+   "after": "Executive summary\nIran’s Constitution and legal framework",
+   "before_pdf": "Version 2.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.5",
+   "pdf": "10.3.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Mona Jaffarian, who has led protests in France.’",
+   "after": "Another Guardian article dated 18 December 2023 stated:",
+   "where": {
+    "heading": "sur-place-activity",
+    "paragraph": "10.3.5",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.5",
+   "pdf": "10.3.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "by those supporting the regime in the UK.’",
+   "after": "A 20 February 2024 IranWire article stated:\nR]",
+   "where": {
+    "heading": "sur-place-activity",
+    "paragraph": "10.3.5",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.6",
+   "pdf": "10.3.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "individuals spotted at the gathering, or slogans chanted.’",
+   "after": "Another IRBC response to an information request, dated",
+   "where": {
+    "heading": "sur-place-activity",
+    "paragraph": "10.3.6",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.7",
+   "pdf": "10.3.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "returning from “Western countries due to political activities”.",
+   "after": "In June 2024, the EUAA published an ‘Iran –",
+   "where": {
+    "heading": "sur-place-activity",
+    "paragraph": "10.3.7",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.5",
+   "pdf": "10.4.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "social media presence tracked by the Iranian government.’",
+   "after": "The Guardian’s September 2023 article stated: ‘Last",
+   "where": {
+    "heading": "monitoring-online",
+    "paragraph": "10.4.5",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.6",
+   "pdf": "10.4.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "attempts” by ... Iran-linked hacker group, Charming Kitten.’",
+   "after": "The Iran COI report, published by the BZ",
+   "where": {
+    "heading": "monitoring-online",
+    "paragraph": "10.4.6",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.7",
+   "pdf": "10.4.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "calls with their relatives in Iran are tapped.’",
+   "after": "The same COI report stated:\nAccording to various",
+   "where": {
+    "heading": "monitoring-online",
+    "paragraph": "10.4.7",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.4.8",
+   "pdf": "10.4.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "at an Iranian airport or on leaving Iran.’",
+   "after": "Wired, an American magazine which covers technology and",
+   "where": {
+    "heading": "monitoring-online",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 48
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 193,
+  "different": {
+   "10.3.6": "10.3.8",
+   "10.3.7": "10.3.9",
+   "10.4.6": "10.4.7",
+   "10.4.7": "10.4.8",
+   "10.4.8": "10.4.9"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.3.5",
+   "10.4.5"
+  ],
+  "unconfirmed": []
+ }
+}

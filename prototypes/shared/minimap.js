@@ -200,7 +200,7 @@ export class Minimap {
    *               positions in document pixels, from pos.yOf(el) / pos.yAt(offset)
    *   positioner  (doc) => a DocPositioner for the text shown
    *   insetTop    () => pixels of sticky chrome covering the top of the window
-   *   busy        () => true while rebuilding would cost frames (Play): the strip dims and waits
+   *   busy        () => true while rebuilding would cost frames (something else is animating): the strip dims and waits
    *   onSeek      () => called when the strip starts to move the page (stop other scroll animations)
    *   labelRoom   (stripRect) => pixels free to the right of the strip (section labels when there is room)
    *   observe     more elements whose size moves the text (a ResizeObserver rebuilds after they change)
@@ -254,7 +254,7 @@ export class Minimap {
 
   build() {
     if (!this.visible() || !this.doc?.isConnected) return;
-    if (this.o.busy()) { this.host.classList.add("is-stale"); return; }        // rebuilt when Play stops
+    if (this.o.busy()) { this.host.classList.add("is-stale"); return; }        // rebuilt once it is free
     if (this.drag || this.anim) { this.schedule(); return; }                    // not while it is moving the page
     this.dirty = false;
     this.builds = (this.builds || 0) + 1;

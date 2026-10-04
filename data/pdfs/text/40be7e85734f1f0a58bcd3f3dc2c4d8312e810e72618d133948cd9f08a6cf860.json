@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 45,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 344,
+ "list_items": 62,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 128,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 12, 13, 56, 57"
+ ],
+ "figure_pages": {
+  "238821b05f28010f965dbdb51c63f86b4cb1a064add60ef0110a4f183c43e8d2.jpg": 11
+ },
+ "figure_sizes": {
+  "238821b05f28010f965dbdb51c63f86b4cb1a064add60ef0110a4f183c43e8d2.jpg": [
+   919,
+   649
+  ]
+ },
+ "figure_text": {
+  "238821b05f28010f965dbdb51c63f86b4cb1a064add60ef0110a4f183c43e8d2.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Kurds and Kurdish political groups",
+ "cover_version": "3.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "40be7e85734f1f0a58bcd3f3dc2c4d8312e810e72618d133948cd9f08a6cf860",
+ "images": [
+  "238821b05f28010f965dbdb51c63f86b4cb1a064add60ef0110a4f183c43e8d2.jpg"
+ ]
+}

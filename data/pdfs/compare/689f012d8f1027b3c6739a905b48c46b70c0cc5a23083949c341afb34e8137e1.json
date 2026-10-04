@@ -1,0 +1,641 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "yemen/country-policy-and-information-note-humanitarian-situation-yemen-march-2025-accessible-version",
+ "pdf_sha256": "689f012d8f1027b3c6739a905b48c46b70c0cc5a23083949c341afb34e8137e1",
+ "body_sha256": "997f639785e55994a8941fc0d9b6ee9855f4f872e5854002e0d3d9238c50d5c0",
+ "words": {
+  "web": 26823,
+  "pdf": 26430
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 2,
+   "pdf_words": 0,
+   "share": 3.8e-05,
+   "passages": 0,
+   "sizes": {
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 23,
+    "web_words": 285,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 13,
+    "web_words": 80,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 10,
+    "web_words": 205,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 3,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "March 2025",
+   "pdf": "1.0",
+   "pdf_date": "March 2025"
+  },
+  "section_updated": {
+   "web": [
+    "18 March 2025"
+   ],
+   "pdf": [
+    "18 March 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 244,
+   "pdf": 244,
+   "pdf_raw": 244,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 25
+  },
+  "tables": {
+   "web": 13,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 74,
+   "pdf": 47
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "page 3).",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "food consumption between January 2021 and November 2024 (",
+   "after": "The graphs show the figures broken down by",
+   "before_pdf": "food consumption between January 2021 and November 2024.",
+   "where": {
+    "heading": "Food_security_1",
+    "paragraph": "9.6.13",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nrate%\n2004\n12.13\n2005\n12.22\n2006\n12.35\n2007\n12.48\n2008\n12.65\n2009\n12.75\n2010\n12.78\n2011\n13.28\n2012\n13.44\n2013\n13.64\n2014\n13.47\n2015\n17.9\n2016\n18.38\n2017\n18.56\n2018\n17.64\n2019\n17.3\n2020\n17.97\n2021\n18.25\n2022\n17.52\n2023\n17.22",
+   "pdf": "",
+   "web_words": 61,
+   "pdf_words": 0,
+   "before": "unemployment rate in Yemen between 2004 and 2023:",
+   "after": "CPIT noted the above figures relate to the",
+   "where": {
+    "heading": "employment",
+    "paragraph": "8.3.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Airstrike\nShelling\nSAF\nHand grenades\nDrone strikes\nSA/LW\nLandmines\nIEDs\nUXO\nCivilian gatherings\n1\nCivilian houses\n1\n14\n1\n2\n2\n1\n2\n1\nFarms\n4\n4\nCivilian vehicles\n5\n3\nInfrastructure (telecommunications)\n4\nInfrastructure (transport)\n6\nInfrastructure (health)\n1\nInfrastructure (gov compounds)\n1\nLocal businesses\n1\n1\n1\nInfrastructure (education)\n1\nInfrastructure (fuel)\n3\nInfrastructure (protected site)\n1",
+   "pdf": "",
+   "web_words": 54,
+   "pdf_words": 0,
+   "before": "one of 2024, by type of armed violence:",
+   "after": "9.1.7 The same source noted that",
+   "where": {
+    "heading": "Overview",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nPeople in need\n2013\n13.1\n2014\n14.7\n2015\n21.1\n2016\n21.2\n2017\n18.8\n2018\n22.2\n2019\n24.1\n2020\n24.3\n2021\n20.7\n2022\n23.4\n2023\n21.6\n2024\n18.2",
+   "pdf": "",
+   "web_words": 33,
+   "pdf_words": 0,
+   "before": "of people in need in Yemen since 2013:",
+   "after": "9.2.6 The same source set out",
+   "where": {
+    "heading": "People_in_need",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Incidents impacting on civilian infrastructure in 2024\nIncidents\nCasualties\nTransport\n33\n182\nFuel\n7\n57\nEducation\n5\n45\nMedia\n3\n23\nTelecommunications\n5\n7\nElectricity\n7\n5\nWater\n4\n5\nHealth\n3\n5\nProtected cultural and religious sites\n1\n2\nGovernment compounds\n1\n2\nRecreation\n1\n0",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "2024, 51 (73%) were on account of airstrikes.’",
+   "after": "9.2 People in need (PIN)\n9.2.",
+   "where": {
+    "heading": "Overview",
+    "paragraph": "9.1.12",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n17.4 million\nWomen\n24%\nChildren\n51%\nWith disability\n15%\nIDPS\n1.9 million\nNon-IDPS 15.5 million",
+   "pdf": "",
+   "web_words": 12,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.5.9 On 5 April 2024, Action",
+   "where": {
+    "heading": "Water_sanitation_and",
+    "paragraph": "9.5.8",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n6.7 million\nWomen\n24%\nChildren\n52%\nWith disability\n15%\nPIN of durable shelter\n1.3 million",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.4.3 The same source stated:\nThe",
+   "where": {
+    "heading": "Shelter_and_nonfood",
+    "paragraph": "9.4.2",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n1.8 million\nWomen\n25%\nChildren\n49%\nWith disability\n15%\nElderly persons\n7%\nNumber of sites\n2,382",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.10.7 The JIAF Technical Manual, published",
+   "where": {
+    "heading": "Internally_Displaced_Persons",
+    "paragraph": "9.10.6",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.1.1",
+    "section": "Version control and feedback",
+    "page": 74
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n17.8 million\nWomen\n24%\nChildren\n51%\nWith disability\n16%\nIDPS in need\n3.2 million\nMigrants\n90,000",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.9.8 The Freedom in the World",
+   "where": {
+    "heading": "Health_and_healthcare",
+    "paragraph": "9.9.7",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Severity of needs by district (page 14)",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "severity of needs by district in December 2023:",
+   "after": "9.4 Shelter and non-food items (NFI)",
+   "where": {
+    "heading": "Severity_of_need",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n7.7 million\nWomen\n35%\nChildren\n65%\nWith disability\n10%",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.6.17 The 19 August 2024 IPC",
+   "where": {
+    "heading": "Malnutrition",
+    "paragraph": "9.6.16",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Attacks and use of hospitals by governorate",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "it documented in 2023 and 2024, by governorate:",
+   "after": "9.9.19 For further information regarding incidents",
+   "where": {
+    "heading": "Health_and_healthcare",
+    "paragraph": "9.9.18",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Malnutrition in southwest Yemen (page 2)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "southwest Yemen, between November 2023 and June 2024:",
+   "after": "9.6.20 On 10 October 2024, Concern",
+   "where": {
+    "heading": "Malnutrition",
+    "paragraph": "9.6.19",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Reach of humanitarian response (page 3)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "compared with funding received, between 2019 and 2024:",
+   "after": "11. Freedom of movement\n11.1.1 For",
+   "where": {
+    "heading": "Access_to_humanitarian",
+    "paragraph": "10.2.26",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "PIN by district (page 4)",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "number of PIN by district in December 2023:",
+   "after": "9.3.3 The OCHA January 2024 Humanitarian",
+   "where": {
+    "heading": "Severity_of_need",
+    "paragraph": "9.3.2",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n17.6 million\nWomen\n23%\nChildren\n53%\nWith disability\n15%",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.6.3 The March 2024 United Nations",
+   "where": {
+    "heading": "Food_security_1",
+    "paragraph": "9.6.2",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Malnutrition by location (page 10)",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "by location, from November 2023 to June 2024:",
+   "after": "9.6.19 The same source also published",
+   "where": {
+    "heading": "Malnutrition",
+    "paragraph": "9.6.18",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n6.2 million\nGirls and women\n47%\nChildren\n97%\nWith disability\n10%\nIDP children\n20%",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "9.8.4 The OCHA report went on",
+   "where": {
+    "heading": "Education",
+    "paragraph": "9.8.3",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Food insecurity by governorate",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "food insecurity classifications, by governorate, with key below:",
+   "after": "9.6.12 The 31 October 2024 World",
+   "where": {
+    "heading": "Food_security_1",
+    "paragraph": "9.6.11",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Humanitarian organisations (page 32)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "organisations present and active as of November 2024:",
+   "after": "10.1.9 For information about specific support",
+   "where": {
+    "heading": "Humanitarian_support",
+    "paragraph": "10.1.8",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Denials of humanitarian access",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "it documented in 2023 and 2024, by governorate:",
+   "after": "10.2.24 For further information regarding the",
+   "where": {
+    "heading": "Access_to_humanitarian",
+    "paragraph": "10.2.23",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Human rights violations",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "it documented in 2023 and 2024, by governorate:",
+   "after": "9.8.14 For further information regarding incidents",
+   "where": {
+    "heading": "Education",
+    "paragraph": "9.8.13",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Population density",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "below undated map, showing population distribution across Yemen:",
+   "after": "8. Socio-economic situation\n8.1 Basic indicators",
+   "where": {
+    "heading": "demography",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Yemen",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Yemen, showing its 22 governorates and their capitals:",
+   "after": "7.1.5 For maps showing the split",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.4",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2",
+   "pdf": "2210",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to 4)\nUNICEF Yemen Humanitarian Situation Report No.",
+   "after": "April 2024 Action Against Hunger article, After Nine",
+   "where": {
+    "heading": "Humanitarian_support",
+    "paragraph": "10.1.9",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Crisis",
+   "pdf": "Crisis211",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Nine Years of War, Yemen Becomes Another Forgotten",
+   "after": "10.1.10 For information about the humanitarian",
+   "where": {
+    "heading": "Humanitarian_support",
+    "paragraph": "10.1.9",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "report.",
+   "pdf": "report234.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "access in 2023, see the Mwatana July 2024",
+   "after": "10.2.17 The same source stated:\nWhat",
+   "where": {
+    "heading": "Access_to_humanitarian",
+    "paragraph": "10.2.16",
+    "section": "Country information",
+    "page": 62
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 239,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

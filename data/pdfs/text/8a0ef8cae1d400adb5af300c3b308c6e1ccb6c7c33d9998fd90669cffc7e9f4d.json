@@ -1,0 +1,58 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 63,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 517,
+ "list_items": 62,
+ "tables": 0,
+ "figures": 4,
+ "footnotes": 159,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 3, 5, 56, 100"
+ ],
+ "figure_pages": {
+  "59f2cd02bbf23d576a301e42ae370582fd0a0be179ab33f2c3ee2346e7823d8b.jpg": 14,
+  "6321484cb3cb0afe878f610bb47a49aca5f05b4c76c9209f7baa1fa49164688e.jpg": 31,
+  "12a530e6e87f13562046d9f9aadabdecba487102271746d6f3af8b9df394cc9c.jpg": 33,
+  "b5f5aa7006ade05fe2f3d75e4ec235f1de75d9ab1190101b8d0f56148fffcca7.jpg": 33
+ },
+ "figure_sizes": {
+  "59f2cd02bbf23d576a301e42ae370582fd0a0be179ab33f2c3ee2346e7823d8b.jpg": [
+   801,
+   635
+  ],
+  "6321484cb3cb0afe878f610bb47a49aca5f05b4c76c9209f7baa1fa49164688e.jpg": [
+   834,
+   631
+  ],
+  "12a530e6e87f13562046d9f9aadabdecba487102271746d6f3af8b9df394cc9c.jpg": [
+   842,
+   637
+  ],
+  "b5f5aa7006ade05fe2f3d75e4ec235f1de75d9ab1190101b8d0f56148fffcca7.jpg": [
+   842,
+   342
+  ]
+ },
+ "figure_text": {
+  "59f2cd02bbf23d576a301e42ae370582fd0a0be179ab33f2c3ee2346e7823d8b.jpg": 0,
+  "6321484cb3cb0afe878f610bb47a49aca5f05b4c76c9209f7baa1fa49164688e.jpg": 0,
+  "12a530e6e87f13562046d9f9aadabdecba487102271746d6f3af8b9df394cc9c.jpg": 0,
+  "b5f5aa7006ade05fe2f3d75e4ec235f1de75d9ab1190101b8d0f56148fffcca7.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Somalia (South and Central): Security and humanitarian situation",
+ "cover_version": "4.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "8a0ef8cae1d400adb5af300c3b308c6e1ccb6c7c33d9998fd90669cffc7e9f4d",
+ "images": [
+  "12a530e6e87f13562046d9f9aadabdecba487102271746d6f3af8b9df394cc9c.jpg",
+  "59f2cd02bbf23d576a301e42ae370582fd0a0be179ab33f2c3ee2346e7823d8b.jpg",
+  "6321484cb3cb0afe878f610bb47a49aca5f05b4c76c9209f7baa1fa49164688e.jpg",
+  "b5f5aa7006ade05fe2f3d75e4ec235f1de75d9ab1190101b8d0f56148fffcca7.jpg"
+ ]
+}

@@ -1,0 +1,54 @@
+{
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-oromos-the-oromo-liberation-front-and-the-oromo-liberation-army-ethiopia-march-2022-accessible",
+ "pdf_sha256": "b33330b5037091aa68226b872514ac19ab89ea9a744b76fed735a4367cb62fee",
+ "body_sha256": "5dfa39aeb43e441495656ee9bb67c168eda360430019fad1ce3a019d3e435294",
+ "figures": [
+  {
+   "image": "bd8eeb14a077eef77d111de5f2be94f40d5a17aee6e0636c107152ecea9ff584.png",
+   "tag": "p",
+   "index": 218,
+   "key": "1565during2024and2025acledrecorded953politicalviolenceevents",
+   "page": 32
+  },
+  {
+   "image": "21aec922ef08b87176dd1d0387b79aba036d148e582f758dce0fbc60b7e2fb10.png",
+   "tag": "p",
+   "index": 289,
+   "key": "1923during2024and2025acledrecorded1577politicalviolenceevent",
+   "page": 43
+  },
+  {
+   "image": "e8b30d0c88ee462d144075ddcf19f3c2a6710f4527a87cd8f53c855cfa1f9158.png",
+   "tag": "p",
+   "index": 297,
+   "key": "1926thechartbelowbasedontheacleddatashowsquarterlyqtrendsinv",
+   "page": 44
+  },
+  {
+   "image": "36b1169ce56f2ad03a0ea2405f7760940502c2124b711a2eaa931ad0aebe07f5.png",
+   "tag": "p",
+   "index": 324,
+   "key": "20110thebelowchartbasedontheacleddatashowsviolenceagainstciv",
+   "page": 47
+  },
+  {
+   "image": "f1536f733df2baeceb68d846b6367a7659ee70c8cd16fffa92cc8641a89411d3.png",
+   "tag": "p",
+   "index": 331,
+   "key": "2033thechartbelowbasedonacleddatashowsthequarterlynumberofpr",
+   "page": 48
+  },
+  {
+   "image": "a73880b4bdd8df8e787becf2d4ebe725ac7bc7fe26611ffea52a70ce6378d213.png",
+   "tag": "p",
+   "index": 336,
+   "key": "2035thechartbelowbasedonacleddatashowsquarterlyincidentsofpr",
+   "page": 49
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 7,
+ "web_figures": 1,
+ "left_in_pdf": {}
+}

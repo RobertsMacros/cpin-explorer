@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-india-december-2025-accessible",
+ "pdf_sha256": "2fc7855be1e95d5cfdaba55776502e86e8fdfa5345feb8e2077bdcceec3b143b",
+ "body_sha256": "8580de2aae9478f8b6c088de43a70d06806344a0ea6e15235e6865a71c9840f6",
+ "figures": [
+  {
+   "image": "a485d6a554f359f388f135711f9a625437da3ad4f6dfdbb4d07d26425cb6d77c.png",
+   "tag": "p",
+   "index": 280,
+   "key": "11112thesamemistreportoutlinedthesurveyfindingsinrelationtob",
+   "page": 39
+  },
+  {
+   "image": "2f2c31062f3cbd143c322b23ceee675ddcd52ea2b30550951fd386e37a05fc6a.png",
+   "tag": "p",
+   "index": 378,
+   "key": "1423themistreportusersurveyindicatedmixedresponsesonwhetherp",
+   "page": 53
+  },
+  {
+   "image": "4d0bcb83a5a0621cc3f6902404ae71de1b6fdd339ac849327f183674fdb715a2.png",
+   "tag": "p",
+   "index": 398,
+   "key": "1439themistreportsurveyprovidedinformationonparticipantsview",
+   "page": 55
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 3,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

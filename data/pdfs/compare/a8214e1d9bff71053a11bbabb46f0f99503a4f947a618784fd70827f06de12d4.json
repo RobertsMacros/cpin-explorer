@@ -1,0 +1,285 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "russia/country-policy-and-information-note-military-service-august-2026-accessible",
+ "pdf_sha256": "a8214e1d9bff71053a11bbabb46f0f99503a4f947a618784fd70827f06de12d4",
+ "body_sha256": "9f2f77721fd078abe011d398fa87a7f80338972b0f8c04de4d74c07dbd9c5cb6",
+ "words": {
+  "web": 44455,
+  "pdf": 44442
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 7,
+   "web_words": 28,
+   "pdf_words": 14
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "August 2026",
+   "pdf": "2.0",
+   "pdf_date": "August 2026"
+  },
+  "section_updated": {
+   "web": [
+    "12 June 2026"
+   ],
+   "pdf": [
+    "12 June 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 325,
+   "pdf": 325,
+   "pdf_raw": 325,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 84,
+   "pdf": 80
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "18.3.8",
+    "section": "Version control and feedback",
+    "page": 99
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Age of Russian nationals in the reserve: Second",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "of Russian nationals in the reserve: First category",
+   "after": "category\nAge of Russian nationals in the reserve:",
+   "before_pdf": "nationals in the\nreserve\nFirst\nSecond\nThird\ncategory",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Age of Russian nationals in the reserve: Third",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "of Russian nationals in the reserve: Second category",
+   "after": "category\nSoldiers, sailors, sergeants, petty officers, warrant officers,",
+   "before_pdf": "in the\nreserve\nFirst\nSecond\nThird\ncategory\ncategory",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "lieutenant colonels, captains of the 2nd rank",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "to 60\nMajors, captains of the 3rd rank,",
+   "after": "up to 55\nup to 60\nup to",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "officers, warrant officers, and midshipmen",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "the reserve: Third category\nSoldiers, sailors, sergeants, petty",
+   "after": "up to 40\nup to 50\nup to",
+   "before_pdf": "Third\ncategory\ncategory\ncategory\nSoldiers, sailors, sergeants, petty",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "officers, warrant officers, and\nmidshipmen",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "to 40\nup to 50\nup to 55",
+   "after": "Junior officers\nup to 50\nup to 55",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Second\nThird",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Age of Russian nationals in the reserve: First",
+   "after": "category\nAge of Russian nationals in the reserve:",
+   "before_pdf": "Age of Russian nationals in the\nreserve\nFirst",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "lieutenant colonels, captains of the\n2nd rank",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to 55\nup to 60\nup to 65",
+   "after": "Colonels, captains of the 1st rank\nup to",
+   "where": {
+    "heading": "legal-framework-1",
+    "paragraph": "12.1.3",
+    "section": "Country information",
+    "page": 55
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 412,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

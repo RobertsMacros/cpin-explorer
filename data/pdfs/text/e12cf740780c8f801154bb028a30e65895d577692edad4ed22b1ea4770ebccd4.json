@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 222,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 62,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 56"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Kenya: Sexual orientation and gender identity",
+ "cover_version": "2.0",
+ "cover_date": "March 2017",
+ "pdf_sha256": "e12cf740780c8f801154bb028a30e65895d577692edad4ed22b1ea4770ebccd4",
+ "images": []
+}

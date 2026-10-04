@@ -1,0 +1,639 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-india-december-2025-accessible",
+ "pdf_sha256": "2fc7855be1e95d5cfdaba55776502e86e8fdfa5345feb8e2077bdcceec3b143b",
+ "body_sha256": "8580de2aae9478f8b6c088de43a70d06806344a0ea6e15235e6865a71c9840f6",
+ "words": {
+  "web": 30113,
+  "pdf": 29922
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 4,
+   "pdf_words": 8,
+   "share": 0.0002,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1,
+    "word": 5
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 4,
+    "pdf_words": 8
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 151,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 12,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "heading": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 3
+   },
+   "picture in words": {
+    "differences": 3,
+    "web_words": 151,
+    "pdf_words": 0
+   },
+   "repeated label": {
+    "differences": 3,
+    "web_words": 12,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 11,
+   "web_words": 12,
+   "pdf_words": 8
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "December 2025",
+   "pdf": "6.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "10 December 2025"
+   ],
+   "pdf": [
+    "10 December 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 257,
+   "pdf": 257,
+   "pdf_raw": 257,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 8,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 132,
+   "pdf": 65
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 6,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "inclusive events",
+   "pdf": "people collectively",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "State treatment\n10.1 Information referring to LGBT+",
+   "after": "10.1.1 The NCRB Crime in India",
+   "where": {
+    "heading": "inclusive-events",
+    "paragraph": "9.3.6",
+    "section": "Country information",
+    "page": 28
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "marriages",
+   "pdf": "marriage",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "regardless of gender.’\n8.3 Same-sex unions,",
+   "after": "and adoption rights\n8.3.1 The Supreme",
+   "where": {
+    "heading": "same-sex-unions",
+    "paragraph": "8.2.10",
+    "section": "Country information",
+    "page": 21
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "efforts",
+   "pdf": "officials",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "attitudes\n9.1 Attitudes of government and public",
+   "after": "9.1.1 In November 2021, a Supreme",
+   "where": {
+    "heading": "attitudes-of-government-and-public-efforts",
+    "paragraph": "8.3.9",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "House, Freedom",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "2025 - India, 2025. Accessed: 24 September 2025\nFreedom",
+   "after": "on the Net 2024 - India, 16 October 2024.",
+   "where": {
+    "heading": "freedom-house",
+    "paragraph": "16.1.4",
+    "section": "Bibliography",
+    "page": 64
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "policies",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "9.3 Police and judicial training and protection",
+   "after": "9.3.1 Similar to information provided in",
+   "where": {
+    "heading": "police-judicial-training",
+    "paragraph": "9.3.1",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Reuters,",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "moment’, 6 September 2024. Accessed: 30 September 2025",
+   "after": "India government calls same-sex marriage appeals “urban",
+   "before_pdf": "moment', 6 September 2024. Accessed: 30 September 2025",
+   "where": {
+    "heading": "reuters",
+    "paragraph": "16.1.4",
+    "section": "Bibliography",
+    "page": 67
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Exhibit 13: Challenges faced while seeking employment\nChallenge\nPercentage\nFear of being ‘outed’\n21%\nLimited job opportunities\n20%\nLack of inclusive job postings\n20%\nDiscrimination during interviews\n16%\nHostile work environment\n15%\nSource: Survey on Uniting Diversity: Shaping the Future of Legal Equality for LGBTQ+ in India (2024)\nExhibit 13: 177 respondents selected multiple choices, for a total of 354 selections.",
+   "pdf": "",
+   "web_words": 55,
+   "pdf_words": 0,
+   "before": "participants’ views on challenges faced while seeking employment:",
+   "after": "14.3.10 The Mist report provided the",
+   "where": {
+    "heading": "employment",
+    "paragraph": "14.3.9",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Exhibit 8: Barriers to maintaining queer relationships in India\nBarrier\nPercentage\nLack of Public Acceptance\n25%\nSocial Stigma\n20%\nLegal Restrictions\n20%\nReligious Beliefs\n17%\nLack of Political Will\n17%\nSource: Survey on Uniting Diversity: Shaping the Future of Legal Equality for LGBTQ+ in India (2024)\nExhibit 8: 175 respondents selected multiple choices, for a total of 621 selections.",
+   "pdf": "",
+   "web_words": 48,
+   "pdf_words": 0,
+   "before": "to ‘Barriers to maintaining queer relationships in India’:",
+   "after": "11.1.13 ILGA reported that on the",
+   "where": {
+    "heading": "societal-norms-views",
+    "paragraph": "11.1.12",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Exhibit 16: Types of discrimination experienced by the individuals\nType of Discrimination\nPercentage\nRefusal to rent or sell\n27%\nVerbal Harassment\n19%\nHigher Rent or Deposit\n13%\nEviction\n10%\nPhysical Harassment\n6%\nSource: Survey on Uniting Diversity: Shaping the Future of Legal Equality for LGBTQ+ in India (2024)\nExhibit 16: 173 respondents selected multiple choices, for a total of 269 selections.",
+   "pdf": "",
+   "web_words": 48,
+   "pdf_words": 0,
+   "before": "discrimination reported by participants in accessing housing was:",
+   "after": "14.2.4 In relation to the availability",
+   "where": {
+    "heading": "housing",
+    "paragraph": "14.2.3",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Verbal\nPhysical\nSexual\nAny",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "and above\n41\n23\n16\n44\nSexual orientation",
+   "after": "Gay\n75\n47\n38\n79\nBisexual\n37\n16",
+   "where": {
+    "heading": "gay-and-bisexual-men",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Verbal\nPhysical\nSexual\nAny",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Bisexual\n37\n16\n20\n44\nDisclosure of sexuality (%)",
+   "after": "No\n44\n23\n27\n51\nYes\n88\n54",
+   "before_pdf": "Bisexual\n37\n16\n20\n44\nDisclosure of sexuality",
+   "where": {
+    "heading": "gay-and-bisexual-men",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Verbal\nPhysical\nSexual\nAny",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "51\nYes\n88\n54\n34\n89\nResidential city",
+   "after": "Ahmedabad\n42\n30\n26\n50\nBengaluru\n54\n22",
+   "where": {
+    "heading": "gay-and-bisexual-men",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.3",
+   "pdf": "10.2.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Nyaya Sanhita [was filed]...Further investigation is underway.’",
+   "after": "The Times of India reported on 16 February",
+   "where": {
+    "heading": "gay-bisexual-men",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.4",
+   "pdf": "10.2.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "posing as police officers, specifically targeted Muslim men....’",
+   "after": "The Indian Express noted in its article published",
+   "where": {
+    "heading": "gay-bisexual-men",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "See also Societal treatment\n12. Societal treatment\n12.",
+   "after": "Information referring to LGBT+ people collectively\n12.1.",
+   "before_pdf": "relatives.’ See also Societal treatment\n12. Societal treatment",
+   "where": {
+    "heading": "collectively",
+    "paragraph": "11.1.13",
+    "section": "Country information",
+    "page": 40
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Pride Circle\nQueerythm\nSAATHII\nSangama",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "include:\nBi Collective Delhi\nGood asYou\nHarmless Hugs",
+   "after": "Sappho for Equality\nTweet Foundation\nVarta Trust\n15.",
+   "before_pdf": "Collective Delhi • SAATHII\nGood asYou • Sangama\nHarmless Hugs •",
+   "where": {
+    "heading": "ngos",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "government-initiatives.",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "given to gay marriage.’ See also [Government initiatives](#",
+   "after": "8.3.6 Same-sex couples are generally",
+   "before_pdf": "given to gay marriage.’ See also Government initiatives.",
+   "where": {
+    "heading": "same-sex-unions",
+    "paragraph": "8.3.5",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Age",
+   "pdf": "Characteristic",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "CPIT and figures rounded to the nearest whole %):",
+   "after": "Verbal\nPhysical\nSexual\nAny\n18-24\n80\n46",
+   "where": {
+    "heading": "gay-and-bisexual-men",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Pride Circle •",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Pride Circle\nQueerythm\nSAATHII\nSangama\nSappho for Equality",
+   "after": "Tweet Foundation\nVarta Trust\n15.1.3 DH",
+   "before_pdf": "Good asYou • Sangama\nHarmless Hugs • Sappho for Equality",
+   "where": {
+    "heading": "ngos",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "SAATHII",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "advocate for LGBT+ rights include:\nBi Collective Delhi",
+   "after": "Good asYou\nHarmless Hugs\nPride Circle\nQueerythm\nSAATHII",
+   "before_pdf": "advocate for LGBT+ rights include:\nBi Collective Delhi •",
+   "where": {
+    "heading": "ngos",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Sangama",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "LGBT+ rights include:\nBi Collective Delhi\nGood asYou",
+   "after": "Harmless Hugs\nPride Circle\nQueerythm\nSAATHII\nSangama\nSappho",
+   "before_pdf": "rights include:\nBi Collective Delhi • SAATHII\nGood asYou •",
+   "where": {
+    "heading": "ngos",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Queerythm •",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Queerythm\nSAATHII\nSangama\nSappho for Equality\nTweet Foundation",
+   "after": "Varta Trust\n15.1.3 DH noted the",
+   "before_pdf": "Hugs • Sappho for Equality\nPride Circle • Tweet Foundation",
+   "where": {
+    "heading": "ngos",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Age",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "the nearest whole %):\nAge\nVerbal\nPhysical\nSexual\nAny",
+   "after": "18-24\n80\n46\n37\n82\n24-34",
+   "before_pdf": "the nearest whole %):\nCharacteristic\nVerbal\nPhysical\nSexual\nAny",
+   "where": {
+    "heading": "gay-and-bisexual-men",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "8.2.2",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "and eunuchs can legally identify as “third gender”.’",
+   "after": "With specific regard to hijras, the SC ruled",
+   "where": {
+    "heading": "trans-rights",
+    "paragraph": "8.2.2",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "NALSA,",
+   "pdf": "NALSA30,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "s declaration in the April 2014 case of",
+   "after": "in which the Court:\nlegally recognised “third gender”/",
+   "where": {
+    "heading": "trans-rights",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "16.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "trans people, some of which are considered derogatory.",
+   "after": "7.2.4 The DFAT report 2023 noted:",
+   "before_pdf": "trans people, some of which are considered derogatory",
+   "where": {
+    "heading": "trans-people",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 17
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 293,
+  "different": {
+   "10.2.4": "10.2.5"
+  },
+  "pdf_unnumbered": [
+   "8.2.2"
+  ],
+  "web_unnumbered": 1,
+  "repeated": [
+   "10.2.3"
+  ],
+  "unconfirmed": []
+ }
+}

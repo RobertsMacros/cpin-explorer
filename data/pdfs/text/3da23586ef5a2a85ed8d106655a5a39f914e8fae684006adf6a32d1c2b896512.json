@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 29,
+ "paragraphs": 219,
+ "list_items": 18,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 72,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Egypt: Muslim Brotherhood",
+ "cover_version": "3.0",
+ "cover_date": "July 2017",
+ "pdf_sha256": "3da23586ef5a2a85ed8d106655a5a39f914e8fae684006adf6a32d1c2b896512",
+ "images": []
+}

@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 26,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 35,
+ "paragraphs": 175,
+ "list_items": 7,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 43,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Turkey: Alevis",
+ "cover_version": "2.0",
+ "cover_date": "August 2017",
+ "pdf_sha256": "ab5f097f8742d02d276d5eecc45fff28e6f5479a519b0be7414017646bec9aaf",
+ "images": []
+}

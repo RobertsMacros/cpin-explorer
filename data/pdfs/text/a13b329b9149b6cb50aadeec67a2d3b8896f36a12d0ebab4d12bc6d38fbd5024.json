@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 22,
+ "paragraphs": 355,
+ "list_items": 50,
+ "tables": 1,
+ "figures": 4,
+ "footnotes": 144,
+ "bookmarks": 6,
+ "warnings": [
+  "footnotes with no mark found in the text: 10, 11, 12, 13, 144"
+ ],
+ "figure_pages": {
+  "95f80dd0cbb3d3bad4ad18d3d7add9fe4014a9a10e84b0edf4d03f1f4ff73c9a.png": 24,
+  "ef0d06db9b7f467b7514f139926ecc3c222a26f7ad2f71b3a87c777e86d2651f.png": 25,
+  "393759a5999e3e54cae6c79f05aaf87696774dbd4189f3f1df466395058d6066.png": 26,
+  "ad3e10e6cecc8e198ce44ed8c5c5e6bc64542c50ae471376be038b6f1169026b.jpg": 29
+ },
+ "figure_sizes": {
+  "95f80dd0cbb3d3bad4ad18d3d7add9fe4014a9a10e84b0edf4d03f1f4ff73c9a.png": [
+   850,
+   494
+  ],
+  "ef0d06db9b7f467b7514f139926ecc3c222a26f7ad2f71b3a87c777e86d2651f.png": [
+   855,
+   519
+  ],
+  "393759a5999e3e54cae6c79f05aaf87696774dbd4189f3f1df466395058d6066.png": [
+   649,
+   594
+  ],
+  "ad3e10e6cecc8e198ce44ed8c5c5e6bc64542c50ae471376be038b6f1169026b.jpg": [
+   917,
+   504
+  ]
+ },
+ "figure_text": {
+  "95f80dd0cbb3d3bad4ad18d3d7add9fe4014a9a10e84b0edf4d03f1f4ff73c9a.png": 0,
+  "ef0d06db9b7f467b7514f139926ecc3c222a26f7ad2f71b3a87c777e86d2651f.png": 0,
+  "393759a5999e3e54cae6c79f05aaf87696774dbd4189f3f1df466395058d6066.png": 0,
+  "ad3e10e6cecc8e198ce44ed8c5c5e6bc64542c50ae471376be038b6f1169026b.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Afghanistan: security and humanitarian situation",
+ "cover_version": "7.0",
+ "cover_date": "May 2020",
+ "pdf_sha256": "a13b329b9149b6cb50aadeec67a2d3b8896f36a12d0ebab4d12bc6d38fbd5024",
+ "images": [
+  "393759a5999e3e54cae6c79f05aaf87696774dbd4189f3f1df466395058d6066.png",
+  "95f80dd0cbb3d3bad4ad18d3d7add9fe4014a9a10e84b0edf4d03f1f4ff73c9a.png",
+  "ad3e10e6cecc8e198ce44ed8c5c5e6bc64542c50ae471376be038b6f1169026b.jpg",
+  "ef0d06db9b7f467b7514f139926ecc3c222a26f7ad2f71b3a87c777e86d2651f.png"
+ ]
+}

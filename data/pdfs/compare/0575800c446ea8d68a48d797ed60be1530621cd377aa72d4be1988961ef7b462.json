@@ -1,0 +1,696 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-kurds-and-kurdish-political-groups-iran-october-2025-accessible",
+ "pdf_sha256": "0575800c446ea8d68a48d797ed60be1530621cd377aa72d4be1988961ef7b462",
+ "body_sha256": "24aa32ea90eb4530084b04eea9219fa6ca4434154057df0204e1ab4746f6094c",
+ "words": {
+  "web": 35916,
+  "pdf": 36062
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 2,
+   "pdf_words": 16,
+   "share": 0.00025,
+   "passages": 2,
+   "sizes": {
+    "spelling": 2,
+    "passage": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 16
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 16,
+    "pdf_words": 16
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 136
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "caption": {
+    "differences": 1,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 16
+   },
+   "list marker": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 16,
+    "pdf_words": 16
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 136
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "5.0",
+   "pdf_date": "October 2025"
+  },
+  "section_updated": {
+   "web": [
+    "1 October 2025"
+   ],
+   "pdf": [
+    "1 October 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 8,
+   "pdf": 8,
+   "web_notices": 8,
+   "pdf_notices": 16
+  },
+  "footnotes": {
+   "web": 336,
+   "pdf": 336,
+   "pdf_raw": 336,
+   "differ": false
+  },
+  "pictures": {
+   "web": 10,
+   "pdf": 10
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 175,
+   "pdf": 70
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 4,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Kurdistan Democratic Party of Iran (KDPI / KDP-I)",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "provinces.’\n10. Democratic Party of Iranian Kurdistan (PDKI)",
+   "after": "10.1 Background\n10.1.1 It should",
+   "before_pdf": "provinces.’\n10. Democratic Party of Iranian Kurdistan (PDKI) /",
+   "where": {
+    "heading": "background",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 29
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Free Life Party of Kurdistan (PJAK)",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "opposition coalitions abroad ...’\n13. Kurdistan Free Life Party",
+   "after": "13.1 Background\n13.1.1 Based in",
+   "before_pdf": "opposition coalitions abroad ...’\n13. Kurdistan Free Life Party /",
+   "where": {
+    "heading": "background-3",
+    "paragraph": "12.4.6",
+    "section": "Country information",
+    "page": 46
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Asessment",
+   "pdf": "Assessment",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to demonstrate they face persecution or serious harm.",
+   "after": "Section updated: 1 October 2025\nAbout the assessment",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "Asessment",
+    "page": 5
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "supports",
+   "pdf": "supporters",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "10.5 Activities and roles of members and",
+   "after": "10.5.1 The ACCORD Iranian opposition parties",
+   "where": {
+    "heading": "activities-roles",
+    "paragraph": "10.2.11",
+    "section": "Country information",
+    "page": 36
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 68,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "confirmation-of-membership",
+    "paragraph": "10.2.11",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.\nThe information on this page has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 68,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "membership-cards-and-confirmation-letters",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map showing areas of majority Kurdish settlement\nMap showing administrative units of contemporary Kurdistan",
+   "pdf": "16",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "with a majority Kurdish population, highlighted in green:",
+   "after": "7.4 Religion and faith\n7.4.1",
+   "where": {
+    "heading": "maps",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 5.0, October 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nEstimates of the number of Kurds",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – End of section\n12.5 Komala activities",
+   "after": "1 The BBC News Arab Investigations Komala docufilm",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.1",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Iranian government says Komala is a terrorist group.’",
+   "after": "2 The ACCORD Iranian opposition parties report stated: ‘",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.2",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "members live in the camp in the KRI.’",
+   "after": "3 The ACCORD report also stated, of Komala",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.3",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "training, operates a television station and publishes magazines.’",
+   "after": "4 Of Komalah-CPI, the same ACCORD report",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.4",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "stated: ‘Peshmerga fighters are trained in the KRI ...’",
+   "after": "5 The March 2025 IranNews.ge article stated:",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.5",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.",
+   "pdf": "12.5.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "order to form coalitions with other Iranian forces ...’",
+   "after": "6 The same IranNews.ge article stated: ‘With",
+   "where": {
+    "heading": "komala-activities",
+    "paragraph": "12.4.6",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Iran: Social media, surveillance and sur place activities.",
+   "after": "2.3 The same ACCORD report also stated: ‘",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "anyone working with the party is in danger.’",
+   "after": "2.4 An article about Iran’s intelligence",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.4",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "concerned about Arab, Kurdish and Baluch separatist groups.’",
+   "after": "2.5 The BZ Iran COI report, which",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "if was referring to as having been encountered.",
+   "after": "2.6 The BZ Iran COI report also",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.6",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "regarding what possible problems an individual could face.",
+   "after": "2.7 The Amwaj.media article, published on",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.7",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "impact this had on ethnic minorities, including Kurds.",
+   "after": "2.8 Citing the expert on Kurdish populations",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.8",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Barzoo Eliassi (see also paragraph 10.2.4).",
+   "after": "2.9 The Zagros statement to the UN",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.9",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "as blatant violations of political and civil rights.’",
+   "after": "2.10 The anonymous expert cited by the",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.10",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of Iran (KDPI) are automatically targeted and detained”.’",
+   "after": "2.11 On 28 March 2025, the UNHRC",
+   "where": {
+    "heading": "political-activists",
+    "paragraph": "12.2.11",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "17.",
+   "pdf": "14.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "mainly for drug-related crimes and for murder.’",
+   "after": "7.14 For some examples of executions and",
+   "where": {
+    "heading": "executions",
+    "paragraph": "17.7.14",
+    "section": "Country information",
+    "page": 69
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "movement. They distinguish between three types of members:",
+   "after": "Professional cadres. These are persons who have dedicated",
+   "where": {
+    "heading": "membership-and-recruitment-2",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "lives to PJAK and are full-time warriors.",
+   "after": "Regional cadres. These are persons who live primarily",
+   "where": {
+    "heading": "membership-and-recruitment-2",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3. “",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "in Europe and Iran, but also in KRI.",
+   "after": "Support members”. These are members who do not",
+   "where": {
+    "heading": "membership-and-recruitment-2",
+    "paragraph": "13.2.1",
+    "section": "Country information",
+    "page": 48
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Guide: Iran, 16 January 2025. Accessed: 29 September",
+   "after": "BBC News\nIran: A really simple guide to",
+   "where": {
+    "heading": "bbc-monitoring",
+    "paragraph": "14.10.5",
+    "section": "Bibliography",
+    "page": 77
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "270 271",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of the charges against her in August 2024",
+   "after": "paragraphs 37 and 38 of the UN fact",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "14.4.19",
+    "section": "Country information",
+    "page": 63
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 299,
+  "different": {
+   "12.4.1": "12.5.1",
+   "12.4.2": "12.5.2",
+   "12.4.3": "12.5.3",
+   "12.4.4": "12.5.4",
+   "12.4.5": "12.5.5",
+   "12.4.6": "12.5.6",
+   "12.2.9": "14.2.9",
+   "12.2.10": "14.2.10",
+   "12.2.11": "14.2.11",
+   "17.7.14": "14.7.14"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "12.2.3",
+   "12.2.4",
+   "12.2.5",
+   "12.2.6",
+   "12.2.7",
+   "12.2.8"
+  ],
+  "unconfirmed": []
+ }
+}

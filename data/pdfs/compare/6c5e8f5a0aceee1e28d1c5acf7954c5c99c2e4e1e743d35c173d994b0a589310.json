@@ -1,0 +1,1223 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-internal-relocation-ethiopia-september-2025-accessible",
+ "pdf_sha256": "6c5e8f5a0aceee1e28d1c5acf7954c5c99c2e4e1e743d35c173d994b0a589310",
+ "body_sha256": "8dda184ee07a7cb89b4a5fe0ce70fcd9f91315d55fbc67c0a7e7fecec8bb020c",
+ "words": {
+  "web": 43675,
+  "pdf": 43504
+ },
+ "summary": {
+  "wording": {
+   "differences": 35,
+   "web_words": 204,
+   "pdf_words": 19,
+   "share": 0.002558,
+   "passages": 12,
+   "sizes": {
+    "word": 20,
+    "passage": 12,
+    "spelling": 2,
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 35,
+    "web_words": 204,
+    "pdf_words": 19
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 64,
+    "pdf_words": 1
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 11,
+    "web_words": 139,
+    "pdf_words": 14
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 39,
+    "pdf_words": 1
+   },
+   "table cell": {
+    "differences": 12,
+    "web_words": 20,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 25,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 12,
+    "web_words": 45,
+    "pdf_words": 5
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 90,
+   "web_words": 130,
+   "pdf_words": 423
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 6
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": null,
+   "pdf": "1.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "9 September 2025"
+   ],
+   "pdf": [
+    "9 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 401,
+   "pdf": 401,
+   "pdf_raw": 401,
+   "differ": false
+  },
+  "pictures": {
+   "web": 7,
+   "pdf": 9
+  },
+  "tables": {
+   "web": 28,
+   "pdf": 19
+  },
+  "headings": {
+   "web": 136,
+   "pdf": 123
+  },
+  "drafts": [
+   "a year differs in the text: web 2024, PDF 2023"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 10,
+   "cannot_tell": 25,
+   "disputes": 1
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Private not for profit\nRegion\nHealth Centres\nHealth Post\nHospital\nAddis Ababa\n3\n0\n0\nAfar\n2\n0\n0\nAmhara\n0\n0\n0\nBenishangul -Gumuz\n2\n0\n0\nDire Dawa\n0\n0\n0\nGambella\n0\n0\n0\nHarari\n0\n0\n0\nOromia\n3\n1\n1\nSNNP\n17\n0\n3\nSidama\n0\n0\n0\nSomali\n0\n0\n0\nSouthwest Ethiopia\n0\n0\n0\nTigray\n1\n0\n1\nTotal",
+   "pdf": "",
+   "web_words": 50,
+   "pdf_words": 0,
+   "before": "Tigray\n1\n0\n15\nTotal\n7\n1\n100",
+   "after": "28\n1\n5\n12.3.5 Other health",
+   "before_pdf": "3,665\n16,059\n368\n7\n1\n100",
+   "where": {
+    "heading": "private-not-for-profit",
+    "paragraph": "12.3.4",
+    "section": "Country information",
+    "page": 46
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Private for profit\nRegion\nHealth Centres\nHealth Post\nHospital\nAddis Ababa\n1\n0\n25\nAfar\n0\n0\n1\nAmhara\n1\n0\n13\nBenishangul -Gumuz\n0\n0\n0\nDire Dawa\n0\n0\n7\nGambella\n0\n0\n0\nHarari\n0\n0\n1\nOromia\n4\n0\n21\nSNNP\n0\n0\n7\nSidama\n0\n0\n9\nSomali\n0\n1\n1\nSouthwest Ethiopia\n0\n0\n0\nTigray\n1\n0\n15\nTotal",
+   "pdf": "",
+   "web_words": 45,
+   "pdf_words": 0,
+   "before": "643\n39\nTotal\n3,665\n16,059\n368",
+   "after": "7\n1\n100\nPrivate not for profit\nRegion",
+   "before_pdf": "0\n1\nTotal\n3,665\n16,059\n368",
+   "where": {
+    "heading": "private-for-profit",
+    "paragraph": "12.3.4",
+    "section": "Country information",
+    "page": 46
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Total\nRegion\nTotal\nAfar\n946\nAmhara\n10,853\nOromia\n28,387\nSomali\n2490\nBenishangul-Gumuz\n753\nSouth Ethiopia\n3253\nGambella\n430\nHarari\n166\nAddis Ababa\n2151\nDire Dawa\n242\nSidama\n1757\nSouth West Ethiopia\n1853\nCentral Ethiopia\n2700\nTotal",
+   "pdf": "",
+   "web_words": 21,
+   "pdf_words": 0,
+   "before": "274\n21\nTotal\n5,052\n3,284\n422",
+   "after": "55,981\n13.2.3 The Ethiopia Education",
+   "before_pdf": "026\n3,340 5,052 3,284\n422",
+   "where": {
+    "heading": "total",
+    "paragraph": "13.2.2",
+    "section": "Country information",
+    "page": 53
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Private schools\nRegion\nPre-primary\nPrimary and middle\nSecondary\nAfar\n52\n51\n2\nAmhara\n504\n247\n21\nOromia\n2,192\n1,390\n116\nSomali\n73\n108\n30\nBenishangul-Gumuz\n44\n17\n2\nSouth Ethiopia\n333\n210\n24\nGambella\n44\n37\n4\nHarari\n55\n19\n8\nAddis Ababa\n910\n540\n148\nDire Dawa\n64\n58\n19\nSidama\n301\n281\n23\nSouth West Ethiopia\n119\n52\n4\nCentral Ethiopia\n361\n274\n21\nTotal",
+   "pdf": "",
+   "web_words": 19,
+   "pdf_words": 0,
+   "before": "274\nTotal\n9,857\n34,026\n3,340",
+   "after": "5,052\n3,284\n422\nTotal\nRegion\nTotal",
+   "before_pdf": "2700\nTotal\n9,857 34,026\n3,340",
+   "where": {
+    "heading": "private-schools",
+    "paragraph": "13.2.2",
+    "section": "Country information",
+    "page": 53
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "46.7\nRural\nRegion\nRural\nMale\nFemale\nTotal\nAfar\n65.6\n43.3\n54.0\nAmhara\n71.8\n57.6\n65.0\nOromia\n69.8\n55.2\n62.4\nSomali\n49.5\n35.6\n42.4\nBenishangul-Gumuz\n86.6\n85.3\n86.0\nSNNP\n67.8\n53.7\n60.5\nSidama\n64.1\n57.4\n60.6\nGambella\n39.5\n32.9\n36.3\nHarari\n69.3\n59.0\n63.9\nAddis Ababa\nDire Dawa",
+   "pdf": "",
+   "web_words": 18,
+   "pdf_words": 0,
+   "before": "1\n38.6\nNational\n53.8\n41.6",
+   "after": "76.0\n55.1\n64.4\nNational\n68.",
+   "before_pdf": "32.1\n38.6 76.0\n38.6",
+   "where": {
+    "heading": "urban",
+    "paragraph": "6.8.2",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Amhara\n77.7\n58.4\n68.0\nOromia\n72.4\n57.3\n64.8\nSomali\n57.3\n44.7\n51.2\nBenishangul-Gumuz\n81.2\n73.5\n77.3\nSNNP*\n73.2\n57.7\n65.4\nSidama\n69.6\n59.1\n64.4\nGambella\n55.4\n47.7\n51.5\nHarari\n70.3\n58.0\n64.0\nAddis Ababa\n70.0\n55.2\n61.8\nDire Dawa\n68.8\n53.5\n60.9\nTotal\n72.6\n56.8\n64.7\nEmployment to population ratio (%)\nRegion\nMale\nFemale\nTotal\nAfar",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "Total\nAfar\n71.2\n46.9\n59.3",
+   "after": "66.5\n38.2\n52.7\nAmhara\n74.",
+   "where": {
+    "heading": "labour-force-participation-rate-",
+    "paragraph": "6.5.3",
+    "section": "Country information",
+    "page": 21
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "3.1.2",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "IDPs) and IDP returnees",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "theft and funding shortfall.\n11. Internally Displaced Persons",
+   "after": "11.1.1 Between July and August 2024,",
+   "before_pdf": "theft and funding shortfall.\n11. Internally Displaced Persons (",
+   "where": {
+    "heading": "idps",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 41
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Primary\nGRE(%): Middle\nGRE(%): Secondary",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "NER at primary and middle schools:\nRegion\nGRE(%):",
+   "after": "NER(%): Primary\nNER(%): Middle\nNER(%): Secondary\nAfar\n69",
+   "before_pdf": "NER at primary and middle schools:\nRegion\nGRE (%)",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.6",
+    "section": "Country information",
+    "page": 56
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "events\nRepression: fatalities",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "table: o highlight attacks on civilians\nRegion\nRepression:",
+   "after": "Insurgency: events\nInsurgency: fatalities\nTerrorist activity: events\nTerrorist",
+   "before_pdf": "table: o highlight attacks on civilians\nRegion\nRepression",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.11",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "events\nInsurgency: fatalities",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "on civilians\nRegion\nRepression: events\nRepression: fatalities\nInsurgency:",
+   "after": "Terrorist activity: events\nTerrorist activity: fatalities\nAtrocities: events",
+   "before_pdf": "o highlight attacks on civilians\nRegion\nRepression\nInsurgency",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.11",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "basic-education)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "the destruction and closure of schools (see [Enrolment]#",
+   "after": "and Facilities). Higher education is available in both",
+   "before_pdf": "the destruction and closure of schools (see Enrolment",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "2.1.11",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "group.",
+   "pdf": "groups.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "markets, and strengthen social safety nets for vulnerable",
+   "after": "6.3 Employment\n6.3.1 In August",
+   "where": {
+    "heading": "poverty",
+    "paragraph": "6.2.3",
+    "section": "Country information",
+    "page": 19
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Rural areas:",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "area: Employment ratio\nRural areas: Total population (millions)",
+   "after": "Employed (millions)\nRural areas: Employment ratio\nAfar\n0.",
+   "before_pdf": "Region\nUrban area\nRural areas\nTotal persons (millions)",
+   "where": {
+    "heading": "rural-and-urban-employment",
+    "paragraph": "6.4.2",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Rural areas:",
+   "pdf": "Employment ratio\nTotal persons (millions)\nEmployed (millions)",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "areas: Total population (millions)\nRural areas: Employed (millions)",
+   "after": "Employment ratio\nAfar\n0.3\n0.1\n46.",
+   "before_pdf": "area\nRural areas\nTotal persons (millions)\nEmployed (millions",
+   "where": {
+    "heading": "rural-and-urban-employment",
+    "paragraph": "6.4.2",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "October",
+   "pdf": "Oct",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "between October 2024 and September 2025:\nPolitical violence:",
+   "after": "2024 to September 2025\nRegion\nEvents\nFatalities\nAmhara",
+   "before_pdf": "October 2024 and September 2025:\nRegion\nPolitical violence:",
+   "where": {
+    "heading": "political-violence-october-2024-to-september-2025",
+    "paragraph": "9.1.7",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "September",
+   "pdf": "Sep",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and September 2025:\nPolitical violence: October 2024 to",
+   "after": "2025\nRegion\nEvents\nFatalities\nAmhara\n1,331\n4,",
+   "before_pdf": "September 2025:\nRegion\nPolitical violence: Oct 2024 to",
+   "where": {
+    "heading": "political-violence-october-2024-to-september-2025",
+    "paragraph": "9.1.7",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "August",
+   "pdf": "Aug",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "political violence events and fatalities:\nPolitical violence 8",
+   "after": "to 5 September 2025\nRegion\nEvents: count\nEvents:",
+   "before_pdf": "violence events and fatalities:\nRegion\nPolitical violence 8",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.9",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "September",
+   "pdf": "Sep",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and fatalities:\nPolitical violence 8 August to 5",
+   "after": "2025\nRegion\nEvents: count\nEvents: As %\nFatalities: count",
+   "before_pdf": "fatalities:\nRegion\nPolitical violence 8 Aug to 5",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.9",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and assistance",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "information note: actors of protection.\n10. Food security",
+   "after": "10.1 People in need\n10.1.1",
+   "where": {
+    "heading": "people-in-need",
+    "paragraph": "9.8.3",
+    "section": "Country information",
+    "page": 39
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024.",
+   "pdf": "2023.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "rural population) had access to electricity as of",
+   "after": "A January 2025 WB report noted that despite",
+   "where": {
+    "heading": "living-conditions",
+    "paragraph": "14.6.4",
+    "section": "Country information",
+    "page": 63
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Grant",
+   "pdf": "Grand",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "0\n0\nSub total\n0\n8\n0\n0",
+   "after": "total\n9\n48\n15\n35\n19.9 Housing",
+   "where": {
+    "heading": "health-1",
+    "paragraph": "19.8.3",
+    "section": "Annex A: City information",
+    "page": 93
+   },
+   "size": "spelling",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Events:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "the period under review:\nEvent type\nEvents: count",
+   "after": "As % of total\nFatalities: count\nFatalities: As % of",
+   "before_pdf": "period under review:\nEvent type\nEvents\nFatalities\nCount",
+   "where": {
+    "heading": "political-violence---incidents-and-fatalities",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Fatalities:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Event type\nEvents: count\nEvents: As % of total",
+   "after": "count\nFatalities: As % of total\nBattles\n1,432",
+   "before_pdf": "Event type\nEvents\nFatalities\nCount As % of total",
+   "where": {
+    "heading": "political-violence---incidents-and-fatalities",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Fatalities:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Events: count\nEvents: As % of total\nFatalities: count",
+   "after": "As % of total\nBattles\n1,432\n68.6%",
+   "before_pdf": "type\nEvents\nFatalities\nCount As % of total\nCount",
+   "where": {
+    "heading": "political-violence---incidents-and-fatalities",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "events\nTerrorist activity: fatalities",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Repression: fatalities\nInsurgency: events\nInsurgency: fatalities\nTerrorist activity:",
+   "after": "Atrocities: events\nAtrocities: fatalities\nAmhara\n117\n795\n7",
+   "before_pdf": "attacks on civilians\nRegion\nRepression\nInsurgency Terrorist\nactivity",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.11",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Atrocities:",
+   "pdf": "Fatalities\nEvents\nFatalities\nEvents\nFatalities\nEvents",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Terrorist activity: events\nTerrorist activity: fatalities\nAtrocities: events",
+   "after": "fatalities\nAmhara\n117\n795\n7\n21\n33\n17",
+   "before_pdf": "civilians\nRegion\nRepression\nInsurgency Terrorist\nactivity\nAtrocities\nEvents",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.11",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "IDPs\nIDP returnees",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "shows the regional distribution of IDPs and returnees:",
+   "after": "Region\nIDPs: numbers\nIDPs: As %\nIDP returnees: numbers",
+   "where": {
+    "heading": "idps",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 42
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "millions)\nEnrolled:",
+   "pdf": "population",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "population (4 to 6 years) (millions)\nEnrolled: total (",
+   "after": "as % of school population\nGER%: Male\nGER%: Female",
+   "before_pdf": "to 6 years) (millions)\nEnrolled\nGER %\nmillions) Total",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": null
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "population\nGER%:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "millions)\nEnrolled: total (millions)\nEnrolled: as % of school",
+   "after": "Male\nGER%: Female\nGER%: GPI\nAfar\n0.14",
+   "before_pdf": "Enrolled\nGER %\nmillions) Total\npopulation As % of school",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 55
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "GER%:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "millions)\nEnrolled: as % of school population\nGER%: Male",
+   "after": "Female\nGER%: GPI\nAfar\n0.14\n0.03",
+   "before_pdf": "GER %\nmillions) Total\npopulation As % of school\nMale",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 55
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "GER%:",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "as % of school population\nGER%: Male\nGER%: Female",
+   "after": "GPI\nAfar\n0.14\n0.03\n24.8",
+   "before_pdf": "millions) Total\npopulation As % of school\nMale\nFemale",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 55
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "NER(%):",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "GRE(%): Primary\nGRE(%): Middle\nGRE(%): Secondary\nNER(%): Primary",
+   "after": "Middle\nNER(%): Secondary\nAfar\n69\n25\n14.4",
+   "before_pdf": "primary and middle schools:\nRegion\nGRE (%)\nNER (%)\nPrimary",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.6",
+    "section": "Country information",
+    "page": 56
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "NER(%):",
+   "pdf": "Secondary\nPrimary\nMiddle",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "GRE(%): Middle\nGRE(%): Secondary\nNER(%): Primary\nNER(%): Middle",
+   "after": "Secondary\nAfar\n69\n25\n14.4\n56\n13",
+   "before_pdf": "and middle schools:\nRegion\nGRE (%)\nNER (%)\nPrimary\nMiddle",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.6",
+    "section": "Country information",
+    "page": 56
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "them.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "over 1.5 million E-passports for issuance.",
+   "after": "According to Ethiopian passport services, “Preparations to provide",
+   "where": {
+    "heading": "passports",
+    "paragraph": "17.7.1",
+    "section": "Country information",
+    "page": 77
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "2021:\nRegion\nUnemployment Rate\nAddis Ababa\n22.1\nDire Dawa\n15.9\nSomali\n12.1\nAfar\n11.3\nHarari\n9.9\nGambella\n8.2\nAmhara\n7.5\nS.N.N.P.\n7.0\nOromia\n6.9\nSidama\n5.5\nBenishangul-Gumuz\n4.3\nCountry - Total\n8.0",
+   "pdf": "201.:",
+   "web_words": 39,
+   "pdf_words": 1,
+   "before": "below figure showing unemployment rate of regions in",
+   "after": "6.11.6 The same source produced below",
+   "where": {
+    "heading": "unemployment",
+    "paragraph": "6.11.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "2020/21\n2021/22\n2022/23\nHealth posts\n17,699\n17,457\n17,569\nHealth centres\n3,777\n3,587\n3,826\nPublic hospitals\n367\n343\n431",
+   "pdf": "155",
+   "web_words": 25,
+   "pdf_words": 0,
+   "before": "in Ethiopia from 2020/21 to 2022/23",
+   "after": "12.3.3 The March 2025 OCHA Humanitarian",
+   "where": {
+    "heading": "health-facilities",
+    "paragraph": "12.3.2",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "September 2025",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 1.0",
+   "after": "Executive summary\nThe Federal Democratic Republic of Ethiopia",
+   "before_pdf": "Version 1.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.1.5",
+   "pdf": "9.1.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "situation\n9.1 Political violence - incidents and fatalities",
+   "after": "The German Bundesamt für Migration und Flüchtlinge (Federal",
+   "before_pdf": "situation\n9.1 Political violence- incidents and fatalities",
+   "where": {
+    "heading": "political-violence---incidents-and-fatalities",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "18.1",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "even higher at between 15 and 20 million.",
+   "after": "Migration to Addis Ababa\n18.1.1 The",
+   "where": {
+    "heading": "migration-to-addis-ababa",
+    "paragraph": "18.1.4",
+    "section": "Annex A: City information",
+    "page": 79
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "0%\n2,484,449\n100%\n12. Health\n12.",
+   "after": "Health care system\n12.1.1 According to",
+   "before_pdf": "100.0%\n2,484,449\n100%\n12. Health",
+   "where": {
+    "heading": "health-care-system",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 42
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "National\n68.3\n54.3\n61.2\nRegion\nMale\nFemale\nTotal\nAfar\n62.1\n41.2\n51.0\nAmhara\n69.3\n54.0\n61.6\nOromia\n66.8\n51.6\n58.8\nSomali\n47.8\n34.3\n40.9\nBenishangul-Gumuz\n79.5\n72.3\n75.7\nSNNP\n65.9\n51.7\n58.4\nSidama\n61.1\n52.7\n56.7\nGambella\n40.2\n33.7\n36.8\nHarari\n61.0\n50.1\n55.1\nAddis Ababa\n47.6\n41.7\n44.0\nDire Dawa",
+   "pdf": "",
+   "web_words": 85,
+   "pdf_words": 0,
+   "before": "Dire Dawa\n76.0\n55.1\n64.4",
+   "after": "54.9\n39.1\n46.3\nNational\n64.",
+   "before_pdf": "38.6 76.0\n55.1\n64.4",
+   "where": {
+    "heading": "rural",
+    "paragraph": "6.8.2",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Total population (millions)\nUrban area: Employed (millions)\nUrban area: Employment ratio",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "between urban and rural areas:\nRegion\nUrban area:",
+   "after": "Rural areas: Total population (millions)\nRural areas: Employed (",
+   "before_pdf": "between urban and rural areas:\nRegion\nUrban area",
+   "where": {
+    "heading": "rural-and-urban-employment",
+    "paragraph": "6.4.2",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Region",
+   "pdf": "Private for profit\nPrivate not for profit\nCentres",
+   "web_words": 1,
+   "pdf_words": 8,
+   "before": "posts and hospitals in each region:\nPublic/Government",
+   "after": "Health Centres\nHealth Post\nHospital\nAddis Ababa\n98",
+   "before_pdf": "and hospitals in each region:\nRegion\nPublic/Government",
+   "where": {
+    "heading": "publicgovernment",
+    "paragraph": "12.3.4",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Region",
+   "pdf": "Employment to population ratio (%)\nMale\nFemale\nTotal",
+   "web_words": 1,
+   "pdf_words": 7,
+   "before": "regionally and by gender:\nLabour force participation rate (%)",
+   "after": "Male\nFemale\nTotal\nAfar\n71.2\n46.9",
+   "before_pdf": "and by gender:\nRegion\nLabour force participation rate (%)",
+   "where": {
+    "heading": "labour-force-participation-rate-",
+    "paragraph": "6.5.3",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "National\n53.8\n41.",
+   "pdf": "38.6 76.0\n38.",
+   "web_words": 4,
+   "pdf_words": 3,
+   "before": "Dire Dawa\n46.2\n32.1\n38.6",
+   "after": "6\n46.7\nRural\nRegion\nRural\nMale\nFemale",
+   "before_pdf": "44.0\nDire Dawa\n46.2 32.1",
+   "where": {
+    "heading": "urban",
+    "paragraph": "6.8.2",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "IDPs: As %\nIDP returnees: numbers\nIDP:",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "distribution of IDPs and returnees:\nRegion\nIDPs: numbers",
+   "after": "As % o\nTigray\n878,325\n26.6%\n970,",
+   "before_pdf": "returnees:\nIDPs\nIDP returnees\nRegion\nIDPs\nAs %\nNumbers",
+   "where": {
+    "heading": "idps",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "148.8 144.7",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "0.33\n146.8\n148.8\n144.7",
+   "after": "0.97\nDire Dawa\n0.03\n0.02",
+   "before_pdf": "0.33\n146.8\n148.8 144.7",
+   "where": {
+    "heading": "basic-education",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Private not for profit",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "not for profit\nUrban\n0\n8\n0\n0",
+   "after": "Rural\n0\n0\n0\n0\nSub total\n0",
+   "where": {
+    "heading": "health-1",
+    "paragraph": "19.8.3",
+    "section": "Annex A: City information",
+    "page": 93
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "count\nEvents: As %",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "8 August to 5 September 2025\nRegion\nEvents:",
+   "after": "Fatalities: count\nFatalities: As %\nAmhara\n173\n70.3%",
+   "before_pdf": "violence 8 Aug to 5 Sep 2025\nEvents",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.9",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Fatalities:",
+   "pdf": "As %\nCount",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "2025\nRegion\nEvents: count\nEvents: As %\nFatalities: count",
+   "after": "As %\nAmhara\n173\n70.3%\n501\n77.9%",
+   "before_pdf": "Aug to 5 Sep 2025\nEvents\nFatalities\nCount",
+   "where": {
+    "heading": "political-violence-8-august-to-5-september-2025",
+    "paragraph": "9.1.9",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Private for profit",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Private for profit\nUrban\n7\n37\n0\n0",
+   "after": "Rural\n0\n0\n0\n0\nSub total\n7",
+   "before_pdf": "Private for profit\nurban\n7\n37\n0\n0",
+   "where": {
+    "heading": "health-1",
+    "paragraph": "19.8.3",
+    "section": "Annex A: City information",
+    "page": 93
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "population (millions)",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "July 2025 based on ESS population estimates.\nRegion",
+   "after": "Total population(millions)\nUrban population(millions)\nRural population(",
+   "where": {
+    "heading": "population",
+    "paragraph": "5.1.3",
+    "section": "Country information",
+    "page": 16
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "Health\nHealth Post\nHospital\nHeath centre",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "in each region:\nPublic/Government\nRegion\nHealth Centres",
+   "after": "Health Post\nHospital\nAddis Ababa\n98\n1\n10",
+   "before_pdf": "for profit\nCentres Health\nHealth Post\nHospital\nCentres",
+   "where": {
+    "heading": "publicgovernment",
+    "paragraph": "12.3.4",
+    "section": "Country information",
+    "page": 46
+   },
+   "second": "disputes"
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 428,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "9.1.5",
+   "18.1.1",
+   "18.1.2",
+   "18.1.3",
+   "18.1.4"
+  ],
+  "unconfirmed": []
+ }
+}

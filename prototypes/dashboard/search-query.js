@@ -241,3 +241,39 @@ export function rowNote(parsed, { label, qualifier = "", own = "" }) {
   const words = [...parsed.terms, ...parsed.soft], hay = norm(own);
   return words.some((term) => termIn(hay, term)) ? own : qualifier;
 }
+
+// The glossary entry (../shared/glossary.js, by id) that explains each kind of report, so a small
+// "CPIN" tag can say what it stands for. A kind with no entry (a one-off "GOV.UK notice") has none.
+const KIND_TERMS = [
+  [/^cpin$/i, "cpin"], [/fact.finding/i, "ffm"], [/bulletin/i, "country-bulletin"],
+  [/^country information note/i, "cin"], [/information and guidance/i, "cig"],
+];
+/** The id of the glossary entry for a kind label ("CPIN" -> "cpin"), or null. */
+export const kindTermId = (kind) => KIND_TERMS.find(([re]) => re.test(String(kind ?? "")))?.[1] ?? null;
+/**
+ * A kind tag's tooltip, from its glossary entry { term, full? }: what the tag does not already say.
+ * "CPIN" -> "Country Policy and Information Note"; a kind that is already spelled out gains its
+ * abbreviation, "Report of a fact-finding mission (FFM)"; with nothing to add, "".
+ */
+export function kindTitle(kind, entry) {
+  if (!entry?.full) return "";
+  return entry.full.length > entry.term.length ? entry.full : `${entry.term} (${entry.full})`;
+}
+
+/**
+ * Glossary terms for the search's last group. The words are taken as typed, not through parseQuery:
+ * "cpin" and "country report" mean "any report" to the title search, and are exactly what someone
+ * looking for the meaning of CPIN types. `search` is searchGlossary from ../shared/glossary.js (names
+ * only, every word starting a word of a name). One or two letters match too much that way ("c" starts
+ * 27 names), so until there are three only a name typed in full counts ("cg", "hp").
+ * Returns { entries: the first `limit`, total, more: whether there are others }.
+ */
+export function glossaryHits(raw, search, limit = 3) {
+  const q = norm(raw);
+  let all = q ? search(raw) : [];
+  if (q.length < 3) all = all.filter((e) => [e.term, e.full, ...(e.aka || [])].some((name) => name && norm(name) === q));
+  return { entries: all.slice(0, limit), total: all.length, more: all.length > limit };
+}
+
+/** The words of a query as typed (lower case, no punctuation), for marking them in a glossary term. */
+export const rawWords = (raw) => norm(raw).split(" ").filter(Boolean);

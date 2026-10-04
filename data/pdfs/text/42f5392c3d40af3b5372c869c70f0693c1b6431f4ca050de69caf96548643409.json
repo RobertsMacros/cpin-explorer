@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 99,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 95,
+ "paragraphs": 779,
+ "list_items": 145,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 254,
+ "bookmarks": 95,
+ "warnings": [
+  "footnotes with no mark found in the text: 208"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Russian Federation: Military service",
+ "cover_version": "1.0",
+ "cover_date": "July 2023",
+ "pdf_sha256": "42f5392c3d40af3b5372c869c70f0693c1b6431f4ca050de69caf96548643409",
+ "images": []
+}

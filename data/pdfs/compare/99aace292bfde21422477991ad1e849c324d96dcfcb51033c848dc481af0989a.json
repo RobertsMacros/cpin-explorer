@@ -1,0 +1,918 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "georgia/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-georgia-december-2023-accessible",
+ "pdf_sha256": "99aace292bfde21422477991ad1e849c324d96dcfcb51033c848dc481af0989a",
+ "body_sha256": "a8342f80d00405bf8b7f7709e96149ddd3f2992d3be9b77d5df20ffca9ff064a",
+ "words": {
+  "web": 23628,
+  "pdf": 23437
+ },
+ "summary": {
+  "wording": {
+   "differences": 14,
+   "web_words": 19,
+   "pdf_words": 29,
+   "share": 0.00102,
+   "passages": 3,
+   "sizes": {
+    "number": 3,
+    "passage": 3,
+    "spelling": 6,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 8,
+   "passages": 0,
+   "words": 24
+  },
+  "groups": {
+   "wording": {
+    "differences": 14,
+    "web_words": 19,
+    "pdf_words": 29
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 133,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 6
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 10,
+    "web_words": 16,
+    "pdf_words": 6
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "section updated": {
+    "differences": 3,
+    "web_words": 10,
+    "pdf_words": 4
+   },
+   "spacing": {
+    "differences": 6,
+    "web_words": 12,
+    "pdf_words": 6
+   },
+   "table for a picture": {
+    "differences": 3,
+    "web_words": 133,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 11,
+    "web_words": 9,
+    "pdf_words": 25
+   },
+   "withheld notice": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 6
+   }
+  },
+  "ours": {
+   "differences": 4,
+   "web_words": 8,
+   "pdf_words": 8
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "September 2024",
+   "pdf": "2.0",
+   "pdf_date": "September 2024"
+  },
+  "section_updated": {
+   "web": [
+    "19 September 2023",
+    "19 September 2023",
+    "19 September 2023",
+    "20 September 2024"
+   ],
+   "pdf": [
+    "19 September 2024",
+    "19 September 2024",
+    "20 September 2024"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 169,
+   "pdf": 169,
+   "pdf_raw": 169,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 6,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 67,
+   "pdf": 50
+  },
+  "drafts": [
+   "a 'Section updated' date differs: web 19 September 2023, PDF 19 September 2024",
+   "a year differs in the text: web 2023, PDF 2024"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 13,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Independent Expert on protection against violence and discrimination based on sexual orientation and gender identity]",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "As noted in the 2019 report of the",
+   "after": "IE SOGI, there remains a pervasive attitude in",
+   "before_pdf": "As noted in the 2019 report of the [",
+   "where": {
+    "heading": "societal-attitudes",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Section updated: 19 September 2023",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "and Gender identity issues in the asylum claim.",
+   "after": "1. Material facts, credibility and other checks/referrals",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Section updated: 19 September 2023",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "the Asylum Instruction, Assessing Credibility and Refugee Status.",
+   "after": "3. Risk\n3.1 Risk from the state",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "2.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "cannot tell",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "updated: 19 September 2024",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "the Nationality, Immigration and Asylum Act 2002.\nAssessment",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "number",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2023",
+   "pdf": "2024",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – End of section\nSection updated: 19 September",
+   "after": "2. Convention reason(s)\n2.1.1 Actual",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "size": "number",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "marginalisatoin",
+   "pdf": "marginalisation",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "appeals to far-right voters and can exacerbate",
+   "after": "of LGBTI persons (see State attitudes).\n3.1.",
+   "where": {
+    "heading": "risk-from-the-state",
+    "paragraph": "3.1.4",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "repsondents,",
+   "pdf": "respondents,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "varying degrees of happiness and openness among LGBTI",
+   "after": "with transgender respondents reporting the lowest happiness levels",
+   "where": {
+    "heading": "risk-from-non-state-including-rogue-state-actors",
+    "paragraph": "3.2.5",
+    "section": "Assessment",
+    "page": 8
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "failture",
+   "pdf": "failure",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "LGBTI activists for their lack of reasoning and",
+   "after": "to always contain a proper analysis of all",
+   "where": {
+    "heading": "Protection",
+    "paragraph": "4.1.3",
+    "section": "Assessment",
+    "page": 9
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Tbisili.",
+   "pdf": "Tbilisi.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "1 million people live in the capital of",
+   "after": "There is a higher visibility of LGBTI individuals",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": "5.1.2",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2022",
+   "pdf": "2023",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "5 Conversion therapy\n7.5.1 The USSD",
+   "after": "HR report noted ‘So-called conversion therapy practices",
+   "where": {
+    "heading": "conversion-therapy",
+    "paragraph": "7.5.1",
+    "section": "Country information",
+    "page": 15
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "institiution,",
+   "pdf": "institute,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "stated:\nThe Public Defender (ombudsman) is a constitutional",
+   "after": "which supervises protection of human rights and freedoms",
+   "where": {
+    "heading": "the-public-defender-ombudsman",
+    "paragraph": "9.6.1",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Movmement ‘",
+   "pdf": "Movement ‘",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and the LGBTQ community .\n13.2.4 Equality",
+   "after": "provides social and legal services based on the",
+   "where": {
+    "heading": "support-organisations",
+    "paragraph": "13.2.4",
+    "section": "Country information",
+    "page": 48
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "him",
+   "pdf": "them",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Chief Inspector of Borders and Immigration to support",
+   "after": "in reviewing the efficiency, effectiveness and consistency of",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "14.1.3",
+    "section": "Version control and feedback",
+    "page": 58
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "FP),",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2 The online current affairs magazine, Foreign Policy,",
+   "after": "in an article dated 7 July 2021 noted ‘",
+   "before_pdf": "2 The online current affairs magazine, Foreign Policy (",
+   "where": {
+    "heading": "societal-attitudes",
+    "paragraph": "10.1.2",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "I am not happy\nMore no than yes\nPartly happy, partly not\nMore yes than no\nI am happy\nLesbian\n5.4%\n17.15%\n32.3%\n28%\n17.15%\nGay\n1.8%\n21.8%\n31.8%\n37.3%\n7.3%\nBisexual woman\n8.1%\n18.9%\n43.2%\n27%\n2.7%\nBisexual man\n6.5%\n9.7%\n6.45%\n64.45%\n12.9%\nTransgender\n11.8%\n29.4%\n38.2%\n17.6%\n2.9%\nOther\n20%\n40%\n33.3%\n6.7%",
+   "pdf": "",
+   "web_words": 63,
+   "pdf_words": 0,
+   "before": "least happy and bisexual men the most happy.",
+   "after": "13.1.3 The EMC 2020 survey also",
+   "where": {
+    "heading": "Lived_experience_visibility",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Forms of psychological violence during the last 2 years\nexperiencing\nVerbal abuse / humiliation / ridicule\n87%\nBlackmail and coercion\n36%\nComing out threat\n28%\nEmotional manipulation\n53%\nSuicide threat / blackmail\n15%\nSocial isolation from friends and family\n19%\nTermination of financial assistance\n16%\nConfiscation of inheritance / property\n6%\nDestruction of personal property\n16%\nForced medical treatment\n8%\nForced visit to clergy\n13%\nRestriction of gender expression\n54%\nRestriction of the access to education\n10%\nRestriction of access to basic needs\n12%",
+   "pdf": "",
+   "web_words": 53,
+   "pdf_words": 0,
+   "before": "manipulation (53%) and restriction of gender expression (54%).",
+   "after": "11.1.8 EMC identified the 3 most",
+   "where": {
+    "heading": "Societal_treatment",
+    "paragraph": "11.1.7",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Nature of violence\nexperiencing\nIllegal deprivation of liberty\n4%\nThreat of death\n40%\nThreat of sexual violence\n34%\nSexual violence / rape\n9%\nThreat of physical violence\n78%\nPhysical violence\n36%",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "a person’s sexual orientation or gender identity.",
+   "after": "11.1.6 When EMC looked specifically at",
+   "where": {
+    "heading": "Societal_treatment",
+    "paragraph": "11.1.5",
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "ad- ditional",
+   "pdf": "additional",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "territorial) location of the medical facility, which creates",
+   "after": "difficulties in obtaining the service.\nAlthough all HIV-",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.3.7",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "dis- continuation",
+   "pdf": "discontinuation",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "named the issue of starting a treatment or",
+   "after": "of treatment as an important problem. The reasons",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.3.7",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "tak- ing",
+   "pdf": "taking",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "needs. Respondents recalled cases when community members were",
+   "after": "cheap hormonal medications without an endocrinologist prescription, which",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.3.8",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "envi- ronment",
+   "pdf": "environment",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "a vulnerable age for young LGBTQ people. Unsupportive",
+   "after": "in school spaces has the most negative impact",
+   "where": {
+    "heading": "education",
+    "paragraph": "12.4.1",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "ex- perienced",
+   "pdf": "experienced",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "It is noteworthy that of the respondents who",
+   "after": "barriers to general education due to their sexual",
+   "where": {
+    "heading": "education",
+    "paragraph": "12.4.1",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "W]hen",
+   "pdf": "When",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "13.1.4 The EMC 2020 survey reported:",
+   "after": "asked how open they [LGB persons only] are",
+   "where": {
+    "heading": "Lived_experience_visibility",
+    "paragraph": "13.1.4",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "on",
+   "pdf": "in",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section\nThe information",
+   "after": "this page has been removed as it is",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "page",
+   "pdf": "section",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – Start of section\nThe information on this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section\nThe information in this",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "on",
+   "pdf": "in",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section\nThe information",
+   "after": "this page has been removed as it is",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "page",
+   "pdf": "section",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – Start of section\nThe information on this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section\nThe information in this",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.2.6",
+   "pdf": "7.2.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "whose deeply conservative Orthodox Church is highly influential.",
+   "after": "On 17 September 2024, The Office of the",
+   "before_pdf": "whose deeply conservative Orthodox Church is highly influential.’",
+   "where": {
+    "heading": "Anti-discrimination",
+    "paragraph": "7.2.6",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.7",
+   "pdf": "13.1.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "have in the clubs is shifting to daylight.”’",
+   "after": "The same article stated:\nFor Tevdorashvili, this need",
+   "where": {
+    "heading": "Lived_experience_visibility",
+    "paragraph": "13.1.7",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "on",
+   "pdf": "in",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section\nThe information",
+   "after": "this page has been removed as it is",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "14.1.3",
+    "section": "Version control and feedback",
+    "page": 6
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "page",
+   "pdf": "section",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – Start of section\nThe information on this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section\nThe information in this",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "14.1.3",
+    "section": "Version control and feedback",
+    "page": 6
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.1.3 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "gender identity, among other protected grounds of discrimination.’",
+   "after": "The PDO 2022 LGBT+ report reported that these",
+   "before_pdf": "other protected grounds of discrimination.’\n9.1.3",
+   "where": {
+    "heading": "policy-framework",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "10.1.6 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "or morally judge those people has significantly reduced.",
+   "after": "The WISG 2022 quantitative research was conducted via",
+   "before_pdf": "those people has significantly reduced.’\n10.1.6",
+   "where": {
+    "heading": "societal-attitudes",
+    "paragraph": "10.1.6",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "11.1.4 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "An investigation was pending at time of writing.",
+   "after": "The EMC research 2020 considered the LGBTQ community’",
+   "before_pdf": "pending at time of writing.’\n11.1.4",
+   "where": {
+    "heading": "Societal_treatment",
+    "paragraph": "11.1.4",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "12.3.5 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "members, acquaintances, social workers, and/or community organizations.’",
+   "after": "Equality Movement offers a free and anonymous doctors",
+   "before_pdf": "workers, and/or community organizations.’\n12.3.5",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 42
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "5\n67\n55\n47",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "basis of intolerance on the grounds of SOGIE",
+   "after": "Persons convicted on the basis of intolerance on",
+   "where": {
+    "heading": "prosecutions-and-convictions",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "20\n40\n19\n9.",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "of intolerance on the grounds of SOGIE\n9",
+   "after": "5.3 ECOM, Equality Movement and Tbilisi Pride",
+   "before_pdf": "19 intolerance on the grounds of SOGIE\n9.",
+   "where": {
+    "heading": "prosecutions-and-convictions",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "5\n67\n55\n47",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "prosecutions launched in connection to crimes committed on",
+   "after": "the basis of intolerance on the grounds of",
+   "where": {
+    "heading": "prosecutions-and-convictions",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "9 20 40 19",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "55\n47\nPersons convicted on the basis of",
+   "after": "intolerance on the grounds of SOGIE\n9\n20",
+   "before_pdf": "of SOGIE Persons convicted on the basis of",
+   "where": {
+    "heading": "prosecutions-and-convictions",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 4
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 201,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "7.2.6",
+   "13.1.7"
+  ],
+  "unconfirmed": []
+ }
+}

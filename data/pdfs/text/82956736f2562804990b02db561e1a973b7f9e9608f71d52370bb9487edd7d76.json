@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 134,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 217,
+ "paragraphs": 1019,
+ "list_items": 50,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 486,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 1, 396"
+ ],
+ "figure_pages": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,
+  "ee0b91974a113ffd9c2e83de7cde4d4775f4060a17f88a0b41c3d9d36a3fda21.jpg": 5
+ },
+ "figure_sizes": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": [
+   246,
+   168
+  ],
+  "ee0b91974a113ffd9c2e83de7cde4d4775f4060a17f88a0b41c3d9d36a3fda21.jpg": [
+   865,
+   1100
+  ]
+ },
+ "figure_text": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 0,
+  "ee0b91974a113ffd9c2e83de7cde4d4775f4060a17f88a0b41c3d9d36a3fda21.jpg": 3
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a Home Office Fact-Finding Mission Bangladesh",
+ "cover_version": null,
+ "cover_date": "26 May 2017",
+ "pdf_sha256": "82956736f2562804990b02db561e1a973b7f9e9608f71d52370bb9487edd7d76",
+ "images": [
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png",
+  "ee0b91974a113ffd9c2e83de7cde4d4775f4060a17f88a0b41c3d9d36a3fda21.jpg"
+ ]
+}

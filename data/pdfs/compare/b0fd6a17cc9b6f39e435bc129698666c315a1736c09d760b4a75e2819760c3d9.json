@@ -1,0 +1,201 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ghana/country-information-note-medical-treatment-and-healthcare-ghana-august-2022-accessible",
+ "pdf_sha256": "b0fd6a17cc9b6f39e435bc129698666c315a1736c09d760b4a75e2819760c3d9",
+ "body_sha256": "18726b6c9f40aaa01a5221b860bf8663890ce74cf9cc114b984e6b9105a1ffe2",
+ "words": {
+  "web": 15854,
+  "pdf": 15851
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 1,
+   "web_words": 3,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "August 2022",
+   "pdf": "2.0",
+   "pdf_date": "August 2022"
+  },
+  "section_updated": {
+   "web": [
+    "5 August 2022",
+    "4 August 2022",
+    "31 May 2022",
+    "5 August 2022",
+    "8 July 2022",
+    "5 May 2022",
+    "26 July 2022",
+    "12 April 2022",
+    "23 May 2022",
+    "8 July 2022",
+    "8 July 2022",
+    "21 April 2022",
+    "11 April 2022",
+    "26 July 2022",
+    "23 June 2022",
+    "26 July 2022",
+    "12 May 2022",
+    "12 May 2022",
+    "26 July 2022",
+    "5 August 2022",
+    "5 August 2022",
+    "26 July 2022",
+    "8 July 2022",
+    "8 July 2022"
+   ],
+   "pdf": [
+    "5 August 2022",
+    "4 August 2022",
+    "31 May 2022",
+    "5 August 2022",
+    "8 July 2022",
+    "5 May 2022",
+    "26 July 2022",
+    "12 April 2022",
+    "23 May 2022",
+    "8 July 2022",
+    "8 July 2022",
+    "21 April 2022",
+    "11 April 2022",
+    "26 July 2022",
+    "23 June 2022",
+    "26 July 2022",
+    "12 May 2022",
+    "12 May 2022",
+    "26 July 2022",
+    "5 August 2022",
+    "5 August 2022",
+    "26 July 2022",
+    "8 July 2022",
+    "8 July 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 2,
+   "web_notices": 2,
+   "pdf_notices": 2
+  },
+  "footnotes": {
+   "web": 463,
+   "pdf": 463,
+   "pdf_raw": 463,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 7
+  },
+  "headings": {
+   "web": 90,
+   "pdf": 60
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "artefact",
+   "web": "Back to Contents",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "in Ghana, including both government and private facilities.",
+   "after": "Section 15 updated: 23 June 2022\n15. HIV/",
+   "where": {
+    "heading": "haematological-conditions-including-sickle-cell-anaemia",
+    "paragraph": "14.1.4",
+    "section": "14. Haematological conditions including sickle cell anaemia",
+    "page": 26
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 119,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

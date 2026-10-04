@@ -1,0 +1,306 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-sexual-orientation-and-gender-identity-bangladesh-september-2023-accessible",
+ "pdf_sha256": "5c13c97639beaaebaf0b7d6877bfde4a712ce1a1d08ce0811ffce7c14dbb1a1d",
+ "body_sha256": "01a3ae1bc68789fcd37bb555266725f51c8b13849834aad0e5eb55a913a850c4",
+ "words": {
+  "web": 26838,
+  "pdf": 26830
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 12,
+   "pdf_words": 0,
+   "share": 0.000224,
+   "passages": 0,
+   "sizes": {
+    "number": 6
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 12,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "table cell": {
+    "differences": 6,
+    "web_words": 12,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "April 2026",
+   "pdf": "6.0",
+   "pdf_date": "April 2026"
+  },
+  "section_updated": {
+   "web": [
+    "13 April 2026"
+   ],
+   "pdf": [
+    "13 April 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 263,
+   "pdf": 263,
+   "pdf_raw": 263,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 50,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 6,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2022",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "2024 (Table created by CPIT):\nNumber of incidents",
+   "after": "Number of victims in 2022\nNumber of incidents",
+   "before_pdf": "by CPIT):\n2022\n2023\n2024\nNumber of incidents",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2022",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Number of incidents in 2022\nNumber of victims",
+   "after": "Number of incidents in 2023\nNumber of victims",
+   "before_pdf": "2023\n2024\nNumber of incidents\nNumber of victims",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2023",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Number of victims in 2022\nNumber of incidents",
+   "after": "Number of victims in 2023\nNumber of incidents",
+   "before_pdf": "of incidents\nNumber of victims\nNumber of incidents",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2023",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Number of incidents in 2023\nNumber of victims",
+   "after": "Number of incidents in 2024\nNumber of victims",
+   "before_pdf": "of victims\nNumber of incidents\nNumber of victims",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2024",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Number of victims in 2023\nNumber of incidents",
+   "after": "Number of victims in 2024\nGay and other",
+   "before_pdf": "of incidents\nNumber of victims\nNumber of incidents",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "in 2024",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Number of incidents in 2024\nNumber of victims",
+   "after": "Gay and other\n11\n13\n17\n19\n13",
+   "before_pdf": "of victims\nNumber of incidents\nNumber of victims",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.3.2",
+    "section": "Version control and feedback",
+    "page": 63
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2022\n2023\n2024",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "between 2022 and 2024 (Table created by CPIT):",
+   "after": "Number of incidents in 2022\nNumber of victims",
+   "where": {
+    "heading": "violence-harassment-and-discrimination-1",
+    "paragraph": "9.2.9",
+    "section": "Country information",
+    "page": 32
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 286,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

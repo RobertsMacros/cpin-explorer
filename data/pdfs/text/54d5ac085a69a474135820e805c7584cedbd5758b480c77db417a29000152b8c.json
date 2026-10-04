@@ -1,0 +1,87 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 59,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 488,
+ "list_items": 69,
+ "tables": 10,
+ "figures": 6,
+ "footnotes": 118,
+ "bookmarks": 57,
+ "warnings": [
+  "page 6: bookmark not found in the text: '1. Introduction'",
+  "page 6: bookmark not found in the text: '2. Consideration of issues'",
+  "page 15: bookmark not found in the text: '3. Political context'",
+  "page 17: bookmark not found in the text: '4. State agents and proxies'",
+  "page 18: bookmark not found in the text: '5. Data sources'",
+  "page 20: bookmark not found in the text: '6. Perpetrators of human rights violations'",
+  "page 21: bookmark not found in the text: '7. Victims of human rights violations'",
+  "page 22: bookmark not found in the text: '8. Location of human rights violations'",
+  "page 25: bookmark not found in the text: '9. Trends in human rights violations 2008 to 2021'",
+  "page 30: bookmark not found in the text: '10. Opposition political parties'",
+  "page 30: bookmark not found in the text: '11. Movement for Democratic Change'",
+  "page 33: bookmark not found in the text: '12. Protests'",
+  "page 36: bookmark not found in the text: '13. Impact of COVID-19'",
+  "page 37: bookmark not found in the text: '14. Politicisation of food and other aid'",
+  "page 40: bookmark not found in the text: '15. Treatment of MDC'",
+  "page 44: bookmark not found in the text: '16. Treatment of other groups opposing the state'",
+  "footnotes with no mark found in the text: 18, 26, 27, 28, 29, 30, 31, 32, 33, 34, 41, 53…"
+ ],
+ "figure_pages": {
+  "1dd020d6992eeb9c136aeb54d4e2b390160c24837a1edf79e2744814b4908ec9.png": 21,
+  "3dfa93ba4ddc959ee6a9424f89c249640bacdbcfc62fe24481531c6f01160e29.png": 23,
+  "5d06b338089f35d1b092feb0986a839c560dd29daa1f83cbc323a4df633e7297.png": 25,
+  "d9f9b983a9b8ff8680efe20b9bba6978809e17f342a94566556175a457593342.png": 27,
+  "a4e9242b4066b1948cd20b2bb1c6b7082f9515aac8d6348512b28e5259d6f717.png": 29,
+  "042205a7eff9d186ea1a396c3056ea1ebd1832d89cf5aa395a5236d877418b34.png": 38
+ },
+ "figure_sizes": {
+  "1dd020d6992eeb9c136aeb54d4e2b390160c24837a1edf79e2744814b4908ec9.png": [
+   832,
+   493
+  ],
+  "3dfa93ba4ddc959ee6a9424f89c249640bacdbcfc62fe24481531c6f01160e29.png": [
+   866,
+   561
+  ],
+  "5d06b338089f35d1b092feb0986a839c560dd29daa1f83cbc323a4df633e7297.png": [
+   823,
+   508
+  ],
+  "d9f9b983a9b8ff8680efe20b9bba6978809e17f342a94566556175a457593342.png": [
+   847,
+   595
+  ],
+  "a4e9242b4066b1948cd20b2bb1c6b7082f9515aac8d6348512b28e5259d6f717.png": [
+   811,
+   517
+  ],
+  "042205a7eff9d186ea1a396c3056ea1ebd1832d89cf5aa395a5236d877418b34.png": [
+   834,
+   543
+  ]
+ },
+ "figure_text": {
+  "1dd020d6992eeb9c136aeb54d4e2b390160c24837a1edf79e2744814b4908ec9.png": 0,
+  "3dfa93ba4ddc959ee6a9424f89c249640bacdbcfc62fe24481531c6f01160e29.png": 0,
+  "5d06b338089f35d1b092feb0986a839c560dd29daa1f83cbc323a4df633e7297.png": 0,
+  "d9f9b983a9b8ff8680efe20b9bba6978809e17f342a94566556175a457593342.png": 0,
+  "a4e9242b4066b1948cd20b2bb1c6b7082f9515aac8d6348512b28e5259d6f717.png": 0,
+  "042205a7eff9d186ea1a396c3056ea1ebd1832d89cf5aa395a5236d877418b34.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Zimbabwe: Opposition to government",
+ "cover_version": "5.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "54d5ac085a69a474135820e805c7584cedbd5758b480c77db417a29000152b8c",
+ "images": [
+  "042205a7eff9d186ea1a396c3056ea1ebd1832d89cf5aa395a5236d877418b34.png",
+  "1dd020d6992eeb9c136aeb54d4e2b390160c24837a1edf79e2744814b4908ec9.png",
+  "3dfa93ba4ddc959ee6a9424f89c249640bacdbcfc62fe24481531c6f01160e29.png",
+  "5d06b338089f35d1b092feb0986a839c560dd29daa1f83cbc323a4df633e7297.png",
+  "a4e9242b4066b1948cd20b2bb1c6b7082f9515aac8d6348512b28e5259d6f717.png",
+  "d9f9b983a9b8ff8680efe20b9bba6978809e17f342a94566556175a457593342.png"
+ ]
+}

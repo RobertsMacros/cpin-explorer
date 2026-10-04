@@ -1,0 +1,445 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-pakistan-november-2025-accessible",
+ "pdf_sha256": "35d69a77f2f75870353c0bf3edf1595c8aaf4a1a3ee8a385fd02ae6cdb8dddcc",
+ "body_sha256": "f3cd2a82113a8057d69fec9f8e5cef17a5e0ead61805cac4e14726bdafd9c930",
+ "words": {
+  "web": 17776,
+  "pdf": 17835
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 12,
+   "share": 0.000365,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 12
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 9,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 11
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 9,
+    "pdf_words": 6
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 48
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "November 2025",
+   "pdf": "6.0",
+   "pdf_date": "November 2025"
+  },
+  "section_updated": {
+   "web": [
+    "24 November 2025"
+   ],
+   "pdf": [
+    "24 November 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 203,
+   "pdf": 203,
+   "pdf_raw": 203,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 118,
+   "pdf": 48
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 3,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "World Report 2025: Pakistan, 16 January 2025. Accessed: 24 January 2025",
+   "web_words": 0,
+   "pdf_words": 11,
+   "before": "Pakistan, 11 January 2024. Accessed: 24 January 2025",
+   "after": "Images (Dawn)\nGovt decides to clear Joyland for",
+   "where": {
+    "heading": "images-dawn",
+    "paragraph": "11.4.6",
+    "section": "Bibliography",
+    "page": 39
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Policy",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "comment on this note, please email the Country",
+   "after": "and Policy Information Team.\nIndependent Advisory Group on",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.4.6",
+    "section": "Version control and feedback",
+    "page": 44
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Policy",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "on this note, please email the Country and",
+   "after": "Information Team.\nIndependent Advisory Group on Country Information",
+   "before_pdf": "this note, please email the Country Policy and",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.4.6",
+    "section": "Version control and feedback",
+    "page": 8
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.5",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.1",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Meeting places and events\n9.4 State protection",
+   "after": "The GoP noted in their report on the",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.5.3The",
+   "pdf": "9.5.3 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "trans people in KP from 2019 to 2023.",
+   "after": "GoP recorded the number of complaints, prosecutions and",
+   "where": {
+    "heading": "prosecutions-convictions",
+    "paragraph": "9.5.3",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.2",
+   "pdf": "9.4.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Complaints Redressal\nRecipients\n142\n200\n192\n155\n50",
+   "after": "According to the USSD HR Report 2023, the",
+   "before_pdf": "Redressal\nRecipients\n142\n200\n192\n155\n50\n94",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.2",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.3",
+   "pdf": "9.4.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "at the Women and Juvenile Facilitation Centre Quetta.’",
+   "after": "According to a confidential source cited in The",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.3",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.4",
+   "pdf": "9.4.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "at the police stations has been widely documented.’",
+   "after": "The Project ADAL report noted that 956 cases",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.4",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.5",
+   "pdf": "9.4.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "be found to determine if this trend continued.",
+   "after": "Regarding lesbian, bisexual and queer (LBQ) women, the",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.5",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.6",
+   "pdf": "9.4.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "failing to provide adequate protections to LBQ women.’",
+   "after": "In its concluding observations on the second period",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.6",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.4.7",
+   "pdf": "9.4.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "for perpetrators.’ (see also Violence, harassment and extortion).",
+   "after": "For information on the situation of women in",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.7",
+    "section": "Country information",
+    "page": 24
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "72.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to laws criminalising same-sex conduct between men.",
+   "after": "9.2.3 According to data collected under",
+   "before_pdf": "to laws criminalising same-sex conduct between men",
+   "where": {
+    "heading": "treatment-police",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "94",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Complaints Redressal\nRecipients\n142\n200\n192\n155\n50",
+   "after": "9.4.2 According to the USSD HR",
+   "where": {
+    "heading": "state-protection",
+    "paragraph": "9.4.2",
+    "section": "Country information",
+    "page": 22
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 178,
+  "different": {
+   "9.4.2": "9.4.1",
+   "9.4.3": "9.4.2",
+   "9.4.4": "9.4.3",
+   "9.4.5": "9.4.4",
+   "9.4.6": "9.4.5",
+   "9.4.7": "9.4.6"
+  },
+  "pdf_unnumbered": [
+   "9.4.1"
+  ],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

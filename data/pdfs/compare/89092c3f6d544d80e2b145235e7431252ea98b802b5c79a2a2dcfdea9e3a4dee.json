@@ -1,0 +1,1026 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-religious-minorities-and-scheduled-castes-and-tribes-india-april-2024-accessible",
+ "pdf_sha256": "89092c3f6d544d80e2b145235e7431252ea98b802b5c79a2a2dcfdea9e3a4dee",
+ "body_sha256": "0c5a77afbd6e3d635ecd534c7fed9b165747dfc0e4c69e082ceb82834ea55a93",
+ "words": {
+  "web": 39028,
+  "pdf": 39120
+ },
+ "summary": {
+  "wording": {
+   "differences": 20,
+   "web_words": 32,
+   "pdf_words": 101,
+   "share": 0.001702,
+   "passages": 15,
+   "sizes": {
+    "passage": 15,
+    "spelling": 2,
+    "word": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 20,
+    "web_words": 32,
+    "pdf_words": 101
+   },
+   "numbering": {
+    "differences": 20,
+    "web_words": 18,
+    "pdf_words": 24
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 15
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 2,
+    "web_words": 20,
+    "pdf_words": 30
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 20,
+    "web_words": 18,
+    "pdf_words": 24
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 15
+   },
+   "section updated": {
+    "differences": 11,
+    "web_words": 0,
+    "pdf_words": 55
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 16
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 14,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 13
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "April 2024",
+   "pdf": "4.0",
+   "pdf_date": "April 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "30 January 2024",
+    "18 March 2024",
+    "14 March 2024",
+    "18 March 2024",
+    "14 March 2024",
+    "14 March 2024",
+    "14 March 2024",
+    "14 March 2024",
+    "14 March 2024",
+    "30 January 2024",
+    "30 January 2024"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 236,
+   "pdf": 236,
+   "pdf_raw": 236,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 108,
+   "pdf": 71
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 18,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2023\nIAMC, ‘Persecution of Religious Minorities in India: April - June 2023’ (page 1), 29 July 2023\nNBC News, ‘Religious violence reaches India’s capital as a Hindu mob ...’, 6 September",
+   "web_words": 0,
+   "pdf_words": 30,
+   "before": "Report on International Religious ...’ (Executive Summary), 15 May",
+   "after": "2023\nUSDOL, ‘2022 Findings on the Worst Forms",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.1.1",
+    "section": "Version control and feedback",
+    "page": 46
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "CMRI, ‘Religious Minorities In India Report’ (pages 176 & 179), November 2022\nNITI, ‘New Farm Acts: Understanding the Implications’, November 2020",
+   "pdf": "",
+   "web_words": 20,
+   "pdf_words": 0,
+   "before": "New Farm Acts: Understanding the Implications’, November 2020",
+   "after": "USSD IRF, ‘2022 Report on International Religious ...’ (Executive",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.1.1",
+    "section": "Version control and feedback",
+    "page": 49
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "become the fourth such law after those in Manipur, Rajasthan, and West Bengal.’",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "and brotherhood” in the state, would, if enacted,",
+   "after": "11.1.5 In January 2022 the Times",
+   "where": {
+    "heading": "anti-cow-legislation-act",
+    "paragraph": "11.1.5",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "17.1.1 Freedom of movement\n17.1.1",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "WSO 2022-12-09).’\n17. Freedom of movement",
+   "after": "For information on freedom of movement and internal",
+   "before_pdf": "2024\n17. Freedom of movement\n17.1.1",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "16.1.10",
+    "section": "Country information",
+    "page": 77
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 30 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "relevant COI as the evidential basis for decisions.",
+   "after": "7. Religious demography and geography\n7.1 Demography",
+   "where": {
+    "heading": "religious-demography-and-geography",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 17
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 18 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "eastern states and central parts of the country.’",
+   "after": "8. Legal context\n8.1 Constitution\n8.1.",
+   "where": {
+    "heading": "legal-context",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 19
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "marriages and Societal treatment of religious minorities – Christians)",
+   "after": "9. Political and civic rights\n9.1.1",
+   "where": {
+    "heading": "political-and-civic-rights",
+    "paragraph": "8.6.6",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 18 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "no Muslim members of its party in parliament.’",
+   "after": "10. Interfaith marriages\n10.1 Legislation\n10.1",
+   "where": {
+    "heading": "interfaith-marriages",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "that enables marriage without reference to any faith.’",
+   "after": "11. Cow slaughter\n11.1 Anti-cow slaughter",
+   "where": {
+    "heading": "cow-slaughter",
+    "paragraph": "10.2.5",
+    "section": "Country information",
+    "page": 30
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "name of preventing beef consumption and cattle transportation.’",
+   "after": "12. State treatment of religious minorities\n12.1",
+   "where": {
+    "heading": "state-treatment-of-religious-minorities",
+    "paragraph": "11.2.15",
+    "section": "Country information",
+    "page": 36
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "2021 see the archived CPIN via Ecoi.net.",
+   "after": "13. Societal treatment of religious minorities\n13.1",
+   "where": {
+    "heading": "Societal-treatment-of-religious-minorities",
+    "paragraph": "12.5.1",
+    "section": "Country information",
+    "page": 49
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "See also State treatment of religious minorities – Sikhs)",
+   "after": "14. Hindu nationalism\n14.1 What is Hindu",
+   "where": {
+    "heading": "Hindu-nationalism",
+    "paragraph": "14.4.5",
+    "section": "Country information",
+    "page": 59
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 14 March 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "forced’ conversion and Societal treatment of religious minorities)",
+   "after": "15. Scheduled Castes and Tribes\n15.1 India’",
+   "where": {
+    "heading": "scheduled-castes-and-tribes",
+    "paragraph": "14.3.10",
+    "section": "Country information",
+    "page": 64
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 30 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "violence, even schools were burned in arson attacks.’",
+   "after": "16. Avenues of redress\n16.1 Complaints mechanisms",
+   "where": {
+    "heading": "avenues-of-redress",
+    "paragraph": "15.4.11",
+    "section": "Country information",
+    "page": 74
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 30 January 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "victims of police brutality” (WSO 2022-12-09).’",
+   "after": "17. Freedom of movement\n17.1.1 Freedom",
+   "before_pdf": "victims of police brutality\" (WSO 2022-12-09).’",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "16.1.10",
+    "section": "Country information",
+    "page": 77
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "labelled",
+   "pdf": "labeled",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "an investigation and waiting period. Fraudulent conversions, often",
+   "after": "forced conversions, are criminalized.’\n8.6.2 USSD",
+   "where": {
+    "heading": "conversion-and-forced-conversion",
+    "paragraph": "8.6.1",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "IAMC Report:",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "2023, 29 July 2023 (pages 7-10) and",
+   "after": "Persecution of Religious Minorities in India (July-Sep",
+   "where": {
+    "heading": "state-and-societal-response-to-cow-slaughter",
+    "paragraph": "11.2.15",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Sep",
+   "pdf": "September",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Report: Persecution of Religious Minorities in India (July-",
+   "after": "2023) - IAMC 11 October 2023 (pages 21-23),",
+   "before_pdf": "and Persecution of Religious Minorities in India: July -",
+   "where": {
+    "heading": "state-and-societal-response-to-cow-slaughter",
+    "paragraph": "11.2.15",
+    "section": "Country information",
+    "page": 84
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "labelled",
+   "pdf": "labeled",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the Citizenship Amendment Act. The episode has been",
+   "after": "a pogrom by some experts. Violence has been",
+   "where": {
+    "heading": "societal-treatment-Muslims",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 53
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "IAMC",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "of Religious Minorities in India (July-Sep 2023) -",
+   "after": "11 October 2023 (pages 21-23), cited incidents",
+   "before_pdf": "of Religious Minorities in India: July - September 2023’,",
+   "where": {
+    "heading": "state-and-societal-response-to-cow-slaughter",
+    "paragraph": "11.2.15",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "of attacks against Christians from 2009 to 2023:",
+   "after": "13.2.7 The Federation of Indian American",
+   "where": {
+    "heading": "societal-treatment-Christians",
+    "paragraph": "13.2.7",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.4.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "s English website also remains blocked in India.’",
+   "after": "For information about Sikh separatism and the Khalistan",
+   "where": {
+    "heading": "Sikhs",
+    "paragraph": "12.4.2",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "15.4.6The",
+   "pdf": "15.4.6 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "her modesty with 10.2% (1,022 cases).’",
+   "after": "below chart shows the NCRB crime data on",
+   "where": {
+    "heading": "scheduled-tribes",
+    "paragraph": "15.4.6",
+    "section": "Country information",
+    "page": 73
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "16.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for a hearing date for over two years.’",
+   "after": "The IAMC Report 2023, noted: ‘The Prevention of",
+   "where": {
+    "heading": "complaints-mechanisms",
+    "paragraph": "16.1.6",
+    "section": "Country information",
+    "page": 76
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "3.10 Inter-faith and inter-caste marriages",
+   "after": "1 In general, persons in or entering inter-",
+   "where": {
+    "heading": "inter-faith-and-inter-caste-marriages",
+    "paragraph": "3.1.1",
+    "section": "Assessment",
+    "page": 13
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "onus is on the person to demonstrate otherwise.",
+   "after": "2 Inter-faith and inter-caste marriages are",
+   "where": {
+    "heading": "inter-faith-and-inter-caste-marriages",
+    "paragraph": "3.1.2",
+    "section": "Assessment",
+    "page": 13
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "marriages including between BJP politicians (see Interfaith marriages).",
+   "after": "3 In 8 states, anti-conversion laws ban",
+   "where": {
+    "heading": "inter-faith-and-inter-caste-marriages",
+    "paragraph": "3.1.3",
+    "section": "Assessment",
+    "page": 13
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.10.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "see Interfaith marriages and Conversion and ‘forced’ conversion).",
+   "after": "4 For further guidance on assessing risk, see",
+   "where": {
+    "heading": "inter-faith-and-inter-caste-marriages",
+    "paragraph": "3.1.4",
+    "section": "Assessment",
+    "page": 13
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.5",
+   "pdf": "12.3.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to their organised and coordinated planning and implementation.’",
+   "after": "According to the Panel:\nFrequently, torture and cruel,",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.5",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.6",
+   "pdf": "12.3.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "identity of the victims, indicating a discriminatory purpose.’",
+   "after": "The Report by the Panel added: ‘Several state",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.6",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.7",
+   "pdf": "12.3.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "through online platforms such as Twitter, Facebook etc.’",
+   "after": "According to the Panel: ‘Attacks on mosques have",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.7",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.8",
+   "pdf": "12.3.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "targeted, all in the span of three days.’",
+   "after": "The USCIRF, Country Update on Religious Freedom Conditions",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.8",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.9",
+   "pdf": "12.3.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "polarization in the world’s most populous democracy.’",
+   "after": "The USSD IRF Report 2022, stated: ‘Following communal",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.9",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.10",
+   "pdf": "12.3.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "such attacks, then they should not expect justice.”’",
+   "after": "Deutsche Welle (DW) noted in an article dated",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.10",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.11",
+   "pdf": "12.3.12",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Act of 2019. [see Citizenship Amendment Act (CAA)).’",
+   "after": "On 14 June 2022 Amnesty International (AI) reported:",
+   "where": {
+    "heading": "Muslims",
+    "paragraph": "12.3.11",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.4.3",
+   "pdf": "12.4.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and Information Note, India: Political parties and affiliation.",
+   "after": "For more information about Operation Blue Star see:",
+   "where": {
+    "heading": "Sikhs",
+    "paragraph": "12.4.3",
+    "section": "Country information",
+    "page": 49
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.8",
+   "pdf": "13.2.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "they are not a day-to-day occurrence.’",
+   "after": "DFAT assessed: ‘... Christians face a low risk of",
+   "where": {
+    "heading": "societal-treatment-Christians",
+    "paragraph": "13.2.8",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.9",
+   "pdf": "13.2.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of a low caste, given their intersectional identities.’",
+   "after": "The USSD IRF Report 2022, further added: ‘There",
+   "where": {
+    "heading": "societal-treatment-Christians",
+    "paragraph": "13.2.9",
+    "section": "Country information",
+    "page": 52
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.10",
+   "pdf": "13.2.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Hindus attacked Christians and disrupted Christian worship services.’",
+   "after": "The Independent online newspaper, reported on 10 January",
+   "where": {
+    "heading": "societal-treatment-Christians",
+    "paragraph": "13.2.10",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.",
+   "pdf": "13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Five Sikh individuals were injured in the incident.’",
+   "after": "4.5 For information about Sikh separatism and",
+   "where": {
+    "heading": "societal-treatment-Sikhs",
+    "paragraph": "14.4.5",
+    "section": "Country information",
+    "page": 58
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.3.7",
+   "pdf": "15.3.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "low as 15 percent, according to government data’",
+   "after": "The Indian American Muslim Council (IAMC), in its",
+   "where": {
+    "heading": "scheduled-castes",
+    "paragraph": "15.3.7",
+    "section": "Country information",
+    "page": 69
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.3.7",
+   "pdf": "15.3.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "numbers as they are not recognized as Dalits.’",
+   "after": "The IAMC Report 2023 further noted:\nThe Dalits ...",
+   "where": {
+    "heading": "scheduled-castes",
+    "paragraph": "15.3.7",
+    "section": "Country information",
+    "page": 69
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "BBC, ‘CAA: India to enforce migrant law that excludes Muslims’, 12 March 2024",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "Religious Freedom: India’ (section II), 15 May 2023",
+   "after": "USCIRF, ‘The Citizenship (Amendment) Act in India’ (page",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.1.1",
+    "section": "Version control and feedback",
+    "page": 20
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "1989",
+   "pdf": "1989195",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and the Scheduled Tribes (Prevention of Atrocities) Act,",
+   "after": "15.2.7 South Asia Collective, a group",
+   "where": {
+    "heading": "legislation-1",
+    "paragraph": "15.2.6",
+    "section": "Country information",
+    "page": 66
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "16.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Act (CAA) came into law in December 2019 .",
+   "after": "8.3.2 Human Rights Watch (HRW), reporting",
+   "before_pdf": "Act (CAA) came into law in December 2019",
+   "where": {
+    "heading": "CAA",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 21
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 313,
+  "different": {
+   "12.3.6": "12.3.7",
+   "12.3.7": "12.3.8",
+   "12.3.8": "12.3.9",
+   "12.3.9": "12.3.10",
+   "12.3.10": "12.3.11",
+   "12.3.11": "12.3.12",
+   "12.4.3": "12.4.4",
+   "13.2.9": "13.2.10",
+   "13.2.10": "13.2.11",
+   "14.4.5": "13.4.5"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [
+   "3.1.1",
+   "3.1.2",
+   "3.1.3",
+   "3.1.4",
+   "10.1",
+   "12.3.5",
+   "13.2.8",
+   "15.3.7",
+   "17.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

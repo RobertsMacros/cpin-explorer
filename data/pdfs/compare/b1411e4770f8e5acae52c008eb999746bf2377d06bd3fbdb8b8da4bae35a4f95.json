@@ -1,0 +1,331 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "honduras/country-policy-and-information-note-gangs-honduras-february-2026-accessible",
+ "pdf_sha256": "b1411e4770f8e5acae52c008eb999746bf2377d06bd3fbdb8b8da4bae35a4f95",
+ "body_sha256": "f47b04adf127e93974cbb4f81cfc00eb6bc092f6989a4bf57c89af76dd8174c6",
+ "words": {
+  "web": 37185,
+  "pdf": 37188
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 37,
+   "pdf_words": 40,
+   "share": 0.001035,
+   "passages": 6,
+   "sizes": {
+    "spelling": 1,
+    "passage": 6
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 37,
+    "pdf_words": 40
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 6,
+    "web_words": 36,
+    "pdf_words": 39
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "February 2026",
+   "pdf": "2.0",
+   "pdf_date": "February 2026"
+  },
+  "section_updated": {
+   "web": [
+    "13 January 2026"
+   ],
+   "pdf": [
+    "13 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 426,
+   "pdf": 426,
+   "pdf_raw": 426,
+   "differ": false
+  },
+  "pictures": {
+   "web": 7,
+   "pdf": 7
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 142,
+   "pdf": 66
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 4,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ACLED, Violence has gone down during Xiomara Castro’s term ..., 17 November 2025",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "during Xiomara Castro’s term ..., 17 November 2025",
+   "after": "Contra Corriente, ... Arbitrary Arrests, Abuses and 49 Cases",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 22
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Contra Corriente, Violence on the streets of San Pedro Sula ..., 10 June 2024",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "streets of San Pedro Sula ..., 10 June 2024",
+   "after": "UN OHCHR, Situation of human rights in Honduras,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 21
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ACLED, Violence has gone down during Xiomara Castro’s term ..., 17 November 2025",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "criminal groups operate in Honduras, 4 September 2025",
+   "after": "Migration & Asylum Lab, Honduras Country Conditions Bulletin (page",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 56
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2024\nInSight Crime, Honduras Doubles Down on Flawed Mano Dura Strategy, 25 June",
+   "web_words": 0,
+   "pdf_words": 13,
+   "before": "Crime, Security Concerns Persist Despite Indictments ..., 5 February",
+   "after": "2024\nInSight Crime, Honduras profile, 6 September 2024",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 61
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Contra Corriente, ... Arbitrary Arrests, Abuses and 49 Cases Prosecuted, 24 February 2023",
+   "pdf": "",
+   "web_words": 12,
+   "pdf_words": 0,
+   "before": "Abuses and 49 Cases Prosecuted, 24 February 2023",
+   "after": "InSight Crime, ... Anti-Gang Crackdown Targets Only One",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Honduras Makes Few Advances Against Crime ..., 5 June 2023\nInSight Crime,",
+   "pdf": "",
+   "web_words": 11,
+   "pdf_words": 0,
+   "before": "Advances Against Crime ..., 5 June 2023\nInSight Crime,",
+   "after": "Security Concerns Persist Despite Indictments ..., 5 February 2024",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "19.1.11",
+    "section": "Version control and feedback",
+    "page": 24
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "prison",
+   "pdf": "prisons",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "complete impunity ... Nothing has changed.’\n9. Gangs in",
+   "after": "9.1.1 In June 2023, InSight Crime",
+   "where": {
+    "heading": "gangs-in-prison",
+    "paragraph": "8.6.6",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.5",
+   "pdf": "3.1.15",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and girls, Informants, witnesses and those resisting gangs)",
+   "after": "Each case will need to be considered on",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.5",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.6",
+   "pdf": "3.1.16",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "demonstrate a risk of persecution or serious harm.",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.6",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 434,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "3.1.5",
+   "3.1.6"
+  ],
+  "unconfirmed": []
+ }
+}

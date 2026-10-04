@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 23,
+ "paragraphs": 136,
+ "list_items": 8,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 33,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance China: Christians",
+ "cover_version": "2.0",
+ "cover_date": "March 2016",
+ "pdf_sha256": "cdf1f718813e03cbf97faddbc9b3702adb8f7db84f7f684dc6e6b28b35b09adb",
+ "images": []
+}

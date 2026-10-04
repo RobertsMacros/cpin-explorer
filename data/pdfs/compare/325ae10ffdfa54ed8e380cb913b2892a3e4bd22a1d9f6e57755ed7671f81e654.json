@@ -1,0 +1,814 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-medical-treatment-and-healthcare-china-july-2022-accessible",
+ "pdf_sha256": "325ae10ffdfa54ed8e380cb913b2892a3e4bd22a1d9f6e57755ed7671f81e654",
+ "body_sha256": "ec5b339d9c15927fa8aabdadd69a8bfe1adfe5a3870d8501882f7e80b5ca618f",
+ "words": {
+  "web": 18590,
+  "pdf": 18671
+ },
+ "summary": {
+  "wording": {
+   "differences": 12,
+   "web_words": 9,
+   "pdf_words": 63,
+   "share": 0.001932,
+   "passages": 9,
+   "sizes": {
+    "passage": 9,
+    "number": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 12,
+    "web_words": 9,
+    "pdf_words": 63
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 5,
+    "pdf_words": 54
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 7,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 9,
+    "web_words": 0,
+    "pdf_words": 9
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 7,
+    "pdf_words": 0
+   },
+   "footnote": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 29
+   },
+   "heading": {
+    "differences": 8,
+    "web_words": 9,
+    "pdf_words": 34
+   },
+   "list marker": {
+    "differences": 9,
+    "web_words": 0,
+    "pdf_words": 9
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 5,
+    "pdf_words": 54
+   }
+  },
+  "ours": {
+   "differences": 9,
+   "web_words": 36,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 12,
+   "web_words": 15,
+   "pdf_words": 27
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2022",
+   "pdf": "1.0",
+   "pdf_date": "July 2022"
+  },
+  "section_updated": {
+   "web": [
+    "20 May 2022",
+    "27 May 2022",
+    "16 May 2022",
+    "18 May 2022",
+    "26 May 2022",
+    "24 March 2022",
+    "27 May 2022",
+    "5 January 2022",
+    "11 January 2022",
+    "24 March 2022",
+    "13 January 2022",
+    "24 March 2022",
+    "20 May 2022",
+    "23 May 2022",
+    "24 March 2022",
+    "24 March 2022",
+    "18 January 2022",
+    "24 February 2022",
+    "25 March 2022",
+    "18 May 2022",
+    "17 January 2022",
+    "24 March 2022",
+    "26 May 2022",
+    "4 February 2022"
+   ],
+   "pdf": [
+    "20 May 2022",
+    "27 May 2022",
+    "16 May 2022",
+    "18 May 2022",
+    "26 May 2022",
+    "24 March 2022",
+    "27 May 2022",
+    "5 January 2022",
+    "11 January 2022",
+    "24 March 2022",
+    "13 January 2022",
+    "24 March 2022",
+    "20 May 2022",
+    "23 May 2022",
+    "24 March 2022",
+    "24 March 2022",
+    "24 May 2022",
+    "18 January 2022",
+    "24 February 2022",
+    "25 March 2022",
+    "18 May 2022",
+    "17 January 2022",
+    "24 March 2022",
+    "26 May 2022",
+    "4 February 2022"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 0,
+   "pdf": 2,
+   "web_notices": 0,
+   "pdf_notices": 2
+  },
+  "footnotes": {
+   "web": 339,
+   "pdf": 343,
+   "pdf_raw": 343,
+   "differ": true
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 92,
+   "pdf": 65
+  },
+  "drafts": [
+   "footnote count differs: web 339, PDF 343"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 5,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "B of General Paediatrics’, no date\nWest China Women’s and Children’s Hospital, ‘Division",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "China Women’s and Children’s Hospital, ‘Division",
+   "after": "of Pediatric Hematology...’, no date\nBiomedcentral, ‘COVID-19",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "25.2.2",
+    "section": "Version control",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1. Sources and prices\n1.1 MedCOI\n1.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "MedCOI\nSection 1 updated: 20 May 2022\n1.",
+   "after": "1.1 This note makes extensive use of",
+   "before_pdf": "website.\nOverview\nSection 1 updated: 20 May 2022",
+   "where": {
+    "heading": "medcoi",
+    "paragraph": "1.1.1",
+    "section": "1. Sources and prices",
+    "page": 6
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9. Ear, nose and throat conditions (ENT)\n9.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "ENT)\nSection 9 updated: 11 January 2022\n9.",
+   "after": "1.1 The West China Hospital of Sichuan",
+   "before_pdf": "Beijing Clinic).\nSection 9 updated: 11 January 2022",
+   "where": {
+    "heading": "ear-nose-and-throat-conditions-ent",
+    "paragraph": "9.1.1",
+    "section": "9. Ear, nose and throat conditions (ENT)",
+    "page": 31
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "25. Mental healthcare\n25.1 Overview\n25.",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Overview\nSection 25 updated: 4 February 2022\n25.",
+   "after": "1.1 The Consortium Psychiatricum 2020 report, Promotion",
+   "before_pdf": "of ageing.’\nSection 25 updated: 4 February 2022",
+   "where": {
+    "heading": "overview-1",
+    "paragraph": "25.1.1",
+    "section": "25. Mental healthcare",
+    "page": 46
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5. Cancer\n5.1 General\n5.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "General\nSection 5 updated: 26 May 2022\n5.",
+   "after": "1.1 The Zhejiang Cancer Hospital in Hangzhou",
+   "before_pdf": "of section\nSection 5 updated: 26 May 2022",
+   "where": {
+    "heading": "general",
+    "paragraph": "5.1.1",
+    "section": "5. Cancer",
+    "page": 19
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "7. Dental treatment and conditions",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "and aortic dissection, and other heart disease surgeries.’",
+   "after": "Section 7 updated: 27 May 2022\n7.1.",
+   "where": {
+    "heading": "dental-treatment-and-conditions",
+    "paragraph": "6.2.1",
+    "section": "7. Dental treatment and conditions",
+    "page": 29
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7. Dental treatment and conditions\n7.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "conditions\nSection 7 updated: 27 May 2022\n7.",
+   "after": "1.1 The BMC Oral Health November 2020",
+   "before_pdf": "disease surgeries.’\nSection 7 updated: 27 May 2022",
+   "where": {
+    "heading": "dental-treatment-and-conditions",
+    "paragraph": "7.1.1",
+    "section": "7. Dental treatment and conditions",
+    "page": 29
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "CFIHPC, ‘China’, 5 June 2020",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "5 June 2020\nCFIHPC, ‘China’, 5 June 2020",
+   "after": "OECD Data, ‘Doctors’, 2022\nOECD Data, ‘Nurses’, 2022",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "25.2.2",
+    "section": "Version control",
+    "page": 10
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "WCHSU, ‘Liver Surgery’, no date",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Surgery’, no date\nWCHSU, ‘Liver Surgery’, no date",
+   "after": "The Lancet, ‘The hepatitis B epidemic in China",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "25.2.2",
+    "section": "Version control",
+    "page": 38
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "13. Gynaecology and obstetrics",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Medical Beijing Clinic)\nLansoprazole (Raffles Medical Beijing Clinic).",
+   "after": "Section 13 updated: 20 May 2022\n13.1.",
+   "where": {
+    "heading": "gynaecology-and-obstetrics",
+    "paragraph": "12.1.1",
+    "section": "13. Gynaecology and obstetrics",
+    "page": 28
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "13. Gynaecology and obstetrics\n13.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "obstetrics\nSection 13 updated: 20 May 2022\n13.",
+   "after": "1.1 The OASIS International Hospital website stated",
+   "before_pdf": "Beijing Clinic).\nSection 13 updated: 20 May 2022",
+   "where": {
+    "heading": "gynaecology-and-obstetrics",
+    "paragraph": "13.1.1",
+    "section": "13. Gynaecology and obstetrics",
+    "page": 34
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2020\nMedCOI, 4 November",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "2021\nMedCOI, 6 October 2020\nMedCOI, 28 May",
+   "after": "2020\nSixth Tone, ‘China’s Rare Hospices Help",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "25.2.2",
+    "section": "Version control",
+    "page": 39
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "5. Cancer\n5.1 General",
+   "pdf": "Official – sensitive: Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: End of section",
+   "web_words": 5,
+   "pdf_words": 27,
+   "before": "Coronavirus Disease (COVID-19) Dashboard With Vaccination Data",
+   "after": "Section 5 updated: 26 May 2022\n5.1.",
+   "where": {
+    "heading": "Cancer",
+    "paragraph": "4.1.7",
+    "section": "5. Cancer",
+    "page": 19
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Official – sensitive: Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: End of section",
+   "web_words": 0,
+   "pdf_words": 27,
+   "before": "version 1.0\nvalid from 5 July 2022",
+   "after": "Changes from last version of this note\nFirst",
+   "where": {
+    "heading": "changes-from-last-version-of-this-note",
+    "paragraph": "25.2.2",
+    "section": "Version control",
+    "page": 58
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "http://www.refworld.org/docid/48493f7f2.html) [",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "as set out in the Common EU [European](",
+   "after": "Union] Guidelines for Processing Country of Origin Information (",
+   "before_pdf": "as set out in the Common EU [European",
+   "where": {
+    "heading": "Country_information",
+    "paragraph": null,
+    "section": "Preface",
+    "page": 2
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "protocol to remove tumor maximally and prevent recurrence:",
+   "after": "Surgery: to remove tumor maximally while protecting functional",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to remove tumor maximally while protecting functional area.",
+   "after": "Intra-operative Radiotherapy (IORT): local radiotherapy to kill",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "kill the residual cancer cells and prevent recurrence.",
+   "after": "Intra-operative Chemotherapy (IOCT): local chemotherapy to kill",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "kill the residual cancer cells and prevent recurrence.",
+   "after": "Photon Dynamic Treatment (PDT): applied to highly malignant",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "lessen suffering, prolong survival, and improve life quality:",
+   "after": "Targeted chemotherapy: based on genetic analysis, specific chemotherapy",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "chemotherapy medicine to inhibit/kill tumor cell growth.",
+   "after": "DC-CIK: CIK (Cytokine Inductive Killer-cell) and",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and DC (Dendritic Cell) can fight tumor cells.",
+   "after": "High dose vitamin C (IVC protocol): studies and",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "cell growth and improve patient’s overall condition.",
+   "after": "Stem Cell Treatment: inhibit tumor cell growth.\nTraditional",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "condition.\nStem Cell Treatment: inhibit tumor cell growth.",
+   "after": "Traditional Chinese Medicine (TCM): improving the patient’s",
+   "before_pdf": "4. Stem Cell Treatment: inhibit tumor cell growth.",
+   "where": {
+    "heading": "brain-cancer",
+    "paragraph": "5.5.1",
+    "section": "5. Cancer",
+    "page": 23
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "1. Sources and prices\n1.1 MedCOI",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "s pages of the gov.uk website.\nOverview",
+   "after": "Section 1 updated: 20 May 2022\n1.1.",
+   "where": {
+    "heading": "sources-and-prices",
+    "paragraph": null,
+    "section": "1. Sources and prices",
+    "page": 6
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "9. Ear, nose and throat conditions (ENT)",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "Medical Beijing Clinic)\nGlibencamide (Raffles Medical Beijing Clinic).",
+   "after": "Section 9 updated: 11 January 2022\n9.1.",
+   "where": {
+    "heading": "ear-nose-and-throat-conditions-ent",
+    "paragraph": "8.1.2",
+    "section": "9. Ear, nose and throat conditions (ENT)",
+    "page": 28
+   }
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Section 3 updated: 16 May 2022",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "and healthcare\n3.1 Paediatric hospital care services",
+   "after": "3.1.1 The Children’s Hospital Zhejiang",
+   "where": {
+    "heading": "paediatric-hospital-care-services",
+    "paragraph": "2.7.3",
+    "section": "3. Paediatric diseases and healthcare",
+    "page": 15
+   }
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Section 15 updated: 24 March 2022",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "15. Liver diseases\n15.1 Liver disease surgery",
+   "after": "15.1.1 The WCHSU website stated the",
+   "where": {
+    "heading": "liver-disease-surgery",
+    "paragraph": "14.1.5",
+    "section": "15. Liver diseases",
+    "page": 37
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "25. Mental healthcare\n25.1 Overview",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "knowledge and ideas in the area of ageing.’",
+   "after": "Section 25 updated: 4 February 2022\n25.1.",
+   "where": {
+    "heading": "mental-healthcare",
+    "paragraph": "24.1.4",
+    "section": "25. Mental healthcare",
+    "page": 46
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "9",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "health information technology, clinical guidelines, and health equity.’",
+   "after": "2.3.3 The CFIHPC report also stated: ‘",
+   "where": {
+    "heading": "organisation-and-provision-of-healthcare",
+    "paragraph": "2.3.2",
+    "section": "2. The healthcare system",
+    "page": 9
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "38",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "pyemia, toxemia, as well as other immunological diseases.’",
+   "after": "3.4 Paediatric cancer treatment\n3.4.1",
+   "where": {
+    "heading": "paediatric-nephrology",
+    "paragraph": "3.3.1",
+    "section": "3. Paediatric diseases and healthcare",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "140",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "hepatectomy and auto-liver transplantation for hydatid disease.’",
+   "after": "15.2.2 The WCHSU website stated:\nDCD [",
+   "where": {
+    "heading": "liver-transplants",
+    "paragraph": "15.2.1",
+    "section": "15. Liver diseases",
+    "page": 38
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "146.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Hospital, Beijing)\nSevelamer (China-Japan Friendship Hospital, Beijing)",
+   "after": "Section 17 updated: 24 May 2022\n17. Palliative",
+   "before_pdf": "Hospital, Beijing)\nSevelamer (China-Japan Friendship Hospital, Beijing).",
+   "where": {
+    "heading": "kidney-diseases",
+    "paragraph": "16.1.2",
+    "section": "16. Kidney diseases",
+    "page": 22
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 152,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "2.1.1",
+   "2.1.2"
+  ],
+  "unconfirmed": []
+ }
+}

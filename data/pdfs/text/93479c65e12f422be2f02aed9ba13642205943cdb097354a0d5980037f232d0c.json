@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 49,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 469,
+ "list_items": 30,
+ "tables": 1,
+ "figures": 2,
+ "footnotes": 130,
+ "bookmarks": 36,
+ "warnings": [
+  "footnotes with no mark found in the text: 6"
+ ],
+ "figure_pages": {
+  "01833c9a0563949c1e99e467242d769c2f0d838bfe225a60b73d27f9625f9c4b.png": 12,
+  "fabf26d76c75ad3f009e1758f77e9661cf662b56bbefc2e58228adbd08391802.jpg": 13
+ },
+ "figure_sizes": {
+  "01833c9a0563949c1e99e467242d769c2f0d838bfe225a60b73d27f9625f9c4b.png": [
+   261,
+   179
+  ],
+  "fabf26d76c75ad3f009e1758f77e9661cf662b56bbefc2e58228adbd08391802.jpg": [
+   1041,
+   710
+  ]
+ },
+ "figure_text": {
+  "01833c9a0563949c1e99e467242d769c2f0d838bfe225a60b73d27f9625f9c4b.png": 1,
+  "fabf26d76c75ad3f009e1758f77e9661cf662b56bbefc2e58228adbd08391802.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note China: Hong Kong protests",
+ "cover_version": "1.0",
+ "cover_date": "February 2020",
+ "pdf_sha256": "93479c65e12f422be2f02aed9ba13642205943cdb097354a0d5980037f232d0c",
+ "images": [
+  "01833c9a0563949c1e99e467242d769c2f0d838bfe225a60b73d27f9625f9c4b.png",
+  "fabf26d76c75ad3f009e1758f77e9661cf662b56bbefc2e58228adbd08391802.jpg"
+ ]
+}

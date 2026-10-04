@@ -1,0 +1,155 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "zimbabwe/country-policy-and-information-note-sexual-orientation-gender-identity-and-expression-zimbabwe-july-2024-accessible",
+ "pdf_sha256": "3db58b21bd66e1b001c9c172f53f2ae00e8f97ee3a8ad3621750a4218b359769",
+ "body_sha256": "5f5e3dca341e8291227f2e2fb2818b1d41f63e90edeace209780d330ec8374d3",
+ "words": {
+  "web": 13256,
+  "pdf": 13256
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "July 2024",
+   "pdf": "5.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [
+    "01 July 2024",
+    "01 July 2024",
+    "01 July 2024",
+    "03 July 2024",
+    "04 July 2024",
+    "08 July 2024",
+    "08 July 2024",
+    "08 July 2024",
+    "08 July 2024"
+   ],
+   "pdf": [
+    "01 July 2024",
+    "01 July 2024",
+    "01 July 2024",
+    "03 July 2024",
+    "04 July 2024",
+    "08 July 2024",
+    "08 July 2024",
+    "08 July 2024",
+    "08 July 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 82,
+   "pdf": 82,
+   "pdf_raw": 82,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 44,
+   "pdf": 40
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 125,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "13.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

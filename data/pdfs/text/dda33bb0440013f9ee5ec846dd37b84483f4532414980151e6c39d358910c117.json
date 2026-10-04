@@ -1,0 +1,92 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 54,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 68,
+ "paragraphs": 370,
+ "list_items": 64,
+ "tables": 0,
+ "figures": 9,
+ "footnotes": 53,
+ "bookmarks": 64,
+ "warnings": [
+  "footnotes with no mark found in the text: 18, 26, 29, 38"
+ ],
+ "figure_pages": {
+  "dbd8f39c17029f1e3adf6909d3dd6748c72791e510cd4da402237c2cbf9ef03d.jpg": 27,
+  "6033e6cb41077bdb2d954fadb9199afbed20be2311031062217c7db671b193b0.jpg": 30,
+  "a87cda35fc31d7884d7c80b3421dde9b4751a24906b67e1ab13bd4b64e8e09a6.jpg": 32,
+  "88813dbbda923c61224e4dc01d93c4f16dd0059d470e52c621aafee6c0128e10.jpg": 35,
+  "4f8afb265075477dbb7a12445f53ac527b90d9fbf5edbe81ca1207b4eba5fa97.png": 46,
+  "bef3203a2ad486606bb8f45fa4c8039b2d97bfc79dedf5516736e98e65ef3890.png": 47,
+  "7cefa0a6121dcbcfb8e95053da2cc8c0e83374a5cac5e1e2b8da4727360730be.jpg": 48,
+  "df80e1ff5f3a1d3bf2d84ffc19586956d76664254dfab5b76faed5d99593a801.png": 50,
+  "6bd6aaf28a6b68dc98703caa4355e6bef3b665538dce43063633ea0a91ee05d7.png": 50
+ },
+ "figure_sizes": {
+  "dbd8f39c17029f1e3adf6909d3dd6748c72791e510cd4da402237c2cbf9ef03d.jpg": [
+   828,
+   526
+  ],
+  "6033e6cb41077bdb2d954fadb9199afbed20be2311031062217c7db671b193b0.jpg": [
+   678,
+   419
+  ],
+  "a87cda35fc31d7884d7c80b3421dde9b4751a24906b67e1ab13bd4b64e8e09a6.jpg": [
+   919,
+   711
+  ],
+  "88813dbbda923c61224e4dc01d93c4f16dd0059d470e52c621aafee6c0128e10.jpg": [
+   511,
+   717
+  ],
+  "4f8afb265075477dbb7a12445f53ac527b90d9fbf5edbe81ca1207b4eba5fa97.png": [
+   1055,
+   1130
+  ],
+  "bef3203a2ad486606bb8f45fa4c8039b2d97bfc79dedf5516736e98e65ef3890.png": [
+   1018,
+   1230
+  ],
+  "7cefa0a6121dcbcfb8e95053da2cc8c0e83374a5cac5e1e2b8da4727360730be.jpg": [
+   1026,
+   918
+  ],
+  "df80e1ff5f3a1d3bf2d84ffc19586956d76664254dfab5b76faed5d99593a801.png": [
+   301,
+   189
+  ],
+  "6bd6aaf28a6b68dc98703caa4355e6bef3b665538dce43063633ea0a91ee05d7.png": [
+   301,
+   189
+  ]
+ },
+ "figure_text": {
+  "dbd8f39c17029f1e3adf6909d3dd6748c72791e510cd4da402237c2cbf9ef03d.jpg": 3,
+  "6033e6cb41077bdb2d954fadb9199afbed20be2311031062217c7db671b193b0.jpg": 1,
+  "a87cda35fc31d7884d7c80b3421dde9b4751a24906b67e1ab13bd4b64e8e09a6.jpg": 2,
+  "88813dbbda923c61224e4dc01d93c4f16dd0059d470e52c621aafee6c0128e10.jpg": 1,
+  "4f8afb265075477dbb7a12445f53ac527b90d9fbf5edbe81ca1207b4eba5fa97.png": 0,
+  "bef3203a2ad486606bb8f45fa4c8039b2d97bfc79dedf5516736e98e65ef3890.png": 6,
+  "7cefa0a6121dcbcfb8e95053da2cc8c0e83374a5cac5e1e2b8da4727360730be.jpg": 0,
+  "df80e1ff5f3a1d3bf2d84ffc19586956d76664254dfab5b76faed5d99593a801.png": 104,
+  "6bd6aaf28a6b68dc98703caa4355e6bef3b665538dce43063633ea0a91ee05d7.png": 104
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Iraq: Internal relocation, civil documentation and returns",
+ "cover_version": "13.0",
+ "cover_date": "July 2022",
+ "pdf_sha256": "dda33bb0440013f9ee5ec846dd37b84483f4532414980151e6c39d358910c117",
+ "images": [
+  "4f8afb265075477dbb7a12445f53ac527b90d9fbf5edbe81ca1207b4eba5fa97.png",
+  "6033e6cb41077bdb2d954fadb9199afbed20be2311031062217c7db671b193b0.jpg",
+  "6bd6aaf28a6b68dc98703caa4355e6bef3b665538dce43063633ea0a91ee05d7.png",
+  "7cefa0a6121dcbcfb8e95053da2cc8c0e83374a5cac5e1e2b8da4727360730be.jpg",
+  "88813dbbda923c61224e4dc01d93c4f16dd0059d470e52c621aafee6c0128e10.jpg",
+  "a87cda35fc31d7884d7c80b3421dde9b4751a24906b67e1ab13bd4b64e8e09a6.jpg",
+  "bef3203a2ad486606bb8f45fa4c8039b2d97bfc79dedf5516736e98e65ef3890.png",
+  "dbd8f39c17029f1e3adf6909d3dd6748c72791e510cd4da402237c2cbf9ef03d.jpg",
+  "df80e1ff5f3a1d3bf2d84ffc19586956d76664254dfab5b76faed5d99593a801.png"
+ ]
+}

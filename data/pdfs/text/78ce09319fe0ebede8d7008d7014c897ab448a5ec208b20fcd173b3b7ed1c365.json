@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 77,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 83,
+ "paragraphs": 633,
+ "list_items": 70,
+ "tables": 6,
+ "figures": 2,
+ "footnotes": 258,
+ "bookmarks": 27,
+ "warnings": [
+  "footnotes with no mark found in the text: 6, 209, 220, 233"
+ ],
+ "figure_pages": {
+  "68478ed844bb43706ce108b994c9dd04dac15e29160bfcf9841f69b8a19da481.png": 10,
+  "92d5a256823a207210b1d691bf21b58a0a2e1c4f73322c43a68adca09fa0d7d3.jpg": 13
+ },
+ "figure_sizes": {
+  "68478ed844bb43706ce108b994c9dd04dac15e29160bfcf9841f69b8a19da481.png": [
+   471,
+   277
+  ],
+  "92d5a256823a207210b1d691bf21b58a0a2e1c4f73322c43a68adca09fa0d7d3.jpg": [
+   834,
+   739
+  ]
+ },
+ "figure_text": {
+  "68478ed844bb43706ce108b994c9dd04dac15e29160bfcf9841f69b8a19da481.png": 1,
+  "92d5a256823a207210b1d691bf21b58a0a2e1c4f73322c43a68adca09fa0d7d3.jpg": 0
+ },
+ "first_bookmark_page": 7,
+ "cover_title": "Country Policy and Information Note Ethiopia: Background information, including internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "78ce09319fe0ebede8d7008d7014c897ab448a5ec208b20fcd173b3b7ed1c365",
+ "images": [
+  "68478ed844bb43706ce108b994c9dd04dac15e29160bfcf9841f69b8a19da481.png",
+  "92d5a256823a207210b1d691bf21b58a0a2e1c4f73322c43a68adca09fa0d7d3.jpg"
+ ]
+}

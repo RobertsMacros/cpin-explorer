@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-women-fearing-gender-based-violence-turkey-july-2025-accessible",
+ "pdf_sha256": "b11f7605150edefd6be9330bd7cf09581056e52bab6d7248826a13acb0ce4379",
+ "body_sha256": "e93a26143a10109e24f016bb0f998f9dbd8bcb691d9f2c693370783257eeb124",
+ "figures": [
+  {
+   "image": "8654990bbf2884850953f7bf79b63e6059ade7d1d8f6f1809b374f25d8ac3bd1.png",
+   "tag": "p",
+   "index": 189,
+   "key": "912thesameturkstatdataprovidedthefollowinggraphdetailingthe5",
+   "page": 27
+  },
+  {
+   "image": "9a8db9c4184a074e346283154ca2a685d3d700a2dc2c011dde39d4202bbd6fd9.jpg",
+   "tag": "p",
+   "index": 208,
+   "key": "932theturkstatstatisticsonfamily2023themostrecentavailableda",
+   "page": 29
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 2,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

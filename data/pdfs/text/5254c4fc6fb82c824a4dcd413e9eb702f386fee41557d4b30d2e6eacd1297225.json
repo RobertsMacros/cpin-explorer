@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 29,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 41,
+ "paragraphs": 161,
+ "list_items": 33,
+ "tables": 0,
+ "figures": 4,
+ "footnotes": 89,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "a9c3c3b8881a022456ecbd7b59a81665a6247d5ded96deefb4d4f20b6ef02a09.png": 10,
+  "ac89834aef46e537ef4d2ba7a085e1c30034c21253be261445dbcdbf444b0e72.png": 13,
+  "e6d84e0691c13c6c64c82b9763392d8fe7259fce8027456ed2d19b41d0753604.png": 13,
+  "7eb13f1d88b07e5dbfe4f7462e734d6d32ad0f330e84e4db06950e666a34f9c7.png": 15
+ },
+ "figure_sizes": {
+  "a9c3c3b8881a022456ecbd7b59a81665a6247d5ded96deefb4d4f20b6ef02a09.png": [
+   852,
+   322
+  ],
+  "ac89834aef46e537ef4d2ba7a085e1c30034c21253be261445dbcdbf444b0e72.png": [
+   919,
+   259
+  ],
+  "e6d84e0691c13c6c64c82b9763392d8fe7259fce8027456ed2d19b41d0753604.png": [
+   914,
+   260
+  ],
+  "7eb13f1d88b07e5dbfe4f7462e734d6d32ad0f330e84e4db06950e666a34f9c7.png": [
+   799,
+   351
+  ]
+ },
+ "figure_text": {
+  "a9c3c3b8881a022456ecbd7b59a81665a6247d5ded96deefb4d4f20b6ef02a09.png": 624,
+  "ac89834aef46e537ef4d2ba7a085e1c30034c21253be261445dbcdbf444b0e72.png": 0,
+  "e6d84e0691c13c6c64c82b9763392d8fe7259fce8027456ed2d19b41d0753604.png": 31,
+  "7eb13f1d88b07e5dbfe4f7462e734d6d32ad0f330e84e4db06950e666a34f9c7.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Sri Lanka: Minority religious groups",
+ "cover_version": "1.0",
+ "cover_date": "March 2018",
+ "pdf_sha256": "5254c4fc6fb82c824a4dcd413e9eb702f386fee41557d4b30d2e6eacd1297225",
+ "images": [
+  "7eb13f1d88b07e5dbfe4f7462e734d6d32ad0f330e84e4db06950e666a34f9c7.png",
+  "a9c3c3b8881a022456ecbd7b59a81665a6247d5ded96deefb4d4f20b6ef02a09.png",
+  "ac89834aef46e537ef4d2ba7a085e1c30034c21253be261445dbcdbf444b0e72.png",
+  "e6d84e0691c13c6c64c82b9763392d8fe7259fce8027456ed2d19b41d0753604.png"
+ ]
+}

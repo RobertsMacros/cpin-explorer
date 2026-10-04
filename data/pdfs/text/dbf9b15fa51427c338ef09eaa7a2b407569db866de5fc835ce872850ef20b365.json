@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 32,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 40,
+ "paragraphs": 201,
+ "list_items": 29,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 87,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Journalists, publishers and internet bloggers",
+ "cover_version": "1.0",
+ "cover_date": "July 2017",
+ "pdf_sha256": "dbf9b15fa51427c338ef09eaa7a2b407569db866de5fc835ce872850ef20b365",
+ "images": []
+}

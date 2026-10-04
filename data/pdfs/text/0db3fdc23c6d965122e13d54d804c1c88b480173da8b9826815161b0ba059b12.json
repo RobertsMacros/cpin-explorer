@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 30,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 204,
+ "list_items": 12,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 39,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Ukraine: Fear of organised criminal gangs",
+ "cover_version": "2.0",
+ "cover_date": "May 2016",
+ "pdf_sha256": "0db3fdc23c6d965122e13d54d804c1c88b480173da8b9826815161b0ba059b12",
+ "images": []
+}

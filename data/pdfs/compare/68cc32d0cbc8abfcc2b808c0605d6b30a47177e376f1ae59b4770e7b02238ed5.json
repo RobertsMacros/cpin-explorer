@@ -1,0 +1,272 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "egypt/country-policy-and-information-note-opposition-to-the-state-egypt-march-2026-accessible",
+ "pdf_sha256": "68cc32d0cbc8abfcc2b808c0605d6b30a47177e376f1ae59b4770e7b02238ed5",
+ "body_sha256": "9fc4c2033f4c534aac773601278ed3d01188ad8db9fba3e3d9bda8a6b8d49b05",
+ "words": {
+  "web": 24747,
+  "pdf": 24756
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 7,
+   "share": 0.000162,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 1,
+   "words": 6
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 7
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 7
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "March 2026",
+   "pdf": "5.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "24 February 2026"
+   ],
+   "pdf": [
+    "24 February 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 172,
+   "pdf": 172,
+   "pdf_raw": 172,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 79,
+   "pdf": 43
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "adverse attention of the authorities.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "and whether the person has come to the",
+   "after": "3.1.2 Additional factors to consider for",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.2",
+    "section": "Assessment",
+    "page": 6
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "protesters],",
+   "pdf": "protestors],",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "shows him instructing embassy staff to “grab them [",
+   "after": "tie them up, drag them inside, and make",
+   "where": {
+    "heading": "transnational-repression",
+    "paragraph": "14.1.7",
+    "section": "Country information",
+    "page": 50
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.1 A",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and Refugee Status.\n3. Risk\n3.1.1",
+   "after": "person who is openly critical of the government",
+   "before_pdf": "Instruction, Assessing Credibility and Refugee Status.\n3. Risk",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.1",
+    "section": "Assessment",
+    "page": 6
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "10.1.4The",
+   "pdf": "10.1.4 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "spreading false news or joining a banned group.’",
+   "after": "same source stated:\nAt CFJ, we have consistently",
+   "where": {
+    "heading": "enforced-disappearance",
+    "paragraph": "10.1.4",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "JusticeEl",
+   "pdf": "Justice, El",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Cairo Institute for Human Rights Studies, Committee for",
+   "after": "Nadeem, Egyptian Commission for Human Rights\nJoint Submission",
+   "where": {
+    "heading": "dignity-adalah-cairo-institute-for-human-rights-studies-committee-for-justiceel-nadeem-egyptian-commission-for-human-rights",
+    "paragraph": "14.1.7",
+    "section": "Bibliography",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "13.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "legality of their detention.’\n13. Judicial governance\n13.",
+   "after": "Judicial system, due process and fair trial\n13.",
+   "before_pdf": "the legality of their detention.’\n13. Judicial governance",
+   "where": {
+    "heading": "judicial-system-due-process-and-fair-trial",
+    "paragraph": "12.1.5",
+    "section": "Country information",
+    "page": 45
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 170,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

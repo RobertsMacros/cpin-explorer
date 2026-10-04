@@ -1,0 +1,857 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-women-fearing-gender-based-violence-india-august-2025-accessible",
+ "pdf_sha256": "a5852e201a532d21c3e879f966a3cfbcc757bad88c890d25ebd85ba2853bcb9e",
+ "body_sha256": "1cd173734836614d187604bd54de8ef88a175d034d5528db1a64ae0ace368fa2",
+ "words": {
+  "web": 42188,
+  "pdf": 42265
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 10,
+   "pdf_words": 24,
+   "share": 0.000403,
+   "passages": 3,
+   "sizes": {
+    "passage": 3,
+    "word": 2,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 10,
+    "pdf_words": 24
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 16,
+    "web_words": 0,
+    "pdf_words": 16
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 16,
+    "web_words": 0,
+    "pdf_words": 16
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 7
+   },
+   "text": {
+    "differences": 5,
+    "web_words": 9,
+    "pdf_words": 23
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   }
+  },
+  "ours": {
+   "differences": 9,
+   "web_words": 18,
+   "pdf_words": 18
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 4,
+   "web_words": 0,
+   "pdf_words": 16
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "August 2025",
+   "pdf": "4.0",
+   "pdf_date": "August 2025"
+  },
+  "section_updated": {
+   "web": [
+    "18 August 2025"
+   ],
+   "pdf": [
+    "18 August 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 408,
+   "pdf": 408,
+   "pdf_raw": 408,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 14,
+   "pdf": 15
+  },
+  "headings": {
+   "web": 148,
+   "pdf": 55
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 6,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.8.8 The NCRB 2022 report provided statistics on other forms of",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "sexual harassment at the workplace.\n10.8.8",
+   "after": "violence and harassment against women across States and",
+   "before_pdf": "205 cases of sexual harassment at the workplace.",
+   "where": {
+    "heading": "other-forms-of-violence-discrimination-and-harassment",
+    "paragraph": "10.8.8",
+    "section": "Country information",
+    "page": 58
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "upward trajectory in female turnout clearly begins in 2009 ...’",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "of the program has not been conducted, the",
+   "after": "8.3.6 In regard to women’s",
+   "where": {
+    "heading": "political-participation",
+    "paragraph": "8.3.6",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Hyderabad, Telangana\nBangalore, Karnataka\nAhmedabad, Gujarat\nMumbai, Maharashtra",
+   "pdf": "10.",
+   "web_words": 8,
+   "pdf_words": 1,
+   "before": "Nadu\nCoimbatore, Tamil Nadu\nSurat, Gujarat\nPune, Maharashtra",
+   "after": "Kochi, Kerala\n9.1.3 India Today Group,",
+   "before_pdf": "Surat, Gujarat 9. Mumbai, Maharashtra\n5. Pune, Maharashtra",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "10.3.10 In",
+   "pdf": "10.3.10 On",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "way to a court hearing of her case.’",
+   "after": "14 August 2024, Al Jazeera reported:\nA 31-",
+   "where": {
+    "heading": "rape-sexual-violence",
+    "paragraph": "10.3.10",
+    "section": "Country information",
+    "page": 49
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "WSO/NSM)",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Nari Samata Manch [an Indian women rights group]",
+   "after": "in 2017 and involved 94 participants, including 11",
+   "before_pdf": "Nari Samata Manch [an Indian women rights group(",
+   "where": {
+    "heading": "fgm",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 51
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Governments,",
+   "pdf": "Governmentsl,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Empowerment Schemes 2025 Being Run by Central & State",
+   "after": "1 March 2023. Accessed: 2 May 2025\nShetty",
+   "where": {
+    "heading": "sarkari-yojana",
+    "paragraph": "12.1.17",
+    "section": "Bibliography",
+    "page": 91
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4\n1.2.5",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "relatives (see Prosecution, appeals and legal redress).\n4.",
+   "after": "9 The state offers support, including accommodation to",
+   "before_pdf": "his relatives (see Prosecution, appeals and legal redress).",
+   "where": {
+    "heading": "protection",
+    "paragraph": "4.9",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "victims receive appropriate protection. Some important cases include:",
+   "after": "Shiv Kumar v. Union of India (2010): This",
+   "where": {
+    "heading": "caselaw",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "be condemned and dealt with under the law.",
+   "after": "S.R. Batra v. Taruna Batra (2006): In",
+   "where": {
+    "heading": "caselaw",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "the interpretation of “shared household” under the Act.",
+   "after": "V.D. Bhanot v. Savita Bhanot (2012): The",
+   "where": {
+    "heading": "caselaw",
+    "paragraph": "7.3.1",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "The top 10 cities were ranked as follows:",
+   "after": "Kolkata, West Bengal\nChennai, Tamil Nadu\nCoimbatore, Tamil",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "5 areas ranked for positive gender attitudes were:",
+   "after": "Kerala\nUttarakhand\nTamil Nadu\nHimachal Pradesh\nMaharashtra\n9.",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "areas ranked for positive gender attitudes were:\nKerala",
+   "after": "Uttarakhand\nTamil Nadu\nHimachal Pradesh\nMaharashtra\n9.1.",
+   "before_pdf": "ranked for positive gender attitudes were:\n1. Kerala",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "ranked for positive gender attitudes were:\nKerala\nUttarakhand",
+   "after": "Tamil Nadu\nHimachal Pradesh\nMaharashtra\n9.1.4",
+   "before_pdf": "positive gender attitudes were:\n1. Kerala\n2. Uttarakhand",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "positive gender attitudes were:\nKerala\nUttarakhand\nTamil Nadu",
+   "after": "Himachal Pradesh\nMaharashtra\n9.1.4 The same",
+   "before_pdf": "were:\n1. Kerala\n2. Uttarakhand\n3. Tamil Nadu",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "attitudes were:\nKerala\nUttarakhand\nTamil Nadu\nHimachal Pradesh",
+   "after": "Maharashtra\n9.1.4 The same source reported",
+   "before_pdf": "2. Uttarakhand\n3. Tamil Nadu\n4. Himachal Pradesh",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.3",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "seven key directions from the Supreme Court were:",
+   "after": "Identify and appoint protection officers\nAppointment of protection",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Supreme Court were:\nIdentify and appoint protection officers",
+   "after": "Appointment of protection officers within 6 weeks\nAwareness",
+   "before_pdf": "Court were:\n1. Identify and appoint protection officers",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "officers\nAppointment of protection officers within 6 weeks",
+   "after": "Awareness about provisions for victims of domestic violence",
+   "before_pdf": "2. Appointment of protection officers within 6 weeks",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Awareness about provisions for victims of domestic violence",
+   "after": "Ensure implementation of section 11 of domestic violence",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "this Act are prepared and put in place)",
+   "after": "Free legal aid to victims of domestic violence",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Free legal aid to victims of domestic violence",
+   "after": "Role of member secretaries at state, district levels",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Role of member secretaries at state, district levels",
+   "after": "Identify, notify and make shelter homes more accessible",
+   "where": {
+    "heading": "state-support",
+    "paragraph": "11.5.21",
+    "section": "Country information",
+    "page": 77
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Cases sent for trial\nCases convicted\nCases acquitted",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "CPIT)\nCrime\nCases pending trial from previous year",
+   "after": "Murder with rape/gang rape\n1093\n240\n43",
+   "before_pdf": "for trial convicted acquitted trial from\nprevious year",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Cases sent for trial\nCases convicted\nCases acquitted",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "by CPIT):\nCrime\nCases pending from previous year",
+   "after": "Rape of woman\n12316\n2346\n442\n591\nKidnapping &",
+   "before_pdf": "pending for trial convicted acquitted from\nprevious year",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.7",
+    "section": "Country information",
+    "page": 67
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2636",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "recorded the below figures\nCases pending from previous",
+   "after": "year 2021\n2636\nTotal cases sent for trial",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.5",
+    "section": "Country information",
+    "page": 64
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2636",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "below figures\nCases pending from previous year 2021",
+   "after": "Total cases sent for trial 2022\n3072\nCases",
+   "before_pdf": "figures\nCases pending from previous 2636 year 2021",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.5",
+    "section": "Country information",
+    "page": 66
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Cases sent Cases Cases",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "the below figures (table by CPIT)\nCrime\nCases",
+   "after": "pending trial from previous year\nCases sent for",
+   "before_pdf": "the below figures (table by CPIT)\nCrime Cases",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": 64
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "for trial convicted acquitted",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "below figures (table by CPIT)\nCrime\nCases pending",
+   "after": "trial from previous year\nCases sent for trial",
+   "before_pdf": "CPIT)\nCrime Cases Cases sent Cases Cases pending",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Cases sent Cases Cases",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "the below statistics (table by CPIT):\nCrime\nCases",
+   "after": "pending from previous year\nCases sent for trial",
+   "before_pdf": "the below statistics (table by CPIT):\nCrime Cases",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.7",
+    "section": "Country information",
+    "page": 64
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "for trial convicted acquitted",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "below statistics (table by CPIT):\nCrime\nCases pending",
+   "after": "from previous year\nCases sent for trial\nCases",
+   "before_pdf": "CPIT):\nCrime Cases Cases sent Cases Cases pending",
+   "where": {
+    "heading": "crime-statistics",
+    "paragraph": "11.3.7",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "India.",
+   "pdf": "India378.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "found on the website for the Government of",
+   "after": "11.6.2 The website Sarkari Yojana also",
+   "where": {
+    "heading": "social-welfare-schemes",
+    "paragraph": "11.6.1",
+    "section": "Country information",
+    "page": 80
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "6. Hyderabad, Telangana\n2.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "cities were ranked as follows:\nKolkata, West Bengal",
+   "after": "Chennai, Tamil Nadu\nCoimbatore, Tamil Nadu\nSurat, Gujarat",
+   "before_pdf": "were ranked as follows:\n1. Kolkata, West Bengal",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "7. Bangalore, Karnataka\n3.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "as follows:\nKolkata, West Bengal\nChennai, Tamil Nadu",
+   "after": "Coimbatore, Tamil Nadu\nSurat, Gujarat\nPune, Maharashtra\nHyderabad,",
+   "before_pdf": "Bengal 6. Hyderabad, Telangana\n2. Chennai, Tamil Nadu",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "8. Ahmedabad, Gujarat\n4.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "West Bengal\nChennai, Tamil Nadu\nCoimbatore, Tamil Nadu",
+   "after": "Surat, Gujarat\nPune, Maharashtra\nHyderabad, Telangana\nBangalore, Karnataka",
+   "before_pdf": "Nadu 7. Bangalore, Karnataka\n3. Coimbatore, Tamil Nadu",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "9. Mumbai, Maharashtra\n5.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Chennai, Tamil Nadu\nCoimbatore, Tamil Nadu\nSurat, Gujarat",
+   "after": "Pune, Maharashtra\nHyderabad, Telangana\nBangalore, Karnataka\nAhmedabad, Gujarat",
+   "before_pdf": "Tamil Nadu 8. Ahmedabad, Gujarat\n4. Surat, Gujarat",
+   "where": {
+    "heading": "demography",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": null
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 401,
+  "different": {
+   "4.9": "4.1.9"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

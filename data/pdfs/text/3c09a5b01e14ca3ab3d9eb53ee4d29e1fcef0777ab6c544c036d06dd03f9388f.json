@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 43,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 51,
+ "paragraphs": 341,
+ "list_items": 43,
+ "tables": 7,
+ "figures": 0,
+ "footnotes": 155,
+ "bookmarks": 51,
+ "warnings": [
+  "footnotes with no mark found in the text: 106, 118"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Pakistan: Actors of protection",
+ "cover_version": "2.0",
+ "cover_date": "April 2023",
+ "pdf_sha256": "3c09a5b01e14ca3ab3d9eb53ee4d29e1fcef0777ab6c544c036d06dd03f9388f",
+ "images": []
+}

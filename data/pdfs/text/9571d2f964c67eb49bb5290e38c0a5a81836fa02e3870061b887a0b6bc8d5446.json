@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 30,
+ "paragraphs": 189,
+ "list_items": 9,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 32,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Gambia: Female genital mutilation (FGM)",
+ "cover_version": "1.0",
+ "cover_date": "December 2016",
+ "pdf_sha256": "9571d2f964c67eb49bb5290e38c0a5a81836fa02e3870061b887a0b6bc8d5446",
+ "images": []
+}

@@ -1,0 +1,323 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "kenya/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-kenya-february-2025-accessible",
+ "pdf_sha256": "dd9e82d3416032b387ba90b324c33605431cf9f874097dee6ba6bb4e0897012f",
+ "body_sha256": "76fdc0ac311fb48979e9348e94e2fd27340d3ed219406726b5b35e4b3efa9790",
+ "words": {
+  "web": 16775,
+  "pdf": 16821
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 29,
+   "share": 0.000893,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 28
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 29
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 23
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 29
+   },
+   "withheld notice": {
+    "differences": 6,
+    "web_words": 6,
+    "pdf_words": 23
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "February 2025",
+   "pdf": "4.0",
+   "pdf_date": "February 2025"
+  },
+  "section_updated": {
+   "web": [
+    "25 October 2024"
+   ],
+   "pdf": [
+    "25 October 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 120,
+   "pdf": 120,
+   "pdf_raw": 120,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 51,
+   "pdf": 48
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a person faces a real risk of persecution/serious harm by the state or non-state actors because of their sexual orientation and/or gender identity and expression.",
+   "web_words": 0,
+   "pdf_words": 28,
+   "before": "and provides an assessment of whether, in general:",
+   "after": "the state (or quasi state bodies) can provide",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "undercover",
+   "pdf": "undercovered",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "journalist in a report titled, ‘Kenya: Reporting on",
+   "after": "LGBTQ+ community brings potential scrutiny’, dated 30 June",
+   "where": {
+    "heading": "media",
+    "paragraph": "12.5.5",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "section",
+   "pdf": "page has been removed as it is restricted for internal Home Office use.\nThe information on this page",
+   "web_words": 1,
+   "pdf_words": 18,
+   "before": "disclosure – Start of section.\nThe information in this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section.\nThe information on this",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "in",
+   "pdf": "on",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section.\nThe information",
+   "after": "this section has been removed as it is",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "in",
+   "pdf": "on",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section.\nThe information",
+   "after": "this section has been removed as it is",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "section",
+   "pdf": "page",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – Start of section.\nThe information in this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section.\nThe information on this",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "in",
+   "pdf": "on",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Not for disclosure – Start of section.\nThe information",
+   "after": "this section has been removed as it is",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "15.1.2",
+    "section": "Version control and feedback",
+    "page": 5
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "section",
+   "pdf": "page",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – Start of section.\nThe information in this",
+   "after": "has been removed as it is restricted for",
+   "before_pdf": "disclosure – Start of section.\nThe information on this",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "15.1.2",
+    "section": "Version control and feedback",
+    "page": 5
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "39",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "a breakdown of cases by month in 2022:",
+   "after": "10.1.5 The NGLHRC report 2022 also",
+   "where": {
+    "heading": "number-of-cases-handled-by-the-nglhrc-legal-aid-centre-by-year-",
+    "paragraph": "10.1.5",
+    "section": "Country information",
+    "page": 19
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 172,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

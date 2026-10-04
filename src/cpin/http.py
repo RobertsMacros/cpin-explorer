@@ -1,7 +1,8 @@
 """Polite HTTP client, after barrister-directory's scrapers/http.py.
 
 - One honest User-Agent; no browser impersonation.
-- robots.txt is honoured, including Crawl-delay.
+- robots.txt is honoured, including Crawl-delay. One that cannot be read (a network error, a 5xx, a 429)
+  is not permission: nothing is asked of that host for the rest of the run.
 - Requests to each host are spaced out (config.HOST_DELAY).
 - 429/5xx/network errors are retried with backoff (Retry-After honoured). A 403 is
   reported as `blocked` and never worked around.
@@ -56,6 +57,7 @@ class PoliteClient:
         self._client = httpx.Client(timeout=timeout, follow_redirects=False, transport=transport,
                                     headers={"User-Agent": user_agent, "Accept-Language": "en-GB,en;q=0.8"})
         self._robots: dict[str, RobotFileParser] = {}
+        self._unread: dict[str, str] = {}             # origin -> why its robots.txt could not be read
         self._delay: dict[str, float] = {}
         self._last: dict[str, float] = {}
 
@@ -72,16 +74,25 @@ class PoliteClient:
         origin = f"{scheme}://{host}"
         if origin not in self._robots:
             rp = RobotFileParser()
-            try:
-                r = self._client.get(origin + "/robots.txt", follow_redirects=True)
-                # Standard behaviour: 4xx means "no rules"; 5xx means "assume disallowed".
-                if r.status_code == 200:
-                    rp.parse(r.text.splitlines())
-                elif r.status_code >= 500:
-                    rp.disallow_all = True
-                else:
-                    rp.allow_all = True
-            except httpx.HTTPError:
+            # Standard behaviour (RFC 9309): 4xx means "no rules"; a 5xx or a network error means the rules
+            # are unknown, which is "assume disallowed", never "allowed". A 429 is the host asking us to wait,
+            # so it is read the same way. Asked again, after a pause, before giving up for this run.
+            unread = None
+            for attempt in range(self.max_retries + 1):
+                try:
+                    r = self._client.get(origin + "/robots.txt", follow_redirects=True)
+                    unread = f"HTTP {r.status_code}" if r.status_code in RETRY_STATUSES else None
+                except httpx.HTTPError as e:
+                    r, unread = None, f"{type(e).__name__}: {e}"[:200]
+                if unread is None or attempt == self.max_retries:
+                    break
+                self._sleep(2.0 ** (attempt + 1))
+            if unread:
+                rp.disallow_all = True
+                self._unread[origin] = unread
+            elif r.status_code == 200:
+                rp.parse(r.text.splitlines())
+            else:
                 rp.allow_all = True
             self._robots[origin] = rp
             crawl = None if (rp.allow_all or rp.disallow_all) else rp.crawl_delay(self.user_agent)
@@ -105,7 +116,9 @@ class PoliteClient:
     def _get_once(self, url: str, *, etag: str | None, accept: str | None) -> FetchResult:
         parts = urlsplit(url)
         if not self._robots_for(parts.scheme, parts.netloc).can_fetch(self.user_agent, url):
-            return FetchResult(url, "robots", error="disallowed by robots.txt")
+            unread = self._unread.get(f"{parts.scheme}://{parts.netloc}")
+            return FetchResult(url, "robots", error=f"robots.txt could not be read ({unread}), so nothing was asked of this host"
+                               if unread else "disallowed by robots.txt")
         headers = {}
         if etag:
             headers["If-None-Match"] = etag

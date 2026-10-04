@@ -1,0 +1,186 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "lebanon/country-bulletin-security-situation-lebanon-may-2026",
+ "pdf_sha256": "66320fcb33a72d9eb1e049bbef20c6e1dd24f392268af33f4434b9fead361541",
+ "body_sha256": "33b15bcb292e3c902882a475138d7d031f002f52f098b3befa001879fb6033bf",
+ "words": {
+  "web": 18092,
+  "pdf": 18093
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 3,
+   "web_words": 2,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "May 2026",
+   "pdf": null,
+   "pdf_date": "May 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 200,
+   "pdf": 200,
+   "pdf_raw": 200,
+   "differ": false
+  },
+  "pictures": {
+   "web": 5,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 19,
+   "pdf": 18
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2026",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "March 2026, 6 March 2026. Accessed: 8 April",
+   "after": "Middle East Situation as of 7 March 2026",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "3.3.15",
+    "section": "Bibliography",
+    "page": 38
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2026",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1, 2026, 1 April 2026. Accessed: 16 April",
+   "after": "Iran Update Special Report, April 2, 2026, 2",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "3.3.15",
+    "section": "Bibliography",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "151 152 153:",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "IDPs) in Lebanon due to the current hostilities :",
+   "after": "3.2.2 The above graph shows that",
+   "before_pdf": "IDPs) in Lebanon due to the current hostilities",
+   "where": {
+    "heading": "internal-displacements",
+    "paragraph": "3.2.2",
+    "section": "Country information",
+    "page": 19
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 156,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 285,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 224,
+ "paragraphs": 3166,
+ "list_items": 194,
+ "tables": 9,
+ "figures": 9,
+ "footnotes": 276,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 48, 276"
+ ],
+ "figure_pages": {
+  "ec7f8c03a002cb78612a7f21119ed73ef6f2961a2d74c883ac9021ad0c207283.png": 2,
+  "26d542270702da0e8094b73e8ff9f860a0c84b33134ae84a8b4a9cc7562bb1b2.jpg": 13,
+  "f236706111239a1017626a101d8a652761cf77634f4fafa1101e6da5d2c3e054.jpg": 14,
+  "bae80b26db4286960b474e3c266be70e34ccbcc5438e9f654a7e2ba64fc50b7b.jpg": 15,
+  "43f750d5ea4b6dddd98845d0901592a2cf27d0846cfd28cf3688834cd4967c0a.jpg": 16,
+  "0b96e124d0f16459a0a24370cc764edadc2a55295f85a3b97ebdc2be34b07e2c.jpg": 17,
+  "492cbcc7a488f6ec8bc6729b8a1a9c20f8d0fa1e2ef525c778ebc967e45d5483.jpg": 17,
+  "92c6c606fb655727c4c6f3eac8ea027dc7b24cfc86f228d99161b8636174ba74.jpg": 18,
+  "0ca95cc452524596bcd9ede7192d14e5e1af08a32e528253a5097ffaba80de83.jpg": 18
+ },
+ "figure_sizes": {
+  "ec7f8c03a002cb78612a7f21119ed73ef6f2961a2d74c883ac9021ad0c207283.png": [
+   246,
+   169
+  ],
+  "26d542270702da0e8094b73e8ff9f860a0c84b33134ae84a8b4a9cc7562bb1b2.jpg": [
+   836,
+   631
+  ],
+  "f236706111239a1017626a101d8a652761cf77634f4fafa1101e6da5d2c3e054.jpg": [
+   832,
+   670
+  ],
+  "bae80b26db4286960b474e3c266be70e34ccbcc5438e9f654a7e2ba64fc50b7b.jpg": [
+   708,
+   891
+  ],
+  "43f750d5ea4b6dddd98845d0901592a2cf27d0846cfd28cf3688834cd4967c0a.jpg": [
+   830,
+   475
+  ],
+  "0b96e124d0f16459a0a24370cc764edadc2a55295f85a3b97ebdc2be34b07e2c.jpg": [
+   918,
+   628
+  ],
+  "492cbcc7a488f6ec8bc6729b8a1a9c20f8d0fa1e2ef525c778ebc967e45d5483.jpg": [
+   917,
+   501
+  ],
+  "92c6c606fb655727c4c6f3eac8ea027dc7b24cfc86f228d99161b8636174ba74.jpg": [
+   919,
+   694
+  ],
+  "0ca95cc452524596bcd9ede7192d14e5e1af08a32e528253a5097ffaba80de83.jpg": [
+   919,
+   525
+  ]
+ },
+ "figure_text": {
+  "ec7f8c03a002cb78612a7f21119ed73ef6f2961a2d74c883ac9021ad0c207283.png": 0,
+  "26d542270702da0e8094b73e8ff9f860a0c84b33134ae84a8b4a9cc7562bb1b2.jpg": 0,
+  "f236706111239a1017626a101d8a652761cf77634f4fafa1101e6da5d2c3e054.jpg": 0,
+  "bae80b26db4286960b474e3c266be70e34ccbcc5438e9f654a7e2ba64fc50b7b.jpg": 0,
+  "43f750d5ea4b6dddd98845d0901592a2cf27d0846cfd28cf3688834cd4967c0a.jpg": 0,
+  "0b96e124d0f16459a0a24370cc764edadc2a55295f85a3b97ebdc2be34b07e2c.jpg": 0,
+  "492cbcc7a488f6ec8bc6729b8a1a9c20f8d0fa1e2ef525c778ebc967e45d5483.jpg": 0,
+  "92c6c606fb655727c4c6f3eac8ea027dc7b24cfc86f228d99161b8636174ba74.jpg": 0,
+  "0ca95cc452524596bcd9ede7192d14e5e1af08a32e528253a5097ffaba80de83.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a Home Office Fact- Finding Mission Eritrea: illegal exit and national service",
+ "cover_version": null,
+ "cover_date": "20 February 2016",
+ "pdf_sha256": "323229a0973fc9bea68f6d77e0f98f7e964e441881d8ada03129a950459224ef",
+ "images": [
+  "0b96e124d0f16459a0a24370cc764edadc2a55295f85a3b97ebdc2be34b07e2c.jpg",
+  "0ca95cc452524596bcd9ede7192d14e5e1af08a32e528253a5097ffaba80de83.jpg",
+  "26d542270702da0e8094b73e8ff9f860a0c84b33134ae84a8b4a9cc7562bb1b2.jpg",
+  "43f750d5ea4b6dddd98845d0901592a2cf27d0846cfd28cf3688834cd4967c0a.jpg",
+  "492cbcc7a488f6ec8bc6729b8a1a9c20f8d0fa1e2ef525c778ebc967e45d5483.jpg",
+  "92c6c606fb655727c4c6f3eac8ea027dc7b24cfc86f228d99161b8636174ba74.jpg",
+  "bae80b26db4286960b474e3c266be70e34ccbcc5438e9f654a7e2ba64fc50b7b.jpg",
+  "ec7f8c03a002cb78612a7f21119ed73ef6f2961a2d74c883ac9021ad0c207283.png",
+  "f236706111239a1017626a101d8a652761cf77634f4fafa1101e6da5d2c3e054.jpg"
+ ]
+}

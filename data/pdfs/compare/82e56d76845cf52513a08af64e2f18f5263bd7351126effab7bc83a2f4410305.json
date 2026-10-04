@@ -1,0 +1,273 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-china-non-christian-religious-groups-december-2024-accessible",
+ "pdf_sha256": "82e56d76845cf52513a08af64e2f18f5263bd7351126effab7bc83a2f4410305",
+ "body_sha256": "7ac49dc87c7b9135e521ea230bb6b0700c2d4c6ce93506c0c64b47199ade2052",
+ "words": {
+  "web": 19042,
+  "pdf": 19052
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 8,
+   "share": 0.000263,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 8
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "table cell": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 8
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "December 2024",
+   "pdf": "3.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [
+    "16 December 2024"
+   ],
+   "pdf": [
+    "16 December 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 150,
+   "pdf": 150,
+   "pdf_raw": 150,
+   "differ": false
+  },
+  "pictures": {
+   "web": 4,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 70,
+   "pdf": 48
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.1.5 Radio Free Asia, described as operating ‘...under a [",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "and start a new trend.”’\n10.1.5 [",
+   "after": "US] Congressional mandate to deliver uncensored, domestic news",
+   "before_pdf": "with bad traditions and start a new trend.\"’",
+   "where": {
+    "heading": "folk-religions",
+    "paragraph": "10.1.5",
+    "section": "List of acronyms",
+    "page": 37
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Abbreviation\nOrganisation",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "of common abbreviations used in this CPIN below:",
+   "after": "CECC\nCongressional-Executive Commission on China\nCFR\nCouncil",
+   "where": {
+    "heading": "list-of-acronyms",
+    "paragraph": "6.1.2",
+    "section": "List of acronyms",
+    "page": 12
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.4.1",
+    "section": "Version control and feedback",
+    "page": 50
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "2.1.2Establishing",
+   "pdf": "2.1.2 Establishing",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "1 A person’s actual or imputed religion.",
+   "after": "a convention reason is not sufficient to be",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "2.1.2",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2018 2021",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "religion:\n2010\n2012\n2013\n2015\n2017\n2018\n2021",
+   "after": "No religion\n88\n86\n89\n90\n90\n90",
+   "before_pdf": "religion:\n2010\n2012\n2013\n2015\n2017\n2018 2021",
+   "where": {
+    "heading": "religious-demography",
+    "paragraph": "8.1.6",
+    "section": "List of acronyms",
+    "page": 22
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "website.",
+   "pdf": "website16.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2017 is available on the China Law Translate",
+   "after": "7.4.2 In relation to the 2017",
+   "where": {
+    "heading": "regulations-administration",
+    "paragraph": "7.4.1",
+    "section": "List of acronyms",
+    "page": 15
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 194,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

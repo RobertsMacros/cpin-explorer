@@ -1,0 +1,729 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "namibia/country-information-and-guidance-sexual-orientation-and-gender-identity-and-expression-in-namibia-accessible-version",
+ "pdf_sha256": "3e6e6c1dbb720568d4715aaa044aa7b8ae6c25bfcf51f62f9610cf5b940c0a31",
+ "body_sha256": "631b7c7757f23306a39a045456c0626bbe8497e10bb71575079a90d9f7c12957",
+ "words": {
+  "web": 16665,
+  "pdf": 16984
+ },
+ "summary": {
+  "wording": {
+   "differences": 8,
+   "web_words": 2,
+   "pdf_words": 44,
+   "share": 0.001367,
+   "passages": 3,
+   "sizes": {
+    "word": 4,
+    "passage": 3,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 1,
+   "words": 9
+  },
+  "groups": {
+   "wording": {
+    "differences": 8,
+    "web_words": 2,
+    "pdf_words": 44
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 12,
+    "pdf_words": 12
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   },
+   "address": {
+    "differences": 2,
+    "web_words": 13,
+    "pdf_words": 265
+   },
+   "form": {
+    "differences": 8,
+    "web_words": 0,
+    "pdf_words": 8
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 2,
+    "web_words": 13,
+    "pdf_words": 265
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "heading": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 7
+   },
+   "list marker": {
+    "differences": 8,
+    "web_words": 0,
+    "pdf_words": 8
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 12,
+    "pdf_words": 12
+   },
+   "text": {
+    "differences": 4,
+    "web_words": 1,
+    "pdf_words": 36
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "October 2024",
+   "pdf": "3.0",
+   "pdf_date": "October 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 177,
+   "pdf": 177,
+   "pdf_raw": 177,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 59,
+   "pdf": 46
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "7.3.8",
+   "pdf": "7.3.7 In its National Report, dated 11 February 2021, submitted to the UN Human Rights Council (HRC), as part of the Universal Periodic Review (UPR), the",
+   "web_words": 1,
+   "pdf_words": 26,
+   "before": "minority communities as a group who face discrimination.’",
+   "after": "Government of the Republic of Namibia (GRN) noted",
+   "where": {
+    "heading": "discrimination",
+    "paragraph": "7.3.8",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "see Conversion therapy or harmful practices).",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "that the state supports or permits conversion therapy.",
+   "after": "3.1.4 There is no provision in",
+   "before_pdf": "that the state supports or permits conversion therapy (",
+   "where": {
+    "heading": "risk-from-the-state",
+    "paragraph": "3.1.4",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This contains publicly available or disclosable country of",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 10
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "data-sharing process)).",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "see Biometric data-sharing process (Migration 5 biometric).",
+   "after": "1.1.4 In cases where there are",
+   "before_pdf": "see Biometric data-sharing process (Migration 5 biometric",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.5 Other legislation",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "in the national civil registration database.’\n7.5",
+   "after": "7.5.1 The USSD 2023 HR report",
+   "before_pdf": "gender changes in the national civil registration database.’",
+   "where": {
+    "heading": "section",
+    "paragraph": "7.5.1",
+    "section": "Country information",
+    "page": 14
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Expert",
+   "pdf": "Experts",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Human Rights Office of the High Commissioner (OHCHR), ‘",
+   "after": "of the Committee on the Elimination of Discrimination",
+   "where": {
+    "heading": "un-human-rights-council",
+    "paragraph": "12.1.3",
+    "section": "Bibliography",
+    "page": 41
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "In",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "not provide further detail.\n10.2.9 In",
+   "after": "a press statement on 21 June 2024, UNAIDS",
+   "where": {
+    "heading": "healthcare",
+    "paragraph": "10.2.9",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Research",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of movement of LGBTI persons specifically (see Bibliography)",
+   "after": "Methodology\nThe country of origin information (COI) in",
+   "where": {
+    "heading": "methodology",
+    "paragraph": "12.1.3",
+    "section": "Methodology",
+    "page": 36
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version control and feedback\nClearance\nBelow is information on when this note was cleared:\nversion 3.0\nvalid from 29 October 2024\nOfficial – sensitive: Not for disclosure – Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: Not for disclosure – End of section\nChanges from last version of this note\nUpdated COI, including High Court ruling to invalidate sodomy and unnatural offences law.\nFeedback to the Home Office\nOur goal is to provide accurate, reliable and up-to-date COI and clear guidance. We welcome feedback on how to improve our products. If you would like to comment on this note, please email the Country Policy and Information Team.\nIndependent Advisory Group on Country Information\nThe Independent Advisory Group on Country Information (IAGCI) was set up in March 2009 by the Independent Chief Inspector of Borders and Immigration to support them in reviewing the efficiency, effectiveness and consistency of approach of COI produced by the Home Office.\nThe IAGCI welcomes feedback on the Home Office’s COI material. It is not the function of the IAGCI to endorse any Home Office material, procedur …",
+   "web_words": 0,
+   "pdf_words": 265,
+   "before": "UNPF), ‘Namibia annual report- 2023’, 14 May 2024",
+   "after": "HRW, ‘Namibia Court decriminalises consensual same-sex conduct’,",
+   "where": {
+    "heading": "the-namibian-1",
+    "paragraph": "12.1.3",
+    "section": "Bibliography",
+    "page": 43
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.state.gov/reports/2022-country-reports-on-human-rights-practices/namibia/)",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "2022 Country Report on Human Rights Practices: Namibia’](",
+   "after": "20 March 2023. Accessed: 4 July 2024\n2023",
+   "before_pdf": "2022 Country Report on Human Rights Practices: Namibia’",
+   "where": {
+    "heading": "us-state-department-ussd",
+    "paragraph": "12.1.3",
+    "section": "Bibliography",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.5",
+   "pdf": "8.4.2",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "intersex (LGBTQI+) individuals or those reporting such abuse’.",
+   "after": "A 2023 study titled ‘Queering Housing Policy: Questioning",
+   "where": {
+    "heading": "violence-harassment-and-discrimination",
+    "paragraph": "8.1.5",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.6",
+   "pdf": "8.4.3",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "support the assertion that the incidents were ‘common’.",
+   "after": "Freedom House, in its Freedom in the World",
+   "before_pdf": "support the assertion that the incidents were 'common'.",
+   "where": {
+    "heading": "violence-harassment-and-discrimination",
+    "paragraph": "8.1.6",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.7",
+   "pdf": "8.4.4",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "judgement that recognised same-sex marriages performed abroad.’",
+   "after": "No other information on adverse state treatment of",
+   "where": {
+    "heading": "violence-harassment-and-discrimination",
+    "paragraph": "8.1.7",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.4",
+   "pdf": "7.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of Namibia does not prohibit same-sex marriages.",
+   "after": "The same publication noted that Namibia ‘At the",
+   "where": {
+    "heading": "discrimination",
+    "paragraph": "7.3.4",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.5",
+   "pdf": "7.3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "on ‘human rights, sexual orientation and gender identity’.",
+   "after": "The US State Department’s human rights report",
+   "where": {
+    "heading": "discrimination",
+    "paragraph": "7.3.5",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.6",
+   "pdf": "7.3.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "were they granted rights equal to other persons ...’",
+   "after": "The Institute for Public Policy Research (IPPR) is",
+   "where": {
+    "heading": "discrimination",
+    "paragraph": "7.3.6",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.7",
+   "pdf": "7.3.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "no indication that the bill enacted (see Bibliography).",
+   "after": "The UNDP IGI Baseline report 2021 noted that ‘",
+   "where": {
+    "heading": "discrimination",
+    "paragraph": "7.3.7",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.7",
+   "pdf": "8.1.17",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of their orientation,” said LPM spokesperson Lifalaza Simataa.’",
+   "after": "On 5 May 2024, The Namibian reported that",
+   "where": {
+    "heading": "statements",
+    "paragraph": "8.1.7",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "years.’\n8.4 Violence, harassment, and discrimination\n8.",
+   "after": "1.4 The USSD HR report 2023 noted",
+   "before_pdf": "recent years.’\n8.4 Violence, harassment, and discrimination",
+   "where": {
+    "heading": "violence-harassment-and-discrimination",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.4",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "recent years.’\n8.4 Violence, harassment, and discrimination",
+   "after": "The USSD HR report 2023 noted that: ‘Police",
+   "before_pdf": "4 Violence, harassment, and discrimination\n8.4.1",
+   "where": {
+    "heading": "violence-harassment-and-discrimination",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2 ORN’s website lists its services as:",
+   "after": "Human Rights Advocacy and Defense,\nSexual and Reproductive",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "its services as:\nHuman Rights Advocacy and Defense,",
+   "after": "Sexual and Reproductive Health Rights (SRHR) and HIV/",
+   "before_pdf": "services as:\n1. Human Rights Advocacy and Defense,",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and HIV/AIDS services to support LGBTIQ+ persons,",
+   "after": "Psychosocial and Counselling Services\nLegal Literacy Trainings\nsexual",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to support LGBTIQ+ persons,\nPsychosocial and Counselling Services",
+   "after": "Legal Literacy Trainings\nsexual orientation, gender identity and",
+   "before_pdf": "support LGBTIQ+ persons,\n3. Psychosocial and Counselling Services",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "persons,\nPsychosocial and Counselling Services\nLegal Literacy Trainings",
+   "after": "sexual orientation, gender identity and expression, and sex",
+   "before_pdf": "Psychosocial and Counselling Services\n4. Legal Literacy Trainings",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "identity and expression, and sex characteristics (SOGIESC) Trainings",
+   "after": "Legal and Policy Reform\nPublic Outreach on Sexual",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "sex characteristics (SOGIESC) Trainings\nLegal and Policy Reform",
+   "after": "Public Outreach on Sexual and Gender Diversity\nResearch",
+   "before_pdf": "characteristics (SOGIESC) Trainings\n6. Legal and Policy Reform",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Reform\nPublic Outreach on Sexual and Gender Diversity",
+   "after": "Research to Support LGBTIQ+ Programming\n11.2.3",
+   "before_pdf": "7. Public Outreach on Sexual and Gender Diversity",
+   "where": {
+    "heading": "LGBTI-organisations",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 32
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "relationship",
+   "pdf": "relationships",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to the Supreme Court.\n7.2 Same-sex",
+   "after": "7.2.1 Under domestic law, same-sex",
+   "where": {
+    "heading": "same-sex-relationship",
+    "paragraph": "7.1.3",
+    "section": "Country information",
+    "page": 10
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 175,
+  "different": {
+   "7.3.4": "7.3.3",
+   "7.3.5": "7.3.4",
+   "7.3.6": "7.3.5",
+   "7.3.7": "7.3.6"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "8.1.4",
+   "8.1.5",
+   "8.1.6",
+   "8.1.7"
+  ],
+  "unconfirmed": []
+ }
+}

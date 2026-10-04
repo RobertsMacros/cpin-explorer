@@ -1,0 +1,93 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 31,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 29,
+ "paragraphs": 197,
+ "list_items": 15,
+ "tables": 0,
+ "figures": 5,
+ "footnotes": 51,
+ "bookmarks": 58,
+ "warnings": [
+  "page 5: bookmark not found in the text: 'Assessment'",
+  "page 5: bookmark not found in the text: '1. Introduction'",
+  "page 5: bookmark not found in the text: '1.1 Basis of claim'",
+  "page 5: bookmark not found in the text: '2. Consideration of issues'",
+  "page 5: bookmark not found in the text: '2.1 Credibility'",
+  "page 5: bookmark not found in the text: '2.2 Exclusion'",
+  "page 5: bookmark not found in the text: '2.3 Protection'",
+  "page 7: bookmark not found in the text: 'Country information'",
+  "page 7: bookmark not found in the text: '3 Law enforcement agencies'",
+  "page 7: bookmark not found in the text: '3.1 Overview'",
+  "page 7: bookmark not found in the text: '3.2 Police Law Enforcement Forces (Niruha-ye Jomhuri-ye Isla'",
+  "page 10: bookmark not found in the text: '3.4 Basij'",
+  "page 11: bookmark not found in the text: '3.5 Morality police (Gasht-e Ershad (Persian for Guidance Pa'",
+  "page 13: bookmark not found in the text: '3.6 Ministry of Intelligence and Security (MOIS)/Vezarat-e E'",
+  "page 13: bookmark not found in the text: '3.7 Human rights violations and impunity'",
+  "page 14: bookmark not found in the text: '3.7 Human rights violations and impunity'",
+  "page 15: bookmark not found in the text: '3.8 Avenues of redress'",
+  "page 15: bookmark not found in the text: '3.9 Effectiveness of state protection'",
+  "page 16: bookmark not found in the text: '4. Judiciary'",
+  "page 16: bookmark not found in the text: '4.1 Organisation'",
+  "page 17: bookmark not found in the text: '4.2 Independence'",
+  "page 19: bookmark not found in the text: '4.3 Sharia law'",
+  "page 19: bookmark not found in the text: '4.4 Human rights abuses within the judicial system'",
+  "page 20: bookmark not found in the text: '4.5 Executive influence'",
+  "page 20: bookmark not found in the text: '4.6 Fair trial'",
+  "page 24: bookmark not found in the text: 'Annex A: Legal expert report'",
+  "page 28: bookmark not found in the text: 'Bibliography'",
+  "page 28: bookmark not found in the text: 'Sources cited'",
+  "page 29: bookmark not found in the text: 'Bibliography'",
+  "page 31: bookmark not found in the text: 'Version control'"
+ ],
+ "figure_pages": {
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": 24,
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": 25,
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": 26,
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": 27,
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": 28
+ },
+ "figure_sizes": {
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": [
+   908,
+   1292
+  ],
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": [
+   919,
+   1308
+  ],
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": [
+   919,
+   1308
+  ],
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": [
+   919,
+   1308
+  ],
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": [
+   919,
+   1308
+  ]
+ },
+ "figure_text": {
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": 0,
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": 0,
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": 0,
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": 0,
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iran: Actors of protection",
+ "cover_version": "1.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "d646d6658bb5505c053288dfb0655565b0bfd7aec75dc533040a6c288730218a",
+ "images": [
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg",
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg",
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg",
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg",
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg"
+ ]
+}

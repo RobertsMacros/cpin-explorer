@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 58,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 462,
+ "list_items": 35,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 139,
+ "bookmarks": 44,
+ "warnings": [
+  "footnotes with no mark found in the text: 134"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note El Salvador: Actors of protection",
+ "cover_version": "1.0",
+ "cover_date": "February 2021",
+ "pdf_sha256": "ae8ddc02f22ab592517a7c4946684105366664337bcb13de309c6f66a2206fd1",
+ "images": []
+}

@@ -1,0 +1,424 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iraq/country-bulletin-internal-relocation-civil-documentation-and-returns-update-following-setting-aside-of-country-guidance-iraq-july-2026-accessib",
+ "pdf_sha256": "06b7b57afbdb4d6ee88c6c5839e68d5a57019ab65f9a9305b83f1950a731bc30",
+ "body_sha256": "047b9c46997a9f080046ccbb69d9b83f048f13465c4a15a643421326040e5566",
+ "words": {
+  "web": 5955,
+  "pdf": 5959
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0,
+   "share": 8.4e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "kinds": {
+   "back to contents": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 35,
+   "web_words": 92,
+   "pdf_words": 91
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "July 2026",
+   "pdf": null,
+   "pdf_date": "July 2026"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 16,
+   "pdf": 16,
+   "pdf_raw": 16,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 6,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 29,
+   "pdf": 29
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "thebigwordGroup",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "of registration is also present at the top.",
+   "after": "Translation Certificate\nCompany: thebigword & BICSPI Country\nProject Reference:",
+   "where": {
+    "heading": "thebigwordgroup",
+    "paragraph": "5.2",
+    "section": "Annex A: Translation of Iraqi Embassy Facebook post – 16 October 2024",
+    "page": 14
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Back to Contents",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "well as via Baghdad International Airport if required.",
+   "after": "5.2 Returns statistics\n5.2 The table",
+   "before_pdf": "well as\nvia Baghdad International Airport if required.",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.1.7",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "reheard before the UT, likely in spring 2027.",
+   "after": "Previous CG (SMO2)\n1.2.1 In March",
+   "where": {
+    "heading": "previous-cg-smo2",
+    "paragraph": "1.1.3",
+    "section": "Country information",
+    "page": 6
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "44\n41\n57\n62\n61\n57\nControlled returns\n14\n12\n14\n15\n16\n8\n4\n14\n7\nOther verified returns\n7\n18\n14\n14\n13\n13\n15\n13\n8\nTotal\n36\n55\n73\n73\n70\n78\n81\n88\n72\nQ1 2024\nQ2 2024\nQ3 2024\nQ4 2024\nQ1 2025\nQ2 2025\nQ3 2025\nQ4 2025\nQ1 2026",
+   "pdf": "",
+   "web_words": 57,
+   "pdf_words": 0,
+   "before": "2025\nQ1 2026\nAssisted returns\n15\n25\n45",
+   "after": "Refused entry at port and subsequently departed\n38",
+   "before_pdf": "Q3 2025 75\nQ4 2025\nQ1 2026 45",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "15 14 7 36\nQ3 2024 45 14 14 73\nQ1 2025 41 16 13 70\nQ3 2025 62 4 15 81\nAssisted returns\n25\n44\n57\n61\nControlled returns\n12\n15\n8\n14\nOther verified returns\n18\n14\n13\n13\nTotal\n55\n73\n78\n88\nQ1 2024 38",
+   "web_words": 0,
+   "pdf_words": 49,
+   "before": "9\n9\n19\n16\nVoluntary returns\nQ1 2024",
+   "after": "Q2 2024\nQ3 2024\nQ4 2024\nQ1 2025",
+   "before_pdf": "Q1 2026 57 7 8 72\nQ1 2024",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "8 Q2 2024\n9 Q4 2024\n9 Q2 2025\n19 Q4 2025\nQ1 2026 57 7 8 72",
+   "web_words": 0,
+   "pdf_words": 18,
+   "before": "9\n10\n9\n9\n19\n16\nVoluntary returns",
+   "after": "Q1 2024\nQ2 2024\nQ3 2024\nQ4 2024",
+   "before_pdf": "detention\n0\n0\n0\n2\nTotal Voluntary returns",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "11\n8\n4\n9\n10\n9\n9\n19\n16",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "0\n0\n0\n0\n0\n2\n1\nTotal",
+   "after": "Voluntary returns\nQ1 2024\nQ2 2024\nQ3 2024",
+   "before_pdf": "returns from detention\n0\n0\n0\n2\nTotal",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "3\n0\n0\n0",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "0\n0\n0\n1\nOther returns from detention",
+   "after": "0\n0\n0\n2\n1\nTotal\n11\n8",
+   "before_pdf": "1\n2\n0\n0\nOther returns from detention",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Assisted returns\n15\n25",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Q2 2025\nQ3 2025\nQ4 2025\nQ1 2026",
+   "after": "45\n44\n41\n57\n62\n61\n57\nControlled",
+   "before_pdf": "2025\nQ3 2025 75\nQ4 2025\nQ1 2026",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "0 3 11",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "2025\nQ1 2026\nEnforced removals from detention\n8",
+   "after": "7\n3\n7\n10\n9\n9\n17\n14",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1 0 4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "2026\nEnforced removals from detention\n8\n7\n3",
+   "after": "7\n10\n9\n9\n17\n14\nNon detained",
+   "before_pdf": "from detention\n8 0 3 11\n7\n3",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "10 0 0",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Enforced removals from detention\n8\n7\n3\n7",
+   "after": "10\n9\n9\n17\n14\nNon detained Enforced",
+   "before_pdf": "3 11\n7\n3 1 0 4\n7",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "0 0 9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "detention\n8\n7\n3\n7\n10\n9\n9",
+   "after": "17\n14\nNon detained Enforced removals\n0\n1",
+   "before_pdf": "4\n7\n10 0 0 10\n9\n9",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1 1 16",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "7\n3\n7\n10\n9\n9\n17\n14",
+   "after": "Non detained Enforced removals\n0\n1\n1\n2",
+   "before_pdf": "10\n9\n9 0 0 9\n17\n14",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "0\n0\n1",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Enforced removals\n0\n1\n1\n2\n0\n0",
+   "after": "Other returns from detention\n3\n0\n0\n0",
+   "before_pdf": "Non-detained Enforced removals\n1\n2\n0\n0",
+   "where": {
+    "heading": "returns-statistics",
+    "paragraph": "5.2",
+    "section": "Country information",
+    "page": 11
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 32,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "5.2"
+  ],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 20,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 29,
+ "paragraphs": 129,
+ "list_items": 2,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 38,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 12, 13, 33"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Jamaica: Women fearing domestic violence",
+ "cover_version": "2.0",
+ "cover_date": "January 2017",
+ "pdf_sha256": "43661587346f5b7099e819cde5dc0faa842902fca561611e00329b35351212de",
+ "images": []
+}

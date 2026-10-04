@@ -1,0 +1,316 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-kurds-turkey-october-2023-accessible",
+ "pdf_sha256": "fdef18fb0bdb4c9cfbb2aea7824361b2737f96606bdcc23a52c7499ad366e899",
+ "body_sha256": "08ef06fe79d27013216c1365760ac1038c23d950dc469fd4bef4ae2737d08fd4",
+ "words": {
+  "web": 26643,
+  "pdf": 26493
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 106,
+   "pdf_words": 3,
+   "share": 0.002051,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "number": 1,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 106,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 44,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 44,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 4,
+    "web_words": 106,
+    "pdf_words": 3
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 3,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "July 2025",
+   "pdf": "5.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "3 February 2025"
+   ],
+   "pdf": [
+    "3 February 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 157,
+   "pdf": 157,
+   "pdf_raw": 157,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 85,
+   "pdf": 60
+  },
+  "drafts": [
+   "a year differs in the text: web 2013, PDF 2024"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "This representative further stated that of the confederation’s members who were dismissed from their jobs following the coup attempt of 2016, most were Kurdish, but they “[...] were not dismissed for being Kurdish only but because they are Kurdish public officers opposed to the government.” He added, “It is not just Kurdish people, it is also people in opposition to the government who are dismissed or prevented from getting a job. The process now for public sector employment is that you need to be interviewed and have a security investigation which makes it impossible for someone of Kurdish ethnicity to get the job.",
+   "pdf": "",
+   "web_words": 103,
+   "pdf_words": 0,
+   "before": "someone of Kurdish ethnicity to get the job.",
+   "after": "For example, you sit an exam for public",
+   "where": {
+    "heading": "Employment",
+    "paragraph": "9.4.1",
+    "section": "Country information",
+    "page": 28
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2013.",
+   "pdf": "2024.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "s (ACCORD), Researching Country Origin Information – Training Manual,",
+   "after": "Namely, taking into account the COI’s relevance,",
+   "where": {
+    "heading": "Research_methodology",
+    "paragraph": "10.15.1",
+    "section": "Research methodology",
+    "page": 54
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "on which",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "were identified prior to drafting as relevant and",
+   "after": "research was undertaken:\nBackground\nHistory\nDemography\nLegal and",
+   "where": {
+    "heading": "Terms_of_Reference_1",
+    "paragraph": "10.15.1",
+    "section": "Terms of Reference",
+    "page": 55
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "on them:",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "as relevant and on which research was undertaken:",
+   "after": "Background\nHistory\nDemography\nLegal and constitutional framework, including",
+   "before_pdf": "to drafting as relevant and research was undertaken",
+   "where": {
+    "heading": "Terms_of_Reference_1",
+    "paragraph": "10.15.1",
+    "section": "Terms of Reference",
+    "page": 55
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The map shows Kurdish settlements centred on south eastern Turkey, northern Syria and Iraq and western Iran. There is also a large area to the north of Iran on the border with Turkmenistan and further small areas across Armenia, Turkey, Syria, Iraq and Iran]",
+   "pdf": "",
+   "web_words": 44,
+   "pdf_words": 0,
+   "before": "areas of majority Kurdish settlement in southwestern Asia:",
+   "after": "8.2 Timeline of key events with an",
+   "where": {
+    "heading": "map-areas-of-majority-kurdish-settlement",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.26",
+   "pdf": "3.2.6",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "identified as a Kurdish person and Daily life).",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "risk-from-non-state-actors",
+    "paragraph": "3.26",
+    "section": "Assessment",
+    "page": 9
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.1.2 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "The Kurdish language is commonly used throughout Turkey.’",
+   "after": "The Stockholm Center for Freedom (SCF), which described",
+   "before_pdf": "is commonly used throughout Turkey.’\n9.1.2",
+   "where": {
+    "heading": "Kurdish_language",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 23
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Türkiye 2022 Report‘",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "the PKK (p33,35), October 2019\nEuropean Commission,",
+   "after": "Türkiye 2022 Report’ (p5-6), 12 October 2022",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.15.1",
+    "section": "Version control and feedback",
+    "page": 53
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 242,
+  "different": {
+   "3.26": "3.2.6"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,417 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "somalia/country-policy-and-information-note-humanitarian-situation-in-mogadishu-somalia-july-2025-accessible",
+ "pdf_sha256": "7e2cbb9ef7d103ea184d5632eb5cb15ebeab19d6fbd06f79e0f8c6aeb8c66cfb",
+ "body_sha256": "e50ba96f3da532e24d42442c03f9aff505d38dd9d1cbecf5b81c10af3f88ada2",
+ "words": {
+  "web": 23883,
+  "pdf": 23822
+ },
+ "summary": {
+  "wording": {
+   "differences": 8,
+   "web_words": 24,
+   "pdf_words": 37,
+   "share": 0.001279,
+   "passages": 2,
+   "sizes": {
+    "spelling": 6,
+    "passage": 2
+   }
+  },
+  "opening": {
+   "differences": 3,
+   "passages": 0,
+   "words": 6
+  },
+  "groups": {
+   "wording": {
+    "differences": 8,
+    "web_words": 24,
+    "pdf_words": 37
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 77,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 5,
+    "pdf_words": 7
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 77,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 3,
+    "web_words": 5,
+    "pdf_words": 7
+   },
+   "text": {
+    "differences": 6,
+    "web_words": 22,
+    "pdf_words": 35
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "July 2025",
+   "pdf": "2.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "23 July 2025"
+   ],
+   "pdf": [
+    "23 July 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 81,
+   "pdf": 81,
+   "pdf_raw": 81,
+   "differ": false
+  },
+  "pictures": {
+   "web": 5,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 79,
+   "pdf": 36
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 8,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Registrerte voldshendelser =",
+   "pdf": "From October 18, 2023, to October 18, 2024, ACLED recorded 402 violent incidents in Mogadishu, resulting in a total of 407 deaths.\nTable 1:",
+   "web_words": 2,
+   "pdf_words": 24,
+   "before": "2024).\nAttacks on and clashes between government forces",
+   "after": "registered incidents of violence\nRegistrerte drepte, inkl. Stridende =",
+   "before_pdf": "2024).\nAttacks on and Clashes Between Government Forces",
+   "where": {
+    "heading": "attacks-on-and-clashes-between-government-forces",
+    "paragraph": "15.2.2",
+    "section": "Annex A: Landinfo response – English translation",
+    "page": 37
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Registrerte drepte, inkl. Stridende = registered deaths, including combatants\nPrepared by Landinfo based on data from (ACLED",
+   "pdf": "in Mogadishu 18 October 2023 – 18 October",
+   "web_words": 16,
+   "pdf_words": 7,
+   "before": "government forces\nRegistrerte voldshendelser = registered incidents of violence",
+   "after": "2024).\nAttack targets\nRegistered incidents of violence\nRegistered",
+   "before_pdf": "407 deaths.\nTable 1: Registered incidents of violence",
+   "where": {
+    "heading": "attacks-on-and-clashes-between-government-forces",
+    "paragraph": "15.2.2",
+    "section": "Annex A: Landinfo response – English translation",
+    "page": 37
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "faculties.",
+   "pdf": "facilties.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of the population lacks access to improved sanitation",
+   "after": "IDPs find it particularly difficult to access sanitation",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.11",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "facilities",
+   "pdf": "facilties",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "are a variety of private and public healthcare",
+   "after": "some operated by non-government organisations, including 18",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.12",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Internally",
+   "pdf": "Internlly",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "rely on social connections to effectively integrate (see",
+   "after": "Displaced Persons (IDPs)).\n3.1.14 The EUAA",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.13",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "this",
+   "pdf": "the",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Act 2002 (clearly unfounded claims).\nCountry information\nAbout",
+   "after": "country information\nThis section contains publicly available or",
+   "where": {
+    "heading": "about-this-country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "7.1.5The",
+   "pdf": "7.1.5 The",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "IDP population, see Internally Displaced Persons (IDPs) below.",
+   "after": "map below shows Mogadishu’s districts and main",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 14
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "ffollowed",
+   "pdf": "followed",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "himself up, and followed by a group of",
+   "after": "by a group of armed individuals shooting at",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "15.2.2",
+    "section": "Version control and feedback",
+    "page": 39
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nAnnual Eviction Trends\nAnnual Prevention Trends\n2024\n68,880\n26,478\n2023\n100,907\n195,069\n2022\n145,820\n176,394\n2021\n116,127\n77,608\n2020\n119,240\n69,500\n2019\n202,270\n70,589\n2018\n228,208\n33,480\n2017\n90,125\n16,350\n2016\n143,510\n15,300\n2015\n123,421\n12,500\nTotal recorded: 1,341,628 people forcefully evicted in +8 years while and additional 658,944 people were prevented from forced evictions.",
+   "pdf": "52",
+   "web_words": 77,
+   "pdf_words": 0,
+   "before": "growing focus on mitigating displacement despite ongoing challenges.",
+   "after": "13.4 Support providers\n13.4.1 The",
+   "where": {
+    "heading": "forced-evictions",
+    "paragraph": "13.3.5",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "15.2.2",
+    "section": "Version control and feedback",
+    "page": 58
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "mogadishu_economic_",
+   "pdf": "mogadish u_economi\nc_",
+   "web_words": 2,
+   "pdf_words": 4,
+   "before": "europa.eu/archives/delegations/somalia/documents/more_info/",
+   "after": "survey_en.pdf.\nMenkhaus, Ken (2003). State Collapse",
+   "where": {
+    "heading": "skriftlige-kilder",
+    "paragraph": "15.2.2",
+    "section": "Annex A: Landinfo response – English translation",
+    "page": 51
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "somaliadraft.",
+   "pdf": "somali adraft.",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "www.regjeringen.no/globalassets/upload/ud/vedlegg/humanitartarbeid/",
+   "after": "pdf.\nHansen, Stig Jarle (2013). Al-Shabaab in",
+   "where": {
+    "heading": "skriftlige-kilder",
+    "paragraph": "15.2.2",
+    "section": "Annex A: Landinfo response – English translation",
+    "page": 48
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "L ANDINFO –",
+   "pdf": "LANDINFO –",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "Respons Somalia: Klan- og sikkerhetsrelaterte forhold i Mogadishu",
+   "after": "7. NOVEMBER 2024 – 21\nThe Somali Digest (2024b,",
+   "where": {
+    "heading": "skriftlige-kilder",
+    "paragraph": "15.2.2",
+    "section": "Annex A: Landinfo response – English translation",
+    "page": 52
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 107,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

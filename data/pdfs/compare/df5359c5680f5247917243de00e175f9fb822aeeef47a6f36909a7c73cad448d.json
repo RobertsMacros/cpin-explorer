@@ -1,0 +1,1549 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-women-fearing-honour-based-violence-iran-may-2022-accessible",
+ "pdf_sha256": "df5359c5680f5247917243de00e175f9fb822aeeef47a6f36909a7c73cad448d",
+ "body_sha256": "598e1fcc8b62ff08f08b0a25448fdebc854b37d18d760e2f605194ef928c39fc",
+ "words": {
+  "web": 16964,
+  "pdf": 17256
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 57,
+   "pdf_words": 1,
+   "share": 0.001695,
+   "passages": 3,
+   "sizes": {
+    "passage": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 57,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 129,
+    "web_words": 0,
+    "pdf_words": 384
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 129,
+    "web_words": 0,
+    "pdf_words": 384
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 57,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "June 2025",
+   "pdf": "4.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "20 June 2025"
+   ],
+   "pdf": [
+    "20 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 137,
+   "pdf": 137,
+   "pdf_raw": 137,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 37,
+   "pdf": 35
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Brother and Husband\n1\nFather\n4\nSon\n2\nSon-in-law\n1\nHusband’s Nephew\n1\nSon-in-law (husband’s son)\n1\nSon-in-law\n3\nFormer Son-in-law\n2\nFriend\n2\nBrother-in-law\n1\nUnknown\n1\nFiancé\n3\nHusband\n20\nTemporary Husband (Sigheh)\n1\nMother’s Husband\n1\nFormer Husband\n3\nTotal\n51",
+   "pdf": "9.3.22",
+   "web_words": 38,
+   "pdf_words": 0,
+   "before": "Relationship to Victim\nMasked Individuals\n2\nBrother\n3",
+   "after": "Stop Honor Killings added: ‘In previous quarterly reports,",
+   "before_pdf": "it documented in the fourth quarter of 2024:",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Relationship to Victim\nCount of Relationship to Victim\nMasked Individuals\n2\nBrother",
+   "pdf": "9.",
+   "web_words": 11,
+   "pdf_words": 1,
+   "before": "it documented in the fourth quarter of 2024:",
+   "after": "3\nBrother and Husband\n1\nFather\n4\nSon",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 23
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Province\nCount of Province\nEast Azerbaijan\n4\nWest Azerbaijan",
+   "pdf": "9.",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "it documented in the fourth quarter of 2024:",
+   "after": "2\nArdabil\n1\nIsfahan\n3\nAlborz\n3\nIlam",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Ardabil\n1\nIsfahan\n3\nAlborz\n3\nIlam\n2\nTehran\n18\nKhorasan Razavi\n2\nKhuzestan\n2\nFars",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "of Province\nEast Azerbaijan\n4\nWest Azerbaijan\n2",
+   "after": "6\nKermanshah\n3\nLorestan\n2\nMarkazi\n3\nTotal",
+   "before_pdf": "in the fourth quarter of 2024:\n9.2.",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": null,
+    "section": "Version control and feedback",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Kermanshah\n3\nLorestan\n2\nMarkazi\n3\nTotal\n51",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "18\nKhorasan Razavi\n2\nKhuzestan\n2\nFars\n6",
+   "after": "In January 2025, the European Union Agency for",
+   "before_pdf": "the fourth quarter of 2024:\n9.2.6",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "credibility and other checks/referrals\n1.1. Credibility",
+   "after": "For information on assessing credibility, see the instruction",
+   "before_pdf": "credibility and other checks/referrals\n1.1 Credibility",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 4
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the instruction on Assessing Credibility and Refugee Status.",
+   "after": "Decision makers must also check if there has",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 4
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Visa Matches, Asylum Claims from UK Visa Applicants).",
+   "after": "Decision makers must also consider making an international",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 4
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sharing process (Migration 5 biometric data-sharing process)).",
+   "after": "In cases where there are doubts surrounding a",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 4
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for disclosure – End of section\n1.2 Exclusion",
+   "after": "Decision makers must consider whether there are serious",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "case must be considered on its individual facts.",
+   "after": "If the person is excluded from the Refugee",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "a wider range of exclusions than refugee status).",
+   "after": "For guidance on exclusion and restricted leave, see",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "disclosure – End of section\n2. Convention reason(s)",
+   "after": "Actual or imputed membership of a particular social",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "imputed membership of a particular social group (PSG).",
+   "after": "Women form a PSG in Iran within the",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "perceived as being different by the surrounding society.",
+   "after": "Although women form a PSG, establishing such membership",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "account of her membership of such a group.",
+   "after": "Although relating to forced marriage and not ‘honour’",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "which the IAT’s full reasoning was explained.",
+   "after": "For further guidance on the 5 Refugee Convention",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Instruction, Assessing Credibility and Refugee Status.\n3. Risk",
+   "after": "Women and girls, in general, are unlikely to",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "place of residence\neducation; and\nsocio-economic status",
+   "after": "In general, the risk of becoming a victim",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and are most reported in the Tehran province.",
+   "after": "The onus is on a woman or girl",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "honour-based crime on her return to Iran.",
+   "after": "Islamic law gives individuals the right to demand",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "ordered to pay ‘blood money’ (see Penal Code).",
+   "after": "An ‘honour’ crime may be committed or ordered",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "or travelling without permission (see Definition and motives).",
+   "after": "For an assessment of risk in relation to",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Iran: Sexual orientation and gender identity or expression.",
+   "after": "There are no precise or reliable statistics on",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "see Prevalence and perpetrators and Access to justice).",
+   "after": "Several sources indicate that honour-based violence occurs",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "increasingly being falsely reported as suicides (see Locations).",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on Assessing Credibility and Refugee Status.\n4. Protection",
+   "after": "A woman or girl who has a well-",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is unlikely to obtain protection from the state.",
+   "after": "This is because in general, the state is",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "provides leniency towards most perpetrators of honour killings.",
+   "after": "Decision makers must consider each case on its",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "be able to seek and obtain state protection.",
+   "after": "Although women are protected by law in theory,",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "children and Cultural and societal attitudes towards women).",
+   "after": "The Penal Code does not specifically criminalise ‘honour’",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Iran: ‘Zina’ (sex outside of marriage and adultery)).",
+   "after": "A national law protecting the safety and wellbeing",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "see Legal framework relating to women and children).",
+   "after": "In the male-dominated justice system, discriminatory attitudes",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Note on Iran: Women – early and forced marriage).",
+   "after": "Support in the form of hotlines and intervention",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to their abusive households (see Shelter and support).",
+   "after": "For further guidance on assessing the availability of",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on Iran: Actors of Protection.\n5. Internal relocation",
+   "after": "Where the woman or girl has a well-",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of influence over the state authorities and mechanisms",
+   "after": "Internal relocation may be viable if the woman",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of influence over the state authorities and mechanisms.",
+   "after": "Whilst there are no legal barriers to a",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and Conditions faced by single and divorced women).",
+   "after": "When assessing internal relocation, in the reported case",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "authorities and mechanisms (paras 68 and 69.v).",
+   "after": "For further guidance on considering internal relocation and",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on Assessing Credibility and Refugee Status.\n6. Certification",
+   "after": "Where a claim is refused, it is unlikely",
+   "where": {
+    "heading": "certification",
+    "paragraph": null,
+    "section": "6. Certification",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of the Nationality, Immigration and Asylum Act 2002.",
+   "after": "For further guidance on certification, see Certification of",
+   "where": {
+    "heading": "certification",
+    "paragraph": null,
+    "section": "6. Certification",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to retribution (qisas) and payment of blood money.”’",
+   "after": "On 23 April 2024, the US Department of",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "exempt from capital punishment for killing their children.’",
+   "after": "On 16 September 2024, Deutsche Welle (DW), a",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "punishment are involved in or condoning the killing.’",
+   "after": "An ‘Annual Report on the Death Penalty in",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "status of the culprit shall not prevent qisas.”’",
+   "after": "The same annual report also stated:\nT]he",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "death (Article 302)\nKilling a rapist (Article 302)’",
+   "after": "On 12 March 2025, the UN Human Rights",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "2 Legal framework relating to women and children",
+   "after": "The Iran Data Portal, an online portal which",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "in all respects, in conformity with Islamic criteria ...’",
+   "after": "On 2 December 2024, a Factsheet published by",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of their nationality to their children, and more.’",
+   "after": "Human Rights Watch (HRW) published its ‘World Report",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "domestic violence to prevent abuse and protect survivors.’",
+   "after": "An article published on 28 November 2024 by",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Code, notorious for its discriminatory treatment of women.’",
+   "after": "On 14 April 2023, IranWire, an Iranian news",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is to criminalize certain misogynic and “wrong” traditions.’",
+   "after": "In June 2024, the European Union Agency for",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "perpetrated by the state and non-state actors”.’",
+   "after": "An undated webpage entitled ‘Prevention of Violence against",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the Convention on the Rights of the Child.’",
+   "after": "An article published on 23 June 2020 by",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "until the prosecutor becomes involved in the case.’",
+   "after": "An blog post published by the Atlantic Council,",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.10",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for child abuse ... are not a sufficient deterrence.’",
+   "after": "On 29 April 2025, Amnesty International (AI) published",
+   "where": {
+    "heading": "Legal_framework_relating",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "punishments.’\n8. Cultural and societal attitudes towards women",
+   "after": "The NCRI Women’s Committee published an article",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of national security and carries the heaviest penalties.’",
+   "after": "The EUAA country guidance note, published in January",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "jobs that he considered contrary to “family values”.’",
+   "after": "On 6 March 2025, the Center for Human",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is codified in law and entrenched in practice.’",
+   "after": "An article dated 24 March 2025 published by",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "including cultural attitudes that treat women as property ...’",
+   "after": "The USSD International Religious Freedom report, covering events",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "risked fines or even closure of their establishments.’",
+   "after": "The Amnesty International report, published on 29 April",
+   "where": {
+    "heading": "Cultural_and_societal",
+    "paragraph": null,
+    "section": "8. Cultural and societal attitudes towards women",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Honour-based violence\n9.1 Definition and motives",
+   "after": "The DFAT Iran Country Information Report 2023 described",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "a perceived insult to the family’s “honour”.’",
+   "after": "The same Country Information Report went on to",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "having consensual sex outside marriage or getting divorced.’",
+   "after": "On 3 January 2025, an independent body called",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "suspicion, with no evidence to justify the accusations.’",
+   "after": "An article published by Iran International, a London-",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "laws and light sentences that encourage the behavior.’",
+   "after": "A Middle East Institute (MEI) article, published on",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "punish women for bringing “disgrace” upon their families ...’",
+   "after": "The EUAA Country Focus COI report, citing information",
+   "where": {
+    "heading": "Definition_and_motives",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "as suicide or an accident”.’\n9.2 Locations",
+   "after": "The article published by the Women’s Committee",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of the country has shown a growing trend.’",
+   "after": "On 6 July 2023, the Middle East Eye (",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "years, 41 murders took place in Tehran province.’",
+   "after": "In September 2023, the Netherlands Ministry of Foreign",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Baluchistan province in the southeast of the country.’",
+   "after": "An article published on 21 May 2024 by",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and villages, often being reported as female suicides.’",
+   "after": "The January 2025 Stop Honor Killings fourth quarterly",
+   "where": {
+    "heading": "Locations",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the dress-code.’\n9.3 Prevalence and perpetrators",
+   "after": "The article published by the Women’s Committee",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "domestic murders by their husbands, fathers, or brothers.’",
+   "after": "The MEE article that was published on 6",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "March 2021 to the end of June 2023.",
+   "after": "The same MEE article also stated: ‘The report",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "members such as their in-laws and cousins.’",
+   "after": "An article published by IranWire on 11 July",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "reported number of ‘honour’ killings was based upon.",
+   "after": "The DFAT Iran Country Information Report 2023 stated: ‘",
+   "where": {
+    "heading": "Prevalence_and_perpetrators",
+    "paragraph": null,
+    "section": "9. Honour-based violence",
+    "page": 20
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "7.1.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "decisions.\n7. Legal context\n7.1 Penal code",
+   "after": "The Iran Human Rights Documentation Centre (IHRDC), a",
+   "where": {
+    "heading": "Penal_code",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 10
+   }
+  }
+ ],
+ "not_listed": 55,
+ "paragraphs": {
+  "same": 10,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 132,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 374,
+ "list_items": 37,
+ "tables": 0,
+ "figures": 5,
+ "footnotes": 194,
+ "bookmarks": 47,
+ "warnings": [
+  "footnotes with no mark found in the text: 51, 64, 77"
+ ],
+ "figure_pages": {
+  "5758d8de5d66b2b0c9bc716698991da3a5bf1769637a20afb30cb7f635411195.jpg": 16,
+  "5a2e0dd8b9a5adb68824bcc1417502b3a74af00e404f1b36c5c82a61f115b41d.jpg": 17,
+  "51ca48f44c0ca53558565db0a3027f05a5ec805f2c6b72600a31c694ac211606.jpg": 18,
+  "8894caaf7b720bf29aa7fc0442ca62c90642cf0e1cb5d582630f73c5a75b22a9.jpg": 19,
+  "2e1852e3ea2eab55aa2c63801b01ae78beb2220bb6ebd8cafcf1a244dcf7663d.jpg": 27
+ },
+ "figure_sizes": {
+  "5758d8de5d66b2b0c9bc716698991da3a5bf1769637a20afb30cb7f635411195.jpg": [
+   891,
+   714
+  ],
+  "5a2e0dd8b9a5adb68824bcc1417502b3a74af00e404f1b36c5c82a61f115b41d.jpg": [
+   742,
+   666
+  ],
+  "51ca48f44c0ca53558565db0a3027f05a5ec805f2c6b72600a31c694ac211606.jpg": [
+   561,
+   422
+  ],
+  "8894caaf7b720bf29aa7fc0442ca62c90642cf0e1cb5d582630f73c5a75b22a9.jpg": [
+   488,
+   550
+  ],
+  "2e1852e3ea2eab55aa2c63801b01ae78beb2220bb6ebd8cafcf1a244dcf7663d.jpg": [
+   508,
+   329
+  ]
+ },
+ "figure_text": {
+  "5758d8de5d66b2b0c9bc716698991da3a5bf1769637a20afb30cb7f635411195.jpg": 0,
+  "5a2e0dd8b9a5adb68824bcc1417502b3a74af00e404f1b36c5c82a61f115b41d.jpg": 1,
+  "51ca48f44c0ca53558565db0a3027f05a5ec805f2c6b72600a31c694ac211606.jpg": 1,
+  "8894caaf7b720bf29aa7fc0442ca62c90642cf0e1cb5d582630f73c5a75b22a9.jpg": 0,
+  "2e1852e3ea2eab55aa2c63801b01ae78beb2220bb6ebd8cafcf1a244dcf7663d.jpg": 0
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Syria: Religious minorities",
+ "cover_version": "1.0",
+ "cover_date": "July 2025",
+ "pdf_sha256": "e5af1ef1fdc7222334b3c59ab3f846ea47bc32498a36bdbba84e1c34e0f7a3a5",
+ "images": [
+  "2e1852e3ea2eab55aa2c63801b01ae78beb2220bb6ebd8cafcf1a244dcf7663d.jpg",
+  "51ca48f44c0ca53558565db0a3027f05a5ec805f2c6b72600a31c694ac211606.jpg",
+  "5758d8de5d66b2b0c9bc716698991da3a5bf1769637a20afb30cb7f635411195.jpg",
+  "5a2e0dd8b9a5adb68824bcc1417502b3a74af00e404f1b36c5c82a61f115b41d.jpg",
+  "8894caaf7b720bf29aa7fc0442ca62c90642cf0e1cb5d582630f73c5a75b22a9.jpg"
+ ]
+}

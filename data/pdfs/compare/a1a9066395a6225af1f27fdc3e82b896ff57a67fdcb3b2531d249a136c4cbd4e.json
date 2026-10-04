@@ -1,0 +1,346 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-military-service-syria-july-2025-accessible",
+ "pdf_sha256": "a1a9066395a6225af1f27fdc3e82b896ff57a67fdcb3b2531d249a136c4cbd4e",
+ "body_sha256": "752f74bfa052f37c2136a9fed27c5b028c328d94c89ccaa6343f3e45b7cda582",
+ "words": {
+  "web": 7048,
+  "pdf": 7096
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 2,
+   "pdf_words": 29,
+   "share": 0.002192,
+   "passages": 2,
+   "sizes": {
+    "passage": 2,
+    "spelling": 2
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 11
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 29
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 16
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 12
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2025",
+   "pdf": "1.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "13 May 2025"
+   ],
+   "pdf": [
+    "13 May 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 64,
+   "pdf": 65,
+   "pdf_raw": 65,
+   "differ": true
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 70,
+   "pdf": 32
+  },
+  "drafts": [
+   "footnote count differs: web 64, PDF 65"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 4,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2025\nSANA, President Al-Sharaa: Syria will not go backwards and we will pursue ..., 7 March",
+   "web_words": 0,
+   "pdf_words": 16,
+   "before": "three officers suspected of Tadamon massacre, 17 February",
+   "after": "2025\nNew Arab, Syria lifts Assad-era travel",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.1.3",
+    "section": "Version control and feedback",
+    "page": 14
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.3.5 For further guidance on assessing risk, see the Asylum Instruction on",
+   "web_words": 0,
+   "pdf_words": 11,
+   "before": "of former security force personnel).\n3.3.5",
+   "after": "Assessing Credibility and Refugee Status.\n4. Protection\n4.",
+   "before_pdf": "criminals (see Arrests of former security force personnel).",
+   "where": {
+    "heading": "risk-based-on-desertion-or-evasion",
+    "paragraph": "3.3.5",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "official.",
+   "pdf": "officials.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and families, eyewitness accounts and reports from state",
+   "after": "In its report covering January 2025, the SNHR",
+   "where": {
+    "heading": "arrests-former-security-personnel",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "International",
+   "pdf": "Internation",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "date. Accessed: 11 March 2025\nCarnegie Endowment for",
+   "after": "Peace\nAnatomy of a Military Fall, 10 December",
+   "where": {
+    "heading": "carnegie-endowment-for-international-peace",
+    "paragraph": "10.1.3",
+    "section": "Bibliography",
+    "page": 17
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.1.3",
+    "section": "Version control and feedback",
+    "page": 20
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "so where, on account of a Convention reason:",
+   "after": "military service would involve acts, with which the",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 3
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "b)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to the basic rules of human conduct, or",
+   "after": "the conditions of military service would be so",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 3
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "c)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "so harsh as to amount to persecution, or",
+   "after": "the punishment for draft evasion or desertion is",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 3
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 66,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

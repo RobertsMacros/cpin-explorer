@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
+ "pdf_sha256": "cf3bcb034e800531f2d2e786f38a112261c1bd00ed769551a29666708d085e7c",
+ "body_sha256": "937777001f75b6bcecf4f7362ba6a51a899a305edfde30a9201c3f305cc9392f",
+ "figures": [
+  {
+   "image": "b4ee12246c8314d69b6388db3f46f5cd5be670e8c653e2ce3b7bbcb6a7d43649.png",
+   "tag": "p",
+   "index": 193,
+   "key": "9210thefollowingtableproducedbybridgeshowsthegenderidentityo",
+   "page": 28
+  },
+  {
+   "image": "f3ccdbda01b3c3e67ba9a9111eb531872ed8b0015f93fa2fcbb38d0fe2c6af34.png",
+   "tag": "p",
+   "index": 194,
+   "key": "9211thefollowingtableproducedbybridgeshowsthesexualorientati",
+   "page": 28
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 4,
+ "web_figures": 2,
+ "left_in_pdf": {}
+}

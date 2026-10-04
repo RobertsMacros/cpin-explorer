@@ -1,0 +1,226 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-returnees-after-fall-of-al-assad-regime-syria-july-2025-accessible",
+ "pdf_sha256": "35bd68c392fa8e7b29c1c7ec2cab8341dff4204f0e976a3e0b2051c6d19c0a2f",
+ "body_sha256": "e587791940154824e78551c1d8c1bbb15e41e031d0142338b2cc59dc1fbbfca9",
+ "words": {
+  "web": 8039,
+  "pdf": 8060
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2025",
+   "pdf": "1.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "7 June 2025"
+   ],
+   "pdf": [
+    "7 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 5,
+   "pdf": 5,
+   "web_notices": 5,
+   "pdf_notices": 6
+  },
+  "footnotes": {
+   "web": 33,
+   "pdf": 33,
+   "pdf_raw": 33,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 77,
+   "pdf": 43
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "12.2.2",
+    "section": "Version control and feedback",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.1.7",
+   "pdf": "7.1.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disinformation and misinformation\n7.1 Disinformation and misinformation",
+   "after": "On 3 January 2025, Deutsche Welle (DW) reported",
+   "where": {
+    "heading": "disinformation-and-misinformation",
+    "paragraph": "7.1.7",
+    "section": "Country information",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.1",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "2 Opposition offensive leading to fall of regime",
+   "after": "In the early morning of Sunday 8 December",
+   "where": {
+    "heading": "opposition-offensive-leading-to-fall-of-regime",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 12
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 71,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "7.1.7"
+  ],
+  "unconfirmed": []
+ }
+}

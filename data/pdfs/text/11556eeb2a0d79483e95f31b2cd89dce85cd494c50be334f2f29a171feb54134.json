@@ -1,0 +1,69 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 153,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 247,
+ "paragraphs": 1206,
+ "list_items": 150,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 412,
+ "bookmarks": 255,
+ "warnings": [
+  "page 8: bookmark not found in the text: 'Introduction'",
+  "page 8: bookmark not found in the text: 'Basis of claim'",
+  "page 8: bookmark not found in the text: '1.2.5 The is aimed at:'",
+  "page 26: bookmark not found in the text: 'The trafficking phenomenon'",
+  "page 26: bookmark not found in the text: 'Definition'",
+  "page 46: bookmark not found in the text: '4.1.7 See for further information on this subject.'",
+  "page 47: bookmark not found in the text: '4.2.4 See for further information on this subject.'",
+  "page 57: bookmark not found in the text: '6.5.7 Information about the 2017 law on free legal aid can b'",
+  "page 69: bookmark not found in the text: '8.3.5 See for further information on this subject.'",
+  "page 70: bookmark not found in the text: '9.2.2 See for further information on this subject.'",
+  "page 74: bookmark not found in the text: '9.5.7 See for further information on this subject.'",
+  "page 77: bookmark not found in the text: '9.7.4 See for further information on this subject.'",
+  "page 80: bookmark not found in the text: '9.9.4 See for further information on this subject.'",
+  "page 101: bookmark not found in the text: '12.8.5 See for information about the situation for boys.'",
+  "page 106: bookmark not found in the text: '12.11.6 See for further information on this subject.'",
+  "page 107: bookmark not found in the text: '13.1.6 See for further information on this subject.'",
+  "page 109: bookmark not found in the text: '13.2.5 See for further information on this subject.'",
+  "page 111: bookmark not found in the text: '13.4.2 See for information on this subject.'",
+  "page 112: bookmark not found in the text: '13.6.4 See for further information on this subject.'",
+  "footnotes with no mark found in the text: 83, 244, 353"
+ ],
+ "figure_pages": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 1,
+  "19b3209f97f42bc1be34ad5eb74441d0635996a72b61c27dd37ce5efecab6e43.jpg": 37,
+  "e42c48217067b8fa9385fda8be466678a2ba6fc63a6d1f10133a3595dbaff4e4.jpg": 134
+ },
+ "figure_sizes": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": [
+   318,
+   148
+  ],
+  "19b3209f97f42bc1be34ad5eb74441d0635996a72b61c27dd37ce5efecab6e43.jpg": [
+   677,
+   725
+  ],
+  "e42c48217067b8fa9385fda8be466678a2ba6fc63a6d1f10133a3595dbaff4e4.jpg": [
+   742,
+   984
+  ]
+ },
+ "figure_text": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 0,
+  "19b3209f97f42bc1be34ad5eb74441d0635996a72b61c27dd37ce5efecab6e43.jpg": 0,
+  "e42c48217067b8fa9385fda8be466678a2ba6fc63a6d1f10133a3595dbaff4e4.jpg": 78
+ },
+ "first_bookmark_page": 1,
+ "cover_title": "Country Policy and Information Note Albania: Human trafficking",
+ "cover_version": "10.0",
+ "cover_date": "February 2021",
+ "pdf_sha256": "11556eeb2a0d79483e95f31b2cd89dce85cd494c50be334f2f29a171feb54134",
+ "images": [
+  "19b3209f97f42bc1be34ad5eb74441d0635996a72b61c27dd37ce5efecab6e43.jpg",
+  "e42c48217067b8fa9385fda8be466678a2ba6fc63a6d1f10133a3595dbaff4e4.jpg",
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png"
+ ]
+}

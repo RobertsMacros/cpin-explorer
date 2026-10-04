@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 52,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 44,
+ "paragraphs": 341,
+ "list_items": 16,
+ "tables": 3,
+ "figures": 1,
+ "footnotes": 92,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 64, 65, 66"
+ ],
+ "figure_pages": {
+  "ee09f83a141ba835aa8a8615fc946406d5a1e28947204dbd8bda0be389efaf27.png": 38
+ },
+ "figure_sizes": {
+  "ee09f83a141ba835aa8a8615fc946406d5a1e28947204dbd8bda0be389efaf27.png": [
+   918,
+   398
+  ]
+ },
+ "figure_text": {
+  "ee09f83a141ba835aa8a8615fc946406d5a1e28947204dbd8bda0be389efaf27.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Libya: Security and humanitarian situation",
+ "cover_version": "1.0",
+ "cover_date": "June 2016",
+ "pdf_sha256": "c65222cb1f29b00088b9544604da1eebf2c115c9ab866be7b4444b5d319ad992",
+ "images": [
+  "ee09f83a141ba835aa8a8615fc946406d5a1e28947204dbd8bda0be389efaf27.png"
+ ]
+}

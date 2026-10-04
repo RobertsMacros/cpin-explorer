@@ -1,0 +1,33 @@
+{
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-mental-healthcare-vietnam-september-2025-accessible",
+ "pdf_sha256": "51a0620ddd8fe4fba794cecd3050088744d3844db0b535012fbfef130bb5c516",
+ "body_sha256": "0fdea48f10c78e24dbf324463bc2ef80b5e35b86df15ef82e73aef0cbad5cc19",
+ "figures": [
+  {
+   "image": "f5dc11d0a9b002a7275c331e65c113669a99e90b3bfbf67ffda828bd0d89e598.png",
+   "tag": "p",
+   "index": 56,
+   "key": "512thebelowtabletakenfromtheworldbank2024reportshowstheforma",
+   "page": 10
+  },
+  {
+   "image": "5cea6023028bbf65ed649c83e1986bb7c446e544fdefc6b00c7e3e67887fff23.png",
+   "tag": "p",
+   "index": 77,
+   "key": "532thebelowcharthasbeentakenfromtheworldbankreportandshowsth",
+   "page": 14
+  },
+  {
+   "image": "e32d255f1ea014796228bb0d746e843f65f7a6f568f771d2225e25133d9ab1cf.png",
+   "tag": "p",
+   "index": 86,
+   "key": "612thetablebelowistakenfromtheworldbank2024reportandshowsthe",
+   "page": 15
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 6,
+ "web_figures": 3,
+ "left_in_pdf": {}
+}

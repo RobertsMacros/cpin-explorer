@@ -1,0 +1,425 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nepal/country-policy-and-information-note-political-affiliation-nepal-may-2026-accessible",
+ "pdf_sha256": "bdbf03aeb9458bb72e6466d70997dcbff561c097ab0322d05655d33c7de4f72f",
+ "body_sha256": "ef53c16b518fe29b0f98024d4f02dcb06cb044e2dc02da5bca3acd38dce564a6",
+ "words": {
+  "web": 18883,
+  "pdf": 18964
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 3,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 93
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 3,
+    "pdf_words": 6
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 93
+   }
+  },
+  "ours": {
+   "differences": 8,
+   "web_words": 7,
+   "pdf_words": 4
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "May 2026",
+   "pdf": "2.0",
+   "pdf_date": "May 2026"
+  },
+  "section_updated": {
+   "web": [
+    "19 May 2026"
+   ],
+   "pdf": [
+    "19 May 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 7
+  },
+  "footnotes": {
+   "web": 133,
+   "pdf": 133,
+   "pdf_raw": 133,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 3
+  },
+  "headings": {
+   "web": 45,
+   "pdf": 43
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4\n1.2.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.6 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.7 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.2.8",
+   "web_words": 0,
+   "pdf_words": 69,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.gov.uk/government/publications/considering-asylum-claims-and-assessing-credibility-instruction).",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "the instruction on Assessing Credibility and Refugee Status]",
+   "after": "1.1.2 Decision makers must also check",
+   "before_pdf": "the instruction on Assessing Credibility and Refugee Status.",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.1",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.1.13",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Israeli military operations against Iran, and energy shortages.’",
+   "after": "On 27 March 2026 Balen Shah was sworn",
+   "where": {
+    "heading": "election-results",
+    "paragraph": "12.1.12",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.5.",
+   "pdf": "13.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "waist, primarily in the head, neck, and chest.’",
+   "after": "6 The Kathmandu Post noted in November 2025",
+   "before_pdf": "waist, primarily in the head, neck, and chest.'",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.6",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.5.",
+   "pdf": "13.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "that there were : ‘...more than 2,000 injured.’",
+   "after": "7 The Armed Conflict Location and Event Data",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.7",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.5.",
+   "pdf": "13.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "violence, though violence may be used against them.’",
+   "after": "8 During August to December 2025 ACLED recorded",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.8",
+    "section": "Country information",
+    "page": 32
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Violence against Civilians",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "other forms of violence\n0\n3\n2\n5",
+   "after": "Sexual violence\n0\n0\n1\n1\nRiots\nMob",
+   "before_pdf": "other forms of violence)\n0\n3\n2\n5",
+   "where": {
+    "heading": "demonstrations-protests",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Nov Dec",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Sub event type\nAug\nSep\nOct\nNov\nDec",
+   "after": "Event type total\nViolence against civilians\nAttack\n1",
+   "before_pdf": "Sub event type\nAug\nSep\nOct\nNov Dec",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.8",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Protests",
+   "pdf": "727",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Peaceful protests\n156\n92\n60\n251\n168\n727",
+   "after": "Protests with intervention\n5\n3\n5\n6\n5",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.8",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Riots",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Violent demonstrations\n13\n146\n5\n17\n8\n189",
+   "after": "Mob violence\n18\n24\n9\n2\n5\n58",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.8",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Riots",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1\nRiots\nMob violence\n7\n13\n14\n34",
+   "after": "Violent demonstrations\n16\n7\n2\n25\nProtests\nPeaceful",
+   "where": {
+    "heading": "demonstrations-protests",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Protests",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "25\nProtests\nPeaceful protest\n66\n38\n74\n178",
+   "after": "Protest with intervention\n2\n3\n1\n7\nExplosions/",
+   "where": {
+    "heading": "demonstrations-protests",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "4",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "civilians\nAttack\n1\n1\n1\n1\n0\n4",
+   "after": "Riots\nViolent demonstrations\n13\n146\n5\n17\n8",
+   "where": {
+    "heading": "gen-z",
+    "paragraph": "13.5.8",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "36.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "history due to, amongst other things, ideological differences.",
+   "after": "11.1.2 The Wire, run by the",
+   "before_pdf": "history due to, amongst other things, ideological differences",
+   "where": {
+    "heading": "splits-and-factions",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 19
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 130,
+  "different": {
+   "13.5.6": "13.2.6",
+   "13.5.7": "13.2.7",
+   "13.5.8": "13.2.8"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 3,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

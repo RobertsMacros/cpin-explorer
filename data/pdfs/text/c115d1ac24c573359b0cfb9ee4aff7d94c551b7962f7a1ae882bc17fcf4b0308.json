@@ -1,0 +1,34 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 52,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 48,
+ "paragraphs": 395,
+ "list_items": 30,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 177,
+ "bookmarks": 8,
+ "warnings": [],
+ "figure_pages": {
+  "249c29e5c7cfbf48564917bd68e430a38a0eff256f4d08fb7c8d890082570522.jpg": 16
+ },
+ "figure_sizes": {
+  "249c29e5c7cfbf48564917bd68e430a38a0eff256f4d08fb7c8d890082570522.jpg": [
+   919,
+   549
+  ]
+ },
+ "figure_text": {
+  "249c29e5c7cfbf48564917bd68e430a38a0eff256f4d08fb7c8d890082570522.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Turkey: Kurds",
+ "cover_version": "3.0",
+ "cover_date": "February 2020",
+ "pdf_sha256": "c115d1ac24c573359b0cfb9ee4aff7d94c551b7962f7a1ae882bc17fcf4b0308",
+ "images": [
+  "249c29e5c7cfbf48564917bd68e430a38a0eff256f4d08fb7c8d890082570522.jpg"
+ ]
+}

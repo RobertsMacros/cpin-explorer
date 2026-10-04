@@ -1,0 +1,50 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 22,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 32,
+ "paragraphs": 149,
+ "list_items": 47,
+ "tables": 6,
+ "figures": 3,
+ "footnotes": 64,
+ "bookmarks": 32,
+ "warnings": [
+  "footnotes with no mark found in the text: 3, 62"
+ ],
+ "figure_pages": {
+  "fe19f09d6adc8ffee769b8b9d1e3916399c779dcaf24debf34f4bbd77c05b339.png": 5,
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": 6,
+  "ac21883eaee7c5400c84b03b372cebdf3fb83d81f44e076bb55f4da8f41e367f.jpg": 8
+ },
+ "figure_sizes": {
+  "fe19f09d6adc8ffee769b8b9d1e3916399c779dcaf24debf34f4bbd77c05b339.png": [
+   466,
+   318
+  ],
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": [
+   919,
+   478
+  ],
+  "ac21883eaee7c5400c84b03b372cebdf3fb83d81f44e076bb55f4da8f41e367f.jpg": [
+   885,
+   598
+  ]
+ },
+ "figure_text": {
+  "fe19f09d6adc8ffee769b8b9d1e3916399c779dcaf24debf34f4bbd77c05b339.png": 1,
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": 0,
+  "ac21883eaee7c5400c84b03b372cebdf3fb83d81f44e076bb55f4da8f41e367f.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Background Note Turkey",
+ "cover_version": "5.0",
+ "cover_date": "June 2021",
+ "pdf_sha256": "aa42af32a024b7ad0c64f79bbebf0a75f825c66d76a1e4e10b85c26680928bf4",
+ "images": [
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg",
+  "ac21883eaee7c5400c84b03b372cebdf3fb83d81f44e076bb55f4da8f41e367f.jpg",
+  "fe19f09d6adc8ffee769b8b9d1e3916399c779dcaf24debf34f4bbd77c05b339.png"
+ ]
+}

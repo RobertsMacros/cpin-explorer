@@ -1,0 +1,265 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-actors-of-protection-ethiopia-february-2024-accessible",
+ "pdf_sha256": "a21aa2d14ca7846f1ae6d5abe50656820b26a1f17092449d2b9dbb987af98200",
+ "body_sha256": "2ead9f41ab75fbdf52ab8a8da5d706a983b270e3dd8229929e9a86c86bcf82b1",
+ "words": {
+  "web": 23948,
+  "pdf": 23945
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 7,
+   "pdf_words": 3,
+   "share": 0.000209,
+   "passages": 0,
+   "sizes": {
+    "spelling": 2,
+    "number": 1,
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 7,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 4,
+    "web_words": 7,
+    "pdf_words": 3
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "February 2024",
+   "pdf": "2.0",
+   "pdf_date": "February 2024"
+  },
+  "section_updated": {
+   "web": [
+    "12 January 2024",
+    "12 January 2024",
+    "3 January 2024",
+    "12 January 2024",
+    "12 January 2024",
+    "3 January 2024",
+    "3 January 2024",
+    "4 January 2024",
+    "12 January 2024",
+    "12 January 2024"
+   ],
+   "pdf": [
+    "12 January 2024",
+    "12 January 2024",
+    "3 January 2024",
+    "12 January 2024",
+    "12 January 2024",
+    "3 January 2024",
+    "3 January 2024",
+    "4 January 2024",
+    "12 January 2024",
+    "12 January 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 189,
+   "pdf": 189,
+   "pdf_raw": 189,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 60,
+   "pdf": 58
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2C%20for%20the%20violence.)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "to reporting from the Ethiopian Human Rights Commission%",
+   "after": "and the media.’\nsection updated: 4 January 2024",
+   "before_pdf": "to reporting from the Ethiopian Human Rights Commission",
+   "where": {
+    "heading": "Human_rights_abuses",
+    "paragraph": "8.4.8",
+    "section": "8. Capacity and effectiveness of security forces",
+    "page": 4
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Anti-",
+   "pdf": "Ant-",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a national survey by the Federal Ethics and",
+   "after": "Corruption Commission (FEACC) more than 60% participants thought",
+   "where": {
+    "heading": "protection",
+    "paragraph": "2.1.4",
+    "section": "2. Protection",
+    "page": 6
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "3.1.7 Nationsonline.",
+   "pdf": "3.1.7 Nationsonlin.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Office for the Coordination of Humanitarian Affairs (OCHA).",
+   "after": "org has provided below map of Ethiopia showing",
+   "where": {
+    "heading": "brief-overview-of-political-institutions",
+    "paragraph": "3.1.7",
+    "section": "3. Brief overview of political institutions",
+    "page": 10
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "a",
+   "pdf": "below",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "9.6.6 The same source has provided",
+   "after": "figure showing the results of Ethiopian’s confidence",
+   "where": {
+    "heading": "Access_to_justice",
+    "paragraph": "9.6.6",
+    "section": "9. Court system",
+    "page": 45
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "government;",
+   "pdf": "govern-ment;",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "the fiscal and economic interests of the federal",
+   "after": "offences regarding counterfeit currency; offences regarding forgery of",
+   "where": {
+    "heading": "federal-and-state-courts",
+    "paragraph": "9.1.1",
+    "section": "9. Court system",
+    "page": 39
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 208,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

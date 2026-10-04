@@ -14,6 +14,10 @@ topic ranks that note first.
 Record shape (Pagefind custom records, see web/build-search.mjs):
     {url, content, language, meta: {title, country, slug, note, kind, version, month, section,
      anchor, level, type, iso_a2}, filters: {country: [name], kind: [kind], type: [title|text]}}
+
+A note published as a PDF only is searched through the text extracted from its PDF (pdftext.py). That
+text is a reading of the PDF, not GOV.UK's own words in GOV.UK's own markup, so every record of such a
+note also carries `text_from_pdf: true` (rule 5): the site must show it as "From the PDF", never as verbatim.
 """
 import argparse
 import json
@@ -25,7 +29,7 @@ from urllib.parse import quote
 
 from lxml import html as lxml_html
 
-from . import config
+from . import config, pdftext
 from .store import Store, atomic_write, read_json
 
 DASHBOARD = config.ROOT / "prototypes" / "dashboard" / "data.json"
@@ -143,12 +147,14 @@ def reader_url(country: str, note: str, anchor: str = "", part: int | None = Non
             + (f"#{q(anchor)}" if anchor else ""))
 
 
-def note_records(country: dict, note: dict, index: dict, body: str) -> list[dict]:
+def note_records(country: dict, note: dict, index: dict, body: str, from_pdf: bool = False) -> list[dict]:
     """The title record and section records of one note. country/note are data.json entries.
 
     Pagefind treats records with the same URL as one page, so every URL is unique: the title record
     has none of a section's anchor, text before the first heading points at the reader's article
     (#doc), and a heading id GOV.UK used twice in one note gets a harmless &part=<n> on the repeat.
+
+    from_pdf: the body is text extracted from a PDF. Each record then has `text_from_pdf: true`.
     """
     edition = next((v for v in index.get("versions", []) if v["sha256"] == index.get("current_sha256")), {})
     title = (edition.get("title") or index.get("title") or note.get("title") or "").strip()
@@ -170,7 +176,7 @@ def note_records(country: dict, note: dict, index: dict, body: str) -> list[dict
         seen.add(url)
         return {"url": url, "content": content, "language": "en",
                 "meta": {**base, "section": section, "anchor": anchor, "level": str(level), "type": type_},
-                "filters": {**filters, "type": [type_]}}
+                "filters": {**filters, "type": [type_]}, **({"text_from_pdf": True} if from_pdf else {})}
 
     out = [record(title, "", "", 0, "title")]
     out += [record(s["content"], s["anchor"], s["section"], s["level"], "text", n) for n, s in enumerate(sections(body), 1)]
@@ -182,6 +188,13 @@ def build_records(store: Store, dashboard: dict, log=lambda *a: None):
     for country in dashboard["countries"]:
         for note in country["notes"]:
             if note.get("status") != "live" or note.get("pdf_only"):
+                continue
+            if note.get("text_from_pdf"):                     # published as a PDF only: its extracted text is searched
+                held = pdftext.load_text(store, note.get("pdf_sha256") or "")
+                if held:
+                    yield from note_records(country, note, {}, held[0], from_pdf=True)
+                else:
+                    log(f"skip {country['slug']}/{note['id']}: no text extracted from its PDF (./cpin pdftext)")
                 continue
             index = store.load_note(country["slug"], note["id"])
             if not index or index.get("status") != "live" or not index.get("current_sha256"):

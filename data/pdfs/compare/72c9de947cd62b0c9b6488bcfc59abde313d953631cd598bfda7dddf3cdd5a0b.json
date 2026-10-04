@@ -1,0 +1,451 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "burma/country-policy-and-information-note-rohingya-including-rohingya-in-bangladesh-burma-january-2026-accessible",
+ "pdf_sha256": "72c9de947cd62b0c9b6488bcfc59abde313d953631cd598bfda7dddf3cdd5a0b",
+ "body_sha256": "9af70f7edeb2e0f5bd025a13808f2b30b108323d0cf15d68c894b0adfb619fbf",
+ "words": {
+  "web": 28192,
+  "pdf": 28092
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 2,
+   "pdf_words": 5,
+   "share": 0.000124,
+   "passages": 0,
+   "sizes": {
+    "word": 4
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 6,
+    "pdf_words": 9
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 83,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 4,
+    "web_words": 2,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 6,
+    "pdf_words": 9
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 83,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 2,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "4.0",
+   "pdf_date": "January 2026"
+  },
+  "section_updated": {
+   "web": [
+    "5 January 2026"
+   ],
+   "pdf": [
+    "5 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 225,
+   "pdf": 225,
+   "pdf_raw": 225,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 106,
+   "pdf": 67
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 4,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Organisations (EAOs)",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "custody.’\n10.3 Forced recruitment by Ethnic Armed",
+   "after": "10.3.1 Regarding forced recruitment by the",
+   "where": {
+    "heading": "forced-recruitment",
+    "paragraph": "10.3.1",
+    "section": "Country information",
+    "page": 34
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "situation",
+   "pdf": "conditions",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "11. Humanitarian situation\n11.1 General socio-economic",
+   "after": "11.1.1 In regard to economic development",
+   "where": {
+    "heading": "general-socio-economic-situation",
+    "paragraph": "10.3.3",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "16.4 Discrimination",
+   "pdf": "16.4 Documentation",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "square feet, and some holding a dozen residents.’",
+   "after": "and legal rights\n16.4.5 In regard",
+   "where": {
+    "heading": "discrimination-and-legal-rights",
+    "paragraph": "16.3.17",
+    "section": "Country information",
+    "page": 50
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of the military regime.\n7.2 Origin of",
+   "after": "Rohingya\n7.2.1 In regard to Rohingya",
+   "where": {
+    "heading": "origin",
+    "paragraph": "7.1.1",
+    "section": "Country information",
+    "page": 10
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Comparison of reported access incidents over time\n2024 average: 115\nYear\nMonth\nReported Access Incidents\n2023\nJan\n59\n2023\nFeb\n95\n2023\nMar\n95\n2023\nApr\n110\n2023\nMay\n136\n2023\nJun\n134\n2023\nJul\n148\n2023\nAug\n120\n2023\nSep\n125\n2023\nOct\n151\n2023\nNov\n116\n2023\nDec\n95\n2024\nJan\n134\n2024\nFeb\n130\n2024\nMar\n117\n2024\nApr\n118\n2024\nMay\n88\n2024\nJun\n128\n2024\nJul\n90\n2024\nAug\n111\n2024\nSep\n115\n2024\nOct\n95\n2024\nNov\n84\n2024\nDec\n93\n2025\nJan\n82\n2025\nFeb\n74\n2025\nMar\n86\n2025\nApr\n77\n2025\nMay\n77\n2025\nJun\n84\n2025\nJul\n76\n2025\nAug\n108",
+   "pdf": "",
+   "web_words": 83,
+   "pdf_words": 0,
+   "before": "of delays in humanitarian assistance since January 2023:",
+   "after": "11.3.5 In regard to restrictions on",
+   "where": {
+    "heading": "humanitarian-aid",
+    "paragraph": "11.3.4",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 4.0, January 2026",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nIn general, the nature, repetition, and",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "10.3.2The",
+   "pdf": "10.3.2 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "shields in military operations, or have simply disappeared.’",
+   "after": "BROUK 2025 report noted:\nAccording to ground reports,",
+   "where": {
+    "heading": "forced-recruitment",
+    "paragraph": "10.3.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "17.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and are suspected of traveling onwards to Malaysia.’",
+   "after": "The UNHCR operational data portal last updated on",
+   "where": {
+    "heading": "indonesia",
+    "paragraph": "17.2.4",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.",
+   "pdf": "3.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "3.2 Non-state actors – the Arakan Army",
+   "after": "1 The Rohingya are likely to face a",
+   "where": {
+    "heading": "non-state-actors--the-arakan-army",
+    "paragraph": "3.2.1",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.2",
+   "pdf": "3.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "actors, namely the Arakan Army in Rakhine state.",
+   "after": "Hostilities in Rakhine State escalated from November 2023,",
+   "where": {
+    "heading": "non-state-actors--the-arakan-army",
+    "paragraph": "3.2.2",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.3",
+   "pdf": "3.2.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and 2025 (see Military operations in Rakhine State).",
+   "after": "The AA has taken control in northern Rakhine",
+   "where": {
+    "heading": "non-state-actors--the-arakan-army",
+    "paragraph": "3.2.3",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.4",
+   "pdf": "3.2.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the Arakan Army, Freedom of movement and IDPs).",
+   "after": "Human rights abuses against Rohingya in Rakhine State",
+   "where": {
+    "heading": "non-state-actors--the-arakan-army",
+    "paragraph": "3.2.4",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.2.5",
+   "pdf": "3.2.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "see Human rights violations by the Arakan Army).",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "non-state-actors--the-arakan-army",
+    "paragraph": "3.2.5",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.4.5",
+   "pdf": "16.4.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "dozen residents.’\n16.4 Discrimination and legal rights",
+   "after": "In regard to Rohingya refugee’s legal status",
+   "before_pdf": "dozen residents.’\n16.4 Documentation and legal rights",
+   "where": {
+    "heading": "discrimination-and-legal-rights",
+    "paragraph": "16.4.5",
+    "section": "Country information",
+    "page": 50
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "broadcaster in",
+   "pdf": "broadcasterin",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "VOA), described as the largest U.S international",
+   "after": "its article reported:\nA court in Argentina has",
+   "where": {
+    "heading": "accountability",
+    "paragraph": "9.6.3",
+    "section": "Country information",
+    "page": 25
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 265,
+  "different": {
+   "3.2.1": "3.1.1",
+   "3.2.2": "3.2.1",
+   "3.2.3": "3.2.2",
+   "3.2.4": "3.2.3",
+   "3.2.5": "3.2.4"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "16.4.5"
+  ],
+  "unconfirmed": []
+ }
+}

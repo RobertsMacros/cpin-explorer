@@ -1,9 +1,11 @@
 """Check the sources the notes cite: does each link still work, and where does it lead now?
 
-Politeness: one honest User-Agent, robots.txt honoured, one request at a time per site with a delay
-between them (many sites are checked in parallel), HEAD first and, where a site mishandles HEAD, a
-GET that reads no body. A site that refuses automated requests (401/403/429/451) is recorded as
-'restricted': that says nothing about whether the page exists, so it is never called broken.
+Politeness: one honest User-Agent, robots.txt honoured (its Crawl-delay too), one request at a time per
+site with a delay between them (many sites are checked in parallel), HEAD first and, where a site
+mishandles HEAD, a GET that reads no body. A site that refuses automated requests (401/403/429/451) is
+recorded as 'restricted': that says nothing about whether the page exists, so it is never called broken.
+A site whose robots.txt cannot be read (a network error, a 5xx, a 429) is asked for nothing else: its
+links are recorded with what that one request found, marked `asked: robots.txt`.
 
 For links that are broken or unreachable, the Internet Archive's availability API is asked for the
 capture closest to when the note cited them, so a reader can still see the source as cited.
@@ -24,6 +26,7 @@ from urllib.robotparser import RobotFileParser
 import httpx
 
 from . import config
+from .changes import valid_from
 from .links import extract_links
 from .store import Store, now_iso, read_json, write_json
 
@@ -74,14 +77,20 @@ def _material_change(a: str, b: str) -> bool:
 
 
 def cited_urls(store: Store, countries: set[str] | None = None) -> dict[str, dict]:
-    """Every http(s) link in current notes -> the notes citing it and when each note was published."""
+    """Every http(s) link in current notes -> the notes citing it and when the earliest of them was written.
+
+    "When" is the note's own "valid from" date. GOV.UK's date for a note is its country page's, which moves
+    whenever any note on the page changes: by that date a note of 2022 cites its sources in 2026, and the
+    archived copy offered for a dead link would be one from years after the Home Office read the page.
+    """
     found: dict[str, dict] = {}
     for country, note, index in store.iter_notes():
         if index.get("status") != "live" or (countries and country not in countries):
             continue
         current = next(v for v in index["versions"] if v["sha256"] == index["current_sha256"])
-        cited_at = current.get("public_updated_at") or current["first_seen"]
-        for link in extract_links(store.read_body(country, note, index["current_sha256"])):
+        body = store.read_body(country, note, index["current_sha256"])
+        cited_at = valid_from(body) or current.get("public_updated_at") or current["first_seen"]
+        for link in extract_links(body):
             if link["kind"] not in ("external", "govuk"):
                 continue
             url = urldefrag(link["href"])[0]
@@ -101,17 +110,24 @@ class SiteChecker:
     def __init__(self, client: httpx.Client, delay: float = PER_SITE_DELAY, sleep=time.sleep):
         self.client, self.delay, self.sleep = client, delay, sleep
 
-    def robots(self, origin: str) -> RobotFileParser:
+    def robots(self, origin: str) -> tuple[RobotFileParser, dict | None]:
+        """The site's rules; and, when they could not be read, what that request found (then no link of the
+        site is fetched). No robots.txt (a 4xx) means no rules. A network error, a 5xx or a 429 means the
+        rules are unknown, which is not permission (RFC 9309)."""
         rp = RobotFileParser()
+        code = error = None
         try:
             r = self.client.get(origin + "/robots.txt", follow_redirects=True, timeout=10)
-            if r.status_code == 200:
-                rp.parse(r.text.splitlines())
-            else:
-                rp.allow_all = True
-        except httpx.HTTPError:
+            code = r.status_code
+        except httpx.HTTPError as e:
+            error = f"{type(e).__name__}: {e}"[:160]
+        if error or code == 429 or code >= 500:
+            return rp, {"code": code, "final_url": None, "error": error, "asked": "robots.txt"}
+        if code == 200:
+            rp.parse(r.text.splitlines())
+        else:
             rp.allow_all = True
-        return rp
+        return rp, None
 
     def check(self, url: str) -> dict:
         code = final = error = None
@@ -133,7 +149,12 @@ class SiteChecker:
 
     def run(self, urls: list[str]) -> dict[str, dict]:
         parts = urlsplit(urls[0])
-        rp = self.robots(f"{parts.scheme}://{parts.netloc}")
+        rp, unread = self.robots(f"{parts.scheme}://{parts.netloc}")
+        if unread:                           # the answer robots.txt got is all that is known of the site today
+            return {url: {"status": classify(unread["code"], url, None, unread["error"]), **unread, "checked_at": now_iso()}
+                    for url in urls}
+        if not rp.allow_all:                 # the site's own Crawl-delay, when it asks for longer than ours
+            self.delay = max(self.delay, float(rp.crawl_delay(config.USER_AGENT) or 0))
         results = {}
         for i, url in enumerate(urls):
             if not rp.can_fetch(config.USER_AGENT, url):
@@ -201,7 +222,7 @@ def check_links(store: Store, *, max_age_days: int = 30, limit: int | None = Non
             results = future.result()
             with lock:
                 for url, result in results.items():
-                    previous = manifest.get(url, {})
+                    previous = {k: v for k, v in manifest.get(url, {}).items() if k != "asked"}
                     manifest[url] = {**previous, **result, "kind": cited[url]["kind"], "cited_at": cited[url]["cited_at"],
                                      "used_by": sorted(cited[url]["used_by"])}
                 done += len(results)
@@ -211,8 +232,12 @@ def check_links(store: Store, *, max_age_days: int = 30, limit: int | None = Non
 
     # Archived copies for links that no longer work (serially: one site, be gentle). Includes dead links
     # from earlier runs whose lookup never happened, so an interrupted run catches up.
+    # A copy found for another date (the note's date is now known better) is looked up again.
+    for url in cited:
+        if url in manifest:
+            manifest[url]["cited_at"] = cited[url]["cited_at"]
     dead = [u for u in cited if manifest.get(u, {}).get("status") in ("broken", "unreachable", "server-error")
-            and "archived_url" not in manifest[u]]
+            and ("archived_url" not in manifest[u] or manifest[u].get("archived_for") != manifest[u]["cited_at"][:10])]
     log(f"  looking up archived copies for {len(dead)} dead links")
     with httpx.Client(**client_args) as client:
         for i, url in enumerate(dead):
@@ -220,6 +245,7 @@ def check_links(store: Store, *, max_age_days: int = 30, limit: int | None = Non
                 sleep(1.0)
             found = archived_copy(client, url, manifest[url]["cited_at"])
             manifest[url].update(found or {"archived_url": None})
+            manifest[url]["archived_for"] = manifest[url]["cited_at"][:10]      # the date the copy was sought for
             if i % 100 == 99:
                 write_json(path, dict(sorted(manifest.items())))
     for url, entry in manifest.items():                     # links no longer cited stay, marked as such
@@ -242,6 +268,10 @@ def export_link_status(store: Store, out_dir) -> int:
             per_country[use.split("/", 1)[0]][url] = {k: entry.get(k) for k in keep if entry.get(k) is not None}
     for country, links in per_country.items():
         write_json(Path(out_dir) / f"{country}.json", dict(sorted(links.items())))
+    # A country with no checked links (its only report is a PDF) gets an empty file: the reader asks for one
+    # per country, and a file that is not there is an error in the browser's log on every visit.
+    for country in set(store.countries()) - set(per_country):
+        write_json(Path(out_dir) / f"{country}.json", {})
     return len(per_country)
 
 

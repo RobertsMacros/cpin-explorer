@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 24,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 40,
+ "paragraphs": 158,
+ "list_items": 43,
+ "tables": 6,
+ "figures": 3,
+ "footnotes": 72,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 3, 70"
+ ],
+ "figure_pages": {
+  "dd91afb1ae080d731472d9085e50bfde513af64326dd1f6231d9d69c9be7e2ee.png": 5,
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": 6,
+  "f9b4c59216d6960f8fca6b007d8722c62c5c08cfa174913c87b4eba43bde3650.jpg": 8
+ },
+ "figure_sizes": {
+  "dd91afb1ae080d731472d9085e50bfde513af64326dd1f6231d9d69c9be7e2ee.png": [
+   466,
+   318
+  ],
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": [
+   919,
+   478
+  ],
+  "f9b4c59216d6960f8fca6b007d8722c62c5c08cfa174913c87b4eba43bde3650.jpg": [
+   885,
+   598
+  ]
+ },
+ "figure_text": {
+  "dd91afb1ae080d731472d9085e50bfde513af64326dd1f6231d9d69c9be7e2ee.png": 1,
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg": 0,
+  "f9b4c59216d6960f8fca6b007d8722c62c5c08cfa174913c87b4eba43bde3650.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Background Note Turkey",
+ "cover_version": "2.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "16a1e8b0808df65b5cb1dc892dbc94ece299004d9d8b3f01ce50fb5df890fccf",
+ "images": [
+  "8300f2ca9392993dddf103ff6abb8018c57c0309815b3b13ccaa5b0e63a70fa6.jpg",
+  "dd91afb1ae080d731472d9085e50bfde513af64326dd1f6231d9d69c9be7e2ee.png",
+  "f9b4c59216d6960f8fca6b007d8722c62c5c08cfa174913c87b4eba43bde3650.jpg"
+ ]
+}

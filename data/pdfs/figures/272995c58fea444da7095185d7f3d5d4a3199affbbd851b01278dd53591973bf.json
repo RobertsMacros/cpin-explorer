@@ -1,0 +1,77 @@
+{
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+ "pdf_sha256": "272995c58fea444da7095185d7f3d5d4a3199affbbd851b01278dd53591973bf",
+ "body_sha256": "4730e38e39f7c7966a6242d912599023ee4bfff66a156e106252f88b53d57d3b",
+ "figures": [
+  {
+   "image": "6f4c7c24e44f8ae6e35850c65c0d08563dba2a94fe5d9604338ac5d606d36591.png",
+   "tag": "p",
+   "index": 154,
+   "key": "712thereportprovidedabarchartreproducedbelowshowingtheemploy",
+   "page": 25
+  },
+  {
+   "image": "ab58d9960bdf6022259138ef96a909f2f75def73ebc6d4a61fdb5e302a41ff81.png",
+   "tag": "p",
+   "index": 163,
+   "key": "thebarchartisreproducedbelow",
+   "page": 27
+  },
+  {
+   "image": "1c90b2926eb108ba43214e1aff642d2f003bb15d2a82c69a4779fbd3abd2fc4f.png",
+   "tag": "p",
+   "index": 166,
+   "key": "thebarchartisreproducedbelow",
+   "page": 27
+  },
+  {
+   "image": "b3af32478baef80c5a7401989005bb4ef9cca15e15e492fa34915b971edb3aed.png",
+   "tag": "p",
+   "index": 292,
+   "key": "1052thesamesourceprovidedatabletoshowaccesstoelectricityandp",
+   "page": 43
+  },
+  {
+   "image": "91799d9dfccbeb9bbd32a4e5c084fe905175cb29ec4266c370d589a6bff1d537.png",
+   "tag": "p",
+   "index": 294,
+   "key": "1053thefollowingtableshowstheaveragenumberofhoursofelectrici",
+   "page": 44
+  },
+  {
+   "image": "0b50c68fbf56559f025626bbc3f79de7e1e4b6ce5a2ea0634a92bbbffda5cbde.png",
+   "tag": "p",
+   "index": 295,
+   "key": "1061thenbsmpi2022showedthedistributionofhouseholdsbydeprivat",
+   "page": 45
+  },
+  {
+   "image": "4cd2e694eb8f9cd9fdf2f53111778ec6128004f7c9126dcabd2cda0f68aecfd1.png",
+   "tag": "p",
+   "index": 296,
+   "key": "1062thesamesourceshowedthedistributionofhouseholdsbydeprivat",
+   "page": 46
+  },
+  {
+   "image": "f3e24c7008dce592fd0788a3d6273b35089f5ad1ef81d2970680be5f46906806.png",
+   "tag": "p",
+   "index": 342,
+   "key": "1222thenbsinareport2021micsstatisticalsnapshots2021micsresul",
+   "page": 53
+  },
+  {
+   "image": "d40e6ffecd3aba9cf79b3e419abe37826b859ec3e97e657b483765b8186a00ee.png",
+   "tag": "p",
+   "index": 354,
+   "key": "1261thenbslivingstandardssurvey2020providedthefollowingtable",
+   "page": 56
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 21,
+ "web_figures": 11,
+ "left_in_pdf": {
+  "small": 1
+ }
+}

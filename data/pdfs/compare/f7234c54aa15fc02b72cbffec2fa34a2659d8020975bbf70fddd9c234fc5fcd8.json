@@ -1,0 +1,173 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-illegal-exit-iran-may-2022-accessible",
+ "pdf_sha256": "f7234c54aa15fc02b72cbffec2fa34a2659d8020975bbf70fddd9c234fc5fcd8",
+ "body_sha256": "604f83fca25141a22c2e84cfaf61bb6aeba0349711467184cf57c9efea347534",
+ "words": {
+  "web": 15525,
+  "pdf": 15524
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 2,
+   "web_words": 11,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 10
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "7.0",
+   "web_date": "18 December 2025",
+   "pdf": "7.0",
+   "pdf_date": "18 December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "18 December 2025"
+   ],
+   "pdf": [
+    "18 December 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 111,
+   "pdf": 111,
+   "pdf_raw": 111,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 38,
+   "pdf": 36
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "officials providing airport border security included: the Anti‐Narcotics Police (",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "on Drugs and Crime indicated that law enforcement",
+   "after": "ANP), Airport Police, Immigration and Passport Police, Ministry",
+   "before_pdf": "on Drugs and Crime indicated that law enforcement (",
+   "where": {
+    "heading": "border-security",
+    "paragraph": "7.6.3",
+    "section": "7. Exit via official ports",
+    "page": 18
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "February 2020), 10 March 2020. Accessed: 6 October",
+   "after": "International Organization for Migration (IOM), Homepage, no date.",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "9.5.8",
+    "section": "Bibliography",
+    "page": 35
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 132,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

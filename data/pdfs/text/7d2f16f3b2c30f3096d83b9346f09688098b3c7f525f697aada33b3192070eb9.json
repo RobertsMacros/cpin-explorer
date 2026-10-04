@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 64,
+ "paragraphs": 324,
+ "list_items": 17,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 100,
+ "bookmarks": 64,
+ "warnings": [
+  "footnotes with no mark found in the text: 80, 92"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note China: Background information, including actors of protection, and internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "March 2018",
+ "pdf_sha256": "7d2f16f3b2c30f3096d83b9346f09688098b3c7f525f697aada33b3192070eb9",
+ "images": []
+}

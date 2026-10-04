@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 70,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 69,
+ "paragraphs": 528,
+ "list_items": 76,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 371,
+ "bookmarks": 63,
+ "warnings": [
+  "footnotes with no mark found in the text: 134"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Bangladesh: Political parties and affiliation",
+ "cover_version": "3.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "61a064e83e45af9b7e012a578cad9bbf8456c2d98ccd6dc291f656993c107eb5",
+ "images": []
+}

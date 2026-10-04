@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 136,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 100,
+ "paragraphs": 1381,
+ "list_items": 47,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 480,
+ "bookmarks": 101,
+ "warnings": [
+  "page 2: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 178, 278, 336, 337, 338, 341"
+ ],
+ "figure_pages": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,
+  "ff65ecefedf1636f2ab18961ed4680698cb51b0f6f3315538e1c865b9bb552ab.jpg": 54,
+  "7a4a4dd939d787773c099b95905188d7d1c01c0c809f542411364e73534749ad.jpg": 55
+ },
+ "figure_sizes": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": [
+   246,
+   168
+  ],
+  "ff65ecefedf1636f2ab18961ed4680698cb51b0f6f3315538e1c865b9bb552ab.jpg": [
+   720,
+   592
+  ],
+  "7a4a4dd939d787773c099b95905188d7d1c01c0c809f542411364e73534749ad.jpg": [
+   719,
+   376
+  ]
+ },
+ "figure_text": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 0,
+  "ff65ecefedf1636f2ab18961ed4680698cb51b0f6f3315538e1c865b9bb552ab.jpg": 0,
+  "7a4a4dd939d787773c099b95905188d7d1c01c0c809f542411364e73534749ad.jpg": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Report of a Home Office Fact-Finding Mission Ethiopia: The political situation",
+ "cover_version": null,
+ "cover_date": "16 September 2019",
+ "pdf_sha256": "045ad33dcc284fd2e699a19c5021ad57a37fb5e4050ff2c01086e1dc71d6f34a",
+ "images": [
+  "7a4a4dd939d787773c099b95905188d7d1c01c0c809f542411364e73534749ad.jpg",
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png",
+  "ff65ecefedf1636f2ab18961ed4680698cb51b0f6f3315538e1c865b9bb552ab.jpg"
+ ]
+}

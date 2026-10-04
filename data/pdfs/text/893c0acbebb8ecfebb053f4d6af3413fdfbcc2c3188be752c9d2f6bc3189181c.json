@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 55,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 421,
+ "list_items": 39,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 168,
+ "bookmarks": 9,
+ "warnings": [
+  "footnotes with no mark found in the text: 19"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Turkey: Kurdistan workers party (PKK)",
+ "cover_version": "4.0",
+ "cover_date": "February 2020",
+ "pdf_sha256": "893c0acbebb8ecfebb053f4d6af3413fdfbcc2c3188be752c9d2f6bc3189181c",
+ "images": []
+}

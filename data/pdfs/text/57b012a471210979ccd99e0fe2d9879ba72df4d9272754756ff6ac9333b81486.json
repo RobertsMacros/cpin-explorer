@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 50,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 71,
+ "paragraphs": 324,
+ "list_items": 12,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 97,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 35"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Egypt: Background Information, including actors of protection, and internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "July 2017",
+ "pdf_sha256": "57b012a471210979ccd99e0fe2d9879ba72df4d9272754756ff6ac9333b81486",
+ "images": []
+}

@@ -1,0 +1,647 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "uganda/country-policy-and-information-note-sexual-orientation-and-gender-uganda-february-2022-accessible-version",
+ "pdf_sha256": "a03f69bc60fd65f4958a4f489ffc198ebb393ecaea3c85c63768e7235b9b22d0",
+ "body_sha256": "ab2c63f38b37d436ffc7a27a3a2dbb1daa4645c8207cf4b550aa23e9a7043440",
+ "words": {
+  "web": 27864,
+  "pdf": 27553
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 12,
+   "pdf_words": 6,
+   "share": 0.000325,
+   "passages": 2,
+   "sizes": {
+    "passage": 2,
+    "word": 3,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 5
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 12,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 6,
+    "web_words": 225,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "picture in words": {
+    "differences": 5,
+    "web_words": 197,
+    "pdf_words": 0
+   },
+   "section updated": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "table cell": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 28,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 10,
+    "pdf_words": 1
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "ours": {
+   "differences": 25,
+   "web_words": 13,
+   "pdf_words": 42
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "6.0",
+   "pdf_date": "March 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "10 March 2025"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 216,
+   "pdf": 216,
+   "pdf_raw": 216,
+   "differ": false
+  },
+  "pictures": {
+   "web": 8,
+   "pdf": 8
+  },
+  "tables": {
+   "web": 7,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 57,
+   "pdf": 55
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 4,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "SOGIE related violence January to December 2024",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "documented by HRAPF from January to December 2024.",
+   "after": "13.1.5 Between September 2023 and May",
+   "where": {
+    "heading": "Attacksandthreats",
+    "paragraph": "13.1.4",
+    "section": "Country information",
+    "page": 32
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "section updated",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Section updated: 10 March 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "to demonstrate that they are at risk.\nAssessment",
+   "after": "About the assessment\nThis section considers the evidence",
+   "where": {
+    "heading": "about-the-assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Unnatural offences",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "as the definitive number of SOGIE related arrests.",
+   "after": "12.1.7 Unnatural offences comprised 0.6%",
+   "where": {
+    "heading": "Arrestsandharassment",
+    "paragraph": "12.1.6",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Anti-",
+   "pdf": "Ant-",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "research was undertaken:\nLegal rights\nConstitution\nPenal code",
+   "after": "Homosexuality Act 2023\nState and societal attitudes including:",
+   "where": {
+    "heading": "TermsofReference",
+    "paragraph": "18.1.11",
+    "section": "Terms of Reference",
+    "page": 62
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Persons",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "6\nPending in court\n4,872\n62\nPersons",
+   "after": "Charged Male\n6,448\n80\nCharged Females\n107",
+   "before_pdf": "in court\n5231\n32\n4,872\n62\nPersons",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Sentences",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "67\nAcquitted\n64\n1\nDischarged\n446\n6\nSentences",
+   "after": "Imprisonment\n886\n5\nFined\n31\n1\nProbation\n2",
+   "before_pdf": "64\n1\nDischarged\n10\n2\n446\n6\nSentences",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 2: Intolerance for people in same-sex relationships by demographic group: Uganda 2022\nDemographic\nUganda\n95%\nNorthern\n97%\nEastern\n96%\nCentral\n95%\nKampala\n94%\nWestern\n92%\n18-30 years\n94%\n31-49 years\n95%\n50+ years\n95%\nChristian\n95%\nMuslim\n93%\nPost-secondary\n95%\nSecondary\n94%\nPrimary\n95%\nNo formal education\n94%\nWomen\n96%\nMen\n93%\nRural\n95%\nUrban\n94%\nRespondents were asked: For each of the following types of people, please tell me whether you would like having people from this group as neighbours, dislike it, or not care: Homosexuals? (% who say “somewhat dislike” or “strongly dislike”)",
+   "pdf": "63.",
+   "web_words": 92,
+   "pdf_words": 0,
+   "before": "to 97%, with the national average being 95%:",
+   "after": "10.4.7 The Afrobarometer online data analysis",
+   "where": {
+    "heading": "social",
+    "paragraph": "10.4.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 3: Social tolerance: Uganda 2015-2022\n2015\n2017\n2019\n2022\nDifferent religion\n95%\n95%\n94%\n93%\nDifferent ethnicity\n93%\n90%\n88%\n85%\nImmigrants\n78%\n76%\n82%\n74%\nHomosexuals\n5%\n3%\n8%\n5%\nRespondents were asked: For each group of the following types of people, please tell me whether you would like having some people from this group as neighbours, dislike it, or not care. (% who say “strongly like”, “somewhat like” or “would not care”)",
+   "pdf": "",
+   "web_words": 64,
+   "pdf_words": 0,
+   "before": "at 3 % and highest in 2019 at 8%.",
+   "after": "10.4.6 Afrobarometer produced the charts below",
+   "where": {
+    "heading": "social",
+    "paragraph": "10.4.5",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Sex related offences\nUnnatural offences\nCases\nCases\nReported\n14,693\n83\nUnder inquiry\n8,290\n44\nTaken to court\n5461\n36\nSubmitted to DPP\n8,396\n45\nWith Convictions\n224\n2\nDismissed\n5\n2\nPending in court\n5231\n32\nPersons\nPersons\nCharged Male\n5,562\n38\nCharged Female\n105\n1\nConvicted Male\n198\n2\nConvicted Female\n26\nAwaiting trial\n5,433\n35\nAcquitted\nDischarged\n10\n2\nSentences\nSentences\nImprisonment\n180\n1\nFined\n14\nProbation\n5\nCautioned\n24\n1\nCommunity work\n1",
+   "pdf": "",
+   "web_words": 28,
+   "pdf_words": 0,
+   "before": "conviction for “unnatural offences” 2022 and 2023.\n2022",
+   "after": "2023\nSex related offences\nUnnatural offences\nCases\nCases",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Intolerance for people in same sex relationships by demographic group\nDemographic group\nProportion\nRural\n96%\nUrban\n95%\nMen\n95%\nWomen\n95%\nNo formal education\n83%\nPrimary\n91%\nSecondary\n98%\nPost-secondary\n97%\nMuslim\n96%\nTraditional religions\n100%\nAtheist\n100%\nChristians\n99%\n56+\n94%\n36-45 years\n94%\n26 - 35 years\n95%\n18-25 years\n97%\nUganda\n95%",
+   "pdf": "",
+   "web_words": 19,
+   "pdf_words": 0,
+   "before": "in 2024 was the same as in 2022.",
+   "after": "10.5 Media including social media\n10.5.",
+   "where": {
+    "heading": "social",
+    "paragraph": "10.4.7",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Victims’ categories\nCategory\nNumber of cases\nLesbians\n151\nGay/MSM\n517\nBisexual\n35\nTransgender\n201\nQueer/GNC/Non\n49\nOrganisation\n4\nUnknown\n86",
+   "pdf": "87.",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "affected persons in the number of cases documented:",
+   "after": "11.2.4 The Human Rights Awareness and",
+   "where": {
+    "heading": "Numbersofincidents",
+    "paragraph": "11.2.3",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "18.1.11",
+    "section": "Version control and feedback",
+    "page": 69
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Evictions - cases and victims: January to December 2024",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "evictions – cases and victims – as documented by HRAPF.",
+   "after": "13.2.4 The graph shows a sharp",
+   "where": {
+    "heading": "Evictions",
+    "paragraph": "13.2.3",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 6.0, March 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nSame-sex consensual sex for men",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "SOGIE related arrests January to December 2024",
+   "pdf": "96",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "January to December 2024 based on HRAPF documentation.",
+   "after": "12.1.6 The Ugandan Police Force (UPF)",
+   "where": {
+    "heading": "Arrestsandharassment",
+    "paragraph": "12.1.5",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Cases",
+   "pdf": "Sex related offences\nUnnatural offences",
+   "web_words": 1,
+   "pdf_words": 5,
+   "before": "work\n1\n2023\nSex related offences\nUnnatural offences",
+   "after": "Cases\nReported\n14,846\n160\nUnder inquiry\n5,",
+   "before_pdf": "2023.\n2022\n2023\nSex related offences\nUnnatural offences",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Charged",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "62\nPersons\nPersons\nCharged Male\n6,448\n80",
+   "after": "Females\n107\n3\nConvicted Male\n1,011\n8",
+   "before_pdf": "Charged\nMale\n5,562\n38\n6,448\n80",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Convicted",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Females\n107\n3\nConvicted Male\n1,011\n8",
+   "after": "Female\n44\n1\nAwaiting trial\n4,990\n67",
+   "before_pdf": "3\nConvicted\nMale\n198\n2\n1,011\n8",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "14,693\n83",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Sex related offences\nUnnatural offences\nCases\nCases\nReported",
+   "after": "14,846\n160\nUnder inquiry\n5,661\n60",
+   "before_pdf": "offences\nSex related offences\nUnnatural offences\nCases\nReported",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "8,290\n44",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Cases\nCases\nReported\n14,846\n160\nUnder inquiry",
+   "after": "5,661\n60\nTaken to court\n6,395",
+   "before_pdf": "14,693\n83\n14,846\n160\nUnder inquiry",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "5461\n36",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Under inquiry\n5,661\n60\nTaken to court",
+   "after": "6,395\n77\nSubmitted to DPP\n9,592",
+   "before_pdf": "290\n44\n5,661\n60\nTaken to court",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "8,396\n45",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to court\n6,395\n77\nSubmitted to DPP",
+   "after": "9,592\n102\nWith Convictions\n1,015\n8",
+   "before_pdf": "5461\n36\n6,395\n77\nSubmitted to DPP",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "5231\n32",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "015\n8\nDismissed\n463\n6\nPending in court",
+   "after": "4,872\n62\nPersons\nPersons\nCharged Male\n6,",
+   "before_pdf": "Dismissed\n5\n2\n463\n6\nPending in court",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "5,562\n38",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "court\n4,872\n62\nPersons\nPersons\nCharged Male",
+   "after": "6,448\n80\nCharged Females\n107\n3\nConvicted",
+   "before_pdf": "5231\n32\n4,872\n62\nPersons\nCharged\nMale",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "5,433\n35",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "011\n8\nConvicted Female\n44\n1\nAwaiting trial",
+   "after": "4,990\n67\nAcquitted\n64\n1\nDischarged\n446",
+   "before_pdf": "011\n8\nFemale\n26\n44\n1\nAwaiting trial",
+   "where": {
+    "heading": "Prosecutions",
+    "paragraph": "12.2.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "2",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Offence\nPenalty\n2\nAct of homosexuality\nLife imprisonment",
+   "after": "Attempted homosexuality\nUp to 10 years imprisonment\n3",
+   "where": {
+    "heading": "legal-challenges-against-the-aha",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 15
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 220,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

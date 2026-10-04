@@ -1,0 +1,332 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "philippines/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
+ "pdf_sha256": "35f7f8f6ea70d6e92347713b9cd957860aece558d93e980930635d84179f1d58",
+ "body_sha256": "cbf2c586e7d8bb3ca453c79a742b713cd833fc0ae9474c32775872e11688adbd",
+ "words": {
+  "web": 29555,
+  "pdf": 29568
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 10,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "kinds": {
+   "back to contents": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "list marker": {
+    "differences": 10,
+    "web_words": 0,
+    "pdf_words": 10
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "February 2023",
+   "pdf": null,
+   "pdf_date": "February 2023"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 5,
+   "pdf": 5,
+   "pdf_raw": 5,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 282,
+   "pdf": 26
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Back to Contents",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "legality etc. how does this work in practice?",
+   "after": "List of sources\nBritish Embassy\nBahay Kanlungan\nQuezon",
+   "where": {
+    "heading": "bookmark9",
+    "paragraph": null,
+    "section": "List of sources",
+    "page": 5
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Q",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "debate and one we are still pushing for.",
+   "after": "When people separate, is the husband still required",
+   "where": {
+    "heading": "when-people-separate-is-the-husband-still-required-to-pay-his-partner-for-children-and-assistance",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 33
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Q",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "entire members of the community running after him.",
+   "after": "Is it culturally acceptable for a single woman",
+   "where": {
+    "heading": "is-it-culturally-acceptable-for-a-single-woman-to-live-alone",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Q",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "here for a single woman to live alone.",
+   "after": "Are women able to get divorced if they",
+   "where": {
+    "heading": "are-women-able-to-get-divorced-if-they-are-married-through-sharia",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "are two ways you can dissolve a marriage.",
+   "after": "Annulment. There are several grounds for annulment: one",
+   "where": {
+    "heading": "can-annulment-be-granted-after-5-years-under-psychological-incapacity",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 59
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "minor. There are also 5 grounds for this.",
+   "after": "We can also declare the marriage null and",
+   "where": {
+    "heading": "can-annulment-be-granted-after-5-years-under-psychological-incapacity",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 59
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "under the Anti-VAWC Law are as follows:",
+   "after": "Barangay Protection Orders (BPO) refer to the protection",
+   "where": {
+    "heading": "how-are-vaw-cases-received-into-the-court-process",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 61
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Barangay and shall be effective for 15 days.",
+   "after": "Temporary Protection Orders (TPO) refers to the protection",
+   "where": {
+    "heading": "how-are-vaw-cases-received-into-the-court-process",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 61
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "assistance of law enforcement agents for the service.",
+   "after": "Permanent Protection Order (PPO) refers to the protection",
+   "where": {
+    "heading": "how-are-vaw-cases-received-into-the-court-process",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 61
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "The claim is subject to the following limitations:",
+   "after": "The maximum amount which may be claimed shall",
+   "where": {
+    "heading": "throughout-the-process-is-the-victim-entitled-to-legal-support",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 63
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "expenses directly related to injury, whichever is lower.",
+   "after": "The claim for compensation must be filed within",
+   "where": {
+    "heading": "throughout-the-process-is-the-victim-entitled-to-legal-support",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 63
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 0,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

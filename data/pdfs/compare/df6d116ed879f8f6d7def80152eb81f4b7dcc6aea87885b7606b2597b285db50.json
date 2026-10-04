@@ -1,0 +1,402 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ukraine/country-policy-and-information-note-security-situation-ukraine-june-2022-accessible",
+ "pdf_sha256": "df6d116ed879f8f6d7def80152eb81f4b7dcc6aea87885b7606b2597b285db50",
+ "body_sha256": "43eabca1780b22600e938adcdadf048234d20a546acf075379670b92407dbcdd",
+ "words": {
+  "web": 17069,
+  "pdf": 17060
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 4,
+   "pdf_words": 1,
+   "share": 0.000147,
+   "passages": 0,
+   "sizes": {
+    "number": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "table cell": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 17,
+   "web_words": 58,
+   "pdf_words": 12
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 34
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "December 2024",
+   "pdf": "2.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [
+    "5 November 2024"
+   ],
+   "pdf": [
+    "5 November 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 168,
+   "pdf": 165,
+   "pdf_raw": 168,
+   "differ": false
+  },
+  "pictures": {
+   "web": 19,
+   "pdf": 19
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 53,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2024\n2024",
+   "pdf": "OBLAST",
+   "web_words": 2,
+   "pdf_words": 1,
+   "before": "fatalities by oblast\n2022\n2022\n2023\n2023\n2024",
+   "after": "OBLAST\n24 February to 30 June (4 months)",
+   "before_pdf": "2024\nCivilian fatalities by oblast\n2022\n2023\n2024",
+   "where": {
+    "heading": "civilian-fatalities-by-oblast",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2022\n2023",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "to October 2024):\nCivilian fatalities by oblast\n2022",
+   "after": "2023\n2024\n2024\n2024\nOBLAST\n24 February to",
+   "before_pdf": "4 November 2024\nCivilian fatalities by oblast\n2022",
+   "where": {
+    "heading": "civilian-fatalities-by-oblast",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 33
+   },
+   "size": "number",
+   "second": "cannot tell"
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2024\nAOAV, Ukraine: AOAV explosive violence data on harm to civilians - AOAV, 23 September 2024\nACLED, Ukraine Conflict Monitor (acleddata.com), 28 October 2024\nACLED, Explorer - ACLED (acleddata.com), accessed 4 November",
+   "pdf": "",
+   "web_words": 32,
+   "pdf_words": 0,
+   "before": "Armed Conflict — September 2024, (page 3) 11 October",
+   "after": "2024\nACLED, Ukraine Conflict Monitor (acleddata.com), 28",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.4.3",
+    "section": "Version control and feedback",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Distance from conflict event\nDistance from conflict event\nDistance from conflict event",
+   "pdf": "",
+   "web_words": 12,
+   "pdf_words": 0,
+   "before": "and 18 October 2024\nDistance from conflict event",
+   "after": "Oblast\n1km\n2km\n5km\nBest\nTotal Events\nCherkasy",
+   "where": {
+    "heading": "conflict-exposure-in-6-months-between-19-april-and-18-october-2024",
+    "paragraph": "11.1.10",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "February\nto 30\nJune (4\nOblast\nMonths)",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "to 31 Oct (4 months)\nTotal by oblast",
+   "after": "Cherkasy\n6\n10\n4\n16\n7\n13\n56",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "February to 30 June (4 Months)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "2022\n2022\n2023\n2023\n2024\n2024\nOblast\n24",
+   "after": "1 July to 31 Dec\n1 Jan to",
+   "before_pdf": "to October 2024):\n2022\n2023\n2024\nOblast\n24",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2023\n2024",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "from June to October 2024):\n2022\n2022\n2023",
+   "after": "2024\nOblast\n24 February to 30 June (4",
+   "before_pdf": "another from June to October 2024):\n2022\n2023",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": null
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2022",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "and another from June to October 2024):\n2022",
+   "after": "2023\n2023\n2024\n2024\nOblast\n24 February to",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Frankivsk",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "699\n8,857\n6,255\n51,451\nIvano-",
+   "after": "6\n4\n2\n3\n8\n3\n26\nKharkiv",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Frankivsk",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Frankivsk\n6\n4\n2\n3\n8\n3\n26",
+   "after": "Kharkiv\n1,988\n4,592\n4,030\n2,",
+   "before_pdf": "Ivano-\n6\n4\n2\n3\n8\n3\n26",
+   "where": {
+    "heading": "All_Conflict-related_events:",
+    "paragraph": "9.1.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Frankivsk",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "1211\n466\n239\n202\n220\n210\n2548\nIvano-",
+   "after": "0\n0\n0\n1\n0\n0\n1\nKharkiv",
+   "where": {
+    "heading": "civilian-fatalities-by-oblast",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Frankivsk",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Frankivsk\n0\n0\n0\n1\n0\n0\n1",
+   "after": "Kharkiv\n768\n286\n75\n137\n194\n93\n1553",
+   "before_pdf": "Ivano-\n0\n0\n0\n1\n0\n0\n1",
+   "where": {
+    "heading": "civilian-fatalities-by-oblast",
+    "paragraph": "10.4.3",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "war.",
+   "pdf": "war62.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "conflict, updated daily, see Al Jazeera: Russia-Ukraine",
+   "after": "9.2.5 Radio Free Europe/Radio Liberty’",
+   "where": {
+    "heading": "Conflict_between_armed",
+    "paragraph": "9.2.4",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Briefing",
+   "pdf": "Briefing63",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Radio Free Europe/Radio Liberty’s (RFERL) Live",
+   "after": "also publishes daily updates reporting on the latest",
+   "where": {
+    "heading": "Conflict_between_armed",
+    "paragraph": "9.2.5",
+    "section": "Country information",
+    "page": 27
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 206,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "4.1.1"
+  ],
+  "unconfirmed": []
+ }
+}

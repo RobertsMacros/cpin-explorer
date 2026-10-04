@@ -33,11 +33,26 @@ jobs:
         with:
           python-version: "3.13"
       - run: pip install -e ".[dev]"
+      # pdftotext: the second reader of PDFs that `cpin compare` puts every difference to (docs/methods/pdf-and-web.md).
+      - run: sudo apt-get install -y --no-install-recommends poppler-utils
       - run: pytest -q
 
+      # Mirrored PDFs and images are not in git. Keep them between runs: a file is asked "changed since?"
+      # only when the copy is on this disk, so without them each run would download every file it checks
+      # again (politely, but all 170 MB of PDFs on a full run). A cold cache fetches each once.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            data/pdfs/files
+            data/images/files
+          key: mirror-${{ hashFiles('data/pdfs/manifest.json', 'data/images/manifest.json') }}
+          restore-keys: mirror-
+
+      # Nothing from here to the commit may stop the commit: what was fetched is kept, whatever fails after
+      # it. Each of these steps still fails the job at the end (the last step).
       - name: Sync
         id: sync
-        continue-on-error: true          # commit what succeeded, then fail the job below
+        continue-on-error: true
         run: |
           if [ "${{ github.event.schedule }}" = "47 5 * * 0" ] || [ "${{ inputs.full }}" = "true" ]; then
             python -m cpin sync --full
@@ -47,8 +62,25 @@ jobs:
 
       # TODO(R2): upload new files from data/pdfs/files/ to the R2 bucket once it exists.
 
-      - name: Verify
-        run: python -m cpin verify
+      # Editions published as a PDF only are read from their PDFs (text kept in data/pdfs/text/, committed).
+      # A PDF that is not on this disk keeps the text extracted earlier.
+      - name: Text of PDF-only editions
+        id: pdftext
+        continue-on-error: true
+        run: python -m cpin pdftext
+
+      # The standing checks of docs/methods/pdf-and-web.md (an edition whose PDF is not on this disk keeps
+      # the records made earlier): the pictures a PDF has that the web version leaves out, and the real
+      # differences between the two publications. Each record is written whole, so one that fails part-way
+      # leaves the others fit to commit.
+      - name: Pictures only the PDF has
+        id: figures
+        continue-on-error: true
+        run: python -m cpin pdftext --figures
+      - name: Web version against PDF
+        id: compare
+        continue-on-error: true
+        run: python -m cpin compare
 
       - name: Commit data changes
         id: commit
@@ -65,8 +97,15 @@ jobs:
             echo "No content changes."
           fi
 
-      - name: Fail if the sync had errors
-        if: steps.sync.outcome == 'failure'
+      # After the commit: one image that will not download, or one PDF that fails, must not hold back
+      # every later day's data while the fault lasts. It fails the job here instead.
+      - name: Verify
+        run: python -m cpin verify
+
+      - name: Fail if the sync or a step after it had errors
+        if: >-
+          steps.sync.outcome == 'failure' || steps.pdftext.outcome == 'failure' ||
+          steps.figures.outcome == 'failure' || steps.compare.outcome == 'failure'
         run: exit 1
 
   # Publish what was committed (a push by this workflow's token doesn't trigger deploy.yml itself).

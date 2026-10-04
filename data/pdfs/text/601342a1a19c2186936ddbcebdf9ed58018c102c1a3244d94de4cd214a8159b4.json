@@ -1,0 +1,41 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 69,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 70,
+ "paragraphs": 505,
+ "list_items": 75,
+ "tables": 5,
+ "figures": 1,
+ "footnotes": 172,
+ "bookmarks": 75,
+ "warnings": [
+  "page 2: bookmark not found in the text: 'Country of origin information'",
+  "page 3: bookmark not found in the text: 'Feedback'",
+  "page 3: bookmark not found in the text: 'Contents'",
+  "page 4: bookmark not found in the text: 'Contents'",
+  "page 4: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 7, 138"
+ ],
+ "figure_pages": {
+  "df1538579041caa25a4064eec4f7c2af916af127125d868121f5848234f694b1.png": 10
+ },
+ "figure_sizes": {
+  "df1538579041caa25a4064eec4f7c2af916af127125d868121f5848234f694b1.png": [
+   629,
+   430
+  ]
+ },
+ "figure_text": {
+  "df1538579041caa25a4064eec4f7c2af916af127125d868121f5848234f694b1.png": 1
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Country Policy and Information Note Ghana: Background information, including internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "601342a1a19c2186936ddbcebdf9ed58018c102c1a3244d94de4cd214a8159b4",
+ "images": [
+  "df1538579041caa25a4064eec4f7c2af916af127125d868121f5848234f694b1.png"
+ ]
+}

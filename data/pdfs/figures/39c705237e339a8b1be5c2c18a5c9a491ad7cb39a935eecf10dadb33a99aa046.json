@@ -1,0 +1,40 @@
+{
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-muslims-including-uyghurs-in-xinjiang-july-2022-accessible",
+ "pdf_sha256": "39c705237e339a8b1be5c2c18a5c9a491ad7cb39a935eecf10dadb33a99aa046",
+ "body_sha256": "6ba563d148af440b299424846e6bb480bd90b3e73f30e83e8d494a4229897f52",
+ "figures": [
+  {
+   "image": "c5eef2e1683534bb232810120404544cf17765618d93b36aa345dd3b2615f70d.png",
+   "tag": "p",
+   "index": 76,
+   "key": "722pewresearchcenteranonpartisanfacttankthatconductspublicop",
+   "page": 12
+  },
+  {
+   "image": "a96475a1842a379a4535baf9017acf6a1e35c5293c62103ea9547d37cd695c25.jpg",
+   "tag": "p",
+   "index": 81,
+   "key": "724themapbelowwastakenfromthepewresearchcentersreportitshows",
+   "page": 13
+  },
+  {
+   "image": "8c45c6314fe4b86e28f861b2fd0d5f1cb4f7be2df17b54fbe583f06a8df7165a.png",
+   "tag": "p",
+   "index": 189,
+   "key": "965thechartbelowwastakenfromthepewresearchcentersreportandsh",
+   "page": 28
+  },
+  {
+   "image": "c41a7b4c69494cc7939088bbeaaf5b9a8c1335ea1dad0f6a4e1c190b70f86537.png",
+   "tag": "p",
+   "index": 204,
+   "key": "973theuyghurhumanrightsprojectuhrpanindependentnonprofitorga",
+   "page": 30
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 4,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

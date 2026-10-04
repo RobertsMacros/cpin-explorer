@@ -1,0 +1,311 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-christians-and-christian-converts-iran-june-2026-accessible",
+ "pdf_sha256": "c31f1b80e18e65a8dacc449caf910b4ad09bcbac46f86dc573eb7cb9a72e112b",
+ "body_sha256": "f27eb7ba3e4a67d8b9bf6e9c114fe175db96beded2774384d1e957dd7853791f",
+ "words": {
+  "web": 38283,
+  "pdf": 38280
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 8,
+    "web_words": 7,
+    "pdf_words": 10
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 8,
+    "web_words": 7,
+    "pdf_words": 10
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "8.0",
+   "web_date": "June 2026",
+   "pdf": "8.0",
+   "pdf_date": "June 2026"
+  },
+  "section_updated": {
+   "web": [
+    "24 June 2026"
+   ],
+   "pdf": [
+    "24 June 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 510,
+   "pdf": 510,
+   "pdf_raw": 510,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 52,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nArrests\n2024\n139\n2025\n254",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "in 2025 compared with 2024 (CPIT’s calculation):",
+   "after": "10.5.30 The ‘Scapegoats’ report also noted",
+   "where": {
+    "heading": "arrests-detentions-and-criminal-charges",
+    "paragraph": "10.5.29",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.6.11",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "by one source to be a Christian convert",
+   "after": "For additional details regarding the above examples, and",
+   "where": {
+    "heading": "detainees",
+    "paragraph": "10.6.10",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.3",
+   "pdf": "8.3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "converts to Christianity from Islam practice in secret.’",
+   "after": "An undated article which compared the combined length",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.3",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.4",
+   "pdf": "8.3.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "background ... [is now] possibly nearing one million people ...’",
+   "after": "The translated FIS query response, published on 3",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.4",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.5",
+   "pdf": "8.3.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "with only rough estimates available regarding their numbers.’",
+   "after": "The Article 18 et al ‘Tip of the",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.5",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.6",
+   "pdf": "8.3.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "approximately 720,000 to 750,000 Christian converts.",
+   "after": "The translated Landinfo update report, translated into English,",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.6",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.7",
+   "pdf": "8.3.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "both one and two million converts in Iran.’",
+   "after": "Citing Global Christian Relief (GCR), an organisation ‘supporting",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.7",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.8",
+   "pdf": "8.3.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "leave Iran, estimated at 10,000 people annually.’",
+   "after": "The article published by Article 18 on 12",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.8",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.3.9",
+   "pdf": "8.3.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "an estimated 800,000 Christian converts in Iran.",
+   "after": "The ‘Scapegoats’ annual report stated: ‘Christian converts from",
+   "where": {
+    "heading": "other-Christians",
+    "paragraph": "8.3.9",
+    "section": "Country information",
+    "page": 24
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 297,
+  "different": {
+   "8.3.4": "8.3.5",
+   "8.3.5": "8.3.6",
+   "8.3.6": "8.3.7",
+   "8.3.7": "8.3.8",
+   "8.3.8": "8.3.9",
+   "8.3.9": "8.3.10"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "8.3.3"
+  ],
+  "unconfirmed": []
+ }
+}

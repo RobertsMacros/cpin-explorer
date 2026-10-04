@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 26,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 41,
+ "paragraphs": 154,
+ "list_items": 6,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 72,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Bangladesh: Opposition to the government February 2015",
+ "cover_version": null,
+ "cover_date": "February 2015",
+ "pdf_sha256": "ee3a142b4e879c95fbd8e9e8157f388e0c3c89688ad2ce5c1405e1920aa4fff7",
+ "images": []
+}

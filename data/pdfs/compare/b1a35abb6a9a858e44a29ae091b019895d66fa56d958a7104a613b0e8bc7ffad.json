@@ -1,0 +1,467 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "turkey/country-policy-and-information-note-military-service-turkey-october-2023-accessible",
+ "pdf_sha256": "b1a35abb6a9a858e44a29ae091b019895d66fa56d958a7104a613b0e8bc7ffad",
+ "body_sha256": "ee856ff226d59d15894011e38b19b36b357e545ce041628a1a806b26f851ef5f",
+ "words": {
+  "web": 28327,
+  "pdf": 28260
+ },
+ "summary": {
+  "wording": {
+   "differences": 9,
+   "web_words": 10,
+   "pdf_words": 13,
+   "share": 0.000406,
+   "passages": 1,
+   "sizes": {
+    "word": 8,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 5,
+   "passages": 1,
+   "words": 12
+  },
+  "groups": {
+   "wording": {
+    "differences": 9,
+    "web_words": 10,
+    "pdf_words": 13
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 75,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 75,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 6,
+    "web_words": 8,
+    "pdf_words": 7
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 6
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 3,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 2,
+   "web_words": 3,
+   "pdf_words": 3
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "July 2025",
+   "pdf": "4.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "24 March 2025",
+    "14 April 2023"
+   ],
+   "pdf": [
+    "24 March 2025",
+    "14 April 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 152,
+   "pdf": 152,
+   "pdf_raw": 152,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 85,
+   "pdf": 65
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 9,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "a total strength of",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "of the world’s largest militaries. It has",
+   "after": "approximately 355,000 active personnel and 380,000",
+   "where": {
+    "heading": "requirements-and-exemptions",
+    "paragraph": "3.2.1",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "transgender persons and",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "military hospitals (see Gay and bisexual men and",
+   "after": "Exemption process).\n3.6.6 Recent available information",
+   "where": {
+    "heading": "bookmark36",
+    "paragraph": "3.6.5",
+    "section": "Assessment",
+    "page": 12
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "in this note",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Research methodology\nThe country of origin information (COI)",
+   "after": "has been carefully selected in accordance with the",
+   "where": {
+    "heading": "research-methodology",
+    "paragraph": "13.1.3",
+    "section": "Research methodology",
+    "page": 59
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "nd",
+   "pdf": "no date",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "service in Turkey’, 2021\nHurriyet Daily News, ‘Homepage’,",
+   "after": "Hurriyet Daily News, ‘Being a gay man in",
+   "before_pdf": "service in Turkey, 2021\nHurriyet Daily News, Homepage,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.3",
+    "section": "Version control",
+    "page": 25
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "nd",
+   "pdf": "no date",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "2018\nKaos GL, ‘About us – Who are we?’,",
+   "after": "Kaos GL, ‘”How did I get the ‘unfit",
+   "before_pdf": "2018\nKaos GL, About us – Who are we?,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.3",
+    "section": "Version control",
+    "page": 30
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "information in",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "the evidence relevant to this note – that is,",
+   "after": "the Country information section, refugee/human rights laws",
+   "before_pdf": "the evidence relevant to this note – that is",
+   "where": {
+    "heading": "About",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "undergo",
+   "pdf": "do",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a prerogative of sovereign states. A requirement to",
+   "after": "compulsory military service – or punishment for failing to",
+   "where": {
+    "heading": "overview",
+    "paragraph": "3.1.1",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and feedback",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "March 2020. Accessed: 3 February 2023\nVersion control",
+   "after": "Clearance\nBelow is information on when this note",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "13.1.3",
+    "section": "Version control",
+    "page": 65
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "section,",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "note – that is, information in the Country information",
+   "after": "refugee/human rights laws and policies, and applicable",
+   "before_pdf": "to this note – that is the country information,",
+   "where": {
+    "heading": "About",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The diagram shows the process by which an individual is told to surrender to a recruitment office, and the series of actions if they fail to surrender or make an objection. If the objection is rejected at the Peace Court of Criminal Jurisdiction, the individual can be prosecuted under Article 63 of Military Criminal Law. They can make further appeals to the Court of Appeal, Constitutional Court and finally the European Court of Human Rights.",
+   "pdf": "",
+   "web_words": 75,
+   "pdf_words": 0,
+   "before": "draft evaders and deserters may ... face increasing fines.",
+   "after": "Those who voluntarily report to the authorities must",
+   "where": {
+    "heading": "bookmark47",
+    "paragraph": "12.3.4",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "7179Askeralma_",
+   "pdf": "7179_Askeralma_",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "based on ethnic backgrounds. (source: Turkish MoD website",
+   "after": "Kanunu(İngilizce).pdf (msb.gov.tr) article 3/",
+   "where": {
+    "heading": "conditions-of-and-treatment-during-mandatory-military-service-including-for-kurdish-and-other-minority-ethnicities--religions",
+    "paragraph": "13.1.3",
+    "section": "Annex B: Correspondence with the Foreign, Commonwealth and Development Office (FCDO) 14 April 2023",
+    "page": 56
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Not for disclosure –",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "0\nvalid from 1 July 2025\nOfficial – sensitive:",
+   "after": "Start of section The information in this section",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "13.1.3",
+    "section": "Version control",
+    "page": 65
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Not for disclosure –",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "restricted for internal Home Office use. Official – sensitive:",
+   "after": "End of section\nChanges from last version of",
+   "before_pdf": "restricted for internal Home Office use.\nOfficial – sensitive:",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "13.1.3",
+    "section": "Version control",
+    "page": 6
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Convention reason(s)",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "disclosure – End of section\n2. Convention reason(s)",
+   "after": "2.1.1 In general, a person evading",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "in Pretty v United Kingdom [2002] 35 EHRR",
+   "after": "which says that: ‘Where the treatment humiliates or",
+   "where": {
+    "heading": "bookmark36",
+    "paragraph": "3.6.4",
+    "section": "Assessment",
+    "page": 12
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 252,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

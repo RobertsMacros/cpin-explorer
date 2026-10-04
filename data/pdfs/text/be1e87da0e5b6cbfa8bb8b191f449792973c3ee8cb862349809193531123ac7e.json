@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 28,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 34,
+ "paragraphs": 175,
+ "list_items": 2,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 44,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 2, 15, 24"
+ ],
+ "figure_pages": {
+  "41b9d3b399ecdb550f83880995b23b2fa46e302a19e7d4c53f03846138ba4321.png": 7,
+  "47365f37f6271423c1f88c74d19a42099ee3009f14f51142bd7d8f1e9334a43f.png": 8
+ },
+ "figure_sizes": {
+  "41b9d3b399ecdb550f83880995b23b2fa46e302a19e7d4c53f03846138ba4321.png": [
+   375,
+   747
+  ],
+  "47365f37f6271423c1f88c74d19a42099ee3009f14f51142bd7d8f1e9334a43f.png": [
+   375,
+   1133
+  ]
+ },
+ "figure_text": {
+  "41b9d3b399ecdb550f83880995b23b2fa46e302a19e7d4c53f03846138ba4321.png": 226,
+  "47365f37f6271423c1f88c74d19a42099ee3009f14f51142bd7d8f1e9334a43f.png": 405
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Nigeria: Prison conditions",
+ "cover_version": "1.0",
+ "cover_date": "November 2016",
+ "pdf_sha256": "be1e87da0e5b6cbfa8bb8b191f449792973c3ee8cb862349809193531123ac7e",
+ "images": [
+  "41b9d3b399ecdb550f83880995b23b2fa46e302a19e7d4c53f03846138ba4321.png",
+  "47365f37f6271423c1f88c74d19a42099ee3009f14f51142bd7d8f1e9334a43f.png"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 245,
+ "list_items": 5,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 78,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 35"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Somalia (South and Central): Fear of Al Shabaab",
+ "cover_version": "2.0",
+ "cover_date": "July 2017",
+ "pdf_sha256": "ce9bc6cff0b899bf1b25bb26dbd4889f862e4c35fb13d9a128cf86531f11cfc0",
+ "images": []
+}

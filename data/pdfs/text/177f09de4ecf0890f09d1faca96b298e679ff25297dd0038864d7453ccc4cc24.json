@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 56,
+ "paragraphs": 313,
+ "list_items": 49,
+ "tables": 7,
+ "figures": 2,
+ "footnotes": 113,
+ "bookmarks": 50,
+ "warnings": [
+  "footnotes with no mark found in the text: 15"
+ ],
+ "figure_pages": {
+  "32a724452a32697a298d521046b5fed50aea9186f8f3ac6185ea59943f731fe3.png": 6,
+  "5a171f02e44894dc4e5a3335adc35a98c7d0bc3f83eebfedc16b827ce8c3ea26.jpg": 8
+ },
+ "figure_sizes": {
+  "32a724452a32697a298d521046b5fed50aea9186f8f3ac6185ea59943f731fe3.png": [
+   616,
+   354
+  ],
+  "5a171f02e44894dc4e5a3335adc35a98c7d0bc3f83eebfedc16b827ce8c3ea26.jpg": [
+   927,
+   718
+  ]
+ },
+ "figure_text": {
+  "32a724452a32697a298d521046b5fed50aea9186f8f3ac6185ea59943f731fe3.png": 1,
+  "5a171f02e44894dc4e5a3335adc35a98c7d0bc3f83eebfedc16b827ce8c3ea26.jpg": 2
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Background Note Egypt",
+ "cover_version": "1.0",
+ "cover_date": "December 2020",
+ "pdf_sha256": "177f09de4ecf0890f09d1faca96b298e679ff25297dd0038864d7453ccc4cc24",
+ "images": [
+  "32a724452a32697a298d521046b5fed50aea9186f8f3ac6185ea59943f731fe3.png",
+  "5a171f02e44894dc4e5a3335adc35a98c7d0bc3f83eebfedc16b827ce8c3ea26.jpg"
+ ]
+}

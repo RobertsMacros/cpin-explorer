@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 28,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 28,
+ "paragraphs": 228,
+ "list_items": 59,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 47,
+ "bookmarks": 30,
+ "warnings": [
+  "page 5: bookmark not found in the text: '1.1 Basis of claim'",
+  "page 5: bookmark not found in the text: '2.1 Credibility'"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Baathists",
+ "cover_version": "2.0",
+ "cover_date": "January 2020",
+ "pdf_sha256": "7255e2ebdef321d137c62adbd23aee64c8c78cb5157a7357cb195fb98e76fe83",
+ "images": []
+}

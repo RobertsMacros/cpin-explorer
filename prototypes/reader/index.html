@@ -16,13 +16,14 @@
 <link rel="stylesheet" href="../shared/minimap.css">
 <link rel="stylesheet" href="reader.css">
 <script>try { const t = localStorage.getItem("cpin-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; if (localStorage.getItem("cpin-history-open") === "0") document.documentElement.classList.add("hist-closed"); } catch (e) {}</script>
+<script type="module" src="../shared/brand-mark.js" blocking="render"></script>
 <script type="module" src="reader.js"></script>
 <link rel="stylesheet" href="../shared/brand.css">
 </head>
 <body class="is-loading">
 <a class="skip" href="#doc">Skip to the text</a>
 <header class="top" id="top">
-  <a class="brand" id="brand" href="../dashboard/index.html" aria-label="CPIN Explorer: back to the globe">
+  <a class="brand" id="brand" href="../dashboard/index.html" aria-label="CPIN Explorer: back to the globe" data-mark="country-param">
     <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
     <span class="brand-name"><b>CPIN</b>EXPLORER</span>
   </a>
@@ -44,7 +45,7 @@
 <section class="masthead wide" id="head" aria-label="About this report"></section>
 
 <!-- History: every edition held and every GOV.UK update, on one timeline. Open by default. Everything in it
-     keeps its place while editions change (fixed-height lines and caption), so stepping or Play never jolts. -->
+     keeps its place while editions change (fixed-height lines and caption), so stepping never jolts. -->
 <section class="history wide" id="history" aria-labelledby="histTitle" hidden>
   <div class="hist-frame">
     <div class="hist-head">
@@ -59,12 +60,6 @@
           <ol id="clog" aria-labelledby="clogTitle"></ol>
         </div>
       </div>
-      <button class="btn play" id="playBtn" type="button" aria-pressed="false" aria-keyshortcuts="ArrowLeft ArrowRight Home End"
-        title="Play every edition and update in turn.&#10;On the timeline: ← → step, Home and End go to the first and last. c shows changes.">
-        <svg class="i-play" viewBox="0 0 20 20" aria-hidden="true"><path d="M6.5 4.5v11l9-5.5z" fill="currentColor"/></svg>
-        <svg class="i-pause" viewBox="0 0 20 20" aria-hidden="true"><rect x="5.5" y="4.5" width="3" height="11" fill="currentColor"/><rect x="11.5" y="4.5" width="3" height="11" fill="currentColor"/></svg>
-        <span id="playLbl">Play<span class="lbl-x"> history</span></span>
-      </button>
       <button class="btn hist-toggle" id="histToggle" type="button" aria-expanded="true" aria-controls="histBody"><span class="lbl">Hide</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 10l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
     </div>
     <div class="hist-body" id="histBody">
@@ -115,6 +110,8 @@
     </article>
     <!-- Minimap: the whole text at a glance, beside it (wide screens). Filled in by ../shared/minimap.js. -->
     <div class="minimap is-empty" id="minimap" aria-hidden="true"></div>
+    <!-- Phones: its quiet cousin, a hairline down the left edge of the screen. Filled in by phone.js. -->
+    <div class="edge is-empty" id="edge" aria-hidden="true"></div>
   </div>
   <aside class="rail" id="rail" aria-label="Saved from this report"></aside>
 </main>
@@ -122,7 +119,7 @@
 <footer class="foot">
   <!--brand-rm--><span class="foot-rm"><img class="rm-ink" src="../../assets/roberts-macros/derived/rm-mark-ink.png" alt="Roberts Macros" width="261" height="128"><img class="rm-light" src="../../assets/roberts-macros/derived/rm-mark-light.png" alt="" width="261" height="128"></span><!--/brand-rm-->
   <span>Sources: Home Office, <a href="https://www.gov.uk/government/collections/country-policy-and-information-notes" target="_blank" rel="noopener">GOV.UK</a>. Contains public sector information licensed under the <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" target="_blank" rel="noopener">Open Government Licence v3.0</a>. Earlier editions are copies captured by the Internet Archive. An independent mirror, not affiliated with or endorsed by the Home Office.</span>
-  <!--brand-foot--><span class="foot-end"><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
+  <!--brand-foot--><span class="foot-end"><a class="foot-link" href="../guide/index.html#guide">Guide</a><a class="foot-link" href="../guide/index.html#glossary">Glossary</a><a class="btn foot-bug" data-report-bug hidden href="#">Report a bug</a></span><!--/brand-foot-->
 </footer>
 
 <!-- Phones and narrow windows: contents and saved passages (or the list of changes) live in a slide-up sheet. -->
@@ -136,6 +133,7 @@
   <div class="sheet-tabs" role="tablist">
     <button type="button" role="tab" class="sheet-tab" data-tab="toc" aria-selected="true">Contents</button>
     <button type="button" role="tab" class="sheet-tab" data-tab="saved" aria-selected="false" id="sheetTabSaved">Saved</button>
+    <a class="sheet-link" href="../guide/index.html#guide" aria-label="Guide and glossary">Guide</a>
     <button type="button" class="sheet-close" id="sheetClose" aria-label="Close">×</button>
   </div>
   <div class="sheet-body" id="sheetBody"></div>

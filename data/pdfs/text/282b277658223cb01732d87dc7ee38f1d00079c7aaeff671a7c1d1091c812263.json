@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 191,
+ "list_items": 20,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 59,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 12"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Ukraine: Victims of trafficking",
+ "cover_version": "2.0",
+ "cover_date": "May 2016",
+ "pdf_sha256": "282b277658223cb01732d87dc7ee38f1d00079c7aaeff671a7c1d1091c812263",
+ "images": []
+}

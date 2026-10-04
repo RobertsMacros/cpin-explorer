@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 76,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 33,
+ "paragraphs": 546,
+ "list_items": 50,
+ "tables": 40,
+ "figures": 4,
+ "footnotes": 349,
+ "bookmarks": 28,
+ "warnings": [
+  "footnotes with no mark found in the text: 28, 29, 30, 31, 32, 33, 188"
+ ],
+ "figure_pages": {
+  "6ec8b5c5880ccd2b4ace54a55d1a51c603d13652db810591b3a46438f6759351.jpg": 8,
+  "67e0262c6eb433e0c5c59d1e91d37d729e24ef92f90af87778e8eca5aa0c7c12.jpg": 8,
+  "a7f588adca43454cd63b5f413e8acf3e41b0fe4504a355d7c34f93303698456f.jpg": 9,
+  "1dfe4d9cdb8157994c54b02719f25634d919f830c4060cf3d362e58208acda5b.png": 10
+ },
+ "figure_sizes": {
+  "6ec8b5c5880ccd2b4ace54a55d1a51c603d13652db810591b3a46438f6759351.jpg": [
+   960,
+   607
+  ],
+  "67e0262c6eb433e0c5c59d1e91d37d729e24ef92f90af87778e8eca5aa0c7c12.jpg": [
+   968,
+   568
+  ],
+  "a7f588adca43454cd63b5f413e8acf3e41b0fe4504a355d7c34f93303698456f.jpg": [
+   975,
+   614
+  ],
+  "1dfe4d9cdb8157994c54b02719f25634d919f830c4060cf3d362e58208acda5b.png": [
+   889,
+   418
+  ]
+ },
+ "figure_text": {
+  "6ec8b5c5880ccd2b4ace54a55d1a51c603d13652db810591b3a46438f6759351.jpg": 0,
+  "67e0262c6eb433e0c5c59d1e91d37d729e24ef92f90af87778e8eca5aa0c7c12.jpg": 0,
+  "a7f588adca43454cd63b5f413e8acf3e41b0fe4504a355d7c34f93303698456f.jpg": 0,
+  "1dfe4d9cdb8157994c54b02719f25634d919f830c4060cf3d362e58208acda5b.png": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: Medical and healthcare provision",
+ "cover_version": "2.0",
+ "cover_date": "January 2021",
+ "pdf_sha256": "1a667821cbac9aade2ffe261a622906f7c1d5218883f9fa93deffaf9cb2e0e1d",
+ "images": [
+  "1dfe4d9cdb8157994c54b02719f25634d919f830c4060cf3d362e58208acda5b.png",
+  "67e0262c6eb433e0c5c59d1e91d37d729e24ef92f90af87778e8eca5aa0c7c12.jpg",
+  "6ec8b5c5880ccd2b4ace54a55d1a51c603d13652db810591b3a46438f6759351.jpg",
+  "a7f588adca43454cd63b5f413e8acf3e41b0fe4504a355d7c34f93303698456f.jpg"
+ ]
+}

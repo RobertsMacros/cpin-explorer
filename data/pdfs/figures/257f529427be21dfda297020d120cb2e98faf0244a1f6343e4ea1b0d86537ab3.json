@@ -1,0 +1,47 @@
+{
+ "extractor": "pdftext-2",
+ "note": "malaysia/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+ "pdf_sha256": "257f529427be21dfda297020d120cb2e98faf0244a1f6343e4ea1b0d86537ab3",
+ "body_sha256": "858cd7318affcbab0c99768710621d7ed1adb36a4de86c37145432a9041a547b",
+ "figures": [
+  {
+   "image": "e5d8ba5f265a182304ca59c04f1235a05871acbb6d0314f43e46aa098428311f.png",
+   "tag": "p",
+   "index": 304,
+   "key": "moreparticipantsagreedthandisagreedstronglyorsomewhat529vs38",
+   "page": 41
+  },
+  {
+   "image": "b159736ee54df8e762e88dffdf8d33a2b10182eebdbfb21e31c29a370128557b.png",
+   "tag": "p",
+   "index": 307,
+   "key": "moreparticipantsdisagreedthanagreed552vs300withthestatementt",
+   "page": 42
+  },
+  {
+   "image": "c2ca8f0e2193347c0e4b3581d0351354ba0954958c7dfbd8e4fdfdb292ed28b3.png",
+   "tag": "p",
+   "index": 310,
+   "key": "agreaterproportionofparticipantsdisagreedthanagreedwiththest",
+   "page": 43
+  },
+  {
+   "image": "4320fb503fd8649aa772a0da92b6a50788483de6ee3ac3e8891053b3cd82f318.jpg",
+   "tag": "p",
+   "index": 406,
+   "key": "1137cnnpublishedaphotoofparticipantsinawomensdaymarchaskingf",
+   "page": 55
+  },
+  {
+   "image": "66611461840698e05e84054b1a133ca8371cdb61745ab254c25f26e9694e2b81.png",
+   "tag": "p",
+   "index": 420,
+   "key": "64oftherespondentswerelivinginkualalumpurandtheremaining36in",
+   "page": 58
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 5,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

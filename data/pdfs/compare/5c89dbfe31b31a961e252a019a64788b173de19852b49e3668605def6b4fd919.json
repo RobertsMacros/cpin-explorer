@@ -1,0 +1,264 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iraq/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-iraq-july-2025-accessible",
+ "pdf_sha256": "5c89dbfe31b31a961e252a019a64788b173de19852b49e3668605def6b4fd919",
+ "body_sha256": "1b00f350a262375624436a95fdbb541411b20ad9399debe88d245091a6d10201",
+ "words": {
+  "web": 21233,
+  "pdf": 21242
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 7,
+   "share": 0.000188,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 7
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": null,
+   "pdf": "3.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "3 July 2025"
+   ],
+   "pdf": [
+    "3 July 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 124,
+   "pdf": 124,
+   "pdf_raw": 124,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 112,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.1.5 The January 2023 DFAT report stated:",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Sadr’s anti-LGBTI rhetoric.\n9.1.5 ‘",
+   "after": "Harassment, abuse and violence against lesbian, gay, bisexual,",
+   "before_pdf": "on Muqtada al-Sadr’s anti-LGBTI rhetoric.",
+   "where": {
+    "heading": "societal-attitudes-discrimination-and-exclusion",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Front (",
+   "pdf": "Forces (",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Treatment by armed groups including the Popular Mobilisation",
+   "after": "PMF)\n8.3.1 The March 2022 HRW",
+   "where": {
+    "heading": "treatment-armed-groups",
+    "paragraph": "8.2.10",
+    "section": "Country information",
+    "page": 21
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "12.2.3",
+    "section": "Version control and feedback",
+    "page": 53
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "July 2025",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 3.0",
+   "after": "Executive summary\nConservative and religious values are prevalent",
+   "before_pdf": "Version 3.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.3.2",
+   "pdf": "7.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "code had been used to target LGBTQ people ...’",
+   "after": "In May 2024, Iraqi Kurdish ‘independent media establishment’",
+   "where": {
+    "heading": "legislation-april-2024",
+    "paragraph": "7.3.2",
+    "section": "Country information",
+    "page": 14
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 166,
+  "different": {},
+  "pdf_unnumbered": [
+   "9.1.5"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [
+   "7.3.2"
+  ],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 35,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 52,
+ "paragraphs": 295,
+ "list_items": 14,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 83,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 57"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note India: Sexual orientation and gender identity and expression",
+ "cover_version": "3.0",
+ "cover_date": "October 2018",
+ "pdf_sha256": "80c96eb92632769d2cb4c5cb292438c946f3073ebf060d125d4045078a5b6fdf",
+ "images": []
+}

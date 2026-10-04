@@ -1,0 +1,353 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-kurds-and-kurdish-areas-syria-december-2025-accessible",
+ "pdf_sha256": "94754e3be52bac02d6773f6b853ac3676f825562fd1311afc197e91087d68391",
+ "body_sha256": "755cd16bbd4dff3db14b17c7549a4d8ba1ef2840b90ebb3de98d1164f843319f",
+ "words": {
+  "web": 39786,
+  "pdf": 39810
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 0,
+   "pdf_words": 3,
+   "share": 3.8e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 3
+   }
+  },
+  "opening": {
+   "differences": 2,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 4,
+    "pdf_words": 7
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 5,
+    "web_words": 4,
+    "pdf_words": 7
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 17
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "December 2025",
+   "pdf": "2.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "6 June 2025"
+   ],
+   "pdf": [
+    "6 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 340,
+   "pdf": 340,
+   "pdf_raw": 340,
+   "differ": false
+  },
+  "pictures": {
+   "web": 7,
+   "pdf": 7
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 135,
+   "pdf": 55
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "SDF)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Risk from non-state actors: Syrian Democratic Forces",
+   "after": "3.2.1 Kurds in Syria are unlikely",
+   "before_pdf": "Risk from non-state actors: Syrian Democratic Forces (",
+   "where": {
+    "heading": "risk-syrian-democratic-forces",
+    "paragraph": "3.2.1",
+    "section": "Assessment",
+    "page": 8
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "SNA)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Risk from non-state actors: Syrian National Army",
+   "after": "3.4.1 Kurds in areas under de",
+   "before_pdf": "Risk from non-state actors: Syrian National Army (",
+   "where": {
+    "heading": "risk-syrian-national-army",
+    "paragraph": "3.4.1",
+    "section": "Assessment",
+    "page": 11
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "with the Syrian Defense Ministry’\n14. Conflict between",
+   "after": "SDF and SNA\n14.1.1 The Arab",
+   "where": {
+    "heading": "conflict-between-sdf-sna",
+    "paragraph": "13.1.6",
+    "section": "Country information",
+    "page": 38
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "3.2.2The",
+   "pdf": "3.2.2 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "would place them at real risk of persecution.",
+   "after": "Syrian Democratic Forces (SDF), founded in 2015, is",
+   "where": {
+    "heading": "risk-syrian-democratic-forces",
+    "paragraph": "3.2.2",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "16.6.15",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "transitional government named in Damascus on 29 March...’",
+   "after": "For information on actions taken by HTS to",
+   "where": {
+    "heading": "treatment-HTS",
+    "paragraph": "16.6.14",
+    "section": "Country information",
+    "page": 72
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.1.14",
+   "pdf": "10.1.16",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "al-Sanadid Forces, and the Turkmen Seljuk Brigade.",
+   "after": "In a 25 March 2025 report, the EUAA",
+   "where": {
+    "heading": "sdf",
+    "paragraph": "10.1.14",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.1.15",
+   "pdf": "10.1.17",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "primary task is to protect their own areas ...’",
+   "after": "The same source stated:\nAs of February and",
+   "where": {
+    "heading": "sdf",
+    "paragraph": "10.1.15",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.1.16",
+   "pdf": "10.1.18",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "two Kurdish-majority neighbourhoods Ashrafieh and Sheikh Maqsoud.’",
+   "after": "The website of the Syrian Democratic Council explained ‘",
+   "where": {
+    "heading": "sdf",
+    "paragraph": "10.1.16",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.1.17",
+   "pdf": "10.1.19",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "councils, which represent the citizens of the region ... ’",
+   "after": "On 13 April 2025, The New Arab noted",
+   "where": {
+    "heading": "sdf",
+    "paragraph": "10.1.17",
+    "section": "Country information",
+    "page": 25
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 339,
+  "different": {
+   "10.1.16": "10.1.18",
+   "10.1.17": "10.1.19"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "10.1.14",
+   "10.1.15"
+  ],
+  "unconfirmed": []
+ }
+}

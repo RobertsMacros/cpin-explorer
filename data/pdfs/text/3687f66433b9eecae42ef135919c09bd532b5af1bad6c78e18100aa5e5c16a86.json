@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 16,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 28,
+ "paragraphs": 104,
+ "list_items": 10,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 22,
+ "bookmarks": 28,
+ "warnings": [
+  "footnotes with no mark found in the text: 12"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 3,
+ "cover_title": "Country Policy and Information Note Pakistan: Internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "April 2023",
+ "pdf_sha256": "3687f66433b9eecae42ef135919c09bd532b5af1bad6c78e18100aa5e5c16a86",
+ "images": []
+}

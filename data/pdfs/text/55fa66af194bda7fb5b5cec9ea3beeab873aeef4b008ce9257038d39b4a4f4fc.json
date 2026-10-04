@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 85,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 80,
+ "paragraphs": 811,
+ "list_items": 122,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 331,
+ "bookmarks": 80,
+ "warnings": [
+  "footnotes with no mark found in the text: 51"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Ghana: Sexual orientation, gender identity and expression (SOGIE)",
+ "cover_version": "4.0",
+ "cover_date": "July 2024",
+ "pdf_sha256": "55fa66af194bda7fb5b5cec9ea3beeab873aeef4b008ce9257038d39b4a4f4fc",
+ "images": []
+}

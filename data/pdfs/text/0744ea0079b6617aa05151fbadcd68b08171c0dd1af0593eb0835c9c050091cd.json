@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 61,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 73,
+ "paragraphs": 453,
+ "list_items": 32,
+ "tables": 2,
+ "figures": 2,
+ "footnotes": 76,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "c3753d235ab9de266c74ad634fc275876ba315342a7094e3e9ee3ac6178002dd.png": 54
+ },
+ "figure_sizes": {
+  "c3753d235ab9de266c74ad634fc275876ba315342a7094e3e9ee3ac6178002dd.png": [
+   276,
+   225
+  ]
+ },
+ "figure_text": {
+  "c3753d235ab9de266c74ad634fc275876ba315342a7094e3e9ee3ac6178002dd.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Albania: Blood feuds",
+ "cover_version": "3.0",
+ "cover_date": "October 2018",
+ "pdf_sha256": "0744ea0079b6617aa05151fbadcd68b08171c0dd1af0593eb0835c9c050091cd",
+ "images": [
+  "c3753d235ab9de266c74ad634fc275876ba315342a7094e3e9ee3ac6178002dd.png"
+ ]
+}

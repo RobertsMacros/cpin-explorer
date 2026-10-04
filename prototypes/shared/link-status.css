@@ -1,8 +1,10 @@
-/* Link status tags after cited sources (link-status.js). COBE style: square, pixel lettering. */
+/* Link status tags after cited sources (link-status.js). COBE style: square, pixel lettering. As tall as a
+   1.2em line with .22em of padding, the lettering centred in it (no leading: see .tag in theme.css); the
+   box is set on the middle of the lowercase letters of the words it follows (vertical-align: middle). */
 .linkstatus {
-  display: inline-flex; align-items: center; gap: .35em; margin-left: .3em; vertical-align: .12em;
-  padding: .12em .4em .1em; font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .06em;
-  text-transform: uppercase; line-height: 1.2; white-space: nowrap;
+  display: inline-flex; align-items: center; gap: .35em; margin-left: .3em; vertical-align: middle;
+  height: 1.42em; padding: 0 .4em; font-family: var(--font-pixel); font-size: .62rem; letter-spacing: .06em;
+  text-transform: uppercase; line-height: normal; white-space: nowrap;
 }
 .linkstatus--dead { background: var(--del-wash); color: var(--del); box-shadow: inset 0 0 0 1px var(--del); }
 .linkstatus--moved { background: var(--bg); color: var(--blue); box-shadow: inset 0 0 0 1px var(--blue); }

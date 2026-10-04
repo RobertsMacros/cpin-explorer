@@ -1,0 +1,269 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "egypt/country-policy-and-information-note-military-service-egypt-march-2023-accessible",
+ "pdf_sha256": "c8b9240f00bcdb8cbedacefd3b2df011591cd182756a76ca3c3ba6b093aca514",
+ "body_sha256": "d1c88241942c9a46a3d62543f8cc8d9a85acbaeab059b5ab595816eaba886a8b",
+ "words": {
+  "web": 15131,
+  "pdf": 15138
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "list marker": {
+    "differences": 6,
+    "web_words": 0,
+    "pdf_words": 6
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "June 2025",
+   "pdf": "3.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "02 June 2025"
+   ],
+   "pdf": [
+    "02 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 97,
+   "pdf": 97,
+   "pdf_raw": 97,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 74,
+   "pdf": 52
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "15.1.4",
+    "section": "Version control and feedback",
+    "page": 42
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "military service card (Betaka 6 or 7 Gond):",
+   "after": "Go to the police station that issued your",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Kesm) to receive 6 Gond, free of charge.",
+   "after": "If not there, then go to the Military",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Gesr El Suez for a 7 Gond form.",
+   "after": "Issue your birth certificate with your military service",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "service number and fill out the 7 Gond.",
+   "after": "Present it to the police station to add",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to add two stamps on 7 Gond forms.",
+   "after": "Submit the 6 or 7 Gond to the",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "7 Gond to the registrar’s front desk.",
+   "after": "Make sure that all the information included in",
+   "before_pdf": "7 Gond to the registrar's front desk.",
+   "where": {
+    "heading": "Military_service_documentation",
+    "paragraph": "9.1.3",
+    "section": "9. Military service documentation",
+    "page": 16
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 141,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

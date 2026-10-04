@@ -1,0 +1,308 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "pakistan/country-policy-and-information-note-political-parties-and-affiliation-pakistan-february-2026-accessible",
+ "pdf_sha256": "17fbff07206c4d5ee16f77288c6673b65ba04aae80ffb44f511d4825f86ca896",
+ "body_sha256": "06852a069ee66da4d843f1fa6b311eeb2e353223ce3b82e4664df80bd91783c1",
+ "words": {
+  "web": 18283,
+  "pdf": 18257
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 3,
+   "share": 0.000109,
+   "passages": 0,
+   "sizes": {
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 14,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "February 2026",
+   "pdf": "3.0",
+   "pdf_date": "February 2026"
+  },
+  "section_updated": {
+   "web": [
+    "28 January 2026"
+   ],
+   "pdf": [
+    "28 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 220,
+   "pdf": 220,
+   "pdf_raw": 220,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 109,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Nawaz (PML-N)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "also Election results.\n9.2 Pakistan Muslim League",
+   "after": "9.2.1 The PML-N has its",
+   "before_pdf": "also Election results.\n9.2 Pakistan Muslim League –",
+   "where": {
+    "heading": "nawaz",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 17
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "s",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "the country’s largest province.\n9.3 Pakistan’",
+   "after": "People’s Party (PPP)\n9.3.1 The",
+   "before_pdf": "the country’s largest province.\n9.3 Pakistan",
+   "where": {
+    "heading": "pakistans-peoples-party-ppp",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 2
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Targeted terrorist attacks 2021 to 2024:\nYear\nTotal terrorist attacks\nPolitical leaders/workers targeted\nElection-related targets\n2021\n207\n7\n0\n2022\n262\n8\n0\n2023\n306\n7\n0\n2024\n521\n53\n17",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "security and law enforcement personnel) in those years:",
+   "after": "12.5.4 According to the PIPS security",
+   "where": {
+    "heading": "attacks-political-parties",
+    "paragraph": "12.5.3",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.6.4The",
+   "pdf": "9.6.4 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "they openly parted ways with him,” [Tessori] said ...’",
+   "after": "DFAT report stated ‘MQM [Pakistan] won 22 federal",
+   "where": {
+    "heading": "mqm",
+    "paragraph": "9.6.4",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.5.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "took place in Khyber Pakhtunkhwa and Balochistan provinces.",
+   "after": "The USSD HR Reports for 2021 and 2022",
+   "before_pdf": "took place in Khyber Pakhtunkhwa and Balochistan provinces .",
+   "where": {
+    "heading": "attacks-political-parties",
+    "paragraph": "12.5.4",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.",
+   "pdf": "12.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the use of digital technologies such as spyware.’",
+   "after": "3.3 Amnesty International’s 2025 report, Shadows",
+   "where": {
+    "heading": "monitoring",
+    "paragraph": "13.3.3",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "1997",
+   "pdf": "1997131",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "security of the country”.’ The Anti-Terrorism Act,",
+   "after": "describes the measures taken against proscribed groups. Under",
+   "where": {
+    "heading": "ptm",
+    "paragraph": "11.1.3",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "47.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to the other parties in the respective assemblies.",
+   "after": "8.3.7 On 9 October 2025, the",
+   "before_pdf": "to the other parties in the respective assemblies",
+   "where": {
+    "heading": "election-results",
+    "paragraph": "8.3.7",
+    "section": "Country information",
+    "page": 16
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 177,
+  "different": {
+   "13.3.3": "12.3.3"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

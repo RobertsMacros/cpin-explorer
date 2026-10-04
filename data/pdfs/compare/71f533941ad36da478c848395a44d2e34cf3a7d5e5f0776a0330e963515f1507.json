@@ -1,0 +1,553 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "sri-lanka/country-information-note-healthcare-and-medical-treatment-sri-lanka-december-2024-accessible",
+ "pdf_sha256": "71f533941ad36da478c848395a44d2e34cf3a7d5e5f0776a0330e963515f1507",
+ "body_sha256": "009cdf433e00ab841c452915329a83dee65d436755855e1a7312399d338f3cbc",
+ "words": {
+  "web": 27710,
+  "pdf": 27680
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 4,
+   "share": 0.000108,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 36,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 8,
+    "web_words": 0,
+    "pdf_words": 12
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "repeated label": {
+    "differences": 4,
+    "web_words": 0,
+    "pdf_words": 8
+   },
+   "table cell": {
+    "differences": 1,
+    "web_words": 2,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 2,
+    "web_words": 36,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 4
+   }
+  },
+  "ours": {
+   "differences": 7,
+   "web_words": 6,
+   "pdf_words": 24
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "December 2024",
+   "pdf": "2.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [
+    "29 October 2024",
+    "29 October 2024",
+    "21 August 2024",
+    "29 October 2024",
+    "29 October 2024",
+    "21 August 2024"
+   ],
+   "pdf": [
+    "29 October 2024",
+    "29 October 2024",
+    "21 August 2024",
+    "29 October 2024",
+    "29 October 2024",
+    "21 August 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 214,
+   "pdf": 214,
+   "pdf_raw": 214,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 10,
+   "pdf": 18
+  },
+  "headings": {
+   "web": 103,
+   "pdf": 60
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Category of care Services",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "has summarised relevant content in the table below:",
+   "after": "Preliminary care\n24-hour emergency admissions via Psychiatric",
+   "where": {
+    "heading": "preliminary-care",
+    "paragraph": "5.2.6",
+    "section": "Country information",
+    "page": 30
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Primary care:",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Healthy Life Centres (HLCs), programmes for health education",
+   "after": "Divisional Hospitals (DH)\nExample services: inpatient care, NCD",
+   "where": {
+    "heading": "services",
+    "paragraph": "3.3.2",
+    "section": "Country information",
+    "page": 17
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "New patients treated\nOpioids\nCannabinoids\nSedatives/Hypnotics\nTotal\n2020 (up to June)\n2218\n541\n142\n2901\n2019\n6908\n1930\n349\n9187\n2018\n6242\n1121\n127\n7490",
+   "pdf": "",
+   "web_words": 20,
+   "pdf_words": 0,
+   "before": "use for the period 2018 to June 2020:",
+   "after": "5.6.3 In July 2023, the MoH",
+   "where": {
+    "heading": "drug-and-alcohol-rehabilitation",
+    "paragraph": "5.6.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Category\nNumber of appointments\nMedical consultants\n304\nMedical officers\n2724\nNursing officers\n65\nMedical laboratory technicians\n238\nPublic health midwives\n222\nPublic health inspectors\n12\nRadiographers\n54\nOccupational therapists\n45",
+   "pdf": "",
+   "web_words": 16,
+   "pdf_words": 0,
+   "before": "between 1 September 2022 and 30 September 2023.",
+   "after": "3.5.4 On 20 June 2024, Al",
+   "where": {
+    "heading": "personnel",
+    "paragraph": "3.5.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.8.3",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "for psychiatric illness, psychological disorders, and substance abuse)",
+   "after": "The Alcohol and Drug Information Centre (ADIC) is",
+   "where": {
+    "heading": "mental-health-ngos",
+    "paragraph": "5.8.3",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.8.4",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "persons with alcohol and other drug use problems.",
+   "after": "During 2023 UNICEF Sri Lanka provided ‘mental health",
+   "where": {
+    "heading": "mental-health-ngos",
+    "paragraph": "5.8.4",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province Hospital",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "complied the following table from the information provided:",
+   "after": "Western Apeksha Cancer Institute Maharagama\nBase Hospital Avissavella",
+   "where": {
+    "heading": "western--apeksha-cancer-institute-maharagama",
+    "paragraph": "6.1.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province\nHospital",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "District General Hospital Nuwaraeliya\nSabaragamuwa Teaching Hospital Ratnapura",
+   "after": "District General Hospital Kegalle\nUva Provincial General Hospital",
+   "where": {
+    "heading": "sabaragamuwa--teaching-hospital-ratnapura",
+    "paragraph": "6.1.1",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province Hospital",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "in Sri Lanka, published on 7 August 2023:",
+   "after": "Western National Hospital of Sri Lanka Colombo\nColombo",
+   "where": {
+    "heading": "western--national-hospital-of-sri-lanka-colombo",
+    "paragraph": "6.17.5",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Province Hospital",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Chilaw\nSabaragamuwa Teaching Hospital Kegalle\nTeaching Hospital Ratnapura",
+   "after": "District General Hospital Embilipitiya\nNorth Central Anuradhapura Teaching",
+   "where": {
+    "heading": "sabaragamuwa--teaching-hospital-kegalle",
+    "paragraph": "6.17.5",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "A",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "healing) and is due to open in June...",
+   "after": "lack of data collection means the exact survival",
+   "where": {
+    "heading": "cancer-children",
+    "paragraph": "6.2.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "report added:\nThe disease surveillance system consists of:",
+   "after": "routine notification of communicable diseases;\nspecial surveillance on",
+   "where": {
+    "heading": "communicable-diseases",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "system consists of:\nroutine notification of communicable diseases;",
+   "after": "special surveillance on selected communicable diseases; and\nsentinel",
+   "before_pdf": "consists of:\n1. routine notification of communicable diseases;",
+   "where": {
+    "heading": "communicable-diseases",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "diseases;\nspecial surveillance on selected communicable diseases; and",
+   "after": "sentinel site surveillance.\nSurveillance of notifiable diseases begins",
+   "before_pdf": "2. special surveillance on selected communicable diseases; and",
+   "where": {
+    "heading": "communicable-diseases",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 44
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Units (PMCU)",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "the table below.\nPrimary care: Primary Medical Care",
+   "after": "Example services: outpatient consultations, dressings, injections, drug dispensing,",
+   "before_pdf": "the table below.\nPrimary care\nPrimary Medical Care",
+   "where": {
+    "heading": "services",
+    "paragraph": "3.3.2",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Units (PMCU)",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Medical Care Units (PMCU)\nExample services: outpatient consultations,",
+   "after": "dressings, injections, drug dispensing, screening for selected non-",
+   "before_pdf": "care\nPrimary Medical Care Example services: outpatient consultations,",
+   "where": {
+    "heading": "services",
+    "paragraph": "3.3.2",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "DH)",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "programmes for health education\nPrimary care: Divisional Hospitals (",
+   "after": "Example services: inpatient care, NCD clinics and mental",
+   "before_pdf": "Centres (HLCs), programmes for health education\nDivisional Hospitals",
+   "where": {
+    "heading": "services",
+    "paragraph": "3.3.2",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Sri Lanka (various 2010 to 2012)\nSri Lanka (various 2019 to 2022)\nSE Asia average",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "diabetes/ chronic respiratory disease\n17% (2010)\n13% (2019)",
+   "after": "Suicide mortality rate (per 100,000 population)\n21.",
+   "before_pdf": "diabetes/chronic respiratory disease\n17% (2010)\n13% (2019)",
+   "where": {
+    "heading": "health-indicators-regional-comparisons-and-long-term-progress",
+    "paragraph": "1.1.1",
+    "section": "Country information",
+    "page": 4
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Institution type\nLocation and/or name",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Hospital); Kantale; Mulleriyawa (Colombo East Base Hospital); Beruwala",
+   "after": "Divisional Hospitals\nAluthgama; Dharga Town; Kandana\nBoard Managed",
+   "where": {
+    "heading": "facilities",
+    "paragraph": "3.2.4",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "DH)",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "DH)\nExample services: inpatient care, NCD clinics and",
+   "after": "mental health clinics, HLCs, screening of selected NCDs,",
+   "before_pdf": "Hospitals Example services: inpatient care, NCD clinics and",
+   "where": {
+    "heading": "services",
+    "paragraph": "3.3.2",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "6.8.1",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Dengue Control Unit, Sri Lanka.\n6.8 Diabetes",
+   "after": "Rasalingam, G, of the University of Edinburgh, stated",
+   "where": {
+    "heading": "diabetes",
+    "paragraph": "6.8.1",
+    "section": "Country information",
+    "page": 46
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 233,
+  "different": {},
+  "pdf_unnumbered": [
+   "6.8.1"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

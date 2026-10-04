@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 54,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 64,
+ "paragraphs": 427,
+ "list_items": 50,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 153,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 27"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Burma: Critics of the government",
+ "cover_version": "3.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "5932ff4decc51514285a4579251da0ef104c07a683cf6b45ebe5d4a6a39ad10b",
+ "images": []
+}

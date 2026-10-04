@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 62,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 61,
+ "paragraphs": 485,
+ "list_items": 109,
+ "tables": 3,
+ "figures": 1,
+ "footnotes": 249,
+ "bookmarks": 56,
+ "warnings": [
+  "page 4: bookmark not found in the text: 'Contents'",
+  "footnotes with no mark found in the text: 100, 101, 102, 239"
+ ],
+ "figure_pages": {
+  "23e33895faaca9d8e7c5b78e145f79991362933bae007a96961dbe9f3dbd8bd0.jpg": 52
+ },
+ "figure_sizes": {
+  "23e33895faaca9d8e7c5b78e145f79991362933bae007a96961dbe9f3dbd8bd0.jpg": [
+   572,
+   577
+  ]
+ },
+ "figure_text": {
+  "23e33895faaca9d8e7c5b78e145f79991362933bae007a96961dbe9f3dbd8bd0.jpg": 1
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Namibia: Women fearing gender- based violence",
+ "cover_version": "1.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "a03dde9d4ce50e28e67e671eed179bbf5040fd3fbd5ccbe1912f0c451df3a677",
+ "images": [
+  "23e33895faaca9d8e7c5b78e145f79991362933bae007a96961dbe9f3dbd8bd0.jpg"
+ ]
+}

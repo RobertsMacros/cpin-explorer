@@ -1,0 +1,925 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "kenya/country-policy-and-information-note-actors-of-protection-kenya-july-2026-accessible",
+ "pdf_sha256": "f0bd174444017b7e166a11791019fe518ba33f68b6b0ea0f8d37985b55968523",
+ "body_sha256": "711dd96b8354681fce9658714570ecb1cd5ad514a41033492c61f42088fd9d21",
+ "words": {
+  "web": 19434,
+  "pdf": 18515
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 13,
+   "pdf_words": 0,
+   "share": 0.000343,
+   "passages": 1,
+   "sizes": {
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 6,
+    "pdf_words": 9
+   },
+   "picture": {
+    "differences": 10,
+    "web_words": 820,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 13,
+    "web_words": 0,
+    "pdf_words": 13
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 13,
+    "web_words": 0,
+    "pdf_words": 13
+   },
+   "numbering": {
+    "differences": 7,
+    "web_words": 6,
+    "pdf_words": 9
+   },
+   "picture in words": {
+    "differences": 7,
+    "web_words": 636,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 3,
+    "web_words": 184,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 26,
+   "web_words": 34,
+   "pdf_words": 31
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2026",
+   "pdf": "1.0",
+   "pdf_date": "July 2026"
+  },
+  "section_updated": {
+   "web": [
+    "28 May 2026"
+   ],
+   "pdf": [
+    "28 May 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 167,
+   "pdf": 167,
+   "pdf_raw": 167,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 13
+  },
+  "tables": {
+   "web": 14,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 49,
+   "pdf": 39
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "325\n1,092\n1,010\nSource: NCAJ analysis using IPOA data.\n10.2.",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "Total No. of cases processed\n833\n986\n1,",
+   "after": "5 Regarding challenges, the IPOA, in their Annual",
+   "before_pdf": "define ‘handled’) between 2020 and 2025.\n10.1.",
+   "where": {
+    "heading": "table-33-matters-handles-by-ipoa-fy-202021---fy202425",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 44
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Types of cases\n2020/21\n2021/22\n2022/23\n2023/24\n2024/25\nHomicide\n3,288\n3,128\n3,102\n3,028\n2,914\nOffences against morality\n9,361\n7,663\n7,259\n7,776\n7,330\nOther offences against the person\n21,777\n22,899\n23,875\n25,577\n24,733\nRobbery\n2,316\n2,801\n3,530\n3,913\n3,496\nBreakings\n4,387\n5,507\n6,740\n6,426\n5,421\nTheft of stock\n1,740\n2,322\n2,927\n2,667\n2,307\nStealing\n9,751\n13,142\n17,386\n18,292\n17,013\nTheft by servant\n1,707\n1,752\n1,762\n1,817\n1,519\nTheft of vehicles and other thefts\n1,219\n1,335\n1,666\n1,496\n1,351\nOffences concerning dangerous drugs\n4,738\n6,390\n8,077\n9,107\n7,319\nTraffic offences\n113\n174\n132\n124\n103\nCriminal damage\n4,294\n4,694\n4,707\n5,028\n5,195\nEconomic crimes\n3,821\n4,258\n4,619\n4,901\n4,463\nCorruption\n142\n93\n96\n115\n98\nOffences involving police officers\n60\n70\n131\n203\n242\nOffences involving tourists\n33\n18\n46\n50\n52\nOther penal code offences\n7,778\n9,293\n11,246\n14,249\nTotal\n76,525\n85,539\n97,301\n104,769\n98,679\nSource: NCAJ analysis using NPS data.",
+   "pdf": "",
+   "web_words": 209,
+   "pdf_words": 0,
+   "before": "and 2025. The source did not define ‘handled’:",
+   "after": "6.1.3 There was no information on",
+   "where": {
+    "heading": "police-efficacy",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 7: Ease or difficulty of obtaining services, by lived poverty, Kenya, 2024\nMedical care:\nLived poverty\nEasy/Very easy\nDifficult/Very difficult\nNo lived poverty\n53%\n47%\nLow lived poverty\n52%\n48%\nModerate lived poverty\n35%\n65%\nHigh lived poverty\n22%\n78%\nIdentity document:\nLived poverty\nEasy/Very easy\nDifficult/Very difficult\nNo lived poverty\n69%\n31%\nLow lived poverty\n38%\n62%\nModerate lived poverty\n28%\n72%\nHigh lived poverty\n25%\n75%\nPolice assistance:\nLived poverty\nEasy/Very easy\nDifficult/Very difficult\nNo lived poverty\n57%\n43%\nLow lived poverty\n35%\n65%\nModerate lived poverty\n25%\n75%\nHigh lived poverty\n30%\n70%\nRespondents who sought selected public services during the previous year were asked: How difficult was it to obtain: The medical care or services you needed? The document you needed? The assistance you needed? (Respondents who did not have contact with these services are excluded)",
+   "pdf": "",
+   "web_words": 136,
+   "pdf_words": 0,
+   "before": "assistance in Kenya by levels of lived poverty:",
+   "after": "6.2.7 The same survey also noted: ‘",
+   "where": {
+    "heading": "figure-7-ease-or-difficulty-of-obtaining-services-by-lived-poverty-kenya-2024",
+    "paragraph": "6.2.6",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Court Rank\nFiled Cases: Criminal\nFiled Cases: Civil\nFiled Cases: All\nResolved Cases: Criminal\nResolved Cases: Civil\nResolved Cases: All\nCCR (%)\nSupreme Court\n70\n70\n72\n72\n103%\nCourt of Appeal\n1,269\n3,587\n4,856\n1,177\n2,541\n3,718\n77%\nHigh Court\n19,756\n28,456\n48,212\n18,261\n38,275\n56,536\n117%\nEmployment & Labour Relations Court\n4,854\n4,854\n6,389\n6,389\n132%\nEnvironment & Land Court\n8,923\n8,923\n10,331\n10,331\n116%\nMagistrates’ Courts\n246,476\n124,976\n371,452\n243,689\n144,606\n388,295\n105%\nTribunals\n11,246\n11,246\n14,536\n14,536\n129%\nSmall Claims Courts\n158,357\n158,357\n155,227\n155,227\n98%\nKadhis’ Courts\n13,555\n13,555\n12,562\n12,562\n93%\nAll Courts\n267,501\n354,024\n621,525\n263,127\n384,539\n647,666\n104%",
+   "pdf": "",
+   "web_words": 120,
+   "pdf_words": 0,
+   "before": "court type for the financial year 2024/2025:",
+   "after": "9.5.6 There was no information on",
+   "where": {
+    "heading": "efficacy",
+    "paragraph": "9.5.5",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 8: Bribe paying for public services, Kenya, 2021-2024\nService\n2021\n2024\nPolice assistance\n52%\n67%\nIdentity document\n43%\n56%\nMedical care\n21%\n32%\nRespondents who sought selected public services during the previous year were asked: How often, if ever, did you have to pay a bribe, give a gift, or do a favour:\nFor a health worker or clinic or hospital staff in order to get the medical care or services you needed?\nFor a government official in order to get the document you needed?\nFor a police officer in order to get the assistance you needed?\nwho say “once or twice”, “a few times”, or “often”)\nRespondents who did not have contact with these services are excluded.)",
+   "pdf": "91",
+   "web_words": 118,
+   "pdf_words": 0,
+   "before": "access police assistance compared to other public services:",
+   "after": "6.3.3 The Ethics and Anti-Corruption",
+   "where": {
+    "heading": "figure-8-bribe-paying-for-public-services-kenya-2021-2024",
+    "paragraph": "6.3.2",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 5: Requested police assistance, by demographic group, Kenya, 2024\nGroup\nPercentage requested assistance\nKenya average\n17%\nMen\n21%\nWomen\n14%\nUrban\n22%\nRural\n15%\nNo formal education\n5%\nPrimary\n14%\nSecondary\n18%\nPost-secondary\n24%\n18-35 years\n18%\n36-55 years\n17%\nOver 55 years\n16%\nHigh lived poverty\n20%\nModerate lived poverty\n18%\nLow lived poverty\n16%\nNo lived poverty\n18%\nRespondents were asked: in the past 12 months, have you requested assistance from the police? (% “yes”)",
+   "pdf": "",
+   "web_words": 69,
+   "pdf_words": 0,
+   "before": "gender, location, education, age, and lived‐poverty level:",
+   "after": "6.3 Police corruption\n6.3.1 The",
+   "where": {
+    "heading": "figure-5-requested-police-assistance-by-demographic-group-kenya-2024",
+    "paragraph": "6.2.8",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Table 3.3 Matters handles by IPOA, FY 2020/21 - FY2024/25\nMatters handled\n2020/21\n2021/22\n2022/23\n2023/24\n2024/25\nNo. of police operations monitored\n67\n70\n122\n77\n128\nNo. of investigations\n625\n781\n995\n895\n711\nNo. of cases forwarded to ODPP\n141\n135\n208\n120\n171\nTotal No. of cases processed\n833\n986",
+   "pdf": "10.",
+   "web_words": 51,
+   "pdf_words": 0,
+   "before": "did not define ‘handled’) between 2020 and 2025.",
+   "after": "1,325\n1,092\n1,010\nSource: NCAJ",
+   "where": {
+    "heading": "table-33-matters-handles-by-ipoa-fy-202021---fy202425",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Designation\nApproved Establishment\nIn Post\nStaffing Level\nJudges\n388\n202\n52%\nMagistrates\n1,200\n566\n47%\nKadhis\n65\n46\n71%\nTribunal Members\n175\n143\n82%\nRegistrars\n428\n48\n11%\nLaw Clerks & Legal Researchers\n666\n150\n23%\nJudicial Staff\n7,948\n5,824\n73%\nTotal\n10,870\n6,979\n64%",
+   "pdf": "116",
+   "web_words": 35,
+   "pdf_words": 0,
+   "before": "number of judicial appointees and employees by designation:",
+   "after": "9.1.6 Commenting on initiatives to improve",
+   "where": {
+    "heading": "structure",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Group\nPercentage Trust\nAverage\n36%\nMen\n38%\nWomen\n35%\nUrban\n29%\nRural\n40%\nNo formal education\n52%\nPrimary\n42%\nSecondary\n35%\nPost-secondary\n28%\n18-35 years\n35%\n36-45 years\n34%\n46-55 years\n40%\nOver 55 years\n41%",
+   "pdf": "",
+   "web_words": 29,
+   "pdf_words": 0,
+   "before": "of trust in the police by demographic group:",
+   "after": "6.1.21 Regarding protection for women and",
+   "where": {
+    "heading": "police-efficacy",
+    "paragraph": "6.1.20",
+    "section": "Country information",
+    "page": 24
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 3.4 Trend of cases processed by ODPP\nYear\nCases processed\n2021/22\n317,838\n2022/23\n299,435\n2023/24\n298,610\n2024/25\n342,450",
+   "pdf": "",
+   "web_words": 28,
+   "pdf_words": 0,
+   "before": "of Public Prosecutions (ODPP) between 2021 and 2025:",
+   "after": "8.1.3 The NCAJ 2025 annual report",
+   "where": {
+    "heading": "figure-34-trend-of-cases-processed-by-odpp",
+    "paragraph": "8.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 6: Ease of difficulty in obtaining services, Kenya, 2024\nService\nEasy/Very easy\nDifficult/very difficult\nMedical care\n37%\n63%\nIdentity document\n33%\n67%\nPolice assistance\n31%\n69%",
+   "pdf": "",
+   "web_words": 25,
+   "pdf_words": 0,
+   "before": "perceptions of access to police assistance in Kenya:",
+   "after": "6.2.6 The figure below, reproduced from",
+   "where": {
+    "heading": "figure-6-ease-of-difficulty-in-obtaining-services-kenya-2024",
+    "paragraph": "6.2.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.5.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "did not provide figures for criminal cases specifically.",
+   "after": "The figure below from the NCAJ 2025 annual",
+   "where": {
+    "heading": "efficacy",
+    "paragraph": "9.5.2",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.3",
+   "pdf": "2.1.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "case must be considered on its individual facts.",
+   "after": "If the person is excluded from the Refugee",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "2.1.3",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "2.1.4",
+   "pdf": "2.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a wider range of exclusions than refugee status).",
+   "after": "For guidance on exclusion and restricted leave, see",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "2.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.4",
+   "pdf": "3.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "financial means and survivors of gender-based violence.",
+   "after": "Corruption, sympathy or weakness of some in the",
+   "where": {
+    "heading": "protection",
+    "paragraph": "3.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.5",
+   "pdf": "3.1.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "why criminals may not be brought to justice.",
+   "after": "Kenya has a comprehensive constitutional and legal framework",
+   "where": {
+    "heading": "protection",
+    "paragraph": "3.1.5",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "deaths resulting from police actions to the Authority.’",
+   "after": "3 The UNHRC in its Universal Periodic Review –",
+   "where": {
+    "heading": "accountability",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.",
+   "pdf": "10.1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of NPS facilities to promote human rights compliance.’",
+   "after": "4 The NCAJ 2025 annual report noted:\nIPOA",
+   "where": {
+    "heading": "accountability",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "A - conditions as to the use of force",
+   "after": "A police officer shall always attempt to use",
+   "where": {
+    "heading": "national-legislation",
+    "paragraph": "4.4.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "without any promise of achieving the intended result.’",
+   "after": "The force used shall be proportional to the",
+   "where": {
+    "heading": "national-legislation",
+    "paragraph": "4.4.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of the Constitution. The National Police Service shall:",
+   "after": "strive for the highest standards of professionalism and",
+   "where": {
+    "heading": "police",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "b) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "standards of professionalism and discipline among its members.",
+   "after": "prevent corruption and promote and practice transparency and",
+   "where": {
+    "heading": "police",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "c) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "corruption and promote and practice transparency and accountability.",
+   "after": "comply with constitutional standards of human rights and",
+   "where": {
+    "heading": "police",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "d) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "constitutional standards of human rights and fundamental freedoms.",
+   "after": "train staff to the highest possible standards of",
+   "where": {
+    "heading": "police",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "e) ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "human rights and fundamental freedoms and dignity; and",
+   "after": "foster and promote relationships with the broader society.’",
+   "where": {
+    "heading": "police",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Constitution of Kenya 2010.\nFUNCTIONS OF THE COMMISSION",
+   "after": "Recommend to the President persons for appointment as",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to the President persons for appointment as Judges.",
+   "after": "Review and make recommendations on conditions of service",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "than their remuneration) and staff of the Judiciary.",
+   "after": "Appoint, receive complaints against, investigate and remove from",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "judicial officers, and other staff of the Judiciary.",
+   "after": "Prepare and implement programmes for the continuing education",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "education and training of Judges and judicial officers.",
+   "after": "Advise the National Government on improving the efficiency",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "improving the efficiency of the administration of Justice.",
+   "after": "Receive and consider petitions for the removal from",
+   "where": {
+    "heading": "independence",
+    "paragraph": "9.2.1",
+    "section": "Country information",
+    "page": 37
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "The Mount Kenya Times, Home,",
+   "pdf": "Missing Voices, Statistics,",
+   "web_words": 5,
+   "pdf_words": 3,
+   "before": "us, no date\nMissing Voices, Statistics, no date",
+   "after": "no date\nThe Mount Kenya Times, Home, no",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "10.2.4",
+    "section": "Version control and feedback",
+    "page": 31
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "State Party\nState Party\nCriminal Law Treaties",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "Criminal Law Treaties\n1998 Rome Statute of the",
+   "after": "International Criminal Court\nState Party\nRegional Treaties\nCategory",
+   "before_pdf": "Adherence to International\n1998 Rome Statute of the",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Criminal Law Treaties at Regional Level",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "declaration regarding individual petitions\nNo\nAdherence to International",
+   "after": "Malabo Protocol on Amendments to the African Court",
+   "before_pdf": "declaration regarding\nNo\nindividual petitions\nAdherence to International",
+   "where": {
+    "heading": "regional-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Signatory\nCriminal Law Treaties at",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "at Regional Level\nMalabo Protocol on Amendments to",
+   "after": "the African Court of Justice and Human Rights",
+   "before_pdf": "Adherence to International\nMalabo Protocol on Amendments to",
+   "where": {
+    "heading": "regional-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Category\nTreaty / Protocol\nStatus",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "the International Criminal Court\nState Party\nRegional Treaties",
+   "after": "Adherence to Regional Human Rights Treaties\n1981 African",
+   "before_pdf": "Criminal Law Treaties\nInternational Criminal Court\nRegional Treaties",
+   "where": {
+    "heading": "regional-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "State Party\nCAT)",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "party\n1984 Convention against Torture (CAT)\nState Party",
+   "after": "Competence of CAT Committee to receive individual complaints",
+   "before_pdf": "Not party\n1984 Convention against Torture\nState Party",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Criminal Law Treaties",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Optional Protocol 1\nNot party\nAdherence to International",
+   "after": "1998 Rome Statute of the International Criminal Court",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Global Treaties",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "status in relation to global and regional treaties:",
+   "after": "Category\nTreaty / Protocol\nStatus\nAdherence to Selected Human",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 11
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "State Party",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Rights Treaties\n1966 Covenant on Civil and Political",
+   "after": "Rights (ICCPR)\nState Party\nICCPR Optional Protocol 1",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 6
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "State Party",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "1966 Covenant on Civil and Political Rights (ICCPR)",
+   "after": "ICCPR Optional Protocol 1\nNot party\n1984 Convention",
+   "before_pdf": "on Civil and Political\nState Party\nRights (ICCPR)",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "State Party",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "1998 Rome Statute of the International Criminal Court",
+   "after": "Regional Treaties\nCategory\nTreaty / Protocol\nStatus\nAdherence to",
+   "before_pdf": "State Party\nCriminal Law Treaties\nInternational Criminal Court",
+   "where": {
+    "heading": "global-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "State Party",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Rights Treaties\n1981 African Charter on Human and",
+   "after": "Peoples’ Rights\nState Party\n1998 Protocol to the",
+   "where": {
+    "heading": "regional-treaties",
+    "paragraph": "4.3.1",
+    "section": "Country information",
+    "page": 6
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 146,
+  "different": {
+   "2.1.3": "2.1.2",
+   "2.1.4": "2.1.3",
+   "3.1.4": "3.1.3",
+   "10.2.5": "10.1.5"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "3.1.5",
+   "10.2.3",
+   "10.2.4"
+  ],
+  "unconfirmed": []
+ }
+}

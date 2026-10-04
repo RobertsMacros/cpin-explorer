@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 100,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 95,
+ "paragraphs": 779,
+ "list_items": 215,
+ "tables": 21,
+ "figures": 4,
+ "footnotes": 444,
+ "bookmarks": 95,
+ "warnings": [
+  "footnotes with no mark found in the text: 45"
+ ],
+ "figure_pages": {
+  "649d5c9b93d3b26206f083895569ec166cf9e9881900239682a88b1bce03d2f0.png": 14,
+  "1ebd645f2b4df78d95f1bbc60a42c17ce16adad358ab3582d6057921448112cc.jpg": 23,
+  "6bb61251eeeaca25413b77147125a8ffc012ae931fa3ee175eb838e58483a51b.jpg": 28,
+  "cb032563c1495f6ea94c90f783b35953f36adb8c4c1c8030e448a93b7e14139a.jpg": 41
+ },
+ "figure_sizes": {
+  "649d5c9b93d3b26206f083895569ec166cf9e9881900239682a88b1bce03d2f0.png": [
+   829,
+   809
+  ],
+  "1ebd645f2b4df78d95f1bbc60a42c17ce16adad358ab3582d6057921448112cc.jpg": [
+   491,
+   507
+  ],
+  "6bb61251eeeaca25413b77147125a8ffc012ae931fa3ee175eb838e58483a51b.jpg": [
+   498,
+   528
+  ],
+  "cb032563c1495f6ea94c90f783b35953f36adb8c4c1c8030e448a93b7e14139a.jpg": [
+   700,
+   392
+  ]
+ },
+ "figure_text": {
+  "649d5c9b93d3b26206f083895569ec166cf9e9881900239682a88b1bce03d2f0.png": 0,
+  "1ebd645f2b4df78d95f1bbc60a42c17ce16adad358ab3582d6057921448112cc.jpg": 0,
+  "6bb61251eeeaca25413b77147125a8ffc012ae931fa3ee175eb838e58483a51b.jpg": 0,
+  "cb032563c1495f6ea94c90f783b35953f36adb8c4c1c8030e448a93b7e14139a.jpg": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Country Information Note France: Safe third country",
+ "cover_version": "2.0",
+ "cover_date": "February 2026",
+ "pdf_sha256": "9ecb0e2f041301d6de6200dd8f22bfbc61cd026eebbaa16d1367188057107756",
+ "images": [
+  "1ebd645f2b4df78d95f1bbc60a42c17ce16adad358ab3582d6057921448112cc.jpg",
+  "649d5c9b93d3b26206f083895569ec166cf9e9881900239682a88b1bce03d2f0.png",
+  "6bb61251eeeaca25413b77147125a8ffc012ae931fa3ee175eb838e58483a51b.jpg",
+  "cb032563c1495f6ea94c90f783b35953f36adb8c4c1c8030e448a93b7e14139a.jpg"
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 39,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 49,
+ "paragraphs": 224,
+ "list_items": 18,
+ "tables": 0,
+ "figures": 8,
+ "footnotes": 86,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "12ffdcd7bf5acb079d35419ec89716d960c9ad14dbf9d5b668e1fcdcd17a6b9c.png": 32,
+  "bb87363e7167ee31559d4318767531a144615065ff724d4b9e62bcce8559702c.jpg": 34,
+  "f7aefdb060b46c37eff7f674264ae79a2301d3669f772ecfc77373495ed16528.jpg": 34,
+  "6d7d6256f4796edb9d1d3996ce6c1bb16619aaca6b4c356866ce89917622530c.jpg": 34,
+  "f571f3b1ef3e3a0ae43dc406fcce7d1c74cce85034c32f4f28524abb0510b537.jpg": 34,
+  "b92fcc2b56e3d1d0e8ab2bcc47b3b274a5cbb5cbe37cf7216af0d78e04a4937a.jpg": 35,
+  "7ea97291c6acae6140c35e672662370ce3be3251f13a68df49ba6b41760a0c2e.png": 36
+ },
+ "figure_sizes": {
+  "12ffdcd7bf5acb079d35419ec89716d960c9ad14dbf9d5b668e1fcdcd17a6b9c.png": [
+   265,
+   212
+  ],
+  "bb87363e7167ee31559d4318767531a144615065ff724d4b9e62bcce8559702c.jpg": [
+   421,
+   320
+  ],
+  "f7aefdb060b46c37eff7f674264ae79a2301d3669f772ecfc77373495ed16528.jpg": [
+   403,
+   306
+  ],
+  "6d7d6256f4796edb9d1d3996ce6c1bb16619aaca6b4c356866ce89917622530c.jpg": [
+   406,
+   308
+  ],
+  "f571f3b1ef3e3a0ae43dc406fcce7d1c74cce85034c32f4f28524abb0510b537.jpg": [
+   404,
+   533
+  ],
+  "b92fcc2b56e3d1d0e8ab2bcc47b3b274a5cbb5cbe37cf7216af0d78e04a4937a.jpg": [
+   529,
+   325
+  ],
+  "7ea97291c6acae6140c35e672662370ce3be3251f13a68df49ba6b41760a0c2e.png": [
+   265,
+   211
+  ]
+ },
+ "figure_text": {
+  "12ffdcd7bf5acb079d35419ec89716d960c9ad14dbf9d5b668e1fcdcd17a6b9c.png": 0,
+  "bb87363e7167ee31559d4318767531a144615065ff724d4b9e62bcce8559702c.jpg": 0,
+  "f7aefdb060b46c37eff7f674264ae79a2301d3669f772ecfc77373495ed16528.jpg": 0,
+  "6d7d6256f4796edb9d1d3996ce6c1bb16619aaca6b4c356866ce89917622530c.jpg": 0,
+  "f571f3b1ef3e3a0ae43dc406fcce7d1c74cce85034c32f4f28524abb0510b537.jpg": 0,
+  "b92fcc2b56e3d1d0e8ab2bcc47b3b274a5cbb5cbe37cf7216af0d78e04a4937a.jpg": 0,
+  "7ea97291c6acae6140c35e672662370ce3be3251f13a68df49ba6b41760a0c2e.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Afghanistan: Hindus and Sikhs",
+ "cover_version": "4.0",
+ "cover_date": "July 2018",
+ "pdf_sha256": "891c304d34034ceeb7b4f4dd624cd64e7c32d216c2fbad5a7f9da5b10fe5fb51",
+ "images": [
+  "12ffdcd7bf5acb079d35419ec89716d960c9ad14dbf9d5b668e1fcdcd17a6b9c.png",
+  "6d7d6256f4796edb9d1d3996ce6c1bb16619aaca6b4c356866ce89917622530c.jpg",
+  "7ea97291c6acae6140c35e672662370ce3be3251f13a68df49ba6b41760a0c2e.png",
+  "b92fcc2b56e3d1d0e8ab2bcc47b3b274a5cbb5cbe37cf7216af0d78e04a4937a.jpg",
+  "bb87363e7167ee31559d4318767531a144615065ff724d4b9e62bcce8559702c.jpg",
+  "f571f3b1ef3e3a0ae43dc406fcce7d1c74cce85034c32f4f28524abb0510b537.jpg",
+  "f7aefdb060b46c37eff7f674264ae79a2301d3669f772ecfc77373495ed16528.jpg"
+ ]
+}

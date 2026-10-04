@@ -3,17 +3,37 @@
 //
 //   const slider = new HistorySlider(el, { onPaint, onCommit });
 //   slider.setStops(stops, { today });     // [{ t, kind: "edition" | "update", label, sub, tip, h }]
+//                                          // tip: its facts on the first line, then what it says
 //   slider.setMode("read");               // one handle (As at) over every stop
 //   slider.setMode("compare");            // two handles (Old, New) over held editions only
 //   await slider.glide("b", 4);            // eased, never a snap; resolves when settled
 //
 // Stops sit at their dates on a piecewise-linear scale (stops dated alike are nudged apart so each
 // stays grabbable), so a handle at rest always reads its own stop's date. Styles: timeline.css.
+//
+// Pointing at a stop does not mean hitting its mark, which may be a diamond a few pixels across: the
+// stop nearest the pointer, within reach, is the one it is on (stopInReach). That stop lights, shows
+// its tooltip, and is where a click goes.
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 const RMQ = typeof matchMedia === "function" ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
 export const reducedMotion = () => RMQ.matches;
+
+/** How far from a stop, in px along the track, the pointer still counts as on it. */
+export const STOP_REACH = 26;
+/**
+ * The stop a pointer is on: the nearest to `x` (px along a track `width` px wide), if within `reach`.
+ * stops carry x as 0..1 of the track. Returns its index, or -1.
+ */
+export function stopInReach(stops, x, width, reach = STOP_REACH) {
+  let best = -1, bd = Infinity;
+  for (let i = 0; i < stops.length; i++) {
+    const d = Math.abs(stops[i].x * width - x);
+    if (d < bd) { bd = d; best = i; }
+  }
+  return bd <= reach ? best : -1;
+}
 
 /* ------------------------------------------------------------------ rolling digits */
 
@@ -84,7 +104,7 @@ export class HistorySlider {
   /**
    * onPaint({ a, b, active, t, stop }): every frame while a handle moves (a, b: the stops nearest the
    *   handles; t: the date under the active handle). onCommit({ a, b, user }): a handle came to rest on
-   *   a new stop. onUser(): the reader grabbed the slider (stop Play).
+   *   a new stop. onUser(): the reader took hold of the slider.
    */
   constructor(el, { onPaint = () => {}, onCommit = () => {}, onUser = () => {}, labels = {} } = {}) {
     this.el = el; this.onPaint = onPaint; this.onCommit = onCommit; this.onUser = onUser;
@@ -92,6 +112,7 @@ export class HistorySlider {
     this.stops = []; this.mode = "read";
     this.a = -1; this.b = 0; this.xa = 0; this.xb = 0; this.active = "b";
     this.anims = { a: 0, b: 0 }; this.gen = { a: 0, b: 0 }; this.lastPair = "";
+    this.hot = -1; this.tipEl = null;        // the stop the pointer is on, and its tooltip
     el.classList.add("rs");
     el.innerHTML = `<div class="rs-inner"><div class="rs-plot"></div><div class="rs-range" aria-hidden="true"></div>
       <div class="rs-base" aria-hidden="true"></div><div class="rs-nodes" aria-hidden="true"></div>
@@ -155,9 +176,10 @@ export class HistorySlider {
     S.forEach((s, i) => {
       const edge = s.x < 0.15 ? " edge-l" : s.x > 0.85 ? " edge-r" : "";
       plot += s.kind === "edition"
-        ? `<button type="button" class="rs-bar${s.first ? " first" : ""}${edge}" data-i="${i}" tabindex="-1" aria-hidden="true" style="left:${s.x * 100}%;--h:${(s.h ?? 0.16).toFixed(3)}" data-tip="${esc(s.tip || "")}"></button>`
-        : `<button type="button" class="rs-ev${edge}" data-i="${i}" tabindex="-1" aria-hidden="true" style="left:${s.x * 100}%" data-tip="${esc(s.tip || "")}"></button>`;
+        ? `<button type="button" class="rs-bar${s.first ? " first" : ""}${edge}" data-i="${i}" tabindex="-1" aria-hidden="true" style="left:${s.x * 100}%;--h:${(s.h ?? 0.16).toFixed(3)}"></button>`
+        : `<button type="button" class="rs-ev${edge}" data-i="${i}" tabindex="-1" aria-hidden="true" style="left:${s.x * 100}%"></button>`;
     });
+    this.point(-1);
     this.inner.querySelector(".rs-plot").innerHTML = plot;
     this.inner.querySelector(".rs-nodes").innerHTML = S.map((s, i) =>
       `<span class="rs-node${s.kind === "edition" ? "" : " is-ev"}" data-i="${i}" style="left:${s.x * 100}%"></span><span class="rs-label${s.kind === "edition" ? "" : " is-ev"}" data-i="${i}" style="left:${s.x * 100}%">${s.label ? `<b>${esc(s.label)}</b>` : ""}<span class="d">${esc(s.sub || "")}</span></span>`).join("");
@@ -165,12 +187,41 @@ export class HistorySlider {
   }
   /** Bar heights (0..1) and tooltips after background comparisons finish; bars ease to their height. */
   refresh() {
-    this.inner.querySelectorAll(".rs-bar, .rs-ev").forEach((b) => {
+    this.inner.querySelectorAll(".rs-bar").forEach((b) => {
       const s = this.stops[+b.dataset.i];
-      if (!s) return;
-      if (s.kind === "edition") b.style.setProperty("--h", (s.h ?? 0.16).toFixed(3));
-      b.dataset.tip = s.tip || "";
+      if (s) b.style.setProperty("--h", (s.h ?? 0.16).toFixed(3));
     });
+    if (this.tipEl && this.tipEl.dataset.tip !== (this.stops[this.hot]?.tip || "")) this.showTip(this.hot);
+  }
+
+  /* ---- the stop under the pointer ---- */
+  /** The pointer is on stop i (-1: none): its mark, tick and label light, and its tooltip shows. */
+  point(i) {
+    if (i === this.hot) return;
+    this.hot = i;
+    this.inner.querySelectorAll(".is-hot").forEach((el) => el.classList.remove("is-hot"));
+    if (i >= 0) this.inner.querySelectorAll(`[data-i="${i}"]`).forEach((el) => el.classList.add("is-hot"));
+    this.showTip(i);
+  }
+  /** One tooltip, above the stop's mark: its facts, then, under a rule, what it says. The old one fades as the new one comes. */
+  showTip(i) {
+    const old = this.tipEl;
+    this.tipEl = null;
+    if (old) { old.classList.remove("is-on"); setTimeout(() => old.remove(), 220); }
+    const s = this.stops[i], mark = s?.tip ? this.inner.querySelector(`.rs-bar[data-i="${i}"], .rs-ev[data-i="${i}"]`) : null;
+    if (!mark) return;
+    const [facts, ...more] = String(s.tip).split("\n");
+    const el = document.createElement("div");
+    el.className = `rs-tip${s.x < 0.15 ? " edge-l" : s.x > 0.85 ? " edge-r" : ""}`;
+    el.setAttribute("aria-hidden", "true");
+    el.dataset.tip = s.tip;
+    el.innerHTML = `<span class="rs-tip-facts">${esc(facts)}</span>${more.length ? `<span class="rs-tip-says">${esc(more.join("\n"))}</span>` : ""}`;
+    el.style.left = `${s.x * 100}%`;
+    el.style.bottom = `${this.inner.getBoundingClientRect().bottom - mark.getBoundingClientRect().top + 9}px`;
+    this.inner.append(el);
+    void el.offsetWidth;                     // so it eases in from its start
+    el.classList.add("is-on");
+    this.tipEl = el;
   }
 
   /* ---- which stops each handle may rest on ---- */
@@ -299,6 +350,7 @@ export class HistorySlider {
     cancelAnimationFrame(this.anims[which]); this.gen[which]++;
     this.active = which; el.focus({ preventScroll: true });
     el.setPointerCapture(e.pointerId); el.classList.add("is-dragging"); this.el.classList.add("is-dragging");
+    this.point(-1);
     const r = el.getBoundingClientRect(), offset = e.clientX - (r.left + r.width / 2);
     const [lo, hi] = this.range(which);
     const xs = [];
@@ -339,8 +391,9 @@ export class HistorySlider {
     this.inner.addEventListener("click", (e) => {
       if (e.target.closest(".rs-handle") || !this.stops.length) return;
       this.onUser();
-      const x = this.trackX(e.clientX), hit = e.target.closest("[data-i]");
-      let i = hit ? +hit.dataset.i : -1;
+      const x = this.trackX(e.clientX), hit = e.target.closest("[data-i]"), box = this.inner.getBoundingClientRect();
+      const near = stopInReach(this.stops, e.clientX - box.left, box.width);   // the stop that lights under a pointer here
+      let i = near >= 0 ? near : hit ? +hit.dataset.i : -1;
       if (this.mode === "read") { this.moveTo("b", i >= 0 ? i : this.nearest("b", x), 300); return; }
       if (i < 0 || this.stops[i].kind !== "edition") {
         let best = -1, bd = Infinity;
@@ -353,14 +406,14 @@ export class HistorySlider {
       if ((which === "a" && i >= this.b) || (which === "b" && i <= this.a)) return;
       this.moveTo(which, i, 300);
     });
-    // Hovering a label or node shows its bar's tooltip.
-    const tip = (e, on) => {
-      const t = e.target.closest(".rs-label, .rs-node");
-      if (!t) return;
-      this.inner.querySelector(`.rs-bar[data-i="${t.dataset.i}"], .rs-ev[data-i="${t.dataset.i}"]`)?.classList.toggle("tip", on);
-    };
-    this.inner.addEventListener("pointerover", (e) => tip(e, true));
-    this.inner.addEventListener("pointerout", (e) => tip(e, false));
+    // The stop nearest the pointer is the one it is on (a finger has no hover: its tap goes to the nearest stop).
+    this.inner.addEventListener("pointermove", (e) => {
+      if (e.pointerType === "touch" || this.el.classList.contains("is-dragging") || !this.stops.length) return this.point(-1);
+      const box = this.inner.getBoundingClientRect();
+      this.point(stopInReach(this.stops, e.clientX - box.left, box.width));
+    });
+    this.inner.addEventListener("pointerleave", () => this.point(-1));
+    this.inner.addEventListener("pointerdown", (e) => { if (e.pointerType === "touch") this.point(-1); });
     addEventListener("resize", () => requestAnimationFrame(() => this.cull()));
   }
   /** Labels that would print on top of each other: keep the handles' stops, then editions, then any that fit. */

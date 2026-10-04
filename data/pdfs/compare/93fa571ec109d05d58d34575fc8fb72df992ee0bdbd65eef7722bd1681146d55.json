@@ -1,0 +1,647 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ghana/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+ "pdf_sha256": "93fa571ec109d05d58d34575fc8fb72df992ee0bdbd65eef7722bd1681146d55",
+ "body_sha256": "c0bbd05f869122ebe7a643d7535187ec4d4a2b7f4e1da218c7ea5a6c96aa72e9",
+ "words": {
+  "web": 27697,
+  "pdf": 27547
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 0,
+   "pdf_words": 16,
+   "share": 0.00029,
+   "passages": 2,
+   "sizes": {
+    "passage": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 16
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 5,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 178,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 5,
+    "web_words": 4,
+    "pdf_words": 8
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 12
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 4
+   },
+   "list marker": {
+    "differences": 2,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 5,
+    "pdf_words": 6
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 57,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 6
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 121,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 15,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "December 2024",
+   "pdf": "1.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 326,
+   "pdf": 327,
+   "pdf_raw": 327,
+   "differ": true
+  },
+  "pictures": {
+   "web": 20,
+   "pdf": 22
+  },
+  "tables": {
+   "web": 5,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 97,
+   "pdf": 65
+  },
+  "drafts": [
+   "footnote count differs: web 326, PDF 327"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "CitiNewsroom.com, Crime rate has significantly reduced in Ghana, 24 July 2024",
+   "web_words": 0,
+   "pdf_words": 12,
+   "before": "Crime Report - 2021 (page 12), 10 April 2022",
+   "after": "USSD, Ghana (section 2D), 23 April 2024\nUSSD,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.10",
+    "section": "Version control and feedback",
+    "page": 75
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "on Assessing Credibility and Refugee Status.\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "2.1.17",
+    "section": "Country information",
+    "page": 9
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Area\nBoth Sexes\nMale\nFemale\nGhana\n6.9\n8.7\n4.6\nWestern\n6.9\n8.7\n4.6\nCentral\n5.8\n6.2\n3.5\nGreater Accra\n8.1\n9.2\n5.2\nVolta\n5.8\n6.8\n5.8\nEastern\n5.0\n6.9\n3.0\nAshanti\n5.8\n7.5\n4.0\nWestern North\n7.8\n8.7\n3.8\nAhafo\n5.8\n5.8\n5.0\nBono\n4.6\n5.0\n4.0\nBono East\n6.2\n8.7\n2.9\nOti\n3.5\n4.0\n2.5\nNorthern\n8.8\n9.8\n8.0\nSavannah\n8.8\n9.8\n8.8\nNorth East\n11.5\n11.5\n8.7\nUpper East\n8.7\n8.8\n7.5\nUpper West\n9.8\n12.1\n4.0",
+   "pdf": "161",
+   "web_words": 121,
+   "pdf_words": 0,
+   "before": "region for the same period is reproduced below:",
+   "after": "6.4.3 GSS, in a press release",
+   "where": {
+    "heading": "earnings-and-in-work-poverty",
+    "paragraph": "6.4.2",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Total\nToilet\nTotal (Percent)\nHousehold toilet\n59.3\nPublic toilet\n23.0\nNo toilet facility/open defaecation\n17.7\nUrban\nToilet\nTotal (Percent)\nHousehold toilet\n65.9\nPublic toilet\n25.2\nNo toilet facility/open defaecation\n8.9\nRural\nToilet\nTotal (Percent)\nHousehold toilet\n49.1\nPublic toilet\n19.7\nNo toilet facility/open defaecation\n31.3",
+   "pdf": "250",
+   "web_words": 57,
+   "pdf_words": 0,
+   "before": "had exclusive access, or to a shared facility.",
+   "after": "9.7.5 The report stated: ‘In all",
+   "where": {
+    "heading": "total",
+    "paragraph": "9.7.4",
+    "section": "Country information",
+    "page": 58
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "5.4Development",
+   "pdf": "5.4 Development",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "13 September 2024, but no US dollar billionaires.",
+   "after": "and developmental disparities\n5.4.1 The United",
+   "before_pdf": "13 September 2024), but no US dollar billionaires.",
+   "where": {
+    "heading": "development-and-developmental-disparities",
+    "paragraph": "5.3.8",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "MjYzOTE0MjAuMzc2NQ==&",
+   "pdf": "MjYzOTE0Mj AuMzc2NQ==&",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "census2021.statsghana.gov.gh/dissemination_details.php?disseminatereport=",
+   "after": "Publications (page 28), November 2021\nGSS, Census general",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.10",
+    "section": "Version control and feedback",
+    "page": 58
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "MjYzOTE0MjAuMzc2NQ==&",
+   "pdf": "MjYzOTE0Mj AuMzc2NQ==&",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "census2021.statsghana.gov.gh/dissemination_details.php?disseminatereport=",
+   "after": "Publications (page 33), November 2021\nGSS, Census general",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.10",
+    "section": "Version control and feedback",
+    "page": 58
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5\n3.2",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "major rivers and international boundaries, is reproduced below:",
+   "after": "Geographic regions\n3.2.1 Donna J Maier",
+   "where": {
+    "heading": "geographic-regions",
+    "paragraph": "3.1.3",
+    "section": "Country information",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.3.4",
+   "pdf": "5.3.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "is expected to come down slowly by 2026.’",
+   "after": "The World Bank, in its ‘Macro Poverty Outlook",
+   "where": {
+    "heading": "poverty-inequality",
+    "paragraph": "5.3.4",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.3.5",
+   "pdf": "5.3.4",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "2023 and forecast as 32.9% for 2024.",
+   "after": "The CIA World Factbook stated: ‘Poverty has declined",
+   "where": {
+    "heading": "poverty-inequality",
+    "paragraph": "5.3.5",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.3.6",
+   "pdf": "5.3.5",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "infrastructure, markets, fertile farming land, and industrial centers.’",
+   "after": "For information on in-work poverty, see Earnings",
+   "where": {
+    "heading": "poverty-inequality",
+    "paragraph": "5.3.6",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.3.7",
+   "pdf": "5.3.6",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "work poverty, see Earnings and in-work poverty.",
+   "after": "Regarding inequality, the World Bank DataBank stated that",
+   "where": {
+    "heading": "poverty-inequality",
+    "paragraph": "5.3.7",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "5.3.8",
+   "pdf": "5.3.7",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Gini Index greater than 40 as ‘highly unequal’.",
+   "after": "Regarding wealth, migration consultancy Henley & Partners, in their ‘",
+   "where": {
+    "heading": "poverty-inequality",
+    "paragraph": "5.3.8",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "by increasing droughts and floods.’\n10. Healthcare\n10.",
+   "after": "Healthcare system and facilities\n10.1.1 For",
+   "before_pdf": "posed by increasing droughts and floods.’\n10. Healthcare",
+   "where": {
+    "heading": "healthcare-system-and-facilities",
+    "paragraph": "9.7.7",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "vulnerabilities while promoting inter-party, inter-religious, inter-",
+   "after": "ethnic and intergenerational social cohesion.’\n12.1.2",
+   "where": {
+    "heading": "relations-tensions-and-insecurity",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 69
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "327]",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "in search of jobs, education, and health services.’[^",
+   "after": "Research methodology\nThe country of origin information (COI)",
+   "before_pdf": "in search of jobs, education, and health services.’",
+   "where": {
+    "heading": "freedom-of-movement",
+    "paragraph": "13.1.10",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "43",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "map showing population density, which is reproduced below:",
+   "after": "4.2.7 Maier and Boateng 2024 stated",
+   "where": {
+    "heading": "population-density",
+    "paragraph": "4.2.7",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "64",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of the World’ (2020), which is reproduced below:",
+   "after": "4.6 Religion\n4.6.1 The Bertelsmann",
+   "where": {
+    "heading": "religion",
+    "paragraph": "4.5.6",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "135",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "period Quarter 1 2022 to Quarter 3 2023:",
+   "after": "6.1.5 The GSS Q3 labour bulletin",
+   "where": {
+    "heading": "labour-force-participation-and-unemployment",
+    "paragraph": "6.1.5",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "143",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to Quarter 3 2023, which are reproduced below.",
+   "after": "6.2.3 The USSD human rights report",
+   "where": {
+    "heading": "types-of-occupation",
+    "paragraph": "6.2.3",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "199",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of locality in charts, which are reproduced below:",
+   "after": "9.1.2 The same report stated: ‘Use",
+   "where": {
+    "heading": "housing",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 34
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "226",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "price was US$116,795 [GBP87,607.93]:",
+   "after": "9.3.9 Regarding Kumasi, Asante and Ehwi",
+   "where": {
+    "heading": "supply-affordability",
+    "paragraph": "9.3.9",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "230",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "price was US$20,377 [GBP15,284.79]:",
+   "after": "9.4 Access and inequalities\n9.4.1",
+   "where": {
+    "heading": "access-and-inequalities",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "251",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "of households that practise open defecation by region:",
+   "after": "9.7.6 UN Ghana, in a press",
+   "where": {
+    "heading": "rural",
+    "paragraph": "9.7.6",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "259",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "healthcare facilities by region, which is reproduced below:",
+   "after": "10.2.5 For information on:\nhealth insurance,",
+   "where": {
+    "heading": "access-to-healthcare",
+    "paragraph": "10.2.5",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "266",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "residences to primary educational facilities by region (percentages):",
+   "after": "11.3.2 With regard to junior high",
+   "where": {
+    "heading": "educational-institutions",
+    "paragraph": "11.3.2",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "268",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "residences to junior high schools by region (percentages):",
+   "after": "11.3.3 With regard to universities, the",
+   "where": {
+    "heading": "educational-institutions",
+    "paragraph": "11.3.3",
+    "section": "Country information",
+    "page": 66
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 313,
+  "different": {
+   "5.3.4": "5.3.3",
+   "5.3.5": "5.3.4",
+   "5.3.6": "5.3.5",
+   "5.3.7": "5.3.6",
+   "5.3.8": "5.3.7"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

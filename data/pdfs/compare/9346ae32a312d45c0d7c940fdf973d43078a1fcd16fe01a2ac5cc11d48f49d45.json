@@ -1,0 +1,221 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/report-of-a-fact-finding-mission-blood-feuds-albania-january-2023-accessible",
+ "pdf_sha256": "9346ae32a312d45c0d7c940fdf973d43078a1fcd16fe01a2ac5cc11d48f49d45",
+ "body_sha256": "f9efe9e12b338f179cd47a5b689aa943f30782d0fc8e2cd3504ac6b49804fb51",
+ "words": {
+  "web": 29899,
+  "pdf": 29920
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 1.7e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "attachment label": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 24
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": "January 2023",
+   "pdf": null,
+   "pdf_date": "January 2023"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 1,
+   "pdf": 1,
+   "pdf_raw": 1,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 32,
+   "pdf": 26
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Phenomenon",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "one in 2013 [Special Report on Blood Feud",
+   "after": "2013 (PDF, 173KB)] and another in 2015 [“On",
+   "where": {
+    "heading": "interview-5",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 32
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 173KB)]",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "in 2013 [Special Report on Blood Feud 2013 (",
+   "after": "and another in 2015 [“On the phenomenon of",
+   "before_pdf": "2013 [Special Report on Blood Feud Phenomenon 2013]",
+   "where": {
+    "heading": "interview-5",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 32
+   }
+  },
+  {
+   "kind": "attachment label",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "PDF, 287KB)].",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "blood fighting in Albania” Special Report (II), 2015 (",
+   "after": "The one in 2013 was used in the",
+   "before_pdf": "blood fighting in Albania\" Special Report (II), 2015].",
+   "where": {
+    "heading": "interview-5",
+    "paragraph": null,
+    "section": "Interview notes",
+    "page": 32
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "This project is part funded by the EU Asylum, Migration and Integration Fund. Making management of migration flows more efficient across the European Union.",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "21 and 25 November 2022. Published: January 2023",
+   "after": "Introduction\nBackground\nThis report contains the (approved) notes",
+   "before_pdf": "21 and 25 November 2022\nPublished: January 2023",
+   "where": {
+    "heading": "introduction",
+    "paragraph": null,
+    "section": "Introduction",
+    "page": 1
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 0,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

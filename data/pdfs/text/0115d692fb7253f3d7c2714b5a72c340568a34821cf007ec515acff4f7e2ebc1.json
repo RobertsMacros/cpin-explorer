@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 44,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 55,
+ "paragraphs": 356,
+ "list_items": 45,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 114,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 79"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Namibia: Sexual orientation and gender identity and expression",
+ "cover_version": "1.0",
+ "cover_date": "November 2018",
+ "pdf_sha256": "0115d692fb7253f3d7c2714b5a72c340568a34821cf007ec515acff4f7e2ebc1",
+ "images": []
+}

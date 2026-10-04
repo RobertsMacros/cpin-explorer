@@ -3,10 +3,10 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import {
   addHighlight, checkHighlight, citeContext, exportJson, exportMarkdown, groupHighlights, loadHighlights, locateQuote,
-  makeSelector, normalizeWithMap, removeHighlight, restoreHighlight, saveHighlights, snapToWords, STORAGE_KEY,
+  makeSelector, normalizeWithMap, pdfNoteId, removeHighlight, restoreHighlight, saveHighlights, snapToWords, STORAGE_KEY,
   updateHighlight, useStorage,
 } from "../../prototypes/shared/highlights.js";
-import { editionSource, latestCapture, pickEdition } from "../../prototypes/shared/note-source.js";
+import { editionSource, latestCapture, paths, pickEdition } from "../../prototypes/shared/note-source.js";
 import { formatCitation } from "../../prototypes/shared/citation.js";
 import { decodeEntities } from "../../prototypes/shared/redline-diff.js";
 
@@ -167,12 +167,45 @@ test("grouping and export", () => {
   assert.match(md, /^# Saved highlights/);
   assert.match(md, /## Afghanistan[\s\S]*## Iran/);
   assert.match(md, /> Under articles 107 and 110\n/);
-  assert.match(md, /Home Office, \*Country Policy and Information Note: Military Service, Iran\* \(version 4\.0, August 2026\) para 9\.1\.1 <https:\/\/www\.gov\.uk\/n#:~:text=/);
+  assert.match(md, /Home Office, \*Country Policy and Information Note: Military Service, Iran\* \(version 4\.0, August 2026, web version\) para 9\.1\.1 <https:\/\/www\.gov\.uk\/n#:~:text=/);
   assert.match(md, /- \[12\] Iran Data Portal, Constitution, no date <https:\/\/example\.org>/);
   assert.match(md, /_Changed since you saved it \(v4\.0 → v5\.0\)_/);
   assert.match(md, /Note: Key point/);
   assert.equal(JSON.parse(exportJson(recs)).highlights.length, 3);
-  // A highlight still present in a newer edition cites where it is now.
+  // A highlight still present in a newer edition stays with the edition it was saved from (the owner's decision).
   const moved = { ...recs[0], check: "still", current: { version: "5.0", month: "2026-11", title: "Country policy and information note: military service, Iran, November 2026 (accessible)", para: "9.2.1", section: "9. Armed forces", url: "https://www.gov.uk/n", archived: false } };
-  assert.match(formatCitation(citeContext(moved), "tribunal").text, /\(v5\.0, Nov 2026\) at \[9\.2\.1\]$/);
+  assert.match(formatCitation(citeContext(moved), "tribunal").text, /\(v4\.0, Aug 2026, web version\) at \[9\.1\.1\]/);
+});
+
+test("a highlight from an edition read from a PDF is filed under that edition's own name", () => {
+  // Zimbabwe has two reports whose only edition is read from a PDF; Gambia has one. The dashboard lists each as "pdf-<edition id>".
+  const data = JSON.parse(read("prototypes/dashboard/data.json"));
+  const notes = (slug) => data.countries.find((c) => c.slug === slug).notes.filter((n) => n.text_from_pdf);
+  const [oppo, health] = ["opposition to the government", "medical treatment and healthcare"].map((t) => notes("zimbabwe").find((n) => n.topic === t));
+  const gambia = notes("gambia")[0];
+  for (const n of [oppo, health, gambia]) assert.equal(n.id, pdfNoteId(n.pdf_sha256), "the dashboard's id for it");
+  const rec = (id, slug, name, n, extra = {}) => ({ id, country: slug, countryName: name, note: "", title: n.title, kind: n.kind, topic: n.topic, version: n.version, month: n.month,
+    editionSha: n.pdf_sha256.slice(0, 16), url: n.pdf_url, source: "pdf", quote: `words from ${n.topic}`, para: "1.1.1", pos: { start: 1, end: 9 }, sources: [], ...extra });
+  // As the reader stored them before such editions had a name: an empty note.
+  const store = new MemoryStorage();
+  store.setItem(STORAGE_KEY, JSON.stringify([rec("h1", "zimbabwe", "Zimbabwe", oppo), rec("h2", "zimbabwe", "Zimbabwe", health), rec("h3", "gambia", "Gambia", gambia),
+    { id: "h4", country: "iran", countryName: "Iran", note: MIL, title: "T", quote: "from a web note", editionSha: "s", url: "https://www.gov.uk/n" },
+    { id: "h5", country: "iran", countryName: "Iran", note: "", title: "T", quote: "a web record with no note is not guessed at", editionSha: "s", url: "https://www.gov.uk/n" }]));
+  useStorage(store);
+  const recs = loadHighlights();
+  assert.deepEqual(recs.map((r) => r.note), [oppo.id, health.id, gambia.id, MIL, ""]);
+  // Two reports of one country are two groups, each under its own title, in the page and in both exports.
+  const zim = groupHighlights(recs).find((c) => c.country === "zimbabwe");
+  assert.deepEqual(zim.notes.map((n) => [n.note, n.title, n.items.length]), [[health.id, health.title, 1], [oppo.id, oppo.title, 1]]);
+  const md = exportMarkdown(recs.slice(0, 3), { style: "tribunal", accessed: new Date(2026, 9, 4) });
+  assert.match(md, new RegExp(`### ${health.title}\\n\\n> words from medical treatment and healthcare\\n\\nCPIN Zimbabwe: Medical treatment and healthcare \\(v2\\.0, Apr 2021, PDF version\\) at \\[1\\.1\\.1\\]`));
+  assert.match(md, new RegExp(`### ${oppo.title}\\n\\n> words from opposition to the government\\n\\nCPIN Zimbabwe: Opposition to the government \\(v5\\.0, Sep 2021, PDF version\\)`));
+  // "Open in reader": by the report's series where the record has it (saved since), else by the edition's name; never an empty note.
+  assert.equal(paths.report(recs[0], "#h=h1"), `../reader/index.html?country=zimbabwe&note=${oppo.id}#h=h1`);
+  assert.equal(paths.report({ ...recs[0], series: oppo.series }, "#h=h1"), "../reader/index.html?country=zimbabwe&series=note:government-opposition#h=h1");
+  assert.equal(paths.report(recs[3]), paths.reader("iran", MIL));
+  // The name is kept once anything is saved again.
+  updateHighlight("h1", { comment: "x" });
+  assert.equal(JSON.parse(store.getItem(STORAGE_KEY))[1].note, health.id);
+  useStorage(null);
 });

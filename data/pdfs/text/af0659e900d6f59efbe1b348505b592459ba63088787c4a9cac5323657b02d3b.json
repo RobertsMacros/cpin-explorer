@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 57,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 55,
+ "paragraphs": 445,
+ "list_items": 29,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 127,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "41c2c5ecb4c9ae3e9a7894573dc1953805bf95c2cae303b616c232f713400bd5.jpg": 13
+ },
+ "figure_sizes": {
+  "41c2c5ecb4c9ae3e9a7894573dc1953805bf95c2cae303b616c232f713400bd5.jpg": [
+   829,
+   819
+  ]
+ },
+ "figure_text": {
+  "41c2c5ecb4c9ae3e9a7894573dc1953805bf95c2cae303b616c232f713400bd5.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note China: Muslims (including Uyghurs in Xinjiang)",
+ "cover_version": "1.0",
+ "cover_date": "July 2021",
+ "pdf_sha256": "af0659e900d6f59efbe1b348505b592459ba63088787c4a9cac5323657b02d3b",
+ "images": [
+  "41c2c5ecb4c9ae3e9a7894573dc1953805bf95c2cae303b616c232f713400bd5.jpg"
+ ]
+}

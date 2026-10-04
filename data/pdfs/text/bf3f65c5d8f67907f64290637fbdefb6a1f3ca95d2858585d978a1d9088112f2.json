@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 25,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 134,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 71,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Pakistan: Sexual orientation and gender identity",
+ "cover_version": "2.0",
+ "cover_date": "April 2016",
+ "pdf_sha256": "bf3f65c5d8f67907f64290637fbdefb6a1f3ca95d2858585d978a1d9088112f2",
+ "images": []
+}

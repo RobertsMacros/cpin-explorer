@@ -1,0 +1,534 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ethiopia/country-policy-and-information-note-oromos-the-oromo-liberation-front-and-the-oromo-liberation-army-ethiopia-march-2022-accessible",
+ "pdf_sha256": "b33330b5037091aa68226b872514ac19ab89ea9a744b76fed735a4367cb62fee",
+ "body_sha256": "5dfa39aeb43e441495656ee9bb67c168eda360430019fad1ce3a019d3e435294",
+ "words": {
+  "web": 23222,
+  "pdf": 22838
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 1,
+   "share": 6.5e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 7,
+    "web_words": 274,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 10,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "caption": {
+    "differences": 1,
+    "web_words": 13,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 10,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "picture in words": {
+    "differences": 6,
+    "web_words": 261,
+    "pdf_words": 0
+   },
+   "table cell": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "March 2026",
+   "pdf": "2.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "21 January 2026"
+   ],
+   "pdf": [
+    "21 January 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 177,
+   "pdf": 177,
+   "pdf_raw": 177,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 7
+  },
+  "tables": {
+   "web": 10,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 79,
+   "pdf": 61
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Human",
+   "pdf": "Huma",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "17 February 2026. Accessed 19 February 2026\nEthiopia",
+   "after": "Rights Commission (EHRC),\nNational inquiry into persons deprived",
+   "where": {
+    "heading": "ethiopia-human-rights-commission-ehrc",
+    "paragraph": "20.4.6",
+    "section": "Bibliography",
+    "page": 55
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Period",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "including those due to suspected links to OLA:",
+   "after": "Abductions/ Forced disappearance\nArrests\nLooting/destruction of property",
+   "where": {
+    "heading": "Arrests",
+    "paragraph": "20.2.2",
+    "section": "20. Civilian-State interaction",
+    "page": 47
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Protests and riots in Addis Ababa during 2024 and 2025\nPeriod\nProtest (Peaceful)\nProtest (Intervention)\nProtest (Excessive use of force)\nRiots\nQ1 2024\n1\n0\n0\n0\nQ2 2024\n1\n1\n0\nQ3 2024\n1\n0\n0\n0\nQ4 2024\n3\n0\n0\n0\nQ1 2025\n1\n0\n0\n0\nQ2 2025\n3\n0\n0\n0\nQ3 2025\n0\n0\n0\n1\nQ4 2025\n1\n0\n0\n0",
+   "pdf": "",
+   "web_words": 56,
+   "pdf_words": 0,
+   "before": "reported in Addis Ababa during 2024 and 2025:",
+   "after": "20.3.6 A CPIT review of the",
+   "where": {
+    "heading": "protests-and-riots-in-addis-ababa-during-2024-and-2025",
+    "paragraph": "20.3.5",
+    "section": "20. Civilian-State interaction",
+    "page": 2
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Violent events involving OLA during 2024 and 2025\nZone\n2024\n2025\nBorena\n0\n4\nBuno Bedele\n0\n2\nEast Hararge\n0\n2\nAddis Ababa\n0\n0\nIlu Aba Bora\n1\n1\nWest Hararge\n1\n7\nFinfine Special\n6\n3\nBale\n8\n1\nWest Guji\n14\n12\nWest Arsi\n16\n2\nKellem Wollega\n25\n7\nGuji\n39\n2\nSouth West Shewa\n44\n12\nEast Shewa\n48\n33\nWest Wellega\n52\n7\nHoro Gudru Wellega\n59\n23\nArsi\n66\n63\nEast Wellega\n73\n38\nWest Shewa\n81\n55\nNorth Shewa\n109\n37",
+   "pdf": "",
+   "web_words": 52,
+   "pdf_words": 0,
+   "before": "OLA across different zones during 2024 and 2025:",
+   "after": "15.6.6 The chart shows:\nOLA was",
+   "where": {
+    "heading": "violent-events-involving-ola-during-2024-and-2025",
+    "paragraph": "15.6.5",
+    "section": "15. Oromo Liberation Army (OLA)",
+    "page": 2
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Protests and riots in Oromia during 2024 and 2025\nPeriod\nProtest (peaceful)\nProtest (intervention)\nProtest (excessive use of force)\nRiots\nQ1 2024\n5\n0\n0\n0\nQ2 2024\n0\n0\n1\n3\nQ3 2024\n10\n0\n1\n0\nQ4 2024\n17\n1\n1\n1\nQ1 2025\n4\n0\n0\n8\nQ2 2025\n9\n0\n0\n0\nQ3 2025\n24\n1\n0\n1\nQ4 2025\n19\n0\n1\n0",
+   "pdf": "",
+   "web_words": 50,
+   "pdf_words": 0,
+   "before": "in Oromia by ACLED during 2024 and 2025.",
+   "after": "20.3.4 A CPIT review of the",
+   "where": {
+    "heading": "protests-and-riots-in-oromia-during-2024-and-2025",
+    "paragraph": "20.3.3",
+    "section": "20. Civilian-State interaction",
+    "page": 2
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Violence against civilains by government security forces during 2024 and 2025\nPeriod\nTotal events\nTotal fatalities\nOLA link events\nOLA link fatalities\nQ1 2024\n35\n92\n18\n47\nQ2 2024\n38\n70\n20\n40\nQ3 2024\n20\n25\n12\n12\nQ4 2024\n46\n65\n16\n35\nQ1 2025\n17\n21\n7\n4\nQ2 2025\n11\n22\n4\n9\nQ3 2025\n15\n37\n4\n0\nQ4 2025\n49\n107\n26\n52",
+   "pdf": "",
+   "web_words": 39,
+   "pdf_words": 0,
+   "before": "the proportion related to alleged links to OLA:",
+   "after": "20.2 Abduction/forced disappearances, arrests and looting/",
+   "where": {
+    "heading": "violence-against-civilains-by-government-security-forces-during-2024-and-2025",
+    "paragraph": "20.1.10",
+    "section": "20. Civilian-State interaction",
+    "page": 47
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Political violence in Oromia during 2024 and 2025\nPeriod\nEvents\nFatalities\nQ1 2024\n201\n592\nQ2 2024\n256\n792\nQ3 2024\n202\n500\nQ4 2024\n249\n516\nQ1 2025\n97\n175\nQ2 2025\n128\n322\nQ3 2025\n249\n383\nQ4 2025\n195\n512",
+   "pdf": "",
+   "web_words": 32,
+   "pdf_words": 0,
+   "before": "political violence from Q1 2024 to Q4 2025.",
+   "after": "19.2.4 CPIT analysis of the graph",
+   "where": {
+    "heading": "political-violence-in-oromia-during-2024-and-2025",
+    "paragraph": "19.2.3",
+    "section": "19. Violence in Oromia",
+    "page": 43
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Violence against civialins in Oromia during 2024 and 2025\nPeriod\nTotal\nFatalities\nQ1 2024\n71\n163\nQ2 2024\n86\n240\nQ3 2024\n89\n169\nQ4 2024\n112\n231\nQ1 2025\n29\n37\nQ2 2025\n60\n126\nQ3 2025\n66\n134\nQ4 2025\n87\n193",
+   "pdf": "",
+   "web_words": 32,
+   "pdf_words": 0,
+   "before": "violence against civilians during the period under review:",
+   "after": "19.2.7 CPIT review of the chart",
+   "where": {
+    "heading": "violence-against-civialins-in-oromia-during-2024-and-2025",
+    "paragraph": "19.2.6",
+    "section": "19. Violence in Oromia",
+    "page": 36
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map 2: Zones of Oromia (additional zones have been added in recent years)",
+   "pdf": "6",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "administrations and zones.’ [See below map of Oromia].",
+   "after": "9.1.2 In 2025 the Norwegian Organization",
+   "where": {
+    "heading": "Population_and_size",
+    "paragraph": "9.1.1",
+    "section": "9. Ethnic context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "20.4.6",
+    "section": "Version control and feedback",
+    "page": 58
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "applies. In AAR the Upper Tribunal held that:",
+   "after": "In broad terms, MB (OLF and MTA – risk)",
+   "where": {
+    "heading": "olf-and-ola",
+    "paragraph": "3.1.4",
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "appropriate to clarify and supplement the existing guidance.",
+   "after": "OLF members and supporters and those specifically perceived",
+   "where": {
+    "heading": "olf-and-ola",
+    "paragraph": "3.1.4",
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "arrested or detained on suspicion of OLF involvement.",
+   "after": "Those who have a significant history, known to",
+   "where": {
+    "heading": "olf-and-ola",
+    "paragraph": "3.1.4",
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4. ‘“",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "at real risk of persecution by the authorities.",
+   "after": "Significant” should not be read as denoting a",
+   "where": {
+    "heading": "olf-and-ola",
+    "paragraph": "3.1.4",
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "non-violent, that constitute political disorder. These include:",
+   "after": "Battles: Violent interactions between two organized armed groups;",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Battles: Violent interactions between two organized armed groups;",
+   "after": "Explosions/Remote violence: An event involving one side",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "against other armed actors, or used against civilians;",
+   "after": "Violence against civilians: Violent events where an organized",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "group deliberately inflicts violence upon unarmed non-combatants;",
+   "after": "Protests: Public demonstrations in which the participants are",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5. ‘",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "demonstrations in which the participants are not violent;",
+   "after": "Riots: Violent events where demonstrators or mobs engage",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and/or disorganized acts of violence against people;",
+   "after": "Strategic developments: Strategically important instances of non-violent",
+   "where": {
+    "heading": "use-of-datasets",
+    "paragraph": "7.1.3",
+    "section": "7. Use of datasets",
+    "page": 12
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "163",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "89%)\nTotal\n8\n27\n24\n59\n42 (71%)",
+   "after": "20.2.3 For information on number of",
+   "where": {
+    "heading": "Arrests",
+    "paragraph": "20.2.3",
+    "section": "20. Civilian-State interaction",
+    "page": 47
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 216,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "note": "ghana/country-policy-and-information-note-internal-relocation-ghana-december-2024-accessible",
+ "pdf_sha256": "93fa571ec109d05d58d34575fc8fb72df992ee0bdbd65eef7722bd1681146d55",
+ "body_sha256": "c0bbd05f869122ebe7a643d7535187ec4d4a2b7f4e1da218c7ea5a6c96aa72e9",
+ "figures": [
+  {
+   "image": "cfeb4dbe4226e7ad1067528a26c1b382fdca7a554b963fe06ad7226bea471c48.png",
+   "tag": "p",
+   "index": 202,
+   "key": "642thegssdatabankstatsbankghanainsearchabledatafromthegssann",
+   "page": 39
+  },
+  {
+   "image": "30cbe8a9abbc93b6a5177c4caf4939e2d925dd75d189573d45448dc8df228a0f.png",
+   "tag": "p",
+   "index": 314,
+   "key": "974regardinghygienethewaterandsanitationreport2021providedda",
+   "page": 58
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 22,
+ "web_figures": 20,
+ "left_in_pdf": {}
+}

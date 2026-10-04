@@ -1,0 +1,207 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-zina-sex-outside-of-marriage-and-adultery-iran-april-2026-accessible",
+ "pdf_sha256": "940d6bc795d901613a91314fdb94c488d9cecef424917887bdfd05ddbfc2aecf",
+ "body_sha256": "5ee0c8a70385343fb425b7f3f4b871454807ac50074fd78f06041c94836fb32d",
+ "words": {
+  "web": 21836,
+  "pdf": 21839
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 2.3e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 1
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "April 2026",
+   "pdf": "5.0",
+   "pdf_date": "April 2026"
+  },
+  "section_updated": {
+   "web": [
+    "10 March 2026"
+   ],
+   "pdf": [
+    "10 March 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 219,
+   "pdf": 219,
+   "pdf_raw": 219,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 46,
+   "pdf": 44
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "the",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Refugee Status.\n3. Risk\n3.1 Risk from",
+   "after": "state\n3.1.1 Whether a person involved,",
+   "where": {
+    "heading": "risk-from-state",
+    "paragraph": "2.1.8",
+    "section": "Assessment",
+    "page": 8
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.2.11",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "female economic survival, and violation of youth autonomy.’",
+   "after": "An undated ‘Iran’ webpage published by Girls Not",
+   "where": {
+    "heading": "temporary-marriage",
+    "paragraph": "9.2.10",
+    "section": "Country information",
+    "page": 30
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Islamic Judiciary, 1 August 2015. Accessed: 24 December",
+   "after": "The Wall Street Journal, Saudi Arabia Sought Vice’",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "12.1.3",
+    "section": "Bibliography",
+    "page": 48
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 180,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

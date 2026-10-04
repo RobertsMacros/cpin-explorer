@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 30,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 236,
+ "list_items": 24,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 202,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 18, 66"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Medical and Healthcare issues",
+ "cover_version": "1.0",
+ "cover_date": "May 2019",
+ "pdf_sha256": "d57a0e3fe8aeea2982542523a468037a3157b4c5871aa310b1ebfc2298e1aeeb",
+ "images": []
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 39,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 49,
+ "paragraphs": 285,
+ "list_items": 9,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 78,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 13, 26"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Albania: Sexual orientation and gender identity",
+ "cover_version": "4.0",
+ "cover_date": "May 2017",
+ "pdf_sha256": "023afb55c249cd0abdaf4156463fd78c3106871218fc1700faa49e375940feaa",
+ "images": []
+}

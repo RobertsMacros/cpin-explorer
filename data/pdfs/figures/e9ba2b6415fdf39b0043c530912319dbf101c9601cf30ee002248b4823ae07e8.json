@@ -1,0 +1,40 @@
+{
+ "extractor": "pdftext-2",
+ "note": "brazil/country-policy-and-information-note-internal-relocation-brazil-august-2025-accessible",
+ "pdf_sha256": "e9ba2b6415fdf39b0043c530912319dbf101c9601cf30ee002248b4823ae07e8",
+ "body_sha256": "c4aefac8c45dc1d4bc6c31fadbd5845678c9dc8d4c1fc60d3522164eff29faa2",
+ "figures": [
+  {
+   "image": "42651cf121969e0f0b79a0cfc9079270343f891800e0199e82f0ba6cd8a5e87f.png",
+   "tag": "p",
+   "index": 197,
+   "key": "923inablogpostpublishedon7november2023gersonrelocationaukbas",
+   "page": 30
+  },
+  {
+   "image": "7475b14738892b246085e9352bfbb83e323551e0f9cacb64ffb7ca546a29edee.png",
+   "tag": "p",
+   "index": 197,
+   "key": "923inablogpostpublishedon7november2023gersonrelocationaukbas",
+   "page": 31
+  },
+  {
+   "image": "66d50b041c01feb94bba3872d4cbd2f953b5ee617555d56cc4de85ccd7aa1e59.png",
+   "tag": "p",
+   "index": 200,
+   "key": "924forcomparisoninjune2024globalcitizensolutionslistedtheave",
+   "page": 31
+  },
+  {
+   "image": "c3a9d1d483222735d75b13be978f3e4fe19b380a420a44c7f5eae3dff2af1bbb.png",
+   "tag": "p",
+   "index": 202,
+   "key": "925thesamesourcealsoestimatedbrazilsaveragepropertypricesper",
+   "page": 31
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 7,
+ "web_figures": 3,
+ "left_in_pdf": {}
+}

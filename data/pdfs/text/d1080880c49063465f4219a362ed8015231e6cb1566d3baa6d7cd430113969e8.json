@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 79,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 61,
+ "paragraphs": 525,
+ "list_items": 10,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 172,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Ukraine: Crimea, Donetsk and Luhansk",
+ "cover_version": "3.0",
+ "cover_date": "September 2017",
+ "pdf_sha256": "d1080880c49063465f4219a362ed8015231e6cb1566d3baa6d7cd430113969e8",
+ "images": []
+}

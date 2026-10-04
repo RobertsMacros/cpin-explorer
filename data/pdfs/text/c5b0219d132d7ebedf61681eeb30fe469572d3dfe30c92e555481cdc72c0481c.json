@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 139,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 125,
+ "paragraphs": 1190,
+ "list_items": 150,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 347,
+ "bookmarks": 120,
+ "warnings": [
+  "page 133: bookmark not found in the text: 'a.'",
+  "footnotes with no mark found in the text: 83, 244"
+ ],
+ "figure_pages": {
+  "6e0fed910c84ad37644241ef43a78c3d15bdfc932db4a27c98cb722a0a96018b.jpg": 38
+ },
+ "figure_sizes": {
+  "6e0fed910c84ad37644241ef43a78c3d15bdfc932db4a27c98cb722a0a96018b.jpg": [
+   677,
+   724
+  ]
+ },
+ "figure_text": {
+  "6e0fed910c84ad37644241ef43a78c3d15bdfc932db4a27c98cb722a0a96018b.jpg": 0
+ },
+ "first_bookmark_page": 8,
+ "cover_title": "Country Policy and Information Note Albania: Human trafficking",
+ "cover_version": "11.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "c5b0219d132d7ebedf61681eeb30fe469572d3dfe30c92e555481cdc72c0481c",
+ "images": [
+  "6e0fed910c84ad37644241ef43a78c3d15bdfc932db4a27c98cb722a0a96018b.jpg"
+ ]
+}

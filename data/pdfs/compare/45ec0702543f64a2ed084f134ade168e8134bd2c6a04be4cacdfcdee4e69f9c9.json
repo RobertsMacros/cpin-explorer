@@ -1,0 +1,506 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-falun-gong-china-november-2025-accessible",
+ "pdf_sha256": "45ec0702543f64a2ed084f134ade168e8134bd2c6a04be4cacdfcdee4e69f9c9",
+ "body_sha256": "dc5cdb4c9f7b78703e74690131bf79c6f30e19837004d46a80cffcf5ca5e7295",
+ "words": {
+  "web": 17891,
+  "pdf": 17690
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 5,
+   "pdf_words": 0,
+   "share": 0.000141,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 5,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "picture": {
+    "differences": 3,
+    "web_words": 134,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 6
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "table for a picture": {
+    "differences": 3,
+    "web_words": 134,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 5
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 24
+   }
+  },
+  "ours": {
+   "differences": 7,
+   "web_words": 8,
+   "pdf_words": 4
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": null,
+   "web_date": null,
+   "pdf": "4.0",
+   "pdf_date": "November 2025"
+  },
+  "section_updated": {
+   "web": [
+    "25 November 2025"
+   ],
+   "pdf": [
+    "25 November 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 100,
+   "pdf": 100,
+   "pdf_raw": 100,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 101,
+   "pdf": 45
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Unmasking China’s Gestapo",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Gestapo, 10 June 2021. Accessed: 15 October 2025.",
+   "after": "Freedom House\nBeijing’s impact on AI-generated",
+   "before_pdf": "Gestapo, 10 June 2021. Accessed: 15 October 2025",
+   "where": {
+    "heading": "falun-dafa-information-center",
+    "paragraph": "11.1.11",
+    "section": "Bibliography",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "published",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "by Falun Gong media New Tang Dynasty Television.",
+   "after": "Leung, who was chief executive from 2012 to",
+   "where": {
+    "heading": "falun-gong-hong-kong",
+    "paragraph": "10.1.8",
+    "section": "Country information",
+    "page": 30
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Province\nArrested\nHarassed\nHebei\n330\n648\nShandong\n303\n384\nLiaoning\n389\n266\nJilin\n390\n201\nSichuan\n176\n296\nHeilongjiang\n185\n213\nHubei\n192\n140\nGuangdong\n125\n87\nHunan\n122\n85\nBeijing\n89\n87\nDaqing\n53\n82\nShaanxi\n74\n55\nYunnan\n56\n40\nJiangxi\n66\n13\nShanghai\n14\n63\nInner Mongolia\n33\n41\nJiangsu\n49\n19\nTianjin\n44\n21\nGansu\n19\n30\nHenan\n31\n12\nShanxi\n16\n21\nAnhui\n28\n6\nNingxia\n7\n23\nGuizhou\n15\n14\nFujian\n9\n7\nZhejiang\n9\n3\nHainan\n6\nGuangxi\n2\n1\nXinjiang\n1\nQinghai\n1\nTotal\n2,828\n2,864",
+   "pdf": "",
+   "web_words": 57,
+   "pdf_words": 0,
+   "before": "severe persecution. The year 2024 was no exception ...",
+   "after": "The reported 2,828 arrests and 2,864",
+   "where": {
+    "heading": "arrests-harassment",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Month\nArrested\nHarassed\nJan\n182\n118\nFeb\n92\n110\nMar\n287\n296\nApr\n467\n300\nMay\n402\n352\nJun\n286\n369\nJul\n312\n304\nAug\n216\n204\nSep\n175\n320\nOct\n113\n137\nNov\n92\n143\nDec\n122\n130\nUnknown\n81\n82\nTotal\n2,825\n2,865",
+   "pdf": "",
+   "web_words": 43,
+   "pdf_words": 0,
+   "before": "five months (January, February, October, November and December).",
+   "after": "The spiking of persecution cases in the middle",
+   "where": {
+    "heading": "arrests-harassment",
+    "paragraph": "9.3.3",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year/Month\nJan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug\nSep\nOct\nNov\nDec\nUnknown\nGrand Total\n2017\n1\n1\n2019\n1\n1\n2020\n1\n1\n4\n6\n2021\n1\n3\n2\n5\n2022\n1\n4\n3\n8\n20\n2023\n2\n3\n1\n1\n3\n4\n6\n8\n24\n67\n66\n185\n2024\n64\n6\n39\n48\n35\n20\n32\n16\n29\n25\n17\n14\n103\n448\nUnknown\n98\n98\nGrand Total\n65\n7\n41\n52\n36\n21\n36\n21\n35\n37\n45\n85\n283\n764",
+   "pdf": "",
+   "web_words": 34,
+   "pdf_words": 0,
+   "before": "by the year and month the sentence occurred.",
+   "after": "9.4.3 The below chart, taken from",
+   "where": {
+    "heading": "prosecutions",
+    "paragraph": "9.4.2",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.5 The information in this section has been removed as it is restricted for internal Home Office use only.\n1.1.6",
+   "web_words": 0,
+   "pdf_words": 24,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 5
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "11.1.11",
+    "section": "Version control and feedback",
+    "page": 49
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Version 4.0, November 2025",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "",
+   "after": "Executive summary\nFalun Gong is not considered a",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "has been removed as it is restricted for",
+   "after": "internal Home Office use only.\nOfficial – sensitive: Not",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "11.1.1The",
+   "pdf": "11.1.1 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Kong Falun Gong practitioners.\n11. Falun Gong diaspora",
+   "after": "2024 DFAT Report noted: ‘Falun Gong, unlike some",
+   "where": {
+    "heading": "diaspora",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 31
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Unmasking China’s Gestapo.",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Falun Dafa Infocenter video Unmasking China’s Gestapo.",
+   "after": "9.3 Arrests and harassment\n9.3.1",
+   "where": {
+    "heading": "the-610-office",
+    "paragraph": "9.2.3",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2018",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Studying Falun Gong at home\nChen Wen\nApr",
+   "after": "Oct 2019\n9 years 6 months\nStudying Falun",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 36
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "months",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Wen\nApr 2018\nOct 2019\n9 years 6",
+   "after": "Studying Falun Gong at home\nCao Genxiu\nApr",
+   "before_pdf": "Chen Wen\nApr\nOct 2019\n9 years 6",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 36
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2018",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "to their Falun Gong activities\nFan Rong\nNov",
+   "after": "Aug 2019\n3 years 6 months\nArrested in",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 37
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "months",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Rong\nNov 2018\nAug 2019\n3 years 6",
+   "after": "Arrested in relation to their Falun Gong activities",
+   "before_pdf": "Fan Rong\nNov\nAug 2019\n3 years 6",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 37
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2018\nmonths",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "years 6 months\nStudying Falun Gong at home",
+   "after": "Cao Genxiu\nApr 2018\nOct 2019\n7 years",
+   "before_pdf": "9 years 6\nStudying Falun Gong at home",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 37
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2018\nmonths",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "years 6 months\nArrested in relation to their",
+   "after": "Falun Gong activities\nLi Yanchun\nNov 2018\nAug",
+   "before_pdf": "3 years 6\nArrested in relation to their",
+   "where": {
+    "heading": "annex-a",
+    "paragraph": "11.1.11",
+    "section": "Annex A: Table of detained Falun Gong practitioners",
+    "page": 38
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 141,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 2,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 68,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 56,
+ "paragraphs": 464,
+ "list_items": 78,
+ "tables": 0,
+ "figures": 3,
+ "footnotes": 206,
+ "bookmarks": 58,
+ "warnings": [
+  "page 53: bookmark not found in the text: 'Annex A'",
+  "page 53: bookmark not found in the text: 'Khan and Piracha correspondence British High Commission, 26 '"
+ ],
+ "figure_pages": {
+  "fdb8f7af81fbec3ec44f8d8cc74ab7a6317e958aa748e7fb9ea8a5f451bee42e.jpg": 53,
+  "2c587bc49a31884e02478e92951e352405d30ad5a6382937f3d0905effa60151.jpg": 54,
+  "348cc7d254a2698fc9d6fa6c8316b91b185eb11e221a1331cc463fca3a8836e5.jpg": 55
+ },
+ "figure_sizes": {
+  "fdb8f7af81fbec3ec44f8d8cc74ab7a6317e958aa748e7fb9ea8a5f451bee42e.jpg": [
+   917,
+   1269
+  ],
+  "2c587bc49a31884e02478e92951e352405d30ad5a6382937f3d0905effa60151.jpg": [
+   917,
+   1295
+  ],
+  "348cc7d254a2698fc9d6fa6c8316b91b185eb11e221a1331cc463fca3a8836e5.jpg": [
+   918,
+   648
+  ]
+ },
+ "figure_text": {
+  "fdb8f7af81fbec3ec44f8d8cc74ab7a6317e958aa748e7fb9ea8a5f451bee42e.jpg": 0,
+  "2c587bc49a31884e02478e92951e352405d30ad5a6382937f3d0905effa60151.jpg": 0,
+  "348cc7d254a2698fc9d6fa6c8316b91b185eb11e221a1331cc463fca3a8836e5.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Pakistan: Women fearing gender- based violence",
+ "cover_version": "4.0",
+ "cover_date": "February 2020",
+ "pdf_sha256": "30b8246a871b40ab6e11809c99826bacb19cd71ffff9bbe708fcd35c141e213c",
+ "images": [
+  "2c587bc49a31884e02478e92951e352405d30ad5a6382937f3d0905effa60151.jpg",
+  "348cc7d254a2698fc9d6fa6c8316b91b185eb11e221a1331cc463fca3a8836e5.jpg",
+  "fdb8f7af81fbec3ec44f8d8cc74ab7a6317e958aa748e7fb9ea8a5f451bee42e.jpg"
+ ]
+}

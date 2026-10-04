@@ -1,0 +1,198 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-information-note-documentation-bangladesh-november-2024-accessible",
+ "pdf_sha256": "42719f2c713935c954edba47757ca45c4f583f16f5aeefccf21a8e624054454a",
+ "body_sha256": "a9e585eb1e4e49f90f08f1fcc81efc49a256dac478902e1816c5ee333dd38b36",
+ "words": {
+  "web": 8442,
+  "pdf": 8877
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 425
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 425
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "November 2024",
+   "pdf": "4.0",
+   "pdf_date": "November 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 28
+  },
+  "footnotes": {
+   "web": 74,
+   "pdf": 74,
+   "pdf_raw": 74,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 44,
+   "pdf": 39
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe informat …",
+   "web_words": 0,
+   "pdf_words": 425,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "document-verification-process",
+    "paragraph": "8.1.1",
+    "section": "8. Document verification process",
+    "page": 18
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "",
+   "pdf": "https://www.police.gov.bd/en/legal_instruments?page=2.",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "Legal Instrument on the official Bangladesh Police website.",
+   "after": "redacted]\nInternational Liaison and Migration Manager Home Office",
+   "before_pdf": "Legal Instrument on the official Bangladesh Police website,",
+   "where": {
+    "heading": "verification-of-documents-at-police-stations-in-bangladesh",
+    "paragraph": "8.1.1",
+    "section": "Annex A: British High Commission correspondence, 09 April 2024",
+    "page": 23
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "example.",
+   "pdf": "example70.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or identities. The Daily Star article provided an",
+   "after": "6.7.2 In September 2023, The Daily",
+   "where": {
+    "heading": "newspaper-clippings-or-pages",
+    "paragraph": "6.7.1",
+    "section": "6. Types of fraudulent documents",
+    "page": 16
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 78,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 40,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 47,
+ "paragraphs": 287,
+ "list_items": 226,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 99,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Jamaica: Medical and healthcare issues",
+ "cover_version": "1.0",
+ "cover_date": "March 2020",
+ "pdf_sha256": "41e416212d22b6dc02266e3d1af7a036c8cbac260a6033fbed7faf41716b91e3",
+ "images": []
+}

@@ -1,0 +1,1131 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-female-genital-mutilation-fgm-nigeria-july-2022-accessible",
+ "pdf_sha256": "1b1b1558f79c0caac79c8f10c1601127dfd3ac8fd569c8d98af57bf4371223a3",
+ "body_sha256": "a87067e818aa555350f211fee1e78ca1a067c2dfada90090424161547c445b64",
+ "words": {
+  "web": 21917,
+  "pdf": 21884
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 0,
+   "share": 2.3e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 1
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 69,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 38,
+    "web_words": 1,
+    "pdf_words": 39
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 37,
+    "web_words": 0,
+    "pdf_words": 37
+   },
+   "picture in words": {
+    "differences": 2,
+    "web_words": 69,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 7,
+   "web_words": 6,
+   "pdf_words": 4
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "July 2022",
+   "pdf": "3.0",
+   "pdf_date": "July 2022"
+  },
+  "section_updated": {
+   "web": [
+    "13 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "7 April 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022"
+   ],
+   "pdf": [
+    "13 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "7 April 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022",
+    "12 July 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 160,
+   "pdf": 160,
+   "pdf_raw": 160,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 17,
+   "pdf": 21
+  },
+  "headings": {
+   "web": 56,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "to",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Prohibition) Act in 2015 which criminalises FGM. According",
+   "after": "a VAPP tracker, 19 of the 36 states",
+   "where": {
+    "heading": "protection",
+    "paragraph": "2.5.2",
+    "section": "Assessment",
+    "page": 10
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The map shows that the states with the highest percentage of FGM (51% to 62%) are Ebonyi, Ekiti and Imo. The second highest (38% to 50%) are Kaduna, Kwara, Ondo and Osun. Delta, Edo, Jigawa and Oyo: 27% to 30%. Anambra, Enugu, Kano, Lagos and Yobe: 13% to 26%. All other states: 0% to 12%.",
+   "pdf": "",
+   "web_words": 55,
+   "pdf_words": 0,
+   "before": "who have been subject to FGM by State:",
+   "after": "4.6.4 28 Too Many in an",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.3",
+    "section": "Assessment",
+    "page": 31
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "The map shows that the largest groups are Hausa and Fulani, Kanuri, and Yoruba.",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "on the Perry Castaneda Library Map Collection webpage.",
+   "after": "4.6 Residence / zone\n4.6.1 The",
+   "before_pdf": "on the Perry Castaneda Library Map Collection webpage:",
+   "where": {
+    "heading": "Ethnic_group",
+    "paragraph": "4.5.4",
+    "section": "Assessment",
+    "page": 28
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "surveysshowed",
+   "pdf": "surveys showed",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "using data from the 2 most recent NDHS",
+   "after": "that:\nAge when FGM occurred\n2013\n2018\nWomen",
+   "where": {
+    "heading": "Age",
+    "paragraph": "4.3.1",
+    "section": "Assessment",
+    "page": 24
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2013\n2018\nNorth Central\n9.9\n9.9",
+   "after": "FCT – Abuja\n5.1\nBenue\n5.3\nKogi",
+   "before_pdf": "Zone / State\nNorth Central\n9.9\n9.9",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "9.9\n9.9\nFCT – Abuja\n5.1",
+   "after": "Benue\n5.3\nKogi\n1.0\nKwara\n46.",
+   "before_pdf": "9\n9.9\no FCT – Abuja\n5.1",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "9\nFCT – Abuja\n5.1\nBenue\n5.3",
+   "after": "Kogi\n1.0\nKwara\n46.0\nNasarawa\n1.",
+   "before_pdf": "FCT – Abuja\n5.1\no Benue\n5.3",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "5.1\nBenue\n5.3\nKogi\n1.0",
+   "after": "Kwara\n46.0\nNasarawa\n1.8\nNiger\n10.",
+   "before_pdf": "o Benue\n5.3\no Kogi\n1.0",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "5.3\nKogi\n1.0\nKwara\n46.0",
+   "after": "Nasarawa\n1.8\nNiger\n10.5\nPlateau\n3.",
+   "before_pdf": "o Kogi\n1.0\no Kwara\n46.0",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "1.0\nKwara\n46.0\nNasarawa\n1.8",
+   "after": "Niger\n10.5\nPlateau\n3.0\nNorth East",
+   "before_pdf": "o Kwara\n46.0\no Nasarawa\n1.8",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "46.0\nNasarawa\n1.8\nNiger\n10.5",
+   "after": "Plateau\n3.0\nNorth East\n2.9\n6.",
+   "before_pdf": "o Nasarawa\n1.8\no Niger\n10.5",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "3.0\nNorth East\n2.9\n6.1",
+   "after": "Adamawa\n0.0\nBauchi\n10.7\nBorno\n2.",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "East\n2.9\n6.1\nAdamawa\n0.0",
+   "after": "Bauchi\n10.7\nBorno\n2.4\nGombe\n0.",
+   "before_pdf": "2.9\n6.1\no Adamawa\n0.0",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "6.1\nAdamawa\n0.0\nBauchi\n10.7",
+   "after": "Borno\n2.4\nGombe\n0.1\nTaraba\n3.",
+   "before_pdf": "o Adamawa\n0.0\no Bauchi\n10.7",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "0.0\nBauchi\n10.7\nBorno\n2.4",
+   "after": "Gombe\n0.1\nTaraba\n3.9\nYobe\n14.",
+   "before_pdf": "o Bauchi\n10.7\no Borno\n2.4",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "10.7\nBorno\n2.4\nGombe\n0.1",
+   "after": "Taraba\n3.9\nYobe\n14.2\nNorth West",
+   "before_pdf": "o Borno\n2.4\no Gombe\n0.1",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2.4\nGombe\n0.1\nTaraba\n3.9",
+   "after": "Yobe\n14.2\nNorth West\n20.7\n20.",
+   "before_pdf": "o Gombe\n0.1\no Taraba\n3.9",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "14.2\nNorth West\n20.7\n20.2",
+   "after": "Jigawa\n34.1\nKaduna\n48.8\nKano\n22.",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "West\n20.7\n20.2\nJigawa\n34.1",
+   "after": "Kaduna\n48.8\nKano\n22.2\nKatsina\n1.",
+   "before_pdf": "20.7\n20.2\no Jigawa\n34.1",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "20.2\nJigawa\n34.1\nKaduna\n48.8",
+   "after": "Kano\n22.2\nKatsina\n1.4\nKebbi\n1.",
+   "before_pdf": "o Jigawa\n34.1\no Kaduna\n48.8",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "34.1\nKaduna\n48.8\nKano\n22.2",
+   "after": "Katsina\n1.4\nKebbi\n1.6\nSokoto\n5.",
+   "before_pdf": "o Kaduna\n48.8\no Kano\n22.2",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "48.8\nKano\n22.2\nKatsina\n1.4",
+   "after": "Kebbi\n1.6\nSokoto\n5.4\nZamfara\n5.",
+   "before_pdf": "o Kano\n22.2\no Katsina\n1.4",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "22.2\nKatsina\n1.4\nKebbi\n1.6",
+   "after": "Sokoto\n5.4\nZamfara\n5.3\nSouth East",
+   "before_pdf": "o Katsina\n1.4\no Kebbi\n1.6",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "1.4\nKebbi\n1.6\nSokoto\n5.4",
+   "after": "Zamfara\n5.3\nSouth East\n49.0\n35.",
+   "before_pdf": "o Kebbi\n1.6\no Sokoto\n5.4",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "5.3\nSouth East\n49.0\n35.0",
+   "after": "Abia\n12.2\nAnambra\n21.4\nEbonyi\n53.",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "East\n49.0\n35.0\nAbia\n12.2",
+   "after": "Anambra\n21.4\nEbonyi\n53.2\nEnugu\n25.",
+   "before_pdf": "49.0\n35.0\no Abia\n12.2",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "35.0\nAbia\n12.2\nAnambra\n21.4",
+   "after": "Ebonyi\n53.2\nEnugu\n25.3\nImo\n61.",
+   "before_pdf": "o Abia\n12.2\no Anambra\n21.4",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "12.2\nAnambra\n21.4\nEbonyi\n53.2",
+   "after": "Enugu\n25.3\nImo\n61.7\nSouth South",
+   "before_pdf": "o Anambra\n21.4\no Ebonyi\n53.2",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "21.4\nEbonyi\n53.2\nEnugu\n25.3",
+   "after": "Imo\n61.7\nSouth South\n25.8\n17.",
+   "before_pdf": "o Ebonyi\n53.2\no Enugu\n25.3",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "61.7\nSouth South\n25.8\n17.7",
+   "after": "Akwa Ibom\n10.2\nBayelsa\n6.7\nCross",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "25.8\n17.7\nAkwa Ibom\n10.2",
+   "after": "Bayelsa\n6.7\nCross River\n11.9\nDelta",
+   "before_pdf": "8\n17.7\no Akwa Ibom\n10.2",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "7\nAkwa Ibom\n10.2\nBayelsa\n6.7",
+   "after": "Cross River\n11.9\nDelta\n33.7\nEdo",
+   "before_pdf": "Akwa Ibom\n10.2\no Bayelsa\n6.7",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2\nBayelsa\n6.7\nCross River\n11.9",
+   "after": "Delta\n33.7\nEdo\n35.5\nRivers\n9.",
+   "before_pdf": "Bayelsa\n6.7\no Cross River\n11.9",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "7\nCross River\n11.9\nDelta\n33.7",
+   "after": "Edo\n35.5\nRivers\n9.3\nSouth West",
+   "before_pdf": "Cross River\n11.9\no Delta\n33.7",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "11.9\nDelta\n33.7\nEdo\n35.5",
+   "after": "Rivers\n9.3\nSouth West\n47.5\n30.",
+   "before_pdf": "o Delta\n33.7\no Edo\n35.5",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "9.3\nSouth West\n47.5\n30.0",
+   "after": "Ekiti\n57.9\nLagos\n23.7\nOgun\n8.",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "West\n47.5\n30.0\nEkiti\n57.9",
+   "after": "Lagos\n23.7\nOgun\n8.2\nOndo\n43.",
+   "before_pdf": "47.5\n30.0\no Ekiti\n57.9",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "30.0\nEkiti\n57.9\nLagos\n23.7",
+   "after": "Ogun\n8.2\nOndo\n43.7\nOsun\n45.",
+   "before_pdf": "o Ekiti\n57.9\no Lagos\n23.7",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "57.9\nLagos\n23.7\nOgun\n8.2",
+   "after": "Ondo\n43.7\nOsun\n45.9\nOyo\n31.",
+   "before_pdf": "o Lagos\n23.7\no Ogun\n8.2",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "23.7\nOgun\n8.2\nOndo\n43.7",
+   "after": "Osun\n45.9\nOyo\n31.1\nTotal\nTotal",
+   "before_pdf": "o Ogun\n8.2\no Ondo\n43.7",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "o",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "8.2\nOndo\n43.7\nOsun\n45.9",
+   "after": "Oyo\n31.1\nTotal\nTotal number of women",
+   "before_pdf": "o Ondo\n43.7\no Osun\n45.9",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 30
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "girls",
+   "pdf": "women",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "type of FGM.\nType of FGM\n2013: % of",
+   "after": "0-14 who had been subject to FGM",
+   "before_pdf": "type of FGM.\nType of FGM\n2013 % of",
+   "where": {
+    "heading": "Type_of_FGM",
+    "paragraph": "3.3.2",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "girls",
+   "pdf": "women",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "who had been subject to FGM\n2018: % of",
+   "after": "0-14 who had been subject to FGM",
+   "before_pdf": "who had been subject to FGM\n2018 % of",
+   "where": {
+    "heading": "Type_of_FGM",
+    "paragraph": "3.3.2",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "women",
+   "pdf": "girls",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "who had been subject to FGM\n2013: % of",
+   "after": "15-49 who had been subject to FGM",
+   "before_pdf": "who had been subject to FGM\n2013 % of",
+   "where": {
+    "heading": "Type_of_FGM",
+    "paragraph": "3.3.2",
+    "section": "Assessment",
+    "page": 14
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2013\n2018",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "2\nRural\n19.3\n15.6\nZone / State",
+   "after": "North Central\n9.9\n9.9\nFCT – Abuja",
+   "where": {
+    "heading": "Residence_zone",
+    "paragraph": "4.6.1",
+    "section": "Assessment",
+    "page": 29
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "secondary",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "67.2\n19.4\n60.9\nMore than",
+   "after": "29.1\n84.3\n19.5\n74.9",
+   "where": {
+    "heading": "Education",
+    "paragraph": "4.8.1",
+    "section": "Assessment",
+    "page": 33
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "secondary",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "29.1\n84.3\n19.5\n74.9",
+   "after": "4.8.2 The above data for 2018",
+   "before_pdf": "29.1 84.3 19.5 74.9",
+   "where": {
+    "heading": "Education",
+    "paragraph": "4.8.2",
+    "section": "Assessment",
+    "page": 33
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "154",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "girls who were eventually compelled to be circumcised...’",
+   "after": "9.3.4 The EASO country focus report",
+   "where": {
+    "heading": "Opposing_FGM",
+    "paragraph": "9.3.4",
+    "section": "Assessment",
+    "page": 52
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 213,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -1,0 +1,837 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-ethnic-and-religious-groups-vietnam-february-2022-accessible-version",
+ "pdf_sha256": "af53047c41a14a4994528050fc42afe3347f50e15fd49e27fd4b0ca53fa97ac0",
+ "body_sha256": "0dfb4e5a90540c64596ae4b76bc488f27f89f4ae94ef423886caf18977ad53e0",
+ "words": {
+  "web": 35581,
+  "pdf": 35702
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 4,
+    "web_words": 94,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 22,
+    "web_words": 0,
+    "pdf_words": 139
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 6,
+    "pdf_words": 0
+   },
+   "caption": {
+    "differences": 1,
+    "web_words": 9,
+    "pdf_words": 0
+   },
+   "list marker": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "repeated label": {
+    "differences": 21,
+    "web_words": 0,
+    "pdf_words": 138
+   },
+   "table for a picture": {
+    "differences": 3,
+    "web_words": 85,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 49,
+   "web_words": 30,
+   "pdf_words": 51
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "December 2024",
+   "pdf": "4.0",
+   "pdf_date": "December 2024"
+  },
+  "section_updated": {
+   "web": [
+    "16 December 2024"
+   ],
+   "pdf": [
+    "16 December 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 337,
+   "pdf": 337,
+   "pdf_raw": 337,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 9
+  },
+  "tables": {
+   "web": 12,
+   "pdf": 33
+  },
+  "headings": {
+   "web": 94,
+   "pdf": 71
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Tribe\nCatholic %\nProtestant %\nBrahmanism %\nAdventism %\nBuddhist %\nNo religion %\nGia Rai\n16.14\n26.07\n0.17\n0\n0.23\n57.31\nEde\n9.18\n33.45\n0\n0.2\n0.26\n56.89\nBa Na\n32.24\n13.65\n0\n0\n0\n53.98\nCo Ho\n39.35\n39.67\n0\n2.99\n0.77\n17.19\nMnong\n27.78\n37.12\n0\n0.59\n0.31\n34.19",
+   "pdf": "",
+   "web_words": 69,
+   "pdf_words": 0,
+   "before": "major tribal groups within the Montagnard ethnic group.",
+   "after": "7.3.5 See also Catholics and Protestants",
+   "where": {
+    "heading": "montagnards-or-degar-1",
+    "paragraph": "7.3.4",
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Religion distribution of Hoa ethnic group (%)\nBuddhist\n11.8\nCatholic\n1.05\nProtestant\n0.22\nNo religion\n86.85",
+   "pdf": "",
+   "web_words": 13,
+   "pdf_words": 0,
+   "before": "socio-economic census 2019 to compile their data.",
+   "after": "7.3 Montagnards (or Degar)\n7.3.1",
+   "where": {
+    "heading": "Chinese_Hoa_or",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "caption",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map showing the different regions and provinces within Vietnam.",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "shows the different regions and provinces within Vietnam.",
+   "after": "7.1.6 The World Bank in their",
+   "where": {
+    "heading": "Demography_and_geography",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "activities aimed at overthrowing the People’s Administration”",
+   "after": "Name: Ta Khu Ethnic group: Kinh Religious group:",
+   "before_pdf": "activities aimed at overthrowing the People’s Administration\"",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "activities aimed at overthrowing the People’s Administration”",
+   "after": "Name: Doan Van Cu Ethnic group: Kinh Religious",
+   "before_pdf": "activities aimed at overthrowing the People’s Administration\"",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "activities aimed at overthrowing the People’s Administration”",
+   "after": "Name: Luong Nhat Quang Ethnic group: Kinh Religious",
+   "before_pdf": "activities aimed at overthrowing the People’s Administration\"",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 62
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "activities aimed at overthrowing the People’s Administration”",
+   "after": "Name: Nguyen Dinh Ethnic group: Kinh Religious group:",
+   "before_pdf": "activities aimed at overthrowing the People’s Administration\"",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 63
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "years in prison charged with “abusing democratic freedoms”",
+   "after": "Name: Le Thanh Hoan Nguyen Ethnic group: Kinh",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 64
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "3 years in prison for “abusing democratic freedoms”",
+   "after": "Name: Le Thanh Nhi Nguyen Ethnic group: Kinh",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "6 months in prison for “abusing democratic freedoms”",
+   "after": "Name: To Hoang Chuong Ethnic group: Khmer Krom",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 66
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "5 years’ probation for “ undermining national unity policy”",
+   "after": "Name: Y Tup Knul Ethnic group: Ede (Montagnard)",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 89
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "3 years’ probation for “undermining national unity policy”.",
+   "after": "Name: Siu Chon Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 90
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "does not have any details of his sentence.",
+   "after": "Name: Duong Van Tu Ethnic group: Hmong Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 91
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "to 4 years and 6 months in prison.",
+   "after": "Name: Y Krec Bya Ethnic group: Ede (Montagnard)",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 92
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "the nature of any charges brought against him.",
+   "after": "Name: Kunh Ethnic group: Bahnar (Montagnard) Religious group:",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 74
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "5 years’ probation for “undermining national unity policy”.",
+   "after": "Name: Kpuih Khuong Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 83
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "5 years’ probation for “undermining national unity policy”.",
+   "after": "Name: Y Hriam Kpa Ethnic group: Jarai (Montagnard)",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 84
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "years in prison and 3-5 years’ probation.",
+   "after": "Name: Ksor Phit Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 85
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "5 years’ probation for “undermining national unity policy”.",
+   "after": "Name: Ksor Kam Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 86
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "5 years probation for “undermining national unity policy”.",
+   "after": "Name: Dinh Nong Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 87
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "years in prison and 3-5 years’ probation.",
+   "after": "Name: Y Pum Bya Ethnic group: Ede (Montagnard)",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 88
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "https://www.britannica.com/topic/Hmong)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "but not cited\nBritannica, [Hmong\nHistory, Culture & Language,](",
+   "after": "Last updated 31 August 2024. Accessed: 7 October",
+   "before_pdf": "but not cited\nBritannica, Hmong | History, Culture & Language,",
+   "where": {
+    "heading": "sources-consulted-but-not-cited",
+    "paragraph": "14.4.7",
+    "section": "Bibliography",
+    "page": 100
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "3-5 years probation for “undermining national unity”.",
+   "after": "Name: A Jen Ethnic group: Bahnar (Montagnard) Religious",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 72
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Religion distribution of Khmer Krom ethnic group (%)\nBuddhist\n49.15\nNo religion\n50.29",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "to as Kho Mein the Open Development data).",
+   "after": "7.5.5 See also Buddhists\n7.6",
+   "where": {
+    "heading": "khmer-krom-1",
+    "paragraph": "7.5.4",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "years in prison and 3-5 years probation.",
+   "after": "Name: Dinh Kuh Ethnic group: Bahnar (Montagnard) Religious",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 73
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "5 years’ probation for “undermining national unity policy”.",
+   "after": "Name: Y Yich Ethnic group: Bahnar (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 82
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "as relevant and on which research was undertaken:",
+   "after": "Ethnic groups\ndemography\nLegal status\nBackground info on",
+   "where": {
+    "heading": "Terms_of_Reference_1",
+    "paragraph": "14.4.7",
+    "section": "Terms of Reference",
+    "page": 96
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Religion distribution of Hmong ethnic group (%)\nCatholic\n1.48\nProtestant\n19.16\nNo religion\n79.14",
+   "pdf": "",
+   "web_words": 16,
+   "pdf_words": 0,
+   "before": "to as Mong in the Open Development data).",
+   "after": "7.4.5 See also Protestants.\n7.5",
+   "where": {
+    "heading": "hmong-1",
+    "paragraph": "7.4.4",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Sentenced to 16 years in prison and 5 years’ probation",
+   "pdf": "147",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "USCIRF and the 88 Project list as detained",
+   "after": "for “carrying out activities aimed at overthrowing the",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "April 2012 Meant to be",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "group: Ha Mon\nApril 2012\nMeant to be",
+   "after": "released in 2022. Listed on CAT-VN list",
+   "before_pdf": "group: Ha Mon\nApril 2012 Meant to be",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 70
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "February 2012\nStill detained.",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "group: Kinh Religious group: An Dan Dai Dao",
+   "after": "On both the USCIRF and the 88 Project",
+   "before_pdf": "years’ probation\nReligious group: An Dan Dai Dao",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 56
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "February 2012\nStill detained.\nSentenced to 16 years in prison and 5 years’ probation",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "s Administration”\nName: Vo Tiet Ethnic group: Kinh",
+   "after": "Religious group: An Dan Dai Dao\nFebruary 2012",
+   "before_pdf": "s Administration\"\nName: Vo Tiet Ethnic group: Kinh",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "activities aimed at overthrowing the People’s Administration”",
+   "after": "Name: Vuong Tan Son Ethnic group: Kinh Religious",
+   "before_pdf": "activities aimed at overthrowing the People’s Administration\"",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 59
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "5 years probation for “undermining national unity policy”",
+   "after": "Name: Runh Ethnic group: Bahnar (Montagnard) Religious group:",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 70
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "3-5 years probation for “undermining national unity”.",
+   "after": "Name: Run Ethnic group: Bahnar (Montagnard) Religious group:",
+   "where": {
+    "heading": "catholics-1",
+    "paragraph": "14.2.9",
+    "section": "Country information",
+    "page": 71
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate released\nArrest/charges",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "USCIRF list.\nSentenced to 17 years in prison.",
+   "after": "Name: Siu Hlom Ethnic group: Jarai (Montagnard) Religious",
+   "where": {
+    "heading": "protestants-1",
+    "paragraph": "14.3.12",
+    "section": "Country information",
+    "page": 81
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "145",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "USCIRF and the 88 Project list as detained",
+   "after": "Sentenced to 16 years in prison and 5",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "149",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "USCIRF and the 88 Project list as detained",
+   "after": "Sentenced to 16 years in prison and 5",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 57
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "151",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "USCIRF and the 88 Project list as detained",
+   "after": "Sentenced to 17 years in prison and 5",
+   "where": {
+    "heading": "buddhists-1",
+    "paragraph": "14.1.12",
+    "section": "Country information",
+    "page": 57
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 290,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

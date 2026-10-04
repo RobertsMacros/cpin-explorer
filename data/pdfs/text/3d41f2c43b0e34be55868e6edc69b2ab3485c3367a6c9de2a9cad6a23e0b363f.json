@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 41,
+ "paragraphs": 257,
+ "list_items": 28,
+ "tables": 6,
+ "figures": 2,
+ "footnotes": 108,
+ "bookmarks": 37,
+ "warnings": [
+  "footnotes with no mark found in the text: 84"
+ ],
+ "figure_pages": {
+  "f5b78ac388d186ac3faef835ce5451f609cfad2edb26b0392ca781f3e88c161e.png": 6,
+  "f5e8909552ceef0353ce31c57566321c94a616ad37aaf2323adf8ca7fc9174ed.jpg": 7
+ },
+ "figure_sizes": {
+  "f5b78ac388d186ac3faef835ce5451f609cfad2edb26b0392ca781f3e88c161e.png": [
+   520,
+   264
+  ],
+  "f5e8909552ceef0353ce31c57566321c94a616ad37aaf2323adf8ca7fc9174ed.jpg": [
+   919,
+   463
+  ]
+ },
+ "figure_text": {
+  "f5b78ac388d186ac3faef835ce5451f609cfad2edb26b0392ca781f3e88c161e.png": 1,
+  "f5e8909552ceef0353ce31c57566321c94a616ad37aaf2323adf8ca7fc9174ed.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Background Note Jamaica",
+ "cover_version": "3.0",
+ "cover_date": "September 2019",
+ "pdf_sha256": "3d41f2c43b0e34be55868e6edc69b2ab3485c3367a6c9de2a9cad6a23e0b363f",
+ "images": [
+  "f5b78ac388d186ac3faef835ce5451f609cfad2edb26b0392ca781f3e88c161e.png",
+  "f5e8909552ceef0353ce31c57566321c94a616ad37aaf2323adf8ca7fc9174ed.jpg"
+ ]
+}

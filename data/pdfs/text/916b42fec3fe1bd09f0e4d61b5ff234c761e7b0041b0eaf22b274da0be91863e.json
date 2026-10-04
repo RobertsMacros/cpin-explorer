@@ -1,0 +1,57 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 143,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 58,
+ "paragraphs": 615,
+ "list_items": 167,
+ "tables": 72,
+ "figures": 4,
+ "footnotes": 122,
+ "bookmarks": 56,
+ "warnings": [
+  "footnotes with no mark found in the text: 78, 84"
+ ],
+ "figure_pages": {
+  "486ab46c7c8594e6c30775e96551aac3a7e495e0bcc3f697221209b43f25f556.png": 43,
+  "52137893686570e9983628b86b9ab8b39f449c273fe144677ee2b6c637b9b49f.jpg": 55,
+  "0fcf7512137ffae6943d289bc5a6957227d77772d0d100da297f56663e745866.png": 74,
+  "4fd48bfdf453e8d1248c72c217b2baaacc3e057efc1d3421bf751db62bea42b7.png": 90
+ },
+ "figure_sizes": {
+  "486ab46c7c8594e6c30775e96551aac3a7e495e0bcc3f697221209b43f25f556.png": [
+   247,
+   168
+  ],
+  "52137893686570e9983628b86b9ab8b39f449c273fe144677ee2b6c637b9b49f.jpg": [
+   980,
+   720
+  ],
+  "0fcf7512137ffae6943d289bc5a6957227d77772d0d100da297f56663e745866.png": [
+   247,
+   163
+  ],
+  "4fd48bfdf453e8d1248c72c217b2baaacc3e057efc1d3421bf751db62bea42b7.png": [
+   247,
+   169
+  ]
+ },
+ "figure_text": {
+  "486ab46c7c8594e6c30775e96551aac3a7e495e0bcc3f697221209b43f25f556.png": 0,
+  "52137893686570e9983628b86b9ab8b39f449c273fe144677ee2b6c637b9b49f.jpg": 54,
+  "0fcf7512137ffae6943d289bc5a6957227d77772d0d100da297f56663e745866.png": 0,
+  "4fd48bfdf453e8d1248c72c217b2baaacc3e057efc1d3421bf751db62bea42b7.png": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Sri Lanka: Medical treatment and healthcare",
+ "cover_version": "1.0",
+ "cover_date": "July 2020",
+ "pdf_sha256": "916b42fec3fe1bd09f0e4d61b5ff234c761e7b0041b0eaf22b274da0be91863e",
+ "images": [
+  "0fcf7512137ffae6943d289bc5a6957227d77772d0d100da297f56663e745866.png",
+  "486ab46c7c8594e6c30775e96551aac3a7e495e0bcc3f697221209b43f25f556.png",
+  "4fd48bfdf453e8d1248c72c217b2baaacc3e057efc1d3421bf751db62bea42b7.png",
+  "52137893686570e9983628b86b9ab8b39f449c273fe144677ee2b6c637b9b49f.jpg"
+ ]
+}

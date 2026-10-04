@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 28,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 33,
+ "paragraphs": 179,
+ "list_items": 110,
+ "tables": 8,
+ "figures": 2,
+ "footnotes": 128,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 4, 116"
+ ],
+ "figure_pages": {
+  "3846d7cb419c9ba3742031d6044300a03c05a923c8d30cfe73c4021f95c3bcab.png": 5,
+  "ed31fba9a522bdb30bcdb4bbf94450782dbf1f9ab7a6a740ecfb7a5553cef7aa.jpg": 7
+ },
+ "figure_sizes": {
+  "3846d7cb419c9ba3742031d6044300a03c05a923c8d30cfe73c4021f95c3bcab.png": [
+   198,
+   254
+  ],
+  "ed31fba9a522bdb30bcdb4bbf94450782dbf1f9ab7a6a740ecfb7a5553cef7aa.jpg": [
+   903,
+   504
+  ]
+ },
+ "figure_text": {
+  "3846d7cb419c9ba3742031d6044300a03c05a923c8d30cfe73c4021f95c3bcab.png": 1,
+  "ed31fba9a522bdb30bcdb4bbf94450782dbf1f9ab7a6a740ecfb7a5553cef7aa.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Background Note Nepal",
+ "cover_version": "1.0",
+ "cover_date": "August 2018",
+ "pdf_sha256": "c3396058911242bc16aee5cd1f07decbf1a17f6de989c93c0a1641dba6d18d47",
+ "images": [
+  "3846d7cb419c9ba3742031d6044300a03c05a923c8d30cfe73c4021f95c3bcab.png",
+  "ed31fba9a522bdb30bcdb4bbf94450782dbf1f9ab7a6a740ecfb7a5553cef7aa.jpg"
+ ]
+}

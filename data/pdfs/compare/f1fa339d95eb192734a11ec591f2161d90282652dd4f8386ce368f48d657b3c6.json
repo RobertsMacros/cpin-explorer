@@ -1,0 +1,536 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "china/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
+ "pdf_sha256": "f1fa339d95eb192734a11ec591f2161d90282652dd4f8386ce368f48d657b3c6",
+ "body_sha256": "60623da3e87b08d789bef6cb2f6e6d63143171f2583f537d84ac3679bd62fb58",
+ "words": {
+  "web": 17885,
+  "pdf": 17942
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 7,
+   "pdf_words": 6,
+   "share": 0.000363,
+   "passages": 1,
+   "sizes": {
+    "word": 5,
+    "passage": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 7,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 5,
+    "pdf_words": 9
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 34
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   }
+  },
+  "kinds": {
+   "back to contents": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 6,
+    "web_words": 5,
+    "pdf_words": 9
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "table cell": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 5
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 34
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "April 2025",
+   "pdf": "4.0",
+   "pdf_date": "April 2025"
+  },
+  "section_updated": {
+   "web": [
+    "7 April 2025"
+   ],
+   "pdf": [
+    "7 April 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 165,
+   "pdf": 165,
+   "pdf_raw": 165,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 63,
+   "pdf": 40
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 4,
+   "cannot_tell": 3,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "for further information),",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Unofficial primary elections 2020 and resulting criminal trials,",
+   "after": "followed by smaller peaks between July and October",
+   "before_pdf": "Unofficial primary elections 2020 and resulting criminal trials",
+   "where": {
+    "heading": "prosecution",
+    "paragraph": "8.2.4",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Law",
+   "pdf": "legislation",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "7.6 Retrospective application of the National Security",
+   "after": "7.6.1 Reuters noted that: ‘The [NSL]",
+   "before_pdf": "rights.’\n7.6 Retrospective application of national security",
+   "where": {
+    "heading": "retrospective",
+    "paragraph": "7.5.11",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Not applicable",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "June 2024\nAugust - 10 individuals\n31\nJuly 2024",
+   "after": "0\nTotal\n291\n8.1.13 ChinaFile published",
+   "before_pdf": "June 2024\nAugust - 10 individuals\n31\nJuly 2024 -",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.12",
+    "section": "Country information",
+    "page": 23
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Not applicable",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "2024\nSeptember 2023 – 2 individuals\n6\nJuly 2024",
+   "after": "0\nTotal\n150\n8.2.6 The HRW",
+   "before_pdf": "charged\nTotal Number of individuals charged\nJuly 2024 -",
+   "where": {
+    "heading": "prosecution",
+    "paragraph": "8.2.5",
+    "section": "Country information",
+    "page": 27
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Police",
+   "pdf": "Policy",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "comment on this note, please email the Country",
+   "after": "and Information Team.\nIndependent Advisory Group on Country",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "10.2.4",
+    "section": "Version control and feedback",
+    "page": 46
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "the",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "of fundamental rights.’\n7.6 Retrospective application of",
+   "after": "National Security Law\n7.6.1 Reuters noted",
+   "where": {
+    "heading": "retrospective",
+    "paragraph": "7.5.11",
+    "section": "Country information",
+    "page": 20
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Year\nMonth with the highest number of individuals charged\nTotal Number of individuals charged",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "2023 – June 2024\nSeptember 2023 – 2 individuals\n6",
+   "after": "July 2024\nNot applicable\n0\nTotal\n150\n8.",
+   "where": {
+    "heading": "prosecution",
+    "paragraph": "8.2.5",
+    "section": "Country information",
+    "page": 26
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Official – sensitive: Not for disclosure – Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use only.\nOfficial – sensitive: Not for disclosure – End of section",
+   "web_words": 0,
+   "pdf_words": 34,
+   "before": "Humanitarian Protection and the instruction on Restricted Leave.",
+   "after": "2. Convention reason(s)\n2.1.1 Actual",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.16",
+   "pdf": "3.1.6",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "rule of law is ‘profoundly compromised’ (see Judiciary).",
+   "after": "Since the implementation NSL activists, journalists, and former",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.16",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "7.2.3The",
+   "pdf": "7.2.3 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "fast-tracked through parliament in under 2 weeks.",
+   "after": "Safeguarding National Security Ordinance (SNSO) also referred to",
+   "before_pdf": "tracked through parliament in under 2 weeks 15.",
+   "where": {
+    "heading": "security-ordinance",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Back to Contents",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "2.12 See also The National Security Law",
+   "after": "7.3 Law enforcement powers\n7.3.1",
+   "where": {
+    "heading": "law-enforcement-powers",
+    "paragraph": "7.2.12",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.3.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "society groups or political parties disbanding or dissolving.”’",
+   "after": "See also Arrests of activists\n10. Political rights",
+   "where": {
+    "heading": "pro-democracy-groups",
+    "paragraph": "9.3.6",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.4",
+   "pdf": "8.1.14",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "about the progress of the case was available.",
+   "after": "HKFP in its 1 March 2025 Explainer noted",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.5",
+   "pdf": "8.1.15",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "former chairs Wu Chi-wai and Albert Ho.’",
+   "after": "The 2025 DFAT Thematic report noted that:\nNational",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.5",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.6",
+   "pdf": "8.1.16",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "red lines’ regarding what was considered “politically sensitive”.’",
+   "after": "For information on pro-democracy news media executive",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.6",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.1.7",
+   "pdf": "8.1.17",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Lai see Press freedom and arrests of journalists.",
+   "after": "See also Prosecutions and Political rights\n8.2",
+   "before_pdf": "Lai see Press freedom and arrests of journalists",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.7",
+    "section": "Country information",
+    "page": 25
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "15.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "fast-tracked through parliament in under 2 weeks.",
+   "after": "7.2.3The Safeguarding National Security Ordinance (SNSO)",
+   "before_pdf": "fast-tracked through parliament in under 2 weeks",
+   "where": {
+    "heading": "security-ordinance",
+    "paragraph": "7.2.3",
+    "section": "Country information",
+    "page": 12
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "78",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "31\nJuly 2024\nNot applicable\n0\nTotal\n291",
+   "after": "8.1.13 ChinaFile published details of all",
+   "before_pdf": "10 individuals\n31\nJuly 2024 -\n0\nTotal\n291",
+   "where": {
+    "heading": "arrests-activists",
+    "paragraph": "8.1.13",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "87",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "6\nJuly 2024\nNot applicable\n0\nTotal\n150",
+   "after": "8.2.6 The HRW World Report 2025",
+   "before_pdf": "of individuals charged\nJuly 2024 -\n0\nTotal\n150",
+   "where": {
+    "heading": "prosecution",
+    "paragraph": "8.2.6",
+    "section": "Country information",
+    "page": 27
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 158,
+  "different": {
+   "3.16": "3.1.6"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 1,
+  "repeated": [
+   "8.1.4",
+   "8.1.5",
+   "8.1.6",
+   "8.1.7"
+  ],
+  "unconfirmed": []
+ }
+}

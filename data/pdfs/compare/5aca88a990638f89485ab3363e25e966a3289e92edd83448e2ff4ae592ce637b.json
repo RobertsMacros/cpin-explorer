@@ -1,0 +1,601 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "colombia/country-policy-and-information-note-armed-groups-and-criminal-gangs-colombia-march-2026-accessible",
+ "pdf_sha256": "5aca88a990638f89485ab3363e25e966a3289e92edd83448e2ff4ae592ce637b",
+ "body_sha256": "be0dd5f4b636ec3f34a8bc7f592b4291fd641421b337e1265371a311dfa4d0b4",
+ "words": {
+  "web": 54139,
+  "pdf": 54012
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2,
+   "share": 3.7e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 18,
+    "pdf_words": 18
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 109,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 1,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "list marker": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 18,
+    "pdf_words": 18
+   },
+   "picture in words": {
+    "differences": 2,
+    "web_words": 109,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 4,
+   "pdf_words": 6
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "March 2026",
+   "pdf": "2.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "6 March 2026"
+   ],
+   "pdf": [
+    "6 March 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 449,
+   "pdf": 449,
+   "pdf_raw": 449,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 4
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 73,
+   "pdf": 71
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "gangs",
+   "pdf": "groups",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "aliases for this group.\n9.4 Other armed",
+   "after": "9.4.1 GIGA’s November 2023 report",
+   "where": {
+    "heading": "other-armed-gangs",
+    "paragraph": "9.3.13",
+    "section": "Country information",
+    "page": 46
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "10.1 Ten",
+   "pdf": "10.1 Tren",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of aliases for these groups.\n10. Criminal gangs",
+   "after": "de Aragua\n10.1.1 On 13 December",
+   "where": {
+    "heading": "ten-de-aragua",
+    "paragraph": "9.4.12",
+    "section": "Country information",
+    "page": 48
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Seven armed conflicts in Colombia in 2022, according to ICRC:\nColombian State VS National Liberation Army (ELN)\nColombian State VS Gaitanistas Self-Defense Forces of Colombia (AGC)\nColombian State VS FARC‐EP non‐signatories of the Peace Accord\nELN VS AGC\nFARC‐EP non‐signatories of the Peace Accord VS ELN\nFARC‐EP non‐signatories of the Peace Accord VS Segunda Marquetalia (Dissidences of the FARC‐EP)\nFARC‐EP non‐signatories of the Peace Accord VS Comandos de la Frontera – Bolivarian Army\nSource: ICRC / Report “Colombia: Retos Humanitarios 2023”.",
+   "pdf": "",
+   "web_words": 89,
+   "pdf_words": 0,
+   "before": "according to the ICRC, into the following table:",
+   "after": "8.1.7 The information available regarding the",
+   "where": {
+    "heading": "overview-armed-groups",
+    "paragraph": "8.1.6",
+    "section": "Country information",
+    "page": 18
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\nCivilians\nSecurity Forces\nTotal\n2017\n42\n17\n59\n2018\n94\n85\n179\n2019\n68\n49\n117\n2020\n112\n64\n176\n2021\n98\n59\n157\n2022\n90\n49\n139\n2023*\n44\n31\n75\nSource: OACP AICMA. Data from January 2017 to August 2023.",
+   "pdf": "",
+   "web_words": 20,
+   "pdf_words": 0,
+   "before": "58.7% civilians, 41.3% Armed Forces members].",
+   "after": "In 9 (39.1%)... departments [of 22 where",
+   "where": {
+    "heading": "overview-activities",
+    "paragraph": "8.3.16",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.13",
+   "pdf": "12.9.14",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "be ‘military targets’ and threatened them with death.",
+   "after": "See Group oppositionists for information about ‘military objectives’.",
+   "where": {
+    "heading": "d-lgbti-community",
+    "paragraph": "12.3.13",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.14",
+   "pdf": "12.9.15",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "See Group oppositionists for information about ‘military objectives’.",
+   "after": "The OHCHR’s 14 February 2024 report stated: ‘... [",
+   "where": {
+    "heading": "d-lgbti-community",
+    "paragraph": "12.3.14",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "9.3.1On",
+   "pdf": "9.3.1 On",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "National Liberation Army (Ejército de Liberación Nacional - ELN)",
+   "after": "29 August 2013, BBC News published an article",
+   "where": {
+    "heading": "ELN",
+    "paragraph": "9.3.1",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.2.8",
+   "pdf": "9.2.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "FARC) dissidents\na. Background – FARC and splinter groups",
+   "after": "On 23 November 2023, InSight Crime published an",
+   "where": {
+    "heading": "a-background--farc-and-splinter-groups",
+    "paragraph": "9.2.8",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.8",
+   "pdf": "10.2.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "control the island, which includes communes 1–5 ...’",
+   "after": "Al Jazeera’s 26 December 2022 article stated: ‘... [",
+   "where": {
+    "heading": "other-criminal-gangs",
+    "paragraph": "10.2.8",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.2.9",
+   "pdf": "10.2.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "000 gang members, mainly youth from tough backgrounds...’",
+   "after": "See also Annex A: Quick reference guide for",
+   "where": {
+    "heading": "other-criminal-gangs",
+    "paragraph": "10.2.9",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.10",
+   "pdf": "12.2.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "northeast, with 45) and Antioquia (northwest, with 44).’",
+   "after": "On 9 November 2023, Amnesty International published a",
+   "where": {
+    "heading": "human-rights",
+    "paragraph": "12.2.10",
+    "section": "Country information",
+    "page": 64
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.11",
+   "pdf": "12.2.12",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in common: homicidal violence increased compared to 2021.’",
+   "after": "The same source stated:\nCREDHOS [The Regional Corporation",
+   "where": {
+    "heading": "human-rights",
+    "paragraph": "12.2.11",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.12",
+   "pdf": "12.2.13",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Black, Afro-descendant, Raizal, Palenquero and campesino leaders.’",
+   "after": "The HRW 2024 World Report stated: ‘More than",
+   "where": {
+    "heading": "human-rights",
+    "paragraph": "12.2.12",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.2.13",
+   "pdf": "12.2.14",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "between January and the end of November 2023.’",
+   "after": "The OHCHR’s 14 February 2024 report stated:",
+   "where": {
+    "heading": "human-rights",
+    "paragraph": "12.2.13",
+    "section": "Country information",
+    "page": 65
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.",
+   "pdf": "12.9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "groups, see Recruitment of children.\nd. LGBTI community",
+   "after": "11 On 3 February 2022, The Guardian published",
+   "where": {
+    "heading": "d-lgbti-community",
+    "paragraph": "12.3.11",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.",
+   "pdf": "12.9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "as the people it picked up never returned.’",
+   "after": "12 The IRB August 2023 response stated: ‘The",
+   "where": {
+    "heading": "d-lgbti-community",
+    "paragraph": "12.3.12",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.3.",
+   "pdf": "12.9.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Directorate within the time constraints of this Response.’",
+   "after": "13 Originally in Spanish and citing a regional",
+   "where": {
+    "heading": "d-lgbti-community",
+    "paragraph": "12.3.13",
+    "section": "Country information",
+    "page": 78
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.5",
+   "pdf": "13.1.15",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "convene the group irregularly, despite the legal requirements.",
+   "after": "The USSD 2024 Trafficking in Persons report stated: ‘",
+   "where": {
+    "heading": "policies",
+    "paragraph": "13.1.5",
+    "section": "Country information",
+    "page": 82
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.6",
+   "pdf": "13.1.16",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "illegal armed groups are forms of human trafficking.’",
+   "after": "The UN Verification Mission in Colombia’s March",
+   "where": {
+    "heading": "policies",
+    "paragraph": "13.1.6",
+    "section": "Country information",
+    "page": 82
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.7",
+   "pdf": "13.1.17",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "policy, southern Bolívar-Magdalena Medio and northern Cauca.’",
+   "after": "The UN Verification Mission in Colombia’s December",
+   "where": {
+    "heading": "policies",
+    "paragraph": "13.1.7",
+    "section": "Country information",
+    "page": 83
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.5.27",
+   "pdf": "13.5.24",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "who in 2023 demobilized between January and October.’",
+   "after": "ICG’s February 2023 report stated:\nWhile this",
+   "where": {
+    "heading": "effectiveness-state-protection",
+    "paragraph": "13.5.27",
+    "section": "Country information",
+    "page": 94
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a. (",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "or serious harm in that area, only when:",
+   "after": "i) they are considered by the group or",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.2",
+    "section": "Assessment",
+    "page": 2
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "b.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "hinder the group’s activities or interests, and",
+   "after": "the size and/or presence of the group",
+   "where": {
+    "heading": "risk",
+    "paragraph": "3.1.2",
+    "section": "Assessment",
+    "page": 2
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "by groups or gangs",
+   "pdf": "for armed group/criminal gang aliases",
+   "web_words": 4,
+   "pdf_words": 6,
+   "before": "monitored by authorities”.’\nAnnex A: Quick reference guide",
+   "after": "Main group/gang name (in English unless English",
+   "where": {
+    "heading": "AnnexA",
+    "paragraph": "14.3.5",
+    "section": "Annex A: Quick reference guide by groups or gangs",
+    "page": 108
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 426,
+  "different": {
+   "10.2.9": "10.2.10",
+   "12.2.11": "12.2.12",
+   "12.2.12": "12.2.13",
+   "12.2.13": "12.2.14",
+   "12.3.12": "12.9.12",
+   "12.3.14": "12.9.15",
+   "13.5.27": "13.5.24"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "9.2.8",
+   "10.2.8",
+   "12.2.10",
+   "12.3.11",
+   "12.3.13",
+   "13.1.5",
+   "13.1.6",
+   "13.1.7"
+  ],
+  "unconfirmed": []
+ }
+}

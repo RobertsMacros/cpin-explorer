@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 40,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 46,
+ "paragraphs": 282,
+ "list_items": 46,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 66,
+ "bookmarks": 42,
+ "warnings": [
+  "page 5: bookmark not found in the text: 'Assessment'"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Somalia: Majority clans and minority groups in south and central Somalia",
+ "cover_version": "3.0",
+ "cover_date": "January 2019",
+ "pdf_sha256": "c7e5ac44e5ce0d42c87647a545125dd3e7524e11f084bba8aeba626f48d23d9d",
+ "images": []
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-women-fearing-honour-based-violence-iran-may-2022-accessible",
+ "pdf_sha256": "df5359c5680f5247917243de00e175f9fb822aeeef47a6f36909a7c73cad448d",
+ "body_sha256": "598e1fcc8b62ff08f08b0a25448fdebc854b37d18d760e2f605194ef928c39fc",
+ "figures": [
+  {
+   "image": "b8e96933888e1d9247daeaefe090f3c562fa5ff47393b9bca1b7aaef8aab1f74.png",
+   "tag": "p",
+   "index": 123,
+   "key": "onwednesday5july2023thesharghdailyreportedthatduringthepastt",
+   "page": 18
+  },
+  {
+   "image": "b0a2fb702f95d11023b89608c9016f5478b09168688fe85189d9bc18f9d5ae04.png",
+   "tag": "p",
+   "index": 158,
+   "key": "abreakdownofthe133familymurdercasesin2024alsoshowsthat51ofth",
+   "page": 23
+  }
+ ],
+ "unplaced": 0,
+ "pdf_figures": 2,
+ "web_figures": 0,
+ "left_in_pdf": {}
+}

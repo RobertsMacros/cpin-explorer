@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 36,
+ "paragraphs": 131,
+ "list_items": 9,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 49,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Afghanistan: Sexual orientation and gender identity",
+ "cover_version": "2.0",
+ "cover_date": "January 2017",
+ "pdf_sha256": "a3e6eeadcbd8dc760866e6cd67a6c6dcaf6f86fbdf4a90ee85d63baca45d2108",
+ "images": []
+}

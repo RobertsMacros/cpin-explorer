@@ -1,0 +1,362 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "namibia/country-policy-and-information-note-women-fearing-gender-based-violence-namibia-december-2025-accessible",
+ "pdf_sha256": "b0ae161c07bab59a15515366d9435b60c907b64257bd003a301680cd6167bc24",
+ "body_sha256": "1c0ad2f91dfaa3c4213639c63d7ccf12e4da005daa7d93038ee751cc4633b8c9",
+ "words": {
+  "web": 23379,
+  "pdf": 23294
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 2,
+   "pdf_words": 2,
+   "share": 8.6e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 124,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "table for a picture": {
+    "differences": 1,
+    "web_words": 124,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 33
+   }
+  },
+  "ours": {
+   "differences": 6,
+   "web_words": 11,
+   "pdf_words": 2
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 11
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "December 2025",
+   "pdf": "2.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [
+    "18 December 2025"
+   ],
+   "pdf": [
+    "18 December 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 3,
+   "web_notices": 2,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 209,
+   "pdf": 207,
+   "pdf_raw": 209,
+   "differ": false
+  },
+  "pictures": {
+   "web": 6,
+   "pdf": 6
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 102,
+   "pdf": 57
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "supporting",
+   "pdf": "support",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "below.\n10.3 Policies to promote, protect and",
+   "after": "women and girls\n10.3.1 The UN",
+   "where": {
+    "heading": "policies",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "judge.",
+   "pdf": "judges).",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and a Supreme Court (both presided over by",
+   "after": "The High Court, among other things, hears and",
+   "where": {
+    "heading": "structure",
+    "paragraph": "15.1.1",
+    "section": "Country information",
+    "page": 45
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Region\nTotal\nMale\nFemale\nNamibia\n87.3\n87.5\n87.1\nUrban\n93.8\n94.0\n93.7\nRural\n79.6\n80.2\n79.1\nKharas\n95.6\n95.6\n95.6\nErongo\n95.4\n89.7\n91.2\nHardap\n90.5\n85.6\n79.2\nKavango East\n82.0\n80.5\n75.6\nKavango West\n77.9\n95.3\n96.3\nKhomas\n95.8\n65.5\n62.2\nKunene\n63.9\n84.8\n77.2\nOhangwena\n84.6\n76.0\n83.6\nOmaheke\n76.0\n84.1\n92.0\nOmusati\n84.1\n84.8\n86.1\nOshana\n92.0\n92.0\n92.0\nOshikoto\n85.2\n85.2\n86.1\nOtjozondjupa\n83.0\n84.1\n84.1\nZambezi\n83.3\n85.2\n81.6",
+   "pdf": "",
+   "web_words": 124,
+   "pdf_words": 0,
+   "before": "15 years and above by area and sex.",
+   "after": "7.1.9 Approximately 51% - about 1.55",
+   "before_pdf": "15 years and above by area and sex",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.8",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Official – sensitive: Not for disclosure – Start of section\nThe information in this section has been removed as it is restricted for internal Home Office use.\nOfficial – sensitive: Not for disclosure – End of section",
+   "web_words": 0,
+   "pdf_words": 33,
+   "before": "Humanitarian Protection and the instruction on Restricted Leave.",
+   "after": "2. Convention reason(s)\n2.1.1 Women",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": "1.2.3",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "18.1.7The",
+   "pdf": "18.1.7 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "gravel, and earth tracks, has also seen improvement.’",
+   "after": "following sources provide useful information about settlement patterns,",
+   "where": {
+    "heading": "internal",
+    "paragraph": "18.1.7",
+    "section": "Country information",
+    "page": 53
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "FH, Freedom in the World 2024 (Namibia), 29 February 2024",
+   "pdf": "175",
+   "web_words": 10,
+   "pdf_words": 1,
+   "before": "FH, Freedom in the World 2025 (Namibia), 2025",
+   "after": "USSSD, 2025 Investment ... (Legal System and Judicial Independence),",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "18.1.7",
+    "section": "Version control and feedback",
+    "page": 46
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Institute",
+   "pdf": "Institute40",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "legislation\n9.3.1 The Namibia Legal Information",
+   "after": "list on their webpages legislation that protects women",
+   "where": {
+    "heading": "gender-specific-legislation",
+    "paragraph": "9.3.1",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "3",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "main regional towns, main transport routes and airports:",
+   "after": "7.1.4 The map below shows regions",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.4",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "169",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "district courts and 35 periodical courts across Namibia ...’",
+   "after": "15.2 Independence and fair trial\n15.2.",
+   "where": {
+    "heading": "fair-trial",
+    "paragraph": "15.1.4",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "174",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "candidates for a High Court judgeship in December.’",
+   "after": "15.2.3 The USSD’s 2025 Investment",
+   "where": {
+    "heading": "fair-trial",
+    "paragraph": "15.2.3",
+    "section": "Country information",
+    "page": 46
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "175",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "a backlog of cases across the judicial spectrum ...’",
+   "after": "15.3 Gender specific assistance\n15.3.1",
+   "where": {
+    "heading": "gender-specific-assistance",
+    "paragraph": "15.2.3",
+    "section": "Country information",
+    "page": 46
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 244,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

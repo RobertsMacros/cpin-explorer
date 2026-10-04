@@ -1,0 +1,376 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "india/country-policy-and-information-note-medical-and-healthcare-provision-india-april-2023-accessible",
+ "pdf_sha256": "7fb5480c006ccbd7892dabb426419cb6aa0c8802243913f7e4ea1b9b53e3dc1b",
+ "body_sha256": "e689d53537b2760e2124f9c34fe50eb76803d40ccdf677f060d871e23d13b577",
+ "words": {
+  "web": 26234,
+  "pdf": 26229
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 11,
+   "web_words": 12,
+   "pdf_words": 7
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "April 2023",
+   "pdf": "2.0",
+   "pdf_date": "April 2023"
+  },
+  "section_updated": {
+   "web": [
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "17 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023"
+   ],
+   "pdf": [
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "17 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023",
+    "26 April 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 2,
+   "pdf": 2,
+   "web_notices": 2,
+   "pdf_notices": 2
+  },
+  "footnotes": {
+   "web": 187,
+   "pdf": 187,
+   "pdf_raw": 187,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 7,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 66,
+   "pdf": 68
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Parents, Anvayaa,",
+   "pdf": "Parents115, Anvayaa116,",
+   "web_words": 2,
+   "pdf_words": 2,
+   "before": "care for elderly persons, such as Care 4",
+   "after": "and CAF India.\nSection 11 updated: 17 April",
+   "where": {
+    "heading": "medical-care",
+    "paragraph": "10.3.3",
+    "section": "10. Geriatric care",
+    "page": 41
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Medicines.",
+   "pdf": "Medicines31.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and Family Welfare (2022) National List of Essential",
+   "after": "1.12 National and state publicly-financed health",
+   "where": {
+    "heading": "accessibility-of-drugs-and-medication",
+    "paragraph": "1.11.4",
+    "section": "1. Healthcare system",
+    "page": 14
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "centres.",
+   "pdf": "centres68.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "MOHFW) website provided a list of regional cancer",
+   "after": "3.5.4 See also Rural/urban facilities.",
+   "where": {
+    "heading": "state-and-ngo-support-in-accessing-treatment",
+    "paragraph": "3.5.3",
+    "section": "3. Cancer (oncology)",
+    "page": 32
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Hospitals.",
+   "pdf": "Hospitals71.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "private hospitals in the main cities, see Apollo",
+   "after": "Section 5 updated: 26 April 2023\n5. Dental",
+   "before_pdf": "private hospitals in the main\ncities, see Apollo",
+   "where": {
+    "heading": "heart-disease-and-failure",
+    "paragraph": "4.2.2",
+    "section": "4. Cardiology (heart conditions)",
+    "page": 34
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "India.",
+   "pdf": "India117.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "such as Care 4 Parents, Anvayaa, and CAF",
+   "after": "Section 11 updated: 17 April 2023\n11. Haematology",
+   "before_pdf": "such as Care 4 Parents115, Anvayaa116, and CAF",
+   "where": {
+    "heading": "medical-care",
+    "paragraph": "10.3.3",
+    "section": "10. Geriatric care",
+    "page": 41
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Care.",
+   "pdf": "Care177.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of the International Association for Hospice and Palliative",
+   "after": "Section 22 updated: 26 April 2023\n22. Speech,",
+   "where": {
+    "heading": "palliative-care",
+    "paragraph": "21.1.5",
+    "section": "21. Palliative care",
+    "page": 62
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Impact of Covid-19\nSpecific diseases/conditions:\nCancer",
+   "after": "Prevalence and types\no National programme for control",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "23.1.8",
+    "section": "Terms of reference",
+    "page": 67
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Specific diseases/conditions:\nCancer\no Prevalence and types",
+   "after": "National programme for control and treatment\no Available",
+   "before_pdf": "19\nSpecific diseases/conditions:\nCancer\nPrevalence and types",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "23.1.8",
+    "section": "Terms of reference",
+    "page": 67
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "types\no National programme for control and treatment",
+   "after": "Available treatment: facilities, personnel and location\no Accessibility:",
+   "before_pdf": "and types\nNational programme for control and treatment",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "23.1.8",
+    "section": "Terms of reference",
+    "page": 67
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "treatment\no Available treatment: facilities, personnel and location",
+   "after": "Accessibility: cost of treatment and other factors affecting",
+   "before_pdf": "and treatment\nAvailable treatment: facilities, personnel and location",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "23.1.8",
+    "section": "Terms of reference",
+    "page": 67
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "o",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "access, such as location of particular treatment centres",
+   "after": "Support in obtaining treatment from state, private or",
+   "where": {
+    "heading": "terms-of-reference",
+    "paragraph": "23.1.8",
+    "section": "Terms of reference",
+    "page": 67
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 190,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

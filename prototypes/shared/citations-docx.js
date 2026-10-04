@@ -3,7 +3,9 @@
 // lettering, Geist and Geist Pixel embedded), in two forms from the same family:
 //
 //   full        header block, contents, then country → note → highlight: each highlight a card with
-//               its quote, citation, the sources it cites, the private note and any staleness warning
+//               its quote, citation, the sources it cites, the private note and any staleness warning.
+//               A quote read from a PDF (a note with no web version) is marked "From the PDF", and the
+//               header says of how many that is so: only the others are called verbatim
 //   citations   header block, contents, then country → note → a numbered list of citations
 //
 // Structure is Word's own: Heading 1 = country, Heading 2 = note, Heading 3 = highlight (full export),
@@ -21,7 +23,7 @@
 //
 // Citations come from formatCitation (citation.js) and are not rewritten: its HTML (<i>, <a>) is turned
 // into Word runs, so the .docx says exactly what "Copy citation" copies.
-import { capFirst, cleanQuote, formatCitation, formatPinpoint, longDate, monthLabel, STYLE_NAMES } from "./citation.js";
+import { capFirst, citedMonth, formatCitation, formatPinpoint, longDate, quoteOf, sourceOf, STYLE_NAMES } from "./citation.js";
 import { citeContext, groupHighlights } from "./highlights.js";
 
 export const APP_NAME = "CPIN Explorer";
@@ -146,12 +148,21 @@ export async function buildCitationsDocx(docx, records, {
       const heading = capFirst(n.topic || info(g.country, n.note).topic || n.title || "Note");
       return {
         ...n, heading, anchor: bookmark(g.countryName, n.topic || n.title),
-        items: n.items.map((r) => ({ r, head: highlightHeading(r), anchor: bookmark(g.countryName, r.para ? `para ${r.para}` : "passage", n.topic) })),
+        items: n.items.map((r) => {
+          const cited = citeContext(r, { accessed });                      // the edition its citation names
+          return { r, cited, fromPdf: sourceOf(cited) === "pdf", head: highlightHeading(r), anchor: bookmark(g.countryName, r.para ? `para ${r.para}` : "passage", n.topic) };
+        }),
       };
     }),
   }));
   const items = outline.flatMap((g) => g.notes.flatMap((n) => n.items));
   const nNotes = outline.reduce((k, g) => k + g.notes.length, 0);
+  // Quotes read from a PDF are this site's reading of it (the PDF's own text, the layout rebuilt): never called verbatim.
+  const nPdf = items.filter((x) => x.fromPdf).length;
+  const PDF_TAG = "From the PDF";
+  const provenance = !nPdf ? "Quotes are verbatim from the Home Office notes on GOV.UK; each link opens the note at the quoted words."
+    : nPdf === items.length ? `${items.length === 1 ? "The quote is" : "Quotes are"} this site’s reading of ${items.length === 1 ? "a note" : "notes"} the Home Office publishes as a PDF only (marked “${PDF_TAG}”): check the PDF where exact wording matters. Each link opens the PDF.`
+    : `Quotes are verbatim from the Home Office notes on GOV.UK, except ${nPdf === 1 ? "the one" : `the ${nPdf}`} marked “${PDF_TAG}”: ${nPdf === 1 ? "that is" : "those are"} this site’s reading of a note published as a PDF only, so check the PDF where exact wording matters. A link to GOV.UK opens the note at the quoted words; a link to a PDF opens the PDF.`;
 
   /* ---- run and paragraph helpers */
   const run = (text, o = {}) => new D.TextRun({ text: xmlSafe(text), ...o });
@@ -242,8 +253,8 @@ export async function buildCitationsDocx(docx, records, {
       new D.Paragraph({ style: "CpinBody", spacing: { before: 60, after: full ? 240 : 120 }, children: [
         tag(`${styleName} citations`), run("   "),
         run(full
-          ? `Accessed ${longDate(accessed)}. Quotes are verbatim from the Home Office notes on GOV.UK; each link opens the note at the quoted words.`
-          : `Accessed ${longDate(accessed)}. ${counts}. Each link opens the note at the quoted words.`, { color: C.ink2, size: 17 }),
+          ? `Accessed ${longDate(accessed)}. ${provenance}`
+          : `Accessed ${longDate(accessed)}. ${counts}. ${nPdf ? `A link to GOV.UK opens the note at the quoted words; a link to a PDF (${nPdf === items.length ? "every one here" : `marked “${PDF_TAG}”`}) opens the PDF.` : "Each link opens the note at the quoted words."}`, { color: C.ink2, size: 17 }),
       ] }),
     ];
     if (full) {
@@ -316,17 +327,26 @@ export async function buildCitationsDocx(docx, records, {
     ];
   }
 
-  /** The kind tag and edition line above a note's Heading 2. */
+  /**
+   * The kind tag and edition line above a note's Heading 2. The edition is the one the highlights under it
+   * cite (their own version and month), not the one on GOV.UK the day of the export: a passage saved from
+   * v6.0 sits under "v6.0" even once the dashboard knows v7.0. Highlights from two editions give both.
+   */
   function noteFacts(g, n) {
     const first = n.items[0].r;
     const ni = info(g.country, n.note);
     const kind = ni.kind || first.kind || "Note";
-    const version = ni.version || first.version;
-    const month = monthLabel(ni.month || first.month);
-    const when = [month?.short, version ? `v${version}` : ""].filter(Boolean).join(" · ");
+    const editions = [...new Map(n.items.map(({ cited }) => {
+      const month = citedMonth(cited)?.short || "", version = cited.version || "";
+      return [`${month}|${version}`, { month, version }];
+    })).values()];
+    const when = editions.map((e) => [e.month, e.version ? `v${e.version}` : ""].filter(Boolean).join(" · ")).filter(Boolean).join("  /  ");
+    const versions = [...new Set(editions.map((e) => e.version).filter(Boolean))];
     const gone = ni.status && ni.status !== "live";
-    const url = (gone ? ni.archive_url : ni.govuk_url) || ni.govuk_url || String(first.url || "").replace(/#.*$/, "");
-    return { kind, version, when, gone, status: ni.status, url, title: ni.title || n.title || first.title };
+    // Where the note is: for one read from a PDF, the PDF itself (its entry's GOV.UK address is the country's page).
+    const url = n.items[0].fromPdf ? String(n.items[0].cited.url || "").replace(/#.*$/, "")
+      : (gone ? ni.archive_url : ni.govuk_url) || ni.govuk_url || String(first.url || "").replace(/#.*$/, "");
+    return { kind, versions, when, gone, status: ni.status, url, title: n.items[0].cited.title || n.title || ni.title };
   }
 
   /* ---- full export: country → note → highlight cards */
@@ -336,7 +356,7 @@ export async function buildCitationsDocx(docx, records, {
       ...g.notes.flatMap((n) => {
         const f = noteFacts(g, n);
         const meta = [];
-        if (f.version) meta.push(run(`Version ${f.version}${f.gone ? (f.status === "removed" ? " · removed from GOV.UK" : " · archived copy only") : ""}`, { color: C.ink2 }));
+        if (f.versions.length) meta.push(run(`Version${f.versions.length > 1 ? "s" : ""} ${f.versions.join(" and ")}${f.gone ? (f.status === "removed" ? " · removed from GOV.UK" : " · archived copy only") : ""}`, { color: C.ink2 }));
         if (f.url) meta.push(run(meta.length ? "  ·  " : "", { color: C.ink3 }), link(f.url, [linkRun(f.url)]));
         return [
           new D.Paragraph({ spacing: { before: 360, after: 80 }, keepNext: true, children: [outlineTag(f.kind), run("  "), pixel(f.when)] }),
@@ -349,13 +369,13 @@ export async function buildCitationsDocx(docx, records, {
     ]);
   }
 
-  const citationRuns = (r) => richRuns(htmlRuns(formatCitation(citeContext(r, { accessed }), style).html));
+  const citationRuns = (cited) => richRuns(htmlRuns(formatCitation(cited, style).html));
 
   /** One highlight as a card (a one-cell table with a thin rule, like .sv-item), headed by Heading 3. */
-  function card({ r, head, anchor }) {
+  function card({ r, cited, fromPdf, head, anchor }) {
     const changed = r.check === "changed";
     const sources = r.sources || [];
-    const quote = cleanQuote(r.quote);
+    const quote = quoteOf(r);
     const kids = [
       new D.Paragraph({ heading: D.HeadingLevel.HEADING_3, children: [new D.Bookmark({ id: anchor, children: [
         tag(head.pin), ...(head.section ? [run(" — "), run(head.section)] : []),
@@ -376,8 +396,14 @@ export async function buildCitationsDocx(docx, records, {
         run(`${from} → ${to}: these words are not in the edition now on GOV.UK. ${where}`, { size: 16, color: C.ink }),
       ] }));
     }
+    if (fromPdf) {
+      kids.push(new D.Paragraph({ keepNext: true, spacing: { after: 160 }, children: [
+        outlineTag(PDF_TAG), run("  "),
+        run("The Home Office publishes this edition as a PDF only. The words are the PDF’s own text as this site reads it, the layout rebuilt: check the PDF where exact wording matters.", { size: 16, color: C.ink }),
+      ] }));
+    }
     kids.push(new D.Paragraph({ style: changed ? "CpinQuoteChanged" : "CpinQuote", children: [run(`“${quote}”`)] }));
-    kids.push(new D.Paragraph({ style: "CpinCitation", children: citationRuns(r) }));
+    kids.push(new D.Paragraph({ style: "CpinCitation", children: citationRuns(cited) }));
     if (sources.length) {
       kids.push(label(`Sources cited in this passage · ${sources.length}`, { spacing: { before: 200, after: 80 } }));
       for (const s of sources) {
@@ -418,8 +444,9 @@ export async function buildCitationsDocx(docx, records, {
             new D.Paragraph({ style: "CpinLabel", keepNext: true, indent: { left: LIST_INDENT }, spacing: { before: 140, after: 50 }, children: [
               new D.Bookmark({ id: x.anchor, children: [tag(x.head.pin), ...(x.head.section ? [run("  "), pixel(x.head.section, { size: 13 })] : [])] }),
               ...(x.r.check === "changed" ? [run("  "), outlineTag("Changed since saved", { size: 13 })] : []),
+              ...(x.fromPdf ? [run("  "), outlineTag(PDF_TAG, { size: 13 })] : []),
             ] }),
-            new D.Paragraph({ style: "CpinListCitation", numbering: { reference: "cpin-citations", level: 0 }, children: citationRuns(x.r) }),
+            new D.Paragraph({ style: "CpinListCitation", numbering: { reference: "cpin-citations", level: 0 }, children: citationRuns(x.cited) }),
           ]),
         ];
       }),

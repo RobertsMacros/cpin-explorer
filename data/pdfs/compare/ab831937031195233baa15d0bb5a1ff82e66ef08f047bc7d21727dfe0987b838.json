@@ -1,0 +1,339 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "somalia/country-policy-and-information-note-mogadishu-al-shabab-and-the-security-situation-somalia-july-2025-accessible",
+ "pdf_sha256": "ab831937031195233baa15d0bb5a1ff82e66ef08f047bc7d21727dfe0987b838",
+ "body_sha256": "cd7ed3f0c565fb3e4b42dab59afd68da590e6b8ed3acf8cd1bffba9e3c0339a6",
+ "words": {
+  "web": 16456,
+  "pdf": 16397
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 4,
+   "pdf_words": 1,
+   "share": 0.000152,
+   "passages": 1,
+   "sizes": {
+    "word": 1,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 2,
+    "web_words": 46,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "picture in words": {
+    "differences": 2,
+    "web_words": 46,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 0,
+   "pdf_words": 7
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "June 2025",
+   "pdf": "2.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "30 June 2025"
+   ],
+   "pdf": [
+    "30 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 100,
+   "pdf": 100,
+   "pdf_raw": 100,
+   "differ": false
+  },
+  "pictures": {
+   "web": 17,
+   "pdf": 17
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 48,
+   "pdf": 44
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Number of reported fatalities",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "ACLED) in 2024, including an inset for Mogadishu:",
+   "after": "12.2.11 ACCORD also produced a table",
+   "where": {
+    "heading": "number-of-reported-fatalities",
+    "paragraph": "12.2.10",
+    "section": "12. Conflict and violence",
+    "page": 35
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "NOTE:",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "of Mogadishu, see OpenStreetMap, Mapcarta, and Satellites.pro.",
+   "after": "The maps in this section are not intended",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.4",
+    "section": "7. Geography",
+    "page": 14
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Conflict incidents by category\nCategory\nNumber of incidents\nNumber of incidents with at least one fatality\nNumber of fatalities\nBattles\n1780\n616\n3917\nExplosions/remote violence\n672\n267\n1295\nStrategic developments\n461\n5\n16\nViolence against civilians\n351\n229\n329\nProtests\n152\n4\n10\nRiots\n24\n3\n3\nTotal\n3440\n1124\n5570\nDevelopment of conflict incidents from 2015 to 2024",
+   "pdf": "83",
+   "web_words": 37,
+   "pdf_words": 0,
+   "before": "from 2015 to 2024 based on ACLED data:",
+   "after": "12.2.12 UN SG report 2025 noted :",
+   "where": {
+    "heading": "conflict-incidents-by-category",
+    "paragraph": "12.2.11",
+    "section": "12. Conflict and violence",
+    "page": 35
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Number of reported images with at least one fatality",
+   "pdf": "",
+   "web_words": 9,
+   "pdf_words": 0,
+   "before": "across Somalia, including an inset for Banadir (Mogadishu) :",
+   "after": "12.2.10 ACCORD also produced a map",
+   "where": {
+    "heading": "number-of-reported-images-with-at-least-one-fatality",
+    "paragraph": "12.2.9",
+    "section": "12. Conflict and violence",
+    "page": 35
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "12.4.4",
+    "section": "Version control and feedback",
+    "page": 49
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Research methodology 44\nTerms of Reference 45",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "Version: 2.0\nJune 2025",
+   "after": "Executive summary\nSomalia continues to experience armed conflict",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 2
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "60",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "different armed actors as of 31 March 2025:",
+   "after": "11.1.6 The ISW in an Africa",
+   "where": {
+    "heading": "Areas_controlled",
+    "paragraph": "11.1.6",
+    "section": "11. Areas controlled by armed actors",
+    "page": 27
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "61",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "showing al Shabab gains since 1 January 2025:",
+   "after": "11.1.7 An ISW article of 17",
+   "where": {
+    "heading": "Areas_controlled",
+    "paragraph": "11.1.7",
+    "section": "11. Areas controlled by armed actors",
+    "page": 28
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "93",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "bomb\n4\nAbduction/forced disappearance\n1\nTotal\n325",
+   "after": "12.3.6 ACLED’s explorer tool created",
+   "where": {
+    "heading": "Security_incidents",
+    "paragraph": "12.3.6",
+    "section": "12. Conflict and violence",
+    "page": 40
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "100",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "and 31 May 2025 in the chart below:",
+   "after": "Research methodology\nThe country of origin information (COI)",
+   "where": {
+    "heading": "Research_methodology",
+    "paragraph": "12.4.4",
+    "section": "Research methodology",
+    "page": 42
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 154,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

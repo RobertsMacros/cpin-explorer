@@ -1,0 +1,128 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 106,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 201,
+ "paragraphs": 841,
+ "list_items": 149,
+ "tables": 0,
+ "figures": 14,
+ "footnotes": 1,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 1"
+ ],
+ "figure_pages": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 2,
+  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": 6,
+  "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": 15,
+  "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg": 23,
+  "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg": 24,
+  "12d96b6d74d44e45021f34ef0abb4ef4462d1eaf783981103cf2e594fa473c7e.jpg": 24,
+  "18fcfa3c51f4401615cea637bd4e862b1ced5cb758ec44ef397917405c7b0246.jpg": 25,
+  "1efaeeda83bb6cd958f4cd4cea60145989d6da9e32571da2dc3b1cffefe7d78a.jpg": 81,
+  "ab8a235cd7dab36bb160f539df72e885cb1a33e133c0fab5c7f70b9340122f8b.jpg": 91,
+  "62cfa93d670f3aba009aab5c1f8b0ae9a33b573c07f1604b064fbbed241702fd.jpg": 96,
+  "d2b1b07a72e077103af2cd8cd0d7d586f1a52b85af9a97920c7ed955f5e73990.jpg": 101,
+  "56088ac66c0f036b8b1303b08be4625f0309f4e5f3f0326f5c879c91c56cc75c.jpg": 101,
+  "92f0c05f339f5478da878df027e3225e35b738980bf8ee04629083cd661d5911.jpg": 102,
+  "96b9f89004011a661ca1c1b17f0d44995983e5e6dec96acbc32bf8d715af00b0.jpg": 102
+ },
+ "figure_sizes": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": [
+   246,
+   169
+  ],
+  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": [
+   922,
+   1121
+  ],
+  "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": [
+   514,
+   594
+  ],
+  "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg": [
+   842,
+   596
+  ],
+  "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg": [
+   833,
+   559
+  ],
+  "12d96b6d74d44e45021f34ef0abb4ef4462d1eaf783981103cf2e594fa473c7e.jpg": [
+   835,
+   525
+  ],
+  "18fcfa3c51f4401615cea637bd4e862b1ced5cb758ec44ef397917405c7b0246.jpg": [
+   843,
+   525
+  ],
+  "1efaeeda83bb6cd958f4cd4cea60145989d6da9e32571da2dc3b1cffefe7d78a.jpg": [
+   788,
+   1271
+  ],
+  "ab8a235cd7dab36bb160f539df72e885cb1a33e133c0fab5c7f70b9340122f8b.jpg": [
+   813,
+   1214
+  ],
+  "62cfa93d670f3aba009aab5c1f8b0ae9a33b573c07f1604b064fbbed241702fd.jpg": [
+   563,
+   709
+  ],
+  "d2b1b07a72e077103af2cd8cd0d7d586f1a52b85af9a97920c7ed955f5e73990.jpg": [
+   906,
+   584
+  ],
+  "56088ac66c0f036b8b1303b08be4625f0309f4e5f3f0326f5c879c91c56cc75c.jpg": [
+   907,
+   607
+  ],
+  "92f0c05f339f5478da878df027e3225e35b738980bf8ee04629083cd661d5911.jpg": [
+   468,
+   540
+  ],
+  "96b9f89004011a661ca1c1b17f0d44995983e5e6dec96acbc32bf8d715af00b0.jpg": [
+   468,
+   540
+  ]
+ },
+ "figure_text": {
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 0,
+  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": 1,
+  "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": 0,
+  "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg": 0,
+  "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg": 0,
+  "12d96b6d74d44e45021f34ef0abb4ef4462d1eaf783981103cf2e594fa473c7e.jpg": 0,
+  "18fcfa3c51f4401615cea637bd4e862b1ced5cb758ec44ef397917405c7b0246.jpg": 0,
+  "1efaeeda83bb6cd958f4cd4cea60145989d6da9e32571da2dc3b1cffefe7d78a.jpg": 0,
+  "ab8a235cd7dab36bb160f539df72e885cb1a33e133c0fab5c7f70b9340122f8b.jpg": 0,
+  "62cfa93d670f3aba009aab5c1f8b0ae9a33b573c07f1604b064fbbed241702fd.jpg": 0,
+  "d2b1b07a72e077103af2cd8cd0d7d586f1a52b85af9a97920c7ed955f5e73990.jpg": 0,
+  "56088ac66c0f036b8b1303b08be4625f0309f4e5f3f0326f5c879c91c56cc75c.jpg": 0,
+  "92f0c05f339f5478da878df027e3225e35b738980bf8ee04629083cd661d5911.jpg": 0,
+  "96b9f89004011a661ca1c1b17f0d44995983e5e6dec96acbc32bf8d715af00b0.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a Home Office Fact- Finding Mission Sri Lanka: treatment of Tamils and people who have a real or perceived association with the former Liberation Tigers of Tamil Eelam (LTTE)",
+ "cover_version": null,
+ "cover_date": "23 July 2016",
+ "pdf_sha256": "2e43e9fe023398443c7f67cc229fb9a52b76d2c0bc20af808e865eb46a20650a",
+ "images": [
+  "12d96b6d74d44e45021f34ef0abb4ef4462d1eaf783981103cf2e594fa473c7e.jpg",
+  "18fcfa3c51f4401615cea637bd4e862b1ced5cb758ec44ef397917405c7b0246.jpg",
+  "1efaeeda83bb6cd958f4cd4cea60145989d6da9e32571da2dc3b1cffefe7d78a.jpg",
+  "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png",
+  "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg",
+  "56088ac66c0f036b8b1303b08be4625f0309f4e5f3f0326f5c879c91c56cc75c.jpg",
+  "62cfa93d670f3aba009aab5c1f8b0ae9a33b573c07f1604b064fbbed241702fd.jpg",
+  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg",
+  "92f0c05f339f5478da878df027e3225e35b738980bf8ee04629083cd661d5911.jpg",
+  "96b9f89004011a661ca1c1b17f0d44995983e5e6dec96acbc32bf8d715af00b0.jpg",
+  "ab8a235cd7dab36bb160f539df72e885cb1a33e133c0fab5c7f70b9340122f8b.jpg",
+  "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg",
+  "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg",
+  "d2b1b07a72e077103af2cd8cd0d7d586f1a52b85af9a97920c7ed955f5e73990.jpg"
+ ]
+}

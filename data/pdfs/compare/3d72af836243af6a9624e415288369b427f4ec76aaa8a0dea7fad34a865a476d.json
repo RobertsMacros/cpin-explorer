@@ -1,0 +1,1087 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "brazil/country-policy-and-information-note-organised-criminal-groups-brazil-march-2025-accessible",
+ "pdf_sha256": "3d72af836243af6a9624e415288369b427f4ec76aaa8a0dea7fad34a865a476d",
+ "body_sha256": "56312b793559e81f7d2f1ff964d86a14a3fb4dbcd7d1b077b2a6c425f51eae7e",
+ "words": {
+  "web": 48230,
+  "pdf": 48302
+ },
+ "summary": {
+  "wording": {
+   "differences": 19,
+   "web_words": 10,
+   "pdf_words": 115,
+   "share": 0.001295,
+   "passages": 15,
+   "sizes": {
+    "spelling": 2,
+    "passage": 15,
+    "number": 2
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 19,
+    "web_words": 10,
+    "pdf_words": 115
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 14,
+    "pdf_words": 15
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "bibliography": {
+    "differences": 2,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 0
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 16,
+    "web_words": 14,
+    "pdf_words": 15
+   },
+   "text": {
+    "differences": 15,
+    "web_words": 1,
+    "pdf_words": 109
+   }
+  },
+  "ours": {
+   "differences": 3,
+   "web_words": 128,
+   "pdf_words": 3
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 9,
+   "web_words": 0,
+   "pdf_words": 77
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "March 2025",
+   "pdf": "1.0",
+   "pdf_date": "March 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [
+    "27 March 2025"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 414,
+   "pdf": 414,
+   "pdf_raw": 414,
+   "differ": false
+  },
+  "pictures": {
+   "web": 3,
+   "pdf": 3
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 6
+  },
+  "headings": {
+   "web": 131,
+   "pdf": 81
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 12,
+   "disputes": 9
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "41. Bonde 8 de Ouro\n65. Primeiro Crime Revolucionario Catarinense\n18.",
+   "web_words": 0,
+   "pdf_words": 11,
+   "before": "RS\nSindicato do Crime\nPrimeiro Comando da Capital",
+   "after": "PCM\nBonde do Cangaco\nComando Vermelho\nAmigos do",
+   "before_pdf": "64. Comando Leal\n17. Primeiro Comando da Capital",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "31. Comando da Paz\n55. Primeiro Comando de Vitoria\n8.",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "Pelo Certo\nFamilia 33\nOs Abertos\nOs Tauras",
+   "after": "Os Tauras Pelotas\nPrimero Comando Santamariense\nPCS\nUnidos",
+   "before_pdf": "DMP\n54. Terceiro Comando Puro\n7. Os Tauras",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "34. Bonde do Maluco\n58. Familia do Norte\n11.",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "Tauras\nOs Tauras Pelotas\nPrimero Comando Santamariense\nPCS",
+   "after": "Unidos Pelo Paz\nConceicao\nPrimero Comando do Interior",
+   "before_pdf": "do Cao\n57. Bonde dos Cachorros\n10. PCS",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "39. Bonde do TG\n63. Bonde dos 40\n16.",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "Conceicao\nPrimero Comando do Interior\nAlkaida\nV7-RS",
+   "after": "Sindicato do Crime\nPrimeiro Comando da Capital\nPCM",
+   "before_pdf": "Real\n62. Comando Litoral Sul\n15. V7-RS",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "42. Bonde do Neguinho\n66. Irmaos dos Irmaos\n19.",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "Sindicato do Crime\nPrimeiro Comando da Capital\nPCM",
+   "after": "Bonde do Cangaco\nComando Vermelho\nAmigos do Estado",
+   "before_pdf": "Ouro\n65. Primeiro Crime Revolucionario Catarinense\n18. PCM",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "26. Crias da Triplice\n50. Comando Classe A\n3.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "the Brazilian prison system:\nOs Mano\nAnti Bala",
+   "after": "Bala na Cara\nComando Pelo Certo\nFamilia 33",
+   "before_pdf": "do Norte\n49. Os Mano\n2. Anti Bala",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "27. Revolucionarios do Amazonas\n51. Amigo dos Amigos\n4.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "system:\nOs Mano\nAnti Bala\nBala na Cara",
+   "after": "Comando Pelo Certo\nFamilia 33\nOs Abertos\nOs",
+   "before_pdf": "50. Comando Classe A\n3. Bala na Cara",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "29. Primeiro Comando de Itabuna\n53. Milicias\n6.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "Bala na Cara\nComando Pelo Certo\nFamilia 33",
+   "after": "Os Abertos\nOs Tauras\nOs Tauras Pelotas\nPrimero",
+   "before_pdf": "B\n52. Povo de Israel\n5. Familia 33",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "32. Bonde dos 13\n56. Bonde dos Maluco\n9.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "33\nOs Abertos\nOs Tauras\nOs Tauras Pelotas",
+   "after": "Primero Comando Santamariense\nPCS\nUnidos Pelo Paz\nConceicao",
+   "before_pdf": "Primeiro Comando de Vitoria\n8. Os Tauras Pelotas",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "25. Cartel do Norte\n49. Os Mano\n2.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "active in the Brazilian prison system:\nOs Mano",
+   "after": "Anti Bala\nBala na Cara\nComando Pelo Certo",
+   "before_pdf": "in the Brazilian prison system\n1. Os Mano",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "36. Bonde do Ajeita\n60. Trem Bala\n13.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "Primero Comando Santamariense\nPCS\nUnidos Pelo Paz\nConceicao",
+   "after": "Primero Comando do Interior\nAlkaida\nV7-RS\nSindicato",
+   "before_pdf": "Pelo Paz\n35. Katiara\n59. Okaida\n12. Conceicao",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "30. DMP\n54. Terceiro Comando Puro\n7.",
+   "web_words": 0,
+   "pdf_words": 6,
+   "before": "Cara\nComando Pelo Certo\nFamilia 33\nOs Abertos",
+   "after": "Os Tauras\nOs Tauras Pelotas\nPrimero Comando Santamariense",
+   "before_pdf": "Comando de Itabuna\n53. Milicias\n6. Os Abertos",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "33. Comboio do Cao\n57. Bonde dos Cachorros\n10.",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "Os Tauras\nOs Tauras Pelotas\nPrimero Comando Santamariense",
+   "after": "PCS\nUnidos Pelo Paz\nConceicao\nPrimero Comando do",
+   "before_pdf": "56. Bonde dos Maluco\n9. Primero Comando Santamariense",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2024. Accessed: 20 August 2024",
+   "web_words": 0,
+   "pdf_words": 5,
+   "before": "From São Paulo to the World, 28 March",
+   "after": "Grupo de Estudos dos Novos Ilegalismos, About, no",
+   "where": {
+    "heading": "grey-dynamics",
+    "paragraph": "17.1.13",
+    "section": "Bibliography",
+    "page": 104
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "35. Katiara\n59. Okaida\n12.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Pelotas\nPrimero Comando Santamariense\nPCS\nUnidos Pelo Paz",
+   "after": "Conceicao\nPrimero Comando do Interior\nAlkaida\nV7-RS",
+   "before_pdf": "58. Familia do Norte\n11. Unidos Pelo Paz",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2C%20and%20other%20countries.),",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "August 2024\n2023 Trafficking in Persons Report: Brazil%",
+   "after": "June 2023. Accessed: 20 August 2024\nHuman Rights",
+   "before_pdf": "August 2024\n2023 Trafficking in Persons Report: Brazil,",
+   "where": {
+    "heading": "united-states-department-of-state-ussd",
+    "paragraph": "17.1.13",
+    "section": "Bibliography",
+    "page": 54
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2C%20and%20other%20countries.),",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "2023\nUSSD, 2023 Trafficking in Persons Report: Brazil%",
+   "after": "June 2023\nACLED, Deadly Rio de Janeiro: Armed",
+   "before_pdf": "2023\nUSSD, 2023 Trafficking in Persons Report: Brazil,",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "17.1.13",
+    "section": "Version control and feedback",
+    "page": 54
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "update:",
+   "pdf": "updated:",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "they face persecution or serious harm.\nAssessment\nSection",
+   "after": "27 March 2025\nAbout the assessment\nThis section",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "OCG",
+   "pdf": "OCGs",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "engage in anti-government discourse.’\n8.5 Other",
+   "after": "a. Bala na Cara (Bullet in the Face,",
+   "where": {
+    "heading": "other-ocg",
+    "paragraph": "8.4.18",
+    "section": "Country information",
+    "page": 31
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "17.1.13",
+    "section": "Version control and feedback",
+    "page": 111
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "7.13",
+   "pdf": "7.1.3",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "District is located in the Central-west region.",
+   "after": "The map below, published by the United States",
+   "where": {
+    "heading": "geography-and-map",
+    "paragraph": "7.13",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.2.7",
+   "pdf": "8.2.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in Colombia, Peru and Venezuela (Bolivarian Republic of).’",
+   "after": "The Global Organized Crime Index is a ‘multi-",
+   "where": {
+    "heading": "location-OCGs",
+    "paragraph": "8.2.7",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.2.8",
+   "pdf": "8.2.9",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "from a newly instituted route for cocaine trafficking.’",
+   "after": "Originally published in Portuguese, in 2024, BBC Brasil",
+   "where": {
+    "heading": "location-OCGs",
+    "paragraph": "8.2.8",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.2.9",
+   "pdf": "8.2.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "state coverage: Bala na Cara and Os Manos.’",
+   "after": "Bertelsmann Stiftung’s Transformation Index assesses movements toward",
+   "where": {
+    "heading": "location-OCGs",
+    "paragraph": "8.2.9",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "8.5.1",
+   "pdf": "8.5.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "na Cara 27 July 2021\nb. Os Manos",
+   "after": "For information on Os Manos, who primarily operate",
+   "where": {
+    "heading": "b-os-manos",
+    "paragraph": "8.5.1",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "9.1.1",
+   "pdf": "9.1.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "are higher as militias kill inhabitants more often...’",
+   "after": "When asked about the aims of the militias,",
+   "where": {
+    "heading": "militias",
+    "paragraph": "9.1.1",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.4.9",
+   "pdf": "11.4.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "an issue to then try to get out.’",
+   "after": "Sao Paulo state Prosecutor Lincoln Gakiya told the",
+   "where": {
+    "heading": "leaving-OCG",
+    "paragraph": "11.4.9",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.5.25",
+   "pdf": "14.5.24",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "self-declaration, so numbers aren’t that reliable.’",
+   "after": "Officers from the Criminal Investigation department of the",
+   "where": {
+    "heading": "a-searches-seizures-and-arrests",
+    "paragraph": "14.5.25",
+    "section": "Country information",
+    "page": 74
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.6.25",
+   "pdf": "14.6.26",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "crimes committed... for the benefit of gang members...’",
+   "after": "Originally published in Portuguese, in 2024, CNN Brasil",
+   "where": {
+    "heading": "c-notable-decisions",
+    "paragraph": "14.6.25",
+    "section": "Country information",
+    "page": 84
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.6.25",
+   "pdf": "14.6.27",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "deaths of rival drug traffickers... in August 2017.’",
+   "after": "Originally published in Portuguese, in 2024, the Public",
+   "where": {
+    "heading": "c-notable-decisions",
+    "paragraph": "14.6.25",
+    "section": "Country information",
+    "page": 84
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.6.26",
+   "pdf": "14.6.28",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "involving drug trafficking practiced by the criminal organization.’",
+   "after": "Originally published in Portuguese, in 2024, Brazilian digital",
+   "where": {
+    "heading": "c-notable-decisions",
+    "paragraph": "14.6.26",
+    "section": "Country information",
+    "page": 85
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.8.12",
+   "pdf": "14.8.13",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "protected due to their actions in the field.’",
+   "after": "Members of the Brazilian Federal Police working in",
+   "where": {
+    "heading": "witness-protection",
+    "paragraph": "14.8.12",
+    "section": "Country information",
+    "page": 92
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "14.8.13",
+   "pdf": "14.8.14",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "are scared about what they want to say.’",
+   "after": "Prosecutor Lincoln Gakiya told the UK HO FFM",
+   "where": {
+    "heading": "witness-protection",
+    "paragraph": "14.8.13",
+    "section": "Country information",
+    "page": 92
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and Information Note, Brazil: Actors of protection.\n4.",
+   "after": "11 For further guidance on assessing state protection,",
+   "before_pdf": "Policy and Information Note, Brazil: Actors of protection.",
+   "where": {
+    "heading": "protection",
+    "paragraph": "4.11",
+    "section": "Assessment",
+    "page": 11
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "13.4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "establish itself where the state is missing...’\n13.",
+   "after": "1.7 An article of October 2024 published",
+   "before_pdf": "will establish itself where the state is missing...’",
+   "where": {
+    "heading": "low-income-communities",
+    "paragraph": "13.1.7",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.7",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "will establish itself where the state is missing...’",
+   "after": "An article of October 2024 published by InSight",
+   "before_pdf": "where the state is missing...’\n13.4.1",
+   "where": {
+    "heading": "low-income-communities",
+    "paragraph": "13.1.7",
+    "section": "Country information",
+    "page": 55
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Cartel do Norte\nCrias da Triplice\nRevolucionarios do Amazonas\nRaio B\nPrimeiro Comando de Itabuna\nDMP\nComando da Paz\nBonde dos 13\nComboio do Cao\nBonde do Maluco\nKatiara\nBonde do Ajeita\nPrimeiro Comando do Panda\nReal\nBonde do TG\nBonde do Antonio Fal\nBonde 8 de Ouro\nBonde do Neguinho\nMercado do Povo Atitude\nPrimeiro Comando de Eunapolis\nPrimeiro Grupo Catarinense\nMafia Paranense\nFerro Velho",
+   "pdf": "48.",
+   "web_words": 66,
+   "pdf_words": 1,
+   "before": "Para Sempre-Aps\nUniao Criminosa do Amapa-UCA",
+   "after": "Cartel do Sul\nOs Mano\nComando Classe A",
+   "before_pdf": "da Capital\n24. Uniao Criminosa do Amapa-UCA",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Os Mano\nComando Classe A\nAmigo dos Amigos\nPovo de Israel\nMilicias\nTerceiro Comando Puro\nPrimeiro Comando de Vitoria\nBonde dos Maluco\nBonde dos Cachorros\nFamilia do Norte\nOkaida\nTrem Bala\nGuardioes do Estado\nComando Litoral Sul\nBonde dos 40\nComando Leal\nPrimeiro Crime Revolucionario Catarinense\nIrmaos dos Irmaos\nTudo Neutro/Massa\nEUA\nNova Okaida\nBonde do Cangaco\nTercero Comando da Capital",
+   "pdf": "72.",
+   "web_words": 62,
+   "pdf_words": 1,
+   "before": "Catarinense\nMafia Paranense\nFerro Velho\nCartel do Sul",
+   "after": "Comando Revolucionario Brasileiro da Criminalidade\n8.1.5",
+   "before_pdf": "Criminosa do Amapa-UCA\n48. Cartel do Sul",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "criminal organisations active in the Brazilian prison system:",
+   "after": "Os Mano\nAnti Bala\nBala na Cara\nComando",
+   "before_pdf": "criminal organisations active in the Brazilian prison system",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "37. Primeiro Comando do Panda\n61. Guardioes do Estado\n14.",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "Unidos Pelo Paz\nConceicao\nPrimero Comando do Interior",
+   "after": "Alkaida\nV7-RS\nSindicato do Crime\nPrimeiro Comando",
+   "before_pdf": "60. Trem Bala\n13. Primero Comando do Interior",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "43. Mercado do Povo Atitude\n67. Tudo Neutro/Massa\n20.",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "Primeiro Comando da Capital\nPCM\nBonde do Cangaco",
+   "after": "Comando Vermelho\nAmigos do Estado\nFamilia Terror do",
+   "before_pdf": "66. Irmaos dos Irmaos\n19. Bonde do Cangaco",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "47. Ferro Velho\n71. Tercero Comando da Capital\n24.",
+   "web_words": 0,
+   "pdf_words": 9,
+   "before": "Familia Terror do Amapa\nAmigos Para Sempre-Aps",
+   "after": "Uniao Criminosa do Amapa-UCA\nCartel do Norte",
+   "before_pdf": "Bonde do Cangaco\n23. Amigos Para Sempre-Aps",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "44. Primeiro Comando de Eunapolis\n68. EUA\n21.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "da Capital\nPCM\nBonde do Cangaco\nComando Vermelho",
+   "after": "Amigos do Estado\nFamilia Terror do Amapa\nAmigos",
+   "before_pdf": "Atitude\n67. Tudo Neutro/Massa\n20. Comando Vermelho",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "45. Primeiro Grupo Catarinense\n69. Nova Okaida\n22.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "Bonde do Cangaco\nComando Vermelho\nAmigos do Estado",
+   "after": "Familia Terror do Amapa\nAmigos Para Sempre-Aps",
+   "before_pdf": "de Eunapolis\n68. EUA\n21. Amigos do Estado",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "46. Mafia Paranense\n70. Bonde do Cangaco\n23.",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "Vermelho\nAmigos do Estado\nFamilia Terror do Amapa",
+   "after": "Amigos Para Sempre-Aps\nUniao Criminosa do Amapa-",
+   "before_pdf": "69. Nova Okaida\n22. Familia Terror do Amapa",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 17
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "28. Raio B\n52. Povo de Israel\n5.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "Anti Bala\nBala na Cara\nComando Pelo Certo",
+   "after": "Familia 33\nOs Abertos\nOs Tauras\nOs Tauras",
+   "before_pdf": "51. Amigo dos Amigos\n4. Comando Pelo Certo",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "38. Real\n62. Comando Litoral Sul\n15.",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "Pelo Paz\nConceicao\nPrimero Comando do Interior\nAlkaida",
+   "after": "V7-RS\nSindicato do Crime\nPrimeiro Comando da",
+   "before_pdf": "do Panda\n61. Guardioes do Estado\n14. Alkaida",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "second": "disputes"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "40. Bonde do Antonio Fal\n64. Comando Leal\n17.",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "do Interior\nAlkaida\nV7-RS\nSindicato do Crime",
+   "after": "Primeiro Comando da Capital\nPCM\nBonde do Cangaco",
+   "before_pdf": "63. Bonde dos 40\n16. Sindicato do Crime",
+   "where": {
+    "heading": "number-of-ocgs-in-brazil",
+    "paragraph": "8.1.4",
+    "section": "Country information",
+    "page": 16
+   },
+   "second": "disputes"
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 406,
+  "different": {
+   "4.11": "4.1.11",
+   "7.13": "7.1.3",
+   "8.2.8": "8.2.9",
+   "8.2.9": "8.2.10",
+   "13.1.7": "13.4.1",
+   "14.6.26": "14.6.28",
+   "14.8.13": "14.8.14"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "8.2.7",
+   "8.5.1",
+   "9.1.1",
+   "11.4.9",
+   "14.5.25",
+   "14.6.25",
+   "14.8.12"
+  ],
+  "unconfirmed": []
+ }
+}

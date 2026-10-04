@@ -1,0 +1,50 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 57,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 80,
+ "paragraphs": 416,
+ "list_items": 71,
+ "tables": 5,
+ "figures": 3,
+ "footnotes": 156,
+ "bookmarks": 74,
+ "warnings": [
+  "footnotes with no mark found in the text: 5, 74, 75, 132, 133"
+ ],
+ "figure_pages": {
+  "3d5e3267898907a1178118e5c3f42124fc3b63a92ba129b7ce1e70410be6e309.png": 7,
+  "37e289f43e7a64003844c7cc428e1163bb19262065749122cfb5bf29f81b6f60.jpg": 9,
+  "2b89df212c8085228038a7408c05458ea71ce279c1162e15a8673d39bdea7794.jpg": 10
+ },
+ "figure_sizes": {
+  "3d5e3267898907a1178118e5c3f42124fc3b63a92ba129b7ce1e70410be6e309.png": [
+   616,
+   315
+  ],
+  "37e289f43e7a64003844c7cc428e1163bb19262065749122cfb5bf29f81b6f60.jpg": [
+   922,
+   739
+  ],
+  "2b89df212c8085228038a7408c05458ea71ce279c1162e15a8673d39bdea7794.jpg": [
+   920,
+   1165
+  ]
+ },
+ "figure_text": {
+  "3d5e3267898907a1178118e5c3f42124fc3b63a92ba129b7ce1e70410be6e309.png": 1,
+  "37e289f43e7a64003844c7cc428e1163bb19262065749122cfb5bf29f81b6f60.jpg": 0,
+  "2b89df212c8085228038a7408c05458ea71ce279c1162e15a8673d39bdea7794.jpg": 0
+ },
+ "first_bookmark_page": 7,
+ "cover_title": "Country Background Note Somalia",
+ "cover_version": "1.0",
+ "cover_date": "December 2020",
+ "pdf_sha256": "98d58fe416427d96de32e09c5f57303e7a80dc079de5750b1f94b3ed0be3bc09",
+ "images": [
+  "2b89df212c8085228038a7408c05458ea71ce279c1162e15a8673d39bdea7794.jpg",
+  "37e289f43e7a64003844c7cc428e1163bb19262065749122cfb5bf29f81b6f60.jpg",
+  "3d5e3267898907a1178118e5c3f42124fc3b63a92ba129b7ce1e70410be6e309.png"
+ ]
+}

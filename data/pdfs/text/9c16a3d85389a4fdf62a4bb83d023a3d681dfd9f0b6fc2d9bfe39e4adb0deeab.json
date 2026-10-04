@@ -1,0 +1,92 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 35,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 55,
+ "paragraphs": 220,
+ "list_items": 42,
+ "tables": 4,
+ "figures": 9,
+ "footnotes": 91,
+ "bookmarks": 55,
+ "warnings": [
+  "footnotes with no mark found in the text: 5, 22, 36"
+ ],
+ "figure_pages": {
+  "f76f386fa4572bdb45bd83804a49489ac5997f588c17dedd17236e328ed06278.png": 6,
+  "1048857fae8c21cfaeb4912c8376f7fa0a4749db95e96860a2c025bc7dad4fa3.jpg": 7,
+  "f0a05bd6b6cd595c5eca63611672c07f20efff4690af050f181a179078f5c40c.jpg": 8,
+  "cb5573588127092275cc24e3b861d1fbcf4d03746a24c445f3fba2c92ea28e2e.png": 10,
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": 27,
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": 28,
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": 29,
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": 30,
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": 31
+ },
+ "figure_sizes": {
+  "f76f386fa4572bdb45bd83804a49489ac5997f588c17dedd17236e328ed06278.png": [
+   302,
+   177
+  ],
+  "1048857fae8c21cfaeb4912c8376f7fa0a4749db95e96860a2c025bc7dad4fa3.jpg": [
+   579,
+   627
+  ],
+  "f0a05bd6b6cd595c5eca63611672c07f20efff4690af050f181a179078f5c40c.jpg": [
+   619,
+   596
+  ],
+  "cb5573588127092275cc24e3b861d1fbcf4d03746a24c445f3fba2c92ea28e2e.png": [
+   797,
+   307
+  ],
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": [
+   908,
+   1292
+  ],
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": [
+   919,
+   1308
+  ],
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": [
+   919,
+   1308
+  ],
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": [
+   919,
+   1308
+  ],
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": [
+   919,
+   1308
+  ]
+ },
+ "figure_text": {
+  "f76f386fa4572bdb45bd83804a49489ac5997f588c17dedd17236e328ed06278.png": 1,
+  "1048857fae8c21cfaeb4912c8376f7fa0a4749db95e96860a2c025bc7dad4fa3.jpg": 0,
+  "f0a05bd6b6cd595c5eca63611672c07f20efff4690af050f181a179078f5c40c.jpg": 0,
+  "cb5573588127092275cc24e3b861d1fbcf4d03746a24c445f3fba2c92ea28e2e.png": 0,
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg": 0,
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg": 0,
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg": 0,
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg": 0,
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Background Note: Iran",
+ "cover_version": "6.0",
+ "cover_date": "October 2019",
+ "pdf_sha256": "9c16a3d85389a4fdf62a4bb83d023a3d681dfd9f0b6fc2d9bfe39e4adb0deeab",
+ "images": [
+  "1048857fae8c21cfaeb4912c8376f7fa0a4749db95e96860a2c025bc7dad4fa3.jpg",
+  "3765435f4a453ca391168da00e49b2ceddf5954fec9900bb060951e7338f14cc.jpg",
+  "a516658cfcfe339a297e7cab10a0caa9cd740943095fc441728aceea56a3a09e.jpg",
+  "bbb76805b49d02a98de5f7a5903f7d4900df473711ccc33a8d849c17b3775d20.jpg",
+  "c5945f6b582ec3234dddf01538fa0d6c41a0bf062ecb5730aff6df4a4c7e3fff.jpg",
+  "cb5573588127092275cc24e3b861d1fbcf4d03746a24c445f3fba2c92ea28e2e.png",
+  "f0a05bd6b6cd595c5eca63611672c07f20efff4690af050f181a179078f5c40c.jpg",
+  "f1bfc21036280e8d00e32a8673e111dd2d5542a98d8eaf53da3a99e82f10bcad.jpg",
+  "f76f386fa4572bdb45bd83804a49489ac5997f588c17dedd17236e328ed06278.png"
+ ]
+}

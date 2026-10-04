@@ -1,0 +1,483 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-hoa-hao-buddhism-vietnam-march-2026-accessible",
+ "pdf_sha256": "b4cac930976ecde13a6651741a02e4dbbb7f2c7eab4cf552e16bba913fcc4ebf",
+ "body_sha256": "423b36e054f6512eab9e4f1bd08c70465d7eb41bbae5ee3ce30c104e24c631c2",
+ "words": {
+  "web": 10524,
+  "pdf": 11111
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 2,
+   "pdf_words": 6,
+   "share": 0.00037,
+   "passages": 1,
+   "sizes": {
+    "spelling": 2,
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 6
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 578
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 3,
+    "web_words": 2,
+    "pdf_words": 6
+   },
+   "list marker": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 578
+   }
+  },
+  "ours": {
+   "differences": 18,
+   "web_words": 14,
+   "pdf_words": 14
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "March 2026",
+   "pdf": "3.0",
+   "pdf_date": "March 2026"
+  },
+  "section_updated": {
+   "web": [
+    "9 March 2026"
+   ],
+   "pdf": [
+    "9 March 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 4,
+   "pdf": 4,
+   "web_notices": 4,
+   "pdf_notices": 38
+  },
+  "footnotes": {
+   "web": 100,
+   "pdf": 100,
+   "pdf_raw": 100,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 33,
+   "pdf": 32
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.2",
+    "section": "Country information",
+    "page": 8
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "fats,",
+   "pdf": "facts,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "account each case’s specific facts.\n1. Material",
+   "after": "credibility and other checks/referrals\n1.1 Credibility",
+   "where": {
+    "heading": "material-fats-credibility-and-other-checksreferrals",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 4
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "group",
+   "pdf": "groups",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "belief\n9. State treatment\n9.1 Registered/unregistered",
+   "after": "9.1.1 The Vietnamese, ‘an independent and",
+   "where": {
+    "heading": "registeredunregistered-group",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 12
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe information in this section has been removed as it is restricted for internal Home Office use.\nThe informat …",
+   "web_words": 0,
+   "pdf_words": 578,
+   "before": "Official – sensitive: Not for disclosure – Start of section",
+   "after": "The information in this section has been removed",
+   "where": {
+    "heading": "returnees",
+    "paragraph": "10.1.2",
+    "section": "Country information",
+    "page": 4
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "none. All religions are equal before the law.",
+   "after": "The State respects and protects freedom of belief",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 10
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and protects freedom of belief and of religion.",
+   "after": "No one has the right to infringe on",
+   "where": {
+    "heading": "constitution",
+    "paragraph": "8.1.1",
+    "section": "Country information",
+    "page": 10
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "expected release April 2021)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Huỳnh Thị Kim Quyên\nApr 2017\nLikely released (",
+   "after": "Arrested along with 4 others for hanging flags",
+   "before_pdf": "Huỳnh Thị Kim Quyên\nApr 2017\nLikely released",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "expected release May 2024)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "prison.\nVuong Van Thuan\nMay 2017\nLikely released (",
+   "after": "Arrested for making and flying the flag of",
+   "before_pdf": "prison.\nVuong Van Thuan\nMay 2017\nLikely released",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "expected release May 2023)",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "prison.\nNguyen Nhat Thuong\nMay 2017\nLikely released (",
+   "after": "Arrested for making and flying the flag of",
+   "before_pdf": "prison.\nNguyen Nhat Thuong\nMay 2017\nLikely released",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "release April",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "4 others for hanging flags of the former",
+   "after": "government of South Vietnam. Sentenced to 4 years",
+   "before_pdf": "others for\nexpected\nhanging flags of the former",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "release May",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "flying the flag of the former Republic of",
+   "after": "Vietnam. Sentenced to 7 years in prison under",
+   "before_pdf": "the\nexpected\nflag of the former Republic of",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "release May",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "flying the flag of the former Republic of",
+   "after": "Vietnam. Sentenced to 6 years in prison.\nLe",
+   "before_pdf": "the\nexpected\nflag of the former Republic of",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Trong Phuc",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Party. Sentenced to 8 years in prison.\nHo",
+   "after": "January 2025\nNot recorded\nGovernment officials repeatedly pressured",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "expected",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "April 2021)\nArrested along with 4 others for",
+   "after": "hanging flags of the former government of South",
+   "before_pdf": "Likely released\nArrested along with 4 others for",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2021)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "flags of the former government of South Vietnam.",
+   "after": "Sentenced to 4 years in prison.\nNguyen Ngoc",
+   "before_pdf": "the former\nrelease April\ngovernment of South Vietnam.",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "expected",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "May 2024)\nArrested for making and flying the",
+   "after": "flag of the former Republic of Vietnam. Sentenced",
+   "before_pdf": "Likely released\nArrested for making and flying the",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2024)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Republic of Vietnam. Sentenced to 7 years in",
+   "after": "prison under Article 88.\nNguyen Nhat Truong\nMay",
+   "before_pdf": "release May\nVietnam. Sentenced to 7 years in",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 21
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "expected",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "May 2023)\nArrested for making and flying the",
+   "after": "flag of the former Republic of Vietnam. Sentenced",
+   "before_pdf": "Likely released\nArrested for making and flying the",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "9.3.10",
+    "section": "Country information",
+    "page": 20
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 79,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

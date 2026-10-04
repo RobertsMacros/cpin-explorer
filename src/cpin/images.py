@@ -36,6 +36,18 @@ def current_image_refs(store: Store, countries: set[str] | None = None) -> dict[
     return refs
 
 
+def every_image_ref(store: Store) -> dict[str, set[str]]:
+    """Image URL -> the 'country/note' keys of every edition held that uses it: current, replaced, withdrawn,
+    and archive copies. An edition that is no longer on GOV.UK is exactly the one whose pictures may go from
+    GOV.UK's asset host next, so the site holds them itself (the owner's decision, 3 October 2026)."""
+    refs: dict[str, set[str]] = {}
+    for country, note, index in store.iter_notes():
+        for version in index["versions"]:
+            for url in image_urls(store.read_body(country, note, version["sha256"])):
+                refs.setdefault(url, set()).add(f"{country}/{note}")
+    return refs
+
+
 def mirror_images(client: PoliteClient, store: Store, refs: dict[str, set[str]], *, seen_at: str, errors: list) -> dict:
     manifest = store.load_image_manifest()
     stats = {"checked": 0, "downloaded": 0, "unchanged": 0, "replaced_same_url": 0, "bytes_downloaded": 0}

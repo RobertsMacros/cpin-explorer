@@ -1,0 +1,74 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 27,
+ "paragraphs": 104,
+ "list_items": 2,
+ "tables": 0,
+ "figures": 6,
+ "footnotes": 21,
+ "bookmarks": 28,
+ "warnings": [
+  "page 17: bookmark not found in the text: '/'",
+  "page 18: bookmark not found in the text: '/'",
+  "page 20: bookmark not found in the text: '/'",
+  "page 21: bookmark not found in the text: '/'"
+ ],
+ "figure_pages": {
+  "cce23ea7d1c82ebcfe706bc4bef06e1ba27282d017c310155788004332467a8b.jpg": 17,
+  "4a1f8335b995d415ab6e5fa484b257c8fbe277eb7737dc7167b9f2bd7c8a970b.jpg": 18,
+  "2075ea025b989d4faac6c7cd95aa3f75868e6392f56fcb0d2eef0a243f173f78.jpg": 19,
+  "a9c79ae802c737c8e14c30a7905830602ec50b139fa176ab4c837b27ed97e303.jpg": 20,
+  "ef97bdd98844ab0ef987be3cd482bd75a1db74fc9d3e965b24a323be59e5922a.jpg": 21,
+  "896ee8769b30cce3d818240e193aa9b070a97e4371bec6366d0e0766c80ad55e.jpg": 22
+ },
+ "figure_sizes": {
+  "cce23ea7d1c82ebcfe706bc4bef06e1ba27282d017c310155788004332467a8b.jpg": [
+   805,
+   1145
+  ],
+  "4a1f8335b995d415ab6e5fa484b257c8fbe277eb7737dc7167b9f2bd7c8a970b.jpg": [
+   919,
+   1308
+  ],
+  "2075ea025b989d4faac6c7cd95aa3f75868e6392f56fcb0d2eef0a243f173f78.jpg": [
+   919,
+   1308
+  ],
+  "a9c79ae802c737c8e14c30a7905830602ec50b139fa176ab4c837b27ed97e303.jpg": [
+   919,
+   1308
+  ],
+  "ef97bdd98844ab0ef987be3cd482bd75a1db74fc9d3e965b24a323be59e5922a.jpg": [
+   919,
+   1308
+  ],
+  "896ee8769b30cce3d818240e193aa9b070a97e4371bec6366d0e0766c80ad55e.jpg": [
+   919,
+   1308
+  ]
+ },
+ "figure_text": {
+  "cce23ea7d1c82ebcfe706bc4bef06e1ba27282d017c310155788004332467a8b.jpg": 0,
+  "4a1f8335b995d415ab6e5fa484b257c8fbe277eb7737dc7167b9f2bd7c8a970b.jpg": 0,
+  "2075ea025b989d4faac6c7cd95aa3f75868e6392f56fcb0d2eef0a243f173f78.jpg": 0,
+  "a9c79ae802c737c8e14c30a7905830602ec50b139fa176ab4c837b27ed97e303.jpg": 0,
+  "ef97bdd98844ab0ef987be3cd482bd75a1db74fc9d3e965b24a323be59e5922a.jpg": 0,
+  "896ee8769b30cce3d818240e193aa9b070a97e4371bec6366d0e0766c80ad55e.jpg": 0
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Iran: Fear of punishment for crimes committed in other countries (‘Double Jeopardy’ or re-prosecution)",
+ "cover_version": "1.0",
+ "cover_date": "January 2018",
+ "pdf_sha256": "d5eea626d3018dc7b20d610f04fbf27c2ef8fcb52be3a184e51699108fad29be",
+ "images": [
+  "2075ea025b989d4faac6c7cd95aa3f75868e6392f56fcb0d2eef0a243f173f78.jpg",
+  "4a1f8335b995d415ab6e5fa484b257c8fbe277eb7737dc7167b9f2bd7c8a970b.jpg",
+  "896ee8769b30cce3d818240e193aa9b070a97e4371bec6366d0e0766c80ad55e.jpg",
+  "a9c79ae802c737c8e14c30a7905830602ec50b139fa176ab4c837b27ed97e303.jpg",
+  "cce23ea7d1c82ebcfe706bc4bef06e1ba27282d017c310155788004332467a8b.jpg",
+  "ef97bdd98844ab0ef987be3cd482bd75a1db74fc9d3e965b24a323be59e5922a.jpg"
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 30,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 201,
+ "list_items": 43,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 65,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "012552138010b3a98dcbd2e4f3ed7ddb36afce166479f70ebd4f3720466ca11a.jpg": 9
+ },
+ "figure_sizes": {
+  "012552138010b3a98dcbd2e4f3ed7ddb36afce166479f70ebd4f3720466ca11a.jpg": [
+   851,
+   839
+  ]
+ },
+ "figure_text": {
+  "012552138010b3a98dcbd2e4f3ed7ddb36afce166479f70ebd4f3720466ca11a.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Nigeria: Internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "March 2019",
+ "pdf_sha256": "307aec6543ffbe6cbcc769c23c8f2f37804f7e02aeaaefd0dd0de14764d2ca84",
+ "images": [
+  "012552138010b3a98dcbd2e4f3ed7ddb36afce166479f70ebd4f3720466ca11a.jpg"
+ ]
+}

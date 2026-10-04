@@ -1,0 +1,43 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 43,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 51,
+ "paragraphs": 313,
+ "list_items": 28,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 82,
+ "bookmarks": 51,
+ "warnings": [
+  "footnotes with no mark found in the text: 56"
+ ],
+ "figure_pages": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 1,
+  "bdf8c64b356a622ff50e8b5f4855cb84d748bc09f1e25e425d301134eb06a6c9.jpg": 22
+ },
+ "figure_sizes": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": [
+   318,
+   148
+  ],
+  "bdf8c64b356a622ff50e8b5f4855cb84d748bc09f1e25e425d301134eb06a6c9.jpg": [
+   582,
+   366
+  ]
+ },
+ "figure_text": {
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png": 0,
+  "bdf8c64b356a622ff50e8b5f4855cb84d748bc09f1e25e425d301134eb06a6c9.jpg": 1
+ },
+ "first_bookmark_page": 1,
+ "cover_title": "Country Policy and Information Note Kuwait: Bidoons",
+ "cover_version": "3.0",
+ "cover_date": "April 2021",
+ "pdf_sha256": "111db5f75320a8771b47ae647c000b120bf6bf45900309088918efec96821b76",
+ "images": [
+  "bdf8c64b356a622ff50e8b5f4855cb84d748bc09f1e25e425d301134eb06a6c9.jpg",
+  "f4645eeea715b2736e5df7ff37df8e13f9875e1dfcdccc469b721deee2cfe6f6.png"
+ ]
+}

@@ -1,0 +1,498 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/country-policy-and-information-note-unaccompanied-children-albania-july-2025-accessible",
+ "pdf_sha256": "cb7f91cfd6308efee7fbff646d617100b6f27c95fcdb56623944a53d358d8af0",
+ "body_sha256": "2a5cc2ab512e525c830be77b430d909b944a88fc9f421364038a393e0c23aa49",
+ "words": {
+  "web": 24153,
+  "pdf": 24293
+ },
+ "summary": {
+  "wording": {
+   "differences": 3,
+   "web_words": 0,
+   "pdf_words": 144,
+   "share": 0.002972,
+   "passages": 3,
+   "sizes": {
+    "passage": 3
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 125
+  },
+  "groups": {
+   "wording": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 144
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 10,
+    "pdf_words": 10
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 15
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 129
+   },
+   "numbering": {
+    "differences": 10,
+    "web_words": 10,
+    "pdf_words": 10
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 6,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2025",
+   "pdf": "1.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "12 June 2025"
+   ],
+   "pdf": [
+    "12 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 5,
+   "pdf": 5,
+   "web_notices": 5,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 202,
+   "pdf": 202,
+   "pdf_raw": 202,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 101,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 3,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the assessment\nThis section considers the evidence relevant to this note – that is, the country information, refugee/human rights laws and policies, and applicable caselaw – and provides an assessment of whether, in general, a person:\nfaces a real risk of persecution/serious harm by state or non-state actors on the grounds of being an unaccompanied child\ncan obtain effective protection from the state (or quasi state bodies)\ncan relocate within a country or territory to avoid persecution/serious harm\nif a claim is refused, it is likely to be certified as ‘clearly unfounded’ under section 94 of the Nationality, Immigration and Asylum Act 2002.\nDecision makers must, however, consider all claims on an individual basis, taking into account each case’s specific facts.",
+   "web_words": 0,
+   "pdf_words": 125,
+   "before": "serious harm.\nAssessment\nSection updated: 12 June 2025",
+   "after": "1. Material facts, credibility and other checks/referrals",
+   "where": {
+    "heading": "material-facts-credibility-and-other-checksreferrals",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "European Court of Human Rights (ECtHR), Albania, last updated February 2024. Accessed: 16 July 2024",
+   "web_words": 0,
+   "pdf_words": 15,
+   "before": "Report, 8 November 2023. Accessed: 21 March 2024",
+   "after": "Eurostat\nEurostat, EU children at risk of poverty",
+   "where": {
+    "heading": "eurostat",
+    "paragraph": "2.1.2",
+    "section": "Bibliography",
+    "page": 51
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Asylum Act 2002 (clearly unfounded claims).\nCountry information",
+   "after": "This section contains publicly available or disclosable country",
+   "where": {
+    "heading": "country-information",
+    "paragraph": "6.1.3",
+    "section": "Country information",
+    "page": 13
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "6.85",
+    "section": "Version control and feedback",
+    "page": 57
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "UNCRC,",
+   "pdf": "UN CRC,",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "periodic reports submitted by Albania... 12 November 2021",
+   "after": "Concluding Observations ... Combined 5th and 6th ... (para 35),",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "6.85",
+    "section": "Version control and feedback",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.11",
+   "pdf": "13.2.12",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "pornography and the online sexual exploitation of children.’",
+   "after": "The UN CRC report 2023 opined that there",
+   "where": {
+    "heading": "effectiveness-child-protection",
+    "paragraph": "13.2.11",
+    "section": "Country information",
+    "page": 38
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.12",
+   "pdf": "13.2.13",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "relating to the protection of children from violence ...’",
+   "after": "Considering the legal framework guaranteeing victims of sexual",
+   "where": {
+    "heading": "effectiveness-child-protection",
+    "paragraph": "13.2.12",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.2.13",
+   "pdf": "13.2.14",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or receive no service that suits their situation.’",
+   "after": "In May 2024, the news outlet CNA reported",
+   "where": {
+    "heading": "effectiveness-child-protection",
+    "paragraph": "13.2.13",
+    "section": "Country information",
+    "page": 39
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Home Office use.\nOfficial – sensitive: End of section",
+   "after": "Return and reintegration\n15.1.1 Referring to",
+   "before_pdf": "Home Office use. Official – sensitive: End of section",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "14.1.11",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "sensitive: End of section\n15. Return and reintegration",
+   "after": "1.1 Referring to the return of unaccompanied",
+   "before_pdf": "sensitive: End of section\n1. Return and reintegration",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "15.1.1",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "with the state social service, has been ongoing.’",
+   "after": "1.2 According to Eurostat information dated 21",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "15.1.2",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "from Sweden, none were Assisted Voluntary Returns (AVR).",
+   "after": "1.3 The Return and Reintegration Facility, funded",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "15.1.3",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "local service provider, SOS Children’s Villages Albania.’",
+   "after": "1.4 SOS Children’s Villages Albania (SCVA)",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "15.1.4",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "15.",
+   "pdf": "1.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "sic] by International Centre for Migration Policy Development’",
+   "after": "1.5 See Non-governmental organisation (NGO) support",
+   "where": {
+    "heading": "return-reintegration",
+    "paragraph": "15.1.5",
+    "section": "Country information",
+    "page": 48
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "16.",
+   "pdf": "2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "information about assistance for returnees provided by NGOs.",
+   "after": "Internal relocation\n2.1.1 The USSD HR",
+   "where": {
+    "heading": "internal-relocation-1",
+    "paragraph": "15.1.5",
+    "section": "Country information",
+    "page": 48
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Hope for the Future Association,",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "23 April 2024\nHope for the Future Association",
+   "after": "11 October 2024 (published by Development Aid). Accessed:",
+   "before_pdf": "23 April 2024\nHope for the Future Association,",
+   "where": {
+    "heading": "hope-for-the-future-association",
+    "paragraph": "2.1.2",
+    "section": "Bibliography",
+    "page": 52
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "and",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "a new structure created (September-October 2018) and",
+   "after": "administered by the State Social Service’.\n13.5.",
+   "where": {
+    "heading": "public-care-institutions",
+    "paragraph": "13.5.5",
+    "section": "Country information",
+    "page": 42
+   }
+  }
+ ],
+ "unresolved": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "unresolved",
+   "web": "7.1 Populations",
+   "pdf": "7.1 Population",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "as the evidential basis for decisions.\n7. Demography",
+   "after": "7.1.1 Instat, the institute of statistics",
+   "where": {
+    "heading": "populations",
+    "paragraph": "6.1.3",
+    "section": "Country information",
+    "page": null
+   }
+  }
+ ],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 233,
+  "different": {
+   "13.2.12": "13.2.13",
+   "13.2.13": "13.2.14",
+   "15.1.1": "1.1.1",
+   "15.1.2": "1.1.2",
+   "15.1.3": "1.1.3",
+   "15.1.4": "1.1.4"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "2.1.1",
+   "2.1.2",
+   "13.2.11"
+  ],
+  "unconfirmed": [
+   "15.1.5"
+  ]
+ }
+}

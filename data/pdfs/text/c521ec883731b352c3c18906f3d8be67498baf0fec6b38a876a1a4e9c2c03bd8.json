@@ -1,0 +1,44 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 67,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 57,
+ "paragraphs": 512,
+ "list_items": 72,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 151,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 28, 143"
+ ],
+ "figure_pages": {
+  "682507cc307abfe0c1e912e39c44dd0da61262e40922512eba152a75f8703b21.jpg": 13,
+  "83ecb87d4686889bfff78e01d411594211e1822e1ad91002b8f3d5b3153fe563.jpg": 14
+ },
+ "figure_sizes": {
+  "682507cc307abfe0c1e912e39c44dd0da61262e40922512eba152a75f8703b21.jpg": [
+   512,
+   523
+  ],
+  "83ecb87d4686889bfff78e01d411594211e1822e1ad91002b8f3d5b3153fe563.jpg": [
+   783,
+   644
+  ]
+ },
+ "figure_text": {
+  "682507cc307abfe0c1e912e39c44dd0da61262e40922512eba152a75f8703b21.jpg": 0,
+  "83ecb87d4686889bfff78e01d411594211e1822e1ad91002b8f3d5b3153fe563.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Occupied Palestinian Territory (Gaza): Security and Humanitarian Situation",
+ "cover_version": "2.0",
+ "cover_date": "March 2019",
+ "pdf_sha256": "c521ec883731b352c3c18906f3d8be67498baf0fec6b38a876a1a4e9c2c03bd8",
+ "images": [
+  "682507cc307abfe0c1e912e39c44dd0da61262e40922512eba152a75f8703b21.jpg",
+  "83ecb87d4686889bfff78e01d411594211e1822e1ad91002b8f3d5b3153fe563.jpg"
+ ]
+}

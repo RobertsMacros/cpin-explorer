@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 49,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 75,
+ "paragraphs": 366,
+ "list_items": 99,
+ "tables": 2,
+ "figures": 1,
+ "footnotes": 117,
+ "bookmarks": 69,
+ "warnings": [
+  "footnotes with no mark found in the text: 48"
+ ],
+ "figure_pages": {
+  "03516ea33e05519178ff550ba82d15b177da35349b5290a81c97de4b56e13bba.jpg": 28
+ },
+ "figure_sizes": {
+  "03516ea33e05519178ff550ba82d15b177da35349b5290a81c97de4b56e13bba.jpg": [
+   829,
+   789
+  ]
+ },
+ "figure_text": {
+  "03516ea33e05519178ff550ba82d15b177da35349b5290a81c97de4b56e13bba.jpg": 0
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Eritrea: National service and illegal exit",
+ "cover_version": "6.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "066a06246835facda11b9a12bf047e0adf35c1d9135bb395c00f20e8a61d51a7",
+ "images": [
+  "03516ea33e05519178ff550ba82d15b177da35349b5290a81c97de4b56e13bba.jpg"
+ ]
+}

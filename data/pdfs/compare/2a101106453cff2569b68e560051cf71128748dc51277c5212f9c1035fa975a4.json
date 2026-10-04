@@ -1,0 +1,576 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "kuwait/country-policy-and-information-note-kuwait-bidoons-august-2024-accessible",
+ "pdf_sha256": "2a101106453cff2569b68e560051cf71128748dc51277c5212f9c1035fa975a4",
+ "body_sha256": "5e37e1ae4f4605fc9fddb4342bb59b75df41a5aae1f97470e54107a942ad6eb7",
+ "words": {
+  "web": 27969,
+  "pdf": 27786
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 3.6e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 229,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 11,
+    "web_words": 0,
+    "pdf_words": 11
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "list marker": {
+    "differences": 11,
+    "web_words": 0,
+    "pdf_words": 11
+   },
+   "numbering": {
+    "differences": 3,
+    "web_words": 3,
+    "pdf_words": 3
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 229,
+    "pdf_words": 0
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   }
+  },
+  "ours": {
+   "differences": 4,
+   "web_words": 7,
+   "pdf_words": 7
+  },
+  "moved": {
+   "differences": 2,
+   "web_words": 3,
+   "pdf_words": 3
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": null,
+   "pdf": "4.0",
+   "pdf_date": "August 2024"
+  },
+  "section_updated": {
+   "web": [
+    "31 July 2024",
+    "31 July 2024"
+   ],
+   "pdf": [
+    "31 July 2024",
+    "31 July 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 5,
+   "pdf": 5,
+   "web_notices": 5,
+   "pdf_notices": 7
+  },
+  "footnotes": {
+   "web": 195,
+   "pdf": 195,
+   "pdf_raw": 195,
+   "differ": false
+  },
+  "pictures": {
+   "web": 4,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 61,
+   "pdf": 52
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "table",
+   "pdf": "diagram",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disclosure – End of section\nAnnex B: Amnesty International",
+   "after": "of access to education\nLevel of legal documentation",
+   "where": {
+    "heading": "annex-b-amnesty-international-table-of-access-to-education",
+    "paragraph": "13.1.15",
+    "section": "Annex B: Amnesty International table of access to education",
+    "page": 60
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Level of legal documentation\nChildren can go to a government school\nChildren can be registered in a private school\nSupport from Charity Fund for children in private schools\nEligible to apply to Kuwait University\nCan attend private university if able to pay\nMinistry of Health birth certificate + Civil Identity Number + currently valid Central System Review Card + specially privileged category\nYes\nYes\nYes\nYes\nYes\nMinistry of Health birth certificate + Civil Identity Number + currently valid Central System Review Card\nNo\nYes\nYes\nYes\nYes\nMinistry of Health birth certificate + Civil Identity Number + expired Central System Review Card\nNo\nYes\nYes\nNo\nYes\nMinistry of Health birth certificate + Civil Identity Number but no Central System Review Card at all\nNo\nYes\nNo\nNo\nYes\nHospital birth report only / no documentation fo identity\nNo\nNo*\nNo\nNo\nNo\nSince 2012, the General Director of Private Education in the Ministry of Education may make a special individual exception to allow a child with only a hospital report of birth to be registred for private school, subject to certification by the Committee for Attribution of Parentage and Correction of Names in the Ministry of Justice that the family …",
+   "pdf": "195",
+   "web_words": 229,
+   "pdf_words": 0,
+   "before": "B: Amnesty International table of access to education",
+   "after": "Annex C: Email from FCDO on Article 17",
+   "before_pdf": "B: Amnesty International diagram of access to Education",
+   "where": {
+    "heading": "annex-b-amnesty-international-table-of-access-to-education",
+    "paragraph": "13.1.15",
+    "section": "Annex B: Amnesty International table of access to education",
+    "page": 60
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "statelessness-in-kuwait",
+    "paragraph": "13.1.15",
+    "section": "Annex A: Foreign, Commonwealth and Development Office Bidoon briefing paper",
+    "page": 55
+   }
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "international-response-and-potential-entry-points",
+    "paragraph": "13.1.15",
+    "section": "Annex A: Foreign, Commonwealth and Development Office Bidoon briefing paper",
+    "page": 55
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "August 2024",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 4.0",
+   "after": "Executive summary\nThe Bidoon (also spelt Bidun, Bedoon,",
+   "before_pdf": "Version 4.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.2.9.",
+   "pdf": "11.2.10",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "being issued in the sources consulted (see Bibliography).",
+   "after": "The April 2024 USCIS response stated:\nNo information",
+   "where": {
+    "heading": "renew-review-card",
+    "paragraph": "11.2.9",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.2.10.",
+   "pdf": "11.2.11",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "be available for Bidun to challenge the determinations.’",
+   "after": "The U.S. Citizenship and Immigration Services reported",
+   "where": {
+    "heading": "renew-review-card",
+    "paragraph": "11.2.10",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "11.2.11.",
+   "pdf": "11.2.12",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "remain in effect in procuring other government services.’",
+   "after": "In April 2024 when asked the reasons for",
+   "where": {
+    "heading": "renew-review-card",
+    "paragraph": "11.2.11",
+    "section": "Country information",
+    "page": 37
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "i)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "offered to this class, which include the following:",
+   "after": "Free treatment for illegal residents through the Charitable",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "for Health Care for Needy Residents of Kuwait.",
+   "after": "Free education for the children of illegal residents",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "for the Education of Needy Children in Kuwait.",
+   "after": "The issuance of birth certificates for the children",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "iv)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "term “non-Kuwaiti” in the slot for citizenship.",
+   "after": "The issuance of death certificates for illegal residents",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "v)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "term “non-Kuwaiti” in the slot for citizenship.",
+   "after": "The issuance of marriage contracts for illegal residents",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "vi)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "term “non-Kuwaiti” in the slot for citizenship.",
+   "after": "The issuance of divorce certificates for illegal residents",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "vii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "term “non-Kuwaiti” in the slot for citizenship.",
+   "after": "The issuance of driver’s licenses that includes",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "viii)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "term “non-Kuwaiti” in the slot for citizenship.",
+   "after": "Disabled illegal residents have access to the services",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "ix)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "for the Disabled in accordance with existing conditions.",
+   "after": "Eligibility to obtain all types of authorizations from",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "x)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "types of authorizations from the Department of Authentication.",
+   "after": "Enabling the employment of illegal residents in the",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "xi)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "private sectors according to the need for work.",
+   "after": "The granting of provision cards to eligible illegal",
+   "where": {
+    "heading": "treatment-of-bidoon",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 40
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Al Jahra, As Sulaybiyah police station\n6",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "political forces to hold an inclusive national conference.",
+   "after": "10/08/22\nBidoon activists protested at a",
+   "where": {
+    "heading": "treatment-of-activists",
+    "paragraph": "13.1.15",
+    "section": "Country information",
+    "page": 54
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Al Jahra, As Sulaybiyah police station\n6",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "members of the Bidoon community are granted civil",
+   "after": "rights and citizenship. They voluntarily ended their hunger",
+   "where": {
+    "heading": "treatment-of-activists",
+    "paragraph": "13.1.15",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "92",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Kuwait’ from December 2020 translated using google translate.",
+   "after": "11.1.7. Dr Susan Kennedy Nour Al",
+   "where": {
+    "heading": "review-card",
+    "paragraph": "11.1.7",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "93",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "the old form of review card (pre-2012):",
+   "after": "11.1.8. Roswitha Badry from the University",
+   "where": {
+    "heading": "review-card",
+    "paragraph": "11.1.8",
+    "section": "Country information",
+    "page": 29
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 210,
+  "different": {
+   "11.2.10": "11.2.11",
+   "11.2.11": "11.2.12"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "11.2.9"
+  ],
+  "unconfirmed": []
+ }
+}

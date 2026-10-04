@@ -1,0 +1,337 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "syria/country-policy-and-information-note-alawites-and-actual-or-perceived-assadists-syria-july-2025-accessible",
+ "pdf_sha256": "bdc8bf45e9725b2f00facb51fb29fc57e24910e368fdd92b43f6267e0664dd8c",
+ "body_sha256": "a0e28d331b06815bedb0e6191cbbe468f83d1bb0576b8c69758d40918d5a4b84",
+ "words": {
+  "web": 35484,
+  "pdf": 35512
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 7,
+   "pdf_words": 5,
+   "share": 0.000169,
+   "passages": 0,
+   "sizes": {
+    "number": 2,
+    "spelling": 2,
+    "word": 2
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 7,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "heading": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "text": {
+    "differences": 4,
+    "web_words": 5,
+    "pdf_words": 3
+   },
+   "withheld notice": {
+    "differences": 2,
+    "web_words": 0,
+    "pdf_words": 34
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 4,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2025",
+   "pdf": "1.0",
+   "pdf_date": "July 2025"
+  },
+  "section_updated": {
+   "web": [
+    "7 April 2025"
+   ],
+   "pdf": [
+    "7 April 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 276,
+   "pdf": 276,
+   "pdf_raw": 276,
+   "differ": false
+  },
+  "pictures": {
+   "web": 2,
+   "pdf": 2
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 107,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 4,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "13.2.18",
+   "pdf": "A.",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "according to the responsible parties is as follows:",
+   "after": "Non-State Armed Groups Affiliated with the Former",
+   "where": {
+    "heading": "impact",
+    "paragraph": "13.2.18",
+    "section": "Country information",
+    "page": 60
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "4.",
+   "pdf": "B.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "of direct gunfire by non-state armed groups.",
+   "after": "Armed Forces Engaged in Military Operations (Undisciplined Factions",
+   "where": {
+    "heading": "impact",
+    "paragraph": "13.2.18",
+    "section": "Country information",
+    "page": 60
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Factboo",
+   "pdf": "Factbook,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "August 2023. Accessed: 26 February 2025\nCIA World",
+   "after": "Syria, updated 16 January 2025. Accessed: 26 February",
+   "where": {
+    "heading": "cia-world-factboo",
+    "paragraph": "13.4.20",
+    "section": "Bibliography",
+    "page": 73
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "vHome,",
+   "pdf": "Home,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Syria, 2024. Accessed: 26 February 2025\nVerify-Sy",
+   "after": "no date. Accessed: 26 February 2025\nVizier\nAbout,",
+   "before_pdf": "Syria, 2024. Accessed: 26 February 2025\nVerify-Sy,",
+   "where": {
+    "heading": "verify-sy",
+    "paragraph": "13.4.20",
+    "section": "Bibliography",
+    "page": 78
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Policy",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "comment on this note, please email the Country",
+   "after": "and Policy Information Team.\nIndependent Advisory Group on",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.4.20",
+    "section": "Version control and feedback",
+    "page": 83
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Policy",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "on this note, please email the Country and",
+   "after": "Information Team.\nIndependent Advisory Group on Country Information",
+   "before_pdf": "this note, please email the Country Policy and",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.4.20",
+    "section": "Version control and feedback",
+    "page": 12
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "credibility",
+    "paragraph": "1.1.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "withheld notice",
+   "group": "withheld",
+   "verdict": "real",
+   "web": "",
+   "pdf": "The information in this section has been removed as it is restricted for internal Home Office use.",
+   "web_words": 0,
+   "pdf_words": 17,
+   "before": "it is restricted for internal Home Office use.",
+   "after": "Official – sensitive: Not for disclosure – End of section",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "1.2.4",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": true
+  }
+ ],
+ "ours": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "in respect of Alawites",
+   "pdf": "",
+   "web_words": 4,
+   "pdf_words": 0,
+   "before": "Regime.\n8. Limits on reporting, disinformation and misinformation",
+   "after": "For general commentary on the limits on reporting,",
+   "where": {
+    "heading": "limits-reporting",
+    "paragraph": "7.1.3",
+    "section": "Country information",
+    "page": 10
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 288,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "13.2.18"
+  ],
+  "unconfirmed": []
+ }
+}

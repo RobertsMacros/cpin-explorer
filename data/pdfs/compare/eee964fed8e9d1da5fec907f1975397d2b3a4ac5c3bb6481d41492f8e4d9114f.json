@@ -1,0 +1,747 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-medical-and-healthcare-issues-iran-june-2024-accessible",
+ "pdf_sha256": "eee964fed8e9d1da5fec907f1975397d2b3a4ac5c3bb6481d41492f8e4d9114f",
+ "body_sha256": "5af983e2936b5e90e8845dd8a5ec96d6e03f254fac5524ab2e0ed7ecaea41d90",
+ "words": {
+  "web": 15268,
+  "pdf": 15316
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 18,
+   "share": 0.000589,
+   "passages": 1,
+   "sizes": {
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 18
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 30,
+    "web_words": 0,
+    "pdf_words": 30
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 18
+   },
+   "list marker": {
+    "differences": 30,
+    "web_words": 0,
+    "pdf_words": 30
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "June 2024",
+   "pdf": "3.0",
+   "pdf_date": "June 2024"
+  },
+  "section_updated": {
+   "web": [
+    "14 May 2024",
+    "4 June 2024",
+    "1 May 2024",
+    "4 June 2024",
+    "4 June 2024",
+    "8 May 2024",
+    "4 June 2024",
+    "5 April 2024",
+    "14 May 2024",
+    "9 May 2024",
+    "16 May 2024",
+    "8 May 2024",
+    "8 May 2024",
+    "16 May 2024",
+    "5 April 2024",
+    "9 April 2024",
+    "9 May 2024",
+    "4 April 2024",
+    "4 June 2024",
+    "14 May 2024",
+    "4 June 2024",
+    "17 April 2024",
+    "16 May 2024",
+    "15 May 2024",
+    "14 May 2024"
+   ],
+   "pdf": [
+    "14 May 2024",
+    "4 June 2024",
+    "1 May 2024",
+    "4 June 2024",
+    "4 June 2024",
+    "8 May 2024",
+    "4 June 2024",
+    "5 April 2024",
+    "14 May 2024",
+    "9 May 2024",
+    "16 May 2024",
+    "8 May 2024",
+    "8 May 2024",
+    "16 May 2024",
+    "5 April 2024",
+    "9 April 2024",
+    "9 May 2024",
+    "4 April 2024",
+    "4 June 2024",
+    "14 May 2024",
+    "4 June 2024",
+    "17 April 2024",
+    "16 May 2024",
+    "15 May 2024",
+    "14 May 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 119,
+   "pdf": 119,
+   "pdf_raw": 119,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 73,
+   "pdf": 70
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "European Union Agency for Asylum, ‘MedCOI’ (restricted access). Copies of responses available on request. Last accessed: December 2020",
+   "web_words": 0,
+   "pdf_words": 18,
+   "before": "24 July 2023. Last accessed: 4 April 2024",
+   "after": "Frontiers,\nAbout Frontiers’, no date. Last accessed: 4",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "25.2.3",
+    "section": "Bibliography",
+    "page": 45
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "urologic surgery in Iran. Here are a few:",
+   "after": "Cystectomy: This is a surgical procedure that involves",
+   "where": {
+    "heading": "urological-cancers",
+    "paragraph": "4.11.1",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "It is typically performed to treat bladder cancer.",
+   "after": "Prostatectomy: This is the surgical removal of all",
+   "where": {
+    "heading": "urological-cancers",
+    "paragraph": "4.11.1",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "treat prostate cancer or benign prostatic hyperplasia (BPH).",
+   "after": "Ureteroscopy: A type of minimally invasive procedure in",
+   "where": {
+    "heading": "urological-cancers",
+    "paragraph": "4.11.1",
+    "section": "Country information",
+    "page": 20
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "and non-cardiac patients\nNon-Invasive Testing Lab",
+   "after": "Round-the-clock cardiac stress test by a",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "the-clock cardiac stress test by a cardiologist",
+   "after": "Round-the-clock echocardiography by a cardiologist\nEsophageal",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "cardiologist\nRound-the-clock echocardiography by a cardiologist",
+   "after": "Esophageal echocardiography by echocardiography fellowship holder\nEchocardiography of",
+   "before_pdf": "2. Round-the-clock echocardiography by a cardiologist",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "a cardiologist\nEsophageal echocardiography by echocardiography fellowship holder",
+   "after": "Echocardiography of congenital and fetal diseases by an",
+   "before_pdf": "cardiologist\n3. Esophageal echocardiography by echocardiography fellowship holder",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "world’s state-of-the-art echocardiography machines",
+   "after": "Holter monitoring of heart to diagnose heart arrhythmias",
+   "before_pdf": "world's state-of-the-art echocardiography machines",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Holter monitoring of heart to diagnose heart arrhythmias",
+   "after": "24 hour Holter monitoring of blood pressure to",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "blood pressure to determine mean daily arterial pressure",
+   "after": "Tilt table test for syncope examination.’\n5.1.",
+   "where": {
+    "heading": "cardiology",
+    "paragraph": "5.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "advanced surgical equipment, and provides the following services.",
+   "after": "Surgical treatment of cerebrovascular disorders like cerebral aneurysm",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Surgical treatment of cerebrovascular disorders like cerebral aneurysm",
+   "after": "Brain and spinal cord tumors\nEpilepsy\nNeuro-oncology",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "like cerebral aneurysm\nBrain and spinal cord tumors",
+   "after": "Epilepsy\nNeuro-oncology in a variety of malignancies",
+   "before_pdf": "cerebral aneurysm\n2. Brain and spinal cord tumors",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "cerebral aneurysm\nBrain and spinal cord tumors\nEpilepsy",
+   "after": "Neuro-oncology in a variety of malignancies\nSpinal",
+   "before_pdf": "2. Brain and spinal cord tumors\n3. Epilepsy",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Epilepsy\nNeuro-oncology in a variety of malignancies",
+   "after": "Spinal cord disorders\nVarious types of brain injuries",
+   "before_pdf": "4. Neuro-oncology in a variety of malignancies",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "in a variety of malignancies\nSpinal cord disorders",
+   "after": "Various types of brain injuries and hemorrhage following",
+   "before_pdf": "a variety of malignancies\n5. Spinal cord disorders",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "hemorrhage following accidents and falls (traumatic brain injury)",
+   "after": "Congenital disorders\nMaxillofacial problems\nNerve biopsy\nIntraoperative neurophysiological",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "accidents and falls (traumatic brain injury)\nCongenital disorders",
+   "after": "Maxillofacial problems\nNerve biopsy\nIntraoperative neurophysiological monitoring (IONM)",
+   "before_pdf": "and falls (traumatic brain injury)\n7. Congenital disorders",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "9.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "falls (traumatic brain injury)\nCongenital disorders\nMaxillofacial problems",
+   "after": "Nerve biopsy\nIntraoperative neurophysiological monitoring (IONM)\nVertebral augmentation",
+   "before_pdf": "brain injury)\n7. Congenital disorders\n8. Maxillofacial problems",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "brain injury)\nCongenital disorders\nMaxillofacial problems\nNerve biopsy",
+   "after": "Intraoperative neurophysiological monitoring (IONM)\nVertebral augmentation for compression",
+   "before_pdf": "Congenital disorders\n8. Maxillofacial problems\n9. Nerve biopsy",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Maxillofacial problems\nNerve biopsy\nIntraoperative neurophysiological monitoring (IONM)",
+   "after": "Vertebral augmentation for compression fractures\nVarious types of",
+   "before_pdf": "9. Nerve biopsy\n10. Intraoperative neurophysiological monitoring (IONM)",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "12.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "neurophysiological monitoring (IONM)\nVertebral augmentation for compression fractures",
+   "after": "Various types of intervertebral disc herniation.’\n9.1.",
+   "before_pdf": "monitoring (IONM)\n11. Vertebral augmentation for compression fractures",
+   "where": {
+    "heading": "epilepsy-and-other-neurological-conditions",
+    "paragraph": "9.1.2",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "objectives of this clinic.\nThe diagnostic procedures include:",
+   "after": "Patient medical history\nPreliminary examinations\nBasic chest radiography",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "clinic.\nThe diagnostic procedures include:\nPatient medical history",
+   "after": "Preliminary examinations\nBasic chest radiography\nPulmonary function tests",
+   "before_pdf": "The diagnostic procedures include:\n1. Patient medical history",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "diagnostic procedures include:\nPatient medical history\nPreliminary examinations",
+   "after": "Basic chest radiography\nPulmonary function tests\nSpirometry\nCT",
+   "before_pdf": "include:\n1. Patient medical history\n2. Preliminary examinations",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Patient medical history\nPreliminary examinations\nBasic chest radiography",
+   "after": "Pulmonary function tests\nSpirometry\nCT lung screening\nBronchoscopy",
+   "before_pdf": "history\n2. Preliminary examinations\n3. Basic chest radiography",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 35
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Preliminary examinations\nBasic chest radiography\nPulmonary function tests",
+   "after": "Spirometry\nCT lung screening\nBronchoscopy\nSpectral biopsy\nDiagnosis,",
+   "before_pdf": "3. Basic chest radiography\n4. Pulmonary function tests",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "examinations\nBasic chest radiography\nPulmonary function tests\nSpirometry",
+   "after": "CT lung screening\nBronchoscopy\nSpectral biopsy\nDiagnosis, control",
+   "before_pdf": "chest radiography\n4. Pulmonary function tests\n5. Spirometry",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "radiography\nPulmonary function tests\nSpirometry\nCT lung screening",
+   "after": "Bronchoscopy\nSpectral biopsy\nDiagnosis, control and, in some",
+   "before_pdf": "function tests\n5. Spirometry\n6. CT lung screening",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "8.",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Pulmonary function tests\nSpirometry\nCT lung screening\nBronchoscopy",
+   "after": "Spectral biopsy\nDiagnosis, control and, in some cases,",
+   "before_pdf": "5. Spirometry\n6. CT lung screening\n7. Bronchoscopy",
+   "where": {
+    "heading": "tuberculosis-tb-and-other-lung-diseases",
+    "paragraph": "19.1.4",
+    "section": "Country information",
+    "page": 36
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 143,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

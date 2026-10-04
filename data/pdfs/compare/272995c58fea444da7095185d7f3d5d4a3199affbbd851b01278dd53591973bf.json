@@ -1,0 +1,346 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-internal-relocation-july-2024-accessible",
+ "pdf_sha256": "272995c58fea444da7095185d7f3d5d4a3199affbbd851b01278dd53591973bf",
+ "body_sha256": "4730e38e39f7c7966a6242d912599023ee4bfff66a156e106252f88b53d57d3b",
+ "words": {
+  "web": 49309,
+  "pdf": 46867
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 2.1e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 10,
+    "web_words": 2315,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "picture in words": {
+    "differences": 4,
+    "web_words": 577,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 6,
+    "web_words": 1738,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "July 2024",
+   "pdf": "3.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [
+    "15 December 2023"
+   ],
+   "pdf": [
+    "15 December 2023"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 6,
+   "pdf": 6,
+   "web_notices": 6,
+   "pdf_notices": 6
+  },
+  "footnotes": {
+   "web": 566,
+   "pdf": 566,
+   "pdf_raw": 566,
+   "differ": false
+  },
+  "pictures": {
+   "web": 11,
+   "pdf": 21
+  },
+  "tables": {
+   "web": 9,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 203,
+   "pdf": 151
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "ecurityy",
+   "pdf": "81ecurityy",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "later, in October 2022, several Western embassies issued",
+   "after": "alerts, and the US arranged for the family",
+   "where": {
+    "heading": "Insecurity_and_crime",
+    "paragraph": "17.11.2",
+    "section": "Annexe A: City and state information",
+    "page": 81
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Strata\nPrimary male\nPrimary female\nPrimary all\nJunior secondary male\nJunior secondary female\nJunior secondary all\nSenior secondary male\nSenior secondary female\nSenior secondary all\nAll male\nAll female\nAll\nNigeria\n66.2\n65.5\n65.8\n38.7\n37.8\n38.2\n32.2\n35.4\n33.8\n71.6\n71\n71.3\nUrban\n76.8\n77\n76.9\n51.5\n50.9\n51.2\n48\n48.5\n48.3\n84.2\n85\n84.6\nRural\n61.3\n60\n60.7\n30.5\n31.2\n24.1\n27.4\n25.7\n65.4\n63.8\n64.6\nAbia\n81.5\n82.6\n82\n55.6\n55.3\n55.5\n50.9\n57.6\n54.4\n87.4\n88.7\n88.1\nAdamawa\n65.7\n65.5\n65.6\n28.9\n24.2\n26.8\n22.1\n25\n23.4\n71.6\n68.2\n70\nAkwa Ibom\n77.3\n74.1\n75.8\n46.8\n62.7\n53.1\n45.8\n53.2\n50\n84.9\n85.8\n85.3\nAnambra\n78\n82.9\n80.3\n48.9\n47.9\n48.5\n37.7\n42.3\n40\n85\n89.5\n87.1\nBauchi\n56.3\n51\n53.6\n18.6\n16.5\n17.5\n11.7\n17.1\n14.7\n52.5\n51.1\n51.8\nBayelsa\n78.4\n75.4\n76.9\n57.1\n55\n56.2\n43.9\n50.5\n47.4\n83.3\n79.6\n815\nBenue\n69.9\n64.7\n67.3\n30.7\n35.1\n32.6\n25.8\n28.3\n26.9\n79.5\n75.7\n77.7\nBorno\nCross River\n70.5\n75.9\n73.1\n43.9\n51.8\n47.9\n50.2\n43\n46.9\n83.7\n81.5\n82.6\nDelta\n72.9\n78.8\n76.2\n48.9\n46.6\n47.7\n30.7\n54\n43\n85.7\n89.5\n87.7\nEbonyi\n79.1\n70.9\n75.1\n32.2\n31.7\n31.9\n25.1\n23.6\n24.3\n86.1\n78.4\n823\nEdo\n78.8\n77.9\n78.3\n39.5\n50.9\n45.3\n43\n49.4\n46.3\n85\n86.5\n85.8\nEkiti\n79.2\n81.2\n80.1\n54.4\n54.5\n54.5\n54.9\n55\n55\n86.9\n89.9\n88.2\nEnugu\n81.1\n81.8\n59.7\n52.8\n56.3 …",
+   "pdf": "",
+   "web_words": 884,
+   "pdf_words": 0,
+   "before": "showing net attendance by school level and sex:",
+   "after": "12.6.2 The Federal Ministry of Education’",
+   "where": {
+    "heading": "girls",
+    "paragraph": "12.6.1",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Table 7.10: Access to electricity and primary source of electricity (in percent to total number of households)\nStrata\nAccess to electricity\nNational Grid\nMini Grid\nSolar home system/solar lantern\nRechargeable battery/inverters\nOther\nNigeria\n63.7\n82.2\n1.4\n15.9\n0.2\n0.4\n0\nUrban\n90.6\n91.6\n0.5\n7.5\n0.1\n0.3\n0\nRural\n46\n70\n2.4\n26.7\n0.3\n0.5\n0\nAbia\n91\n86.1\n1.3\n12.6\n0\n0\n0\nAdamawa\n31.5\n77.8\n0\n22.2\n0\n0\n0\nAkwa Ibom\n70.2\n60.7\n0\n39\n0.2\n0\n0\nAnambra\n90.9\n92.2\n0\n7.6\n0.1\n0\n0\nBauchi\n25.8\n88.9\n0\n7.7\n3.3\n0\n0\nBayelsa\n73.8\n46.2\n30.2\n23.6\n0\n0\n0\nBenue\n40.3\n74.6\n0\n25.4\n0\n0\n0\nBarno\nCross River\n50.9\n48.8\n0\n50.4\n0.8\n0\n0\nDelta\n77.1\n57\n1.3\n36.2\n0.2\n5\n0.3\nEbonyi\n38.4\n55.3\n0\n44.7\n0\n0\n0\nEdo\n80.1\n70.7\n1.1\n25.7\n0.3\n2.3\n0\nEkiti\n75.3\n90.8\n0\n9.2\n0\n0\n0\nEnugu\n74\n87\n0\n12.3\n0.7\n0\n0\nGombe\n38.2\n96\n0\n4\n0\n0\n0\nImo\n69.6\n55.3\n0\n44.4\n0\n0.3\n0\nJigawa\n24.9\n82\n0\n17.2\n0.8\n0\n0\nKaduna\n53.3\n93.5\n0\n6.5\n0\n0\n0\nKano\n49.7\n99.4\n0\n0.6\n0\n0\n0\nKatsina\n31.7\n89.8\n0\n8.9\n1.2\n0\n0\nKebbi\n33.7\n90.4\n0\n9.6\n0\n0\n0\nKogi\n72.1\n82.6\n0\n17.2\n0\n0.2\n0\nKwara\n78.2\n93.1\n0\n6.3\n0\n0.6\n0\nLagos\n98.7\n98.6\n0\n1.3\n0.2\n0\n0\nNasarawa\n43.5\n83.6\n0\n14.1\n1.7\n0.6\n0\nNiger\n53.2\n96.2\n0\n3.8\n0\n0\n0\nOgun\n83\n80.9\n0\n19.1\n0\n0\n0\nOndo\n65.8\n69.3\n0\n29.8\n0\n0.8\n0\nOsun\n70\n94.4\n0\n5.5\n0\n0.1\n0\nOyo\n74.1\n89\n0\n10. …",
+   "pdf": "",
+   "web_words": 475,
+   "pdf_words": 0,
+   "before": "primary source of electricity, which is reproduced below:",
+   "after": "10.5.3 The following table shows the",
+   "where": {
+    "heading": "electricity",
+    "paragraph": "10.5.2",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Strata\nNational grid: Day\nNational grid: 6pm-10pm\nGenerator: Day\nGenerator: 6pm-10pm\nOther: Day\nOther: 6pm-10pm\nNigeria\n6.8\n1.8\n4.1\n2.7\n11\n3\nUrban\n7.2\n1.8\n4.6\n2.9\n9.7\n2.9\nRural\n6.1\n1.8\n3.9\n2.7\n11.5\n3.1\nAbia\n3.6\n1.6\n1.6\n3\n3.1\n3\nAdamawa\n14.7\n2.9\n6\n2.8\nAkwa Ibom\n3.1\n1.2\n4.4\n3\n12\n4\nAnambra\n4.4\n1.7\n2.4\n1.6\n15\n3\nBauchi\n2.7\n1.2\n1.2\n2.2\n0.3\n4\nBayelsa\n3.5\n0.9\n10\n3.3\n9\n2.1\nBenue\n8.8\n2.2\n5.6\n2.4\nBorno\nCross River\n4.8\n1.6\n5.4\n3.3\n8\n3.2\nDelta\n9.1\n2.8\n3.5\n3.4\n5.8\n3.5\nEbonyi\n2.9\n1.4\n1.2\n1.7\nEdo\n5.7\n1.7\n4.8\n3.1\n7.2\n3.8\nEkiti\n4.6\n1.9\n1.7\n1.9\nEnugu\n9.9\n2.7\n5.6\n2.9\n13.9\n4\nGombe\n7.5\n1.8\n2.8\n2.1\nImo\n2.9\n0.8\n4.2\n2.7\n2\n0\nJigawa\n5.2\n2.5\n7.2\n1.9\n8\n4\nKaduna\n7.9\n2\n1.3\n1.2\nKano\n6.8\n2.3\n4\n4\nKatsina\n8.3\n2.7\n6.9\n2.1\n10\n4\nKebbi\n15.1\n3.5\n5.1\n2.7\nKogi\n6.8\n0.9\n3.4\n1.8\n8\n4\nKwara\n4.2\n1.1\n6.2\n3\n5\n2.2\nLagos\n7.4\n1.6\n4\n1.9\n12\n4\nNasarawa\n11.7\n2.6\n4.1\n2.5\n10,8\n2.7\nNiger\n8.4\n2.8\n5.1\n3.7\nOgun\n5.2\n1.3\n3.8\n2.2\nOndo\n8\n1.9\n3.4\n2.9\n2\n2.2\nOsun\n10\n1.7\n4.8\n2.5\n0\n0\nOyo\n7.7\n1.2\n4.7\n2.6\n14.2\n3.7\nPlateau\n5.5\n2.5\n0.9\n2.2\n6.9\n2.8\nRivers\n5.9\n1.5\n3.7\n3\n18.4\n3.5\nSokoto\n3.7\n2.1\n3.1\n2.2\nTaraba\n13.5\n3.3\n5.5\n3.4\n11.5\n4\nYobe\n17.3\n3.4\n8.2\n3.4\nZamfara\n13.2\n2.7\n7.8\n2.5\nFCT\n5.7\n1.7\n1.4\n2\n12\n4",
+   "pdf": "",
+   "web_words": 421,
+   "pdf_words": 0,
+   "before": "average number of hours of electricity per day:",
+   "after": "10.6 Water, Sanitation and Hygiene (WASH)\n10.",
+   "where": {
+    "heading": "electricity",
+    "paragraph": "10.5.3",
+    "section": "Country information",
+    "page": 43
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "State\nPrimary (age 6-11)\nLower Secondary (age 12-14)\nUpper Secondary (age 15-17)\nNational\n73\n68\n54\nAbia\n94\n93\n76\nAdamawa\n73\n59\n47\nAkwa Ibom\n94\n84\n67\nAnambra\n99\n94\n90\nBauchi\n30\n25\n17\nBayelsa\n86\n86\n75\nBenue\n74\n70\n45\nBorno\n7 LGAs)\n51\n48\n37\nCross River\n93\n82\n60\nDelta\n92\n88\n69\nEbonyi\n96\n92\n87\nEdo\n90\n86\n78\nEkiti\n95\n91\n71\nEnugu\n95\n88\n73\nGombe\n50\n49\n37\nImo\n98\n89\n83\nJigawa\n38\n31\n19\nKaduna\n71\n60\n49\nKano\n69\n64\n49\nKatsina\n63\n47\n32\nKebbi\n40\n32\n24\nKogi\n84\n78\n63\nKwara\n81\n71\n66\nLagos\n98\n89\n85\nNasarawa\n69\n62\n47\nNiger\n59\n59\n50\nOgun\n86\n80\n62\nOndo\n91\n87\n73\nOsun\n92\n84\n72\nOyo\n91\n82\n64\nPlateau\n79\n70\n51\nRivers\n96\n93\n76\nSokoto\n36\n33\n22\nTaraba\n63\n58\n38\nYobe\n40\n40\n31\nZamfara\n45\n43\n36\nFCT\n91\n86\n67",
+   "pdf": "",
+   "web_words": 152,
+   "pdf_words": 0,
+   "before": "school in a table, which is reproduced below:",
+   "after": "12.2.3 Vanguard, a privately-owned news",
+   "where": {
+    "heading": "participation-in-education",
+    "paragraph": "12.2.2",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Not deprived %\nDeprived %\nAbia\n62\n38\nAdamawa\n62\n68\nAkwa Ibom\n36\n64\nAnambra\n62\n38\nBauchi\n52\n48\nBayelsa\n22\n78\nBenue\n20\n80\nBorno\n91\n9\nCross River\n19\n81\nDelta\n37\n63\nEbonyi\n29\n71\nEdo\n68\n32\nEkiti\n24\n76\nEnugu\n43\n57\nFCT\n54\n46\nGombe\n46\n54\nImo\n39\n61\nJigawa\n88\n12\nKaduna\n36\n64\nKano\n69\n31\nKatsina\n61\n39\nKebbi\n32\n68\nKogi\n39\n61\nKwara\n58\n42\nLagos\n69\n31\nNasarawa\n29\n71\nNiger\n50\n50\nOgun\n73\n27\nOndo\n49\n51\nOsun\n53\n47\nOyo\n43\n57\nPlateau\n27\n73\nRivers\n42\n58\nSokoto\n51\n49\nTaraba\n14\n86\nYobe\n73\n27\nZamfara\n49\n51\nNational\n49\n51",
+   "pdf": "",
+   "web_words": 115,
+   "pdf_words": 0,
+   "before": "in access to clean drinking water as follows:",
+   "after": "10.6.2 The same source showed the",
+   "where": {
+    "heading": "water-sanitation-and-hygiene-wash",
+    "paragraph": "10.6.1",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Not deprived %\nDeprived %\nAbia\n33\n67\nAdamawa\n14\n86\nAkwa Ibom\n30\n70\nAnambra\n44\n56\nBauchi\n35\n65\nBayelsa\n5\n95\nBenue\n10\n90\nBorno\n53\n47\nCross River\n18\n82\nDelta\n27\n73\nEbonyi\n13\n87\nEdo\n58\n42\nEkiti\n15\n85\nEnugu\n10\n90\nFCT\n37\n63\nGombe\n25\n75\nImo\n21\n79\nJigawa\n27\n73\nKaduna\n27\n73\nKano\n49\n51\nKatsina\n39\n61\nKebbi\n21\n79\nKogi\n13\n87\nKwara\n25\n75\nLagos\n72\n28\nNasarawa\n20\n80\nNiger\n29\n71\nOgun\n69\n31\nOndo\n34\n66\nOsun\n35\n65\nOyo\n21\n79\nPlateau\n16\n84\nRivers\n23\n77\nSokoto\n40\n60\nTaraba\n17\n83\nYobe\n27\n73\nZamfara\n21\n79\nNational\n31\n69",
+   "pdf": "",
+   "web_words": 108,
+   "pdf_words": 0,
+   "before": "households by deprivation in sanitary facilities as follows:",
+   "after": "10.6.3 The OCHA situation report 2023",
+   "where": {
+    "heading": "water-sanitation-and-hygiene-wash",
+    "paragraph": "10.6.2",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 8 Unemployment by Sex, Urban-Rural, Educational Attainment, and Age\nUnemployment rate (percent)\nNational\n4.2\nMale\n3.5\nFemale\n5.0\nUrban\n5.9\nRural\n2.5\nNo education\n2.5\nPrimary\n3.0\nJunior secondary\n3.7\nSenior secondary\n5.4\nPost secondary\n8.0\n15 - 24\n7.2\n25 - 34\n4.7\n35 - 44\n2.9\n45 - 54\n1.9\n55 - 64\n1.9\n65+\n2.3",
+   "pdf": "",
+   "web_words": 68,
+   "pdf_words": 0,
+   "before": "to 24.\nThe bar chart is reproduced below:",
+   "after": "7.1.6 The report also provided a",
+   "where": {
+    "heading": "Labour_force_participation",
+    "paragraph": "7.1.5",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Underemployment rate (percent)\nNational\n11.8\nMale\n8.4\nFemale\n15.3\nUrban\n10.3\nRural\n13.2\nNo education\n12.5\nPrimary\n13.8\nJunior secondary\n15.6\nSenior secondary\n10.0\nPost secondary\n8.5\n15 - 24\n19.3\n25 - 34\n13.8\n35 - 44\n9.0\n45 - 54\n6.8\n55 - 64\n5.0\n65+\n1.4",
+   "pdf": "",
+   "web_words": 58,
+   "pdf_words": 0,
+   "before": "were underemployed.\nThe bar chart is reproduced below:",
+   "after": "7.1.7 For more data and information",
+   "where": {
+    "heading": "Labour_force_participation",
+    "paragraph": "7.1.6",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Figure 3: Employment-to-Population Ratio by Sex and Urban-Rural\nNational\n77.1%\nMale\n79.3%\nFemale\n74.9%\nUrban\n73.8%\nRural\n80.5%",
+   "pdf": "",
+   "web_words": 26,
+   "pdf_words": 0,
+   "before": "employed), with disaggregated findings for sex and location:",
+   "after": "7.1.3 The NBS labour force survey",
+   "where": {
+    "heading": "Labour_force_participation",
+    "paragraph": "7.1.2",
+    "section": "Country information",
+    "page": 25
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Highest number in one state is 1,025]",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "from 1 January to 1 July 2023:\nLegend: [",
+   "after": "13.4.2 The data presented in the",
+   "before_pdf": "from 1 January to 1 July 2023:\nLegend",
+   "where": {
+    "heading": "Fatalities_by_state",
+    "paragraph": "13.4.1",
+    "section": "Country information",
+    "page": 62
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 677,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

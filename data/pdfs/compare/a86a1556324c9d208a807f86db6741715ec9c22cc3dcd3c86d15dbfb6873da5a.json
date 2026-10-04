@@ -1,0 +1,352 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "ukraine/country-policy-and-information-note-humanitarian-situation-ukraine-january-2025-accessible",
+ "pdf_sha256": "a86a1556324c9d208a807f86db6741715ec9c22cc3dcd3c86d15dbfb6873da5a",
+ "body_sha256": "c9baaf057fdabea72e805813a8e81d4f70212addef5426ba6396f310d64a39e9",
+ "words": {
+  "web": 23111,
+  "pdf": 23126
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 12,
+   "web_words": 70,
+   "pdf_words": 11
+  },
+  "moved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 69
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "January 2025",
+   "pdf": "1.0",
+   "pdf_date": "January 2025"
+  },
+  "section_updated": {
+   "web": [
+    "27 January 2025"
+   ],
+   "pdf": [
+    "27 January 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 258,
+   "pdf": 252,
+   "pdf_raw": 258,
+   "differ": false
+  },
+  "pictures": {
+   "web": 18,
+   "pdf": 18
+  },
+  "tables": {
+   "web": 3,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 52,
+   "pdf": 51
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "WHO, Statement – Renewed focus on health critical 12 September 2024\nOCHA, Ukraine, Situation Reports (unocha.org) (Analysis), 30 October 2024\nXe Currency converter, 129,200,000 USD to GBP - Convert US Dollars..., 25 January 2025\nOCHA, Ukraine, Situation Reports (unocha.org) (funding overview by cluster) 30 October 2024\nOCHA, Ukraine, Situation Reports (unocha.org) , (Humanitarian response) 30 October 2024\nHOT, Ukraine, Humanitarian OpenStreetMap Team",
+   "pdf": "",
+   "web_words": 64,
+   "pdf_words": 0,
+   "before": "Care (SSA) (Ukraine), as of 10 September 2024",
+   "after": "OCHA, Ukraine Data Explorer (humdata.org), 15 April",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "14.1.12",
+    "section": "Version control and feedback",
+    "page": 43
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Region (Romanised Ukrainian)\nAnglicised name",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Ivano-Frankivsk\nKharkivska oblast\nKharkiv\nKhersonska oblast\nKherson",
+   "after": "Khmelnytska oblast\nKhmelnytskyi\nKirovohradska oblast\nKirovohrad\nKyivska oblast",
+   "where": {
+    "heading": "regions",
+    "paragraph": "8.3.1",
+    "section": "Country information",
+    "page": 13
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Explorer.",
+   "pdf": "Explorer13.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the Coordination of Humanitarian Affairs (OCHA) Ukraine Data",
+   "after": "8.4.4 As of September 2024, the",
+   "where": {
+    "heading": "population",
+    "paragraph": "8.4.3",
+    "section": "Country information",
+    "page": 15
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "million]",
+   "pdf": "million184]",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and September 2024, $129.2 million [£103.5",
+   "after": "in funding for health was received and health",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.7",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "received",
+   "pdf": "received185",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "103.5 million] in funding for health was",
+   "after": "and health care support was given to 2",
+   "before_pdf": "103.5 million184] in funding for health was",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.7",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "people.",
+   "pdf": "people186.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "health care support was given to 2 million",
+   "after": "12.7.8 The map below, published by",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.7",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "maps,",
+   "pdf": "maps187,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "group who gather data to produce publicly available",
+   "after": "as of 15 April 2024, showed the estimated",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.8",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Ukraine.",
+   "pdf": "Ukraine243.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "to 44 and 53 of the Constitution of",
+   "after": "This was initially for 30 days, but has",
+   "where": {
+    "heading": "Freedom_of_Movement",
+    "paragraph": "14.1.2",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "9",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "oblast\nZakapattia\nZaporizka oblast\nZaporizhzhia\nZhytomyrska oblast\nZhytomyr",
+   "after": "8.3.2 In July 2024, the House",
+   "where": {
+    "heading": "regions",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "168",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "represent the percentage of IDPs adopting each strategy:",
+   "after": "12.6.5 In January 2025, the UNHCR",
+   "where": {
+    "heading": "Poverty",
+    "paragraph": "12.6.5",
+    "section": "Country information",
+    "page": 42
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "182",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "enhanced security measures to adapt to constant shelling.’",
+   "after": "12.7.6 In October 2024 OCHA reported, ‘",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.6",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "183",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "challenges to access health care in the region.’",
+   "after": "12.7.7 The same source noted that",
+   "where": {
+    "heading": "Healthcare",
+    "paragraph": "12.7.7",
+    "section": "Country information",
+    "page": 44
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 219,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "12.3.1",
+   "12.3.2",
+   "12.6.1",
+   "12.6.2",
+   "12.6.3",
+   "12.6.4",
+   "12.6.5",
+   "12.6.6"
+  ],
+  "unconfirmed": []
+ }
+}

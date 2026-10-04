@@ -1,0 +1,595 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "yemen/country-policy-and-information-note-security-and-humanitarian-situation-yemen-december-2021-accessible-version",
+ "pdf_sha256": "950ab7f29eb8101ffd38fb3e3c242baa531df589396912553c5421c5efb37642",
+ "body_sha256": "f5471406195c3f904548a8ce944563e908b428483af241e7da0c95257803af42",
+ "words": {
+  "web": 20648,
+  "pdf": 20180
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 2.4e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 16,
+    "web_words": 322,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "bibliography": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "picture in words": {
+    "differences": 7,
+    "web_words": 91,
+    "pdf_words": 0
+   },
+   "table for a picture": {
+    "differences": 9,
+    "web_words": 231,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 7,
+   "web_words": 4,
+   "pdf_words": 7
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "March 2025",
+   "pdf": "1.0",
+   "pdf_date": "March 2025"
+  },
+  "section_updated": {
+   "web": [
+    "18 March 2025"
+   ],
+   "pdf": [
+    "18 March 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 155,
+   "pdf": 155,
+   "pdf_raw": 155,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 16
+  },
+  "tables": {
+   "web": 12,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 72,
+   "pdf": 44
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Policy",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Violators / Subjects, no date. Accessed 19 November 2024",
+   "after": "Center for the New South (PCNS),\nAbout Us,",
+   "where": {
+    "heading": "center-for-the-new-south-pcns",
+    "paragraph": "13.1.14",
+    "section": "Bibliography",
+    "page": 53
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Week\nMonth\nNumber\n1\nJan\n49\n2\nJan\n95\n3\nJan\n92\n4\nJan\n77\n5\nFeb\n77\n6\nFeb\n72\n7\nFeb\n71\n8\nFeb\n56\n9\nMar\n166\n10\nMar\n45\n11\nMar\n47\n12\nMar\n41\n13\nMar\n27\n14\nApr\n34\n15\nApr\n21\n16\nApr\n57\n17\nApr\n95\n18\nMay\n59\n19\nMay\n66\n20\nMay\n65\n21\nMay\n91\n22\nMay\n84\n23\nJune\n50\n24\nJune\n15\n25\nJune\n23\n26\nJune\n64\n27\nJuly\n72\n28\nJuly\n48\n29\nJuly\n100\n30\nJuly\n47\n31\nAugust\n111\n32\nAugust\n94\n33\nAugust\n67\n34\nAugust\n110\n35\nAugust\n42\n36\nSeptember\n212\n37\nSeptember\n104\n38\nSeptember\n53\n39\nSeptember\n91\n40\nOctober\n40\n41\nOctober\n35\n42\nOctober\n81\n43\nOctober\n78\n44\nOctober\n53\n45\nNovember\n63\n46\nNovember\n93\n47\nNovember\n102\n48\nNovember\n72\n49\nDecember\n66\n50\nDecember\n73\n51\nDecember\n66\n52\nDecember\n42\n53\nJanuary\n19",
+   "pdf": "",
+   "web_words": 79,
+   "pdf_words": 0,
+   "before": "represent 6 individuals) displaced per week in 2024:",
+   "after": "12.1.14 The same source stated: ‘From",
+   "where": {
+    "heading": "Displacement",
+    "paragraph": "12.1.13",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Map shows Houthis control the west, the centre is split with Islah, PLC and allies in control to the north and STC and allies in control to the south. The eastern portion of the centre is unclear and the far east bordering Oman is controlled by Isla, PLC and allies]",
+   "pdf": "",
+   "web_words": 50,
+   "pdf_words": 0,
+   "before": "Yemen, showing areas of control in August 2023:",
+   "after": "10.2.2 The ACLED YCO published an",
+   "where": {
+    "heading": "Control_of_territory",
+    "paragraph": "10.2.1",
+    "section": "Country information",
+    "page": 27
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Incidents impacting civilians (approximate)\nCivilian fatalities\nCivilian injuries\nQ1 2022\n500\n352\n743\nQ2 2022\n340\n159\n298\nQ3 2022\n360\n129\n350\nQ4 2022\n300\n129\n336\nQ1 2023\n340\n140\n441\nQ2 2023\n290\n136\n282\nQ3 2023\n275\n122\n228",
+   "pdf": "",
+   "web_words": 40,
+   "pdf_words": 0,
+   "before": "the end of the third quarter of 2023:",
+   "after": "10.4.3 The CIMP 2023 Annual Report",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.2",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "2003\n2004\nSa’dah\n608\n155\nHudaydah\n193\n326\nTa’izz\n214\n189\nBayda\n73\n55\nMa’rib\n67\n50\nIbib\n52\n55\nJawf\n59\n46\nAden\n64\n20\nShabwah\n41\n30\nAbyan\n43\n28\nDali’\n31\n39\nSana’a\n14\n51\nLahij\n35\n29\nAmran\n43\n17\nSana’a City\n6\n47\nHajjah\n10\n25\nDhamar\n19\n13\nRaymah\n6\n11\nMahwit\n0\n3",
+   "pdf": "",
+   "web_words": 36,
+   "pdf_words": 0,
+   "before": "reported in each governorate in 2023 and 2024:",
+   "after": "10.5.10 The graph above indicates that",
+   "where": {
+    "heading": "Landmines_and_other",
+    "paragraph": "10.5.9",
+    "section": "Country information",
+    "page": 8
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Year\narmed conflict\nnatural disaster\n2019\n58,200\n9,800\n2020\n74,500\n19,900\n2021\n56,900\n14,700\n2022\n39,400\n24,400\n2023\n10,800\n33,800",
+   "pdf": "",
+   "web_words": 30,
+   "pdf_words": 0,
+   "before": "conflict (and natural disasters) between 2019 and 2023:",
+   "after": "12.1.2 The same source stated: ‘In",
+   "where": {
+    "heading": "Displacement",
+    "paragraph": "12.1.1",
+    "section": "Country information",
+    "page": 41
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Governorate\n2023\n2024\nAden\n4\n0\nAl Mahwit\n2\n2\nAmran\n1\n0\nMarib\n6\n8\nRaymah\n1\n0\nSanaa\n3\n0\nSanaa City\n3\n0\nSocotra\n0\n1",
+   "pdf": "",
+   "web_words": 17,
+   "pdf_words": 0,
+   "before": "it documented in 2023 and 2024, by governorate:",
+   "after": "13.1.9 For further information regarding the",
+   "where": {
+    "heading": "Freedom_of_movement",
+    "paragraph": "13.1.8",
+    "section": "Country information",
+    "page": 47
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Population distribution across Yemen[(https://www.cartograf.fr/pays/img/yemen/carte_yemen_densite_population.png)",
+   "pdf": "",
+   "web_words": 16,
+   "pdf_words": 0,
+   "before": "below undated map, showing population distribution across Yemen:",
+   "after": "8. Background to the conflict\n8.1.1",
+   "where": {
+    "heading": "Demography",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 14
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n16.4 million\nWomen\n24%\nGirls\n25%\nMen\n24%\nBoys\n26%\nWith disability\n15%",
+   "pdf": "",
+   "web_words": 10,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "10.1.2 A Technical Manual published in",
+   "where": {
+    "heading": "General_security_and",
+    "paragraph": "10.1.1",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": "13.1.14",
+    "section": "Version control and feedback",
+    "page": 57
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n6.9 million\nWomen\n25%\nChildren\n50%\nWith disability\n15%",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "10.6.4 The same source also stated: ‘",
+   "where": {
+    "heading": "landmines-and-other-explosive-remnants-of-warfare-erw",
+    "paragraph": "10.6.3",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Conflict reasons\n61%\nEconomic reasons\n38%\nNatural hazard reasons\n1%",
+   "pdf": "",
+   "web_words": 7,
+   "pdf_words": 0,
+   "before": "pie chart, showing the reasons for the displacements:",
+   "after": "12.1.12 In October 2024, the United",
+   "where": {
+    "heading": "Displacement",
+    "paragraph": "12.1.11",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Yemen zones of control (page 22)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "control between 1 July and 30 September 2024:",
+   "after": "10.2.4 In January 2025, the Humanitarian",
+   "where": {
+    "heading": "Control_of_territory",
+    "paragraph": "10.2.3",
+    "section": "Country information",
+    "page": 28
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Density of civilian casulaties (page 4)",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "as a result of armed violence in 2024:",
+   "after": "10.5.9 The CIMP 2024 annual report",
+   "where": {
+    "heading": "Landmines_and_other",
+    "paragraph": "10.5.8",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "table for a picture",
+   "group": "picture",
+   "verdict": "real",
+   "web": "People in need\n7.3 million\nBoys\n51%\nGirls\n49%\nWith disability\n15%",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "and the severity of those needs, by location:",
+   "after": "10.1.5 In January 2024, the Civilian",
+   "where": {
+    "heading": "General_security_and",
+    "paragraph": "10.1.4",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Areas of control in Yemen",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "authority’ refer to areas controlled by Houthi forces:",
+   "after": "10.3 Nature of violence\n10.3.1",
+   "where": {
+    "heading": "Control_of_territory",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 29
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Human needs report (page 9)",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "geography and type between January and October 2023:",
+   "after": "10.5.2 The following table was produced",
+   "where": {
+    "heading": "Landmines_and_other",
+    "paragraph": "10.5.1",
+    "section": "Country information",
+    "page": 33
+   }
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "map of Yemen",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Yemen, showing its 22 governorates and their capitals:",
+   "after": "7.2 Demography\n7.2.1 The US",
+   "where": {
+    "heading": "geography",
+    "paragraph": "7.1.4",
+    "section": "Country information",
+    "page": 13
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Total",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "of security event\nEvents 2023\nEvents 2024\nEvents",
+   "after": "Fatalities 2023\nFatalities 2024\nFatalities Total\nBattles\n987",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Total",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Events Total\nFatalities 2023\nFatalities 2024\nFatalities Total",
+   "after": "Battles\n987\n613\n1,600\n1,172\n1,",
+   "before_pdf": "2024\nEvents\nFatalities 2023\nFatalities 2024\nFatalities\nTotal",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "back to contents",
+   "group": "furniture",
+   "verdict": "artefact",
+   "web": "Back to Contents",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "and influence, compared with AQAP, but remained active.’",
+   "after": "10. Security situation 2022-2024\n10.1 General",
+   "where": {
+    "heading": "islamic-state-in-yemen-isy",
+    "paragraph": "1.1.1",
+    "section": "Country information",
+    "page": 22
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2,237",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Explosions / remote violence\n1,402\n835\n2,237",
+   "after": "634\n337\n971\nViolence against civilians\n681\n703",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "1,387",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "1\n18\nStrategic developments\n691\n696\n1,387",
+   "after": "38\n26\n64\nTotal\n6,103\n10,957",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "971",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "violence\n1,402\n835\n2,237\n634\n337",
+   "after": "971\nViolence against civilians\n681\n703\n1,384",
+   "before_pdf": "402\n835\n2,237\n2,237\n634\n337",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "64",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Strategic developments\n691\n696\n1,387\n38\n26",
+   "after": "64\nTotal\n6,103\n10,957\n17,060",
+   "before_pdf": "691\n696\n1,387\n1,387\n38\n26",
+   "where": {
+    "heading": "Recent_developments",
+    "paragraph": "10.4.8",
+    "section": "Country information",
+    "page": 32
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 185,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "1.1.1",
+   "1.1.2"
+  ],
+  "unconfirmed": []
+ }
+}

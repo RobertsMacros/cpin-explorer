@@ -1,0 +1,65 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 181,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 210,
+ "paragraphs": 1543,
+ "list_items": 95,
+ "tables": 4,
+ "figures": 5,
+ "footnotes": 470,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 183, 236, 249, 251, 252, 334, 335, 336, 354, 430, 439, 454…"
+ ],
+ "figure_pages": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,
+  "d0a7a5d8afb52dd62725281752f29e15544a3e62b4158e0009936cc9be75e0c6.png": 127,
+  "f7eb4d46ff727e2b79e4b9ae460350f3d8ff59c4f1ac0b5f435c3d0ab2dd5608.jpg": 179,
+  "d2d90502a2a1c1654aead811fbbfbfe307fb60d8dff1737cca4210f29c9eae8a.jpg": 180,
+  "2173240ecea14f8013a9ada86572250386da2c5989adfdf017965baf4175180d.jpg": 181
+ },
+ "figure_sizes": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": [
+   246,
+   168
+  ],
+  "d0a7a5d8afb52dd62725281752f29e15544a3e62b4158e0009936cc9be75e0c6.png": [
+   905,
+   155
+  ],
+  "f7eb4d46ff727e2b79e4b9ae460350f3d8ff59c4f1ac0b5f435c3d0ab2dd5608.jpg": [
+   919,
+   1025
+  ],
+  "d2d90502a2a1c1654aead811fbbfbfe307fb60d8dff1737cca4210f29c9eae8a.jpg": [
+   919,
+   1222
+  ],
+  "2173240ecea14f8013a9ada86572250386da2c5989adfdf017965baf4175180d.jpg": [
+   919,
+   717
+  ]
+ },
+ "figure_text": {
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 0,
+  "d0a7a5d8afb52dd62725281752f29e15544a3e62b4158e0009936cc9be75e0c6.png": 433,
+  "f7eb4d46ff727e2b79e4b9ae460350f3d8ff59c4f1ac0b5f435c3d0ab2dd5608.jpg": 0,
+  "d2d90502a2a1c1654aead811fbbfbfe307fb60d8dff1737cca4210f29c9eae8a.jpg": 0,
+  "2173240ecea14f8013a9ada86572250386da2c5989adfdf017965baf4175180d.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Report of a fact-finding mission to Khartoum, Sudan",
+ "cover_version": null,
+ "cover_date": "17 August 2018",
+ "pdf_sha256": "ae844f51fa47d390516e8ce8d045d309035fdd4a6b81ae4e40209a90d7b6b5c8",
+ "images": [
+  "2173240ecea14f8013a9ada86572250386da2c5989adfdf017965baf4175180d.jpg",
+  "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png",
+  "d0a7a5d8afb52dd62725281752f29e15544a3e62b4158e0009936cc9be75e0c6.png",
+  "d2d90502a2a1c1654aead811fbbfbfe307fb60d8dff1737cca4210f29c9eae8a.jpg",
+  "f7eb4d46ff727e2b79e4b9ae460350f3d8ff59c4f1ac0b5f435c3d0ab2dd5608.jpg"
+ ]
+}

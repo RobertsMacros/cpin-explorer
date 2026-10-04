@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 58,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 44,
+ "paragraphs": 361,
+ "list_items": 104,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 158,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 11, 12"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iraq: Internal relocation, civil documentation and returns",
+ "cover_version": "7.0",
+ "cover_date": "September 2018",
+ "pdf_sha256": "857f0250cf2b0343ccbe60f490b7e67826064ca95b4fc8593012567819535973",
+ "images": []
+}

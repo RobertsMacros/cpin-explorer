@@ -1,0 +1,48 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 46,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 33,
+ "paragraphs": 376,
+ "list_items": 21,
+ "tables": 2,
+ "figures": 3,
+ "footnotes": 88,
+ "bookmarks": 33,
+ "warnings": [],
+ "figure_pages": {
+  "640ae87aeaf6e8b1a6bf8023a368b16de6884589dda2db98999649a48938ea22.jpg": 20,
+  "68a687e2be8e604dd50c7d4d50092b880ab834496c0bd8bc4845cec48534fcf4.jpg": 22,
+  "65928f7f2cf5cfd2834495b8c4fb57d47fe04d95908c755270e31ca1f5d3dd38.jpg": 22
+ },
+ "figure_sizes": {
+  "640ae87aeaf6e8b1a6bf8023a368b16de6884589dda2db98999649a48938ea22.jpg": [
+   797,
+   493
+  ],
+  "68a687e2be8e604dd50c7d4d50092b880ab834496c0bd8bc4845cec48534fcf4.jpg": [
+   793,
+   396
+  ],
+  "65928f7f2cf5cfd2834495b8c4fb57d47fe04d95908c755270e31ca1f5d3dd38.jpg": [
+   790,
+   396
+  ]
+ },
+ "figure_text": {
+  "640ae87aeaf6e8b1a6bf8023a368b16de6884589dda2db98999649a48938ea22.jpg": 0,
+  "68a687e2be8e604dd50c7d4d50092b880ab834496c0bd8bc4845cec48534fcf4.jpg": 0,
+  "65928f7f2cf5cfd2834495b8c4fb57d47fe04d95908c755270e31ca1f5d3dd38.jpg": 0
+ },
+ "first_bookmark_page": 5,
+ "cover_title": "Country Policy and Information Note Iraq: ‘Honour’ crimes",
+ "cover_version": "2.0",
+ "cover_date": "March 2021",
+ "pdf_sha256": "e3bddf7119e72387433b01e9b2e5cbf55be977b1464ba9e252469e7597442642",
+ "images": [
+  "640ae87aeaf6e8b1a6bf8023a368b16de6884589dda2db98999649a48938ea22.jpg",
+  "65928f7f2cf5cfd2834495b8c4fb57d47fe04d95908c755270e31ca1f5d3dd38.jpg",
+  "68a687e2be8e604dd50c7d4d50092b880ab834496c0bd8bc4845cec48534fcf4.jpg"
+ ]
+}

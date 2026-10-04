@@ -1,0 +1,183 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-policy-and-information-note-trafficking-of-women-nigeria-april-2022-accessible-version",
+ "pdf_sha256": "9003c34cabbb7e5f60779aa264a49c6cd2f46047fa990260159490e72f16f34e",
+ "body_sha256": "5f0cefcd9538036376438511479cc6d73e225885a55be055cb2b684f292dd252",
+ "words": {
+  "web": 29801,
+  "pdf": 29802
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1,
+   "share": 1.7e-05,
+   "passages": 0,
+   "sizes": {
+    "word": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "text": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "6.0",
+   "web_date": "April 2022",
+   "pdf": "6.0",
+   "pdf_date": "April 2022"
+  },
+  "section_updated": {
+   "web": [
+    "28 April 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022"
+   ],
+   "pdf": [
+    "28 April 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022",
+    "23 March 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 6,
+   "pdf_notices": 6
+  },
+  "footnotes": {
+   "web": 151,
+   "pdf": 151,
+   "pdf_raw": 151,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 2,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 67,
+   "pdf": 57
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "of",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "from last version of this note\nUpdated country",
+   "after": "information.\nNAPTIP, ‘Factsheet 1’, updated 21 December 2021",
+   "where": {
+    "heading": "clearance",
+    "paragraph": "9.1.2",
+    "section": "Version control",
+    "page": 72
+   },
+   "size": "word",
+   "second": "cannot tell"
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 222,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "2.1.1",
+   "2.1.2",
+   "2.1.3"
+  ],
+  "unconfirmed": []
+ }
+}

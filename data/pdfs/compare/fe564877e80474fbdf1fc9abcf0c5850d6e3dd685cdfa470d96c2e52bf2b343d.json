@@ -1,0 +1,314 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-military-service-iran-august-2026-accessible",
+ "pdf_sha256": "fe564877e80474fbdf1fc9abcf0c5850d6e3dd685cdfa470d96c2e52bf2b343d",
+ "body_sha256": "83755408bda958a3953e726942df58d36938463bf928ede1df315fdca47c2592",
+ "words": {
+  "web": 30181,
+  "pdf": 30178
+ },
+ "summary": {
+  "wording": {
+   "differences": 2,
+   "web_words": 7,
+   "pdf_words": 1,
+   "share": 0.000133,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 2,
+    "web_words": 7,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 5,
+    "web_words": 2,
+    "pdf_words": 5
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "list marker": {
+    "differences": 4,
+    "web_words": 1,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 2,
+    "web_words": 7,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "August 2026",
+   "pdf": "4.0",
+   "pdf_date": "August 2026"
+  },
+  "section_updated": {
+   "web": [
+    "24 August 2026"
+   ],
+   "pdf": [
+    "24 August 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 232,
+   "pdf": 232,
+   "pdf_raw": 232,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 47,
+   "pdf": 45
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "medical exemptions, and part 3 covering ‘",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "2 covering medical exemptions, and part 3 covering",
+   "after": "caregiving’ exemptions.\n11.1.3 Article 11 of",
+   "before_pdf": "2 covering medical exemptions, and part 3 covering ‘",
+   "where": {
+    "heading": "provisions",
+    "paragraph": "11.1.2",
+    "section": "Country information",
+    "page": 28
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "tates:",
+   "pdf": "states:",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Ekhtebar publication of the Public Service Duty Law",
+   "after": "Article 39 – Conscripts are classified into four categories",
+   "where": {
+    "heading": "medical-grounds",
+    "paragraph": "11.3.1",
+    "section": "Country information",
+    "page": 30
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "11.3Medical",
+   "pdf": "11.3 Medical",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "Iran: Sexual orientation and gender identity and expression.",
+   "after": "grounds\n11.3.1 The Ekhtebar publication of",
+   "where": {
+    "heading": "medical-grounds",
+    "paragraph": "11.2.4",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.3.",
+   "pdf": "10.2.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a monthly basis to the Public Duty Organization.’",
+   "after": "2 On 18 December 2024, the IRNA published",
+   "where": {
+    "heading": "call-up-process",
+    "paragraph": "10.3.2",
+    "section": "Country information",
+    "page": 19
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "2.1.2 1.",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "case must be considered on its individual facts.",
+   "after": "If the person is excluded from the Refugee",
+   "before_pdf": "considered on its individual facts.\n2.1.2",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": "2.1.2",
+    "section": "Assessment",
+    "page": 6
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "a)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "so where, on account of a Convention reason:",
+   "after": "military service would involve acts, with which the",
+   "where": {
+    "heading": "general-approach-to-claims-based-on-compulsory-military-service",
+    "paragraph": "4.1.1",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "b)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "to the basic rules of human conduct, or",
+   "after": "the conditions of military service would be so",
+   "where": {
+    "heading": "general-approach-to-claims-based-on-compulsory-military-service",
+    "paragraph": "4.1.1",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "c)",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "so harsh as to amount to persecution, or",
+   "after": "the punishment for draft evasion or desertion is",
+   "where": {
+    "heading": "general-approach-to-claims-based-on-compulsory-military-service",
+    "paragraph": "4.1.1",
+    "section": "Assessment",
+    "page": 7
+   },
+   "opening": true,
+   "opening_passage": false
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 221,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.3.2"
+  ],
+  "unconfirmed": []
+ }
+}

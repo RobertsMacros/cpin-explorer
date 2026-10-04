@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 48,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 66,
+ "paragraphs": 353,
+ "list_items": 38,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 155,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "b3229def0105e59d667cbccc472485c704f19bb46db1bdbd8e69ce4b47e1101c.png": 23
+ },
+ "figure_sizes": {
+  "b3229def0105e59d667cbccc472485c704f19bb46db1bdbd8e69ce4b47e1101c.png": [
+   891,
+   633
+  ]
+ },
+ "figure_text": {
+  "b3229def0105e59d667cbccc472485c704f19bb46db1bdbd8e69ce4b47e1101c.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Religious minorities and atheists",
+ "cover_version": "2.0",
+ "cover_date": "October 2018",
+ "pdf_sha256": "ab2ae7074fd83132c46f17724f93cc60b0c000c5ccc6fc6b303a75a7e2d2b043",
+ "images": [
+  "b3229def0105e59d667cbccc472485c704f19bb46db1bdbd8e69ce4b47e1101c.png"
+ ]
+}

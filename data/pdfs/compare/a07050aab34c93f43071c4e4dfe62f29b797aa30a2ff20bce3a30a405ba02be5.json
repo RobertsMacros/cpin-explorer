@@ -1,0 +1,215 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iraq/country-policy-and-information-note-actors-of-protection-iraq-september-2025-accessible",
+ "pdf_sha256": "a07050aab34c93f43071c4e4dfe62f29b797aa30a2ff20bce3a30a405ba02be5",
+ "body_sha256": "a4d469daf002eba8eab3e6b00a1389b0e462dce5da2bdecc68afbdf82ad54f7a",
+ "words": {
+  "web": 29574,
+  "pdf": 29575
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1,
+   "share": 3.4e-05,
+   "passages": 0,
+   "sizes": {
+    "spelling": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 2
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "September 2025",
+   "pdf": "2.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "25 July 2025"
+   ],
+   "pdf": [
+    "25 June 2025"
+   ],
+   "same": false
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 181,
+   "pdf": 181,
+   "pdf_raw": 181,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 103,
+   "pdf": 63
+  },
+  "drafts": [
+   "a 'Section updated' date differs: web 25 July 2025, PDF 25 June 2025"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "July",
+   "pdf": "June",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "and obtain effective protection.\nAssessment\nSection updated: 25",
+   "after": "2025\nAbout the assessment\nThis section considers the",
+   "where": {
+    "heading": "assessment",
+    "paragraph": null,
+    "section": "Assessment",
+    "page": 5
+   },
+   "size": "spelling",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "8.3.2The",
+   "pdf": "8.3.2 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "of the fundamental rights and freedoms of citizens.’",
+   "after": "January 2023 DFAT report stated: ‘The Peshmerga is",
+   "where": {
+    "heading": "effectiveness-of-security-forces-in-the-kri",
+    "paragraph": "8.3.2",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "10.5.7",
+   "pdf": "10.5.8",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "believed to be on death row in Iraq.’",
+   "after": "In June 2024, the United Nations OHCHR published",
+   "where": {
+    "heading": "death-penalty",
+    "paragraph": "10.5.7",
+    "section": "Country information",
+    "page": 51
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 220,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "10.5.7"
+  ],
+  "unconfirmed": []
+ }
+}

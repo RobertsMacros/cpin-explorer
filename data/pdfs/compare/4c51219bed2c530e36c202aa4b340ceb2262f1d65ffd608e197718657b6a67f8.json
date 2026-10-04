@@ -1,0 +1,388 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "bangladesh/country-policy-and-information-note-religious-minorities-and-atheists-bangladesh-june-2025",
+ "pdf_sha256": "4c51219bed2c530e36c202aa4b340ceb2262f1d65ffd608e197718657b6a67f8",
+ "body_sha256": "aa337958deb1a969c46a3114f2d805536012c77a7d64babe8a913c5eae4ea0cb",
+ "words": {
+  "web": 31062,
+  "pdf": 31087
+ },
+ "summary": {
+  "wording": {
+   "differences": 7,
+   "web_words": 3,
+   "pdf_words": 26,
+   "share": 0.000467,
+   "passages": 3,
+   "sizes": {
+    "passage": 3,
+    "spelling": 2,
+    "word": 1,
+    "number": 1
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 1,
+   "words": 7
+  },
+  "groups": {
+   "wording": {
+    "differences": 7,
+    "web_words": 3,
+    "pdf_words": 26
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 1
+   },
+   "footnote": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "heading": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 22
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 4,
+   "pdf_words": 6
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "June 2025",
+   "pdf": "4.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "6 June 2025"
+   ],
+   "pdf": [
+    "6 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 268,
+   "pdf": 268,
+   "pdf_raw": 268,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 4,
+   "pdf": 5
+  },
+  "headings": {
+   "web": 113,
+   "pdf": 57
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 7,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "11.6.1 In sources consulted there was limited recent information",
+   "web_words": 0,
+   "pdf_words": 8,
+   "before": "see Bibliography).\n11.6 Atheists\n11.6.1",
+   "after": "on the treatment of atheists by the state (",
+   "before_pdf": "treatment of Christians (see Bibliography).\n11.6 Atheists",
+   "where": {
+    "heading": "state-atheists",
+    "paragraph": "11.6.1",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.12 See also Country Policy and Information Note",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "minorities (see Civil society organisations).\n4.1.12",
+   "after": "Bangladesh: Actors of protection.\n4.1.13 For",
+   "before_pdf": "to better support minorities (see Civil society organisations).",
+   "where": {
+    "heading": "protection",
+    "paragraph": "4.1.12",
+    "section": "Assessment",
+    "page": 12
+   },
+   "size": "passage",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": true
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "following articles for offences relating to religion:",
+   "web_words": 0,
+   "pdf_words": 7,
+   "before": "the Bangladesh Penal Code of 1860 outlines the",
+   "after": "Article 295 Injuring or defiling place of worship,",
+   "where": {
+    "heading": "penal-code",
+    "paragraph": "8.2.1",
+    "section": "Country information",
+    "page": 18
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "7.2 Geographical",
+   "pdf": "7.2 Geographic",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "on the population of Ahmadi Muslims (see Bibliography).",
+   "after": "distribution\n7.2.1 The Australian Department for",
+   "where": {
+    "heading": "geographical-distribution",
+    "paragraph": "7.1.10",
+    "section": "Country information",
+    "page": 15
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "law",
+   "pdf": "laws",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "disproportionately target minority voices.’\n8.4 Personal status",
+   "after": "8.4.1 In regard to family law,",
+   "where": {
+    "heading": "personal-status-law",
+    "paragraph": "8.3.11",
+    "section": "Country information",
+    "page": 22
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "67),",
+   "pdf": "68),",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Population and Housing Census 2022, National Report (page",
+   "after": "November 2023\nUSSD, 2020 Report on International Religious",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.2.4",
+    "section": "Version control and feedback",
+    "page": 14
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "US",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "Bangladesh, 24 August 2023. Accessed: 22 April 2025",
+   "after": "State Department (USSD)\n2020 Report on International Religious",
+   "where": {
+    "heading": "state-department-ussd",
+    "paragraph": "13.2.4",
+    "section": "Bibliography",
+    "page": 72
+   },
+   "size": "word",
+   "second": "agrees"
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "post.",
+   "pdf": "post99100.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "The student pled guilty and apologised for the",
+   "after": "Neither source states the religion of the accused,",
+   "where": {
+    "heading": "arrests",
+    "paragraph": "11.2.2",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "fire",
+   "pdf": "fire178179180181",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "a temple, monastery or statue being set on",
+   "after": "12.2.3 The table below outlines ASK’",
+   "where": {
+    "heading": "statistics",
+    "paragraph": "12.2.2",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025 (",
+   "pdf": "2025182183184185 (",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "including violations against Ahmadis between 2022 and February",
+   "after": "Table by CPIT):\n2022\n2023\n2024\n2025 (Jan –",
+   "where": {
+    "heading": "statistics",
+    "paragraph": "12.2.3",
+    "section": "Country information",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "injured.",
+   "pdf": "injured186187188189.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "or statue set on fire and 1 person",
+   "after": "12.2.5 In reference to ASK’s",
+   "where": {
+    "heading": "statistics",
+    "paragraph": "12.2.4",
+    "section": "Country information",
+    "page": 45
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "2022 2023",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "and February 2025 (Table by CPIT):\n2022\n2023",
+   "after": "2024\n2025 (Jan – Feb)\nIncident\n12\n21\n127",
+   "before_pdf": "and February 2025 (Table by CPIT):\n2022 2023",
+   "where": {
+    "heading": "statistics",
+    "paragraph": "12.2.1",
+    "section": "Country information",
+    "page": 44
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 298,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

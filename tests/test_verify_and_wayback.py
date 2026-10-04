@@ -89,3 +89,17 @@ def test_archived_copy_with_same_text_becomes_a_capture_not_a_version(site, clie
     assert not is_new
     versions = store.load_note("kenya", NOTE)["versions"]
     assert len(versions) == 1 and versions[0]["captures"] == [capture]
+
+
+def test_archive_page_body_is_the_innermost_govspeak_with_white_space_between_the_wrappers():
+    # As GOV.UK's pages really are: each wrapper on a line of its own, so the outer one holds a little more
+    # "text" (the line breaks and indents) than the inner one.
+    page = ('<html><body><div class="govuk-wrapper">\n  <h1>Country policy and information note: actors of protection</h1>\n'
+            '  <div class="gem-c-govspeak govuk-govspeak" data-module="govspeak">\n    \n'
+            '    <div class="govspeak">\n<p>Text of the note.</p>\n</div>\n  \n  </div>\n</div></body></html>')
+    body, title = extract_body(page)
+    assert body.startswith('<div class="govspeak">') and "gem-c-govspeak" not in body
+    assert "<p>Text of the note.</p>" in body and title.startswith("Country policy and information note")
+    # A wrapper that holds words of its own beside the inner body is still the one taken: nothing is left out.
+    more = page.replace('<div class="govspeak">', '<p>Words outside the inner body.</p><div class="govspeak">')
+    assert "Words outside the inner body." in extract_body(more)[0]

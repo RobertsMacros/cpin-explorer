@@ -1,0 +1,34 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 53,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 463,
+ "list_items": 43,
+ "tables": 3,
+ "figures": 1,
+ "footnotes": 133,
+ "bookmarks": 50,
+ "warnings": [],
+ "figure_pages": {
+  "f9c8d550fb787cc26714bd710e1db0982d2b712cfbf3c6ce6be7412b05204ee3.png": 21
+ },
+ "figure_sizes": {
+  "f9c8d550fb787cc26714bd710e1db0982d2b712cfbf3c6ce6be7412b05204ee3.png": [
+   811,
+   366
+  ]
+ },
+ "figure_text": {
+  "f9c8d550fb787cc26714bd710e1db0982d2b712cfbf3c6ce6be7412b05204ee3.png": 0
+ },
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Georgia: Political parties and affiliation",
+ "cover_version": "2.0",
+ "cover_date": "December 2023",
+ "pdf_sha256": "d7d228e51fb9dd831fe6bcaf0d01d98e4c13814ce575cafeae2e61a359a4bf3e",
+ "images": [
+  "f9c8d550fb787cc26714bd710e1db0982d2b712cfbf3c6ce6be7412b05204ee3.png"
+ ]
+}

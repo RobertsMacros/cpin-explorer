@@ -1,0 +1,517 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "nigeria/country-information-note-medical-treatment-and-healthcare-nigeria-december-2025-accessible",
+ "pdf_sha256": "5040147e006f092ab1654d3140c0280eeccb80300109b84f724b1fb47f03b024",
+ "body_sha256": "1d3bfca9d3663848cf0b543455b9b80e220c90e0a82afc2b9a6ff52e600150e3",
+ "words": {
+  "web": 25999,
+  "pdf": 25928
+ },
+ "summary": {
+  "wording": {
+   "differences": 4,
+   "web_words": 3,
+   "pdf_words": 9,
+   "share": 0.000231,
+   "passages": 1,
+   "sizes": {
+    "passage": 1,
+    "word": 3
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 4,
+    "web_words": 3,
+    "pdf_words": 9
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture": {
+    "differences": 1,
+    "web_words": 44,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 4,
+    "web_words": 3,
+    "pdf_words": 9
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 1
+   },
+   "picture in words": {
+    "differences": 1,
+    "web_words": 44,
+    "pdf_words": 0
+   },
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   }
+  },
+  "ours": {
+   "differences": 12,
+   "web_words": 40,
+   "pdf_words": 4
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "December 2025",
+   "pdf": "5.0",
+   "pdf_date": "December 2025"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 1,
+   "pdf": 1,
+   "web_notices": 1,
+   "pdf_notices": 1
+  },
+  "footnotes": {
+   "web": 211,
+   "pdf": 211,
+   "pdf_raw": 211,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 9,
+   "pdf": 4
+  },
+  "headings": {
+   "web": 141,
+   "pdf": 57
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 2,
+   "cannot_tell": 2,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "About the country information",
+   "web_words": 0,
+   "pdf_words": 4,
+   "before": "Version 5.0, December 2025\nCountry information",
+   "after": "This note provides country of origin information (COI)",
+   "where": {
+    "heading": "country-information",
+    "paragraph": null,
+    "section": "Country information",
+    "page": 4
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "mental healthcare services",
+   "pdf": "medication",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "dated 28 August 2024\n6.5 Availability of",
+   "after": "6.5.1 Information on the drugs in",
+   "before_pdf": "August 2024\n6.5 Availability and accessibility of",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.4.4",
+    "section": "Country information",
+    "page": 60
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and costs",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "4.1 Accessibility and availability of medical drugs",
+   "after": "4.1.1 The 2022 EUAA medical COI",
+   "where": {
+    "heading": "accessibility-medical-drugs",
+    "paragraph": "4.1.1",
+    "section": "Country information",
+    "page": 17
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "and accessibility",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "health, dated 28 August 2024\n6.5 Availability",
+   "after": "of mental healthcare services\n6.5.1 Information",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.4.4",
+    "section": "Country information",
+    "page": 60
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "picture in words",
+   "group": "picture",
+   "verdict": "real",
+   "web": "Tertiary care: federal and state-owned teaching hospitals, specialist hospitals, federal medical centres, private hospitals and clinics.\nSecondary care: general hospitals, private hospitals and clinics.\nPrimary care: health posts, primary and comprehensive health care centres, private clinics.\nAfrican traditional medicine.\nComplementary and alternative medicine.",
+   "pdf": "",
+   "web_words": 44,
+   "pdf_words": 0,
+   "before": "of the healthcare system, which is reproduced below:",
+   "after": "2.2.6 For more information on facilities",
+   "where": {
+    "heading": "governance-and-structure",
+    "paragraph": "2.2.5",
+    "section": "Country information",
+    "page": 6
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "5.1.5This",
+   "pdf": "5.1.5 This",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "blood clotting tests\nbone marrow aspiration and biopsy",
+   "after": "list, which is not exhaustive, contains links to",
+   "where": {
+    "heading": "blood-diseases",
+    "paragraph": "5.1.5",
+    "section": "Country information",
+    "page": 23
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "5.6.7The",
+   "pdf": "5.6.7 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "procedures:\ntonsillectomy\nendoscopic sinus surgery\ntympanostomy tube insertion",
+   "after": "following hospitals have facilities to treat people with",
+   "where": {
+    "heading": "ear-nose-and-throat-ent-conditions",
+    "paragraph": "5.6.7",
+    "section": "Country information",
+    "page": 31
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "6.3.5",
+   "pdf": "6.3.1",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Community care, informal care and NGO support services",
+   "after": "The 2022 EUAA medical COI report stated:\nLocal",
+   "where": {
+    "heading": "community-care-informal-care-and-ngo-support-services",
+    "paragraph": "6.3.5",
+    "section": "Country information",
+    "page": 57
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "20 mg tablet\nDrugs used to treat PTSD:",
+   "after": "Lamotrigine\nTeva\n100 mg tablet\nTopiramate\nTopamax\n25",
+   "before_pdf": "20 mg tablet\nDrugs used to treat PTSD",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "Xatral XL\n10 mg tablet\nAnti-psychotics (classic):",
+   "after": "Fluphenazine\nModicat\n25 mg/ml ampoule\nHaloperidol\nHaldol",
+   "before_pdf": "Xatral XL\n10 mg tablet\nAnti-psychotics (classic)",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "Obexol\n5 mg tablet\nAnti-psychotics (modern atypical):",
+   "after": "Olanzapine\nOlanza\n5 mg tablet\nQuetiapine\nSeroquel XR",
+   "before_pdf": "Obexol\n5 mg tablet\nAnti-psychotics (modern atypical)",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "mg tablet\nRisperidone\nRisperdal\n2 mg tablet\nAnxiolytics:",
+   "after": "Clonazepam\nTeva\n2 mg tablet\nDiazepam\nValium\n5",
+   "before_pdf": "mg tablet\nRisperidone\nRisperdal\n2 mg tablet\nAnxiolytics",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "tablet\nLorazepam\nAtivan\n2 mg tablet\nBipolar disorder:",
+   "after": "Carbamazepine\nTegretol\n200 mg tablet\nSleeping disorders; sedatives",
+   "before_pdf": "tablet\nLorazepam\nAtivan\n2 mg tablet\nBipolar disorder",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Generic\nBrand name\nDosage and form",
+   "pdf": "",
+   "web_words": 6,
+   "pdf_words": 0,
+   "before": "Carbamazepine\nTegretol\n200 mg tablet\nSleeping disorders; sedatives",
+   "after": "Nitrazepam\nSwidon\n5 mg tablet\nZolpidem\nTeva\n10",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 61
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Anti-depressants:",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "are used to treat psychiatric conditions in Nigeria:",
+   "after": "Generic\nBrand name\nDosage and form\nAmitriptyline\nTeva",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Employee Benefits Specialist, no date. Accessed: 19 December",
+   "after": "Palmars Hospital Limited, Port Harcourt\nGastroenterology, no date.",
+   "where": {
+    "heading": "pacific-prime",
+    "paragraph": "6.10.3",
+    "section": "Bibliography",
+    "page": 67
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "name",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "treat psychiatric conditions in Nigeria:\nAnti-depressants:\nGeneric",
+   "after": "Brand name\nDosage and form\nAmitriptyline\nTeva\n25",
+   "before_pdf": "used to treat psychiatric conditions in Nigeria:\nGeneric",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "Anti-depressants",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "Anti-depressants:\nGeneric\nBrand name\nDosage and form",
+   "after": "Amitriptyline\nTeva\n25 mg tablet 28 6.8 (",
+   "before_pdf": "Nigeria:\nGeneric name\nBrand name\nDosage and form",
+   "where": {
+    "heading": "availability-mental-healthcare",
+    "paragraph": "6.5.2",
+    "section": "Country information",
+    "page": 60
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "State",
+   "pdf": "State175",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "State\nAhmadu Bello University Teaching Hospital, Kaduna, Kaduna",
+   "after": "5.19 Skin conditions\n5.19.1 There",
+   "where": {
+    "heading": "palliative-care",
+    "paragraph": "5.18.4",
+    "section": "Country information",
+    "page": 53
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "30",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "59.90-61.90 (£45.52-47.05)",
+   "after": "2.7.7 The 2022 EUAA medical COI",
+   "where": {
+    "heading": "insurance",
+    "paragraph": "2.7.7",
+    "section": "Country information",
+    "page": 12
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 253,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "6.3.5"
+  ],
+  "unconfirmed": []
+ }
+}

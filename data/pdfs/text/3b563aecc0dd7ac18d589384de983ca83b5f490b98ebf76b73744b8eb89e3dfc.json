@@ -1,0 +1,64 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 103,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 72,
+ "paragraphs": 744,
+ "list_items": 78,
+ "tables": 1,
+ "figures": 5,
+ "footnotes": 286,
+ "bookmarks": 60,
+ "warnings": [
+  "footnotes with no mark found in the text: 109, 213"
+ ],
+ "figure_pages": {
+  "8f36e6ae85323eb8b32d85f34669349312de13cb421d7b11bfa28a99bd8a076c.png": 28,
+  "256e007e25f06d376d94466d7450df9105de346c6c2a956d6d1c4886a9cd867a.png": 28,
+  "86c8543d86ee6390bca9f1a5a8cc269a3d3d445e73778dad2876edc8c4f3b583.png": 29,
+  "bab1355bbc28c481b061b03293b780d20a7465e76ec1e5126a97b4786ec00248.png": 55,
+  "868fd76b3f1a89b1702759259702c597bef36e7da2e65543d5f633f8c2328147.png": 90
+ },
+ "figure_sizes": {
+  "8f36e6ae85323eb8b32d85f34669349312de13cb421d7b11bfa28a99bd8a076c.png": [
+   830,
+   185
+  ],
+  "256e007e25f06d376d94466d7450df9105de346c6c2a956d6d1c4886a9cd867a.png": [
+   812,
+   320
+  ],
+  "86c8543d86ee6390bca9f1a5a8cc269a3d3d445e73778dad2876edc8c4f3b583.png": [
+   447,
+   474
+  ],
+  "bab1355bbc28c481b061b03293b780d20a7465e76ec1e5126a97b4786ec00248.png": [
+   536,
+   327
+  ],
+  "868fd76b3f1a89b1702759259702c597bef36e7da2e65543d5f633f8c2328147.png": [
+   447,
+   474
+  ]
+ },
+ "figure_text": {
+  "8f36e6ae85323eb8b32d85f34669349312de13cb421d7b11bfa28a99bd8a076c.png": 0,
+  "256e007e25f06d376d94466d7450df9105de346c6c2a956d6d1c4886a9cd867a.png": 0,
+  "86c8543d86ee6390bca9f1a5a8cc269a3d3d445e73778dad2876edc8c4f3b583.png": 0,
+  "bab1355bbc28c481b061b03293b780d20a7465e76ec1e5126a97b4786ec00248.png": 0,
+  "868fd76b3f1a89b1702759259702c597bef36e7da2e65543d5f633f8c2328147.png": 0
+ },
+ "first_bookmark_page": 7,
+ "cover_title": "Country Policy and Information Note Pakistan: Ahmadis",
+ "cover_version": "5.0",
+ "cover_date": "September 2021",
+ "pdf_sha256": "3b563aecc0dd7ac18d589384de983ca83b5f490b98ebf76b73744b8eb89e3dfc",
+ "images": [
+  "256e007e25f06d376d94466d7450df9105de346c6c2a956d6d1c4886a9cd867a.png",
+  "868fd76b3f1a89b1702759259702c597bef36e7da2e65543d5f633f8c2328147.png",
+  "86c8543d86ee6390bca9f1a5a8cc269a3d3d445e73778dad2876edc8c4f3b583.png",
+  "8f36e6ae85323eb8b32d85f34669349312de13cb421d7b11bfa28a99bd8a076c.png",
+  "bab1355bbc28c481b061b03293b780d20a7465e76ec1e5126a97b4786ec00248.png"
+ ]
+}

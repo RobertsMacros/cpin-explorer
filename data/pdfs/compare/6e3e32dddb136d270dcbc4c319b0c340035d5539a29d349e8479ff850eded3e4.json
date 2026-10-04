@@ -1,0 +1,1869 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "vietnam/country-policy-and-information-note-opposition-to-the-state-vietnam-september-2025-accesible",
+ "pdf_sha256": "6e3e32dddb136d270dcbc4c319b0c340035d5539a29d349e8479ff850eded3e4",
+ "body_sha256": "33a89d18d91eca6a214750f3537b52e3fc607b2a98d70efbf648b1df99a4f06e",
+ "words": {
+  "web": 22281,
+  "pdf": 22182
+ },
+ "summary": {
+  "wording": {
+   "differences": 22,
+   "web_words": 44,
+   "pdf_words": 21,
+   "share": 0.001462,
+   "passages": 4,
+   "sizes": {
+    "spelling": 2,
+    "passage": 4,
+    "word": 7,
+    "number": 9
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 22,
+    "web_words": 44,
+    "pdf_words": 21
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 3
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 113,
+    "web_words": 190,
+    "pdf_words": 49
+   },
+   "furniture": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "kinds": {
+   "heading": {
+    "differences": 9,
+    "web_words": 13,
+    "pdf_words": 5
+   },
+   "numbering": {
+    "differences": 4,
+    "web_words": 4,
+    "pdf_words": 3
+   },
+   "repeated label": {
+    "differences": 112,
+    "web_words": 189,
+    "pdf_words": 47
+   },
+   "spacing": {
+    "differences": 1,
+    "web_words": 1,
+    "pdf_words": 2
+   },
+   "text": {
+    "differences": 13,
+    "web_words": 31,
+    "pdf_words": 16
+   },
+   "version line": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 2
+   }
+  },
+  "ours": {
+   "differences": 15,
+   "web_words": 8,
+   "pdf_words": 25
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": null,
+   "pdf": "5.0",
+   "pdf_date": "September 2025"
+  },
+  "section_updated": {
+   "web": [
+    "16 September 2025"
+   ],
+   "pdf": [
+    "16 September 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 170,
+   "pdf": 170,
+   "pdf_raw": 170,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 8
+  },
+  "headings": {
+   "web": 219,
+   "pdf": 58
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 14,
+   "cannot_tell": 8,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "10.5.3 Human Rights Watch claimed in their report, “We’ll All Be",
+   "web_words": 0,
+   "pdf_words": 11,
+   "before": "prosecuted on national security grounds.’\n10.5.3",
+   "after": "Arrested Soon” Abusive Prosecutions under Vietnam’s “Infringing",
+   "before_pdf": "rights lawyers being prosecuted on national security grounds.’",
+   "where": {
+    "heading": "state-treatment",
+    "paragraph": "10.5.3",
+    "section": "Country information",
+    "page": 24
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2017\nDate sentenced",
+   "pdf": "17",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Minh Duc\nOccupation\nJournalist\nDate arrested\n30/07/",
+   "after": "April 2018 sentenced to 12 years in prison",
+   "before_pdf": "Name: Truong Minh Duc Occupation: Journalist\n30/07/",
+   "where": {
+    "heading": "date-arrested-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2019\nDate sentenced",
+   "pdf": "19",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Occupation\nJournalist , online commentator\nDate arrested\n28/01/",
+   "after": "March 2020 sentenced to 10 years in prison.",
+   "before_pdf": "Duy Nhat Occupation: Journalist , online commentator\n28/01/",
+   "where": {
+    "heading": "date-arrested-2",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2019\nDate sentenced",
+   "pdf": "19",
+   "web_words": 3,
+   "pdf_words": 1,
+   "before": "Occupation\nJournalist , online commentator\nDate arrested\n21/11/",
+   "after": "January 2021 sentenced to 15 years in prison.",
+   "before_pdf": "Chi Dung Occupation: Journalist , online commentator\n21/11/",
+   "where": {
+    "heading": "date-arrested-3",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2015\nDate sentenced",
+   "pdf": "15",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Journalist, literary writer, veteran\nDate arrested\n21/09/",
+   "after": "December 2016, sentenced to 13 years in prison.",
+   "before_pdf": "Kim Occupation: Journalist, literary writer, veteran\n21/09/",
+   "where": {
+    "heading": "date-arrested",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "sentenced to 12 years in prison and 3 years house arrest.\nDetails of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "arrested\n30/07/2017\nDate sentenced\nApril 2018",
+   "after": "Charged under Art 79 (subversion). A journalist and",
+   "before_pdf": "Duc Occupation: Journalist\n30/07/17\nApril 2018",
+   "where": {
+    "heading": "date-sentenced-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2020\nDate sentenced",
+   "pdf": "20",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "writer, online commentator, poet\nDate arrested\n23/04/",
+   "after": "December 2020 sentenced to 12 years in prison",
+   "before_pdf": "Journalist, literary writer, online commentator, poet\n23/04/",
+   "where": {
+    "heading": "date-arrested-5",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   },
+   "size": "number",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2020\nDate sentenced",
+   "pdf": "20",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Occupation\nJournalist, online commentator\nDate arrested\n23/05/",
+   "after": "January 2021 sentenced to 11 years in prison.",
+   "before_pdf": "Tuong Thuy Occupation: Journalist, online commentator\n23/05/",
+   "where": {
+    "heading": "date-arrested-7",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2020\nDate sentenced",
+   "pdf": "20",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Occupation\nJournalist , online commentator\nDate arrested\n12/06/",
+   "after": "January 2021 sentenced to 11 years in prison.",
+   "before_pdf": "Minh Tuan Occupation: Journalist , online commentator\n12/06/",
+   "where": {
+    "heading": "date-arrested-8",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "2020\nDate sentenced",
+   "pdf": "20",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "Tuyet Dieu\nOccupation\nJournalist\nDate arrested\n21/08/",
+   "after": "April 2021 sentenced to 8 years in prison",
+   "before_pdf": "Tran Thi Tuyet Dieu Occupation: Journalist\n21/08/",
+   "where": {
+    "heading": "date-arrested-9",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Details of changes",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "April 2021 sentenced to 8 years in prison",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "where": {
+    "heading": "details-of-changes",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Details of charge",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "July 2023 sentenced to 6 years in prison.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "July 2023 sentenced to 6 years in prison",
+   "where": {
+    "heading": "details-of-charge",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 49
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "sentenced to 7 years in prison and 2 years probation\nDetails of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "arrested\n30/01/24\nDate sentenced\nJuly 2024",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”)",
+   "before_pdf": "Occupation: Online commentator\n30/01/24\nJuly 2024",
+   "where": {
+    "heading": "date-sentenced-27",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 51
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "10. Protestors",
+   "pdf": "10. Protesters",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "See also Traditional media and journalists - State treatment.",
+   "after": "and human rights activists\n10.1 Ability to",
+   "before_pdf": "See also Traditional media and journalists - State treatment",
+   "where": {
+    "heading": "protestors-and-human-rights-activists",
+    "paragraph": "9.4.3",
+    "section": "Country information",
+    "page": 7
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "special",
+   "pdf": "social",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "5 State treatment of bloggers, online activists and",
+   "after": "media users\n12.5.1 The iMAP Vietnam",
+   "where": {
+    "heading": "state-treatment-bloggers",
+    "paragraph": "12.4.6",
+    "section": "Country information",
+    "page": 35
+   },
+   "size": "spelling",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "30/06/21",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "abuse on YouTube.\nLe Van Dung\nOccupation\nBlogger",
+   "after": "March 2022 sentenced to 5 years in prison",
+   "before_pdf": "on YouTube.\nName: Le Van Dung Occupation: Blogger,",
+   "where": {
+    "heading": "date-arrested-15",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 48
+   },
+   "size": "number",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Journalist,",
+   "pdf": "Blogger,",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "on his YouTube channel.\nLe Manh Ha\nOccupation",
+   "after": "online commentator\nDate arrested\n12/01/22\nDate",
+   "before_pdf": "Details of charges\nName: Le Manh Ha Occupation:",
+   "where": {
+    "heading": "occupation-19",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 49
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "cited",
+   "pdf": "consulted",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "16 July 2024. Accessed: 16 July 2025\nSources",
+   "after": "but not consulted\nCIVICUS Monitor, Activists, journalists and",
+   "where": {
+    "heading": "sources-cited-but-not-consulted",
+    "paragraph": "14.3.10",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "consulted",
+   "pdf": "cited",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Accessed: 16 July 2025\nSources cited but not",
+   "after": "CIVICUS Monitor, Activists, journalists and bloggers arrested and",
+   "before_pdf": "Accessed: 16 July 2025\nSources consulted but not",
+   "where": {
+    "heading": "sources-cited-but-not-consulted",
+    "paragraph": "14.3.10",
+    "section": "Bibliography",
+    "page": 57
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "of",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "the PEN America database.\nSee Detention.\n13. Monitoring",
+   "after": "the diaspora\n13.1.1 The DFAT 2025",
+   "where": {
+    "heading": "monitoring",
+    "paragraph": "12.5.9",
+    "section": "Country information",
+    "page": 38
+   },
+   "size": "word",
+   "second": "agrees"
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "real",
+   "web": "Occupation",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "also About the country information.\nTran Anh Kim",
+   "after": "Occupation: Journalist, literary writer, veteran\nDate arrested\n21/",
+   "before_pdf": "sentenced\nDetails of charges\nName: Tran Anh Kim",
+   "where": {
+    "heading": "occupation",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   },
+   "size": "word",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "propaganda”). Accused of\nName:",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "pandemic. Also a member of Brotherhood for Democracy.",
+   "after": "Nguyen Thai Hung\nOccupation\nBlogger\nDate arrested\n05/",
+   "where": {
+    "heading": "nguyen-thai-hung",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 19
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "11.1.1The",
+   "pdf": "11.1.1 The",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "11.1 Law on traditional media and journalists",
+   "after": "DFAT 2025 report noted that: ‘The 2013 Constitution",
+   "where": {
+    "heading": "law",
+    "paragraph": "11.1.1",
+    "section": "Country information",
+    "page": 26
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "in purple. See also About the country information.",
+   "after": "Tran Anh Kim\nOccupation\nOccupation: Journalist, literary writer,",
+   "where": {
+    "heading": "tran-anh-kim",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "December 2016, sentenced to 13 years in prison.",
+   "after": "Charged under Art 79 (subversion). At the time",
+   "before_pdf": "December 2016 sentenced to 13 years in prison",
+   "where": {
+    "heading": "details-of-charges",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "March 2020 sentenced to 10 years in prison.",
+   "after": "Charged under Art 356 (abusing his position and",
+   "before_pdf": "March 2020 sentenced to 10 years in prison",
+   "where": {
+    "heading": "details-of-charges-2",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "purchase that had taken place 10 years prior.",
+   "after": "Pham Chi Dung\nOccupation\nJournalist , online commentator\nDate",
+   "where": {
+    "heading": "pham-chi-dung",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "January 2021 sentenced to 15 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "January 2021 sentenced to 15 years in prison",
+   "where": {
+    "heading": "details-of-charges-3",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 27
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "he was sentenced to 5 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”)",
+   "before_pdf": "he was sentenced to 5 years in prison",
+   "where": {
+    "heading": "details-of-charges-4",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "12 years in prison with 3 years probation.",
+   "after": "Charged under Art 109 (activities aimed at overthrowing",
+   "where": {
+    "heading": "details-of-charges-5",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for his involvement with the Brotherhood for Democracy.",
+   "after": "Pham Chi Thanh\nOccupation\nJournalist , literary writer, online",
+   "where": {
+    "heading": "pham-chi-thanh",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 6
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "to 5 years and 6 months in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "to 5 years and 6 months in prison",
+   "where": {
+    "heading": "details-of-charges-6",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "January 2021 sentenced to 11 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "January 2021 sentenced to 11 years in prison",
+   "where": {
+    "heading": "details-of-charges-7",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "s government, or even incite hatred and extremism.”",
+   "after": "Tran Thi Tuyet Dieu\nOccupation\nJournalist\nDate arrested",
+   "where": {
+    "heading": "tran-thi-tuyet-dieu",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "to 4 years and 6 months in prison.",
+   "after": "Charged under Art 331 (“abusing democratic freedoms”) for",
+   "before_pdf": "to 4 years and 6 months in prison",
+   "where": {
+    "heading": "details-of-charges-8",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "December 2021 sentenced to 9 years in prison.",
+   "after": "Initially charged under Art 88. Sentenced under Art",
+   "before_pdf": "December 2021 sentenced to 9 years in prison",
+   "where": {
+    "heading": "details-of-charges-9",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "July 2021 sentenced to 9 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”)",
+   "before_pdf": "July 2021 sentenced to 9 years in prison",
+   "where": {
+    "heading": "details-of-charges-10",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "5 years in prison and 5 years probation.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”)",
+   "where": {
+    "heading": "details-of-charges-11",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "independents running for seats in the National Assembly.",
+   "after": "Le Chi Thanh\nOccupation\nBlogger\nDate arrested\n14/",
+   "where": {
+    "heading": "le-chi-thanh",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 16
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "January 2022 sentenced to 5 years in prison.",
+   "after": "Charged Art 330 (“obstructing officials carrying out government",
+   "before_pdf": "January 2022 sentenced to 5 years in prison",
+   "where": {
+    "heading": "details-of-charges-12",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "5 years in prison and 5 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "5 years in prison and 5 years probation",
+   "where": {
+    "heading": "details-of-charges-13",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "8 years in prison and 3 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "8 years in prison and 3 years probation",
+   "where": {
+    "heading": "details-of-charges-14",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 48
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "8 years in prison and 5 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”).",
+   "before_pdf": "8 years in prison and 5 years probation",
+   "where": {
+    "heading": "details-of-charges-15",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "November 2022 sentenced to 4 years in prison",
+   "after": "Charged under Art 331 (abusing democratic freedoms). Had",
+   "where": {
+    "heading": "details-of-charges-16",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 48
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced Details of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the current country situation on his YouTube channel.",
+   "after": "Le Manh Ha\nOccupation\nJournalist, online commentator\nDate",
+   "where": {
+    "heading": "le-manh-ha",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 48
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "8 years in prison and 5 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "8 years in prison and 5 years probation",
+   "where": {
+    "heading": "details-of-charges-17",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "6 years in prison and 2 years probation.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "6 years in prison and 2 years probation",
+   "where": {
+    "heading": "details-of-charges-18",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 49
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "8 years in prison and 4 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”).",
+   "before_pdf": "8 years in prison and 4 years probation",
+   "where": {
+    "heading": "details-of-charges-19",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 49
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for planning to establish an opposition political party.",
+   "after": "Duong Van Thai\nOccupation\nBlogger, Journalist, online commentator",
+   "where": {
+    "heading": "duong-van-thai",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 49
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "12 years in prison and 3 years probation.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”).",
+   "before_pdf": "12 years in prison and 3 years probation",
+   "where": {
+    "heading": "details-of-charges-20",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 48
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "May 2024 sentenced to 8 years in prison.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "May 2024 sentenced to 8 years in prison",
+   "where": {
+    "heading": "details-of-charges-21",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "April 2024 sentenced to 7 years in prison.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”)",
+   "before_pdf": "April 2024 sentenced to 7 years in prison",
+   "where": {
+    "heading": "details-of-charges-22",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 50
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "September 2024 sentenced to 5 years in prison.",
+   "after": "Charged under Art 117 (spreading “anti-state propaganda”).",
+   "before_pdf": "September 2024 sentenced to 5 years in prison",
+   "where": {
+    "heading": "details-of-charges-23",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "September 2024 sentenced to 3 years in prison.",
+   "after": "Charged under Art 331 (abusing democratic freedoms) for",
+   "before_pdf": "September 2024 sentenced to 3 years in prison",
+   "where": {
+    "heading": "details-of-charges-24",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 50
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "",
+   "pdf": "Personal details\nDate arrested\nDate sentenced\nDetails of charges\nName:",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on the case of a death row inmate.",
+   "after": "Pham Van Cho\nOccupation\nOnline commentator\nDate arrested",
+   "where": {
+    "heading": "pham-van-cho",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 50
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "September 2024 sentenced to 7 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "September 2024 sentenced to 7 years in prison",
+   "where": {
+    "heading": "details-of-charges-26",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 50
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "to 4 years and 8 months in prison.",
+   "after": "Charged under Art 331 (abusing democratic freedoms) for",
+   "before_pdf": "to 4 years and 8 months in prison",
+   "where": {
+    "heading": "details-of-charges-27",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 51
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "to 2 years and 6 months in prison.",
+   "after": "Charged under Art 331 (“abusing democratic freedoms”). He",
+   "before_pdf": "to 2 years and 6 months in prison",
+   "where": {
+    "heading": "details-of-charges-28",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "version line",
+   "group": "furniture",
+   "verdict": "real",
+   "web": "",
+   "pdf": "September 2025",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "Version 5.0",
+   "after": "Executive summary\nVietnam is a one-party communist",
+   "before_pdf": "Version 5.0,",
+   "where": {
+    "heading": "executive-summary",
+    "paragraph": null,
+    "section": "Executive summary",
+    "page": 1
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "Internet, social media and bloggers- Censorship and monitoring).",
+   "after": "10 Vietnam continues to arrest and imprison writers,",
+   "before_pdf": "Internet, social media and bloggers-Censorship and monitoring).",
+   "where": {
+    "heading": "journalists-bloggers-and-online-activists",
+    "paragraph": "3.1.10",
+    "section": "Assessment",
+    "page": 9
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "3.1.",
+   "pdf": "3.3.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "A: Table on detained journalists, bloggers and writers).",
+   "after": "11 For further guidance on assessing risk, see",
+   "where": {
+    "heading": "journalists-bloggers-and-online-activists",
+    "paragraph": "3.1.11",
+    "section": "Assessment",
+    "page": 9
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "12.1.5",
+   "pdf": "12.1.2",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "can be, and are, charged with various violations.’",
+   "after": "The DFAT 2025 report stated that:\nThe Law",
+   "where": {
+    "heading": "laws-on-internet-social-media-and-bloggers",
+    "paragraph": "12.1.5",
+    "section": "Country information",
+    "page": 30
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Anh Kim\nOccupation\nOccupation: Journalist, literary writer, veteran",
+   "after": "21/09/2015\nDate sentenced\nDecember 2016, sentenced",
+   "before_pdf": "Tran Anh Kim Occupation: Journalist, literary writer, veteran",
+   "where": {
+    "heading": "date-arrested",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "the Democracy Flag”.\nTruong Minh Duc\nOccupation\nJournalist",
+   "after": "30/07/2017\nDate sentenced\nApril 2018 sentenced",
+   "before_pdf": "Democracy\nFlag\".\nName: Truong Minh Duc Occupation: Journalist",
+   "where": {
+    "heading": "date-arrested-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Democracy.\nTruong Duy Nhat\nOccupation\nJournalist , online commentator",
+   "after": "28/01/2019\nDate sentenced\nMarch 2020 sentenced",
+   "before_pdf": "Name: Truong Duy Nhat Occupation: Journalist , online commentator",
+   "where": {
+    "heading": "date-arrested-2",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "prior.\nPham Chi Dung\nOccupation\nJournalist , online commentator",
+   "after": "21/11/2019\nDate sentenced\nJanuary 2021 sentenced",
+   "before_pdf": "Name: Pham Chi Dung Occupation: Journalist , online commentator",
+   "where": {
+    "heading": "date-arrested-3",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "and extremism”.\nPhan Cong Hai\nOccupation\nOnline commentator",
+   "after": "November 2019\nDate sentenced\nIn 2020 he was",
+   "before_pdf": "extremism”.\nName: Phan Cong Hai Occupation: Online commentator",
+   "where": {
+    "heading": "date-arrested-4",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date sentenced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Hai\nOccupation\nOnline commentator\nDate arrested\nNovember 2019",
+   "after": "In 2020 he was sentenced to 5 years",
+   "before_pdf": "Phan Cong Hai Occupation: Online commentator\nNovember 2019",
+   "where": {
+    "heading": "date-sentenced-4",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Thach\nOccupation\nJournalist, literary writer, online commentator, poet",
+   "after": "23/04/2020\nDate sentenced\nDecember 2020 sentenced",
+   "before_pdf": "Thach Occupation: Journalist, literary writer, online commentator, poet",
+   "where": {
+    "heading": "date-arrested-5",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Chi Thanh\nOccupation\nJournalist , literary writer, online commentator",
+   "after": "21/05/20\nDate sentenced\nJuly 2021 sentenced",
+   "before_pdf": "Chi Thanh Occupation: Journalist , literary writer, online commentator",
+   "where": {
+    "heading": "date-arrested-6",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date sentenced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "writer, online commentator\nDate arrested\n21/05/20",
+   "after": "July 2021 sentenced to 5 years and 6",
+   "before_pdf": "Journalist , literary writer, online commentator\n21/05/20",
+   "where": {
+    "heading": "date-sentenced-6",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Phuc.\nNguyen Tuong Thuy\nOccupation\nJournalist, online commentator",
+   "after": "23/05/2020\nDate sentenced\nJanuary 2021 sentenced",
+   "before_pdf": "Name: Nguyen Tuong Thuy Occupation: Journalist, online commentator",
+   "where": {
+    "heading": "date-arrested-7",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Le Huu Minh Tuan\nOccupation\nJournalist , online commentator",
+   "after": "12/06/2020\nDate sentenced\nJanuary 2021 sentenced",
+   "before_pdf": "Le Huu Minh Tuan Occupation: Journalist , online commentator",
+   "where": {
+    "heading": "date-arrested-8",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "and extremism.”\nTran Thi Tuyet Dieu\nOccupation\nJournalist",
+   "after": "21/08/2020\nDate sentenced\nApril 2021 sentenced",
+   "before_pdf": "charges\nName: Tran Thi Tuyet Dieu Occupation: Journalist",
+   "where": {
+    "heading": "date-arrested-9",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "against the government.\nQuach Duy\nOccupation\nOnline commentator",
+   "after": "18/09/20\nDate sentenced\nApril 2021 sentenced",
+   "before_pdf": "the government.\nName: Quach Duy Occupation: Online commentator",
+   "where": {
+    "heading": "date-arrested-10",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date sentenced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Occupation\nOnline commentator\nDate arrested\n18/09/20",
+   "after": "April 2021 sentenced to 4 years and 6",
+   "before_pdf": "Quach Duy Occupation: Online commentator\n18/09/20",
+   "where": {
+    "heading": "date-sentenced-10",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Trang\nOccupation\nJournalist , Activist, Literary writer, online commentator",
+   "after": "06/10/20\nDate sentenced\nDecember 2021 sentenced",
+   "before_pdf": "Trang Occupation: Journalist Activist, Literary writer, online commentator",
+   "where": {
+    "heading": "date-arrested-11",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date sentenced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "writer, online commentator\nDate arrested\n06/10/20",
+   "after": "December 2021 sentenced to 9 years in prison.",
+   "before_pdf": "Activist, Literary writer, online commentator\n06/10/20",
+   "where": {
+    "heading": "date-sentenced-11",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date arrested",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "Nguyen Van Lam\nOccupation\nOnline commentator, service industry",
+   "after": "06/11/20\nDate sentenced\nJuly 2021 sentenced",
+   "before_pdf": "Nguyen Van Lam Occupation: Online commentator, service industry",
+   "where": {
+    "heading": "date-arrested-12",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  },
+  {
+   "kind": "repeated label",
+   "group": "form",
+   "verdict": "real",
+   "web": "Date sentenced",
+   "pdf": "",
+   "web_words": 2,
+   "pdf_words": 0,
+   "before": "commentator, service industry\nDate arrested\n06/11/20",
+   "after": "July 2021 sentenced to 9 years in prison.",
+   "before_pdf": "Occupation: Online commentator, service industry\n06/11/20",
+   "where": {
+    "heading": "date-sentenced-12",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 47
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "12 years in",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "charges\nCharged under Art 79 (subversion). A journalist",
+   "after": "and labour rights activist - arrested for being a",
+   "before_pdf": "under Art 79\nsentenced to\nsubversion). A journalist",
+   "where": {
+    "heading": "details-of-charges-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "prison and 3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "79 (subversion). A journalist and labour rights activist -",
+   "after": "arrested for being a member of Brotherhood for",
+   "before_pdf": "journalist\n12 years in\nand labour rights activist -",
+   "where": {
+    "heading": "details-of-charges-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Details of charges",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "January 2021 sentenced to 11 years in prison.",
+   "after": "Charged under Art 117 (conducting “anti-State propaganda”).",
+   "before_pdf": "January 2021 sentenced to 11 years in prison",
+   "where": {
+    "heading": "date-sentenced-8",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 46
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "propaganda”). Accused of",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "charges\nCharged under Art 117 (spreading “anti-state",
+   "after": "making online commentaries critical of the Communist Party",
+   "before_pdf": "probation\nCharged under Art 117 (spreading “anti-state",
+   "where": {
+    "heading": "details-of-charges-15",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 7
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "7 years in",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "charges\nCharged under Art 117 (conducting “anti-State",
+   "after": "propaganda”) for Facebook posts deemed offensive and defamatory",
+   "before_pdf": "under Art 117\nsentenced to\nconducting “anti-State",
+   "where": {
+    "heading": "details-of-charges-25",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "prison and 2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "under Art 117 (conducting “anti-State propaganda”) for",
+   "after": "Facebook posts deemed offensive and defamatory of country’",
+   "before_pdf": "conducting “anti-State\n7 years in\npropaganda”) for",
+   "where": {
+    "heading": "details-of-charges-25",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "sentenced to",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "arrest.\nDetails of charges\nCharged under Art 79 (",
+   "after": "subversion). A journalist and labour rights activist - arrested",
+   "before_pdf": "07/17\nApril 2018\nCharged under Art 79",
+   "where": {
+    "heading": "details-of-charges-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "years house",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "labour rights activist - arrested for being a member",
+   "after": "of Brotherhood for Democracy.\nTruong Duy Nhat\nOccupation",
+   "before_pdf": "prison and 3\narrested for being a member",
+   "where": {
+    "heading": "details-of-charges-1",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "sentenced to",
+   "web_words": 0,
+   "pdf_words": 2,
+   "before": "probation\nDetails of charges\nCharged under Art 117 (",
+   "after": "conducting “anti-State propaganda”) for Facebook posts deemed",
+   "before_pdf": "01/24\nJuly 2024\nCharged under Art 117",
+   "where": {
+    "heading": "details-of-charges-25",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 45
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "years",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "conducting “anti-State propaganda”) for Facebook posts deemed",
+   "after": "offensive and defamatory of country’s leader.\nNguyen",
+   "before_pdf": "propaganda”) for\nprison and 2\nFacebook posts deemed",
+   "where": {
+    "heading": "details-of-charges-25",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": null
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "probation",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "propaganda”) for Facebook posts deemed offensive and defamatory",
+   "after": "of country’s leader.\nNguyen Vu Binh\nOccupation",
+   "before_pdf": "2\nFacebook posts deemed\nyears\noffensive and defamatory",
+   "where": {
+    "heading": "details-of-charges-25",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 51
+   }
+  },
+  {
+   "kind": "heading",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "bloggers and writers",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "to discrimination.’\nAnnex A: Table on detained journalists",
+   "after": "Using information from the 88 Project list and",
+   "before_pdf": "to discrimination.’\nAnnex A: Table on detained journalists,",
+   "where": {
+    "heading": "annexa",
+    "paragraph": "14.3.10",
+    "section": "Annex A: Table on detained journalists",
+    "page": 44
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 60,
+ "paragraphs": {
+  "same": 168,
+  "different": {
+   "3.1.10": "3.3.10",
+   "3.1.11": "3.3.11",
+   "12.1.5": "12.1.2"
+  },
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [
+   "7.1",
+   "7.1.2"
+  ],
+  "unconfirmed": []
+ }
+}

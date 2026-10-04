@@ -1,0 +1,36 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 24,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 139,
+ "list_items": 34,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 48,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": 9
+ },
+ "figure_sizes": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": [
+   528,
+   326
+  ]
+ },
+ "figure_text": {
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Bangladesh: Background information, including actors of protection, and internal relocation",
+ "cover_version": "2.0",
+ "cover_date": "January 2018",
+ "pdf_sha256": "d9bd27ccad121bbc87fe919f65597e4aa8321968b41acfa94e6402f96c3b7064",
+ "images": [
+  "b71d2236492117841c166690ea97a2fc13ab8c8cf47f90e8b198a969aae17349.png"
+ ]
+}

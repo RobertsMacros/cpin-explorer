@@ -1,0 +1,41 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 51,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 62,
+ "paragraphs": 375,
+ "list_items": 38,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 109,
+ "bookmarks": 58,
+ "warnings": [],
+ "figure_pages": {
+  "589946583619c2f991b4fc762d928dee08617ca1a00f1d03567bb76c5084923a.png": 43,
+  "2c7cb026dce12c6a7d24f39ce35ad1ce2420aefc5b353ff22953674f0285109c.png": 43
+ },
+ "figure_sizes": {
+  "589946583619c2f991b4fc762d928dee08617ca1a00f1d03567bb76c5084923a.png": [
+   664,
+   225
+  ],
+  "2c7cb026dce12c6a7d24f39ce35ad1ce2420aefc5b353ff22953674f0285109c.png": [
+   262,
+   238
+  ]
+ },
+ "figure_text": {
+  "589946583619c2f991b4fc762d928dee08617ca1a00f1d03567bb76c5084923a.png": 46,
+  "2c7cb026dce12c6a7d24f39ce35ad1ce2420aefc5b353ff22953674f0285109c.png": 28
+ },
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note Sri Lanka: Sexual orientation and gender identity and expression",
+ "cover_version": "4.0",
+ "cover_date": "September 2020",
+ "pdf_sha256": "43e99a1e4974a48731fcc541a7ef24b4e216969925a2dc134fc213f43ac9716f",
+ "images": [
+  "2c7cb026dce12c6a7d24f39ce35ad1ce2420aefc5b353ff22953674f0285109c.png",
+  "589946583619c2f991b4fc762d928dee08617ca1a00f1d03567bb76c5084923a.png"
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 36,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 39,
+ "paragraphs": 222,
+ "list_items": 15,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 83,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 67"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Kuwait: Bidoons",
+ "cover_version": "2.0",
+ "cover_date": "July 2016",
+ "pdf_sha256": "6fe8ad0e2ebb7bc7cd97f377e4002f828e3dcdafa4b2a6fbdb4574f4c4873bdf",
+ "images": []
+}

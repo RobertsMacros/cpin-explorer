@@ -1,0 +1,1532 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "iran/country-policy-and-information-note-women-early-and-forced-marriage-iran-may-2022-accessible",
+ "pdf_sha256": "7f5174ba33c3212e71b9ff8881190c35dcbcc848ae75dfb358e80ce4bcf08010",
+ "body_sha256": "fd4bf5bbcb55c9cd3b2140991694ff4e097c384b1732195bcac6ad8948fdd84e",
+ "words": {
+  "web": 26935,
+  "pdf": 27596
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 218,
+    "web_words": 0,
+    "pdf_words": 651
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "form": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "address as text": {
+    "differences": 1,
+    "web_words": 4,
+    "pdf_words": 5
+   },
+   "list marker": {
+    "differences": 3,
+    "web_words": 0,
+    "pdf_words": 3
+   },
+   "numbering": {
+    "differences": 218,
+    "web_words": 0,
+    "pdf_words": 651
+   }
+  },
+  "ours": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 1,
+   "web_words": 0,
+   "pdf_words": 1
+  },
+  "version": {
+   "web": "5.0",
+   "web_date": "June 2025",
+   "pdf": "5.0",
+   "pdf_date": "June 2025"
+  },
+  "section_updated": {
+   "web": [
+    "20 June 2025"
+   ],
+   "pdf": [
+    "20 June 2025"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 229,
+   "pdf": 229,
+   "pdf_raw": 229,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 0,
+   "pdf": 0
+  },
+  "headings": {
+   "web": 51,
+   "pdf": 49
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "address as text",
+   "group": "address",
+   "verdict": "real",
+   "web": "cipu@homeoffice.gov.uk.",
+   "pdf": "Country Policy and Information Team.",
+   "web_words": 4,
+   "pdf_words": 5,
+   "before": "to comment on this note, please email the",
+   "after": "Independent Advisory Group on Country Information\nThe Independent",
+   "where": {
+    "heading": "feedback-to-the-home-office",
+    "paragraph": null,
+    "section": "Version control and feedback",
+    "page": 64
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "credibility and other checks/referrals\n1.1 Credibility",
+   "after": "For information on assessing credibility, see the instruction",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the instruction on Assessing Credibility and Refugee Status.",
+   "after": "Decision makers must also check if there has",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Visa Matches, Asylum Claims from UK Visa Applicants).",
+   "after": "Decision makers must also consider making an international",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sharing process (Migration 5 biometric data-sharing process)).",
+   "after": "In cases where there are doubts surrounding a",
+   "where": {
+    "heading": "credibility",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 5
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "for disclosure – End of section\n1.2 Exclusion",
+   "after": "Decision makers must consider whether there are serious",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "case must be considered on its individual facts.",
+   "after": "If the person is excluded from the Refugee",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "1.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "a wider range of exclusions than refugee status).",
+   "after": "For guidance on exclusion and restricted leave, see",
+   "where": {
+    "heading": "exclusion",
+    "paragraph": null,
+    "section": "1. Material facts, credibility and other checks/referrals",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "disclosure – End of section\n2. Convention reason(s)",
+   "after": "Actual or imputed membership of a particular social",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "imputed membership of a particular social group (PSG).",
+   "after": "Women form a PSG in Iran within the",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "perceived as being different by the surrounding society.",
+   "after": "Although women form a PSG, establishing such membership",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "account of her membership of such a group.",
+   "after": "In the reported case, TB (PSG, women) Iran [",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 6
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "2.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "which the IAT’s full reasoning was explained.",
+   "after": "For further guidance on the 5 Refugee Convention",
+   "where": {
+    "heading": "convention-reasons",
+    "paragraph": null,
+    "section": "2. Convention reason(s)",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Instruction, Assessing Credibility and Refugee Status.\n3. Risk",
+   "after": "Women and girls, in general, are unlikely to",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "place of residence\neducation; and\nsocio-economic status",
+   "after": "In general, the risk of forced marriage is",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "a means of alleviating their situation of poverty.",
+   "after": "The onus is on a woman or girl",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to forced marriage on her return to Iran.",
+   "after": "Women and girls are broadly protected by the",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Cultural and societal attitudes towards women and marriage).",
+   "after": "Iranian marriages are conducted according to Sharia law.",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 7
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to register their marriages (see Marriage and religion).",
+   "after": "Marriage is governed by the Civil Code which",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "sexual gratification (see Marriage laws and Temporary marriage).",
+   "after": "Women may seek divorce through the courts, though",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "see Divorce and child custody and Reproductive rights).",
+   "after": "Iran is a signatory to the UN Convention",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "maturity and readiness (see Minimum age for marriage).",
+   "after": "Forced marriage is prohibited under the Iranian Civil",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 8
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.10",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "marriage, Marriage customs, and Dowry and maintenance rights).",
+   "after": "Child marriage is difficult to accurately quantify and",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.11",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "an overall decrease (see Prevalence of child marriage).",
+   "after": "A woman or girl who refuses an attempt",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "3.1.12",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Note on Iran: Women fearing ‘honour’-based violence.",
+   "after": "For further guidance on assessing risk, see the",
+   "where": {
+    "heading": "risk",
+    "paragraph": null,
+    "section": "3. Risk",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on Assessing Credibility and Refugee Status.\n4. Protection",
+   "after": "A woman or girl who has a well-",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is unlikely to obtain protection from the state.",
+   "after": "This is because in general, the state is",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and girls, including legislation that allows child marriage.",
+   "after": "Decision makers must consider each case on its",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "be able to seek and obtain state protection.",
+   "after": "Forced marriage is prohibited under the Iranian Civil",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "see Legal framework relating to women and children).",
+   "after": "A national law protecting the safety and wellbeing",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 9
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to women and children and Access to justice).",
+   "after": "Support in the form of hotlines and intervention",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "4.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Avenues of redress and Support and internal relocation).",
+   "after": "For further guidance on assessing state protection, see",
+   "where": {
+    "heading": "protection",
+    "paragraph": null,
+    "section": "4. Protection",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Processing children’s asylum claims.\n5. Internal relocation",
+   "after": "Where the woman or girl has a well-",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of influence over the state authorities and mechanisms",
+   "after": "Internal relocation may be viable if the woman",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of influence over the state authorities and mechanisms.",
+   "after": "Whilst there are no legal barriers to a",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 10
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and Conditions faced by single and divorced women).",
+   "after": "When assessing internal relocation, in the reported case",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "5.1.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "authorities and mechanisms (paras 68 and 69.v).",
+   "after": "For further guidance on considering internal relocation and",
+   "where": {
+    "heading": "internal-relocation",
+    "paragraph": null,
+    "section": "5. Internal relocation",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "on Assessing Credibility and Refugee Status.\n6. Certification",
+   "after": "Where a claim is refused, it is unlikely",
+   "where": {
+    "heading": "certification",
+    "paragraph": null,
+    "section": "6. Certification",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "6.1.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of the Nationality, Immigration and Asylum Act 2002.",
+   "after": "For further guidance on certification, see Certification of",
+   "where": {
+    "heading": "certification",
+    "paragraph": null,
+    "section": "6. Certification",
+    "page": 11
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "duties and rights of parties to a marriage",
+   "after": "It should be noted that the source cited",
+   "where": {
+    "heading": "Marriage_laws",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "in this translation was dated 29 December 1985.",
+   "after": "Article 6 of the Civil Code states: ‘The",
+   "where": {
+    "heading": "Marriage_laws",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Code which stipulates that both parties must consent.",
+   "after": "Article 1105 of the Civil Code states: ‘In",
+   "where": {
+    "heading": "Marriage_laws",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.1.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "family is the exclusive right of the husband.’",
+   "after": "On 2 November 2023, Iran International, a London-",
+   "where": {
+    "heading": "Marriage_laws",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "consent for marriage ...’\n7.2 Marriage and religion",
+   "after": "The Iran Data Portal, an online portal which",
+   "where": {
+    "heading": "Marriage_and_religion",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 13
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the Guardian Council are judges in this matter.’",
+   "after": "The Constitution also states:\nArticle 12 (Official Religion):",
+   "where": {
+    "heading": "Marriage_and_religion",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "their own canon in matters of personal affairs ...’",
+   "after": "Article 1059 of the Civil Code states: ‘Marriage",
+   "where": {
+    "heading": "Marriage_and_religion",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.2.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Moslem with a non-Moslem is not allowed.’",
+   "after": "In February 2021, the Minority Rights Group International (",
+   "where": {
+    "heading": "Marriage_and_religion",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "the Islamic religious establishment ...’\n7.3 Temporary marriage",
+   "after": "The Civil Code recognises the validity of a",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of the temporary marriage must be definitely determined.’",
+   "after": "Other provisions relating to temporary marriage are made",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 14
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "period in the case of a temporary marriage.’",
+   "after": "On 13 January 2020, Cambridge University Press published",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and most men keep their sigheh relationship secret.’",
+   "after": "On 13 January 2021, the Middle East Institute (",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 15
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "been obviated by the availability of documentation online.’",
+   "after": "On 23 November 2023, the UN Human Rights",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "young girls being subjected to temporary marriages (sigheh) ...’",
+   "after": "On 8 December 2023, Iran International published an",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Shia sect and not practised in other sects .",
+   "after": "The November 2024 GGLS article stated: ‘... [S]igheh,",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.3.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "attitudes towards marriage and relationships within Iranian society.’",
+   "after": "On 6 March 2025, the Center for Human",
+   "where": {
+    "heading": "Temporary_marriage",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "have no similar right.’\n7.4 Marriage registration",
+   "after": "Article 993 of the Civil Code states that",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "authorities and are not registered with the government.’",
+   "after": "On 15 July 2013, the Iran Human Rights",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 16
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "punishments are at the discretion of a judge’].’",
+   "after": "On 5 January 2021, Landinfo, the Norwegian Country",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "National Organization of Registration of Documents and Property.’",
+   "after": "In November 2021, the UN Statistics Division (UNSD),",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "and the documentation these events are recorded in.",
+   "after": "The Civil Registration Law also notes at Article",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.4.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "book from the contents of notices and documents.’",
+   "after": "The November 2024 GGLS article stated:\nCourts are",
+   "where": {
+    "heading": "marriage-registration",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 17
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.5.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "Iranian society.’\n7.5 Dowry and maintenance rights",
+   "after": "The November 2024 GGLS article stated:\nT]he",
+   "where": {
+    "heading": "Dowry_and_maintenance",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.5.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "economic considerations and cultural practices in Iranian society.’",
+   "after": "The Civil Code states:\nArticle 1106 - The cost",
+   "where": {
+    "heading": "Dowry_and_maintenance",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.5.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "not be entitled to the cost of maintenance ...’",
+   "after": "Book 7, Part 1, Chapter 1 and Book",
+   "where": {
+    "heading": "Dowry_and_maintenance",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "of maintenance.\n7.6 Divorce and child custody",
+   "after": "Book 7, Section 2 of the Civil Code",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 18
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "outlines the provisions relating to dissolution of marriage.",
+   "after": "Article 1130 of the Civil Code states: ‘In",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "made on the permission of the Islamic judge.’",
+   "after": "Article 1133 of the Civil Code states: ‘A",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "his wife whenever he wishes to do so.’",
+   "after": "On 23 April 2024, the USSD published ‘2023",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.5",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "could divorce his wife without providing any reason.’",
+   "after": "In June 2024, the EU Agency for Asylum (",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.6",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "manner that often impacts women economically and emotionally.’",
+   "after": "The November 2024 GGLS article stated:\nDivorce in",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 19
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.7",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "societal pressure after the dissolution of a marriage.’",
+   "after": "The same GGLS article stated:\nIn Iran, the",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.8",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "is necessary for the legality of the divorce ...’",
+   "after": "An undated webpage belonging to Dadsoo, a legal",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.9",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to continue living with their mother or father.’",
+   "after": "The USSD 2023 Human Rights report stated:\nThe",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.10",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "was proven unfit to care for the child.’",
+   "after": "The November 2024 GGLS article stated:\nThe determination",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.11",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "crucial for the child’s overall well-being.’",
+   "after": "The March 2025 CHRI article stated:\nChild custody",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.6.12",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "who decide to remarry may lose child custody.’",
+   "after": "On 12 March 2025, the UN Human Rights",
+   "where": {
+    "heading": "Divorce_and_child",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.7.1",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "to leave abusive marriages.’\n7.7 Reproductive rights",
+   "after": "The USSD 2023 Human Rights report stated: ‘The",
+   "where": {
+    "heading": "Reproductive_rights",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.7.2",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "spousal rape, including in cases of forced marriage.’",
+   "after": "On 2 December 2024, a Factsheet published by",
+   "where": {
+    "heading": "Reproductive_rights",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.7.3",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "marital rape or other forms of domestic violence.’",
+   "after": "The same factsheet also stated: ‘In November 2021,",
+   "where": {
+    "heading": "Reproductive_rights",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "",
+   "pdf": "7.7.4",
+   "web_words": 0,
+   "pdf_words": 3,
+   "before": "abortion, contraception, voluntary sterilization services and related information.’",
+   "after": "A 6 March 2024 article published by the",
+   "where": {
+    "heading": "Reproductive_rights",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 21
+   }
+  }
+ ],
+ "ours": [],
+ "unresolved": [
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "unresolved",
+   "web": "",
+   "pdf": "7.1.1",
+   "web_words": 0,
+   "pdf_words": 1,
+   "before": "decisions.\n7. Legal context\n7.1 Marriage laws",
+   "after": "On 19 November 2024, Generis Global Legal Services,",
+   "where": {
+    "heading": "Marriage_laws",
+    "paragraph": null,
+    "section": "7. Legal context",
+    "page": 12
+   }
+  }
+ ],
+ "not_listed": 142,
+ "paragraphs": {
+  "same": 22,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 219,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

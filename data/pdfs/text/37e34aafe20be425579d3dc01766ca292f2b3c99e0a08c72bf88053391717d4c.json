@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 45,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 60,
+ "paragraphs": 393,
+ "list_items": 79,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 223,
+ "bookmarks": 55,
+ "warnings": [
+  "footnotes with no mark found in the text: 41, 42, 44, 96, 98, 102, 103, 119, 149, 150, 182, 193…"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 6,
+ "cover_title": "Country Policy and Information Note India: Medical and healthcare provision",
+ "cover_version": "1.0",
+ "cover_date": "October 2020",
+ "pdf_sha256": "37e34aafe20be425579d3dc01766ca292f2b3c99e0a08c72bf88053391717d4c",
+ "images": []
+}

@@ -1,0 +1,86 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 35,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 50,
+ "paragraphs": 194,
+ "list_items": 7,
+ "tables": 0,
+ "figures": 8,
+ "footnotes": 108,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 3, 57, 58, 59"
+ ],
+ "figure_pages": {
+  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": 10,
+  "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": 15,
+  "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png": 16,
+  "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png": 17,
+  "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg": 18,
+  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": 20,
+  "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": 21,
+  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": 22
+ },
+ "figure_sizes": {
+  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": [
+   829,
+   196
+  ],
+  "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": [
+   920,
+   332
+  ],
+  "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png": [
+   918,
+   364
+  ],
+  "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png": [
+   918,
+   223
+  ],
+  "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg": [
+   861,
+   454
+  ],
+  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": [
+   900,
+   1060
+  ],
+  "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": [
+   871,
+   1177
+  ],
+  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": [
+   923,
+   1124
+  ]
+ },
+ "figure_text": {
+  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": 62,
+  "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": 0,
+  "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png": 0,
+  "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png": 0,
+  "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg": 0,
+  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": 2,
+  "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": 1,
+  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": 2
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Ghana: Female genital mutilation (FGM)",
+ "cover_version": "1.0",
+ "cover_date": "December 2016",
+ "pdf_sha256": "bdc325d6028a24217f5eab872aeb75cd6fcbafe62d183564b88e7b0a45ed637c",
+ "images": [
+  "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png",
+  "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png",
+  "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg",
+  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg",
+  "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg",
+  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg",
+  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png",
+  "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png"
+ ]
+}

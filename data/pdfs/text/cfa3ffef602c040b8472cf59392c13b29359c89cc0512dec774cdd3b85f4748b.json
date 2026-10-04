@@ -1,0 +1,26 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 38,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 54,
+ "paragraphs": 225,
+ "list_items": 30,
+ "tables": 3,
+ "figures": 0,
+ "footnotes": 95,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 33, 64"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Algeria: Background information, including actors of protection and internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "August 2017",
+ "pdf_sha256": "cfa3ffef602c040b8472cf59392c13b29359c89cc0512dec774cdd3b85f4748b",
+ "images": []
+}

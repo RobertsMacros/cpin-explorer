@@ -1,0 +1,225 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "albania/country-information-note-medical-and-healthcare-provision-albania-may-2023-accessible",
+ "pdf_sha256": "4d0b5526015191558f417d005acffb72c057c7a4a05efcb72632e21feda7b058",
+ "body_sha256": "2e0fbfb73524ecd5f3edc0ac4673426915c1178faa1afea73141de0a59a7f4c9",
+ "words": {
+  "web": 14812,
+  "pdf": 14805
+ },
+ "summary": {
+  "wording": {
+   "differences": 1,
+   "web_words": 8,
+   "pdf_words": 0,
+   "share": 0.00027,
+   "passages": 1,
+   "sizes": {
+    "passage": 1
+   }
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 1,
+    "web_words": 8,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "bibliography": {
+    "differences": 1,
+    "web_words": 8,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 1,
+   "web_words": 1,
+   "pdf_words": 1
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "3.0",
+   "web_date": "May 2023",
+   "pdf": "3.0",
+   "pdf_date": "May 2023"
+  },
+  "section_updated": {
+   "web": [
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "5 May 2023",
+    "5 May 2023",
+    "3 November 2022",
+    "5 May 2023",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022"
+   ],
+   "pdf": [
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "5 May 2023",
+    "5 May 2023",
+    "3 November 2022",
+    "5 May 2023",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "5 May 2023",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022",
+    "3 November 2022"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 4,
+   "pdf_notices": 4
+  },
+  "footnotes": {
+   "web": 147,
+   "pdf": 147,
+   "pdf_raw": 147,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 56,
+   "pdf": 50
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 1,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "real",
+   "web": "no date. Last accessed: 23 November 2021\nOphthalmology’,",
+   "pdf": "",
+   "web_words": 8,
+   "pdf_words": 0,
+   "before": "2017. Last accessed: 23 November 2021\nObstetric Gynecology’,",
+   "after": "no date. Last accessed: 23 November 2021\nTogether",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "22.1.6",
+    "section": "Bibliography",
+    "page": 48
+   },
+   "size": "passage",
+   "second": "agrees"
+  }
+ ],
+ "ours": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Fund; (",
+   "pdf": "Fund40; 41(",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "the patient from the Compulsory Health Care Insurance",
+   "after": "note: Click on the above link for a",
+   "where": {
+    "heading": "drugs-reimbursable-from-the-compulsory-health-care-insurance-fund",
+    "paragraph": "5.1.1",
+    "section": "5. Specific medicines available in Albania (as of April 2022)",
+    "page": 16
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 132,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

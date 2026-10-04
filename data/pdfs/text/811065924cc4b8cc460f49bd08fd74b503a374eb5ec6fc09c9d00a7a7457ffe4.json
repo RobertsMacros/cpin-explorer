@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 33,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 46,
+ "paragraphs": 177,
+ "list_items": 24,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 108,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Ghana: Sexual orientation and gender identity",
+ "cover_version": "1.0",
+ "cover_date": "February 2016",
+ "pdf_sha256": "811065924cc4b8cc460f49bd08fd74b503a374eb5ec6fc09c9d00a7a7457ffe4",
+ "images": []
+}

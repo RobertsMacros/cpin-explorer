@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 40,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 49,
+ "paragraphs": 320,
+ "list_items": 38,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 68,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Iran: Sexual orientation and gender identity or expression",
+ "cover_version": "3.0",
+ "cover_date": "June 2019",
+ "pdf_sha256": "c35703020b3cb94d697af964f41e121813efd45a5da3da123525605d64a9a8e6",
+ "images": []
+}

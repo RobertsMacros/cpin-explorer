@@ -1,0 +1,37 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 74,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 75,
+ "paragraphs": 539,
+ "list_items": 72,
+ "tables": 0,
+ "figures": 1,
+ "footnotes": 265,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 10"
+ ],
+ "figure_pages": {
+  "b34cd49e4f14cf9946a441993e5c218ac4b745c85a98be4c7705237510acd733.jpg": 32
+ },
+ "figure_sizes": {
+  "b34cd49e4f14cf9946a441993e5c218ac4b745c85a98be4c7705237510acd733.jpg": [
+   803,
+   962
+  ]
+ },
+ "figure_text": {
+  "b34cd49e4f14cf9946a441993e5c218ac4b745c85a98be4c7705237510acd733.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Burma: Rohingya (including Rohingya in Bangladesh)",
+ "cover_version": "2.0",
+ "cover_date": "March 2019",
+ "pdf_sha256": "5b71cff899c5d688312efa59d10e751c915e3c9ac8948895e90a8269ed299c0e",
+ "images": [
+  "b34cd49e4f14cf9946a441993e5c218ac4b745c85a98be4c7705237510acd733.jpg"
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "extractor": "pdftext-2",
+ "pages": 15,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 31,
+ "paragraphs": 89,
+ "list_items": 29,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 13,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Sudan: Non-Arab Darfuris",
+ "cover_version": "4.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "6ae3924d80962a33dd685093b250bdef1ea29a2ddd920d2ab7fb7c8a8d93ea7e",
+ "images": []
+}

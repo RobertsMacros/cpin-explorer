@@ -1,0 +1,225 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "uzbekistan/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-uzbekistan-july-2024-accessible-version",
+ "pdf_sha256": "03f82087ddade93e82ad6265ea220fa423a709841ed0e0f28d988233124ae007",
+ "body_sha256": "03d39e69dc8636e862df4317e9bc4a773df8cb82c1955b407b5e199e708b44cf",
+ "words": {
+  "web": 15312,
+  "pdf": 15317
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {},
+  "ours": {
+   "differences": 5,
+   "web_words": 5,
+   "pdf_words": 9
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "1.0",
+   "web_date": "July 2024",
+   "pdf": "1.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [
+    "25 June 2024"
+   ],
+   "pdf": [
+    "25 June 2024"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 123,
+   "pdf": 123,
+   "pdf_raw": 123,
+   "differ": false
+  },
+  "pictures": {
+   "web": 1,
+   "pdf": 1
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 46,
+   "pdf": 44
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [],
+ "ours": [
+  {
+   "kind": "table cell",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "Number of violations",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "perpetrators were :\nCity/Region\nNumber of violations 2022",
+   "after": "2023\nAndijan and Andijan region\n3\n5\nBukhara",
+   "before_pdf": "perpetrators were :\nCity/Region\nNumber of violations\n2022",
+   "where": {
+    "heading": "bookmark8",
+    "paragraph": "10.2.10",
+    "section": "10. Societal treatment and attitudes",
+    "page": 28
+   }
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "City/Region\nNumber of violations\n2022\n2023",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "2\n1\nSamarkand and Samarkand region\n3\n23",
+   "after": "Tashkent and Tashkent region\n39\n49\nUrgench and",
+   "where": {
+    "heading": "bookmark8",
+    "paragraph": "10.2.10",
+    "section": "10. Societal treatment and attitudes",
+    "page": 28
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "recommendations",
+   "pdf": "recommendations30",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "in the media.’\n8.1.7 Reporting on",
+   "after": "made to Uzbekistan during its UPR Fourth Cycle,",
+   "where": {
+    "heading": "bookmark3",
+    "paragraph": "8.1.7",
+    "section": "8. State treatment and attitudes",
+    "page": 15
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "Prosecutions.",
+   "pdf": "Prosecutions55.",
+   "web_words": 1,
+   "pdf_words": 1,
+   "before": "news release: Uzbekistan: Forced Anal Testing in Homosexuality",
+   "after": "8.3.10 In 2023, 3 gay men",
+   "where": {
+    "heading": "bookmark5",
+    "paragraph": "8.3.9",
+    "section": "8. State treatment and attitudes",
+    "page": 20
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "11.",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "sex sexual conduct between women is not criminalised .",
+   "after": "7.1.6 The ILGA World December 2020",
+   "before_pdf": "sex sexual conduct between women is not criminalised",
+   "where": {
+    "heading": "same-sex-relationships",
+    "paragraph": "7.1.6",
+    "section": "7. Legal context",
+    "page": 12
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 141,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}

@@ -4,44 +4,145 @@
 // it. The report page puts them on one timeline:
 //   - editions: held, readable and comparable (the slider's handles stop on them);
 //   - updates:  GOV.UK change notes that belong to no held edition (an edition we never captured, or a
-//               report with one edition and a long history). They are dated stops that Play steps
-//               through, so every report has a playable history.
+//               report with one edition and a long history). They are dated stops the reader can
+//               step through, so every report has a history to walk. Each says why there is no text
+//               for it (updateKind): the edition is a PDF only, the update was a removal, or the
+//               edition is simply not held.
 // Captions quote the Home Office's own "Changes from last version of this note" (verbatim), else the
 // GOV.UK change note (verbatim). References to sections and paragraphs in them ("sections 13.4, and
-// 16.3 to 16.5", "paragraph 7.3.2") are found here so the page can link them to the text.
+// 16.3 to 16.5", "paragraph 7.3.2") are found here so the page can link them to the text, and so are
+// the names of the report's own sections ("Updated country information and assessment").
+
+import { titleMonth } from "./citation.js";
 
 export const DAY = 86400000;
 const ms = (iso) => (iso ? Date.parse(iso) : NaN);
 const finite = (...xs) => xs.filter(Number.isFinite);
 
-/** Where an edition sits on the timeline: its GOV.UK date, else publication, validity, first seen. */
-export function editionTime(v) {
-  return ms(v?.date) || ms(v?.published) || ms(v?.valid_from) || ms(v?.first_seen) || 0;
+/**
+ * An edition's own date, by the note's account: its "valid from" date where it states one, else the month in
+ * its title, else none. Never the date GOV.UK gives the note: every note on a country page carries the PAGE's
+ * date, which moves whenever any note there changes (China's note on medical treatment, valid from 5 July
+ * 2022, showed as published on 1 September 2026). The export gives the note's own date as `published`, says
+ * which it is in `published_from`, and keeps the page's date apart as `page_updated`. An export from before
+ * that gave the page's date as `published`, so for one of those the date is worked out here instead.
+ *   about  { topic, countryName } of the report, to read the month in a title
+ * Returns { date (ISO), precision: "day" | "month", from: "valid from" | "title" }, or null.
+ */
+export function ownDate(v, about = {}) {
+  if (!v) return null;
+  if ("published_from" in v) {
+    return v.published ? { date: v.published, precision: v.published_precision === "month" ? "month" : "day", from: v.published_from } : null;
+  }
+  if (v.valid_from) return { date: v.valid_from, precision: "day", from: "valid from" };
+  const month = titleMonth({ title: v.title, ...about });
+  return month ? { date: `${month}-01T00:00:00Z`, precision: "month", from: "title" } : null;
+}
+
+/** Where an edition sits on the timeline: its own date; with none, when the Internet Archive first had it,
+ *  else the date GOV.UK gave (no later than which it was published), else when this copy first saw it. */
+export function editionTime(v, about) {
+  return ms(ownDate(v, about)?.date) || ms(v?.captured_at) || ms(v?.date) || ms(v?.published) || ms(v?.first_seen) || 0;
 }
 
 /** When an edition took effect: the earliest of its validity, publication and timeline dates. */
-export function editionStart(v) {
+export function editionStart(v, about) {
   const xs = finite(ms(v?.valid_from), ms(v?.published), ms(v?.date));
-  return xs.length ? Math.min(...xs) : editionTime(v);
+  return xs.length ? Math.min(...xs) : editionTime(v, about);
+}
+
+/** When an edition's words were first seen anywhere: the earliest of the Internet Archive's first capture of
+ *  them and this site's first copy. An ISO time, or null. Where the Home Office changes a note's words and
+ *  keeps its version number and date, this is the only date that tells the two texts apart. */
+export const firstSeen = (v) => [v?.captured_at, v?.first_seen].filter(Boolean).sort()[0] || null;
+
+/**
+ * The Internet Archive copy an edition can be read at once GOV.UK no longer shows it: its own, else the
+ * latest held of the same words (the export lists one copy of a text and names the others under
+ * `also_held_as`, so an edition copied from GOV.UK and since replaced has its archive copy there).
+ * Returns { archive_url, captured_at } or null.
+ */
+export function archiveCopy(v) {
+  if (v?.archive_url) return { archive_url: v.archive_url, captured_at: v.captured_at || null };
+  const held = (v?.also_held_as || []).filter((c) => c.archive_url).sort((a, b) => String(a.captured_at || "").localeCompare(String(b.captured_at || "")));
+  return held.length ? { archive_url: held.at(-1).archive_url, captured_at: held.at(-1).captured_at || null } : null;
+}
+
+/** When an Internet Archive copy was captured: the timestamp in its address (so a citation's date and link
+ *  always agree), else the capture time recorded for the edition. An ISO time, or null. */
+export function capturedAt(v) {
+  const m = /\/web\/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(v?.archive_url || "");
+  return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}Z` : v?.captured_at || null;
+}
+
+/**
+ * An edition recovered as a PDF from the Internet Archive: GOV.UK no longer lists the file, and the text here is
+ * read from the Archive's copy of it. It is two things at once, and is shown as both: "From the PDF" (the text
+ * is an extraction, never "Verbatim") and an archived copy (its source is the Archive's address, never GOV.UK's).
+ * Only its own archive address counts: a PDF that GOV.UK lists now may have an archive copy of the same words
+ * named under `also_held_as`, and is still read from GOV.UK's file.
+ */
+export const isArchivedPdf = (v) => v?.source === "pdf" && !!v.archive_url;
+
+/**
+ * Where an edition can be read, for links and citations: { url, archived, capturedAt, pdf? }.
+ *   - read from a PDF (pdf: true): GOV.UK's file for one GOV.UK lists now; for one recovered from the Internet
+ *     Archive, the Archive's copy with its capture time (archived: true). Never GOV.UK's address for a file it
+ *     no longer lists: that address now leads to a later edition, or nowhere;
+ *   - the edition on GOV.UK now: GOV.UK;
+ *   - else its Internet Archive copy, where one is held; else the report's GOV.UK address (fallback).
+ *   gone  the report is no longer on GOV.UK
+ */
+export function editionWhere(v, { gone = false, fallback = "" } = {}) {
+  if (v?.source === "pdf") {
+    return isArchivedPdf(v) ? { url: v.archive_url, archived: true, capturedAt: capturedAt(v), pdf: true }
+      : { url: v.pdf_url || "", archived: false, capturedAt: null, pdf: true };
+  }
+  if (v?.source === "live" && v.current && !gone && v.govuk_url) return { url: v.govuk_url, archived: false, capturedAt: null };
+  const copy = archiveCopy(v);
+  if (copy) return { url: copy.archive_url, archived: true, capturedAt: capturedAt(copy) };
+  return { url: v?.govuk_url || fallback || "", archived: false, capturedAt: null };
+}
+
+/** How an edition's text was come by, in a few words for small print: "archived copy" (the Internet Archive's
+ *  copy of the web page), "text from the PDF" (an edition read from its PDF), both for a PDF recovered from the
+ *  Archive, and nothing for text read from GOV.UK itself. */
+export function sourceWords(v) {
+  if (v?.source === "wayback") return "archived copy";
+  if (v?.source === "pdf") return isArchivedPdf(v) ? "text from the PDF · archived copy" : "text from the PDF";
+  return "";
 }
 
 /**
  * Lay out a report's history.
  * series: { versions: [...] oldest first, history: [{date, note}] newest first }.
  * Returns { editions, events, stops, latest } where stops are both kinds in date order (an edition
- * before an update on the same instant) and latest is the index of the newest held edition.
+ * before an update on the same instant) and latest is the index of the edition now on GOV.UK (the one
+ * the export marks `current`), else of the newest held. They are not always the same: when GOV.UK puts
+ * a note back to an earlier text, the edition in force is an earlier one, and a later one is history.
  *
  * A GOV.UK change note belongs to a held edition when that edition lists it, or when it is dated within
  * `window` of the edition taking effect (3 days' grace before) and the edition has no note of its own.
+ * A note the export has tied to a PDF-only edition (pdf_url) is never folded into a held edition: it is
+ * the publication of a different one.
  */
 export function buildTimeline(series, { window = 45 * DAY } = {}) {
   const versions = (series?.versions || []).filter((v) => v && typeof v.body === "string");
-  const editions = versions.map((v, i) => ({
-    kind: "edition", i, id: v.id, v, version: v.version || null,
-    t: editionTime(v), start: editionStart(v),
-    prec: v.published && v.published_precision === "month" ? "month" : "day",
-    notes: (v.govuk_change_notes || []).filter((g) => g && g.note).map((g) => ({ date: g.date, note: g.note })),
-  }));
+  const about = { topic: series?.topic, countryName: series?.country_name };
+  const editions = versions.map((v, i) => {
+    const own = ownDate(v, about);
+    return {
+      // ids: every stored copy of this edition's words. The export lists one copy of a text and keeps the
+      // others under `also_held_as`; a link or a saved highlight made on one of those still means this edition.
+      kind: "edition", i, id: v.id, ids: [v.id, ...(v.also_held_as || []).map((c) => c.id)].filter(Boolean), v, version: v.version || null, own,
+      t: editionTime(v, about), start: editionStart(v, about),
+      prec: own?.precision === "month" ? "month" : "day",
+      notes: (v.govuk_change_notes || []).filter((g) => g && g.note).map((g) => ({ date: g.date, note: g.note })),
+    };
+  });
+  // The editions are in the order they were published. A date that would put one before its predecessor (a
+  // note that misstates its own "valid from") does not move it: it sits at its predecessor's date.
+  editions.forEach((e, i) => { if (i && e.t < editions[i - 1].t) e.t = editions[i - 1].t; });
   const listed = new Set(editions.flatMap((e) => e.notes.map((g) => `${g.date}|${g.note}`)));
   const listedDay = new Set(editions.flatMap((e) => e.notes.map((g) => `${String(g.date).slice(0, 10)}|${g.note}`)));
   const events = [];
@@ -52,15 +153,43 @@ export function buildTimeline(series, { window = 45 * DAY } = {}) {
     const d = ms(h.date);
     let host = null;
     for (const e of editions) if (e.start <= d + 3 * DAY) host = e;
-    if (host && d - host.start <= window && !host.notes.length) { host.notes.push({ date: h.date, note: h.note }); continue; }
-    events.push({ kind: "update", t: d, date: h.date, note: h.note, inForce: host ? host.i : null, prec: "day" });
+    if (!h.pdf_url && host && d - host.start <= window && !host.notes.length) { host.notes.push({ date: h.date, note: h.note }); continue; }
+    events.push({ kind: "update", t: d, date: h.date, note: h.note, inForce: host ? host.i : null, prec: "day",
+      pdf: h.pdf_url ? { url: h.pdf_url, title: h.pdf_title || "" } : null });
   }
   const stops = [...editions, ...events].sort((a, b) => a.t - b.t || (a.kind === b.kind ? 0 : a.kind === "edition" ? -1 : 1));
   stops.forEach((s, k) => { s.k = k; });
-  return { editions, events, stops, latest: editions.length - 1 };
+  return { editions, events, stops, latest: latestEdition(editions) };
+}
+
+/** Which edition is "the latest": the one on GOV.UK now when one is (the last so marked), else the last held. */
+function latestEdition(editions) {
+  for (let i = editions.length - 1; i >= 0; i--) if (editions[i].v.current) return i;
+  return editions.length - 1;
 }
 
 /** The held edition to show for a stop: itself, the edition in force on an update's date, else the earliest. */
+/** The report's current edition when it is published as a PDF only ({ title, month, pdf_url, … }), else null. */
+export function currentPdf(series) {
+  return series?.current_pdf_only ? (series.pdf_editions || []).find((p) => p.current) || null : null;
+}
+
+const REMOVED = /\b(removed|withdrawn)\b/i;
+const SOMETHING_NEW = /\b(add(?:ed|s|ing)?|publish(?:ed|es|ing)?|updat(?:ed|es|e|ing)|replac(?:ed|es|e|ing|ement)|new|revis(?:ed|ion)|version\s+\d|accessible)\b/i;
+/**
+ * Does a GOV.UK change note record a removal and nothing else? Then no edition was published by it
+ * and there is nothing to hold. Only when the note says so itself: it speaks of something removed or
+ * withdrawn and of nothing added, published, updated or replaced ("Removed X and added Y" is not one).
+ */
+export function isRemovalNote(note) {
+  const t = String(note || "");
+  return REMOVED.test(t) && !SOMETHING_NEW.test(t);
+}
+/** Why an update has no text of its own: "pdf" (that edition is a PDF only, which we link), "removed", or "not-held". */
+export function updateKind(stop) {
+  return stop?.pdf ? "pdf" : isRemovalNote(stop?.note) ? "removed" : "not-held";
+}
+
 export function editionForStop(stop, timeline) {
   if (!stop) return timeline.latest;
   if (stop.kind === "edition") return stop.i;
@@ -225,12 +354,43 @@ export function mapThrough(points, x) {
   return points[points.length - 1][1];
 }
 
-/** How long Play lingers on a caption so it can be read: about 2.5 to 5.5 seconds. */
-export function dwellFor(chars) {
-  return Math.max(2500, Math.min(5500, 1400 + ((chars || 24) + 40) * 13));
-}
-
 const BACK_MATTER = /^\s*(bibliography|sources (cited|consulted)|version control|terms of reference|research methodology|annex|feedback)/i;
+
+const PLAIN_HEADINGS = new Set(["general", "overview", "introduction", "contents", "summary", "other", "others", "sources", "annex", "background", "note", "notes", "update", "updates"]);
+const reEscape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+/** A heading's name as a statement would say it: without its number, spaces tidied. */
+export const headingName = (text) => String(text || "").replace(/\s+/g, " ").trim().replace(/^\d{1,3}(?:\.\d{1,3})*\.?\s+/, "");
+/**
+ * The report's own sections named in a change statement, so the page can link them:
+ * "Updated country information and assessment" names "Country information" and "Assessment".
+ *   headings  [{ text, level }] of the edition the statement belongs to, in document order
+ * Returns [{ start, end, heading }] (heading: the heading's full text), in order, never overlapping.
+ * Only a heading's whole name counts, as whole words, in any case (a final "s" may come or go on the
+ * last word); the longest name wins where two overlap; of two headings with one name, the higher
+ * level, then the earlier. Back matter (bibliography, version control) and names too plain to mean a
+ * section ("General", "Overview") are never linked.
+ */
+export function findSectionNames(text, headings) {
+  const str = String(text || ""), byName = new Map();
+  for (const h of headings || []) {
+    const name = headingName(h.text), key = name.toLowerCase();
+    const words = key.split(" ").filter(Boolean);
+    if (!words.length || name.length < 4 || BACK_MATTER.test(name) || (words.length === 1 && PLAIN_HEADINGS.has(key))) continue;
+    const had = byName.get(key);
+    if (!had || (h.level || 9) < (had.level || 9)) byName.set(key, { words, level: h.level, heading: String(h.text).replace(/\s+/g, " ").trim() });
+  }
+  const found = [];
+  for (const { words, heading } of byName.values()) {
+    const last = words.at(-1).replace(/s$/, "");
+    const body = [...words.slice(0, -1).map(reEscape), `${reEscape(last)}s?`].join("[\\s\\u00a0]+").replace(/['’]/g, "['’]");
+    const re = new RegExp(`(?<![\\p{L}\\p{N}])${body}(?![\\p{L}\\p{N}])`, "giu");
+    for (const m of str.matchAll(re)) found.push({ start: m.index, end: m.index + m[0].length, heading });
+  }
+  found.sort((a, b) => (b.end - b.start) - (a.end - a.start) || a.start - b.start);
+  const kept = [];
+  for (const f of found) if (!kept.some((k) => f.start < k.end && k.start < f.end)) kept.push(f);
+  return kept.sort((a, b) => a.start - b.start);
+}
 
 /**
  * The computed line under a caption, from a diff summary { stats, toc }: the sections of the new
@@ -331,6 +491,46 @@ export function reportUrl({ country, series, edition = null, changes = false, vi
   if (changes && view === "sbs") url += "&view=sbs";
   if (q) url += `&q=${encodeURIComponent(q)}`;
   return url + (hash || "");
+}
+
+/**
+ * When an edition stopped being the one on GOV.UK, as this copy saw it happen: the export's `left_govuk`,
+ * { at, last_seen, how }. `at` is the check that first found it replaced or gone and `last_seen` the last
+ * check that read it there, so the change fell between the two. Only an edition that was live while this
+ * site was watching has one; an Internet Archive copy has its capture dates instead.
+ *   fmt(iso)  how a date is written
+ * Returns null, or { how: "replaced" | "withdrawn", when, label, sentence }:
+ *   label     "Archived 14 Oct 2026"
+ *   sentence  "GOV.UK replaced it with a newer edition between 13 Oct 2026 (last seen there) and 14 Oct 2026 (found replaced)."
+ */
+export function leftGovuk(left, fmt) {
+  if (!left?.at) return null;
+  const withdrawn = left.how === "withdrawn";
+  const when = fmt(left.at), seen = left.last_seen ? fmt(left.last_seen) : "";
+  const found = withdrawn ? "found gone" : "found replaced";
+  const span = seen && seen !== when ? `between ${seen} (last seen there) and ${when} (${found})` : `by ${when} (${found})`;
+  return { how: withdrawn ? "withdrawn" : "replaced", when, label: `Archived ${when}`,
+    sentence: `GOV.UK ${withdrawn ? "withdrew it" : "replaced it with a newer edition"} ${span}.` };
+}
+
+/**
+ * What is known of when the words of the edition now on GOV.UK were read there, as this copy saw it: the sync
+ * that first read this text (`first_seen`) and, where the export gives it, the last sync that read it again
+ * (`last_seen`). The time of the site's last check is not one of them. A check compares the dates GOV.UK gives
+ * each country page and does not read every note again each time, so it is reported as a check, never as the
+ * moment these words were confirmed.
+ *   lastCheck  when the site last ran a check of any kind (data.json: last_sync)
+ *   fmt(iso)   how a date and time is written
+ * Returns { how, when, check }: how the words were read ("last read" | "read" | ""), when, and a sentence
+ * about the last check ("" when its time is not known).
+ */
+export function readOnGovuk(v, lastCheck, fmt) {
+  const at = v?.last_seen || v?.first_seen || null;
+  return {
+    how: v?.last_seen ? "last read" : v?.first_seen ? "read" : "",
+    when: at ? fmt(at) : "",
+    check: lastCheck ? `GOV.UK was last checked for changes on ${fmt(lastCheck)}. A check compares the dates GOV.UK gives each country page: it does not read every note again each time.` : "",
+  };
 }
 
 /** The exported file holding every edition of a report, relative to a page in prototypes/<page>/. */

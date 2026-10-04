@@ -1,0 +1,388 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-2",
+ "note": "malaysia/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-malaysia-june-2020-accessible",
+ "pdf_sha256": "257f529427be21dfda297020d120cb2e98faf0244a1f6343e4ea1b0d86537ab3",
+ "body_sha256": "858cd7318affcbab0c99768710621d7ed1adb36a4de86c37145432a9041a547b",
+ "words": {
+  "web": 27999,
+  "pdf": 27964
+ },
+ "summary": {
+  "wording": {
+   "differences": 6,
+   "web_words": 39,
+   "pdf_words": 10,
+   "share": 0.000876,
+   "passages": 5,
+   "sizes": {
+    "word": 1,
+    "passage": 5
+   }
+  },
+  "opening": {
+   "differences": 1,
+   "passages": 0,
+   "words": 1
+  },
+  "groups": {
+   "wording": {
+    "differences": 6,
+    "web_words": 39,
+    "pdf_words": 10
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "footnote": {
+    "differences": 1,
+    "web_words": 0,
+    "pdf_words": 10
+   },
+   "numbering": {
+    "differences": 1,
+    "web_words": 3,
+    "pdf_words": 0
+   },
+   "text": {
+    "differences": 5,
+    "web_words": 39,
+    "pdf_words": 0
+   }
+  },
+  "ours": {
+   "differences": 5,
+   "web_words": 5,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "2.0",
+   "web_date": "July 2024",
+   "pdf": "2.0",
+   "pdf_date": "July 2024"
+  },
+  "section_updated": {
+   "web": [],
+   "pdf": [],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 3,
+   "pdf_notices": 3
+  },
+  "footnotes": {
+   "web": 235,
+   "pdf": 236,
+   "pdf_raw": 236,
+   "differ": true
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 5
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 2
+  },
+  "headings": {
+   "web": 58,
+   "pdf": 56
+  },
+  "drafts": [
+   "footnote count differs: web 235, PDF 236"
+  ],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 5,
+   "cannot_tell": 1,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "this chart is available in the PDF version Malaysia: country policy and information notes",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "30.9%).’\n9.1.9 The below chart [",
+   "after": "shows the UCLA findings on the attitudes toward",
+   "before_pdf": "30.9%).’\n9.1.9 The below chart",
+   "where": {
+    "heading": "Societal_attitudes",
+    "paragraph": "9.1.9",
+    "section": "Country information",
+    "page": 43
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "this table is available in the PDF version Malaysia: country policy and information notes",
+   "pdf": "",
+   "web_words": 14,
+   "pdf_words": 0,
+   "before": "Terengganu...’\n13.1.2 SUHAKAM produced a table [",
+   "after": "which shows the reasons people migrated from to",
+   "before_pdf": "Terengganu...’\n13.1.2 SUHAKAM produced a table",
+   "where": {
+    "heading": "Migration_to_Kuala",
+    "paragraph": "13.1.2",
+    "section": "Country information",
+    "page": 57
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "footnote",
+   "group": "wording",
+   "verdict": "real",
+   "web": "",
+   "pdf": "OCHCR, ‘Summary of Stakeholders’ submissions’ (page 16), 2 November 2023",
+   "web_words": 0,
+   "pdf_words": 10,
+   "before": "Myself”: Anti-LGBT Conversion ...’ (Summary), 10 August 2022",
+   "after": "OCHCR, ‘Summary of Stakeholders’ submissions’ (page 10), 2",
+   "where": {
+    "heading": "independent-advisory-group-on-country-information",
+    "paragraph": "13.1.6",
+    "section": "Version control and feedback",
+    "page": 36
+   },
+   "size": "passage",
+   "second": "cannot tell"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "see PDF version for chart]",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "t know.”’\n9.1.5 The below chart [",
+   "after": "shows the UCLA findings on the attitudes toward",
+   "before_pdf": "t know.”’\n9.1.5 The below chart",
+   "where": {
+    "heading": "Societal_attitudes",
+    "paragraph": "9.1.5",
+    "section": "Country information",
+    "page": 41
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "see PDF version for chart]",
+   "pdf": "",
+   "web_words": 5,
+   "pdf_words": 0,
+   "before": "36.9%).’\n9.1.7 The below chart [",
+   "after": "shows the UCLA findings on the attitudes toward",
+   "before_pdf": "36.9%).’\n9.1.7 The below chart",
+   "where": {
+    "heading": "Societal_attitudes",
+    "paragraph": "9.1.7",
+    "section": "Country information",
+    "page": 42
+   },
+   "size": "passage",
+   "second": "agrees"
+  },
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "real",
+   "web": "and)).",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "and caning (see Sharia (Syariah) and customary laws_",
+   "after": "3.1.8 Government rhetoric towards the LGB",
+   "before_pdf": "and caning (see Sharia (Syariah) and customary laws).",
+   "where": {
+    "heading": "risk-from-the-state-to-lgbi-persons",
+    "paragraph": "3.1.7",
+    "section": "Assessment",
+    "page": 7
+   },
+   "size": "word",
+   "second": "agrees",
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "real",
+   "web": "13.1.6",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "those areas.\nSee also Gay ‘scene’ or ‘community’",
+   "after": "Research methodology\nThe country of origin information (COI)",
+   "where": {
+    "heading": "Migration_to_Kuala",
+    "paragraph": "13.1.6",
+    "section": "Country information",
+    "page": 9
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "text",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "and",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "law (see Sharia (Syariah) and customary laws_and))",
+   "after": "State attitudes and treatment).\n3.1.13 The",
+   "before_pdf": "law (see Sharia (Syariah) and customary laws) and",
+   "where": {
+    "heading": "risk-from-the-state-to-lgbi-persons",
+    "paragraph": "3.1.12",
+    "section": "Assessment",
+    "page": 8
+   },
+   "opening": true,
+   "opening_passage": false
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "7.2.4",
+   "pdf": "",
+   "web_words": 3,
+   "pdf_words": 0,
+   "before": "800], to three years of imprisonment and caning.",
+   "after": "The Asian-Pacific Resource & Research Centre For Women (",
+   "before_pdf": "800], to three years of imprisonment and caning.’",
+   "where": {
+    "heading": "Sharia_Syariah",
+    "paragraph": "7.2.4",
+    "section": "Country information",
+    "page": 17
+   }
+  },
+  {
+   "kind": "list marker",
+   "group": "form",
+   "verdict": "artefact",
+   "web": "117]]",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "to OCHCR dated 2 November 2023 noted ‘JS16 [^[",
+   "after": "stated that between 2019 and 2023, LGBTI persons",
+   "before_pdf": "to OCHCR dated 2 November 2023 noted ‘JS16 []",
+   "where": {
+    "heading": "Conversion_therapy_practices",
+    "paragraph": "8.6.6",
+    "section": "Country information",
+    "page": 36
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "221",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "in Kuala Lumpur, Malaysia on March 12, 2023",
+   "after": "11.3.8 NBC News reported: ‘In July [",
+   "before_pdf": "in Kuala Lumpur, Malaysia on March 12, 2023:",
+   "where": {
+    "heading": "Gay_scene_or",
+    "paragraph": "11.3.8",
+    "section": "Country information",
+    "page": 55
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "234",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "people migrated from to Kuala Lumpur and Selangor",
+   "after": "13.1.3 The report noted the ethnicity",
+   "before_pdf": "people migrated from to Kuala Lumpur and Selangor:",
+   "where": {
+    "heading": "Migration_to_Kuala",
+    "paragraph": "13.1.3",
+    "section": "Country information",
+    "page": 11
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 294,
+  "different": {},
+  "pdf_unnumbered": [
+   "7.2.4"
+  ],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}
