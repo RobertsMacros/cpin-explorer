@@ -37,6 +37,9 @@ unassessed. The 2026 inventory has 48 editions and 10,162 footnotes; source-cach
 reuse makes no new requests or paid AI calls. All 324 Python and 339 JavaScript
 tests and canonical verification pass. See [findings, search coverage and the
 48-edition inventory](docs/reviews/2026-10-05-published-reviews-2026.md).
+Main `99d15ac` is live as Cloudflare version `0c59638f-57a8-495b-ad3b-d77b585db1af`
+at 100% traffic. Changed review assets match live; 1280px/390px overlay checks
+pass without console errors. GitHub validation is queued; local checks passed.
 
 
 **5 October 2026: all found reviews and further Syria checks live; 2020 backfill prepared.**

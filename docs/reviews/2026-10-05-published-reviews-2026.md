@@ -65,55 +65,55 @@ The table below closes the inventory pass for every held 2026 edition. “No app
 
 | Publication date | Country / held report | Edition identity | Scoped comparisons completed |
 | --- | --- | --- | ---: |
-| 2026-09-29 | palestine: note:gaza-humanitarian-situation | `c769bfa4982ca24f` | 0 |
-| 2026-09-21 | pakistan: note:protection-sufficiency | `f57f6c1c6073bf71` | 0 |
-| 2026-09-21 | pakistan: note:internal-relocation | `2e2623153c6939ac` | 0 |
-| 2026-09-03 | sudan: note:humanitarian-situation | `15bde6c11e69a8b6` | 0 |
-| 2026-08-26 | china: note:modern-slavery | `c7418b01eeac368d` | 0 |
-| 2026-08-25 | iran: note:military-service | `83755408bda958a3` | 0 |
-| 2026-08-19 | algeria: note:gender-identity-orientation-sexual | `dcaa67979fd20ad8` | 0 |
-| 2026-08-19 | albania: bulletin:human-trafficking | `0080324dd153929c` | 0 |
-| 2026-08-12 | egypt: note:christians | `92cc19ca04d6e563` | 0 |
-| 2026-08-10 | russia: note:military-service | `9f2f77721fd078ab` | 0 |
-| 2026-07-23 | kenya: note:actors-protection | `711dd96b8354681f` | 0 |
-| 2026-07-23 | iraq: bulletin:aside-civil-country-documentation-following-guidance-internal-relocation-returns-setting-update | `047b9c46997a9f08` | 0 |
-| 2026-07-22 | sudan: note:security-situation | `37c3fc359832b7d5` | 0 |
-| 2026-07-15 | pakistan: note:christian-christians-converts | `eeb2106c6b69a57d` | 0 |
-| 2026-06-30 | china: note:christians | `a018af0f067fef43` | 0 |
-| 2026-06-29 | syria: note:humanitarian-situation | `fc683672349c2dc8` | 0 |
-| 2026-06-26 | iran: note:christian-christians-converts | `f27eb7ba3e4a67d8` | 0 |
-| 2026-06-19 | palestine: bulletin:gaza-security-situation | `7baca9ef06fb3c9c` | 0 |
-| 2026-06-03 | trinidad-and-tobago: note:gangs | `496027d55641dc07` | 0 |
-| 2026-05-28 | iran: bulletin:groups-kurdish-kurds-political | `f9f5b5ec999a577e` | 0 |
-| 2026-05-19 | nepal: note:affiliation-political | `ef53c16b518fe29b` | 0 |
-| 2026-05-11 | afghanistan: note:children-unaccompanied | `0032f789b9347dea` | 1 |
-| 2026-05-08 | lebanon: bulletin:security-situation | `33b15bcb292e3c90` | 0 |
-| 2026-05-05 | iraq: bulletin:civil-documentation-internal-relocation-returns | `d46282b8f8829cbb` | 0 |
-| 2026-04-30 | iran: note:adultery-marriage-outside-sex-zina | `5ee0c8a70385343f` | 0 |
-| 2026-04-28 | bangladesh: note:gender-identity-orientation-sexual | `01a3ae1bc68789fc` | 0 |
-| 2026-04-15 | afghanistan: note:humanitarian-situation | `537945e737aed705` | 1 |
-| 2026-04-08 | syria: note:criticism-government | `b5cc4efde5c551c9` | 0 |
-| 2026-04-08 | syria: note:criticism-government | `55297befb75b682b` | 0 |
-| 2026-04-08 | nigeria: note:east-groups-separatist-south | `0da0fd71cde21d1f` | 0 |
-| 2026-04-01 | albania: note:based-gender-violence | `03c3f3bf9f6bfa33` | 0 |
-| 2026-03-26 | iran: bulletin:security-situation | `fb73c381946fc95a` | 0 |
-| 2026-03-25 | syria: note:children | `a0faac83350dc012` | 0 |
-| 2026-03-12 | colombia: note:internal-relocation | `3db3bc2badbeb094` | 2 |
-| 2026-03-12 | colombia: note:armed-criminal-gangs-groups | `be0dd5f4b636ec3f` | 3 |
-| 2026-03-12 | colombia: note:actors-protection | `21bb81b53787f515` | 1 |
-| 2026-03-11 | ethiopia: note:army-front-liberation-oromo-oromos | `5dfa39aeb43e4414` | 0 |
-| 2026-03-10 | vietnam: note:buddhism-hao-hoa | `423b36e054f6512e` | 1 |
-| 2026-03-03 | egypt: note:opposition-state | `9fc4c2033f4c534a` | 0 |
-| 2026-02-27 | honduras: note:gangs | `f47b04adf127e939` | 0 |
-| 2026-02-24 | france: note:country-safe-third | `9ecb0e2f041301d6` | 0 |
-| 2026-02-24 | afghanistan: note:fear-taliban | `2c5e35429f512dbf` | 6 |
-| 2026-02-11 | syria: note:alawites-excluding-minorities-religious | `28254b3cba0230d6` | 0 |
-| 2026-02-04 | iran: bulletin:2025-2026-december-january-protests | `3f0d7fad6abb34a3` | 0 |
-| 2026-02-02 | pakistan: note:affiliation-parties-political | `06852a069ee66da4` | 0 |
-| 2026-02-01 | botswana: note:based-fearing-gender-violence-women | `342f1807301b2efe` | 0 |
-| 2026-01-27 | china: note:opposition-state | `c3fd8dce9ecb854a` | 0 |
-| 2026-01-06 | burma: note:bangladesh-rohingya | `9af70f7edeb2e0f5` | 1 |
+| 2026-09-29 | Palestine: humanitarian situation in Gaza | `c769bfa4982ca24f` | 0 |
+| 2026-09-21 | Pakistan: sufficiency of protection | `f57f6c1c6073bf71` | 0 |
+| 2026-09-21 | Pakistan: internal relocation | `2e2623153c6939ac` | 0 |
+| 2026-09-03 | Sudan: humanitarian situation | `15bde6c11e69a8b6` | 0 |
+| 2026-08-26 | China: modern slavery | `c7418b01eeac368d` | 0 |
+| 2026-08-25 | Iran: military service | `83755408bda958a3` | 0 |
+| 2026-08-19 | Algeria: sexual orientation and gender identity | `dcaa67979fd20ad8` | 0 |
+| 2026-08-19 | Albania: human trafficking | `0080324dd153929c` | 0 |
+| 2026-08-12 | Egypt: Christians | `92cc19ca04d6e563` | 0 |
+| 2026-08-10 | Russia: Military service | `9f2f77721fd078ab` | 0 |
+| 2026-07-23 | Kenya: actors of protection | `711dd96b8354681f` | 0 |
+| 2026-07-23 | Iraq: internal relocation, civil documentation and returns (update following setting aside of country guidance) | `047b9c46997a9f08` | 0 |
+| 2026-07-22 | Sudan: security situation | `37c3fc359832b7d5` | 0 |
+| 2026-07-15 | Pakistan: Christians and Christian converts | `eeb2106c6b69a57d` | 0 |
+| 2026-06-30 | China: Christians | `a018af0f067fef43` | 0 |
+| 2026-06-29 | Syria: humanitarian situation | `fc683672349c2dc8` | 0 |
+| 2026-06-26 | Iran: Christians and Christian converts | `f27eb7ba3e4a67d8` | 0 |
+| 2026-06-19 | Palestine: security situation in Gaza | `7baca9ef06fb3c9c` | 0 |
+| 2026-06-03 | Trinidad and Tobago: gangs | `496027d55641dc07` | 0 |
+| 2026-05-28 | Iran: Kurds and Kurdish political groups | `f9f5b5ec999a577e` | 0 |
+| 2026-05-19 | Nepal: political affiliation | `ef53c16b518fe29b` | 0 |
+| 2026-05-11 | Afghanistan: unaccompanied children | `0032f789b9347dea` | 1 |
+| 2026-05-08 | Lebanon: security situation | `33b15bcb292e3c90` | 0 |
+| 2026-05-05 | Iraq: internal relocation, civil documentation and returns | `d46282b8f8829cbb` | 0 |
+| 2026-04-30 | Iran: ‘Zina’ (sex outside of marriage and adultery) | `5ee0c8a70385343f` | 0 |
+| 2026-04-28 | Bangladesh: sexual orientation and gender identity | `01a3ae1bc68789fc` | 0 |
+| 2026-04-15 | Afghanistan: humanitarian situation | `537945e737aed705` | 1 |
+| 2026-04-08 | Syria: criticism of the government | `b5cc4efde5c551c9` | 0 |
+| 2026-04-08 | Syria: criticism of the government | `55297befb75b682b` | 0 |
+| 2026-04-08 | Nigeria: separatist groups in the South-East | `0da0fd71cde21d1f` | 0 |
+| 2026-04-01 | Albania: gender-based violence | `03c3f3bf9f6bfa33` | 0 |
+| 2026-03-26 | Iran: security situation | `fb73c381946fc95a` | 0 |
+| 2026-03-25 | Syria: children | `a0faac83350dc012` | 0 |
+| 2026-03-12 | Colombia: internal relocation | `3db3bc2badbeb094` | 2 |
+| 2026-03-12 | Colombia: armed groups and criminal gangs | `be0dd5f4b636ec3f` | 3 |
+| 2026-03-12 | Colombia: actors of protection | `21bb81b53787f515` | 1 |
+| 2026-03-11 | Ethiopia: Oromos, the Oromo Liberation Front and the Oromo Liberation Army | `5dfa39aeb43e4414` | 0 |
+| 2026-03-10 | Vietnam: Hoa Hao Buddhism | `423b36e054f6512e` | 1 |
+| 2026-03-03 | Egypt: opposition to the state | `9fc4c2033f4c534a` | 0 |
+| 2026-02-27 | Honduras: gangs | `f47b04adf127e939` | 0 |
+| 2026-02-24 | France: safe third country | `9ecb0e2f041301d6` | 0 |
+| 2026-02-24 | Afghanistan: fear of the Taliban | `2c5e35429f512dbf` | 6 |
+| 2026-02-11 | Syria: religious minorities (excluding Alawites) | `28254b3cba0230d6` | 0 |
+| 2026-02-04 | Iran: protests of December 2025 to January 2026 | `3f0d7fad6abb34a3` | 0 |
+| 2026-02-02 | Pakistan: political parties and affiliation | `06852a069ee66da4` | 0 |
+| 2026-02-01 | Botswana: women fearing gender-based violence | `342f1807301b2efe` | 0 |
+| 2026-01-27 | China: opposition to the state | `c3fd8dce9ecb854a` | 0 |
+| 2026-01-06 | Myanmar (Burma): Rohingya including Rohingya in Bangladesh | `9af70f7edeb2e0f5` | 1 |
 
 ## Verification and publication
 
-Local verification: 324 Python tests and 339 JavaScript tests pass; canonical verification checks 405 bodies, 707 PDFs and 682 images with zero problems. Private caches stay excluded from Git and the public build. Local Chromium checks pass at 1280×900 and 390×844 touch: old Afghanistan/Colombia red flags remain with old editions, corrected editions stay grey, Vietnam shows its scoped follow-up, and Myanmar shows its report-level major AI flag without mislabelling footnote 70. No console errors or green ticks. Native Edge/Safari/iPhone have not been checked in this run. Browser plugin not available; the bundled Playwright runtime was used. Build succeeds with 7,910 files (452 MB). Deployment receipts are added after publication. No paid service, API or recurring monitor was configured. Existing global source collection remains a separate slow one-off job.
+Local verification: 324 Python tests and 339 JavaScript tests pass; canonical verification checks 405 bodies, 707 PDFs and 682 images with zero problems. Private caches stay excluded from Git and the public build. Local Chromium checks pass at 1280×900 and 390×844 touch: old Afghanistan/Colombia red flags remain with old editions, corrected editions stay grey, Vietnam shows its scoped follow-up, and Myanmar shows its report-level major AI flag without mislabelling footnote 70. No console errors or green ticks. Native Edge/Safari/iPhone have not been checked in this run. Browser plugin not available; the bundled Playwright runtime was used. Build succeeds with 7,910 files (452 MB). Main `fe11065` was pushed, followed by `99d15ac` to make both source count lower bounds explicit. The final site is Cloudflare version `0c59638f-57a8-495b-ad3b-d77b585db1af`, serving 100% of traffic. All three changed review assets match live byte for byte, including the final lower-bound clarification. Live 1280px and 390px touch Chromium checks pass for old/new Afghanistan and Colombia, Vietnam and Myanmar, with zero console errors. Private review/source/config paths return 404. The latest [GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37365275739) is queued at the time of this record; local checks have passed. GitHub publication secrets remain absent, so the existing local Wrangler OAuth deployment was used. No paid service, API or recurring monitor was configured. Existing global source collection remains a separate slow one-off job.

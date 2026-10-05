@@ -20,6 +20,11 @@ never call it universally exhaustive or treat reviewers as automatically correct
 pagination and reports access/cap gaps. New discoveries still need curation;
 collection makes no AI or paid API calls. Local verification is 324 Python tests,
 339 JavaScript tests and canonical hashes/completeness. No recurring job added.
+Main `99d15ac` is live as Cloudflare version
+`0c59638f-57a8-495b-ad3b-d77b585db1af`, at 100% traffic. Three changed assets
+match live; desktop and touch mobile overlay checks pass, private evidence 404s.
+GitHub validation remains queued at this record; publication used existing local
+Wrangler OAuth. The missing GitHub Cloudflare secrets remain a separate gap.
 
 ## Review integration and 2020 backfill, 5 October 2026
 
