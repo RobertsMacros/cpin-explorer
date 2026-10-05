@@ -18,6 +18,9 @@ remaining retrieval/anchor gaps and cost assumptions, before continuing. The
 existing slow one-off global collector remains active; do not duplicate or discard
 its pending work. The owner's later explicit main push/live publication request
 supersedes the historical publication hold below.
+Main `2f847e8` was pushed and deployed as Cloudflare version
+`07657e95-d4af-4c78-8e5b-dac95136cf0d` at 100% traffic. Five reader/review assets
+match live responses; desktop and 390px overlays pass with private evidence 404s.
 
 ## Source reviews and Syria pilot published, 5 October 2026
 

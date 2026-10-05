@@ -56,10 +56,11 @@ collection records remain excluded, with explicit inventory diagnostics.
 Cache reuse needed no network or AI calls and hard-links immutable objects. A
 bounded follow-up tried 107 newly discovered source/download addresses, retaining
 40 responses and recording 63 robots restrictions, two missing addresses, one
-refusal and one unsafe address. It did not duplicate addresses pending in the
+refusal and one unsafe address. One subsequently discovered PDF address also
+returned a robots restriction. It did not duplicate addresses pending in the
 existing global job. The snapshot has **35,284 primary/explicit download URLs,
 22,112 captured responses, 21,181 distinct hash-checked objects and zero hash/storage
-issues**. There are **26 pending download outcomes**, mostly reserved for the still
+issues**. There are **25 pending download outcomes**, reserved for the still
 running one-off global job. This is not complete retrieval; inaccessible outcomes
 remain gaps even when a request has completed.
 
@@ -86,7 +87,21 @@ retention after refusal, exact-address separation, date/hash mismatch, stale or
 corrupt copy rejection and absence of automatic approval. All **322 Python and
 338 JavaScript tests** pass; canonical integrity/completeness passes. Desktop
 1280px and 390px Chromium checks cover country background and matching-PDF links.
-Wrangler dry run passes. Native Edge/iPhone remains unchecked. Publication and
-live verification are recorded below after deployment.
+Wrangler dry run passes. Native Edge/iPhone remains unchecked.
 
 See the [batch method and cost illustration](../methods/source-review-batches.md).
+
+## Publication and live verification
+
+Owner-authorised main revision `2f847e8` was pushed and deployed using the existing
+local Wrangler login. Cloudflare version `07657e95-d4af-4c78-8e5b-dac95136cf0d`
+serves 100% of traffic. Live Chromium at 1280×900 and 390×844 verifies background
+reviews, matching-report PDFs, scoped AI comments and physical-page links without
+console errors or horizontal overflow. No AI green tick appears. Reader JS,
+shared review JS, the directory, source-copy registry and published findings are
+byte-identical to the local build. Private source/review evidence URLs return 404.
+[GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37357658177)
+passed for this code revision, including tests, retained-data verification and the
+offline export. Its deploy job was skipped. GitHub's Cloudflare secrets remain
+missing; this manual publication does not enable
+automatic republishing. No source bodies or private notes were deployed.

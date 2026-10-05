@@ -23,7 +23,7 @@ It has three parts:
 
 ## Status
 
-**5 October 2026: all found reviews integrated; 2020 backfill checked locally.**
+**5 October 2026: all found reviews and further Syria checks live; 2020 backfill prepared.**
 All 44 curated publications are available from footnote overlays as exact-edition
 reviews or explicitly unassessed country background. Checked EUAA PDF copies
 recover 67 Syria citations, raising the original since-2023 pilot's source access
@@ -32,12 +32,15 @@ Five further scoped AI wording/attribution checks bring the Syria total to seven
 no exhaustive contradiction review or human approval is claimed.
 The since-1-January-2020 inventory covers 485 held editions, 84,612 footnotes and
 33,061 distinct primary URLs. Private caches hold 21,181 hash-checked source files;
-26 download outcomes remain pending alongside access/text gaps. All 322 Python
+25 download outcomes remain pending alongside access/text gaps. All 322 Python
 and 338 JavaScript tests pass, canonical verification passes, and desktop/mobile
 Chromium checks pass. No paid AI service or recurring job was enabled. See
 [the run and outstanding work](docs/reviews/2026-10-05-reviews-and-2020-backfill.md)
 and [the batch method and cost illustration](docs/methods/source-review-batches.md).
-Publication and live verification will be recorded after deployment.
+Main commit `2f847e8` is live as Cloudflare version
+`07657e95-d4af-4c78-8e5b-dac95136cf0d`, serving 100% of traffic. Five loaded
+reader/review assets match the build byte for byte; live 1280px and 390px Chromium
+overlay checks pass without console errors, and private evidence URLs return 404.
 
 **5 October 2026: compact source marks and first Syria AI checks live.**
 Source badges now show a symbol only, with accessible labels and tooltips. Two
