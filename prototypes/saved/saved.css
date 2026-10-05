@@ -134,3 +134,18 @@
   .sv-demo { flex-wrap: wrap; }
   .sv-demo span { flex: 1 1 auto; text-align: center; box-shadow: 0 -1px 0 color-mix(in oklab, var(--blue-ink) 25%, transparent); }
 }
+
+/* Saved shortcuts sit alongside, and do not change, edition-bound highlights. */
+.sv-section-title { font-size:1.3rem; margin:1.5rem 0 .75rem; }
+.sv-pins { margin:2rem 0; padding:1.25rem; border:1px solid var(--line); background:var(--surface); }
+.sv-pins .sv-section-title { margin-top:0; }
+.pin-form, .pin-lists { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
+.pin-form { margin:1.25rem 0; }
+.pin-form label { display:block; margin-bottom:.4rem; font-size:.85rem; }
+.pin-form select { display:block; width:100%; max-width:100%; padding:.65rem; margin-bottom:.5rem; color:var(--ink); background:var(--bg); border:1px solid var(--line); font:inherit; font-size:.85rem; }
+.pin-lists h3 { font-size:.95rem; }
+.pin-lists ul { list-style:none; margin:0; padding:0; }
+.pin-lists li { display:flex; align-items:center; justify-content:space-between; gap:.75rem; border-top:1px solid var(--line); padding:.65rem 0; }
+.pin-lists li a { overflow-wrap:anywhere; }
+.pin-lists .btn { flex:none; }
+@media(max-width:600px) { .pin-form, .pin-lists { grid-template-columns:1fr; } .sv-pins { padding:1rem; } }

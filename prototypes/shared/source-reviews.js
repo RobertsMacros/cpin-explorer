@@ -1,0 +1,134 @@
+// A review belongs to one edition and one use of a source. Never put private
+// records in the site export: the first human-note store is this browser only.
+import { escHtml as esc } from "./citation.js";
+
+export const STORAGE_KEY = "cpin-source-reviews-v1";
+const TARGET_FIELDS = ["country", "series", "editionId", "textSha", "footnote", "paragraph", "section", "sourceUrl"];
+export function httpUrl(value) {
+  try { const u = new URL(value); return /^(https?:)$/.test(u.protocol) ? u.href : ""; } catch { return ""; }
+}
+const canonical = (url) => { const u = httpUrl(url); return u ? u.split("#")[0] : ""; };
+export const targetKey = (t) => JSON.stringify(TARGET_FIELDS.map((k) => k === "sourceUrl" ? canonical(t[k]) : String(t[k] ?? "")));
+const validTarget = (t) => t && /^[a-f0-9]{16,64}$/.test(t.editionId || "") && /^[a-f0-9]{64}$/.test(t.textSha || "")
+  && t.country && t.series && Number.isInteger(t.footnote) && t.footnote > 0 && t.paragraph && t.section;
+export function matches(record, target) {
+  return validTarget(record?.target) && validTarget(target) && targetKey(record.target) === targetKey(target);
+}
+export function forTarget(records, target) { return records.filter((r) => matches(r, target)); }
+export function reportReviews(reviews, target) {
+  // A report-level review provides context; it cannot assess every footnote.
+  return reviews.filter((r) => r.kind === "direct-review" && r.reviewedProduct === "uk-cpin"
+    && r.targets?.some((t) => t.scope === "whole-report" && t.mapping === "edition-declaration-checked"
+      && ["country", "series", "editionId", "textSha"].every((key) => t[key] && t[key] === target[key])));
+}
+export function activeRecords(records) {
+  // Human edits append to the journal; only the most recent local decision is
+  // current. Independent published and AI findings remain visible alongside it.
+  const manual = records.filter((r) => r.kind === "manual").at(-1);
+  return records.filter((r) => r.kind !== "manual" || r === manual);
+}
+export function reviewStatus(records) {
+  const active = activeRecords(records);
+  if (active.some((r) => ["manual", "external"].includes(r.kind) && r.status === "issue")) return { tone: "red", symbol: "⚑", label: "Issue identified by a reviewer" };
+  if (active.some((r) => r.kind === "ai" && r.status === "possible-issue")) return { tone: "yellow", symbol: "⚑", label: "AI flag · awaiting review" };
+  if (active.some((r) => r.kind === "manual" && r.status === "checked" && r.author?.trim())) return { tone: "green", symbol: "✓", label: "Marked checked locally" };
+  return { tone: "grey", symbol: "○", label: active.some((r) => r.kind === "ai" && r.status === "no-issue") ? "AI found no issue · not human reviewed" : "No human review recorded" };
+}
+export function badgeHtml(records) {
+  const s = reviewStatus(records);
+  return `<span class="source-review-badge sr-${s.tone}" role="img" aria-label="${esc(s.label)}" title="${esc(s.label)}"><span aria-hidden="true">${s.symbol}</span><span class="sr-label" aria-hidden="true">${esc(s.label)}</span></span>`;
+}
+
+export function createPrivateStore(getStorage = () => globalThis.localStorage) {
+  let journal = null;
+  let persistFailed = false;
+  function load() {
+    // Re-read so another tab's entries aren't overwritten by a stale snapshot.
+    if (persistFailed) return journal || [];
+    try {
+      const data = JSON.parse(getStorage()?.getItem(STORAGE_KEY) || "[]");
+      if (Array.isArray(data)) journal = data.filter((r) => r?.kind === "manual" && validTarget(r.target));
+    } catch {}
+    return journal || [];
+  }
+  return {
+    load,
+    save(target, { status, author, organisation = "", comment = "", excerpt = "" }, now = new Date().toISOString()) {
+      if (!validTarget(target)) throw new Error("This citation cannot be anchored reliably; review it in the original document.");
+      if (!["note", "checked", "issue"].includes(status)) throw new Error("Choose a review status.");
+      if (!author.trim()) throw new Error("Enter the reviewer's name.");
+      if (!comment.trim()) throw new Error("Add a note describing what you checked or found.");
+      const record = { id: globalThis.crypto.randomUUID(), kind: "manual", target: { ...target }, status,
+        author: author.trim().slice(0, 120), organisation: organisation.trim().slice(0, 120),
+        comment: comment.trim().slice(0, 4000), excerpt: excerpt.trim().slice(0, 4000), reviewedAt: now };
+      journal = [...load(), record];
+      try {
+        const storage = getStorage();
+        if (!storage) { persistFailed = true; return { record, persisted: false }; }
+        storage.setItem(STORAGE_KEY, JSON.stringify(journal));
+        persistFailed = false;
+        return { record, persisted: true };
+      } catch { persistFailed = true; return { record, persisted: false }; }
+    },
+  };
+}
+
+const link = (url, label) => httpUrl(url) ? `<a href="${esc(httpUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>` : "";
+const date = (s) => { const d = new Date(s); return Number.isFinite(d.getTime()) ? d.toLocaleDateString("en-GB", { timeZone: "Europe/London" }) : "Date not recorded"; };
+function evidenceHtml(r) {
+  if (r.kind === "manual" && r.excerpt) return `<div class="sr-evidence"><p class="field-label">Source passage · pasted by reviewer</p><blockquote>${esc(r.excerpt)}</blockquote>${link(r.target.sourceUrl, "Read full source")}</div>`;
+  const e = r.evidence;
+  // Public excerpts need an explicit rights decision in the published record.
+  if (!e?.quote || e.publicDisplayApproved !== true || typeof e.rightsBasis !== "string" || !e.rightsBasis.trim() || !httpUrl(e.url)) return "";
+  return `<div class="sr-evidence"><p class="field-label">${esc(e.title || "Source passage")}</p><blockquote>${esc(e.quote)}</blockquote><p>${esc([e.author, e.location].filter(Boolean).join(" · "))}</p>${link(e.url, "Read full source")}</div>`;
+}
+function recordHtml(r, previous = false) {
+  const kind = { ai: "AI review", external: "Published review", manual: "Private human review · self-reported" }[r.kind] || "Review";
+  return `<article class="sr-record"><p class="sr-meta">${esc(kind)}${previous ? " · previous entry" : ""}</p>
+    <p>${esc(r.comment || r.summary || "")}</p>
+    ${r.kind === "external" ? '<p class="sr-meta">Reviewer’s finding · not independently assessed here.</p>' : ""}
+    <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
+    ${r.response ? `<p><strong>Home Office response:</strong> ${esc(r.response)}</p>` : ""}
+    ${r.publication ? `<p>${link(r.publication.url, r.publication.title || "Read published review")}${r.publication.location ? ` · ${esc(r.publication.location)}` : ""}</p>` : ""}
+    ${evidenceHtml(r)}</article>`;
+}
+export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], directoryUnavailable = false } = {}) {
+  const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
+  const manual = active.find((r) => r.kind === "manual");
+  const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai");
+  const states = { note: "Private note", checked: "Checked this citation", issue: "Issue found" };
+  const scope = target.paragraph ? `Paragraph ${target.paragraph} · ${target.section}` : "This footnote";
+  return `<section class="sr-source" data-source-url="${esc(target.sourceUrl || "")}">
+    <p class="sr-scope">${esc(scope)}</p>${badgeHtml(records)}
+    ${!active.some((r) => r.excerpt || r.evidence?.publicDisplayApproved) ? `<p class="sr-meta">Source text is not held inline yet. ${link(target.sourceUrl, "Open source to review")}</p>` : ""}
+    <section class="sr-review-group" data-review-kind="external"><h3 class="sr-group-heading">Published reviews</h3>
+      ${publicLoading ? '<p class="sr-meta">Loading published reviews…</p>' : ""}
+      ${publicUnavailable ? '<p class="sr-meta">Published reviews could not be loaded.</p>' : ""}
+      ${published.length ? published.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No published review recorded for this citation.</p>' : ""}
+      ${directoryUnavailable ? '<p class="sr-meta">The published-review directory could not be loaded.</p>' : ""}
+      ${editionReviews.length ? `<details class="sr-report-reviews"><summary>Reviews of this report edition (${editionReviews.length})</summary>
+        <p class="sr-meta">These reviews concern the whole report. Their arguments have not been independently assessed here, or mapped to this citation.</p>
+        ${editionReviews.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p>${esc(r.summary || "")}</p>
+          <p class="sr-meta">${esc((r.publishers || []).join(" / "))} · ${esc(r.publishedAt || "Date not recorded")} · ${esc(r.reviewedEdition?.label || "")}</p></article>`).join("")}</details>` : ""}
+    </section>
+    <section class="sr-review-group" data-review-kind="ai"><h3 class="sr-group-heading">AI review</h3>
+      ${publicLoading ? '<p class="sr-meta">Loading AI review records…</p>' : ""}
+      ${publicUnavailable ? '<p class="sr-meta">AI review records could not be loaded.</p>' : ""}
+      ${ai.length ? ai.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No AI review recorded for this citation.</p>' : ""}
+    </section>
+    <section class="sr-review-group" data-review-kind="manual"><h3 class="sr-group-heading">Manual additions</h3>
+    ${manual ? recordHtml(manual) : '<p class="sr-meta">No manual additions yet.</p>'}
+    ${old.length ? `<details><summary>Previous human entries (${old.length})</summary>${old.map((r) => recordHtml(r, true)).join("")}</details>` : ""}
+    ${validTarget(target) ? `<details class="sr-editor"><summary>${manual ? "Update private review" : "Add private human review"}</summary>
+    <form class="sr-form" data-review-source="${esc(target.sourceUrl || "")}">
+      <p class="sr-meta">Only kept in this browser. Names and organisations are self-reported; this is not a team sign-off.</p>
+      <label>Your name<input name="author" required maxlength="120" autocomplete="name" value="${esc(manual?.author || "")}"></label>
+      <label>Organisation (optional)<input name="organisation" maxlength="120" value="${esc(manual?.organisation || "")}"></label>
+      <label>Status<select name="status">${Object.entries(states).map(([v, label]) => `<option value="${v}"${manual?.status === v ? " selected" : ""}>${esc(label)}</option>`).join("")}</select></label>
+      <label>What you checked or found<textarea name="comment" required maxlength="4000" rows="3">${esc(manual?.comment || "")}</textarea></label>
+      <label>Source passage (optional)<textarea name="excerpt" maxlength="4000" rows="4" placeholder="Paste the relevant passage for comparison here">${esc(manual?.excerpt || "")}</textarea></label>
+      <button type="submit" class="btn">Save private review</button><p class="sr-form-result" role="status"></p>
+    </form></details>` : '<p class="sr-meta">This citation cannot be anchored reliably for a private review.</p>'}
+    </section>
+    </section>`;
+}

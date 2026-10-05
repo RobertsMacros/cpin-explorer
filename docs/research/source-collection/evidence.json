@@ -1,0 +1,104 @@
+{
+  "task": "Collect edition-bound CPIN footnotes and retrieve deduplicated cited HTML and PDF sources with robots and resumable provenance",
+  "candidates": [
+    {
+      "id": "existing-cpin-client-and-pdf-tooling",
+      "status": "tested",
+      "fit": "Reuse existing robots, host delays, refusal handling, hashes and page text extraction.",
+      "scope": "Local CPIN retrieval and PDF text, not evidence interpretation.",
+      "limits": "Existing client has no streaming size bound or cross-host coordinator; existing PDF method is CPIN-specific and must not be rewritten for external sources. Sustained use of new collection workflow is unknown.",
+      "licence": "Owner-owned CPIN code; already-installed httpx/lxml/PyMuPDF licensing unchanged. PyMuPDF is an existing dependency.",
+      "maintenance": "Current main 4147628; maintained locally; tests/test_http.py covers refusals and robots failures.",
+      "adaptation": "Add optional bounded streaming and URL guard, leaving old callers unchanged. Keep external-source PDF extraction separate, with PyMuPDF used only from the main thread.",
+      "transfer": "Preserve immutable documents and failed attempts; never treat retrieval failures as contradictory evidence.",
+      "recommendation": "Reuse client and installed PDF library; directly implement catalogue and a resumable, bounded scheduler.",
+      "sources": [
+        {
+          "url": "/Users/robertnew/Developer/cpin-explorer/src/cpin/http.py",
+          "accessed": "2026-10-05",
+          "basis": "source inspection",
+          "observation": "Robots refusals, read failures and per-host delays are already handled.",
+          "supports": [
+            "operating_detail"
+          ]
+        },
+        {
+          "url": "/Users/robertnew/Developer/cpin-explorer/tests/test_http.py",
+          "accessed": "2026-10-05",
+          "basis": "source inspection",
+          "observation": "Repeatable mock checks cover refused/unreadable robots and National Archives stop rule.",
+          "supports": [
+            "traceable_support"
+          ]
+        },
+        {
+          "url": "https://pymupdf.readthedocs.io/en/latest/recipes-text.html",
+          "accessed": "2026-10-05",
+          "basis": "maintainer documentation",
+          "observation": "Page text extraction preserves a page-level source location; layout is not semantic evidence.",
+          "supports": [
+            "operating_detail"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trafilatura",
+      "status": "unknown",
+      "fit": "Contained HTML text extractor removes article boilerplate more cheaply than a new heuristic subsystem.",
+      "scope": "Extraction only; use CPIN client for all network activity.",
+      "limits": "Main text can be omitted or flattened, as operator issue 883 reports. Sustained production evidence not established within this short scan; retain original bytes and mark extraction as unverified.",
+      "licence": "Apache-2.0 for versions from 1.8; official repository licence inspected.",
+      "maintenance": "Active official documentation and maintainer repository; candidate version will be recorded after install.",
+      "adaptation": "One bounded optional source-collection dependency. Pin major version; retain raw HTML so extraction can be replaced without another scrape.",
+      "transfer": "Use extraction with tables and no comments; retain provenance and test representative HTML/PDF. Do not use crawler or fetching helpers.",
+      "recommendation": "Adopt extraction as a tested pilot component, without calling it operational.",
+      "sources": [
+        {
+          "url": "https://github.com/adbar/trafilatura",
+          "accessed": "2026-10-05",
+          "basis": "maintainer documentation",
+          "observation": "Repository confirms modular extraction and Apache-2.0 licence.",
+          "supports": [
+            "operating_detail"
+          ]
+        },
+        {
+          "url": "https://trafilatura.readthedocs.io/en/latest/usage-python.html",
+          "accessed": "2026-10-05",
+          "basis": "maintainer documentation",
+          "observation": "Extract accepts raw HTML; precision/recall choices and possible omissions documented.",
+          "supports": [
+            "operating_detail"
+          ]
+        },
+        {
+          "url": "https://github.com/adbar/trafilatura/issues/883",
+          "accessed": "2026-10-05",
+          "basis": "operator report",
+          "observation": "Operator reports flattened document structure; this is a limitation rather than proof of sustained reliability.",
+          "supports": [
+            "real_use",
+            "operating_detail",
+            "traceable_support"
+          ]
+        },
+        {
+          "url": "https://trafilatura.readthedocs.io/en/latest/used-by.html",
+          "accessed": "2026-10-05",
+          "basis": "maintainer documentation",
+          "observation": "Use inventory lists integrations but does not independently prove their sustained operation.",
+          "supports": []
+        }
+      ]
+    }
+  ],
+  "decision": {
+    "choice": "Reuse CPIN PoliteClient and installed PyMuPDF; add Trafilatura for HTML extraction and implement only source/claim indexing plus resumable coordination.",
+    "rationale": "Direct custom HTML extraction would save a dependency but add boilerplate heuristics and maintenance. Existing scraper removes most network infrastructure work. No new browser scraper, RAG framework or AI provider is needed for retrieval.",
+    "own_work_checked": "Current CPIN HTTP/linkcheck/PDF code and installed versions inspected. Bounded local catalogue found no extra match; owned GitHub list screened and unrelated macro/music/conversion repos rejected before deep inspection.",
+    "stop_reason": "Stopped after roughly seven minutes; enough evidence to choose existing retrieval plus contained extraction, and further repository hunting is unlikely to save work.",
+    "next_check": "Install recorded extraction version, run fixture tests and a representative real-source pilot before the full run.",
+    "limitations": "Public discovery returned no matching external repository; official library sources inspected separately. No candidate promoted to sustained operational status. Public HTML/PDF extraction is fallible, some linked addresses are malformed, robots/auth/refusals prevent complete retrieval. Private source cache is excluded from site builds and model inputs."
+  }
+}

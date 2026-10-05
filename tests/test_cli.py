@@ -35,3 +35,28 @@ def test_a_comparison_failure_fails_the_command(store, tmp_path, monkeypatch):
     monkeypatch.setattr(webpdf, 'summarise', lambda _: {})
     monkeypatch.setattr(webpdf, 'table', lambda _: [])
     assert cli.cmd_compare(args(tmp_path), store) == 1
+
+
+def test_linked_source_budget_stop_is_reported_in_the_combined_run(tmp_path, monkeypatch):
+    from cpin import source_collect
+    from cpin.store import read_json
+    primary = {"started":"2026-10-05T00:00:00Z", "stopped":None}
+    linked = {"started":"2026-10-05T00:00:01Z", "stopped":"local source cache byte limit reached"}
+    phases = iter([primary, linked])
+    monkeypatch.setattr(source_collect, 'build_inventory', lambda *a, **kw:
+                        ([{"url":"https://example.org/page"}], {"scope":"all held editions", "counts":{}}))
+    monkeypatch.setattr(source_collect, 'collect', lambda *a, **kw: next(phases))
+    monkeypatch.setattr(source_collect, 'linked_documents', lambda *a:
+                        [{"url":"https://example.org/report.pdf"}])
+    monkeypatch.setattr(source_collect, 'export_lists', lambda *a: None)
+    monkeypatch.setattr(source_collect, 'audit_collection', lambda *a:
+                        {"url_count":2, "counts":{"downloaded":1,"pending":1}, "issues":[]})
+    monkeypatch.setattr(source_collect, 'audit_quality', lambda *a: {})
+    monkeypatch.setattr(source_collect, 'footnote_coverage', lambda *a: {"totals":{}})
+    options = SimpleNamespace(inventory_only=False,series_root=tmp_path,out=tmp_path,
+                              all_editions=True,country=[],workers=2,limit=None,retry_failures=False,max_gb=1)
+    assert cli.cmd_sources(options, None) == 1
+    summary = read_json(tmp_path / 'summary.json')
+    assert summary['counts'] == {"downloaded":1,"pending":1}
+    assert summary['stopped'] == [linked['stopped']]
+    assert summary['phases']['cited_sources'] == primary

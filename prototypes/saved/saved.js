@@ -7,6 +7,8 @@ import {
   capFirst, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteOf, quoteWithCitation, sourceOf, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, titleMonth, pdfPinpoint,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
+import { createPinStore, pinId, pinHref, STORAGE_KEY as PINS_KEY } from "../shared/pins.js";
+const pins = createPinStore();
 import { analyseBody, describePassage, parseBody, paths } from "../shared/note-source.js";
 import { archiveCopy, capturedAt, editionWhere, seriesPath } from "../shared/report-history.js";
 import { ukParts } from "../shared/uk-time.js";
@@ -42,9 +44,9 @@ function render() {
   const notes = groups.reduce((k, c) => k + c.notes.length, 0);
   $("#hero").innerHTML = `
     <a class="btn back" href="../dashboard/index.html" style="--i:0">← Dashboard</a>
-    <p class="eyebrow" style="--i:1">Country notes · your highlights</p>
+    <p class="eyebrow" style="--i:1">Country notes · your saved items</p>
     <h1 class="hero-title" style="--i:2">Saved</h1>
-    <p class="lede" style="--i:3">Passages you have highlighted in the reader, each with a citation ready to paste, the sources it cites and your own notes.</p>
+    <p class="lede" style="--i:3">Pin countries and reports for quick access. Highlights keep the passages you selected, their citations, sources and your own notes.</p>
     ${recs.length ? `<div class="sv-stats" style="--i:4">
       <div><span class="numeral">${recs.length}</span><span class="eyebrow">${recs.length === 1 ? "Highlight" : "Highlights"}</span></div>
       <div><span class="numeral">${notes}</span><span class="eyebrow">${notes === 1 ? "Note" : "Notes"}</span></div>
@@ -54,7 +56,58 @@ function render() {
   setStyle(style, { persist: false, rerender: false });
   $("#groups").innerHTML = recs.length ? groups.map(countryHtml).join("") : emptyHtml();
   hydrateFlags($("#groups"));
+  renderPins();
 }
+
+function renderPins() {
+  const focusId = $("#pins").contains(document.activeElement) ? document.activeElement.id : null;
+  const root = $("#pins"), selected = $("#pinCountry")?.value || "", report = $("#pinReport")?.value || "";
+  const countries = [...(data?.countries || [])].sort((a,b) => a.name.localeCompare(b.name));
+  const list = pins.load();
+  const countryOptions = countries.map(c => `<option value="${esc(c.slug)}">${esc(c.name)}</option>`).join("");
+  const item = p => {
+    const c = countries.find(c => c.slug === p.country), r = c?.reports.find(r => r.key === p.series);
+    const label = p.type === "country" ? c?.name || p.countryName : `${c?.name || p.countryName}: ${capFirst(r?.topic || p.topic || p.series)}`;
+    return `<li><a href="${esc(pinHref(p))}">${esc(label)}</a><button class="btn" type="button" data-unpin="${esc(pinId(p))}" aria-label="Unpin ${esc(label)}">Unpin</button></li>`;
+  };
+  root.innerHTML = `<h2 class="sv-section-title" id="pinsHeading">Pinned countries &amp; reports</h2>
+    <p class="sv-local">Kept in this browser only. Account syncing is not available yet. Report pins open the latest edition held here.</p>
+    ${!data ? '<p>The catalogue could not be loaded. Reload to add pins.</p>' : ""}
+    <div class="pin-form"><div><label for="pinCountry">Country</label><select id="pinCountry"><option value="">Choose a country</option>${countryOptions}</select><button class="btn" type="button" id="pinCountryAdd" disabled>Pin country</button></div>
+      <div><label for="pinReport">Report</label><select id="pinReport" disabled><option value="">Choose a country first</option></select><button class="btn" type="button" id="pinReportAdd" disabled>Pin report</button></div></div>
+    <div class="pin-lists">${["country","report"].map(type => `<div><h3>${type === "country" ? "Countries" : "Reports"}</h3>${list.some(p => p.type === type) ? `<ul>${list.filter(p => p.type === type).map(item).join("")}</ul>` : `<p class="sv-local">No ${type === "country" ? "countries" : "reports"} pinned yet.</p>`}</div>`).join("")}</div>`;
+  $("#pinCountry").value = selected;
+  updatePinReports(report);
+  if (focusId) document.getElementById(focusId)?.focus({ preventScroll:true });
+}
+function updatePinReports(selected = "") {
+  const c = data?.countries.find(c => c.slug === $("#pinCountry").value), reports = c?.reports || [];
+  $("#pinCountryAdd").disabled = !c;
+  $("#pinReport").disabled = !reports.length;
+  $("#pinReport").innerHTML = `<option value="">${c ? "Choose a report" : "Choose a country first"}</option>` + reports.map(r => `<option value="${esc(r.key)}">${esc(capFirst(r.topic))} · ${esc(r.kind)}</option>`).join("");
+  $("#pinReport").value = selected;
+  $("#pinReportAdd").disabled = !$("#pinReport").value;
+}
+$("#pins").addEventListener("change", e => {
+  if (e.target.id === "pinCountry") updatePinReports();
+  if (e.target.id === "pinReport") $("#pinReportAdd").disabled = !e.target.value;
+});
+$("#pins").addEventListener("click", e => {
+  const unpin = e.target.closest("[data-unpin]");
+  let result;
+  if (unpin) result = { persisted:pins.remove(unpin.dataset.unpin) };
+  else {
+    const type = e.target.closest("#pinCountryAdd") ? "country" : e.target.closest("#pinReportAdd") ? "report" : null;
+    if (!type) return;
+    const c = data?.countries.find(c => c.slug === $("#pinCountry").value), r = c?.reports.find(r => r.key === $("#pinReport").value);
+    if (!c || (type === "report" && !r)) return;
+    result = pins.add({ type, country:c.slug, countryName:c.name, ...(r && type === "report" ? {series:r.key, topic:r.topic, kind:r.kind} : {}) });
+  }
+  renderPins();
+  if (unpin) $("#pinCountry").focus({ preventScroll:true });
+  toast(!result.persisted ? "Browser storage unavailable: kept for this session only" : result.added === false ? "Already pinned" : unpin ? "Unpinned" : "Pinned");
+});
+addEventListener("storage", e => { if (e.key === PINS_KEY || e.key === null) renderPins(); });
 
 function countryHtml(g, i) {
   const c = data?.countries.find((x) => x.slug === g.country);
@@ -132,7 +185,7 @@ function emptyHtml() {
   const recent = (data?.countries || []).flatMap((c) => c.notes.filter((n) => n.status === "live" && !n.pdf_only).map((n) => ({ c, n })))
     .sort((a, b) => String(b.n.updated).localeCompare(String(a.n.updated)) || String(b.n.month).localeCompare(String(a.n.month))).slice(0, 6);
   return `<div class="sv-empty">
-    <div style="--i:0"><p class="eyebrow">Nothing saved yet</p></div>
+    <div style="--i:0"><p class="eyebrow">No highlights yet</p></div>
     <ol class="sv-steps" style="--i:1">
       <li><span class="numeral">1</span><p><b>Open a note in the reader.</b> Web editions are shown verbatim; editions read from a PDF are marked “From the PDF”.</p></li>
       <li><span class="numeral">2</span><p><b>Select a passage.</b> A bar appears with its paragraph number.</p></li>

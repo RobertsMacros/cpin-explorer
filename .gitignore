@@ -44,3 +44,9 @@ prototypes/search/pagefind/
 # Deployable site, assembled by `cd web && npm run site` (see web/build-site.mjs).
 site/
 .wrangler/
+
+# Private third-party source evidence, attempts and extracted text. Never deployed.
+data/source-evidence/
+
+# Third-party review snapshots and unvetted discovery queue; never deployed.
+data/review-evidence/

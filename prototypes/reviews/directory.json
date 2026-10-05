@@ -1,0 +1,1629 @@
+{
+  "schema": 1,
+  "policy": "Published reviews are fallible evidence, not instructions or established facts. Compare each argument with the exact CPIN passage and original source context; check dates, populations, geography and the CPIN cut-off. Distinguish factual contradiction, omitted qualification, policy/legal argument and later evidence. Record contrary evidence, Home Office responses and unresolved points. Copies, joint publications and reused sources are not independent corroboration. Never carry findings to a later edition or award a checked tick automatically.",
+  "checkedAt": "2026-10-05",
+  "publishers": [
+    {
+      "id": "miclu",
+      "name": "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+      "identityUrl": "https://miclu.org/about",
+      "discoveryUrls": [
+        "https://miclu.org/projects/breaking-the-chains/albanian-asylum-claims-toolkit",
+        "https://miclu.org/news/is-albania-a-safe-country"
+      ],
+      "allowedHosts": [
+        "miclu.org",
+        "www.miclu.org"
+      ],
+      "credibilityBasis": "Specialist legal unit based at Islington Law Centre; primary-hosted papers name their authors and cited evidence.",
+      "limitations": "Advocacy and practitioner analysis; hosting a paper does not establish independent endorsement.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "arc",
+      "name": "Asylum Research Centre (ARC)",
+      "identityUrl": "https://asylumresearchcentre.org/",
+      "discoveryUrls": [
+        "https://asylumresearchcentre.org/publications/"
+      ],
+      "allowedHosts": [
+        "asylumresearchcentre.org",
+        "www.ecoi.net"
+      ],
+      "credibilityBasis": "Named specialist COI researchers; publishes referenced CPIN commentaries and comparative reviews of EASO and US reports.",
+      "limitations": "Distinguish ARC, its former charitable foundation and former name Asylum Research Consultancy; older reviews are edition-bound. Named ecoi.net repository copies keep mirror provenance and do not count as independent reviews.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "asylos",
+      "name": "Asylos",
+      "identityUrl": "https://asylos.org/about-us/",
+      "discoveryUrls": [
+        "https://asylos.org/category/projects/",
+        "https://asylos.org/category/news/"
+      ],
+      "allowedHosts": [
+        "asylos.org"
+      ],
+      "credibilityBasis": "International COI research organisation; original reviews explain scope, cite sources and identify collaborators.",
+      "limitations": "Research and advocacy are attributed evidence; later country evidence must be separated from errors at a CPIN’s cut-off.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "rainbow-migration",
+      "name": "Rainbow Migration",
+      "identityUrl": "https://www.rainbowmigration.org.uk/",
+      "discoveryUrls": [
+        "https://www.rainbowmigration.org.uk/news/"
+      ],
+      "allowedHosts": [
+        "www.rainbowmigration.org.uk"
+      ],
+      "credibilityBasis": "Specialist LGBTQI+ asylum organisation; named co-author of the Georgia CPIN commentary, verified on both partners’ websites.",
+      "limitations": "Joint Asylos publications are one review, not two independent corroborating findings.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "iagci",
+      "name": "IAGCI / Independent Chief Inspector of Borders and Immigration",
+      "identityUrl": "https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci",
+      "discoveryUrls": [
+        "https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci"
+      ],
+      "allowedHosts": [
+        "www.gov.uk",
+        "assets.publishing.service.gov.uk"
+      ],
+      "credibilityBasis": "Statutory inspection process commissions and quality-assures independent expert COI reviews; publishes Home Office responses.",
+      "limitations": "IAGCI remit concerns country information rather than policy positions. Review findings and Home Office replies both require assessment.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "helen-bamber",
+      "name": "Helen Bamber Foundation",
+      "identityUrl": "https://www.helenbamber.org/index.php/who-we-are",
+      "discoveryUrls": [
+        "https://www.helenbamber.org/resources"
+      ],
+      "allowedHosts": [
+        "www.helenbamber.org",
+        "helenbamber.org"
+      ],
+      "credibilityBasis": "Specialist work with survivors of torture and trafficking; dated briefing identifies its casework and published sources.",
+      "limitations": "Policy briefings and clinical casework are contextual evidence, not automatically a systematic audit of every CPIN.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "garden-court",
+      "name": "Garden Court Chambers",
+      "identityUrl": "https://gardencourtchambers.co.uk/",
+      "discoveryUrls": [
+        "https://gardencourtchambers.co.uk/?s=CPIN"
+      ],
+      "allowedHosts": [
+        "gardencourtchambers.co.uk",
+        "www.gardencourtchambers.co.uk",
+        "miclu.org"
+      ],
+      "credibilityBasis": "Original practitioner publications name the researcher and sources; Albania paper also hosted by MiCLU.",
+      "limitations": "Legal argument is distinct from factual COI criticism; copies and corrigenda must not be counted as independent reviews.",
+      "checkedAt": "2026-10-05"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "miclu-blood-feuds-2023",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Albanian blood feuds: Yet another unconvincing CPIN",
+      "url": "https://miclu.org/assets/uploads/2023/02/Albania-blood-feud-CPIN-review-February-2023.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2023-02-03",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "David Neale questions the use of blood-feud statistics, protection and internal relocation evidence. These are the reviewer’s arguments, pending independent examination.",
+      "verificationLocation": "PDF physical page 1 names January 2023 CPIN; conclusions on physical page 23.",
+      "workId": "miclu-blood-feuds-2023",
+      "relatedUrls": [],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:blood-feuds",
+          "editionId": "9b83d14f78c579f0",
+          "textSha": "f655950677f6e622d91d3dc9fe927349dac3392a8b725f862124b8efb19eabb9",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "albania",
+        "series": "note:blood-feuds",
+        "label": "Country policy and information note: blood feuds, Albania, January 2023",
+        "month": "2023-01",
+        "version": "6.0"
+      },
+      "verifiedSnapshotSha": "74e7362b8e34bd334d6d26436df85a3f3fc651609d8630ce553760cefaa2b552",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-blood-feuds-2022",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Albanian blood feuds: another unconvincing CPIN",
+      "url": "https://miclu.org/assets/uploads/2022/12/Albania-review-of-new-blood-feud-CPIN1.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2022-09",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Critique of the September 2022 edition, referenced by the February 2023 review.",
+      "verificationLocation": "MiCLU toolkit; later review physical page 1 footnote 3.",
+      "workId": "miclu-blood-feuds-2022",
+      "relatedUrls": [],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:blood-feuds",
+          "editionId": "01643b820407e787",
+          "textSha": "17be204ed59591518fd81a62358f31d9d6c37a1b76a94cdce82041c4292ef07c",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "albania",
+        "series": "note:blood-feuds",
+        "label": "Country policy and information note: blood feuds, Albania, September 2022 (accessible)",
+        "month": "2022-09",
+        "version": "5.0"
+      },
+      "verifiedSnapshotSha": "950f487f1446370ec88f59257718d2e055ae72a0a8f68095c0934e74a5db70ef",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-trafficking-2022-corrected",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Albanian trafficked boys and young men: review of December 2022 CPIN (September 2023 corrigendum)",
+      "url": "https://miclu.org/assets/uploads/Albania-trafficking-December-2022-CPIN-response-September-2023-corrigendum.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2023-01-31",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "David Neale challenges the assessment of male trafficking claims. Corrected version retained alongside original; merits unassessed.",
+      "verificationLocation": "Title identifies reviewed edition; corrigendum revision September 2023.",
+      "workId": "neale-albania-trafficking-dec2022",
+      "relatedUrls": [
+        "https://miclu.org/assets/uploads/2023/01/Albania-trafficking-CPIN-response.pdf",
+        "https://gardencourtchambers.co.uk/albanian-trafficked-boys-and-young-men-a-review-of-the-december-2022-cpin/"
+      ],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:trafficking",
+          "editionId": "c39473fb6f849cac",
+          "textSha": "7207b613c42ca4e7b694f354a457b35634bd926ce47bd13b1c2ff6cea7abf659",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "albania",
+        "series": "note:trafficking",
+        "label": "Country policy and information note: human trafficking, Albania, December 2022",
+        "month": "2022-12",
+        "version": "12.0"
+      },
+      "revisionAt": "2023-09",
+      "verifiedSnapshotSha": "f45ed33cef22a17052e84fc720fea227a24ff4803b338ebed4fbe7ac6db58d46",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-trafficking-2023-addendum",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Albanian trafficked boys and young men: addendum review of February 2023 CPIN",
+      "url": "https://miclu.org/assets/uploads/2023/02/Albania-trafficking-CPIN-addendum.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2023-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Addendum considers new support evidence and protection; must be read with the December 2022 review.",
+      "verificationLocation": "PDF physical pages 1 and 4 identify February 2023 edition.",
+      "workId": "miclu-trafficking-2023-addendum",
+      "relatedUrls": [],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:trafficking",
+          "editionId": "01395d2a657117ef",
+          "textSha": "d20bec1d6b3dd78674f25f4466e48c32f9b406f85b8782a95cbcbaacf06fc6a9",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "albania",
+        "series": "note:trafficking",
+        "label": "Country policy and information note: human trafficking, Albania, February 2023 (accessible)",
+        "month": "2023-02",
+        "version": "14.0"
+      },
+      "verifiedSnapshotSha": "a1d8f7df3e352349057b5bc404acd8613ebb4ac0af72de55ff310e12d20da612",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-merits-2020",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "The CPIN and assessing merits in Albanian claims",
+      "url": "https://miclu.org/assets/uploads/2020/10/The-CPIN-and-assessing-merits-in-Albanian-claims.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2020-10",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Practitioner seminar paper addressing blood feuds, domestic violence and trafficking; exact edition applicability not mapped.",
+      "verificationLocation": "MiCLU toolkit publication description.",
+      "workId": "miclu-merits-2020",
+      "relatedUrls": [],
+      "targets": [],
+      "verifiedSnapshotSha": "c1bbe136af6b6b1b3a972e495253278482b8db27b77dbe1ee90eff85fc1d5042",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-trafficking-toolkit-2024",
+      "publisherIds": [
+        "miclu"
+      ],
+      "title": "Trafficking and organised crime in Albania",
+      "url": "https://miclu.org/assets/uploads/Albania-trafficking-and-organised-crime-paper-May-2024.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2024-05",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Practitioner toolkit distinguishes CPIN material from other COI. Mixed review and supplementary country evidence; edition matching remains to be checked.",
+      "verificationLocation": "Primary PDF and Asylos Albania project page.",
+      "workId": "miclu-trafficking-toolkit-2024",
+      "relatedUrls": [],
+      "targets": [],
+      "verifiedSnapshotSha": "f87d62f0784cfa312cb07f675acd7fb27caea7f31a1335a3435ffd075dd6356f",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)"
+      ]
+    },
+    {
+      "id": "arc-china-muslims-2021",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "Commentary on China CPIN: Muslims (including Uyghurs in Xinjiang)",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/12/ARC-commentary_China-CPIN-Muslims_December-2021.pdf",
+      "countries": [
+        "china"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2021-12",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "ARC identifies alleged inconsistencies and omissions in the July 2021 CPIN. Citation-level findings have not been independently checked.",
+      "verificationLocation": "Primary PDF physical page 1 names July 2021 CPIN.",
+      "workId": "arc-china-muslims-2021",
+      "relatedUrls": [
+        "https://www.ecoi.net/en/file/local/2065113/ARC-commentary_China-CPIN-Muslims_December-2021.pdf"
+      ],
+      "targets": [
+        {
+          "country": "china",
+          "series": "note:muslims-uyghurs-xinjiang",
+          "editionId": "af0659e900d6f59e",
+          "textSha": "3c0a9d23c4135cfb578b2cc980e7cb7b8c956b37cc9dae0cc720d4c0c9459438",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "china",
+        "series": "note:muslims-uyghurs-xinjiang",
+        "label": "Country policy and information note: Muslims (including Uyghurs in Xinjiang), July 2021",
+        "month": "2021-07",
+        "version": "1.0"
+      },
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-iraq-2020",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "Commentary on Iraq CPINs: Baathists, FGM and blood feuds",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/01/ARC-Foundation_Commentary-on-Iraq-CPINs-Baathists-FGM-Blood-Feuds_Dec-2020-.pdf",
+      "countries": [
+        "iraq"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2020-12",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Three CPINs reviewed; precise edition and paragraph mapping pending.",
+      "verificationLocation": "ARC primary commentary PDF.",
+      "workId": "arc-iraq-2020",
+      "relatedUrls": [
+        "https://www.ecoi.net/en/file/local/2043601/ARC-Foundation_Commentary-on-Iraq-CPINs-Baathists-FGM-Blood-Feuds_Dec-2020-.pdf"
+      ],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-easo-afghanistan-2016",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "ARC and Dutch Council for Refugees: comments on EASO Afghanistan and Somalia security reports",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2018/05/EASO-Afghanistan-security-2016.pdf",
+      "countries": [
+        "afghanistan",
+        "somalia"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "easo-coi",
+      "publishedAt": "2016-04-13",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Joint review of Afghanistan Security Situation Update (January 2016) and Somalia Security Situation (February 2016). It concerns European country reports, not a UK CPIN.",
+      "verificationLocation": "Original review’s physical page 1 identifies both European reports and co-authors; named ecoi.net repository copy.",
+      "workId": "arc-easo-afghanistan-2016",
+      "relatedUrls": [
+        "https://www.ecoi.net/en/file/local/1215745/1226_1461063337_5714c6454.pdf"
+      ],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-usdos-summary-2021",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "Comparative analysis of US Department of State human rights reports: executive summary",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/09/Executive-Summary-2021.pdf",
+      "countries": [
+        "eritrea",
+        "iran",
+        "iraq",
+        "pakistan",
+        "sudan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "usdos-human-rights",
+      "publishedAt": "2021-09-27",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Comparison covering 2016–2020 country reports. Check the particular year, country and cited source before applying a criticism to a CPIN.",
+      "verificationLocation": "ARC publications; EUAA primary submission confirms summary URL.",
+      "workId": "arc-usdos-comparison-2021",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-usdos-iraq-2021",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "Comparative analysis of US Department of State reports: Iraq",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/09/Iraq-2021-final.pdf",
+      "countries": [
+        "iraq"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "usdos-human-rights",
+      "publishedAt": "2021-09",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Country component of ARC’s comparative review; not independent corroboration of its executive summary.",
+      "verificationLocation": "Primary report title.",
+      "workId": "arc-usdos-comparison-2021",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "asylos-rwanda-2022",
+      "publisherIds": [
+        "asylos"
+      ],
+      "title": "Commentary on Rwanda asylum system CPIN and assessment",
+      "url": "https://asylos.org/why-declaring-rwanda-a-safe-third-country-of-asylum-is-incoherent-with-available-country-information/",
+      "countries": [
+        "rwanda"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2022-07",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Asylos describes alleged selective use of sources and information gaps in the 2022 publications; exact held-edition mapping pending.",
+      "verificationLocation": "Raw commentary physical page 1 gives July 2022 date; primary publisher introduction and linked commentary.",
+      "workId": "asylos-rwanda-2022",
+      "relatedUrls": [
+        "https://asylos.org/rwanda-asylum-system/",
+        "https://asylos.org/wp-content/uploads/2025/03/asylosrwandacommentaryfinal_3ba1b57d-65ca-44c7-8b18-68e20bf8be50.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "f1d4bc1f74170c8aef20a4d5a0bb5216257d5b4306d048fc11b3f77c93e26091",
+      "publishers": [
+        "Asylos"
+      ]
+    },
+    {
+      "id": "asylos-rainbow-georgia-2024",
+      "publisherIds": [
+        "asylos",
+        "rainbow-migration"
+      ],
+      "title": "Commentary on Georgia SOGIE CPIN",
+      "url": "https://www.rainbowmigration.org.uk/wp-content/uploads/2024/09/Georgia-commentary-online-version-1.pdf",
+      "countries": [
+        "georgia"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2024-09",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Joint review covers the December 2023 CPIN. It also presents later 2024 evidence, which must be distinguished from criticism at the original cut-off.",
+      "verificationLocation": "Primary publisher page and commentary introduction.",
+      "workId": "asylos-rainbow-georgia-2024",
+      "relatedUrls": [
+        "https://asylos.org/georgia-sexual-orientation-and-gender-identity-and-expression/",
+        "https://asylos.org/wp-content/uploads/2025/03/georgiacommentaryonlineversion_134faca6-a928-41cf-b36c-2e6a06b07a03.pdf"
+      ],
+      "targets": [
+        {
+          "country": "georgia",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "046811771a498d79",
+          "textSha": "89874f635286a178e496f5425077f2d8b964070b0923720c7a19814dc702bf71",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "reviewedEdition": {
+        "country": "georgia",
+        "series": "note:expression-gender-identity-orientation-sexual",
+        "label": "Country policy and information note: sexual orientation and gender identity and expression, Georgia, December 2023 (accessible)",
+        "month": "2023-12",
+        "version": "1.0"
+      },
+      "verifiedSnapshotSha": "740f91d278562f3bec416cdc51f87ea3cf595efc5905b3660e54c7cc1bad63f9",
+      "publishers": [
+        "Asylos",
+        "Rainbow Migration"
+      ]
+    },
+    {
+      "id": "hbf-albania-risk-2025",
+      "publisherIds": [
+        "helen-bamber"
+      ],
+      "title": "Dismissing Risk: impact on trafficking survivors of restricting protection for Albanian nationals",
+      "url": "https://www.helenbamber.org/sites/default/files/2025-04/Dismissing%20Risk_April%202025.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2025-04-03",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Policy and casework briefing cites CPIN critiques and country evidence; not a citation-by-citation CPIN audit.",
+      "verificationLocation": "Primary publisher briefing page dated 3 April 2025.",
+      "workId": "hbf-albania-risk-2025",
+      "relatedUrls": [
+        "https://www.helenbamber.org/resources/reportsbriefings/denying-albanians-protection-how-labelling-country-safe-puts-trafficking"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "1bb1d2f627eaf2d00cc27b1dbe6d54b320514450cdda0951d55c33371d1e0212",
+      "publishers": [
+        "Helen Bamber Foundation"
+      ]
+    },
+    {
+      "id": "iagci-albania-pakistan-2024",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "IAGCI review of Albania and Pakistan (October 2023)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-albania-and-pakistan-october-2023",
+      "countries": [
+        "albania",
+        "pakistan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2024-02-29",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Expert reviews record strengths as well as criticisms and include Home Office responses. The Albania reviewer commends improved country context while recommending qualifications and further evidence. These assessments require comparison with the underlying material.",
+      "verificationLocation": "GOV.UK Details lists the reviewed editions; PDF contents (physical page 7), foreword (physical page 8) and reviewer/Home Office tables.",
+      "workId": "iagci-albania-pakistan-2024",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/65e079e97bc329001ab8c195/Inspection_report_on_Home_Office_country_of_origin_information__Albania_and_Pakistan__October_2023.pdf"
+      ],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:blood-feuds",
+          "editionId": "9b83d14f78c579f0",
+          "textSha": "f655950677f6e622d91d3dc9fe927349dac3392a8b725f862124b8efb19eabb9",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        },
+        {
+          "country": "albania",
+          "series": "note:trafficking",
+          "editionId": "01395d2a657117ef",
+          "textSha": "d20bec1d6b3dd78674f25f4466e48c32f9b406f85b8782a95cbcbaacf06fc6a9",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "verifiedSnapshotSha": "c23e1673d0fd2d9b1bfe9af38d4ee022dd5e1f5e002ae06c74db2bd1055ef08e",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-afghanistan-colombia-2026",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "IAGCI review of Afghanistan and Colombia (December 2025)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-on-afghanistan-and-colombia-december-2025",
+      "countries": [
+        "afghanistan",
+        "colombia"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2026-06-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent expert review with Home Office responses; the existing citation pilot concerns only the August 2025 Taliban CPIN, not its later edition.",
+      "verificationLocation": "Primary GOV.UK publication and existing manually scoped pilot.",
+      "workId": "iagci-afghanistan-colombia-2026",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf"
+      ],
+      "targets": [
+        {
+          "country": "afghanistan",
+          "series": "note:fear-taliban",
+          "editionId": "a7c78fef364ac1e2",
+          "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "verifiedSnapshotSha": "5b31cb0e0a741883a7439a588f3259e745ea6fec902a7a702e51ef9a245b73b4",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-home-office-country-of-origin-information-on-turkey-and-vietnam-february-2025",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on Turkey and Vietnam (February 2025)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-on-turkey-and-vietnam-february-2025",
+      "countries": [
+        "turkey",
+        "vietnam"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-on-turkey-and-vietnam-february-2025",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/686fd5702cfe301b5fb67a3c/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025___20_point_version_.pdf",
+        "https://assets.publishing.service.gov.uk/media/6a217e42f56856fd11c0b039/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025_.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "954cb21fb8812ec2ab860a4597b398a444186880609a9a7cfddf2464bb208bbc",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-home-office-country-of-origin-information-on-georgia-july-2024",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on Georgia (July 2024)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-on-georgia-july-2024",
+      "countries": [
+        "georgia"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-on-georgia-july-2024",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/6718afc138149ce9d09e3883/Inspection_report_on_Home_Office_country_of_origin_information_on_Georgia_July_2024_Accessible.pdf",
+        "https://assets.publishing.service.gov.uk/media/6718b01438149ce9d09e3885/Inspection_report_on_Home_Office_country_of_origin_information_on_Georgia_July_2024__20pt.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "50d40bd8a4d7d49b8cfc036cd56acdc2dbbb3fbd625ccc07b7aa4ce21809e4e0",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-home-office-country-of-origin-information-on-rwanda-january-2024",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on Rwanda (January 2024)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-on-rwanda-january-2024",
+      "countries": [
+        "rwanda"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-on-rwanda-january-2024",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/66dee1724e9dacea8a0aa664/Inspection_report_on_Home_Office_country_of_origin_information_on_Rwanda__January_2024_.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "6c3be9a198fb7102bbac8eec2dc8890a0d2a81fe3cab115112d997872b5f67c9",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-home-office-country-of-origin-information-thematic-report-on-the-coverage-of-statelessness-february-2023",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information: Thematic report on the coverage of statelessness (February 2023)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-thematic-report-on-the-coverage-of-statelessness-february-2023",
+      "countries": [
+        "afghanistan",
+        "albania",
+        "algeria",
+        "angola",
+        "bangladesh",
+        "botswana",
+        "brazil",
+        "burma",
+        "cameroon",
+        "chad",
+        "china",
+        "colombia",
+        "democratic-republic-of-the-congo",
+        "egypt",
+        "el-salvador",
+        "eritrea",
+        "ethiopia",
+        "france",
+        "gambia",
+        "georgia",
+        "ghana",
+        "honduras",
+        "india",
+        "iran",
+        "iraq",
+        "jamaica",
+        "kenya",
+        "kuwait",
+        "lebanon",
+        "liberia",
+        "libya",
+        "malawi",
+        "malaysia",
+        "mali",
+        "mauritius",
+        "moldova",
+        "morocco",
+        "namibia",
+        "nepal",
+        "nigeria",
+        "north-korea",
+        "pakistan",
+        "palestine",
+        "philippines",
+        "russia",
+        "rwanda",
+        "somalia",
+        "south-africa",
+        "sri-lanka",
+        "sudan",
+        "syria",
+        "trinidad-and-tobago",
+        "turkey",
+        "uganda",
+        "ukraine",
+        "uzbekistan",
+        "vietnam",
+        "yemen",
+        "zimbabwe"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-thematic-report-on-the-coverage-of-statelessness-february-2023",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/65e07b012f2b3b001c7cd773/Inspection_report_on_Home_Office_country_of_origin_information_-_Thematic_report_on_the_coverage_of_statelessness__February_2023.pdf"
+      ],
+      "targets": [],
+      "scope": "thematic",
+      "verifiedSnapshotSha": "7fdb01317936fc32687a1b43c8773ba7ca3b351f624efe5b45f15aa7edd1a0ce",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-home-office-country-of-origin-information-iraq-and-myanmar-burma-january-2023",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information, Iraq and Myanmar (Burma) (January 2023)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-home-office-country-of-origin-information-iraq-and-myanmar-burma-january-2023",
+      "countries": [
+        "bangladesh",
+        "burma",
+        "iraq"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-iraq-and-myanmar-burma-january-2023",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/649d32fb06179b000c3f74d8/Inspection_report_on_Home_Office_country_of_origin_information__Iraq_and_Myanmar__Burma__January_2023.pdf",
+        "https://assets.publishing.service.gov.uk/media/649d332d45b6a200123d44f9/Inspection_report_on_Home_Office_country_of_origin_information__Iraq_and_Myanmar__Burma__January_2023_20PT.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "45dbdd46924cf51580f2b082db85169c185131d1ef430d8b9aa22ab1e66bfadc",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-afghanistan-and-china-june-2022",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Country of Origin Information, Afghanistan and China (June 2022)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-afghanistan-and-china-june-2022",
+      "countries": [
+        "afghanistan",
+        "china"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-afghanistan-and-china-june-2022",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/634fa8698fa8f5346c39bb6e/Inspection_Report_on_Country_of_Origin_Information__Afghanistan_and_China_June_2022.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "20704732208501b0e4e44b426b429ecd627f571e8ea8e273b72d2d4ab7be9b3a",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-ethiopia-iran-and-zimbabwe-january-2022",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on Ethiopia, Iran and Zimbabwe (January 2022)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-ethiopia-iran-and-zimbabwe-january-2022",
+      "countries": [
+        "ethiopia",
+        "iran",
+        "zimbabwe"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-ethiopia-iran-and-zimbabwe-january-2022",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/62691502d3bf7f55cd2bf1fd/Inspection_Report_on_Country_of_Origin_Information__Ethiopia__Iran_and_Zimbabwe_January_2022.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "29207f82b4aa30f852bf67aa4c8800d92fbd55746ea7c9babf0a55f33ed5199a",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-inspection-report-of-country-of-origin-information-el-salvador-and-sudan-december-2020",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on El Salvador and Sudan (December 2020)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-of-country-of-origin-information-el-salvador-and-sudan-december-2020",
+      "countries": [
+        "el-salvador",
+        "sudan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-of-country-of-origin-information-el-salvador-and-sudan-december-2020",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/6033751bd3bf7f721b700f35/Inspection_Report_on_Country_of_Origin_Information_El_Salvador_and_Sudan_December_2020.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "0d385206b4cea91300771f9fcc49a8042a5c1052635ff671bd9a875a35f27510",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-inspection-of-country-of-origin-information-thematic-report-on-sexual-orientation-and-gender-identity-or-expression",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection of Country of Origin Information Thematic Report on Sexual Orientation and Gender Identity or Expression (September 2020)",
+      "url": "https://www.gov.uk/government/publications/inspection-of-country-of-origin-information-thematic-report-on-sexual-orientation-and-gender-identity-or-expression",
+      "countries": [
+        "afghanistan",
+        "albania",
+        "algeria",
+        "angola",
+        "bangladesh",
+        "botswana",
+        "brazil",
+        "burma",
+        "cameroon",
+        "chad",
+        "china",
+        "colombia",
+        "democratic-republic-of-the-congo",
+        "egypt",
+        "el-salvador",
+        "eritrea",
+        "ethiopia",
+        "france",
+        "gambia",
+        "georgia",
+        "ghana",
+        "honduras",
+        "india",
+        "iran",
+        "iraq",
+        "jamaica",
+        "kenya",
+        "kuwait",
+        "lebanon",
+        "liberia",
+        "libya",
+        "malawi",
+        "malaysia",
+        "mali",
+        "mauritius",
+        "moldova",
+        "morocco",
+        "namibia",
+        "nepal",
+        "nigeria",
+        "north-korea",
+        "pakistan",
+        "palestine",
+        "philippines",
+        "russia",
+        "rwanda",
+        "somalia",
+        "south-africa",
+        "sri-lanka",
+        "sudan",
+        "syria",
+        "trinidad-and-tobago",
+        "turkey",
+        "uganda",
+        "ukraine",
+        "uzbekistan",
+        "vietnam",
+        "yemen",
+        "zimbabwe"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-of-country-of-origin-information-thematic-report-on-sexual-orientation-and-gender-identity-or-expression",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5fcf6546d3bf7f5d08464cfc/Inspection_of_Country_of_Origin_Information_Thematic_Report_on_Sexual_Orientation_and_Gender_Identity_or_Expression.pdf"
+      ],
+      "targets": [],
+      "scope": "thematic",
+      "verifiedSnapshotSha": "42702c4195565c8805df7988882eb1c8d794a3e86e497b519e7cb66287ded78f",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-december-2019",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on Home Office country of origin information on Albania, Iran and Vietnam (December 2019)",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-december-2019",
+      "countries": [
+        "albania",
+        "iran",
+        "iraq",
+        "syria",
+        "vietnam"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-december-2019",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5f1567e03a6f405c0314f603/Inspection_of_Country_of_Origin_Information__Albania_Iran_Vietnam_Dec_19.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "a254a6444ee9cd629cf107617351d10558795db388b87449dfacfcec34a1fb2f",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-inspection-of-country-of-origin-information-report-june-2019",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection of Country of Origin Information Report June 2019",
+      "url": "https://www.gov.uk/government/publications/inspection-of-country-of-origin-information-report-june-2019",
+      "countries": [
+        "ethiopia",
+        "jamaica"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-of-country-of-origin-information-report-june-2019",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5e427abc40f0b6090fbcd9c9/ICIBI_An_inspection_of_the_Home_Office_s_Country_of_Origin_Information_on_Ethiopia_and_Jamaica.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "e7cc466817cf0cd6a4d1ccf8b34919b4b57bb05fab37c41515ee3a288f3e5173",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-inspection-of-country-of-origin-information-january-2019",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection of country of origin information, January 2019",
+      "url": "https://www.gov.uk/government/publications/inspection-of-country-of-origin-information-january-2019",
+      "countries": [
+        "burma",
+        "iraq",
+        "zimbabwe"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-of-country-of-origin-information-january-2019",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5d090b1bed915d42fabe4dbc/Inspection_of_Country_of_Origin_Information_2019._Burma__Iraq_and_Zimbabwe.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "b8611e3ae609e9094c3f482119945cd208c1b96cdc9c4734fd113f388d37aecb",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-may-2018",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on country of origin information, May 2018",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-may-2018",
+      "countries": [
+        "iran",
+        "turkey"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-may-2018",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5c079df840f0b6705f11cf31/Inspection_of_Country_of_Origin_Information__May_2018..pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "3ca0ed15b0f1dae895cd677659c5d810a13f6c5c4297017d74f8f1dfbdf85d82",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-july-2017",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on country of origin information, July 2017",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-july-2017",
+      "countries": [
+        "albania",
+        "bangladesh",
+        "egypt",
+        "sri-lanka"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-july-2017",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a82a6c8ed915d74e3402dfd/An-Inspection-of-Country-of-Origin-Information.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "a6bc14f6d8b191352eb0283f3cfe7cb0e1d6d9c133af412c9519c49ebedeac5f",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-november-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on country of origin information, November 2016",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-november-2016",
+      "countries": [
+        "afghanistan",
+        "bangladesh",
+        "sudan",
+        "vietnam"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-november-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a7598aa40f0b67b3d5c7bb1/Inspection-of-Country-of-Origin-Information_November-2016.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "70e174b9ca66b0424122bab34f53223d544b6ab62b2b75693d553b3ed034f6ea",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-country-of-origin-information-july-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Inspection report on country of origin information, July 2016",
+      "url": "https://www.gov.uk/government/publications/inspection-report-on-country-of-origin-information-july-2016",
+      "countries": [
+        "iran",
+        "nigeria",
+        "ukraine"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-inspection-report-on-country-of-origin-information-july-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a74df94ed915d3c7d5289e3/ICIBI_inspection_of_COI_July_2016.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "verifiedSnapshotSha": "95bdf868084e0b79d630e6f2e70788014c68f26fe3da3795d3fadbcb671e50a9",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-an-inspection-of-country-of-origin-information",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Production and use of Country of Origin Information",
+      "url": "https://www.gov.uk/government/publications/an-inspection-of-country-of-origin-information",
+      "countries": [
+        "afghanistan",
+        "albania",
+        "algeria",
+        "angola",
+        "bangladesh",
+        "botswana",
+        "brazil",
+        "burma",
+        "cameroon",
+        "chad",
+        "china",
+        "colombia",
+        "democratic-republic-of-the-congo",
+        "egypt",
+        "el-salvador",
+        "eritrea",
+        "ethiopia",
+        "france",
+        "gambia",
+        "georgia",
+        "ghana",
+        "honduras",
+        "india",
+        "iran",
+        "iraq",
+        "jamaica",
+        "kenya",
+        "kuwait",
+        "lebanon",
+        "liberia",
+        "libya",
+        "malawi",
+        "malaysia",
+        "mali",
+        "mauritius",
+        "moldova",
+        "morocco",
+        "namibia",
+        "nepal",
+        "nigeria",
+        "north-korea",
+        "pakistan",
+        "palestine",
+        "philippines",
+        "russia",
+        "rwanda",
+        "somalia",
+        "south-africa",
+        "sri-lanka",
+        "sudan",
+        "syria",
+        "trinidad-and-tobago",
+        "turkey",
+        "uganda",
+        "ukraine",
+        "uzbekistan",
+        "vietnam",
+        "yemen",
+        "zimbabwe"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": null,
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "workId": "iagci-an-inspection-of-country-of-origin-information",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a82b3c040f0b6230269c40e/An_inspection_of_the_production_and_use_of_Country_of_Origin_Information.pdf"
+      ],
+      "targets": [],
+      "scope": "thematic",
+      "verifiedSnapshotSha": "78d00510ad00701a8ef9ea98af6a66e3d44be549f25e2c9a52a8423aa3ce3c24",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "miclu-albania-mental-health",
+      "publisherIds": [
+        "miclu"
+      ],
+      "title": "Analysis of the Home Office CIN on mental health in Albania",
+      "url": "https://miclu.org/assets/uploads/Analysis-of-the-Home-Office-CIN-on-Mental-Health-version-3.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2025-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Micah Anne Neale examines alleged mischaracterisation of cited mental-health evidence in the January 2025 CIN. The author’s arguments remain unassessed.",
+      "verificationLocation": "Raw PDF physical page 1 names January 2025 CIN v3.0; physical page 14 gives author and February 2025 date.",
+      "workId": "miclu-albania-mental-health",
+      "relatedUrls": [],
+      "targets": [],
+      "author": "Micah Anne Neale",
+      "reviewedEdition": {
+        "country": "albania",
+        "series": "note:healthcare-mental",
+        "label": "Country policy and information note: mental healthcare, Albania, January 2025 (accessible)",
+        "month": "2025-01",
+        "version": "3.0"
+      },
+      "publisherNote": "Hosted by MiCLU; author identity is separate from publisher endorsement.",
+      "candidateTargets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "mappingNote": "Two held snapshots share the January 2025 date and v3.0 label. Exact text identity needs checking before attaching this review in the reader.",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)"
+      ]
+    },
+    {
+      "id": "miclu-trafficking-toolkit-2025",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Trafficking and organised crime in Albania (April 2025)",
+      "url": "https://miclu.org/assets/uploads/Albania-trafficking-and-organised-crime-paper-April-2025.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2025-04",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "Raw PDF physical page 1 names authors and April 2025 publication date.",
+      "workId": "miclu-trafficking-toolkit-2025",
+      "relatedUrls": [],
+      "targets": [],
+      "author": "Claudia Neale and Micah Anne Neale",
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-domestic-violence-2021",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "The merits of Albanian asylum claims based on fear of domestic violence",
+      "url": "https://miclu.org/assets/uploads/2021/02/Albania-victims-of-domestic-violence-paper.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2021-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
+      "workId": "miclu-domestic-violence-2021",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-albania-refugee-claims-2022",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "Notes on Albanian refugee claims",
+      "url": "https://miclu.org/assets/uploads/2022/03/Notes-on-Albanian-Refugee-Claims-DN.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2022-03",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
+      "workId": "miclu-albania-refugee-claims-2022",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "miclu-certification-2019",
+      "publisherIds": [
+        "miclu",
+        "garden-court"
+      ],
+      "title": "A practical response to the certification of Albanian cases",
+      "url": "https://miclu.org/assets/uploads/2019/06/A-practical-response-to-the-certification-of-Albanian-cases.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2019-06",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
+      "workId": "miclu-certification-2019",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)",
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "garden-court-blood-feuds-2019",
+      "publisherIds": [
+        "garden-court"
+      ],
+      "title": "Albanian blood feuds and certification: a critical view",
+      "url": "https://gardencourtchambers.co.uk/albanian-blood-feuds-and-certification-a-critical-view/",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2019-04-04",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
+      "workId": "garden-court-blood-feuds-2019",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "garden-court-blood-feuds-2020",
+      "publisherIds": [
+        "garden-court"
+      ],
+      "title": "Albanian blood feuds: an update",
+      "url": "https://gardencourtchambers.co.uk/albanian-blood-feuds-an-update/",
+      "countries": [
+        "albania"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2020-04-16",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
+      "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
+      "workId": "garden-court-blood-feuds-2020",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Garden Court Chambers"
+      ]
+    },
+    {
+      "id": "arc-dcr-easo-pakistan-afghanistan-2016",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "ARC and Dutch Council for Refugees: comments on EASO Pakistan security and Afghanistan recruitment reports",
+      "url": "https://www.ecoi.net/en/file/local/1298399/90_1477293099_arc-dcr-2016-10-19-comments-easo-reports-pak-afg.pdf",
+      "countries": [
+        "afghanistan",
+        "pakistan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "easo-coi",
+      "publishedAt": "2016-10-19",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Joint review of EASO Pakistan Security Situation (July 2016) and Afghanistan Recruitment by armed groups (September 2016). Repository copy; criticism must be checked against the named European reports before use in CPIN analysis.",
+      "verificationLocation": "Named authors and reviewed products in the primary review, indexed by ecoi.net.",
+      "workId": "arc-dcr-easo-pakistan-afghanistan-2016",
+      "relatedUrls": [
+        "https://www.ecoi.net/en/document/1298399.html"
+      ],
+      "targets": [],
+      "repository": "ecoi.net (copy of ARC/DCR publication)",
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "asylos-afghanistan-taliban-2025",
+      "publisherIds": [
+        "asylos"
+      ],
+      "title": "Asylos commentary on Afghanistan Fear of the Taliban CPIN (V4.0 and V5.0)",
+      "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf",
+      "countries": [
+        "afghanistan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2025-11",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Review focuses on former government officials, quantitative risk assessment and reporting limitations. It also signposts later COI; merits and citation applicability remain unassessed.",
+      "verificationLocation": "Primary Asylos project page and commentary introduction name August 2024 and August 2025 editions.",
+      "workId": "asylos-afghanistan-taliban-2025",
+      "relatedUrls": [
+        "https://asylos.org/afghanistan-fear-taliban/"
+      ],
+      "targets": [
+        {
+          "country": "afghanistan",
+          "series": "note:fear-taliban",
+          "editionId": "272cfa5514dd72e6",
+          "textSha": "937ed6e0aa3af8038c865b76bd31158746525aa2a72cf76997ad4cf88dbaff5a",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        },
+        {
+          "country": "afghanistan",
+          "series": "note:fear-taliban",
+          "editionId": "a7c78fef364ac1e2",
+          "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "publishers": [
+        "Asylos"
+      ]
+    }
+  ]
+}

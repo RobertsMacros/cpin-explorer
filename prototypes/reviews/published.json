@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "coverage": "One manually mapped pilot finding. No automatic AI checks or comprehensive review import have run.",
+  "records": [
+    {
+      "id": "iagci-afghanistan-2026-returnees-279",
+      "kind": "external",
+      "status": "issue",
+      "target": {
+        "country": "afghanistan",
+        "series": "note:fear-taliban",
+        "editionId": "a7c78fef364ac1e2",
+        "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+        "footnote": 279,
+        "paragraph": "16.2.6",
+        "section": "16. Return(ee)s to Afghanistan",
+        "sourceUrl": "https://yalebooks.yale.edu/book/9780300267884/the-return-of-the-taliban/"
+      },
+      "author": "IAGCI-commissioned reviewer",
+      "publishedAt": "2026-06-02",
+      "summary": "The published review identifies an inconsistency between the absence-of-evidence statement in paragraph 16.2.6 and the material discussed in paragraph 16.2.7. This is a finding about the CPIN's internal consistency, not a finding that this cited book is inaccurate.",
+      "response": "Accepted; the Home Office said it would revise the next CPIN. Applicability to later editions has not been assessed.",
+      "publication": {
+        "title": "IAGCI review: Afghanistan and Colombia",
+        "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=49",
+        "location": "Printed page 43 (PDF page 49)"
+      }
+    },
+    {
+      "id": "iagci-afghanistan-2026-returnees-280",
+      "kind": "external",
+      "status": "issue",
+      "target": {
+        "country": "afghanistan",
+        "series": "note:fear-taliban",
+        "editionId": "a7c78fef364ac1e2",
+        "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+        "footnote": 280,
+        "paragraph": "16.2.7",
+        "section": "16. Return(ee)s to Afghanistan",
+        "sourceUrl": "https://www.rferl.org/a/afghanistan-taliban-woos-former-officials/32524328.html"
+      },
+      "author": "IAGCI-commissioned reviewer",
+      "publishedAt": "2026-06-02",
+      "summary": "The published review identifies an inconsistency between paragraph 16.2.6 and the material in paragraph 16.2.7. This excerpt illustrates the returnee account cited in that discussion; it does not establish the circumstances of all returnees.",
+      "response": "Accepted; the Home Office said it would revise the next CPIN. Applicability to later editions has not been assessed.",
+      "publication": {
+        "title": "IAGCI review: Afghanistan and Colombia",
+        "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=49",
+        "location": "Printed page 43 (PDF page 49)"
+      },
+      "evidence": {
+        "quote": "\"Unfortunately, we were not treated well\" by the Taliban, he said.",
+        "title": "The Azadi Briefing: Fear, Disillusionment Undermine Taliban's Efforts To Woo Exiled Former Afghan Officials",
+        "author": "Mustafa Sarwar, RFE/RL",
+        "url": "https://www.rferl.org/a/afghanistan-taliban-woos-former-officials/32524328.html",
+        "location": "The Key Issue; Janat Fahim Chakari account; 28 July 2023",
+        "retrievedAt": "2026-10-05",
+        "publicDisplayApproved": true,
+        "rightsBasis": "Limited attributed quotation for criticism/review of the CPIN under fair dealing; no whole-article reproduction.",
+        "rightsAssessment": "An 11-word passage supporting a specific published criticism, with author, article title, location and link. The accompanying criticism supplies the review purpose; the extract does not substitute for the article. This is a scoped editorial assessment, not a blanket licence for this publisher or for AI ingestion."
+      }
+    }
+  ]
+}

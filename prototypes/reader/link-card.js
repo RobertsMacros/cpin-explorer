@@ -67,11 +67,11 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
  * Show a card for links inside `scope`.
  *   describe(a)   what to say about a link (linkFacts' result), or null for none (footnote marks have their own panel)
  * A mouse gets it after the pointer has rested on the link (`rest` ms), and it stays while the pointer
- * is on the link or the card; the keyboard gets it on focus. A finger does not: a tap follows the link.
- * Escape, a press, or starting to select text puts it away. One at a time; it eases in and out.
+ * is on the link or the card; the keyboard gets it on focus. Clicking a source, or tapping a report link, opens a preview with an explicit link.
+ * Escape or an outside press puts it away; selecting report text closes hover previews.
  */
 export function mountLinkCards({ scope, describe, rest = 250, grace = 180, topInset = () => 0 }) {
-  let card = null, owner = null, restTimer = 0, leaveTimer = 0, heldTitle = null;
+  let card = null, owner = null, restTimer = 0, leaveTimer = 0, heldTitle = null, interactive = false, pointerType = "mouse", returningFocus = false;
   const selecting = () => { const sel = getSelection(); return !!sel && !sel.isCollapsed; };
 
   function close() {
@@ -79,23 +79,39 @@ export function mountLinkCards({ scope, describe, rest = 250, grace = 180, topIn
     if (owner && heldTitle != null) owner.setAttribute("title", heldTitle);      // the browser's own tooltip, given back
     const el = card;
     card = owner = heldTitle = null;
+    interactive = false;
     if (!el) return;
     el.classList.remove("is-on");
     setTimeout(() => el.remove(), 200);
   }
-  function open(a, at) {
+  function open(a, at, tapped = false) {
     const facts = describe(a);
     if (!facts || !a.isConnected) return;
     close();
     owner = a;
+    interactive = tapped;
     heldTitle = a.getAttribute("title");                                           // or two tooltips would show
     if (heldTitle != null) a.removeAttribute("title");
     const el = document.createElement("div");
-    el.className = "link-card";
-    el.setAttribute("role", "tooltip");
+    el.className = `link-card${tapped ? " link-card--tap" : ""}`;
+    el.setAttribute("role", tapped ? "dialog" : "tooltip");
+    if (tapped) el.setAttribute("aria-label", "Link preview");
     el.innerHTML = `<p class="lk-top"><span class="eyebrow">${esc(facts.eyebrow)}</span>${facts.tag ? `<span class="tag lk-tag lk-tag--${esc(facts.tone || "plain")}">${esc(facts.tag)}</span>` : ""}</p>
       <p class="lk-title">${esc(facts.title)}</p>${facts.lines.map((l) => `<p class="lk-line">${esc(l)}</p>`).join("")}${
       facts.more.length ? `<p class="lk-more">${facts.more.map((m) => `<a href="${esc(m.href)}" target="_blank" rel="noopener">${esc(m.label)}</a>`).join("")}</p>` : ""}`;
+    if (tapped) {
+      const actions = document.createElement("p");
+      actions.className = "lk-actions";
+      const go = document.createElement("a");
+      go.className = "btn btn--primary";
+      go.href = a.href;
+      go.textContent = facts.kind === "source" ? "Open source ↗" : `Open ${facts.kind} →`;
+      if (facts.kind === "source") { go.target = "_blank"; go.rel = "noopener"; }
+      const dismiss = document.createElement("button");
+      dismiss.type = "button"; dismiss.className = "btn"; dismiss.textContent = "Close";
+      dismiss.addEventListener("click", () => { close(); returningFocus = true; a.focus({ preventScroll: true }); returningFocus = false; });
+      actions.append(go, dismiss); el.append(actions);
+    }
     document.body.append(el);
     // By the line of the link the pointer is on (a link may wrap), below it if there is room, else above; kept on screen.
     const rects = [...a.getClientRects()];
@@ -109,8 +125,9 @@ export function mountLinkCards({ scope, describe, rest = 250, grace = 180, topIn
     void el.offsetWidth;                                                            // so it eases in from its start
     el.classList.add("is-on");
     el.addEventListener("pointerenter", () => clearTimeout(leaveTimer));
-    el.addEventListener("pointerleave", () => { leaveTimer = setTimeout(close, grace); });
+    el.addEventListener("pointerleave", () => { if (!interactive) leaveTimer = setTimeout(close, grace); });
     card = el;
+    if (tapped) el.querySelector(".lk-actions a").focus({ preventScroll: true });
   }
   const linkOf = (e) => {
     const a = e.target instanceof Element ? e.target.closest("a[href]") : null;
@@ -118,7 +135,7 @@ export function mountLinkCards({ scope, describe, rest = 250, grace = 180, topIn
   };
 
   scope.addEventListener("pointerover", (e) => {
-    if (e.pointerType !== "mouse") return;
+    if (e.pointerType !== "mouse" && e.pointerType !== "pen") return;
     const a = linkOf(e);
     if (!a) return;
     clearTimeout(leaveTimer);
@@ -132,12 +149,22 @@ export function mountLinkCards({ scope, describe, rest = 250, grace = 180, topIn
     const a = linkOf(e);
     if (!a || (e.relatedTarget instanceof Node && a.contains(e.relatedTarget))) return;
     clearTimeout(restTimer);
-    if (a === owner) leaveTimer = setTimeout(close, grace);
+    if (a === owner && !interactive) leaveTimer = setTimeout(close, grace);
   });
-  scope.addEventListener("focusin", (e) => { const a = linkOf(e); if (a?.matches(":focus-visible")) open(a, null); });
+  scope.addEventListener("pointerdown", (e) => { pointerType = e.pointerType; });
+  scope.addEventListener("keydown", () => { pointerType = "keyboard"; });
+  scope.addEventListener("click", (e) => {
+    const a = linkOf(e);
+    if (!a || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    const facts = describe(a);
+    if (!facts || facts.kind === "in-page" || (facts.kind !== "source" && !["touch", "pen"].includes(pointerType))) return;
+    e.preventDefault();
+    open(a, null, true);
+  });
+  scope.addEventListener("focusin", (e) => { const a = linkOf(e); if (!returningFocus && a?.matches(":focus-visible")) open(a, null); });
   scope.addEventListener("focusout", (e) => { if (linkOf(e) === owner && !(card && e.relatedTarget instanceof Node && card.contains(e.relatedTarget))) close(); });
   addEventListener("pointerdown", (e) => { if (!(card && e.target instanceof Node && card.contains(e.target))) close(); }, true);
-  addEventListener("keydown", (e) => { if (e.key === "Escape" && card) close(); });
-  document.addEventListener("selectionchange", () => { if (card && selecting()) close(); });
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && card) { const a = owner, tapped = interactive; close(); if (tapped) { returningFocus = true; a?.focus({ preventScroll: true }); returningFocus = false; } } });
+  document.addEventListener("selectionchange", () => { if (card && !interactive && selecting()) close(); });
   return { close, get open() { return !!card; } };
 }

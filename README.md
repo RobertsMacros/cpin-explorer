@@ -23,6 +23,58 @@ It has three parts:
 
 ## Status
 
+**5 October 2026: Syria source pilot checked; publication requested.**
+For held editions published from 1 January 2023, the pilot indexes 17 snapshots,
+3,055 footnotes and 1,577 source/PDF addresses. Every address has a recorded outcome;
+2,149 footnotes (70.3%) have readable linked-source text. The pilot reuses the
+catalogue-wide capture and verifies 1,009 distinct files with zero hash problems.
+Failures remain explicit; there are no AI contradiction judgements. Full evidence
+stays private. All 317 Python and 333 JavaScript tests pass, retained CPIN integrity
+passes and Wrangler's dry run succeeds. See [scope, coverage and limits](docs/reviews/2026-10-05-syria-source-pilot.md).
+
+**5 October 2026: external-review directory and backfill implemented locally; not deployed.**
+Seven publishers and 42 curated publications cover direct CPIN reviews, international
+country-report critiques and separately labelled practitioner/policy context. The private
+collector retains hashed snapshots and a discovery queue; `./cpin reviews --refresh` is
+repeatable. Reviews remain unassessed evidence. Report-level links are edition-bound in
+the footnote overlay and never automatically assign source flags. Analysis contexts keep
+exact edition reviews separate from background and require original-source checks,
+counter-evidence and Home Office responses. All 315 Python and 333 JavaScript tests pass;
+the site build succeeds. The owner prefers daily checks eventually but requested backfill
+first; no recurring job or AI analysis has been enabled. See the [directory](docs/reviews/published-review-directory.md),
+[method](docs/methods/published-reviews.md) and [run record](docs/reviews/2026-10-05-published-review-backfill.md).
+
+**5 October 2026: catalogue-wide source collection running locally.**
+All 116,458 footnotes in 856 held editions across 435 reports are indexed. The checked snapshot
+has 26,938 saved responses and 25,476 distinct source files with matching hashes.
+The last slow source requests and explicit PDF downloads continue in a one-off background job;
+one host requires 500 seconds between requests. Lists, receipts and progress are in the private
+`data/source-evidence/` cache, excluded from Git and site builds. All 307 Python and 332 JavaScript
+tests pass; original CPIN integrity and completeness checks report no problems. No model calls,
+AI contradiction judgements or deployment ran. See the [running collection report](docs/reviews/2026-10-05-source-collection.md)
+and [method and limits](docs/methods/source-collection.md).
+
+**5 October 2026: Saved pins and reader interaction fixes implemented locally; not deployed.**
+Saved now adds and removes country and report pins (`cpin-pins-v1`); report pins open the latest
+held edition, while highlights retain the edition they came from. Pins are browser-local, with
+explicit warnings if a write only survives for the session; account syncing is not implemented.
+The selection toolbar follows delayed desktop selection updates. Ordinary source links open a
+preview on click as well as hover; touch previews include an explicit Open source action.
+All 332 JavaScript tests pass and the site build succeeds (7,908 files). Chromium desktop and
+390px touch checks cover selecting and saving, source previews, footnotes, pin reload persistence,
+duplicate prevention and unpinning without removing highlights. Edge itself is not installed on
+the test machine, so its reported behaviour still needs checking in Edge.
+
+**5 October 2026: footnote reviews implemented locally; not deployed.** The existing footnote overlay
+now displays separate Published reviews, AI review and Manual additions sections, with source-status flags, attributed
+evidence excerpts and original-source links. One IAGCI finding is mapped to two citations in the August
+2025 Afghanistan Taliban edition; it does not appear on the February 2026 edition. Human entries stay
+in this browser, retain edit history and label identities as self-reported. No automatic AI checks,
+periodic review import or shared team service have run. Source collection began later on 5 October. All 328 JavaScript tests
+pass, and the site build succeeds (7,907 files). Chromium checks at 1280×720 and 375×812 confirm the
+published finding, inline excerpt, private-note persistence, edit history and edition separation,
+with no console warnings or errors. See [the design and limitations](docs/design-handover/reviews-and-notes.md).
+
 **5 October 2026: handover, archive integration and PDF-only cleanup pushed to `main`.**
 The owner authorised the push on 5 October. GitHub validation of `e06b66a` passed all 278 Python and
 322 JavaScript tests, including retained-data verification and the offline export. Publication checks are recorded in

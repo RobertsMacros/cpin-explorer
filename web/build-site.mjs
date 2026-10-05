@@ -15,7 +15,7 @@ const MAX_FILES = 20000;                  // and per deployment (free plan)
 const INCLUDE = [
   "prototypes/about",
   "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search", "prototypes/guide",
-  "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data",
+  "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data", "prototypes/reviews",
   "prototypes/package.json",
   "assets/cpin-explorer", "assets/roberts-macros",
   "data/countries", "data/images/manifest.json", "data/images/files", "data/pdfs/text/images",

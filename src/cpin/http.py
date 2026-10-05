@@ -11,6 +11,7 @@
 """
 import json
 import time
+from datetime import datetime, timezone
 from dataclasses import dataclass, field
 from urllib.parse import urljoin, urlsplit
 from urllib.robotparser import RobotFileParser
@@ -22,13 +23,40 @@ from . import config
 RETRY_STATUSES = {429, 500, 502, 503, 504}
 
 
-def robots_response(client, url, **kwargs):
+class ResponseTooLarge(ValueError):
+    """A bounded source request exceeded its decoded-body limit."""
+
+
+def bounded_get(client, url, *, max_bytes=None, url_guard=None, **kwargs):
+    if url_guard is not None and not url_guard(url):
+        raise ValueError("URL is not an allowed public HTTP address")
+    if max_bytes is None:
+        return client.get(url, **kwargs)
+    with client.stream("GET", url, **kwargs) as r:
+        if r.status_code != 200:
+            payload = b""  # error/redirect pages are not evidence
+        else:
+            length = r.headers.get("content-length", "")
+            if length.isdigit() and int(length) > max_bytes:
+                raise ResponseTooLarge(f"response exceeds {max_bytes} bytes")
+            chunks, size = [], 0
+            for chunk in r.iter_bytes(chunk_size=65536):
+                size += len(chunk)
+                if size > max_bytes:
+                    raise ResponseTooLarge(f"response exceeds {max_bytes} decoded bytes")
+                chunks.append(chunk)
+            payload = b"".join(chunks)
+        headers = {k:v for k,v in r.headers.items() if k not in {"content-encoding", "content-length"}}
+        return httpx.Response(r.status_code, headers=headers, content=payload, request=r.request)
+
+
+def robots_response(client, url, *, max_bytes=None, url_guard=None, **kwargs):
     """Read robots redirects explicitly so a forbidden archive host is never contacted."""
     for _ in range(6):
         p = urlsplit(url)
         if p.hostname == "webarchive.nationalarchives.gov.uk" or p.scheme not in {"http", "https"}:
             raise ValueError("robots redirect cannot be fetched automatically")
-        r = client.get(url, follow_redirects=False, **kwargs)
+        r = bounded_get(client, url, follow_redirects=False, max_bytes=max_bytes, url_guard=url_guard, **kwargs)
         if r.status_code not in {301, 302, 303, 307, 308}:
             return r
         if not r.headers.get("location"):
@@ -65,7 +93,9 @@ class FetchResult:
 
 class PoliteClient:
     def __init__(self, user_agent: str = config.USER_AGENT, timeout: float = 60, max_retries: int = 3,
-                 transport: httpx.BaseTransport | None = None, sleep=time.sleep):
+                 transport: httpx.BaseTransport | None = None, sleep=time.sleep,
+                 max_bytes: int | None = None, url_guard=None):
+        self.max_bytes, self.url_guard = max_bytes, url_guard
         self.user_agent = user_agent
         self.max_retries = max_retries
         self._sleep = sleep
@@ -85,6 +115,17 @@ class PoliteClient:
     def close(self):
         self._client.close()
 
+    def remember_request(self, url: str, fetched_at: str):
+        """Restore host spacing from a durable receipt when a collector resumes."""
+        try:
+            stamp = datetime.fromisoformat(fetched_at.replace("Z", "+00:00"))
+            elapsed = max(0, (datetime.now(timezone.utc) - stamp).total_seconds())
+            last = time.monotonic() - elapsed
+            host = urlsplit(url).netloc
+            self._last[host] = max(last, self._last.get(host, last))
+        except (ValueError, TypeError):
+            pass
+
     def _robots_for(self, scheme: str, host: str) -> RobotFileParser:
         origin = f"{scheme}://{host}"
         if origin not in self._robots:
@@ -95,7 +136,8 @@ class PoliteClient:
             unread = None
             for attempt in range(self.max_retries + 1):
                 try:
-                    r = robots_response(self._client, origin + "/robots.txt")
+                    r = robots_response(self._client, origin + "/robots.txt",
+                                        max_bytes=min(self.max_bytes, 1024 * 1024) if self.max_bytes else None, url_guard=self.url_guard)
                     unread = f"HTTP {r.status_code}" if r.status_code in RETRY_STATUSES | {401, 403, 451} or 300 <= r.status_code < 400 else None
                 except (httpx.HTTPError, ValueError) as e:
                     r, unread = None, f"{type(e).__name__}: {e}"[:200]
@@ -130,6 +172,8 @@ class PoliteClient:
 
     def _get_once(self, url: str, *, etag: str | None, accept: str | None) -> FetchResult:
         parts = urlsplit(url)
+        if self.url_guard is not None and not self.url_guard(url):
+            return FetchResult(url, "unsafe", error="URL is not an allowed public HTTP address")
         if parts.hostname == "webarchive.nationalarchives.gov.uk":
             return FetchResult(url, "robots", error="National Archives: manual checking only")
         if not self._robots_for(parts.scheme, parts.netloc).can_fetch(self.user_agent, url):
@@ -149,7 +193,11 @@ class PoliteClient:
                 self._sleep(wait)
             backoff = 2.0 ** (attempt + 1)
             try:
-                r = self._client.get(url, headers=headers)
+                r = bounded_get(self._client, url, headers=headers, max_bytes=self.max_bytes, url_guard=self.url_guard)
+            except ResponseTooLarge as e:
+                return FetchResult(url, "too-large", error=str(e))
+            except ValueError as e:
+                return FetchResult(url, "unsafe", error=str(e))
             except httpx.HTTPError as e:
                 r, error = None, f"{type(e).__name__}: {e}"[:200]
             finally:

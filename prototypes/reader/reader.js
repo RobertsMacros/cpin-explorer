@@ -25,6 +25,7 @@ import {
   capFirst, escHtml as esc, formatCitation, formatPinpoint, pdfPinpoint, quoteOf, quoteWithCitation, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, STYLES, titleMonth,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
+import * as Reviews from "../shared/source-reviews.js";
 import { analyseBody, describePassage, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
 import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
 import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
@@ -125,7 +126,9 @@ const S = {
   marks: new Map(), checks: new Map(), pending: null, lastCopy: null, ready: false,
   linkMap: null, links: null, fullSha: new Map(), sums: [], sizes: [],
   cur: -1, hunks: new Map(),
+  reviewRecords: [], reviewDirectory: [], directoryUnavailable: false, reviewsLoading: true, reviewsUnavailable: false,
 };
+const privateReviews = Reviews.createPrivateStore();
 let readyResolve;
 const ready = new Promise((r) => { readyResolve = r; });
 let minimap = null, minimapRoot = null;               // the strip beside the text (see "minimap" below)
@@ -217,6 +220,16 @@ async function boot() {
   }
   const dataP = fetchJson("../dashboard/data.json").catch(() => null);
   const linksP = loadLinkStatus(COUNTRY);
+  const reviewsP = Promise.all([fetchJson("../reviews/published.json").then((data) => {
+    if (data.schema !== 1 || !Array.isArray(data.records)) throw new Error("Unrecognised review records");
+    S.reviewRecords = data.records.filter((r) => ["ai", "external"].includes(r?.kind));
+  }).catch(() => { S.reviewsUnavailable = true; }), fetchJson("../reviews/directory.json").then((data) => {
+    if (data.schema !== 1 || !Array.isArray(data.reviews)) throw new Error("Unrecognised review directory");
+    S.reviewDirectory = data.reviews;
+  }).catch(() => { S.directoryUnavailable = true; })]).finally(() => {
+    S.reviewsLoading = false;
+    if (popState?.kind === "fn") openFootnote(popState.n, popState.anchor, popState.prefix);
+  });
   let seriesP = SERIES ? fetchJson(seriesPath(COUNTRY, SERIES)) : null;
   seriesP?.catch(() => {});
   S.data = await dataP;
@@ -270,6 +283,7 @@ async function boot() {
   readyResolve();
   syncUrl();
   linksP.then((map) => { S.linkMap = map || {}; decorateView(); });
+  void reviewsP;
   idle(warmEngine, 300);
   rollers.forEach((r) => r.remeasure(true));
   measureBars();
@@ -2144,6 +2158,7 @@ document.addEventListener("pointerup", (e) => {
   tap = null;
 });
 document.addEventListener("pointercancel", () => { pointerIsDown = false; tap = null; });
+addEventListener("blur", () => { pointerIsDown = false; tap = null; });
 // A click outside the tool while words are selected does what it would have done (a link is followed, a saved
 // highlight opens), and the selection and the tool are put away, not left behind. (A mouse click on plain text
 // has dropped the selection already; a click on a link has not.)
@@ -2168,7 +2183,9 @@ document.addEventListener("selectionchange", () => {
     selTimer = setTimeout(checkSelection, gone ? (downInTool ? 280 : 80) : toolOpen() ? 240 : 60);
     return;
   }
-  if (!pointerIsDown && !tool.hidden && getSelection().isCollapsed) hideTool();
+  // Selection updates can be queued after pointerup, including in Edge. Follow the
+  // selection itself once the drag has finished, also for keyboard selections.
+  if (!pointerIsDown) selTimer = setTimeout(checkSelection, 60);
 });
 // The page scrolled under the sheet: once it rests, the sheet checks it is still clear of the selection. (A tap
 // that stops a scroll is not a tap on what it lands on.)
@@ -2417,7 +2434,7 @@ pop.addEventListener("click", (e) => {
   if (act === "close") return closePop();
   if (popState?.kind === "fn") {
     const n = popState.n;
-    if (act === "goto-fn") { closePop(); return goToFootnote(n); }
+    if (act === "goto-fn") { const prefix = popState.prefix; closePop(); return goToFootnote(n, prefix); }
     if (act === "copy-fn") { const f = S.C.A.fns.get(n); copyRich({ text: `[${n}] ${f.text}`, html: `[${n}] ${f.url ? `<a href="${esc(f.url)}">${esc(f.text)}</a>` : esc(f.text)}` }).then((ok) => toast(ok ? "Copied source" : "Your browser blocked the clipboard")); }
     return;
   }
@@ -2450,13 +2467,48 @@ function deleteHighlight(id) {
 function openFootnote(n, anchor, prefix = "") {
   const f = S.C?.A.fns.get(n);
   if (!f || S.V.kind !== "clean") return goToFootnote(n, prefix);
-  popState = { kind: "fn", n };
+  const ref = S.C.A.refs.find((r) => r.a === anchor);
+  const ambiguous = S.C.root.querySelectorAll(`[id="fn:${n}"]`).length > 1;
+  const context = ref && !ambiguous ? describePassage(S.C.A, ref.at, ref.at + 1) : {};
+  const edition = S.E[S.C.e];
+  const template = document.createElement("template");
+  template.innerHTML = f.html;
+  const urls = [...new Set([...template.content.querySelectorAll("a[href]")].map((a) => Reviews.httpUrl(a.getAttribute("href"))).filter(Boolean))];
+  const records = [...S.reviewRecords, ...privateReviews.load()];
+  const targets = (urls.length ? urls : [""]).map((sourceUrl) => ({ country: COUNTRY, series: SERIES, editionId: edition.id,
+    textSha: edition.v.text_sha256, footnote: n, paragraph: context.para || "", section: context.section || "", sourceUrl }));
+  popState = { kind: "fn", n, anchor, prefix, targets };
+  const footnoteHtml = sanitizeFootnote(f.html);
+  template.innerHTML = footnoteHtml;
+  for (const a of template.content.querySelectorAll("a[href]")) {
+    const target = targets.find((t) => t.sourceUrl === Reviews.httpUrl(a.getAttribute("href")));
+    if (target) a.insertAdjacentHTML("afterend", Reviews.badgeHtml(Reviews.forTarget(records, target)));
+  }
+  const panels = targets.map((target, i) => Reviews.panelHtml(target, Reviews.forTarget(records, target),
+    { publicUnavailable: S.reviewsUnavailable, publicLoading: S.reviewsLoading,
+      editionReviews: i === 0 ? Reviews.reportReviews(S.reviewDirectory, target) : [],
+      directoryUnavailable: i === 0 && S.directoryUnavailable })).join("");
   showPop(`
     <div class="pop-head"><span class="tag tag--outline">Footnote ${n}</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div>
-    <div class="pop-body"><div class="pop-fn">${sanitizeFootnote(f.html)}</div>
+    <div class="pop-body"><div class="pop-fn">${template.innerHTML}</div>
+      <div class="source-reviews"><p class="eyebrow">Reviews &amp; evidence</p>${panels}</div>
       <div class="pop-actions"><button type="button" class="btn" data-act="goto-fn">Go to footnote ↓</button><button type="button" class="btn" data-act="copy-fn">${ICON.copy}Copy source</button></div></div>`,
   anchor.getBoundingClientRect());
 }
+pop.addEventListener("submit", (e) => {
+  const form = e.target.closest(".sr-form");
+  if (!form || popState?.kind !== "fn") return;
+  e.preventDefault();
+  const target = popState.targets.find((t) => t.sourceUrl === form.dataset.reviewSource);
+  const result = form.querySelector(".sr-form-result");
+  try {
+    const values = Object.fromEntries(new FormData(form));
+    const saved = privateReviews.save(target, values);
+    const { n, anchor, prefix } = popState;
+    openFootnote(n, anchor, prefix);
+    toast(saved.persisted ? "Private review saved in this browser" : "Browser storage unavailable: review kept for this session only");
+  } catch (error) { result.textContent = error.message; }
+});
 function sanitizeFootnote(html) {
   const t = document.createElement("template");
   t.innerHTML = html;

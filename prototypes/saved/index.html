@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Saved highlights · CPIN Explorer</title>
-<meta name="description" content="Passages saved from Home Office country notes, each with a citation, the sources it cites and your private notes.">
+<title>Saved · CPIN Explorer</title>
+<meta name="description" content="Pinned countries and reports, and passages saved from Home Office country notes, each with a citation, the sources it cites and your private notes.">
 <link rel="preload" href="../vendor/fonts/GeistPixel-Square.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../vendor/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="icon" type="image/svg+xml" href="../../assets/cpin-explorer/favicon.svg">
@@ -22,12 +22,14 @@
     <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg>
     <span class="brand-name"><b>CPIN</b>EXPLORER</span>
   </a>
-  <span class="top-crumb">Saved highlights</span>
+  <span class="top-crumb">Saved</span>
   <button class="btn theme-btn" id="theme" type="button">AUTO</button>
 </header>
 
 <main class="sv" id="main">
-  <section class="sv-hero" id="hero" aria-label="Saved highlights"></section>
+  <section class="sv-hero" id="hero" aria-label="Saved"></section>
+  <section class="sv-pins" id="pins" aria-labelledby="pinsHeading"></section>
+  <h2 class="sv-section-title">Highlights</h2>
   <div class="sv-tools" id="tools" hidden>
     <div class="sv-tools-in">
       <div class="seg" role="radiogroup" aria-label="Citation style" data-value="oscola" id="styleSeg"><span class="seg-thumb" aria-hidden="true"></span>

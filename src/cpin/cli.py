@@ -62,6 +62,62 @@ def cmd_links(args, store):
     return 1 if summary.get('archive_lookup_failures') else 0
 
 
+def cmd_reviews(args, store):
+    from pathlib import Path
+    from .review_collect import load_registry, public_directory, directory_markdown, export_contexts, refresh
+    if args.refresh:
+        try:
+            import trafilatura
+        except ImportError:
+            print("Review extraction needs: .venv/bin/pip install -e '.[sources]'", file=sys.stderr)
+            return 2
+    registry = load_registry(args.registry)
+    public_directory(registry, args.directory_out)
+    directory_markdown(registry, args.markdown_out)
+    count = export_contexts(registry, args.series_root, args.out)
+    print(f"review directory: {len(registry['publishers'])} publishers · {len(registry['reviews'])} curated publications · {count} edition contexts")
+    if not args.refresh:
+        return 0
+    summary = refresh(registry, Path(args.out), max_age=args.max_age, max_requests=args.limit)
+    print("review collection:", summary)
+    return 1 if summary['stopped'] or any(k != '200' for k in summary['outcomes']) or any(k != 'extracted' for k in summary['quality']) else 0
+
+
+def cmd_sources(args, store):
+    from pathlib import Path
+    from .store import now_iso, write_json
+    from .source_collect import build_inventory, collect, linked_documents, audit_collection, export_lists, footnote_coverage, audit_quality
+    if not args.inventory_only:
+        try:
+            import trafilatura  # fail before downloading if the optional extractor is absent
+        except ImportError:
+            print("Source extraction needs: .venv/bin/pip install -e '.[sources]'", file=sys.stderr)
+            return 2
+    catalogue, inventory = build_inventory(args.series_root, args.out, all_editions=args.all_editions,
+                                           countries=set(args.country) or None, since=getattr(args, 'since', None))
+    print("source inventory:", inventory["counts"], flush=True)
+    if args.inventory_only:
+        return 0
+    summary = collect(catalogue, args.out, workers=args.workers, limit=args.limit,
+                      retry_failures=args.retry_failures, max_total_bytes=args.max_gb*1024**3)
+    phases = {"cited_sources": summary}
+    print("source collection:", summary, flush=True)
+    linked = linked_documents(args.out, [r["url"] for r in catalogue])
+    if args.limit is None and not summary["stopped"] and linked:
+        print(f"Collecting {len(linked)} explicitly linked PDFs from short source pages", flush=True)
+        phases["linked_documents"] = collect(linked, args.out, workers=args.workers, retry_failures=args.retry_failures, max_total_bytes=args.max_gb*1024**3)
+    export_lists([*catalogue, *linked], args.out)
+    audit = audit_collection(catalogue, args.out, linked)
+    print("source audit:", audit, flush=True)
+    audit_quality(args.out)
+    print("footnote retrieval coverage:", footnote_coverage(args.out)["totals"], flush=True)
+    stopped = [phase["stopped"] for phase in phases.values() if phase["stopped"]]
+    write_json(Path(args.out) / "summary.json", {"scope":inventory["scope"], "started":summary["started"],
+               "finished":now_iso(), "url_count":audit["url_count"], "counts":audit["counts"],
+               "phases":phases, "stopped":stopped, "ai_checks":0})
+    return 1 if stopped or audit["issues"] or (args.limit is None and audit["counts"].get("pending")) else 0
+
+
 def cmd_images(args, store):
     from .images import current_image_refs, every_image_ref, mirror_images
     from .store import now_iso
@@ -381,6 +437,29 @@ def main(argv=None):
     p.add_argument("--country", action="append", default=[])
     p.add_argument("--out", default="prototypes/data/links", help="per-country status files for the reader")
     p.set_defaults(func=cmd_links)
+    p = sub.add_parser("reviews", help="export curated external-review metadata and optionally refresh the private discovery queue")
+    p.add_argument("--registry", default="config/review-sources.json")
+    p.add_argument("--directory-out", default="prototypes/reviews/directory.json")
+    p.add_argument("--markdown-out", default="docs/reviews/published-review-directory.md")
+    p.add_argument("--series-root", default="prototypes/data/series")
+    p.add_argument("--out", default="data/review-evidence")
+    p.add_argument("--refresh", action="store_true", help="check publisher indexes and review documents; discoveries stay private")
+    p.add_argument("--max-age", type=int, choices=range(0,366), default=7, help="days before rechecking an address (0 forces refresh)")
+    p.add_argument("--limit", type=int, choices=range(1,501), default=100, help="maximum requested URLs per run")
+    p.set_defaults(func=cmd_reviews)
+    p = sub.add_parser("sources", help="index footnotes and privately collect cited source documents (no AI)")
+    p.add_argument("--all-editions", action="store_true", help="include historical editions, with current sources first")
+    from datetime import date
+    p.add_argument("--since", type=lambda s: date.fromisoformat(s).isoformat(), help="include editions published on or after YYYY-MM-DD; unknown dates are reported and excluded")
+    p.add_argument("--inventory-only", action="store_true", help="index held footnotes and links without network requests")
+    p.add_argument("--retry-failures", action="store_true", help="retry failed source URLs; held successes remain cached")
+    p.add_argument("--series-root", default="prototypes/data/series", help="held exported report histories")
+    p.add_argument("--out", default="data/source-evidence", help="private local cache, excluded from site builds")
+    p.add_argument("--country", action="append", default=[])
+    p.add_argument("--workers", type=int, choices=range(1,33), default=8)
+    p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--max-gb", type=int, choices=range(1,17), default=6, help="maximum raw-document cache size")
+    p.set_defaults(func=cmd_sources)
     p = sub.add_parser("rederive", help="recompute what indexes hold that is derived from stored bodies (version labels, text fingerprints)")
     p.add_argument("--dry-run", action="store_true", help="list what would change, write nothing")
     p.set_defaults(func=cmd_rederive)
