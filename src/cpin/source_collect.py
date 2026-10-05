@@ -20,7 +20,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urldefrag, urljoin, urlsplit, urlunsplit
 
 import httpx
-from lxml import html
+from lxml import etree, html
 
 from . import config
 from .http import PoliteClient, FetchResult
@@ -181,9 +181,11 @@ def edition_index(report, edition):
                            "unreferenced_footnotes":sum(not f["claims"] for f in footnotes)}}
 
 
-def build_inventory(series_root, out, *, all_editions=False, countries=None, since=None):
+def build_inventory(series_root, out, *, all_editions=False, countries=None, since=None, date_evidence=None):
     out = Path(out)
     urls, counts, problems, index_paths = {}, Counter(), [], []
+    dates = {(r['country'], r['series'], r['editionId'], r['textSha']): r
+             for r in (date_evidence or {}).get('editions', [])}
     for path in sorted(Path(series_root).glob("*/*.json")):
         report = read_json(path)
         if not isinstance(report, dict) or "versions" not in report:
@@ -194,9 +196,13 @@ def build_inventory(series_root, out, *, all_editions=False, countries=None, sin
         for edition in report["versions"]:
             if not all_editions and not edition.get("current"):
                 continue
+            evidence = None
+            if not edition.get('published'):
+                evidence = dates.get((report['country'], report['key'], edition['id'], edition.get('text_sha256')))
+            published_value = edition.get('published') or (evidence or {}).get('published')
             if since:
                 try:
-                    published = date.fromisoformat((edition.get("published") or "")[:10])
+                    published = date.fromisoformat((published_value or "")[:10])
                 except (ValueError, TypeError):
                     problems.append({"report":str(path), "edition":edition["id"], "error":"publication date unknown; cannot apply since filter"})
                     continue
@@ -206,6 +212,9 @@ def build_inventory(series_root, out, *, all_editions=False, countries=None, sin
                 problems.append({"report":str(path), "edition":edition["id"], "error":"no readable body"})
                 continue
             index = edition_index(report, edition)
+            if evidence:
+                index['published'] = published_value
+                index['publicationEvidence'] = evidence
             if not counted:
                 counts["reports"] += 1
                 counted = True
@@ -460,7 +469,7 @@ def linked_documents(out, known_urls):
             try:
                 root=html.fromstring((out/"documents"/digest).read_bytes())
                 definitions[digest]=document_links(root)
-            except (OSError,ValueError):
+            except (OSError,ValueError,etree.ParserError):
                 definitions[digest]=text.get("document_links",[])
         choices=[]
         base=record.get("final_url") or record["url"]
@@ -542,6 +551,22 @@ def export_lists(catalogue, out):
                 for link in f["links"] or [{"url":"","href":""}]:
                     mapping = " | ".join(filter(None,[problem,"invalid source URL" if link["href"] and not link["url"] else ""]))
                     writer.writerow(safe_row([d["country"],d["series"],d["editionId"],d["textSha"],d["source"],d["published"],f["number"],f["text"],context,link["url"],link["href"],mapping,link.get("discovery",""),bool(link.get("boundary_uncertain"))]))
+
+
+def checked_source_copies(registry, caches):
+    """Curated document matches require retained bytes matching their identity."""
+    valid, issues = [], []
+    for copy in registry.get('copies', []):
+        digest = copy.get('sha256', '')
+        if not re.fullmatch(r'[0-9a-f]{64}', digest):
+            issues.append({'sha256':digest,'error':'invalid matching-copy identity'})
+            continue
+        path = next((Path(c)/'documents'/digest for c in caches if (Path(c)/'documents'/digest).is_file()), None)
+        if path is None or hashlib.sha256(path.read_bytes()).hexdigest() != digest:
+            issues.append({'sha256':digest,'error':'held matching copy missing or hash mismatch'})
+            continue
+        valid.append(copy)
+    return valid, issues
 
 
 def footnote_coverage(out):

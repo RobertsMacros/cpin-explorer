@@ -75,6 +75,14 @@ key, edition identity and text hash match an editorially checked edition declara
 Their presence never assigns a red flag or green tick to a citation. Findings about
 individual source uses still require paragraph, section, footnote and source anchors.
 
+The overlay also exposes every curated country-associated publication under
+“Other reviews found for this country”. Exact edition reviews are excluded from
+that background list to avoid duplication. Background reviews may concern another
+report, older edition or another publisher's product; their applicability and
+arguments remain unassessed. Related publication, corrigendum, repository and
+response addresses remain linked. This makes the directory available to readers
+without importing its arguments as findings or moving them between editions.
+
 For every argument, compare the CPIN passage, the review’s reasoning and the original
 source with surrounding context. Assess dates, population and geographical scope,
 and the information available at the CPIN cut-off. Record evidence for and against,

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "coverage": "One manually mapped external finding and two scoped interactive Syria AI checks. No automatic AI checks or exhaustive contradiction analysis have run. AI no-issue results do not certify a source or report.",
+  "coverage": "One manually mapped external finding and seven scoped interactive Syria AI checks. No automatic AI checks or exhaustive contradiction analysis have run. AI no-issue results do not certify a source or report.",
   "records": [
     {
       "id": "iagci-afghanistan-2026-returnees-279",
@@ -154,6 +154,136 @@
         "secondReader": "pdftotext agrees on counts, attribution and time period",
         "publishedReviewContext": "2014 IAGCI and 2020 EASO reviews predate this evidence and edition; no merits findings carried over."
       }
+    },
+    {
+      "id": "ai-syria-755cd16bbd4dff3d-fn71-euaa-march-wording",
+      "kind": "ai",
+      "status": "no-issue",
+      "issueType": "scoped-wording-and-attribution-check",
+      "target": {
+        "country": "syria",
+        "series": "note:areas-kurdish-kurds",
+        "editionId": "755cd16bbd4dff3d",
+        "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+        "footnote": 71,
+        "paragraph": "10.1.14",
+        "section": "10. Syrian Democratic Forces (SDF) and connected actors",
+        "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T18:32:01.896277+00:00",
+      "promptVersion": "source-evidence-review-2",
+      "sourceSha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "sourceRetrievedAt": "2026-10-05T18:21:39Z",
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sourceLocation": "Printed page 50; physical PDF page 51",
+      "summary": "The quoted description of regional SDF military councils matches the March 2025 EUAA report. This checks the quoted organisational description only; it does not independently establish the councils’ behaviour.",
+      "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
+      "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
+    },
+    {
+      "id": "ai-syria-755cd16bbd4dff3d-fn142-euaa-march-wording",
+      "kind": "ai",
+      "status": "no-issue",
+      "issueType": "scoped-wording-and-attribution-check",
+      "target": {
+        "country": "syria",
+        "series": "note:areas-kurdish-kurds",
+        "editionId": "755cd16bbd4dff3d",
+        "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+        "footnote": 142,
+        "paragraph": "13.1.5",
+        "section": "13. Integration of the SNA into Syrian state forces",
+        "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T18:32:01.921508+00:00",
+      "promptVersion": "source-evidence-review-2",
+      "sourceSha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "sourceRetrievedAt": "2026-10-05T18:21:39Z",
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sourceLocation": "Printed page 46; physical PDF page 47",
+      "summary": "The quotation matches the March 2025 EUAA report, retaining its qualifiers that some SNA leaders reportedly resisted integration. The report’s broader account of incomplete integration does not contradict this sentence. The underlying reporting is not independently checked.",
+      "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
+      "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
+    },
+    {
+      "id": "ai-syria-755cd16bbd4dff3d-fn328-euaa-march-wording",
+      "kind": "ai",
+      "status": "no-issue",
+      "issueType": "scoped-wording-and-attribution-check",
+      "target": {
+        "country": "syria",
+        "series": "note:areas-kurdish-kurds",
+        "editionId": "755cd16bbd4dff3d",
+        "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+        "footnote": 328,
+        "paragraph": "17.1.16",
+        "section": "17. Internally Displaced Persons (IDPs)",
+        "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T18:32:01.947636+00:00",
+      "promptVersion": "source-evidence-review-2",
+      "sourceSha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "sourceRetrievedAt": "2026-10-05T18:21:39Z",
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sourceLocation": "Printed page 89; physical PDF page 90",
+      "summary": "The stated displacement figures and January 2025 sequence match the EUAA passage, which attributes them to UNOCHA. This checks the quotation and attribution only, without independently validating the UNOCHA figures.",
+      "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
+      "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
+    },
+    {
+      "id": "ai-syria-752f74bfa052f37c-fn22-euaa-march-wording",
+      "kind": "ai",
+      "status": "no-issue",
+      "issueType": "scoped-wording-and-attribution-check",
+      "target": {
+        "country": "syria",
+        "series": "note:military-service",
+        "editionId": "752f74bfa052f37c",
+        "textSha": "86c8e7896379e8f328b32df86e59d73e58e88a1426521e0356d58c62c8d0ebba",
+        "footnote": 22,
+        "paragraph": "9.1.1",
+        "section": "9. Amnesty to former soldiers",
+        "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T18:32:01.974138+00:00",
+      "promptVersion": "source-evidence-review-2",
+      "sourceSha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "sourceRetrievedAt": "2026-10-05T18:21:39Z",
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sourceLocation": "Printed page 26; physical PDF page 27",
+      "summary": "The quoted official announcement matches the March 2025 EUAA passage. This checks what the authorities announced, not whether soldiers were actually safe. The source separately describes limited protection, inconsistent criteria and bureaucratic hurdles; this record does not assess the whole amnesty discussion.",
+      "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
+      "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
+    },
+    {
+      "id": "ai-syria-752f74bfa052f37c-fn23-euaa-march-wording",
+      "kind": "ai",
+      "status": "no-issue",
+      "issueType": "scoped-wording-and-attribution-check",
+      "target": {
+        "country": "syria",
+        "series": "note:military-service",
+        "editionId": "752f74bfa052f37c",
+        "textSha": "86c8e7896379e8f328b32df86e59d73e58e88a1426521e0356d58c62c8d0ebba",
+        "footnote": 23,
+        "paragraph": "9.1.1",
+        "section": "9. Amnesty to former soldiers",
+        "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T18:32:01.999309+00:00",
+      "promptVersion": "source-evidence-review-2",
+      "sourceSha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "sourceRetrievedAt": "2026-10-05T18:21:39Z",
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sourceLocation": "Printed page 23; physical PDF page 24",
+      "summary": "The account that some Syrian army defectors were appointed military commanders is supported by the EUAA passage describing a December list of 49 commanders including defected officers. This checks that narrow paraphrase, not the amnesty’s scope or actual protection.",
+      "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
+      "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
     }
   ]
 }

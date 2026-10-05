@@ -3,6 +3,22 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Review integration and 2020 backfill, 5 October 2026
+
+The latest work exposes all 44 found review publications in footnote overlays,
+with exact-edition context separate from unassessed country background. Checked
+EUAA source copies recover 67 Syria citations; comparable since-2023 source access
+is 72.5%, up from 70.3%. Seven narrowly scoped Syria AI checks are now recorded;
+bulk semantic review remains pending. The held-edition inventory since 1 January
+2020 has 485 editions, 84,612 footnotes and 33,061 primary URLs. Private source
+caches and queues stay excluded from Git/site exports. No paid API or recurring
+task was enabled. Read [the run record](reviews/2026-10-05-reviews-and-2020-backfill.md)
+and [the batch method](methods/source-review-batches.md), including date evidence,
+remaining retrieval/anchor gaps and cost assumptions, before continuing. The
+existing slow one-off global collector remains active; do not duplicate or discard
+its pending work. The owner's later explicit main push/live publication request
+supersedes the historical publication hold below.
+
 ## Source reviews and Syria pilot published, 5 October 2026
 
 At the owner's request, `main` commit `5178f26` was pushed and deployed to the

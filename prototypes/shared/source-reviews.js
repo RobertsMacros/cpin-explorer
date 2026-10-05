@@ -21,6 +21,15 @@ export function reportReviews(reviews, target) {
     && r.targets?.some((t) => t.scope === "whole-report" && t.mapping === "edition-declaration-checked"
       && ["country", "series", "editionId", "textSha"].every((key) => t[key] && t[key] === target[key])));
 }
+export function backgroundReviews(reviews, target) {
+  const exact = new Set(reportReviews(reviews, target).map((r) => r.id));
+  return reviews.filter((r) => r.countries?.includes(target.country) && !exact.has(r.id));
+}
+export function sourceCopies(copies, target) {
+  return copies.filter((r) => /^[a-f0-9]{64}$/.test(r.sha256 || "") && httpUrl(r.url)
+    && r.targets?.some((t) => ["country", "series", "editionId", "textSha", "footnote"].every((key) => t[key] === target[key])
+      && canonical(t.sourceUrl) === canonical(target.sourceUrl)));
+}
 export function activeRecords(records) {
   // Human edits append to the journal; only the most recent local decision is
   // current. Independent published and AI findings remain visible alongside it.
@@ -104,9 +113,10 @@ function recordHtml(r, previous = false) {
     <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
     ${r.response ? `<p><strong>Home Office response:</strong> ${esc(r.response)}</p>` : ""}
     ${r.publication ? `<p>${link(r.publication.url, r.publication.title || "Read published review")}${r.publication.location ? ` · ${esc(r.publication.location)}` : ""}</p>` : ""}
+    ${r.sourceCopyUrl ? `<p class="sr-meta">${link(r.sourceCopyUrl, "Source checked")}${r.sourceLocation ? ` · ${esc(r.sourceLocation)}` : ""}</p>` : ""}
     ${evidenceHtml(r)}</article>`;
 }
-export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], directoryUnavailable = false } = {}) {
+export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], countryReviews = [], matchingCopies = [], directoryUnavailable = false } = {}) {
   const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
   const manual = active.find((r) => r.kind === "manual");
   const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai");
@@ -117,6 +127,7 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
   return `<section class="sr-source" data-source-url="${esc(target.sourceUrl || "")}">
     <p class="sr-scope">${esc(scope)}</p>${badgeHtml(records)}
     ${!active.some((r) => r.excerpt || r.evidence?.publicDisplayApproved) ? `<p class="sr-meta">Source text is not held inline yet. ${link(target.sourceUrl, "Open source to review")}</p>` : ""}
+    ${matchingCopies.map((r) => `<p class="sr-meta">${link(r.url, "Matching report PDF")} · ${esc(r.title)} · ${esc(r.publishedMonth)}. Report identity checked against the PDF cover; this citation’s claim has not been assessed.</p>`).join("")}
     <section class="sr-review-group" data-review-kind="external"><h3 class="sr-group-heading">Published reviews</h3>
       ${publicLoading ? '<p class="sr-meta">Loading published reviews…</p>' : ""}
       ${publicUnavailable ? '<p class="sr-meta">Published reviews could not be loaded.</p>' : ""}
@@ -126,6 +137,12 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
         <p class="sr-meta">These reviews concern the whole report. Their arguments have not been independently assessed here, or mapped to this citation.</p>
         ${editionReviews.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p>${esc(r.summary || "")}</p>
           <p class="sr-meta">${esc((r.publishers || []).join(" / "))} · ${esc(r.publishedAt || "Date not recorded")} · ${esc(r.reviewedEdition?.label || "")}</p></article>`).join("")}</details>` : ""}
+      ${countryReviews.length ? `<details class="sr-background-reviews"><summary>Other reviews found for this country (${countryReviews.length})</summary>
+        <p class="sr-meta">Background only. These may concern a different report, older edition or another publisher’s country information. Applicability to this edition and citation has not been established; their arguments remain unassessed.</p>
+        ${countryReviews.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p>${esc(r.summary || "")}</p>
+          <p class="sr-meta">${esc([...(r.publishers || []), ...(r.coAuthors || [])].join(" / "))} · ${esc(r.publishedAt || "Date not recorded")} · ${esc(({ "uk-cpin": "UK CPIN review/context", "uk-cig": "Historical UK guidance review", "easo-coi": "EASO source-report review", "usdos-human-rights": "US State Department source-report review" })[r.reviewedProduct] || r.reviewedProduct || "Review context")}</p>
+          ${r.reviewedEdition?.label ? `<p class="sr-meta">Reviewed edition: ${esc(r.reviewedEdition.label)}</p>` : ""}
+          ${(r.relatedUrls || []).length ? `<p>${r.relatedUrls.map((u) => link(u, /\.pdf(?:#|$)/i.test(u) ? "Related document / response" : "Publication context / repository")).join(" · ")}</p>` : ""}</article>`).join("")}</details>` : ""}
     </section>
     <section class="sr-review-group" data-review-kind="ai"><h3 class="sr-group-heading">AI review</h3>
       ${publicLoading ? '<p class="sr-meta">Loading AI review records…</p>' : ""}

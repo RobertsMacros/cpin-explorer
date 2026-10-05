@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "policy": "Only missing publication dates. Exact edition and text-hash binding. First day is a month-precision sorting value, not a known day of publication. Canonical CPIN text remains unchanged.",
+  "editions": [
+    {
+      "country": "brazil",
+      "series": "fact-finding:criminal-groups-ocgs-organised",
+      "editionId": "bd203452305e8507",
+      "textSha": "0b541d3e6a8fc9663798f892ffde983523b6aae90c23b5267e9f49f7c77a48a1",
+      "published": "2024-12-01",
+      "precision": "month",
+      "publicationLabel": "December 2024",
+      "evidenceText": "Published: December 2024",
+      "checkedAt": "2026-10-05",
+      "basis": "Publication line in held canonical HTML body"
+    },
+    {
+      "country": "sudan",
+      "series": "fact-finding:2018-khartoum",
+      "editionId": "ae844f51fa47d390",
+      "textSha": "acff874512c1978697374302dab690e52ac3951ea77abe15b332077cba24c09a",
+      "published": "2018-11-01",
+      "precision": "month",
+      "publicationLabel": "November 2018",
+      "evidenceText": "Published: November 2018",
+      "checkedAt": "2026-10-05",
+      "basis": "Publication line in held canonical HTML body"
+    },
+    {
+      "country": "rwanda",
+      "series": "note:2-annex-evidence-unhcr",
+      "editionId": "13267c3fc3b7c061",
+      "textSha": "12bccb3a90d9ffb136fa468f4712fef2360983fa36bd4f6093f2d4f99397a431",
+      "published": "2024-04-01",
+      "precision": "month",
+      "publicationLabel": "April 2024",
+      "evidenceText": "Version 3.0 / April 2024",
+      "checkedAt": "2026-10-05",
+      "basis": "Printed cover, raw PyMuPDF text and independent pdftotext",
+      "pdfSha": "13267c3fc3b7c061226a153058c13f4c2680851719a29a9285a69346d8056f06",
+      "physicalPage": 2
+    },
+    {
+      "country": "rwanda",
+      "series": "note:3-annex-material-other",
+      "editionId": "bc27bdab8f0f307c",
+      "textSha": "5580534051e4cb5be39b346bee4c86c14c80ddac1fa0e2ae1fdb4bed42b68365",
+      "published": "2024-04-01",
+      "precision": "month",
+      "publicationLabel": "April 2024",
+      "evidenceText": "Version 3.0 / April 2024",
+      "checkedAt": "2026-10-05",
+      "basis": "Printed cover, raw PyMuPDF text and independent pdftotext",
+      "pdfSha": "bc27bdab8f0f307c377cd240537b028500f4092100e22a268efde37af4b64df5",
+      "physicalPage": 2
+    },
+    {
+      "country": "rwanda",
+      "series": "note:1-annex-evidence-government-rwanda",
+      "editionId": "8f11a8416712d89c",
+      "textSha": "3cea75925770a69cdac215fa341284714060269976e55d5e4d05a9dffcb76667",
+      "published": "2024-05-01",
+      "precision": "month",
+      "publicationLabel": "May 2024",
+      "evidenceText": "Version 3.0 / May 2024",
+      "checkedAt": "2026-10-05",
+      "basis": "Printed cover, raw PyMuPDF text and independent pdftotext",
+      "pdfSha": "8f11a8416712d89c50a30c6e34a7a404b80d902b7ef32550bdfe5745353b39c3",
+      "physicalPage": 2
+    }
+  ]
+}

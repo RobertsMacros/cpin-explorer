@@ -85,7 +85,7 @@ def cmd_reviews(args, store):
 
 def cmd_sources(args, store):
     from pathlib import Path
-    from .store import now_iso, write_json
+    from .store import now_iso, read_json, write_json
     from .source_collect import build_inventory, collect, linked_documents, audit_collection, export_lists, footnote_coverage, audit_quality
     if not args.inventory_only:
         try:
@@ -94,7 +94,8 @@ def cmd_sources(args, store):
             print("Source extraction needs: .venv/bin/pip install -e '.[sources]'", file=sys.stderr)
             return 2
     catalogue, inventory = build_inventory(args.series_root, args.out, all_editions=args.all_editions,
-                                           countries=set(args.country) or None, since=getattr(args, 'since', None))
+                                           countries=set(args.country) or None, since=getattr(args, 'since', None),
+                                           date_evidence=read_json(args.date_evidence, {}) if getattr(args, 'date_evidence', None) else None)
     print("source inventory:", inventory["counts"], flush=True)
     if args.inventory_only:
         return 0
@@ -451,6 +452,7 @@ def main(argv=None):
     p.add_argument("--all-editions", action="store_true", help="include historical editions, with current sources first")
     from datetime import date
     p.add_argument("--since", type=lambda s: date.fromisoformat(s).isoformat(), help="include editions published on or after YYYY-MM-DD; unknown dates are reported and excluded")
+    p.add_argument("--date-evidence", help="curated publication dates bound to exact edition and text hash; used only for missing dates")
     p.add_argument("--inventory-only", action="store_true", help="index held footnotes and links without network requests")
     p.add_argument("--retry-failures", action="store_true", help="retry failed source URLs; held successes remain cached")
     p.add_argument("--series-root", default="prototypes/data/series", help="held exported report histories")

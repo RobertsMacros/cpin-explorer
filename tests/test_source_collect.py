@@ -49,6 +49,21 @@ def test_since_filters_by_publication_not_capture_time_and_reports_unknown_dates
     assert all('1'*16 in key for row in urls for key in row['cited_by'])
 
 
+def test_missing_dates_accept_only_exact_edition_evidence_and_never_override_known_dates(tmp_path):
+    root=tmp_path/'series'/'afghanistan';root.mkdir(parents=True)
+    editions=[{**EDITION,'id':str(i)*16,'published':stamp} for i,stamp in enumerate([None,None,'2018-01-01'])]
+    (root/'test.json').write_text(json.dumps({**REPORT,'versions':editions}))
+    evidence={'editions':[{'country':'afghanistan','series':'note:test','editionId':v['id'],
+                          'textSha':'stale' if i==1 else v['text_sha256'],'published':'2024-04-01','precision':'month'}
+                         for i,v in enumerate(editions)]}
+    _,summary=build_inventory(tmp_path/'series',tmp_path/'out',all_editions=True,since='2020-01-01',date_evidence=evidence)
+    assert summary['counts']['editions']==1
+    assert summary['problems'][0]['edition']=='1'*16
+    index=json.loads((tmp_path/'out'/summary['index_paths'][0]).read_text())
+    assert index['publicationEvidence']['precision']=='month'
+    assert editions[0]['published'] is None
+
+
 def test_narrowing_inventory_keeps_history_but_excludes_it_from_coverage_and_csv(tmp_path):
     from cpin.source_collect import footnote_coverage, export_lists
     root=tmp_path/'series'/'afghanistan';root.mkdir(parents=True)
@@ -262,6 +277,16 @@ def test_empty_successful_response_is_not_a_readable_source():
     result = extracted(b'', 'text/html', 'https://example.org/report')
     assert result['status'] == 'no-text'
     assert result['text'] == '' and result['verified'] is False
+
+
+def test_empty_saved_html_does_not_interrupt_linked_document_discovery(tmp_path):
+    from cpin.source_collect import append_json, linked_documents
+    from cpin.store import atomic_write, write_json
+    digest = hashlib.sha256(b'').hexdigest()
+    atomic_write(tmp_path/'documents'/digest, b'')
+    write_json(tmp_path/'text'/f'{digest}.json', {'kind':'html','status':'no-text','text':''})
+    append_json(tmp_path/'attempts.jsonl', {'url':'https://example.org/empty','status':'downloaded','sha256':digest})
+    assert linked_documents(tmp_path, []) == []
 
 
 def test_long_host_queues_do_not_starve_small_hosts_or_overlap_requests(tmp_path):

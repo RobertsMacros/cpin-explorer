@@ -1,11 +1,27 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { activeRecords, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, reportReviews, reviewStatus } from "../../prototypes/shared/source-reviews.js";
+import { activeRecords, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
 const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, severity: "minor", author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
+
+test("a matching report copy preserves the original source and never awards a checked tick", async () => {
+  const data = JSON.parse(await readFile(new URL('../../prototypes/reviews/source-copies.json', import.meta.url)));
+  assert.equal(data.copies.reduce((n, r) => n + r.targets.length, 0), 67);
+  const copy = data.copies[0], t = { ...copy.targets[0], paragraph:'1.1.1', section:'Context' };
+  assert.equal(sourceCopies(data.copies, t).length, 1);
+  for (const change of [{textSha:'f'.repeat(64)}, {editionId:'f'.repeat(16)}, {footnote:9999}, {sourceUrl:'https://example.org/other'}]) {
+    assert.equal(sourceCopies(data.copies, { ...t, ...change }).length, 0);
+  }
+  const html = panelHtml(t, [], { matchingCopies:sourceCopies(data.copies,t) });
+  assert.ok(html.includes(t.sourceUrl));
+  assert.ok(html.includes(copy.url));
+  assert.match(html, /claim has not been assessed/);
+  assert.match(html, /sr-grey/);
+  assert.equal(sourceCopies([{ ...copy, url:'javascript:alert(1)' }],t).length,0);
+});
 
 test("whole-report reviews are edition-bound context and never source flags", () => {
   const r = { kind: "direct-review", reviewedProduct: "uk-cpin", title: "Named review", url: "https://example.org/review.pdf",
@@ -25,6 +41,26 @@ test("findings attach to the exact edition, paragraph, section and source use", 
     assert.equal(forTarget([r], { ...target, [key]: value }).length, 0, key);
   }
   assert.equal(forTarget([r], { ...target, section: "" }).length, 0);
+});
+
+test("all found reviews are accessible as country background without certifying a citation", async () => {
+  const directory = JSON.parse(await readFile(new URL("../../prototypes/reviews/directory.json", import.meta.url)));
+  const reachable = new Set();
+  for (const r of directory.reviews) {
+    for (const country of r.countries) {
+      const t = { ...target, country };
+      for (const found of [...reportReviews(directory.reviews, t), ...backgroundReviews(directory.reviews, t)]) reachable.add(found.id);
+    }
+  }
+  assert.equal(reachable.size, directory.reviews.length);
+  const otherEdition = { id: "old", countries: [target.country], kind: "direct-review", reviewedProduct: "uk-cpin", title: "Older review", url: "https://example.org/older", targets: [{ ...target, scope: "whole-report", mapping: "edition-declaration-checked", editionId: "b".repeat(16) }] };
+  const exact = { ...otherEdition, id: "exact", targets: [{ ...target, scope: "whole-report", mapping: "edition-declaration-checked" }] };
+  assert.deepEqual(backgroundReviews([otherEdition, exact, { ...otherEdition, id: "other-country", countries: ["china"] }], target).map((r) => r.id), ["old"]);
+  const panel = panelHtml(target, [], { countryReviews: [otherEdition] });
+  assert.match(panel, /Background only/);
+  assert.match(panel, /not been established/);
+  assert.match(panel, /Older review/);
+  assert.match(panel, /sr-grey/);
 });
 
 test("AI alone never awards a green tick, and a local check cannot hide an independent finding", () => {
@@ -104,4 +140,20 @@ test("published pilot is an external finding with the original edition and sourc
   assert.equal(data.records[0].target.editionId, "a7c78fef364ac1e2");
   assert.match(data.records[0].summary, /internal consistency/);
   assert.match(data.coverage, /No automatic AI checks/);
+});
+
+test("new Syria wording checks retain exact current edition identity and source page evidence without human approval", async () => {
+  const data = JSON.parse(await readFile(new URL('../../prototypes/reviews/published.json',import.meta.url)));
+  const checks=data.records.filter(r=>r.promptVersion==='source-evidence-review-2');
+  assert.equal(checks.length,5);
+  for(const r of checks){
+    const filename=r.target.series.replaceAll(':','--');
+    const series=JSON.parse(await readFile(new URL(`../../prototypes/data/series/syria/${filename}.json`,import.meta.url)));
+    assert.ok(series.versions.some(v=>v.current && v.id===r.target.editionId && v.text_sha256===r.target.textSha));
+    assert.equal(forTarget([r],r.target).length,1);
+    assert.equal(reviewStatus([r]).tone,'grey');
+    assert.match(panelHtml(r.target,[r]),/Source checked/);
+    assert.match(r.sourceLocation,/Printed page \d+; physical PDF page \d+/);
+    assert.equal(r.sourceSha256,'06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36');
+  }
 });

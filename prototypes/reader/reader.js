@@ -126,7 +126,7 @@ const S = {
   marks: new Map(), checks: new Map(), pending: null, lastCopy: null, ready: false,
   linkMap: null, links: null, fullSha: new Map(), sums: [], sizes: [],
   cur: -1, hunks: new Map(),
-  reviewRecords: [], reviewDirectory: [], directoryUnavailable: false, reviewsLoading: true, reviewsUnavailable: false,
+  reviewRecords: [], reviewDirectory: [], sourceCopies: [], directoryUnavailable: false, reviewsLoading: true, reviewsUnavailable: false,
 };
 const privateReviews = Reviews.createPrivateStore();
 let readyResolve;
@@ -226,7 +226,10 @@ async function boot() {
   }).catch(() => { S.reviewsUnavailable = true; }), fetchJson("../reviews/directory.json").then((data) => {
     if (data.schema !== 1 || !Array.isArray(data.reviews)) throw new Error("Unrecognised review directory");
     S.reviewDirectory = data.reviews;
-  }).catch(() => { S.directoryUnavailable = true; })]).finally(() => {
+  }).catch(() => { S.directoryUnavailable = true; }), fetchJson("../reviews/source-copies.json").then((data) => {
+    if (data.schema !== 1 || !Array.isArray(data.copies)) throw new Error("Unrecognised source copies");
+    S.sourceCopies = data.copies;
+  }).catch(() => {})]).finally(() => {
     S.reviewsLoading = false;
     if (popState?.kind === "fn") openFootnote(popState.n, popState.anchor, popState.prefix);
   });
@@ -2487,6 +2490,8 @@ function openFootnote(n, anchor, prefix = "") {
   const panels = targets.map((target, i) => Reviews.panelHtml(target, Reviews.forTarget(records, target),
     { publicUnavailable: S.reviewsUnavailable, publicLoading: S.reviewsLoading,
       editionReviews: i === 0 ? Reviews.reportReviews(S.reviewDirectory, target) : [],
+      countryReviews: i === 0 ? Reviews.backgroundReviews(S.reviewDirectory, target) : [],
+      matchingCopies: Reviews.sourceCopies(S.sourceCopies, target),
       directoryUnavailable: i === 0 && S.directoryUnavailable })).join("");
   showPop(`
     <div class="pop-head"><span class="tag tag--outline">Footnote ${n}</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div>

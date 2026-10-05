@@ -1,0 +1,591 @@
+{
+  "schema": 1,
+  "policy": "Original footnote URLs remain unchanged. These copies are bound to exact CPIN edition/text/footnote/source identities and a checked report title/date/hash. Document identity is not verification of any claim. Private bytes and full source text are not published.",
+  "copies": [
+    {
+      "title": "EUAA \u2014 Syria: Country Focus",
+      "publishedMonth": "October 2024",
+      "url": "https://coi.euaa.europa.eu/administration/easo/PLib/2024_10_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sha256": "201f6047d00df5cf31d4539c0da5acfb903660cb0e4c88e444130ae75f318400",
+      "verifiedAt": "2026-10-05",
+      "verification": {
+        "basis": "Title and month on physical PDF cover checked with raw PyMuPDF and independent pdftotext; SHA256 checked against retained bytes",
+        "physicalPage": 1
+      },
+      "originalUrls": [
+        "https://euaa.europa.eu/publications/syria-country-focus-0"
+      ],
+      "targets": [
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "6155485b0adac4ca",
+          "textSha": "0a6cec472f36cfc0e80668fe383dd67195c3b695c4b581e8f8d8dd64dcde8aa5",
+          "footnote": 11,
+          "sourceUrl": "https://euaa.europa.eu/publications/syria-country-focus-0"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "6155485b0adac4ca",
+          "textSha": "0a6cec472f36cfc0e80668fe383dd67195c3b695c4b581e8f8d8dd64dcde8aa5",
+          "footnote": 39,
+          "sourceUrl": "https://euaa.europa.eu/publications/syria-country-focus-0"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "6155485b0adac4ca",
+          "textSha": "0a6cec472f36cfc0e80668fe383dd67195c3b695c4b581e8f8d8dd64dcde8aa5",
+          "footnote": 52,
+          "sourceUrl": "https://euaa.europa.eu/publications/syria-country-focus-0"
+        }
+      ]
+    },
+    {
+      "title": "EUAA \u2014 Syria: Country Focus",
+      "publishedMonth": "July 2025",
+      "url": "https://www.ecoi.net/en/file/local/2127045/2025_07_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sha256": "ad25c5da90d44df5a2923d6383a61fa06c5b9ee04ce838be73a6e674f3a07b84",
+      "verifiedAt": "2026-10-05",
+      "verification": {
+        "basis": "Title and month on physical PDF cover checked with raw PyMuPDF and independent pdftotext; SHA256 checked against retained bytes",
+        "physicalPage": 1
+      },
+      "originalUrls": [
+        "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+      ],
+      "targets": [
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 6,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 17,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 18,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 25,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 27,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 30,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 36,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 49,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 52,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 58,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 75,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 94,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 119,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 130,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 139,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 140,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "footnote": 141,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "b5cc4efde5c551c9",
+          "textSha": "a37c498a4fc057f7e3933dcbcd46b7fde79f06ac775beffe1231357d4744c96d",
+          "footnote": 12,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "b5cc4efde5c551c9",
+          "textSha": "a37c498a4fc057f7e3933dcbcd46b7fde79f06ac775beffe1231357d4744c96d",
+          "footnote": 15,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "b5cc4efde5c551c9",
+          "textSha": "a37c498a4fc057f7e3933dcbcd46b7fde79f06ac775beffe1231357d4744c96d",
+          "footnote": 88,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "55297befb75b682b",
+          "textSha": "e117fa5349e74a6e427072dd4e35718449876623521845a668faf6ef998fc4e1",
+          "footnote": 12,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "55297befb75b682b",
+          "textSha": "e117fa5349e74a6e427072dd4e35718449876623521845a668faf6ef998fc4e1",
+          "footnote": 15,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:criticism-government",
+          "editionId": "55297befb75b682b",
+          "textSha": "e117fa5349e74a6e427072dd4e35718449876623521845a668faf6ef998fc4e1",
+          "footnote": 88,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "fc683672349c2dc8",
+          "textSha": "4a9457e42e4403c4937897115894bc629b59c325f3ca4bf49236e05488ed0696",
+          "footnote": 18,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "fc683672349c2dc8",
+          "textSha": "4a9457e42e4403c4937897115894bc629b59c325f3ca4bf49236e05488ed0696",
+          "footnote": 50,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "fc683672349c2dc8",
+          "textSha": "4a9457e42e4403c4937897115894bc629b59c325f3ca4bf49236e05488ed0696",
+          "footnote": 74,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "fc683672349c2dc8",
+          "textSha": "4a9457e42e4403c4937897115894bc629b59c325f3ca4bf49236e05488ed0696",
+          "footnote": 81,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:humanitarian-situation",
+          "editionId": "fc683672349c2dc8",
+          "textSha": "4a9457e42e4403c4937897115894bc629b59c325f3ca4bf49236e05488ed0696",
+          "footnote": 88,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 4,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 89,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 96,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 149,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 229,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus-1"
+        }
+      ]
+    },
+    {
+      "title": "EUAA \u2014 Syria: Country Focus",
+      "publishedMonth": "March 2025",
+      "url": "https://coi.euaa.europa.eu/administration/easo/PLib/2025_03_EUAA_COI_Report_Syria_Country_Focus.pdf",
+      "sha256": "06eb2789cfee794517a59c6269862aa925e9ba23b917e8dfe4ed8cfe32317c36",
+      "verifiedAt": "2026-10-05",
+      "verification": {
+        "basis": "Title and month on physical PDF cover checked with raw PyMuPDF and independent pdftotext; SHA256 checked against retained bytes",
+        "physicalPage": 1
+      },
+      "originalUrls": [
+        "https://euaa.europa.eu/publications/coi-report-syria-country-focus",
+        "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+      ],
+      "targets": [
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 71,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 72,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 121,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 142,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 151,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 164,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "362b2ce382cc942d",
+          "textSha": "60894b7f90c86c832ce3bae447dfcaf9d72a591f636d9ad017d8ee645fa0a6a4",
+          "footnote": 328,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 71,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 72,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 121,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 142,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 151,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 164,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "1dd84ddc580562a0",
+          "textSha": "34ba8178fa4ae69a7da84f58b9fe9a26f628f03c57944c1543b520e126d79f42",
+          "footnote": 328,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 71,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 72,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 121,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 142,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 151,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 164,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:areas-kurdish-kurds",
+          "editionId": "755cd16bbd4dff3d",
+          "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+          "footnote": 328,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:military-service",
+          "editionId": "752f74bfa052f37c",
+          "textSha": "86c8e7896379e8f328b32df86e59d73e58e88a1426521e0356d58c62c8d0ebba",
+          "footnote": 22,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:military-service",
+          "editionId": "752f74bfa052f37c",
+          "textSha": "86c8e7896379e8f328b32df86e59d73e58e88a1426521e0356d58c62c8d0ebba",
+          "footnote": 23,
+          "sourceUrl": "https://euaa.europa.eu/publications/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 45,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 46,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 54,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 55,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 66,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 117,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 192,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        },
+        {
+          "country": "syria",
+          "series": "note:women",
+          "editionId": "15839c0085d1dfa6",
+          "textSha": "72c13b13b39bd0907d3b12b27fefdd8aa109b1a05208d0a2fc507b25a0666811",
+          "footnote": 206,
+          "sourceUrl": "https://euaa.europa.eu/coi/syria/2025/country-focus/coi-report-syria-country-focus"
+        }
+      ]
+    }
+  ]
+}
