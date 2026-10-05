@@ -1318,11 +1318,11 @@ function provenance(v) {
   let html = `<b>${ver}</b>${sep}${pub}`;
   if (r.source === 'wayback') {
     if (r.captured_at) html += `${sep}Archived copy captured ${fmtDate(Date.parse(r.captured_at))}`;
-    if (r.archive_url) html += `${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Internet Archive${EXT}</a>`;
+    if (r.archive_url) html += `${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Archived copy${EXT}</a>`;
   } else if (r.govuk_url) {
     html += `${sep}<a href="${esc(r.govuk_url)}" target="_blank" rel="noopener">GOV.UK${EXT}</a>`;
   } else if (r.archive_url) {
-    html += `${sep}Superseded on GOV.UK${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Internet Archive${EXT}</a>`;
+    html += `${sep}Superseded on GOV.UK${sep}<a href="${esc(r.archive_url)}" target="_blank" rel="noopener">Archived copy${EXT}</a>`;
   }
   return html;
 }
@@ -2110,7 +2110,7 @@ async function bootReal() {
   back.href = '../dashboard/index.html#' + encodeURIComponent(country || '');
   back.textContent = '← ' + capFirst(String(country || '').replace(/-/g, ' '));
   crumb.replaceWith(back);
-  $('notice').innerHTML = `<span class="tag tag--outline" aria-hidden="true">Verbatim</span><span><strong>Text is verbatim from GOV.UK</strong> (Sources: Home Office, GOV.UK · Crown copyright, Open Government Licence v3.0). Marks show differences between the two editions selected. Archived editions are copies captured by the Internet Archive.</span>`;
+  $('notice').innerHTML = `<span class="tag tag--outline" aria-hidden="true">Verbatim</span><span><strong>Text is verbatim from GOV.UK</strong> (Sources: Home Office, GOV.UK · Crown copyright, Open Government Licence v3.0). Marks show differences between the two editions selected. Archived editions are recovered from archives and document repositories.</span>`;
   $('doc').innerHTML = `<p class="loading"><span class="tag">Loading</span>Fetching editions…</p>`;
   $('cmpDesc').textContent = '';
   applyThemeLabel(); applyModeUI();

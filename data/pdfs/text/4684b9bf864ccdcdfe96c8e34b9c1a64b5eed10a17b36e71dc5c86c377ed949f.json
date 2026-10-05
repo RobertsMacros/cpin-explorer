@@ -1,0 +1,720 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 24,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 27,
+ "paragraphs": 151,
+ "list_items": 14,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 44,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    250.07,
+    526.76,
+    263.45
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    448.57,
+    526.76,
+    461.95
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    426.85,
+    526.76,
+    440.23
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    567.28,
+    526.76,
+    580.66
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    707.68,
+    526.76,
+    721.06
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    195.8,
+    526.76,
+    209.18
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    423.61,
+    526.76,
+    436.99
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    347.75,
+    526.76,
+    361.13
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    292.43,
+    526.76,
+    305.81
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    594.28,
+    526.76,
+    607.66
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    367.43,
+    526.76,
+    380.81
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    505.45,
+    526.76,
+    518.83
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    214.64,
+    526.76,
+    228.02
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    231.2,
+    526.76,
+    244.58
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    156.2,
+    526.76,
+    169.58
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    122.6,
+    526.76,
+    135.98
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    365.39,
+    526.76,
+    378.77
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    105.57,
+    183.3,
+    134.61
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    159.8,
+    525.37,
+    173.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Basis of claim .................................................................................................................................... 4",
+   "bbox": [
+    84.02,
+    178.34,
+    525.37,
+    192.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................................................ 4",
+   "bbox": [
+    84.02,
+    197.3,
+    525.37,
+    211.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    216.68,
+    525.37,
+    230.06
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.42,
+    235.55,
+    525.37,
+    248.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Protection ................................................................................................. 5",
+   "bbox": [
+    107.42,
+    254.39,
+    525.37,
+    267.77
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Internal relocation ..................................................................................... 5",
+   "bbox": [
+    107.42,
+    273.11,
+    525.37,
+    286.49
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Certification .............................................................................................. 6",
+   "bbox": [
+    107.42,
+    291.95,
+    525.37,
+    305.33
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ................................................................................................................................ 6",
+   "bbox": [
+    84.02,
+    310.49,
+    525.37,
+    324.55
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.02,
+    329.87,
+    525.37,
+    343.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Legal situation ................................................................................................................................... 7",
+   "bbox": [
+    84.02,
+    348.29,
+    525.37,
+    362.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.1 Freedom of expression and association ................................................... 7",
+   "bbox": [
+    107.42,
+    367.67,
+    525.37,
+    381.05
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 Barriers to freedom of expression ............................................................ 9",
+   "bbox": [
+    107.42,
+    386.51,
+    525.37,
+    399.89
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.3 Police powers and the judiciary .............................................................. 10",
+   "bbox": [
+    107.42,
+    405.25,
+    525.37,
+    418.63
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. The situation for human rights defenders .......................................................................... 11",
+   "bbox": [
+    84.02,
+    423.79,
+    525.37,
+    437.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Overview ................................................................................................ 11",
+   "bbox": [
+    107.42,
+    443.17,
+    525.37,
+    456.55
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Human rights monitoring bodies ............................................................. 13",
+   "bbox": [
+    107.42,
+    462.01,
+    525.37,
+    475.39
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Demonstrations ...................................................................................... 14",
+   "bbox": [
+    107.42,
+    480.73,
+    525.37,
+    494.11
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 Police violence ....................................................................................... 17",
+   "bbox": [
+    107.42,
+    499.57,
+    525.37,
+    512.95
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 Prosecution of human rights defenders .................................................. 18",
+   "bbox": [
+    107.42,
+    518.41,
+    525.37,
+    531.79
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.6 Harassment of human rights defenders ................................................. 20",
+   "bbox": [
+    107.42,
+    537.13,
+    525.37,
+    550.51
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 24",
+   "bbox": [
+    72.02,
+    555.97,
+    525.37,
+    569.35
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 24",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 24",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Turkey: Human rights defenders",
+ "cover_version": "1.0",
+ "cover_date": "March 2016",
+ "pdf_sha256": "4684b9bf864ccdcdfe96c8e34b9c1a64b5eed10a17b36e71dc5c86c377ed949f",
+ "images": []
+}

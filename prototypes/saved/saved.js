@@ -4,10 +4,11 @@
 import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
-  capFirst, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteOf, quoteWithCitation, sourceOf, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, titleMonth,
+  capFirst, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteOf, quoteWithCitation, sourceOf, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, titleMonth, pdfPinpoint,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
-import { analyseBody, describePassage, editionSource, fetchText, latestCapture, parseBody, paths, pickEdition } from "../shared/note-source.js";
+import { analyseBody, describePassage, parseBody, paths } from "../shared/note-source.js";
+import { archiveCopy, capturedAt, editionWhere, seriesPath } from "../shared/report-history.js";
 import { ukParts } from "../shared/uk-time.js";
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -99,12 +100,12 @@ function statusHtml(r) {
     return `<span class="badge badge--changed">Changed since you saved it (v${esc(r.version || "?")} → v${esc(r.current?.version || "?")})</span>${
       n?.compare_url ? ` <a class="badge-link" href="${esc(n.compare_url)}">Show what changed →</a>` : ""}`;
   }
-  if (r.check === "still" && r.current?.version) return `<span class="badge">Still in v${esc(r.current.version)}</span>`;
+  if (H.stillCurrent(r)) return `<span class="badge">${esc(H.stillLine(r))}</span>`;
   return "";
 }
 
 function itemHtml(r) {
-  const now = r.check === "still" && r.current ? r.current : r;
+  const now = r;
   const sources = r.sources || [];
   return `<li class="sv-item${r.check === "changed" ? " is-changed" : ""}" id="h-${esc(r.id)}" data-hid="${esc(r.id)}">
     <div class="sv-item-top"><span class="tag">${esc(now.para ? formatPinpoint(now.para) : "Passage")}</span>
@@ -120,6 +121,7 @@ function itemHtml(r) {
     <div class="sv-actions">
       <button type="button" class="btn btn--primary" data-act="copy-both">Copy quote + citation</button>
       <button type="button" class="btn" data-act="copy-cite">Copy citation</button>
+      ${H.stillCurrent(r) && r.current.current === true ? '<button type="button" class="btn" data-act="cite-current">Cite the current edition instead</button>' : ""}
       <a class="btn" href="${esc(paths.report(r, `#h=${encodeURIComponent(r.id)}`))}">Open in reader →</a>
       <button type="button" class="btn btn-del" data-act="delete">Delete</button>
     </div>
@@ -132,7 +134,7 @@ function emptyHtml() {
   return `<div class="sv-empty">
     <div style="--i:0"><p class="eyebrow">Nothing saved yet</p></div>
     <ol class="sv-steps" style="--i:1">
-      <li><span class="numeral">1</span><p><b>Open a note in the reader.</b> Every edition is shown verbatim, as published on GOV.UK.</p></li>
+      <li><span class="numeral">1</span><p><b>Open a note in the reader.</b> Web editions are shown verbatim; editions read from a PDF are marked “From the PDF”.</p></li>
       <li><span class="numeral">2</span><p><b>Select a passage.</b> A bar appears with its paragraph number.</p></li>
       <li><span class="numeral">3</span><p><b>Choose Save highlight.</b> It is kept here with a citation, full (OSCOLA) or short (tribunal), a link that jumps to the words on GOV.UK, and the sources the passage cites.</p></li>
     </ol>
@@ -200,6 +202,10 @@ $("#groups").addEventListener("click", (e) => {
   if (!r) return;
   if (b.dataset.act === "copy-both") copyRich(quoteWithCitation(H.citeContext(r), style, r.sources)).then((ok) => copied(ok, "quote and citation"));
   if (b.dataset.act === "copy-cite") copyRich(formatCitation(H.citeContext(r), style)).then((ok) => copied(ok, `${STYLE_NAMES[style]} citation`));
+  if (b.dataset.act === "cite-current") {
+    const patch = H.citeCurrent(r);
+    if (patch) { H.updateHighlight(r.id, patch); toast("Citation changed to the current edition"); }
+  }
   if (b.dataset.act === "delete") {
     li.classList.add("leaving");
     setTimeout(() => {
@@ -373,48 +379,64 @@ async function exportWord(mode) {
 async function checkAll() {
   const byNote = new Map();
   for (const r of H.loadHighlights()) {
-    const k = `${r.country}|${r.note}`;
+    const k = `${r.country}|${r.series || noteInfo(r.country, r.note).n?.series || r.note}`;
     if (!byNote.has(k)) byNote.set(k, []);
     byNote.get(k).push(r);
   }
-  await Promise.all([...byNote].map(([k, recs]) => checkNote(k, recs).catch((e) => console.warn("check failed", k, e))));
+  const queue = [...byNote];
+  await Promise.all(Array.from({ length: Math.min(3, queue.length) }, async () => {
+    while (queue.length) {
+      const [k, recs] = queue.shift();
+      try { await checkNote(k, recs); } catch (e) { console.warn("check failed", k, e); }
+    }
+  }));
 }
 async function checkNote(key, recs) {
-  const [country, note] = key.split("|");
-  if (!note || recs.every((r) => sourceOf(r) === "pdf")) return;   // read from a PDF: there is no note to check here (the reader checks it against the report's editions)
-  const index = await fetchJson(paths.index(country, note));
-  const edition = pickEdition(index);
+  const country = recs[0].country;
+  const seriesKey = recs[0].series || noteInfo(country, recs[0].note).n?.series;
+  if (!seriesKey) return;
+  const series = await fetchJson(seriesPath(country, seriesKey));
+  // A current PDF with no extracted text cannot be checked against an older text.
+  if (series.current_pdf_only) return;
+  const edition = series.versions.find((v) => v.current) || series.versions.at(-1);
   if (!edition) return;
-  const stale = recs.filter((r) => r.editionSha !== edition.sha256 && !(r.current?.sha === edition.sha256 && (r.check === "still" || r.check === "changed")));
-  if (!stale.length) return;
   checking.add(key);
   refreshStatus(recs);
-  const html = await fetchText(paths.body(country, note, edition.sha256));
-  const { root } = parseBody(html);
-  const A = analyseBody(root);
-  const normalized = H.normalizeWithMap(A.text);
-  const { n } = noteInfo(country, note);
-  const src = editionSource(edition, { note: n || {}, index });
-  quiet++;
-  for (const r of stale) {
-    const res = H.checkHighlight(r, { sha: edition.sha256, version: edition.version_banner, text: A.text, normalized });
-    if (res.status === "still") {
-      const info = describePassage(A, res.match.start, res.match.end);
-      H.updateHighlight(r.id, { check: "still", current: { sha: edition.sha256, version: edition.version_banner || null, title: edition.title || index.title,
-        // the month in the edition's own title, else the dashboard's for the note: never GOV.UK's date for it, which is the country page's
-        month: titleMonth({ title: edition.title || index.title, topic: n?.topic, countryName: noteInfo(country, note).c?.name }) || n?.month || null,
-        para: info.para, section: info.section, ...(info.twice ? { paraTwice: true } : {}),
-        url: src.url, archived: src.archived, capturedAt: src.capturedAt, pos: { start: res.match.start, end: res.match.end } } });
-    } else if (res.status === "changed") {
-      const cap = latestCapture(index.versions.find((v) => v.sha256 === r.editionSha));
-      H.updateHighlight(r.id, { check: "changed", current: { sha: edition.sha256, version: edition.version_banner || null },
-        archivedCopy: cap ? { url: cap.archive_url, capturedAt: cap.captured_at } : r.archivedCopy || null });
-    }
-  }
-  quiet--;
-  checking.delete(key);
-  const fresh = H.loadHighlights().filter((r) => `${r.country}|${r.note}` === key);
-  refreshStatus(fresh, { full: true });
+  try {
+    const { root } = parseBody(edition.body);
+    const A = analyseBody(root), normalized = H.normalizeWithMap(A.text);
+    const src = editionWhere(edition);
+    quiet++;
+    try {
+      for (const r of recs) {
+        const same = [edition.id, ...(edition.also_held_as || []).map((v) => v.id)].includes(String(r.editionSha).slice(0, 16));
+        const res = H.checkHighlight(r, { sha: same ? r.editionSha : edition.id, version: edition.version, text: A.text, normalized });
+        const original = series.versions.find((v) => [v.id, ...(v.also_held_as || []).map((c) => c.id)].includes(String(r.editionSha).slice(0, 16)));
+        const cap = archiveCopy(original);
+        const archivedCopy = cap ? { url: cap.archive_url, capturedAt: capturedAt(cap) } : r.archivedCopy || null;
+        if (res.status === "still") {
+          const info = describePassage(A, res.match.start, res.match.end);
+          const selector = H.makeSelector(A.text, res.match.start, res.match.end);
+          H.updateHighlight(r.id, { series: seriesKey, check: "still", archivedCopy, current: {
+            sha: edition.id, current: !!edition.current, note: edition.note || H.pdfNoteId(edition.id),
+            version: edition.version || null, title: edition.title,
+            month: titleMonth({ title: edition.title, countryName: series.country_name }) || edition.date?.slice(0, 7) || null,
+            para: info.para, section: info.section, paraTwice: !!info.twice, lead: info.lead,
+            prefix: selector.prefix, suffix: selector.suffix,
+            quote: selector.quote, spaced: H.spacedText(A, res.match.start, res.match.end), sources: info.sources,
+            source: src.pdf ? "pdf" : "web", pdfPara: src.pdf ? undefined : pdfPinpoint(info.para, edition.pdf_compare?.numbering) ?? undefined,
+            url: src.url, archived: src.archived, capturedAt: src.capturedAt, pos: { start: res.match.start, end: res.match.end },
+          } });
+        } else if (res.status === "changed") {
+          H.updateHighlight(r.id, { series: seriesKey, check: "changed", archivedCopy,
+            current: { sha: edition.id, current: !!edition.current, version: edition.version || null } });
+        } else if (res.status === "current") {
+          H.updateHighlight(r.id, { series: seriesKey, check: "current", current: null });
+        }
+      }
+    } finally { quiet--; }
+  } finally { checking.delete(key); }
+  refreshStatus(H.loadHighlights().filter((r) => recs.some((old) => old.id === r.id)), { full: true });
 }
 /** Update status badges (and, after a check, pinpoints and citations) in place, without re-rendering. */
 function refreshStatus(recs, { full = false } = {}) {
@@ -517,6 +539,8 @@ async function boot() {
   if (TEST) await seedForTest().catch((e) => console.error("test seed failed", e));
   data = await fetchJson(paths.data).catch(() => null);
   render();
+  await document.fonts?.ready;
+  document.body.classList.remove("is-loading");
   focusHash();
   H.onHighlightsChange(() => { if (!quiet) render(); });
   await checkAll();

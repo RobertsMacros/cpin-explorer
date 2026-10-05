@@ -10,6 +10,7 @@
 // moves into the pinpoint; nothing else.
 
 import { ukParts } from "./uk-time.js";
+import { archiveName } from "./archive-source.js";
 
 export const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
   "September", "October", "November", "December"];
@@ -443,7 +444,7 @@ export function formatCitation(ctx, style = "oscola") {
   const month = citedMonth(ctx, p);
   const url = citationUrl(ctx.url, ctx.quote);
   const archivedNote = ctx.archived
-    ? `archived copy, Internet Archive${ctx.capturedAt ? `, captured ${longDate(ctx.capturedAt)}` : ""}`
+    ? `archived copy, ${archiveName({ archive_url: ctx.url })}${ctx.capturedAt ? `, captured ${longDate(ctx.capturedAt)}` : ""}`
     : "";
 
   if (style === "tribunal") {

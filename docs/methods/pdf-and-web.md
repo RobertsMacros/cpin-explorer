@@ -132,6 +132,40 @@ most of them in or beside tables. `./cpin compare` prints this breakdown on ever
 The check's five-word-phrase score is a test of the *extractor*. It cannot tell a real difference from an
 artefact and is never quoted as a difference between the publications; that is what `./cpin compare` is for.
 
+### Editions with no corresponding web publication
+
+Run `.venv/bin/python scripts/review_pdf_only.py` after extracting them. It checks every current, withdrawn
+and recovered PDF-only file, validates its original SHA256, and compares the derived reader text with the
+raw text read three ways and Poppler's independent reading. It requires `pdftotext`, retains page furniture
+in that second reading, and writes the per-PDF evidence to `data/pdf-only-review.json`.
+
+Before a cleanup, copy the existing HTML extractions to a separate directory and pass it as `--before DIR`.
+The audit then records before/after word counts, phrase coverage, and words removed outside the recorded
+furniture. Numeric raised marks with corresponding reconstructed source notes are normalised only for
+that token-loss check, with rebuilt marks recorded separately; the stored reading text is not changed by
+the audit. An unavailable snapshot is explicitly marked; it never becomes a claim of no change.
+
+`pdftext-6` records each omission's kind, text, page and coordinates in `omitted_furniture`. Contents,
+navigation, page numbers and short dated running headers are kept separate. Contents references can be
+page numbers, paragraph numbers or Word's broken bookmark messages. References in separate columns require
+an explicit contents title, and the actual body below a same-page contents table is retained. An inline
+“Back to Contents” suffix is removed only when the PDF links it internally. Source quotations, blank form
+fields, ordinary body wording and substantive footer notices remain content.
+
+Raw PDF runs spanning several physical lines are split by the characters' baseline coordinates before
+joining adjacent runs. This prevents a tall aggregate bounding box from mixing successive sentences.
+Vertical bounds use visible characters: malformed whitespace glyphs can otherwise stretch across several
+sentences. Rotated table labels remain whole rather than being split into horizontal baselines.
+Long prose inside a bordered table is retained as table text when an annex uses a different typeface;
+the font difference alone is not enough to call it a chart. Raised parenthesised footnote marks are
+normalised in the audit's no-mark and flowing source readings, while its raw page text stays untouched.
+
+Check every unsettled omission and inspect the largest changes and worst phrase-coverage cases against
+rendered source pages. Contents columns can have the same words in a different order: this is recorded
+separately, never as confirmation of publication wording. Phrase coverage is a diagnostic of the reader,
+not proof of an exact transcription. Footnote and bookmark warnings remain visible; errors in the PDF's own
+text layer can affect both programs. The original PDF and any stored web body must remain unchanged.
+
 ## Rule 5. Pictures carried over to a web edition
 
 The reader shows a PDF's picture beside the web text only when all of these hold; otherwise it stays in the PDF:

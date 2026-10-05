@@ -30,7 +30,7 @@ KIND_LABELS = [
     (r"country (?:policy|police) and information note|country and policy information note", "CPIN"),
     (r"country information note", "Country information note"),
     (r"country bulletin", "Country bulletin"),
-    (r"fact-finding mission", "Report of a fact-finding mission"),      # the Home Office's own term
+    (r"fact[- ]finding mission", "Report of a fact-finding mission"),      # the Home Office's own term
     (r"country information and guidance", "Country information and guidance (legacy)"),
 ]
 
@@ -288,7 +288,7 @@ def build_series(store: Store, country: str, name: str, key: str, members: list,
     pdf_editions = [{**p, "current": listed and not live and i == 0} for i, p in enumerate(pdf_editions)]
     current_pdf = pdf_editions[0] if pdf_editions and pdf_editions[0]["current"] else None
     months = [parse_note_title(e["title"], name).month or (e["date"] or "")[:7] for e in collapsed]
-    return {"country": country, "country_name": name, "key": key, "topic": latest.topic,
+    return {"country": country, "country_name": name, "key": key, "topic": latest.topic or kind_label(latest.kind),
             "kind": kind_label(latest.kind),
             "status": ("live" if live or current_pdf or any(e["current"] for e in collapsed)
                        else members[0][1].get("status", "archived") if members else "archived"),
@@ -437,8 +437,10 @@ def pdf_version(store: Store, name: str, attachment: dict, manifest: dict, page_
 def recovered_pdfs(manifest: dict, slug: str) -> list[tuple[str, dict]]:
     """The PDFs recovered from the Internet Archive for a country (recover.py): [(the address GOV.UK listed
     the file at, its manifest entry)], oldest capture first. No country page lists them now."""
-    return sorted(((url, entry) for url, entry in manifest.items()
-                   if entry.get("source") == "wayback" and entry.get("country") == slug),
+    return sorted(((url, {**entry, **record}) for url, entry in manifest.items()
+                   for record in (entry, *entry.get("previous", []))
+                   if record.get("source") in {"wayback", "national-archives", "repository"}
+                   and record.get("country", entry.get("country")) == slug),
                   key=lambda item: (item[1].get("captured_at") or "", item[0]))
 
 
@@ -446,6 +448,12 @@ def recovered_pdf_files(store: Store):
     """(country, title, url) of every recovered PDF that is an edition with no web version held: the ones
     to read (./cpin pdftext) and to show. A PDF recovered beside a web version of the same report and
     month is left: GOV.UK's own text of that edition is held."""
+    for slug, title, url, _ in recovered_pdf_jobs(store):
+        yield slug, title, url
+
+
+def recovered_pdf_jobs(store: Store):
+    """As recovered_pdf_files, with the actual manifest record: one URL can have several files."""
     manifest, countries = store.load_pdf_manifest(), store.load_state()["countries"]
     for slug in sorted(countries):
         name = countries[slug]["name"]
@@ -457,11 +465,11 @@ def recovered_pdf_files(store: Store):
         for url, entry in recovered_pdfs(manifest, slug):
             parsed = parse_note_title(entry.get("title") or "", name)
             if not parsed.month or (series_key(parsed), parsed.month) not in web:
-                yield slug, (entry.get("title") or "").strip(), url
+                yield slug, (entry.get("title") or "").strip(), url, entry
 
 
 def recovered_pdf_version(store: Store, name: str, entry: dict) -> dict | None:
-    """An edition GOV.UK no longer lists, recovered as a PDF from the Internet Archive, as an edition of its
+    """An edition GOV.UK no longer lists, recovered as a PDF from an archive or repository, as an edition of its
     report: `source: pdf` (its body is the text extracted from the PDF, as in `pdf_version`) and an archive
     copy besides, with the Archive's address (`archive_url`, also its `pdf_url`: GOV.UK's own address for
     the file now leads to a later edition, or nowhere) and the capture time. It is never the current
@@ -480,6 +488,7 @@ def recovered_pdf_version(store: Store, name: str, entry: dict) -> dict | None:
         "listed": False,
         "govuk_url": None,
         "archive_url": entry.get("archive_url"),
+        "archive_provider": entry.get("archive_provider", "Internet Archive"),
         "pdf_url": entry.get("archive_url"),
         "listed_from": entry.get("first_listed"),
         "listed_until": entry.get("last_listed"),
@@ -526,6 +535,7 @@ def report_summary(country: str, series: dict, pdf_url: str | None) -> dict:
         "topic": series["topic"],
         "kind": series["kind"],
         "status": series["status"],
+        "withdrawn_at": series.get("withdrawn_at"),
         "left_govuk": series.get("left_govuk"),                 # when it was found gone, if that happened on our watch
         "pdf_differs": ({"words": current["pdf_compare"]["wording"]["web_words"] + current["pdf_compare"]["wording"]["pdf_words"],
                          "flagged": current["pdf_compare"]["flagged"]} if current.get("pdf_compare") else None),
@@ -594,6 +604,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
         pairs = pair_pdfs(publication) if publication else {}
         paired_pdfs = set(pairs.values())
         dropped = known.get("dropped_from_collection")        # when the collection was found not to list this page
+        withdrawn = known.get("withdrawn_at")
         notes = []
         live_by_url = {note_slug(a["url"]): pairs.get(a["url"]) for a in html_attachments(publication)}
         history = [{"date": to_utc(h.get("public_timestamp")), "note": " ".join((h.get("note") or "").split())}
@@ -632,6 +643,8 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
                                   pdf_compares=[(url, held) for note, _ in members
                                                 if (url := live_by_url.get(note)) and url in manifest
                                                 and (held := webpdf.load_comparison(store, manifest[url]["sha256"]))])
+            if withdrawn:
+                series.update(status="removed", withdrawn_at=withdrawn)
             if series_out:                       # every report, so every report has a timeline
                 path = Path(series_out) / series_path(slug, key)
                 path.parent.mkdir(parents=True, exist_ok=True)
@@ -688,6 +701,7 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
             "caveat": cfg.get("caveat"),
             "updated": to_utc(known.get("public_updated_at")),
             "dropped_from_collection": dropped or None,
+            "withdrawn_at": withdrawn,
             "archived_pdf_editions": archived_pdfs,
             "govuk_url": config.GOVUK + known["base_path"],
             "reports": reports,
@@ -711,9 +725,10 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
         "source": config.GOVUK + config.COLLECTION_PATH,
         "licence": "Contains public sector information licensed under the Open Government Licence v3.0.",
         "totals": {
-            "countries": len(countries),
+            "countries": sum(not c["dropped_from_collection"] for c in countries),
+            "former_countries": sum(bool(c["dropped_from_collection"]) for c in countries),
             "notes": len(live_notes),
-            "pdfs": len(manifest),
+            "pdfs": sum(e.get("country") in state["countries"] for e in manifest.values()),
             # Editions held only as an archive copy: of a web page (counted on its note), or of a PDF.
             "archived_editions": (sum(n["archived_editions"] for c in countries for n in c["notes"])
                                   + sum(c["archived_pdf_editions"] for c in countries)),
@@ -732,6 +747,12 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
 
 def export_dashboard(store: Store, out: Path, countries_config_path: Path = COUNTRIES_CONFIG,
                      series_out: Path | None = None) -> dict:
+    # The Home Office's own account, kept separately from country reports and their counts.
+    about = store.root / "about" / "text.json"
+    if series_out and about.exists():
+        target = Path(series_out).parent / "about.json"
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(about.read_text("utf-8"), "utf-8")
     data = build_dashboard(store, json.loads(Path(countries_config_path).read_text("utf-8")), series_out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", "utf-8")

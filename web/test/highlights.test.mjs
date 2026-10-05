@@ -209,3 +209,25 @@ test("a highlight from an edition read from a PDF is filed under that edition's 
   assert.equal(JSON.parse(store.getItem(STORAGE_KEY))[1].note, health.id);
   useStorage(null);
 });
+
+test("a legacy still record stays pinned; moving requires a choice and carries the new pinpoint and publication", async () => {
+  const { citeCurrent, stillLine, stillCurrent } = await import("../../prototypes/shared/highlights.js");
+  const r = { title: "Saved title", version: "2.0", month: "2021-07", para: "9.1.1", section: "Old section", source: "web", quote: "The same words.",
+    check: "still", archivedCopy: { url: "https://web.archive.org/web/20220101000000/https://www.gov.uk/old", capturedAt: "2022-01-01T00:00:00Z" },
+    current: { sha: "b".repeat(64), title: "New title", version: "7.0", month: "2026-07", para: "12.1.2", section: "New section", source: "pdf", note: "pdf-bbbb", url: "https://example.org/new.pdf", prefix: "Before", suffix: "After", lead: null, pos: { start: 30, end: 45 } } };
+  assert.equal(citeContext(r).version, "2.0");
+  assert.equal(citeContext(r).para, "9.1.1");
+  assert.equal(citeContext(r).url, r.archivedCopy.url);
+  assert.equal(stillLine(r), "Still in the current edition (v7.0, para 12.1.2)");
+  const patch = citeCurrent(r);
+  assert.equal(r.version, "2.0", "helper cannot change the saved record by itself");
+  const moved = { ...r, ...patch };
+  assert.equal(citeContext(moved).version, "7.0");
+  assert.equal(citeContext(moved).source, "pdf");
+  assert.equal(moved.note, "pdf-bbbb");
+  assert.equal(moved.prefix, "Before");
+  assert.equal(moved.archivedCopy, null);
+  const withdrawn = { ...r, current: { ...r.current, current: false } };
+  assert.equal(stillCurrent(withdrawn), false);
+  assert.equal(citeCurrent(withdrawn), null, "a last held edition must not be offered as current");
+});

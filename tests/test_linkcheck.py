@@ -214,3 +214,47 @@ def test_a_copy_sought_for_another_date_is_looked_up_again(store):
     again = FakeWeb()
     check_links(store, transport=httpx.MockTransport(again), sleep=lambda s: None, log=lambda *a: None)
     assert not [u for m, u in again.requests if "archive.org" in u], "and not a third time"
+
+@pytest.mark.parametrize('code', [403, 429])
+def test_access_refusals_are_not_retried_with_get(code):
+    from cpin.linkcheck import SiteChecker
+    requests = []
+    def respond(request):
+        requests.append((request.method, request.url.path))
+        return httpx.Response(404 if request.url.path == '/robots.txt' else code)
+    with httpx.Client(transport=httpx.MockTransport(respond)) as client:
+        assert SiteChecker(client, sleep=lambda _: None).run(['https://refused.example/doc'])['https://refused.example/doc']['status'] == 'restricted'
+    assert requests == [('GET', '/robots.txt'), ('HEAD', '/doc')]
+
+
+def test_redirect_destination_is_checked_against_its_own_robots():
+    from cpin.linkcheck import SiteChecker
+    requests = []
+    def respond(request):
+        requests.append(str(request.url))
+        if request.url.host == 'target.example':
+            assert request.url.path == '/robots.txt', 'a forbidden redirect must not fetch its page'
+            return httpx.Response(200, text='User-agent: *\nDisallow: /')
+        if request.url.path == '/robots.txt': return httpx.Response(404)
+        return httpx.Response(301, headers={'location': 'https://target.example/private'})
+    with httpx.Client(transport=httpx.MockTransport(respond)) as client:
+        result = SiteChecker(client, sleep=lambda _: None).run(['https://start.example/doc'])
+    assert result['https://start.example/doc']['status'] == 'robots'
+    assert 'https://target.example/robots.txt' in requests
+
+
+@pytest.mark.parametrize('closest', [[], {'available': True, 'status': '200'},
+                                      {'available': True, 'timestamp': 'bad', 'url': 'https://example.org'}])
+def test_a_malformed_archive_answer_is_a_failure_not_an_absent_capture(closest):
+    from cpin.http import PoliteClient
+    from cpin.linkcheck import archived_copy
+    def response(request):
+        if request.url.path == '/robots.txt':
+            return httpx.Response(404)
+        return httpx.Response(200, json={'archived_snapshots': {'closest': closest}})
+    with PoliteClient(transport=httpx.MockTransport(response), sleep=lambda _: None) as client:
+        if closest == []:  # An empty result has no capture to offer.
+            assert archived_copy(client, 'https://example.org/note', '2026-10-04') is None
+        else:
+            with pytest.raises(RuntimeError, match='archive lookup failed'):
+                archived_copy(client, 'https://example.org/note', '2026-10-04')

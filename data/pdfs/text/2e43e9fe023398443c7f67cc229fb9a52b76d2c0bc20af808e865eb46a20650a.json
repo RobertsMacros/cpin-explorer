@@ -1,5 +1,5 @@
 {
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "pages": 106,
  "body_size": 12.0,
  "body_font": "arial",
@@ -14,9 +14,3179 @@
   "no bookmarks: headings found by type size and numbering",
   "footnotes with no mark found in the text: 1"
  ],
+ "omitted_furniture": [
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    172.28,
+    526.76,
+    185.66
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    325.07,
+    526.76,
+    338.45
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    436.57,
+    526.76,
+    449.95
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    657.52,
+    526.76,
+    670.9
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    434.65,
+    526.76,
+    448.03
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    401.05,
+    526.76,
+    414.43
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    296.63,
+    526.76,
+    310.01
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    353.63,
+    526.76,
+    367.01
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    537.25,
+    526.76,
+    550.63
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    170.0,
+    526.76,
+    183.38
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    434.29,
+    526.76,
+    447.67
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    480.25,
+    490.88,
+    493.63
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    752.7,
+    490.88,
+    766.08
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    312.23,
+    526.76,
+    325.61
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    597.28,
+    490.88,
+    610.66
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    470.05,
+    490.88,
+    483.43
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    314.63,
+    490.88,
+    328.01
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    436.45,
+    526.76,
+    449.83
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    75.2,
+    490.88,
+    88.58
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    499.45,
+    526.76,
+    512.83
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    719.08,
+    526.76,
+    732.46
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    189.8,
+    526.76,
+    203.18
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    387.23,
+    526.76,
+    400.61
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    627.88,
+    526.76,
+    641.26
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    177.8,
+    526.76,
+    191.18
+   ]
+  },
+  {
+   "page": 73,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    511.45,
+    526.76,
+    524.83
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    687.28,
+    526.76,
+    700.66
+   ]
+  },
+  {
+   "page": 77,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    747.06,
+    490.88,
+    760.44
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    677.68,
+    526.76,
+    691.06
+   ]
+  },
+  {
+   "page": 81,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    748.5,
+    490.88,
+    761.88
+   ]
+  },
+  {
+   "page": 82,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    576.88,
+    526.76,
+    590.26
+   ]
+  },
+  {
+   "page": 86,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    688.72,
+    490.88,
+    702.1
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    326.03,
+    526.76,
+    339.41
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    752.94,
+    490.88,
+    766.32
+   ]
+  },
+  {
+   "page": 92,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    662.8,
+    526.76,
+    676.18
+   ]
+  },
+  {
+   "page": 94,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    618.28,
+    490.88,
+    631.66
+   ]
+  },
+  {
+   "page": 95,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    639.88,
+    490.88,
+    653.26
+   ]
+  },
+  {
+   "page": 98,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    108.8,
+    526.76,
+    122.18
+   ]
+  },
+  {
+   "page": 99,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    108.8,
+    490.88,
+    122.18
+   ]
+  },
+  {
+   "page": 99,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    653.2,
+    526.76,
+    666.58
+   ]
+  },
+  {
+   "page": 100,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    479.17,
+    490.88,
+    492.55
+   ]
+  },
+  {
+   "page": 102,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    718.12,
+    490.88,
+    731.5
+   ]
+  },
+  {
+   "page": 105,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    233.0,
+    490.88,
+    246.38
+   ]
+  },
+  {
+   "page": 106,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.07,
+    754.26,
+    490.88,
+    767.64
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    135.45,
+    183.3,
+    164.49
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Map ............................................................................................................................ 6",
+   "bbox": [
+    72.02,
+    170.84,
+    525.44,
+    184.22
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Introduction .............................................................................................................. 7",
+   "bbox": [
+    72.02,
+    189.68,
+    525.44,
+    203.06
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Background ............................................................................................................ 7",
+   "bbox": [
+    84.02,
+    208.52,
+    525.44,
+    221.9
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Purpose of the mission ........................................................................................... 7",
+   "bbox": [
+    84.02,
+    227.24,
+    525.44,
+    240.62
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Methodology ........................................................................................................... 7",
+   "bbox": [
+    84.02,
+    246.11,
+    525.44,
+    259.49
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Identification of sources ................................................................................... 7",
+   "bbox": [
+    107.42,
+    264.95,
+    525.44,
+    278.33
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Arranging and conducting interviews ............................................................... 8",
+   "bbox": [
+    107.42,
+    283.67,
+    525.44,
+    297.05
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Notes of interviews/meetings ........................................................................... 8",
+   "bbox": [
+    107.42,
+    302.51,
+    525.44,
+    315.89
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Structure of this report ..................................................................................... 8",
+   "bbox": [
+    107.42,
+    321.35,
+    525.44,
+    334.73
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Information provided by domestic non-governmental organisations",
+   "bbox": [
+    72.02,
+    340.07,
+    458.8,
+    353.45
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "(NGOs)/Human rights organisations and individuals ........................................... 9",
+   "bbox": [
+    72.02,
+    353.87,
+    525.44,
+    367.25
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1. Meeting with an official from Rights Now, a non-governmental organisation",
+   "bbox": [
+    84.02,
+    372.71,
+    506.43,
+    386.09
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "(NGO), 11 July 2016 ........................................................................................ 9",
+   "bbox": [
+    107.42,
+    386.51,
+    525.44,
+    399.89
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.1 The role of Rights Now in Sri Lanka ......................................................... 9",
+   "bbox": [
+    107.42,
+    405.37,
+    525.44,
+    418.75
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.2 Exit/entry procedures ............................................................................... 9",
+   "bbox": [
+    107.42,
+    424.09,
+    525.44,
+    437.47
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.3 Real or perceived association with LTTE ............................................... 11",
+   "bbox": [
+    107.42,
+    442.93,
+    525.44,
+    456.31
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.4 Torture methods ..................................................................................... 11",
+   "bbox": [
+    107.42,
+    461.77,
+    525.44,
+    475.15
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.5 Disappearances ..................................................................................... 11",
+   "bbox": [
+    107.42,
+    480.49,
+    525.44,
+    493.87
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.6 Conviction of people after the war .......................................................... 12",
+   "bbox": [
+    107.42,
+    499.33,
+    525.44,
+    512.71
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2. Meeting with the Tamil National Alliance (TNA), 11 July 2016 ...................... 12",
+   "bbox": [
+    84.02,
+    518.17,
+    525.44,
+    531.55
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3. Meeting with a human rights organisation, Jaffna, 13 July 2016 ................... 14",
+   "bbox": [
+    84.02,
+    536.89,
+    525.44,
+    550.27
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3.2 Questions put to the organisation ........................................................... 14",
+   "bbox": [
+    107.42,
+    555.73,
+    525.44,
+    569.11
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4. Meeting with Women In Need (WIN), Jaffna, 13 July 2016 ........................... 15",
+   "bbox": [
+    84.02,
+    574.6,
+    525.44,
+    587.98
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4.1 Women In Need’s role in Sri Lanka ........................................................ 16",
+   "bbox": [
+    107.42,
+    593.32,
+    525.44,
+    606.7
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4.2 Questions put forward to WIN ................................................................ 16",
+   "bbox": [
+    107.42,
+    612.16,
+    525.44,
+    625.54
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5. Meeting with the Tamil Civil Society Forum, 13 July 2016 ............................. 18",
+   "bbox": [
+    84.02,
+    631.0,
+    525.44,
+    644.38
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5.1 The role of the Tamil Civil Society in Sri Lanka ...................................... 18",
+   "bbox": [
+    107.42,
+    649.72,
+    525.44,
+    663.1
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5.2 Questions put forward to the Tamil Civil Society .................................... 19",
+   "bbox": [
+    107.42,
+    668.56,
+    525.44,
+    681.94
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "6. Meeting with the Jaffna Press Club, 14 July 2016 ......................................... 20",
+   "bbox": [
+    84.02,
+    687.28,
+    525.44,
+    700.66
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "7. Meeting with Jaffna Social Action Centre (JSAC), 14 July 2016 .................... 22",
+   "bbox": [
+    84.02,
+    706.12,
+    525.44,
+    719.5
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "7.1 The role of JSAC in Sri Lanka ................................................................ 22",
+   "bbox": [
+    107.42,
+    724.98,
+    525.44,
+    738.36
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "7.2 Questions put forward to JSAC .............................................................. 22",
+   "bbox": [
+    107.42,
+    743.7,
+    525.44,
+    757.08
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Meeting with Fr. Elil Rajendram SJ 14 July 2016........................................... 25",
+   "bbox": [
+    84.02,
+    75.2,
+    525.44,
+    88.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.2 LGBT issues ........................................................................................... 28",
+   "bbox": [
+    107.42,
+    94.04,
+    525.44,
+    107.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9. Meeting with a women’s organisation in Killonochchi, 15 July 2016 .............. 28",
+   "bbox": [
+    84.02,
+    112.76,
+    525.44,
+    126.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.2 Other issues: .......................................................................................... 30",
+   "bbox": [
+    107.42,
+    131.6,
+    525.44,
+    144.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10. Meeting with Bishop Emanuel, Trincomalee, 16 July 2016 ............................ 31",
+   "bbox": [
+    84.02,
+    150.44,
+    525.44,
+    163.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.1 Bishop Emanuel and CARITAS [INTERNATIONALIS] ........................... 31",
+   "bbox": [
+    107.42,
+    169.16,
+    525.44,
+    182.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.2 Internally displaced persons (IDPs) ........................................................ 31",
+   "bbox": [
+    107.42,
+    188.0,
+    525.44,
+    201.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.3 Human rights .......................................................................................... 32",
+   "bbox": [
+    107.42,
+    206.84,
+    525.44,
+    220.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.4 Arrests .................................................................................................... 32",
+   "bbox": [
+    107.42,
+    225.56,
+    525.44,
+    238.94
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.5 Police...................................................................................................... 33",
+   "bbox": [
+    107.42,
+    244.43,
+    525.44,
+    257.81
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.6 Violence against women......................................................................... 33",
+   "bbox": [
+    107.42,
+    263.27,
+    525.44,
+    276.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.7 Land issues ............................................................................................ 34",
+   "bbox": [
+    107.42,
+    281.99,
+    525.44,
+    295.37
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11. Meeting with former, Liberation Tigers of Tamil Eelam (LTTE) cadres, 18 July",
+   "bbox": [
+    84.02,
+    300.83,
+    520.08,
+    314.21
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2016 ............................................................................................................... 34",
+   "bbox": [
+    107.42,
+    314.63,
+    525.44,
+    328.01
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11.1 Interview with person A (Male) ............................................................... 34",
+   "bbox": [
+    107.42,
+    333.47,
+    525.44,
+    346.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11.2 Interviews with persons B and C (husband and wife) ............................. 35",
+   "bbox": [
+    107.42,
+    352.19,
+    525.44,
+    365.57
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11.3 Interview with person D (male) ............................................................... 36",
+   "bbox": [
+    107.42,
+    371.03,
+    525.44,
+    384.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11.4 Interview with person E (male) ............................................................... 37",
+   "bbox": [
+    107.42,
+    389.75,
+    525.44,
+    403.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11.5 Interviews with persons F and G (female) .............................................. 37",
+   "bbox": [
+    107.42,
+    408.61,
+    525.44,
+    421.99
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "12. Meeting with two representatives (‘A’ & ‘B’) from two international media",
+   "bbox": [
+    84.02,
+    427.45,
+    492.06,
+    440.83
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "organisations, 19 July 2016 ........................................................................... 38",
+   "bbox": [
+    107.42,
+    441.25,
+    525.44,
+    454.63
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "13. Meeting with two lawyers, 21 July 2016 ......................................................... 40",
+   "bbox": [
+    84.02,
+    459.97,
+    525.44,
+    473.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "14. Meeting with a peacebuilding and human rights organisation, Colombo, 21",
+   "bbox": [
+    84.02,
+    478.81,
+    505.16,
+    492.19
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "July 2016 ....................................................................................................... 43",
+   "bbox": [
+    107.42,
+    492.61,
+    525.44,
+    505.99
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "14.1 Role of the peacebuilding and human rights organisation in Sri Lanka .. 43",
+   "bbox": [
+    107.42,
+    511.45,
+    525.44,
+    524.83
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "14.2 General questions .................................................................................. 45",
+   "bbox": [
+    107.42,
+    530.17,
+    525.44,
+    543.55
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "15. Meeting with human rights organisation, 22 July 2016 .................................. 48",
+   "bbox": [
+    84.02,
+    549.01,
+    525.44,
+    562.39
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "16. Meeting with Equal Ground (EG), 22 July 2016 ............................................. 51",
+   "bbox": [
+    84.02,
+    567.88,
+    525.44,
+    581.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "17. Meeting with Women in Need (WIN), Colombo, 22 July 2016 ....................... 56",
+   "bbox": [
+    84.02,
+    586.6,
+    525.44,
+    599.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Information provided by international non-governmental organisations",
+   "bbox": [
+    72.02,
+    605.44,
+    478.12,
+    618.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "(INGOs) .................................................................................................................... 59",
+   "bbox": [
+    72.02,
+    619.24,
+    525.44,
+    632.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18. Meeting with an INGO, Colombo, 12 July 2016 ............................................. 59",
+   "bbox": [
+    84.02,
+    638.08,
+    525.44,
+    651.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18.2 Returnees from India .............................................................................. 59",
+   "bbox": [
+    107.42,
+    656.8,
+    525.44,
+    670.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18.3 Internally displaced persons (IDPs) ........................................................ 60",
+   "bbox": [
+    107.42,
+    675.64,
+    525.44,
+    689.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18.4 Female Headed Households (FHHs) - Single women ............................ 61",
+   "bbox": [
+    107.42,
+    694.48,
+    525.44,
+    707.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18.5 Lesbian, Gay, Bisexual, Transgender (LGBT) ........................................ 61",
+   "bbox": [
+    107.42,
+    713.2,
+    525.44,
+    726.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "18.6 General information ................................................................................ 62",
+   "bbox": [
+    107.42,
+    732.06,
+    525.44,
+    745.44
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "19. Meeting with an INGO, Jaffna, 13 July 2016 ................................................. 62",
+   "bbox": [
+    84.02,
+    750.9,
+    525.44,
+    764.28
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19.2 Land issues ............................................................................................ 62",
+   "bbox": [
+    107.42,
+    75.2,
+    525.44,
+    88.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19.3 Female Headed Households .................................................................. 63",
+   "bbox": [
+    107.42,
+    94.04,
+    525.44,
+    107.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19.4 Lesbian, gay, bisexual, and transgender and/or intersex (LGBTI) .......... 63",
+   "bbox": [
+    107.42,
+    112.76,
+    525.44,
+    126.14
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19.5 Healthcare .............................................................................................. 63",
+   "bbox": [
+    107.42,
+    131.6,
+    525.44,
+    144.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19.6 General information ................................................................................ 64",
+   "bbox": [
+    107.42,
+    150.44,
+    525.44,
+    163.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "20. Meeting with the Centre for Policy Alternatives (CPA), Colombo, 18 July 2016",
+   "bbox": [
+    84.02,
+    169.16,
+    518.11,
+    182.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "....................................................................................................................... 64",
+   "bbox": [
+    107.42,
+    182.96,
+    525.44,
+    196.34
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "20.1 The role of the CPA in Sri Lanka ............................................................ 64",
+   "bbox": [
+    107.42,
+    201.8,
+    525.44,
+    215.18
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "20.2 Questions put forward to the CPA .......................................................... 64",
+   "bbox": [
+    107.42,
+    220.64,
+    525.44,
+    234.02
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "21. Meeting with the International Organization for Migration (IOM), 20 July 2016",
+   "bbox": [
+    84.02,
+    239.39,
+    514.1,
+    252.77
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "....................................................................................................................... 66",
+   "bbox": [
+    107.42,
+    253.19,
+    525.44,
+    266.57
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "21.2 Returns ................................................................................................... 68",
+   "bbox": [
+    107.42,
+    272.03,
+    525.44,
+    285.41
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22. Meeting with a UN Senior Human Rights Advisor in Sri Lanka (A UN",
+   "bbox": [
+    84.02,
+    290.87,
+    472.11,
+    304.25
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "organisation), 21 July 2016 ............................................................................ 69",
+   "bbox": [
+    107.42,
+    304.67,
+    525.44,
+    318.05
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.1 The UN organisation’s role in Sri Lanka ................................................. 69",
+   "bbox": [
+    107.42,
+    323.39,
+    525.44,
+    336.77
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.2 Prevention of Terrorism Act (PTA) ......................................................... 70",
+   "bbox": [
+    107.42,
+    342.23,
+    525.44,
+    355.61
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.3 Excessive force/Torture .......................................................................... 71",
+   "bbox": [
+    107.42,
+    360.95,
+    525.44,
+    374.33
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.4 Sexual exploitation ................................................................................. 71",
+   "bbox": [
+    107.42,
+    379.79,
+    525.44,
+    393.17
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.5 General information ................................................................................ 72",
+   "bbox": [
+    107.42,
+    398.65,
+    525.44,
+    412.03
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "22.6 Corruption ............................................................................................... 73",
+   "bbox": [
+    107.42,
+    417.37,
+    525.44,
+    430.75
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "23. Meeting with the Centre for Human Rights and Research (CHRR), 22 July",
+   "bbox": [
+    84.02,
+    436.21,
+    502.76,
+    449.59
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2016 ............................................................................................................... 73",
+   "bbox": [
+    107.42,
+    450.01,
+    525.44,
+    463.39
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "23.2 Corruption ............................................................................................... 75",
+   "bbox": [
+    107.42,
+    468.85,
+    525.44,
+    482.23
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Information provided by governmental departments and organisations .......... 76",
+   "bbox": [
+    72.02,
+    487.57,
+    525.44,
+    500.95
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "24. Meeting with Witness Protection Authority, 11 July 2016 .............................. 76",
+   "bbox": [
+    84.02,
+    506.41,
+    525.44,
+    519.79
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "24.2 Real or perceived association with the LTTE ......................................... 76",
+   "bbox": [
+    107.42,
+    525.25,
+    525.44,
+    538.63
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "24.3 General comments ................................................................................. 77",
+   "bbox": [
+    107.42,
+    543.97,
+    525.44,
+    557.35
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "25. Meeting with an official from the National Police Commission (NPC), 12 July",
+   "bbox": [
+    84.02,
+    562.84,
+    513.31,
+    576.22
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2016 ............................................................................................................... 78",
+   "bbox": [
+    107.42,
+    576.64,
+    525.44,
+    590.02
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "25.1 The role of the National Police Commission (NPC) in Sri Lanka ............ 78",
+   "bbox": [
+    107.42,
+    595.48,
+    525.44,
+    608.86
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "25.2 Police training: ........................................................................................ 79",
+   "bbox": [
+    107.42,
+    614.2,
+    525.44,
+    627.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "26. Meeting with Security Forces (SF) Commander for Jaffna, 13 July 2016 ...... 80",
+   "bbox": [
+    84.02,
+    633.04,
+    525.44,
+    646.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "26.1 Role of the Security Forces in Jaffna ...................................................... 80",
+   "bbox": [
+    107.42,
+    651.88,
+    525.44,
+    665.26
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "26.2 The land issue ........................................................................................ 80",
+   "bbox": [
+    107.42,
+    670.6,
+    525.44,
+    683.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "26.3 Ex-LTTE cadres ..................................................................................... 82",
+   "bbox": [
+    107.42,
+    689.44,
+    525.44,
+    702.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "27. Meeting with Ministry of Health and Indigenous Medicine, Social Services and",
+   "bbox": [
+    84.02,
+    708.28,
+    522.62,
+    721.66
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Rehabilitation, Probation and Childcare Services and Women’s Affairs, 14",
+   "bbox": [
+    107.42,
+    722.08,
+    502.34,
+    735.46
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "July 2016 ....................................................................................................... 82",
+   "bbox": [
+    107.42,
+    735.9,
+    525.44,
+    749.28
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "28.1 The role of the Security Forces, Kilinochchi ........................................... 87",
+   "bbox": [
+    107.42,
+    75.2,
+    525.44,
+    88.58
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "28.2 Questions put forward to the Security Forces Commander .................... 88",
+   "bbox": [
+    107.42,
+    94.04,
+    525.44,
+    107.42
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "28.3 Community involvement ......................................................................... 88",
+   "bbox": [
+    107.42,
+    112.76,
+    525.44,
+    126.14
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "29. Visit to the Rehabilitation Centre, Vavuniya, 15 July 2016 ............................. 89",
+   "bbox": [
+    84.02,
+    131.6,
+    525.44,
+    144.98
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "30. Meeting with the Honourable Austin Fernando, Governor of the Eastern",
+   "bbox": [
+    84.02,
+    150.44,
+    489.4,
+    163.82
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Province, 19 July 2016 .................................................................................. 92",
+   "bbox": [
+    107.42,
+    164.24,
+    525.44,
+    177.62
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "30.2 Fear of return to Sri Lanka for those with previous LTTE connections. .. 92",
+   "bbox": [
+    107.42,
+    182.96,
+    525.44,
+    196.34
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31. Meeting with Naseer Ahamed, Chief Minister of the Eastern Province, 19 July",
+   "bbox": [
+    84.02,
+    201.8,
+    520.62,
+    215.18
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "2016 ............................................................................................................... 93",
+   "bbox": [
+    107.42,
+    215.6,
+    525.44,
+    228.98
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31.1 Stability ................................................................................................... 93",
+   "bbox": [
+    107.42,
+    234.47,
+    525.44,
+    247.85
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31.2 Security .................................................................................................. 93",
+   "bbox": [
+    107.42,
+    253.19,
+    525.44,
+    266.57
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31.3 Prospering .............................................................................................. 93",
+   "bbox": [
+    107.42,
+    272.03,
+    525.44,
+    285.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31.4 Single women headed households ......................................................... 93",
+   "bbox": [
+    107.42,
+    290.87,
+    525.44,
+    304.25
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "31.5 Land issues ............................................................................................ 94",
+   "bbox": [
+    107.42,
+    309.59,
+    525.44,
+    322.97
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "32. Meeting with Deputy Foreign Minister, 20 July 2016 ..................................... 94",
+   "bbox": [
+    84.02,
+    328.43,
+    525.44,
+    341.81
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "33. Meeting with Commissioner of Prison (Intelligence and Security), Prison",
+   "bbox": [
+    84.02,
+    347.15,
+    491.43,
+    360.53
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Headquarters, Colombo, 20 July 2016 .......................................................... 96",
+   "bbox": [
+    107.42,
+    360.95,
+    525.44,
+    374.33
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "34. Meeting with a source at Bandaranaike International Airport, 21 July 2016 .. 98",
+   "bbox": [
+    84.02,
+    379.79,
+    525.44,
+    393.17
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "35. Meeting with Bureau of the Commissioner General of Rehabilitation, 22 July",
+   "bbox": [
+    84.02,
+    398.65,
+    513.43,
+    412.03
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "2016 ............................................................................................................... 99",
+   "bbox": [
+    107.42,
+    412.45,
+    525.44,
+    425.83
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "35.2 Rehabilitation of child cadres .................................................................. 99",
+   "bbox": [
+    107.42,
+    431.17,
+    525.44,
+    444.55
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "36. Meeting between representatives from the British High Commission and Hon.",
+   "bbox": [
+    84.02,
+    450.01,
+    520.83,
+    463.39
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Minister Swaminathan, of the Prison reform, Rehabilitation, Resettlement and",
+   "bbox": [
+    107.42,
+    463.81,
+    520.81,
+    477.19
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Hindu religious affairs, on 15 December 2016. (Following the Fact-Finding",
+   "bbox": [
+    107.42,
+    477.61,
+    502.97,
+    490.99
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Mission). ...................................................................................................... 100",
+   "bbox": [
+    107.42,
+    491.41,
+    525.44,
+    504.79
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "37. Welikada (Colombo) prison in pictures ........................................................ 101",
+   "bbox": [
+    84.02,
+    510.25,
+    525.44,
+    523.63
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "37.1 Inside typical prison cells ...................................................................... 101",
+   "bbox": [
+    107.42,
+    528.97,
+    525.44,
+    542.35
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "38. General pictures .......................................................................................... 102",
+   "bbox": [
+    84.02,
+    547.81,
+    525.44,
+    561.19
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Annex A: Terms of reference .............................................................................. 103",
+   "bbox": [
+    72.02,
+    566.68,
+    525.44,
+    580.06
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Annex B: List of sources ..................................................................................... 106",
+   "bbox": [
+    72.02,
+    585.4,
+    525.44,
+    598.78
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 106",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 44 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 45 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 46 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 47 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 48 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 49 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 50 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 51 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 52 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 53 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 54 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 55 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 56 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "page number",
+   "text": "Page 57 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "page number",
+   "text": "Page 58 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "page number",
+   "text": "Page 59 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "page number",
+   "text": "Page 60 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 61,
+   "kind": "page number",
+   "text": "Page 61 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "page number",
+   "text": "Page 62 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "page number",
+   "text": "Page 63 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "page number",
+   "text": "Page 64 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "page number",
+   "text": "Page 65 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "page number",
+   "text": "Page 66 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 67,
+   "kind": "page number",
+   "text": "Page 67 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 68,
+   "kind": "page number",
+   "text": "Page 68 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "page number",
+   "text": "Page 69 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "page number",
+   "text": "Page 70 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "page number",
+   "text": "Page 71 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 72,
+   "kind": "page number",
+   "text": "Page 72 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 73,
+   "kind": "page number",
+   "text": "Page 73 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 74,
+   "kind": "page number",
+   "text": "Page 74 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "page number",
+   "text": "Page 75 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 76,
+   "kind": "page number",
+   "text": "Page 76 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 77,
+   "kind": "page number",
+   "text": "Page 77 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 78,
+   "kind": "page number",
+   "text": "Page 78 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "page number",
+   "text": "Page 79 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 80,
+   "kind": "page number",
+   "text": "Page 80 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 81,
+   "kind": "page number",
+   "text": "Page 81 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 82,
+   "kind": "page number",
+   "text": "Page 82 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 83,
+   "kind": "page number",
+   "text": "Page 83 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 84,
+   "kind": "page number",
+   "text": "Page 84 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 85,
+   "kind": "page number",
+   "text": "Page 85 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 86,
+   "kind": "page number",
+   "text": "Page 86 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 87,
+   "kind": "page number",
+   "text": "Page 87 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 88,
+   "kind": "page number",
+   "text": "Page 88 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "page number",
+   "text": "Page 89 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 90,
+   "kind": "page number",
+   "text": "Page 90 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "page number",
+   "text": "Page 91 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 92,
+   "kind": "page number",
+   "text": "Page 92 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 93,
+   "kind": "page number",
+   "text": "Page 93 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 94,
+   "kind": "page number",
+   "text": "Page 94 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 95,
+   "kind": "page number",
+   "text": "Page 95 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 96,
+   "kind": "page number",
+   "text": "Page 96 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 97,
+   "kind": "page number",
+   "text": "Page 97 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 98,
+   "kind": "page number",
+   "text": "Page 98 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 99,
+   "kind": "page number",
+   "text": "Page 99 of 106",
+   "bbox": [
+    270.41,
+    794.44,
+    328.01,
+    803.41
+   ]
+  },
+  {
+   "page": 100,
+   "kind": "page number",
+   "text": "Page 100 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 101,
+   "kind": "page number",
+   "text": "Page 101 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 102,
+   "kind": "page number",
+   "text": "Page 102 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 103,
+   "kind": "page number",
+   "text": "Page 103 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 104,
+   "kind": "page number",
+   "text": "Page 104 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 105,
+   "kind": "page number",
+   "text": "Page 105 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  },
+  {
+   "page": 106,
+   "kind": "page number",
+   "text": "Page 106 of 106",
+   "bbox": [
+    268.13,
+    794.44,
+    330.17,
+    803.41
+   ]
+  }
+ ],
  "figure_pages": {
   "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 2,
-  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": 6,
+  "b4d7553d4f90123049f963181cd0415ad8c09f631f68c9e760327172c281058f.jpg": 6,
   "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": 15,
   "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg": 23,
   "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg": 24,
@@ -35,9 +3205,9 @@
    246,
    169
   ],
-  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": [
+  "b4d7553d4f90123049f963181cd0415ad8c09f631f68c9e760327172c281058f.jpg": [
    922,
-   1121
+   1109
   ],
   "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": [
    514,
@@ -90,7 +3260,7 @@
  },
  "figure_text": {
   "3b06cfe1cfd92b1ccd76fa49de10195ff3a52689f3b1d5e7b53b4a86f9978a99.png": 0,
-  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg": 1,
+  "b4d7553d4f90123049f963181cd0415ad8c09f631f68c9e760327172c281058f.jpg": 1,
   "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg": 0,
   "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg": 0,
   "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg": 0,
@@ -117,10 +3287,10 @@
   "4220548038c371a5049d6ab7b783ff1ce37c73f37ea83356c145ff212cd2b8d2.jpg",
   "56088ac66c0f036b8b1303b08be4625f0309f4e5f3f0326f5c879c91c56cc75c.jpg",
   "62cfa93d670f3aba009aab5c1f8b0ae9a33b573c07f1604b064fbbed241702fd.jpg",
-  "709af5a3a788d4d35a3cf9a3d25fff5cb58b11bf6c605a3bac1bff20c1a5274b.jpg",
   "92f0c05f339f5478da878df027e3225e35b738980bf8ee04629083cd661d5911.jpg",
   "96b9f89004011a661ca1c1b17f0d44995983e5e6dec96acbc32bf8d715af00b0.jpg",
   "ab8a235cd7dab36bb160f539df72e885cb1a33e133c0fab5c7f70b9340122f8b.jpg",
+  "b4d7553d4f90123049f963181cd0415ad8c09f631f68c9e760327172c281058f.jpg",
   "c560e3310110376c6cddf88f1f78c4ef124da68119373119f39de40ce7450001.jpg",
   "caf9f1cfbb3be6c93fe3c8055988a7513ecea221aceb188eccef99e5f0c7d417.jpg",
   "d2b1b07a72e077103af2cd8cd0d7d586f1a52b85af9a97920c7ed955f5e73990.jpg"

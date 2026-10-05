@@ -1,0 +1,643 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 13,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 24,
+ "paragraphs": 75,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 22,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    275.87,
+    526.76,
+    289.25
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    468.37,
+    526.76,
+    481.75
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    752.7,
+    526.76,
+    766.08
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    251.03,
+    526.76,
+    264.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    480.25,
+    526.76,
+    493.63
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    634.48,
+    526.76,
+    647.86
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    189.8,
+    526.76,
+    203.18
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    75.2,
+    526.76,
+    88.58
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    108.8,
+    526.76,
+    122.18
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    385.79,
+    526.76,
+    399.17
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    122.6,
+    526.76,
+    135.98
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    432.37,
+    526.76,
+    445.75
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.65,
+    38.81
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    111.57,
+    183.29,
+    140.61
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents .................................................................................................................... 3",
+   "bbox": [
+    72.02,
+    165.8,
+    525.44,
+    179.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    184.64,
+    525.44,
+    198.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.02,
+    203.36,
+    525.44,
+    216.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.42,
+    222.2,
+    525.44,
+    235.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.2 Other points to note .................................................................................. 4",
+   "bbox": [
+    107.42,
+    241.07,
+    525.44,
+    254.45
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.02,
+    259.79,
+    525.44,
+    273.17
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    278.63,
+    525.44,
+    292.01
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.42,
+    297.47,
+    525.44,
+    310.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Protection ................................................................................................. 5",
+   "bbox": [
+    107.42,
+    316.19,
+    525.44,
+    329.57
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Internal relocation ..................................................................................... 5",
+   "bbox": [
+    107.42,
+    335.03,
+    525.44,
+    348.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Certification .............................................................................................. 5",
+   "bbox": [
+    107.42,
+    353.75,
+    525.44,
+    367.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy Summary ............................................................................................... 5",
+   "bbox": [
+    84.02,
+    372.59,
+    525.44,
+    385.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.02,
+    391.43,
+    525.44,
+    404.81
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Overview .......................................................................................................... 7",
+   "bbox": [
+    84.02,
+    410.17,
+    525.44,
+    423.55
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Treatment ........................................................................................................ 8",
+   "bbox": [
+    84.02,
+    429.01,
+    525.44,
+    442.39
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. State protection .............................................................................................. 11",
+   "bbox": [
+    84.02,
+    447.85,
+    525.44,
+    461.23
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Freedom of movement ................................................................................... 11",
+   "bbox": [
+    84.02,
+    466.57,
+    525.44,
+    479.95
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 13",
+   "bbox": [
+    72.02,
+    485.41,
+    525.44,
+    498.79
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 13",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 13",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 13",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 13",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "running header",
+   "text": "This document was archived on 26th November 2019",
+   "bbox": [
+    83.67,
+    14.47,
+    511.64,
+    38.81
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 13",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "This document was archived on 26th November 2019 Country Information and Guidance Mali: The Bellah (also known as the ‘black Tuareg’)",
+ "cover_version": "1.0",
+ "cover_date": "November 2019",
+ "pdf_sha256": "b2542953aad7f88fa2f5bdf525aa4dbf266ac65381d485f74cd195724441346f",
+ "images": []
+}

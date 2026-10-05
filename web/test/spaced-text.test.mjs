@@ -62,7 +62,7 @@ function onlySpacesAdded(p) {
 
 const NIGERIA = "data/countries/nigeria/notes/country-policy-and-information-note-trafficking-of-women-nigeria-april-2022-accessible-version/5f0cefcd95380363.html";
 const TALIBAN = "data/countries/afghanistan/notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-february-2026-accessible/2c5e35429f512dbf.html";
-const series = (path) => JSON.parse(read(`prototypes/data/series/${path}.json`)).versions.find((v) => v.source === "pdf").body;
+const series = (path) => JSON.parse(read(`prototypes/data/series/${path}.json`)).versions.find((v) => v.source === "pdf" && v.current).body;
 
 test("a table: lines of a cell and cells in a row are not run together (Nigeria, trafficking of women, para 7.6.5)", () => {
   const ix = indexOf(read(NIGERIA));

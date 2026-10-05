@@ -335,37 +335,39 @@ class Held:
         known = read_json(known_path, {})
         size = len(known)
         for url, entry in self.manifest.items():
-            for listed in (url, *entry.get("also_listed_as", [])):
-                self.by_asset[asset_key(listed)] = url
-            for capture in entry.get("other_captures", []):
-                self.by_digest[capture["archive_digest"]] = url
             for record in (entry, *entry.get("previous", [])):
-                if record.get("archive_digest"):
-                    self.by_digest[record["archive_digest"]] = url
+                for listed in (url, *record.get("also_listed_as", [])):
+                    self.by_asset.setdefault(asset_key(listed), []).append((url, record))
+                for capture in (record, *record.get("other_captures", [])):
+                    if capture.get("archive_digest"):
+                        self.by_digest[capture["archive_digest"]] = (url, record)
                 path = store.pdf_path(record["sha256"])
                 if record["sha256"] not in known and path.exists():
                     known[record["sha256"]] = sha1_base32(path.read_bytes())
                 if record["sha256"] in known:
-                    self.by_digest.setdefault(known[record["sha256"]], url)
+                    self.by_digest.setdefault(known[record["sha256"]], (url, record))
         if len(known) != size:
             write_json(known_path, known)
 
     def find(self, item: dict) -> dict | None:
         """How a listed file is held: {by, manifest_url, sha256, source ('live' or 'wayback')}, or None."""
-        found = None
+        wanted = edition_key(item.get("title"), None)
+        def matches(record):
+            return not wanted or not record.get("title") or edition_key(record["title"], None) == wanted
+        # A URL can hold different editions in turn. Its title/month selects the recorded edition;
+        # when no matching edition is held, discovery asks the Archive rather than claiming the new bytes.
         for listed in (item["url"], *item.get("also_listed_as", [])):
-            url = listed if listed in self.manifest else self.by_asset.get(asset_key(listed))
-            if url:
-                found = {"by": "url" if url == listed else "asset id", "manifest_url": url}
-                break
-        for capture in [] if found else item.get("archive") or []:
-            if capture["digest"] in self.by_digest:
-                found = {"by": "content (the Archive's digest)", "manifest_url": self.by_digest[capture["digest"]]}
-                break
-        if found:
-            entry = self.manifest[found["manifest_url"]]
-            found |= {"sha256": entry["sha256"], "source": entry.get("source", "live")}
-        return found
+            for url, record in self.by_asset.get(asset_key(listed), []):
+                if matches(record):
+                    return {"by": "url" if url == listed else "asset id", "manifest_url": url,
+                            "sha256": record["sha256"], "source": record.get("source", "live")}
+        for capture in item.get("archive") or []:
+            held = self.by_digest.get(capture["digest"])
+            if held and matches(held[1]):
+                url, record = held
+                return {"by": "content (the Archive's digest)", "manifest_url": url,
+                        "sha256": record["sha256"], "source": record.get("source", "live")}
+        return None
 
 
 # --- Discovery -----------------------------------------------------------------------------------
@@ -688,10 +690,12 @@ def held_editions(store: Store, slug: str, name: str | None, manifest: dict) -> 
             key = edition_key(v.get("title") or index.get("title"), name)
             if key:
                 known.setdefault(key, {"by": "title and month", "web_version": note})
-    for url, entry in manifest.items():
-        key = edition_key(entry.get("title"), name) if entry.get("country") == slug else None
-        if key:
-            known.setdefault(key, {"by": "title and month", "pdf": url})
+    for url, parent in manifest.items():
+        for record in (parent, *parent.get("previous", [])):
+            entry = {**parent, **record}
+            key = edition_key(entry.get("title"), name) if entry.get("country") == slug else None
+            if key:
+                known.setdefault(key, {"by": "title and month", "pdf": url})
     return known
 
 
@@ -900,8 +904,9 @@ def fetch_pdfs(client: PoliteClient, store: Store, jobs: list[dict], report: Run
     manifest = store.load_pdf_manifest()
     stats = {"checked": 0, "downloaded": 0, "unchanged": 0, "replaced_same_url": 0, "bytes_downloaded": 0,
              "already_fetched": 0, "same_content_as_held": 0, "failed": 0}
-    by_digest = {r["archive_digest"]: url for url, e in manifest.items()
-                 for r in (e, *e.get("previous", []), *e.get("other_captures", [])) if r.get("archive_digest")}
+    by_digest = {r["archive_digest"]: (url, record) for url, e in manifest.items()
+                 for record in (e, *e.get("previous", []))
+                 for r in (record, *record.get("other_captures", [])) if r.get("archive_digest")}
     for job in sorted(jobs, key=lambda j: (j["url"], j["timestamp"])):
         url, digest = job["url"], job["digest"]
         stats["checked"] += 1
@@ -910,8 +915,8 @@ def fetch_pdfs(client: PoliteClient, store: Store, jobs: list[dict], report: Run
             stats["unchanged"] += 1                       # held from GOV.UK itself: never replaced
             continue
         if digest in by_digest:
-            holder = manifest[by_digest[digest]]
-            if by_digest[digest] != url and url not in holder.setdefault("also_listed_as", []):
+            held_url, holder = by_digest[digest]
+            if held_url != url and url not in holder.setdefault("also_listed_as", []):
                 holder["also_listed_as"].append(url)      # the same bytes, listed at another address
                 store.save_pdf_manifest(manifest)
             stats["already_fetched"] += 1
@@ -938,14 +943,18 @@ def fetch_pdfs(client: PoliteClient, store: Store, jobs: list[dict], report: Run
             entry.setdefault("other_captures", []).append({
                 "archive_url": archive_url(timestamp, job["original"]), "captured_at": _iso(timestamp),
                 "archive_digest": digest})
-            by_digest[digest] = url
+            by_digest[digest] = (url, entry)
             store.save_pdf_manifest(manifest)
             continue
         previous = list(entry.get("previous", [])) if entry else []
         if entry:
             stats["replaced_same_url"] += 1
-            previous.append({k: entry.get(k) for k in ("sha256", "bytes", "source", "archive_url", "captured_at",
-                                                       "original_url", "archive_digest", "digest_verified", "pages")})
+            prior = {k: v for k, v in entry.items() if k != "previous"}
+            previous.append(prior)
+            # Later jobs in this run may list the earlier bytes at another address.
+            for known_digest, (held_url, holder) in list(by_digest.items()):
+                if held_url == url and holder is entry:
+                    by_digest[known_digest] = (url, prior)
         manifest[url] = {
             "sha256": sha,
             "bytes": len(r.content),
@@ -968,7 +977,7 @@ def fetch_pdfs(client: PoliteClient, store: Store, jobs: list[dict], report: Run
             **({"also_listed_as": job["also_listed_as"]} if job["also_listed_as"] else {}),
             **({"previous": previous} if previous else {}),
         }
-        by_digest[digest] = url
+        by_digest[digest] = (url, manifest[url])
         store.save_pdf_manifest(manifest)                 # progress survives an interruption
     return stats
 
@@ -979,7 +988,10 @@ def restore_missing_pdfs(client: PoliteClient, store: Store, report: RunReport, 
     are not, so on a fresh checkout the entries are there and the PDFs are missing. Each is asked for at the
     capture its entry names, and kept only if it is the same file (its sha256); the entry is not changed."""
     stats = {"missing": 0, "restored": 0, "failed": 0}
-    for url, entry in store.load_pdf_manifest().items():
+    manifest = store.load_pdf_manifest()
+    entries = [(url, {**parent, **record}) for url, parent in manifest.items()
+               for record in (parent, *parent.get("previous", []))]
+    for url, entry in entries:
         if (entry.get("source") != "wayback" or store.pdf_path(entry["sha256"]).exists()
                 or (only and entry.get("country") not in only)):
             continue

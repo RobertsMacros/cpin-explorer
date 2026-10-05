@@ -53,7 +53,7 @@ const GROUPS = {
   "Opposition to the state or government": [
     "opposition to the state", "opposition to the government",
     ["opposition to the government in the Kurdistan Region of Iraq (KRI)", "Kurdistan Region of Iraq (KRI)"],
-    "critics and opponents of the government", "criticism of the government",
+    "critics and opponents of the government", "criticism of the government", "critics of the government",
     ["critics of the military regime", OWN], ["critics of the state, Chechnya", "Chechnya"],
   ],
   "Political parties and affiliation": ["political parties and affiliation", "political affiliation"],

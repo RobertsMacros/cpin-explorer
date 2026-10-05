@@ -1,0 +1,632 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 20,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 26,
+ "paragraphs": 136,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 35,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    275.87,
+    526.76,
+    289.25
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    468.37,
+    526.76,
+    481.75
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    645.88,
+    526.76,
+    659.26
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    122.6,
+    526.76,
+    135.98
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    229.4,
+    526.76,
+    242.78
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    271.97,
+    350.03,
+    526.76,
+    363.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    383.03,
+    526.76,
+    396.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    624.28,
+    526.76,
+    637.66
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    641.68,
+    526.76,
+    655.06
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    378.95,
+    526.76,
+    392.33
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    111.57,
+    183.3,
+    140.61
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Contents .................................................................................................................... 2",
+   "bbox": [
+    72.02,
+    165.8,
+    525.58,
+    179.18
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 3",
+   "bbox": [
+    72.02,
+    184.64,
+    525.58,
+    198.02
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    203.36,
+    525.58,
+    216.74
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.02,
+    222.2,
+    525.58,
+    235.58
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.1 Basis of claim ........................................................................................... 4",
+   "bbox": [
+    107.42,
+    241.07,
+    525.58,
+    254.45
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.2 Other points to note .................................................................................. 4",
+   "bbox": [
+    107.42,
+    259.79,
+    525.58,
+    273.17
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2. Consideration of Issues .................................................................................... 4",
+   "bbox": [
+    84.02,
+    278.63,
+    525.58,
+    292.01
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.1 Is the person’s account credible? ............................................................. 4",
+   "bbox": [
+    107.42,
+    297.47,
+    525.58,
+    310.85
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.2 Is the person at risk of persecution or serious harm? ............................... 4",
+   "bbox": [
+    107.42,
+    316.19,
+    525.58,
+    329.57
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Political opposition ........................................................................................... 4",
+   "bbox": [
+    107.42,
+    335.03,
+    525.58,
+    348.41
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Journalists ....................................................................................................... 5",
+   "bbox": [
+    107.42,
+    353.75,
+    525.58,
+    367.13
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.3 Human rights activists / NGO workers ...................................................... 5",
+   "bbox": [
+    107.42,
+    372.59,
+    525.58,
+    385.97
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.4 Is the person able to seek effective protection? ....................................... 5",
+   "bbox": [
+    107.42,
+    391.43,
+    525.58,
+    404.81
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.5 Is the person able to internally relocate? .................................................. 6",
+   "bbox": [
+    107.42,
+    410.17,
+    525.58,
+    423.55
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.6 If refused, is the claim likely to be certifiable as ‘clearly unfounded’? ....... 6",
+   "bbox": [
+    107.42,
+    429.01,
+    525.58,
+    442.39
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.02,
+    447.85,
+    525.58,
+    461.23
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3. Overview .......................................................................................................... 7",
+   "bbox": [
+    84.02,
+    466.57,
+    525.58,
+    479.95
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4. Political opponents ........................................................................................... 7",
+   "bbox": [
+    84.02,
+    485.41,
+    525.58,
+    498.79
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5. Journalists / media workers ............................................................................ 12",
+   "bbox": [
+    84.02,
+    504.25,
+    525.58,
+    517.63
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5.1 Laws on freedom of expression .............................................................. 12",
+   "bbox": [
+    107.42,
+    522.97,
+    525.58,
+    536.35
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5.2 Treatment by state ................................................................................. 14",
+   "bbox": [
+    107.42,
+    541.81,
+    525.58,
+    555.19
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "5.3 Internet users ......................................................................................... 16",
+   "bbox": [
+    107.42,
+    560.65,
+    525.58,
+    574.03
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "6. Human rights activists .................................................................................... 17",
+   "bbox": [
+    84.02,
+    579.4,
+    525.58,
+    592.78
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 20",
+   "bbox": [
+    72.02,
+    598.24,
+    525.58,
+    611.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "2015",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Gambia: opposition to the government",
+ "cover_version": "1.0",
+ "cover_date": "December 2015",
+ "pdf_sha256": "e1489b49e39f28f2f3ac31b0ca996230af516fe6d33ca59b4ec22df200e2cf2d",
+ "images": []
+}

@@ -42,8 +42,8 @@ const cases = {
   "Mid-Atlantic": [[20, -40], null],
 };
 
-test("every country with notes has a marker and a map shape", () => {
-  for (const c of data.countries) {
+test("every country in the current collection has a marker and a map shape", () => {
+  for (const c of data.countries.filter((c) => !c.dropped_from_collection)) {
     assert.ok(c.iso_n3 && c.marker, `${c.slug} has no map entry`);
     assert.equal(countryAt(c.marker), c.slug, `${c.slug}'s marker is not inside its own shape`);
   }

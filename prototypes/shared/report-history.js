@@ -14,6 +14,7 @@
 // the names of the report's own sections ("Updated country information and assessment").
 
 import { titleMonth } from "./citation.js";
+export { archiveName } from "./archive-source.js";
 
 export const DAY = 86400000;
 const ms = (iso) => (iso ? Date.parse(iso) : NaN);
@@ -71,7 +72,7 @@ export function archiveCopy(v) {
 /** When an Internet Archive copy was captured: the timestamp in its address (so a citation's date and link
  *  always agree), else the capture time recorded for the edition. An ISO time, or null. */
 export function capturedAt(v) {
-  const m = /\/web\/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(v?.archive_url || "");
+  const m = /\/(?:web|ukgwa)\/(\d{4})(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/.exec(v?.archive_url || "");
   return m ? `${m[1]}-${m[2]}-${m[3]}T${m[4]}:${m[5]}:${m[6]}Z` : v?.captured_at || null;
 }
 

@@ -82,5 +82,14 @@ It now lives in `~/Developer/cpin-explorer`. `./cpin` (puts `src/` on the path i
     departmental logos and the site must not look official.
 14. Images inside notes are mirrored (`./cpin images`, and by `sync`); bodies keep GOV.UK's `src`,
     and the site substitutes the mirrored copy when rendering.
+15. **Clear up after yourself.** Browser checks must not leave anything in the temp folders. Between
+    2 and 4 October 2026 about 2,200 Chrome launches left a `cpin-chrome-*` profile each (29 GB) plus
+    a Chrome `code_sign_clone` each, and with 3.9 GB of session scratch files that filled the disk.
+    So: reuse one browser and one profile for a whole run rather than launching per page or per check;
+    quit the browser cleanly (`browser.close()`, never `kill`), which is what lets Chrome remove its
+    own clone; delete any temporary profile or folder you created in a `finally`; stop Playwright
+    daemons (`cliDaemon`) you started; and remove large scratch files when the task ends. Before
+    finishing, confirm nothing is left:
+    `ls -d "$(getconf DARWIN_USER_TEMP_DIR)"cpin-* 2>/dev/null | wc -l` should print 0.
 
 Front-end checks: `cd web && npm test` (projection maths and country picking against real borders).

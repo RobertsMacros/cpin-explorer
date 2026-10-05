@@ -280,3 +280,17 @@ test("highlights from two editions of one note: the heading names both", async (
   assert.ok(docText(doc).includes("May 2022 · v6.0  /  Aug 2026 · v7.0"));
   assert.ok(styled(doc, "CpinMeta").some((m) => m.startsWith("Versions 6.0 and 7.0")));
 });
+
+test("unchanged words in a newer edition do not move the Word heading, citation or archive link", async () => {
+  const r = { ...highlights[0], check: "still", para: "9.1.1", section: "Saved section", version: "2.0",
+    archivedCopy: { url: "https://web.archive.org/web/20220101000000/https://www.gov.uk/saved", capturedAt: "2022-01-01T00:00:00Z" },
+    current: { version: "7.0", para: "12.1.2", section: "New section" } };
+  assert.equal(highlightHeading(r).text, "Para 9.1.1 — Saved section");
+  const files = unzip(await buildCitationsDocx(docx, [r], { accessed: ACCESSED, ...assets, output: "nodebuffer" }));
+  const text = docText(xml(files, "word/document.xml"));
+  assert.ok(text.includes("Still in the current edition (v7.0, para 12.1.2)"));
+  assert.ok(text.includes("The citation stays with the edition saved."));
+  assert.ok(styled(xml(files, "word/document.xml"), "CpinMeta").some((line) => line.includes(r.archivedCopy.url)),
+    "the note heading links to the pinned archived edition too");
+  assert.ok(xml(files, "word/_rels/document.xml.rels").includes("/web/20220101000000/"));
+});

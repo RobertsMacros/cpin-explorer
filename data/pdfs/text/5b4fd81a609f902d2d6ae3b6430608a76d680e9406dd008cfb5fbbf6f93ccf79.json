@@ -1,0 +1,885 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 28,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 38,
+ "paragraphs": 175,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 49,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    222.44,
+    526.76,
+    235.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    434.77,
+    526.76,
+    448.15
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    671.68,
+    526.76,
+    685.06
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    423.25,
+    526.76,
+    436.63
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    212.84,
+    526.76,
+    226.22
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    467.77,
+    526.76,
+    481.15
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    614.2,
+    526.76,
+    627.58
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    491.65,
+    526.76,
+    505.03
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    238.07,
+    526.76,
+    251.45
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    314.03,
+    526.76,
+    327.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    205.4,
+    526.76,
+    218.78
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    581.8,
+    526.76,
+    595.18
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    167.24,
+    526.76,
+    180.62
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    274.43,
+    526.76,
+    287.81
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    254.99,
+    526.76,
+    268.37
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    311.39,
+    526.76,
+    324.77
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    408.85,
+    526.76,
+    422.23
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    344.63,
+    526.76,
+    358.01
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    519.37,
+    526.76,
+    532.75
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    108.8,
+    526.76,
+    122.18
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    345.35,
+    526.76,
+    358.73
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    75.69,
+    183.3,
+    104.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.02,
+    129.92,
+    525.44,
+    143.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    148.64,
+    525.44,
+    162.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.02,
+    167.48,
+    525.44,
+    180.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of claim ........................................................................................... 4",
+   "bbox": [
+    107.42,
+    186.32,
+    525.44,
+    199.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.02,
+    205.04,
+    525.44,
+    218.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    223.88,
+    525.44,
+    237.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Exclusion .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    242.75,
+    525.44,
+    256.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.42,
+    261.47,
+    525.44,
+    274.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Protection ................................................................................................. 6",
+   "bbox": [
+    107.42,
+    280.31,
+    525.44,
+    293.69
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Internal relocation ..................................................................................... 7",
+   "bbox": [
+    107.42,
+    299.15,
+    525.44,
+    312.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.6 Certification .............................................................................................. 7",
+   "bbox": [
+    107.42,
+    317.87,
+    525.44,
+    331.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy Summary ............................................................................................... 7",
+   "bbox": [
+    84.02,
+    336.71,
+    525.44,
+    350.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 9",
+   "bbox": [
+    72.02,
+    355.55,
+    525.44,
+    368.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Legal position................................................................................................... 9",
+   "bbox": [
+    84.02,
+    374.27,
+    525.44,
+    387.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. The HDP (Peoples’ Democratic Party) ............................................................ 9",
+   "bbox": [
+    84.02,
+    393.11,
+    525.44,
+    406.49
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Background .............................................................................................. 9",
+   "bbox": [
+    107.42,
+    411.97,
+    525.44,
+    425.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Elections of June and November 2015 ................................................... 10",
+   "bbox": [
+    107.42,
+    430.69,
+    525.44,
+    444.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Factors implicated in harassment of HDP ...................................................... 11",
+   "bbox": [
+    84.02,
+    449.53,
+    525.44,
+    462.91
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 Political/electoral motives ....................................................................... 11",
+   "bbox": [
+    107.42,
+    468.37,
+    525.44,
+    481.75
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.2 End of ceasefire with PKK and conflation of HDP with PKK ................... 12",
+   "bbox": [
+    107.42,
+    487.09,
+    525.44,
+    500.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.3 Suruc bombing ....................................................................................... 14",
+   "bbox": [
+    107.42,
+    505.93,
+    525.44,
+    519.31
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Violence related to elections of June and November 2015 ............................ 15",
+   "bbox": [
+    84.02,
+    524.77,
+    525.44,
+    538.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Attacks on HDP offices and bureaus ...................................................... 15",
+   "bbox": [
+    107.42,
+    543.49,
+    525.44,
+    556.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Attacks on HDP rallies ............................................................................ 18",
+   "bbox": [
+    107.42,
+    562.36,
+    525.44,
+    575.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Arrest, detention and investigation of HDP supporters .................................. 20",
+   "bbox": [
+    84.02,
+    581.2,
+    525.44,
+    594.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.2 Alleged links between HDP and PKK ..................................................... 21",
+   "bbox": [
+    107.42,
+    599.92,
+    525.44,
+    613.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.3 Autonomy for Kurds ................................................................................ 23",
+   "bbox": [
+    107.42,
+    618.76,
+    525.44,
+    632.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9. State protection .............................................................................................. 25",
+   "bbox": [
+    84.02,
+    637.6,
+    525.44,
+    650.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 28",
+   "bbox": [
+    72.02,
+    656.32,
+    525.44,
+    669.7
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 28",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 28",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Turkey: HDP (Peoples’ Democratic Party)",
+ "cover_version": "1.0",
+ "cover_date": "March 2016",
+ "pdf_sha256": "5b4fd81a609f902d2d6ae3b6430608a76d680e9406dd008cfb5fbbf6f93ccf79",
+ "images": []
+}

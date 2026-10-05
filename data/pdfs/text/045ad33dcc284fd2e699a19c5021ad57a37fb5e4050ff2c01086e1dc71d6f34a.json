@@ -1,5 +1,5 @@
 {
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "pages": 136,
  "body_size": 12.0,
  "body_font": "arial",
@@ -13,6 +13,3605 @@
  "warnings": [
   "page 2: bookmark not found in the text: 'Contents'",
   "footnotes with no mark found in the text: 178, 278, 336, 337, 338, 341"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    167.88,
+    526.66,
+    184.26
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    268.68,
+    526.66,
+    285.06
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    369.48,
+    526.66,
+    385.86
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    506.76,
+    526.66,
+    523.14
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    489.96,
+    526.66,
+    506.34
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    652.44,
+    526.66,
+    668.82
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    349.2,
+    526.66,
+    365.58
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    661.08,
+    526.66,
+    677.46
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    315.6,
+    526.66,
+    331.98
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    288.0,
+    526.66,
+    304.38
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    592.2,
+    526.66,
+    608.58
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    540.6,
+    526.66,
+    556.98
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    493.2,
+    526.66,
+    509.58
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    357.0,
+    526.66,
+    373.38
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    390.6,
+    526.66,
+    406.98
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    335.4,
+    526.66,
+    351.78
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    138.0,
+    526.66,
+    154.38
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    525.0,
+    526.66,
+    541.38
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    260.4,
+    526.66,
+    276.78
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    639.6,
+    526.66,
+    655.98
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    329.4,
+    526.66,
+    345.78
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    525.0,
+    526.66,
+    541.38
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    124.2,
+    526.66,
+    140.58
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    258.6,
+    526.66,
+    274.98
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    387.0,
+    526.66,
+    403.38
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    118.2,
+    526.66,
+    134.58
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    238.8,
+    526.66,
+    255.18
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    400.8,
+    526.66,
+    417.18
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    521.4,
+    526.66,
+    537.78
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    260.4,
+    526.66,
+    276.78
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    462.0,
+    526.66,
+    478.38
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    165.6,
+    526.66,
+    181.98
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    266.4,
+    526.66,
+    282.78
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    376.8,
+    526.66,
+    393.18
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    457.8,
+    526.66,
+    474.18
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    343.2,
+    526.66,
+    359.58
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    90.6,
+    526.66,
+    106.98
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    600.0,
+    526.66,
+    616.38
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    246.6,
+    526.66,
+    262.98
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    603.6,
+    526.66,
+    619.98
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    390.6,
+    526.66,
+    406.98
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    171.6,
+    526.66,
+    187.98
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    582.0,
+    526.66,
+    598.38
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    157.8,
+    526.66,
+    174.18
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    483.24,
+    526.66,
+    499.62
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    595.8,
+    526.66,
+    612.18
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    246.6,
+    526.66,
+    262.98
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    438.0,
+    526.66,
+    454.38
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    425.04,
+    526.66,
+    441.42
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    631.8,
+    526.66,
+    648.18
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    623.4,
+    526.66,
+    639.78
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    607.8,
+    526.66,
+    624.18
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    351.6,
+    526.66,
+    367.98
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    301.8,
+    526.66,
+    318.18
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    600.0,
+    526.66,
+    616.38
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    225.0,
+    526.66,
+    241.38
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    564.6,
+    526.66,
+    580.98
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    643.8,
+    526.66,
+    660.18
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    315.6,
+    526.66,
+    331.98
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    124.2,
+    526.66,
+    140.58
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    475.8,
+    526.66,
+    492.18
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    582.6,
+    526.66,
+    598.98
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    382.8,
+    526.66,
+    399.18
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    598.2,
+    526.66,
+    614.58
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    228.6,
+    526.66,
+    244.98
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    438.0,
+    526.66,
+    454.38
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    179.4,
+    526.66,
+    195.78
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    431.28,
+    526.66,
+    447.66
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    502.44,
+    526.66,
+    518.82
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    769.8,
+    526.66,
+    786.18
+   ]
+  },
+  {
+   "page": 76,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    746.4,
+    526.66,
+    762.78
+   ]
+  },
+  {
+   "page": 84,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    746.4,
+    526.66,
+    762.78
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    606.0,
+    526.66,
+    622.38
+   ]
+  },
+  {
+   "page": 94,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    151.8,
+    526.66,
+    168.18
+   ]
+  },
+  {
+   "page": 98,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    606.0,
+    526.66,
+    622.38
+   ]
+  },
+  {
+   "page": 101,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    700.8,
+    526.66,
+    717.18
+   ]
+  },
+  {
+   "page": 106,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    219.0,
+    526.66,
+    235.38
+   ]
+  },
+  {
+   "page": 110,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    369.0,
+    526.66,
+    385.38
+   ]
+  },
+  {
+   "page": 116,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    663.6,
+    526.66,
+    679.98
+   ]
+  },
+  {
+   "page": 122,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    151.8,
+    526.66,
+    168.18
+   ]
+  },
+  {
+   "page": 124,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    550.8,
+    526.66,
+    567.18
+   ]
+  },
+  {
+   "page": 130,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    104.4,
+    526.66,
+    120.78
+   ]
+  },
+  {
+   "page": 133,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    499.2,
+    526.66,
+    515.58
+   ]
+  },
+  {
+   "page": 136,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    708.6,
+    526.66,
+    724.98
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    158.95,
+    145.8,
+    181.8
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Introduction .............................................................................................................. 5",
+   "bbox": [
+    72.0,
+    183.77,
+    525.34,
+    200.95
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Background ............................................................................................................ 5",
+   "bbox": [
+    84.0,
+    202.8,
+    525.34,
+    219.18
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Purpose of the mission ........................................................................................... 5",
+   "bbox": [
+    84.0,
+    221.64,
+    525.34,
+    238.02
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Report’s structure ................................................................................................... 5",
+   "bbox": [
+    84.0,
+    240.36,
+    525.34,
+    256.74
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Methodology ............................................................................................................. 6",
+   "bbox": [
+    72.0,
+    259.01,
+    525.34,
+    276.19
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Identification of sources .......................................................................................... 6",
+   "bbox": [
+    84.0,
+    278.04,
+    525.34,
+    294.42
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Arranging and conducting interviews ...................................................................... 6",
+   "bbox": [
+    84.0,
+    296.76,
+    525.34,
+    313.14
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Notes of interviews/meetings .................................................................................. 7",
+   "bbox": [
+    84.0,
+    315.6,
+    525.34,
+    331.98
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "List of abbreviations ................................................................................................ 8",
+   "bbox": [
+    72.0,
+    334.25,
+    525.34,
+    351.43
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Executive summary .................................................................................................. 9",
+   "bbox": [
+    72.0,
+    352.97,
+    525.34,
+    370.15
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "Synthesis of notes ................................................................................................. 10",
+   "bbox": [
+    72.0,
+    371.81,
+    525.34,
+    388.99
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1. Political landscape ......................................................................................... 10",
+   "bbox": [
+    84.0,
+    390.72,
+    525.34,
+    407.1
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.1 Opening of political space ...................................................................... 10",
+   "bbox": [
+    107.4,
+    409.56,
+    525.34,
+    425.94
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.2 Release of political prisoners .................................................................. 11",
+   "bbox": [
+    107.4,
+    428.4,
+    525.34,
+    444.78
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.3 Return of exiled groups .......................................................................... 12",
+   "bbox": [
+    107.4,
+    447.12,
+    525.34,
+    463.5
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.4 Legal reform ........................................................................................... 13",
+   "bbox": [
+    107.4,
+    465.96,
+    525.34,
+    482.34
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.5 Change of pace in reform process ......................................................... 14",
+   "bbox": [
+    107.4,
+    484.8,
+    525.34,
+    501.18
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "1.6 Impact of June 2019 assassinations/attempted coup on the reform",
+   "bbox": [
+    107.4,
+    503.52,
+    487.06,
+    519.9
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "process .......................................................................................................... 15",
+   "bbox": [
+    107.4,
+    517.32,
+    525.34,
+    533.7
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2. Political opposition ......................................................................................... 16",
+   "bbox": [
+    84.0,
+    536.16,
+    525.34,
+    552.54
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.1 General ability to function ....................................................................... 16",
+   "bbox": [
+    107.4,
+    555.0,
+    525.34,
+    571.38
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.2 Registration of political groups ............................................................... 17",
+   "bbox": [
+    107.4,
+    573.72,
+    525.34,
+    590.1
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.3 Opening of offices .................................................................................. 18",
+   "bbox": [
+    107.4,
+    592.56,
+    525.34,
+    608.94
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.4 Meetings ................................................................................................. 19",
+   "bbox": [
+    107.4,
+    611.4,
+    525.34,
+    627.78
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.5 Scheduled national elections: May 2020 ................................................ 19",
+   "bbox": [
+    107.4,
+    630.12,
+    525.34,
+    646.5
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.6 Freedom to protest ................................................................................. 21",
+   "bbox": [
+    107.4,
+    648.96,
+    525.34,
+    665.34
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "2.7 Challenges from non-state actors ........................................................... 22",
+   "bbox": [
+    107.4,
+    667.8,
+    525.34,
+    684.18
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3. National Movement of Amhara (NaMA) ......................................................... 22",
+   "bbox": [
+    84.0,
+    686.52,
+    525.34,
+    702.9
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3.1 Membership and profile .......................................................................... 22",
+   "bbox": [
+    107.4,
+    705.36,
+    525.34,
+    721.74
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "3.2 Capacity and support ............................................................................. 22",
+   "bbox": [
+    107.4,
+    724.2,
+    525.34,
+    740.58
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4. Ethiopia Citizens for Social Justice (E-ZEMA) ............................................... 23",
+   "bbox": [
+    84.0,
+    742.92,
+    525.34,
+    759.3
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "contents",
+   "text": "4.1 Composition ........................................................................................... 23",
+   "bbox": [
+    107.4,
+    761.76,
+    525.34,
+    778.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 Aims ....................................................................................................... 23",
+   "bbox": [
+    107.4,
+    70.8,
+    525.34,
+    87.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.3 Membership and profile .......................................................................... 23",
+   "bbox": [
+    107.4,
+    89.64,
+    525.34,
+    106.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.4 Capacity and support ............................................................................. 24",
+   "bbox": [
+    107.4,
+    108.36,
+    525.34,
+    124.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Ogaden National Liberation Front (ONLF) ..................................................... 24",
+   "bbox": [
+    84.0,
+    127.2,
+    525.34,
+    143.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Membership ............................................................................................ 24",
+   "bbox": [
+    107.4,
+    146.04,
+    525.34,
+    162.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Capacity and support ............................................................................. 24",
+   "bbox": [
+    107.4,
+    164.76,
+    525.34,
+    181.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 ONLF combatants .................................................................................. 24",
+   "bbox": [
+    107.4,
+    183.6,
+    525.34,
+    199.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Patriotic Ginbot 7 (PG7) ................................................................................. 25",
+   "bbox": [
+    84.0,
+    202.44,
+    525.34,
+    218.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Oromo Liberation Front (OLF) ....................................................................... 25",
+   "bbox": [
+    84.0,
+    221.16,
+    525.34,
+    237.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Aims and objectives ............................................................................... 25",
+   "bbox": [
+    107.4,
+    240.0,
+    525.34,
+    256.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Membership process .............................................................................. 26",
+   "bbox": [
+    107.4,
+    258.84,
+    525.34,
+    275.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.3 Capacity and support ............................................................................. 26",
+   "bbox": [
+    107.4,
+    277.56,
+    525.34,
+    293.94
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.4 Structure and composition ...................................................................... 27",
+   "bbox": [
+    107.4,
+    296.4,
+    525.34,
+    312.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.5 Shene/Shane/Shaane ............................................................................ 28",
+   "bbox": [
+    107.4,
+    315.24,
+    525.34,
+    331.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.6 OLF in ‘the bush’/Oromo Liberation Army (OLA) .................................... 29",
+   "bbox": [
+    107.4,
+    333.96,
+    525.34,
+    350.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.7 Qeerroo .................................................................................................. 31",
+   "bbox": [
+    107.4,
+    352.8,
+    525.34,
+    369.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.8 Relationship with other political parties .................................................. 32",
+   "bbox": [
+    107.4,
+    371.64,
+    525.34,
+    388.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Security sector ............................................................................................... 32",
+   "bbox": [
+    84.0,
+    390.36,
+    525.34,
+    406.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.1 Reform and restructure .......................................................................... 32",
+   "bbox": [
+    107.4,
+    409.2,
+    525.34,
+    425.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.2 Accountability for past torture/corruption ................................................ 34",
+   "bbox": [
+    107.4,
+    427.92,
+    525.34,
+    444.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.3 Government control over federal security forces .................................... 35",
+   "bbox": [
+    107.4,
+    446.76,
+    525.34,
+    463.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.4 Regional security forces ......................................................................... 36",
+   "bbox": [
+    107.4,
+    465.6,
+    525.34,
+    481.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.5 Liyu police .............................................................................................. 37",
+   "bbox": [
+    107.4,
+    484.32,
+    525.34,
+    500.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.6 Military command posts .......................................................................... 38",
+   "bbox": [
+    107.4,
+    503.16,
+    525.34,
+    519.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9. State treatment .............................................................................................. 38",
+   "bbox": [
+    84.0,
+    522.0,
+    525.34,
+    538.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.1 Arrests .................................................................................................... 38",
+   "bbox": [
+    107.4,
+    540.72,
+    525.34,
+    557.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.2 Arrests after assassinations/coup attempt of June 2019 ........................ 41",
+   "bbox": [
+    107.4,
+    559.56,
+    525.34,
+    575.94
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.3 Use of Anti-Terrorism Proclamation ....................................................... 45",
+   "bbox": [
+    107.4,
+    578.4,
+    525.34,
+    594.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.4 Military training camps/rehabilitation centres .......................................... 46",
+   "bbox": [
+    107.4,
+    597.12,
+    525.34,
+    613.5
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.5 Arrests and detention in Oromia including OLF/Shene/OLA .................. 47",
+   "bbox": [
+    107.4,
+    615.96,
+    525.34,
+    632.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.6 Detention conditions ............................................................................... 51",
+   "bbox": [
+    107.4,
+    634.8,
+    525.34,
+    651.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.7 Conditions on release ............................................................................. 53",
+   "bbox": [
+    107.4,
+    653.52,
+    525.34,
+    669.9
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.8 State differentiation between Oromos and OLF ..................................... 53",
+   "bbox": [
+    107.4,
+    672.36,
+    525.34,
+    688.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.9 Government and armed group clashes .................................................. 55",
+   "bbox": [
+    107.4,
+    691.2,
+    525.34,
+    707.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.10 Returnees and diaspora ......................................................................... 56",
+   "bbox": [
+    107.4,
+    709.92,
+    525.34,
+    726.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10. Oromo protests 2014-2018 ............................................................................ 57",
+   "bbox": [
+    84.0,
+    728.76,
+    525.34,
+    745.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.1 Background ............................................................................................ 57",
+   "bbox": [
+    107.4,
+    747.6,
+    525.34,
+    763.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10.2 State interest in past actions of Oromo protesters .................................. 57",
+   "bbox": [
+    107.4,
+    766.32,
+    525.34,
+    782.7
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11. Media ............................................................................................................. 57",
+   "bbox": [
+    84.0,
+    70.8,
+    525.34,
+    87.18
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.1 Media law ............................................................................................... 57",
+   "bbox": [
+    107.4,
+    89.64,
+    525.34,
+    106.02
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.2 Media freedom ....................................................................................... 58",
+   "bbox": [
+    107.4,
+    108.36,
+    525.34,
+    124.74
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.3 Role of social media ............................................................................... 58",
+   "bbox": [
+    107.4,
+    127.2,
+    525.34,
+    143.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.4 Arrests and detention of journalists ........................................................ 59",
+   "bbox": [
+    107.4,
+    146.04,
+    525.34,
+    162.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "12. Civil Society and Non-government organisations (NGOs) ............................. 59",
+   "bbox": [
+    84.0,
+    164.76,
+    525.34,
+    181.14
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "12.1 Registration ............................................................................................ 59",
+   "bbox": [
+    107.4,
+    183.6,
+    525.34,
+    199.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "12.2 Ability to function .................................................................................... 59",
+   "bbox": [
+    107.4,
+    202.44,
+    525.34,
+    218.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "13. Ethnic tension ................................................................................................ 60",
+   "bbox": [
+    84.0,
+    221.16,
+    525.34,
+    237.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "13.1 Rise in ethnic tension ............................................................................. 60",
+   "bbox": [
+    107.4,
+    240.0,
+    525.34,
+    256.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "13.2 Regional states ....................................................................................... 61",
+   "bbox": [
+    107.4,
+    258.84,
+    525.34,
+    275.22
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "13.3 Internal displacement ............................................................................. 62",
+   "bbox": [
+    107.4,
+    277.56,
+    525.34,
+    293.94
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "14. Ethiopia/Eritrea relations ................................................................................ 62",
+   "bbox": [
+    84.0,
+    296.4,
+    525.34,
+    312.78
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Annex A: Terms of reference (ToR) ...................................................................... 64",
+   "bbox": [
+    72.0,
+    315.05,
+    525.34,
+    332.23
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Annex B: List of sources ....................................................................................... 65",
+   "bbox": [
+    72.0,
+    333.77,
+    525.34,
+    350.95
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Annex C: FFM background explained to sources ............................................... 66",
+   "bbox": [
+    72.0,
+    352.61,
+    525.34,
+    369.79
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Annex D: Notes from sources ............................................................................... 67",
+   "bbox": [
+    72.0,
+    371.45,
+    525.34,
+    388.63
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Horn of Africa researcher, 10 September 2019 .................................................... 67",
+   "bbox": [
+    84.0,
+    390.36,
+    525.34,
+    406.74
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Garoma B. Wakessa, Director General, Human Rights League of the Horn of",
+   "bbox": [
+    84.0,
+    409.2,
+    494.86,
+    425.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Africa (HRLHA), 16 September 2019 .................................................................... 72",
+   "bbox": [
+    84.0,
+    423.0,
+    525.34,
+    439.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Department for International Development (DFID) – Ethiopia staff, 16 September",
+   "bbox": [
+    84.0,
+    441.72,
+    514.9,
+    458.1
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "19 and 20 September 2019 .................................................................................. 77",
+   "bbox": [
+    84.0,
+    455.52,
+    525.34,
+    471.9
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Senior representatives of Ethiopia Citizens for Social Justice (E-ZEMA), 17",
+   "bbox": [
+    84.0,
+    474.36,
+    484.3,
+    490.74
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "September 2019 ................................................................................................... 85",
+   "bbox": [
+    84.0,
+    488.16,
+    525.34,
+    504.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Senior representative of the Oromo Federalist Congress (OFC), 17 September",
+   "bbox": [
+    84.0,
+    507.0,
+    504.34,
+    523.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2019 ...................................................................................................................... 89",
+   "bbox": [
+    84.0,
+    520.8,
+    525.34,
+    537.18
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Legal expert and active critic, 18 September 2019 ............................................... 94",
+   "bbox": [
+    84.0,
+    539.52,
+    525.34,
+    555.9
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Political section, British Embassy Addis Ababa, 18 September 2019 ................... 98",
+   "bbox": [
+    84.0,
+    558.36,
+    525.34,
+    574.74
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Hassan Moalin, ONLF Foreign Secretary and Head of Addis Office on Federal",
+   "bbox": [
+    84.0,
+    577.2,
+    501.7,
+    593.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Issues, 18 September 2019 ................................................................................ 102",
+   "bbox": [
+    84.0,
+    591.0,
+    525.34,
+    607.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "One of the NaMA leaders, 18 September 2019 .................................................. 106",
+   "bbox": [
+    84.0,
+    609.72,
+    525.34,
+    626.1
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Ambo University lecturers, 19 September 2019 ................................................. 110",
+   "bbox": [
+    84.0,
+    628.56,
+    525.34,
+    644.94
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "OLF officers, 19 September 2019 ....................................................................... 116",
+   "bbox": [
+    84.0,
+    647.4,
+    525.34,
+    663.78
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Head of an international NGO, 20 September 2019 ........................................... 122",
+   "bbox": [
+    84.0,
+    666.12,
+    525.34,
+    682.5
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Expert political analyst and researcher, 20 September 2019 .............................. 124",
+   "bbox": [
+    84.0,
+    684.96,
+    525.34,
+    701.34
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Wondemagegn Goshu, Addis Ababa University, 20 September 2019 ............... 130",
+   "bbox": [
+    84.0,
+    703.8,
+    525.34,
+    720.18
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "William Davison, Crisis Group, 8 October 2019 (telephone interview)................ 133",
+   "bbox": [
+    84.0,
+    722.52,
+    525.34,
+    738.9
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 136",
+   "bbox": [
+    272.52,
+    803.56,
+    325.66,
+    814.53
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 44 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 45 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 46 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 47 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 48 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 49 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 50 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 51 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 52 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 53 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 54 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 55 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 56 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "page number",
+   "text": "Page 57 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "page number",
+   "text": "Page 58 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "page number",
+   "text": "Page 59 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "page number",
+   "text": "Page 60 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 61,
+   "kind": "page number",
+   "text": "Page 61 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "page number",
+   "text": "Page 62 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "page number",
+   "text": "Page 63 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "page number",
+   "text": "Page 64 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "page number",
+   "text": "Page 65 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "page number",
+   "text": "Page 66 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 67,
+   "kind": "page number",
+   "text": "Page 67 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 68,
+   "kind": "page number",
+   "text": "Page 68 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "page number",
+   "text": "Page 69 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "page number",
+   "text": "Page 70 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "page number",
+   "text": "Page 71 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 72,
+   "kind": "page number",
+   "text": "Page 72 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 73,
+   "kind": "page number",
+   "text": "Page 73 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 74,
+   "kind": "page number",
+   "text": "Page 74 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "page number",
+   "text": "Page 75 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 76,
+   "kind": "page number",
+   "text": "Page 76 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 77,
+   "kind": "page number",
+   "text": "Page 77 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 78,
+   "kind": "page number",
+   "text": "Page 78 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "page number",
+   "text": "Page 79 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 80,
+   "kind": "page number",
+   "text": "Page 80 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 81,
+   "kind": "page number",
+   "text": "Page 81 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 82,
+   "kind": "page number",
+   "text": "Page 82 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 83,
+   "kind": "page number",
+   "text": "Page 83 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 84,
+   "kind": "page number",
+   "text": "Page 84 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 85,
+   "kind": "page number",
+   "text": "Page 85 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 86,
+   "kind": "page number",
+   "text": "Page 86 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 87,
+   "kind": "page number",
+   "text": "Page 87 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 88,
+   "kind": "page number",
+   "text": "Page 88 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "page number",
+   "text": "Page 89 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 90,
+   "kind": "page number",
+   "text": "Page 90 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "page number",
+   "text": "Page 91 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 92,
+   "kind": "page number",
+   "text": "Page 92 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 93,
+   "kind": "page number",
+   "text": "Page 93 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 94,
+   "kind": "page number",
+   "text": "Page 94 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 95,
+   "kind": "page number",
+   "text": "Page 95 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 96,
+   "kind": "page number",
+   "text": "Page 96 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 97,
+   "kind": "page number",
+   "text": "Page 97 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 98,
+   "kind": "page number",
+   "text": "Page 98 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 99,
+   "kind": "page number",
+   "text": "Page 99 of 136",
+   "bbox": [
+    270.36,
+    803.56,
+    327.94,
+    814.53
+   ]
+  },
+  {
+   "page": 100,
+   "kind": "page number",
+   "text": "Page 100 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 101,
+   "kind": "page number",
+   "text": "Page 101 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 102,
+   "kind": "page number",
+   "text": "Page 102 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 103,
+   "kind": "page number",
+   "text": "Page 103 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 104,
+   "kind": "page number",
+   "text": "Page 104 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 105,
+   "kind": "page number",
+   "text": "Page 105 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 106,
+   "kind": "page number",
+   "text": "Page 106 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 107,
+   "kind": "page number",
+   "text": "Page 107 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 108,
+   "kind": "page number",
+   "text": "Page 108 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 109,
+   "kind": "page number",
+   "text": "Page 109 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 110,
+   "kind": "page number",
+   "text": "Page 110 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 111,
+   "kind": "page number",
+   "text": "Page 111 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 112,
+   "kind": "page number",
+   "text": "Page 112 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 113,
+   "kind": "page number",
+   "text": "Page 113 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 114,
+   "kind": "page number",
+   "text": "Page 114 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 115,
+   "kind": "page number",
+   "text": "Page 115 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 116,
+   "kind": "page number",
+   "text": "Page 116 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 117,
+   "kind": "page number",
+   "text": "Page 117 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 118,
+   "kind": "page number",
+   "text": "Page 118 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 119,
+   "kind": "page number",
+   "text": "Page 119 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 120,
+   "kind": "page number",
+   "text": "Page 120 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 121,
+   "kind": "page number",
+   "text": "Page 121 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 122,
+   "kind": "page number",
+   "text": "Page 122 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 123,
+   "kind": "page number",
+   "text": "Page 123 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 124,
+   "kind": "page number",
+   "text": "Page 124 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 125,
+   "kind": "page number",
+   "text": "Page 125 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 126,
+   "kind": "page number",
+   "text": "Page 126 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 127,
+   "kind": "page number",
+   "text": "Page 127 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 128,
+   "kind": "page number",
+   "text": "Page 128 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 129,
+   "kind": "page number",
+   "text": "Page 129 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 130,
+   "kind": "page number",
+   "text": "Page 130 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 131,
+   "kind": "page number",
+   "text": "Page 131 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 132,
+   "kind": "page number",
+   "text": "Page 132 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 133,
+   "kind": "page number",
+   "text": "Page 133 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 134,
+   "kind": "page number",
+   "text": "Page 134 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 135,
+   "kind": "page number",
+   "text": "Page 135 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  },
+  {
+   "page": 136,
+   "kind": "page number",
+   "text": "Page 136 of 136",
+   "bbox": [
+    268.08,
+    803.56,
+    330.1,
+    814.53
+   ]
+  }
  ],
  "figure_pages": {
   "8e6843911bd6295e0eed3a2fbd8a5592b1351e88380601baeee9f2fffe06118f.png": 2,

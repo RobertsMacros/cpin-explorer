@@ -103,3 +103,16 @@ def test_archive_page_body_is_the_innermost_govspeak_with_white_space_between_th
     # A wrapper that holds words of its own beside the inner body is still the one taken: nothing is left out.
     more = page.replace('<div class="govspeak">', '<p>Words outside the inner body.</p><div class="govspeak">')
     assert "Words outside the inner body." in extract_body(more)[0]
+
+
+def test_integrity_checks_previous_pdf_bytes_too(store):
+    from cpin.fingerprint import sha256_bytes
+    from cpin.verify import check_integrity
+    first, second = b'first edition', b'new edition'
+    old, new = sha256_bytes(first), sha256_bytes(second)
+    store.write_pdf(old, first)
+    store.write_pdf(new, second)
+    store.save_pdf_manifest({'https://example.org/reused.pdf': {'sha256': new, 'previous': [{'sha256': old}]}})
+    assert check_integrity(store)['pdfs_ok'] == 2
+    store.pdf_path(old).write_bytes(b'corrupt')
+    assert check_integrity(store)['problems'] == [{'url': 'https://example.org/reused.pdf', 'problem': 'PDF hash mismatch'}]

@@ -1,0 +1,864 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 32,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 33,
+ "paragraphs": 205,
+ "list_items": 34,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 55,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 19, 50"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    222.44,
+    526.76,
+    235.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    414.97,
+    526.76,
+    428.35
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    639.88,
+    526.76,
+    653.26
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    195.8,
+    526.76,
+    209.18
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    114.8,
+    526.76,
+    128.18
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    75.2,
+    526.76,
+    88.58
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    108.8,
+    526.76,
+    122.18
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    300.83,
+    526.76,
+    314.21
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    201.89,
+    205.4,
+    526.76,
+    218.78
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    114.62,
+    551.05,
+    519.44,
+    564.43
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    569.68,
+    526.76,
+    583.06
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    604.48,
+    526.76,
+    617.86
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    327.83,
+    526.76,
+    341.21
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    387.47,
+    526.76,
+    400.85
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    75.69,
+    183.3,
+    104.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Policy guidance ........................................................................................................ 4",
+   "bbox": [
+    72.02,
+    111.08,
+    525.44,
+    124.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.02,
+    129.92,
+    525.44,
+    143.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of claim ........................................................................................... 4",
+   "bbox": [
+    107.42,
+    148.64,
+    525.44,
+    162.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of issues ................................................................................... 4",
+   "bbox": [
+    84.02,
+    167.48,
+    525.44,
+    180.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    186.32,
+    525.44,
+    199.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.42,
+    205.04,
+    525.44,
+    218.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Protection ................................................................................................. 6",
+   "bbox": [
+    107.42,
+    223.88,
+    525.44,
+    237.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Internal relocation ..................................................................................... 7",
+   "bbox": [
+    107.42,
+    242.75,
+    525.44,
+    256.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Certification .............................................................................................. 7",
+   "bbox": [
+    107.42,
+    261.47,
+    525.44,
+    274.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 7",
+   "bbox": [
+    84.02,
+    280.31,
+    525.44,
+    293.69
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 9",
+   "bbox": [
+    72.02,
+    299.15,
+    525.44,
+    312.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Political system ................................................................................................ 9",
+   "bbox": [
+    84.02,
+    317.87,
+    525.44,
+    331.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.1 Participation in the political process ......................................................... 9",
+   "bbox": [
+    107.42,
+    336.71,
+    525.44,
+    350.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 President and ruling party......................................................................... 9",
+   "bbox": [
+    107.42,
+    355.55,
+    525.44,
+    368.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.3 Elections: 2016 ....................................................................................... 11",
+   "bbox": [
+    107.42,
+    374.27,
+    525.44,
+    387.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Opposition parties in DRC ............................................................................. 14",
+   "bbox": [
+    84.02,
+    393.11,
+    525.44,
+    406.49
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Overview ................................................................................................ 14",
+   "bbox": [
+    107.42,
+    411.97,
+    525.44,
+    425.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Union for Democracy and Social Progress (UDPS) ............................... 15",
+   "bbox": [
+    107.42,
+    430.69,
+    525.44,
+    444.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Congo Liberation Movement (MLC) ....................................................... 16",
+   "bbox": [
+    107.42,
+    449.53,
+    525.44,
+    462.91
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 Union for the Congolese Nation (UNC) .................................................. 16",
+   "bbox": [
+    107.42,
+    468.37,
+    525.44,
+    481.75
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 Coalition ................................................................................................. 17",
+   "bbox": [
+    107.42,
+    487.09,
+    525.44,
+    500.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Opposition groups outside of DRC ................................................................ 18",
+   "bbox": [
+    84.02,
+    505.93,
+    525.44,
+    519.31
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 L’Alliance des Patriotes pour la Refondation du Congo (APARECO) ..... 18",
+   "bbox": [
+    107.42,
+    524.77,
+    525.44,
+    538.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Treatment of opposition groups ..................................................................... 20",
+   "bbox": [
+    84.02,
+    543.49,
+    525.44,
+    556.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Freedom of expression and assembly .................................................... 20",
+   "bbox": [
+    107.42,
+    562.36,
+    525.44,
+    575.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Demonstrations relating to the proposed changes to electoral law ................ 23",
+   "bbox": [
+    107.42,
+    581.2,
+    525.44,
+    594.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Arbitrary arrest, harassment, detention and abuse ................................. 28",
+   "bbox": [
+    107.42,
+    599.92,
+    525.44,
+    613.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 32",
+   "bbox": [
+    72.02,
+    618.76,
+    525.44,
+    632.14
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 32",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 32",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Policy and Information Note Democratic Republic of Congo (DRC): Opposition to the government",
+ "cover_version": "1.0",
+ "cover_date": "November 2016",
+ "pdf_sha256": "dfab7ae9168a2e5b1067e7c817175dce31fb9bec098c66ac8515057def3f2008",
+ "images": []
+}

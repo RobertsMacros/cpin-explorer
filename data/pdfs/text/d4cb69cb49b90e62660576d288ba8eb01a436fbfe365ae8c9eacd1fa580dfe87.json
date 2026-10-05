@@ -1,0 +1,720 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 32,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 25,
+ "paragraphs": 167,
+ "list_items": 8,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 49,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    193.76,
+    526.76,
+    207.14
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    373.76,
+    526.76,
+    387.14
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    615.34,
+    526.76,
+    628.72
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    113.64,
+    526.7,
+    127.02
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    147.26,
+    526.76,
+    160.64
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    747.24,
+    526.76,
+    760.62
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    693.82,
+    526.76,
+    707.2
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    465.28,
+    526.76,
+    478.66
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    537.82,
+    526.7,
+    551.2
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    618.82,
+    526.7,
+    632.2
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    366.26,
+    526.7,
+    379.64
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    277.46,
+    526.7,
+    290.84
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    105.84,
+    526.7,
+    119.22
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    445.48,
+    526.7,
+    458.86
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    380.06,
+    526.7,
+    393.44
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    242.06,
+    526.7,
+    255.44
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    105.84,
+    526.7,
+    119.22
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    269.66,
+    526.7,
+    283.04
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    340.88,
+    526.7,
+    354.26
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    450.4,
+    530.0,
+    463.78
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    72.85,
+    185.32,
+    101.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 5",
+   "bbox": [
+    72.0,
+    108.18,
+    525.3,
+    121.56
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1. Introduction ........................................................................................................ 5",
+   "bbox": [
+    72.0,
+    128.82,
+    525.3,
+    142.2
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ..................................................................................... 5",
+   "bbox": [
+    72.0,
+    149.54,
+    525.3,
+    162.92
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "3. Policy Summary ................................................................................................. 8",
+   "bbox": [
+    72.0,
+    170.24,
+    525.3,
+    183.62
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Country Information ............................................................................................... 10",
+   "bbox": [
+    72.0,
+    191.0,
+    525.3,
+    204.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4. Organised crime in Jamaica ............................................................................ 10",
+   "bbox": [
+    72.0,
+    211.64,
+    525.3,
+    225.02
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "5. Nature of organised crime ................................................................................ 11",
+   "bbox": [
+    72.0,
+    232.34,
+    525.3,
+    245.72
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "6. Legislation and other police initiatives ............................................................. 20",
+   "bbox": [
+    72.0,
+    253.04,
+    525.3,
+    266.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "7. Witness Protection Programme ....................................................................... 28",
+   "bbox": [
+    72.0,
+    273.74,
+    525.3,
+    287.12
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 32",
+   "bbox": [
+    72.0,
+    294.5,
+    525.3,
+    307.88
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 32",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "2015",
+   "bbox": [
+    72.0,
+    758.63,
+    97.05,
+    769.8
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 32",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Jamaica: Fear of organised criminal gangs",
+ "cover_version": "1.0",
+ "cover_date": "July 2015",
+ "pdf_sha256": "d4cb69cb49b90e62660576d288ba8eb01a436fbfe365ae8c9eacd1fa580dfe87",
+ "images": []
+}

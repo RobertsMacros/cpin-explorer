@@ -329,6 +329,94 @@
       "content_id": "cc417d69-aa82-4781-ad28-d981c484e1cb",
       "public_updated_at": "2024-07-15T09:43:20Z",
       "last_fetched": "2026-10-02T12:09:19Z"
+    },
+    "angola": {
+      "name": "Angola",
+      "base_path": "/government/publications/angola-country-policy-and-information-notes",
+      "content_id": "674a9bd5-e08b-46ec-a86e-900b9bf28e71",
+      "public_updated_at": "2016-12-09T14:44:00+00:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2019-11-26T17:00:29Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "cameroon": {
+      "name": "Cameroon",
+      "base_path": "/government/publications/cameroon-country-policy-and-information-notes",
+      "content_id": "0fbc8d33-4467-4f74-9187-02eb7c1af2c1",
+      "public_updated_at": "2024-04-08T14:36:27+01:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2024-08-14T14:18:27Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "liberia": {
+      "name": "Liberia",
+      "base_path": "/government/publications/liberia-country-policy-and-information-notes",
+      "content_id": "49aed927-1d37-4437-9961-d48ecb8afb02",
+      "public_updated_at": "2017-02-10T14:02:09+00:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2019-11-26T17:01:39Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "malawi": {
+      "name": "Malawi",
+      "base_path": "/government/publications/malawi-country-policy-and-information-notes",
+      "content_id": "e32c2f84-ce4b-4203-b09e-84e64947586b",
+      "public_updated_at": "2020-10-27T14:55:23+00:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2025-01-13T13:26:35Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "mali": {
+      "name": "Mali",
+      "base_path": "/government/publications/mali-country-policy-and-information-notes",
+      "content_id": "c452e60c-9657-4e49-8b88-8f7393bde831",
+      "public_updated_at": "2016-12-12T10:28:00+00:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2019-11-26T17:02:39Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "north-korea": {
+      "name": "North Korea",
+      "base_path": "/government/publications/north-korea-country-policy-and-information-notes",
+      "content_id": "3f67f3da-a524-44df-8e59-bcbc05fabdad",
+      "public_updated_at": "2021-07-15T14:09:50+01:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2021-07-15T13:10:51Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "rwanda": {
+      "name": "Rwanda",
+      "base_path": "/government/publications/rwanda-country-policy-and-information-notes",
+      "content_id": "2ac13901-ca5b-41b6-9ac3-3b5c20a88dfb",
+      "public_updated_at": "2024-05-20T13:37:17+01:00",
+      "last_fetched": "2026-10-04T14:36:02Z",
+      "withdrawn_at": "2025-04-24T13:57:34Z",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "botswana": {
+      "name": "Botswana",
+      "base_path": "/government/publications/botswana-country-policy-and-information-notes",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "mauritius": {
+      "name": "Mauritius",
+      "base_path": "/government/publications/mauritius-country-policy-and-information-notes",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "moldova": {
+      "name": "Moldova",
+      "base_path": "/government/publications/moldova-country-policy-and-information-notes",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "morocco": {
+      "name": "Morocco",
+      "base_path": "/government/publications/morocco-country-policy-and-information-notes",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
+    },
+    "south-africa": {
+      "name": "South Africa",
+      "base_path": "/government/publications/south-africa-country-policy-and-information-notes",
+      "dropped_from_collection": "2026-10-04T14:36:02Z"
     }
   }
 }

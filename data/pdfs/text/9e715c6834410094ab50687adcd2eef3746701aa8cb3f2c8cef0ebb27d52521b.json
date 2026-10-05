@@ -1,0 +1,862 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 47,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 45,
+ "paragraphs": 223,
+ "list_items": 4,
+ "tables": 1,
+ "figures": 7,
+ "footnotes": 127,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 104"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    42.54,
+    43.39,
+    157.78,
+    72.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface",
+   "bbox": [
+    42.54,
+    99.19,
+    97.01,
+    114.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Paragraphs",
+   "bbox": [
+    503.26,
+    137.83,
+    555.28,
+    147.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Section 1: Guidance",
+   "bbox": [
+    42.54,
+    173.13,
+    184.93,
+    188.72
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of claim  1.1",
+   "bbox": [
+    42.54,
+    201.08,
+    528.68,
+    215.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.2 Summary of issues  1.2",
+   "bbox": [
+    42.54,
+    214.88,
+    528.68,
+    228.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.3 Consideration of issues  1.3",
+   "bbox": [
+    42.54,
+    228.68,
+    528.68,
+    242.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.4 Policy Summary 1.4",
+   "bbox": [
+    42.54,
+    242.48,
+    528.68,
+    256.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Section 2: Information",
+   "bbox": [
+    42.54,
+    270.21,
+    198.13,
+    285.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 State Security Apparatus 2.1",
+   "bbox": [
+    42.54,
+    298.22,
+    528.68,
+    312.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Overview 2.1.1",
+   "bbox": [
+    92.16,
+    312.02,
+    538.72,
+    326.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Police 2.1.5",
+   "bbox": [
+    92.16,
+    325.82,
+    538.72,
+    340.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Military 2.1.8",
+   "bbox": [
+    92.16,
+    339.62,
+    538.72,
+    354.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Central Intelligence Organisation 2.1.11",
+   "bbox": [
+    92.16,
+    353.42,
+    545.38,
+    368.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Judiciary 2.1.13",
+   "bbox": [
+    92.16,
+    367.22,
+    545.38,
+    381.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Human Rights Commission 2.1.18",
+   "bbox": [
+    92.16,
+    381.02,
+    545.38,
+    395.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Other pro-ZANU-PF groups 2.1.21",
+   "bbox": [
+    92.16,
+    394.82,
+    545.38,
+    409.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Political landscape 2.2",
+   "bbox": [
+    42.54,
+    422.42,
+    528.68,
+    437.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Treatment of actual and perceived political opponents 2.3",
+   "bbox": [
+    42.54,
+    449.98,
+    528.68,
+    464.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "MDC members, supporters and perceived critics of ZANU-PF 2.3.1",
+   "bbox": [
+    92.16,
+    463.78,
+    538.72,
+    478.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Statistics 2.3.20",
+   "bbox": [
+    92.16,
+    477.58,
+    545.38,
+    492.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Teachers 2.3.23",
+   "bbox": [
+    92.16,
+    491.38,
+    545.38,
+    506.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Human Rights Defenders (HRDs) and members of Civil Society 2.3.33",
+   "bbox": [
+    92.16,
+    505.18,
+    545.38,
+    520.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Organisations (CSOs)",
+   "bbox": [
+    92.16,
+    518.98,
+    220.2,
+    532.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Journalists 2.3.44",
+   "bbox": [
+    92.16,
+    532.78,
+    545.38,
+    547.6
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 47",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 44 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 45 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 46 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 47 of 47",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  }
+ ],
+ "figure_pages": {
+  "fca039ed81d8cbada6469a5b0bbd08f097017e813bebb958c56a887a82168f23.png": 4,
+  "e009e1507525afd511ca7b6285fd00789d57028635589e6b12072d2485fc1c6f.png": 5,
+  "901ae7d74965025acc85059ba8da0bc2295bfc8a19e38152f4782de43fa565be.png": 6,
+  "8d6b7e8c62fae138e511e15e47dfb70c60126ff32b6db6903780d62b80b5a70c.png": 7,
+  "74415aa19d43e152d8ca4cfe14656b330c77bb87476693a15a53633d01015a21.jpg": 28,
+  "f94f15058678432ff8fcd1a2dd7fc88bf8a0909348cc8e6b3909618748bf030b.jpg": 40,
+  "88a2f791e57eb367bc6fd22376931be71ef8f7c14990c41d3ac3798d054ca20c.png": 47
+ },
+ "figure_sizes": {
+  "fca039ed81d8cbada6469a5b0bbd08f097017e813bebb958c56a887a82168f23.png": [
+   273,
+   1485
+  ],
+  "e009e1507525afd511ca7b6285fd00789d57028635589e6b12072d2485fc1c6f.png": [
+   273,
+   1484
+  ],
+  "901ae7d74965025acc85059ba8da0bc2295bfc8a19e38152f4782de43fa565be.png": [
+   273,
+   1484
+  ],
+  "8d6b7e8c62fae138e511e15e47dfb70c60126ff32b6db6903780d62b80b5a70c.png": [
+   974,
+   1494
+  ],
+  "74415aa19d43e152d8ca4cfe14656b330c77bb87476693a15a53633d01015a21.jpg": [
+   885,
+   1135
+  ],
+  "f94f15058678432ff8fcd1a2dd7fc88bf8a0909348cc8e6b3909618748bf030b.jpg": [
+   985,
+   735
+  ],
+  "88a2f791e57eb367bc6fd22376931be71ef8f7c14990c41d3ac3798d054ca20c.png": [
+   1037,
+   141
+  ]
+ },
+ "figure_text": {
+  "fca039ed81d8cbada6469a5b0bbd08f097017e813bebb958c56a887a82168f23.png": 124,
+  "e009e1507525afd511ca7b6285fd00789d57028635589e6b12072d2485fc1c6f.png": 52,
+  "901ae7d74965025acc85059ba8da0bc2295bfc8a19e38152f4782de43fa565be.png": 30,
+  "8d6b7e8c62fae138e511e15e47dfb70c60126ff32b6db6903780d62b80b5a70c.png": 2442,
+  "74415aa19d43e152d8ca4cfe14656b330c77bb87476693a15a53633d01015a21.jpg": 3,
+  "f94f15058678432ff8fcd1a2dd7fc88bf8a0909348cc8e6b3909618748bf030b.jpg": 0,
+  "88a2f791e57eb367bc6fd22376931be71ef8f7c14990c41d3ac3798d054ca20c.png": 91
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Zimbabwe: Political Opposition to ZANU-PF October 2014",
+ "cover_version": null,
+ "cover_date": "October 2014",
+ "pdf_sha256": "9e715c6834410094ab50687adcd2eef3746701aa8cb3f2c8cef0ebb27d52521b",
+ "images": [
+  "74415aa19d43e152d8ca4cfe14656b330c77bb87476693a15a53633d01015a21.jpg",
+  "88a2f791e57eb367bc6fd22376931be71ef8f7c14990c41d3ac3798d054ca20c.png",
+  "8d6b7e8c62fae138e511e15e47dfb70c60126ff32b6db6903780d62b80b5a70c.png",
+  "901ae7d74965025acc85059ba8da0bc2295bfc8a19e38152f4782de43fa565be.png",
+  "e009e1507525afd511ca7b6285fd00789d57028635589e6b12072d2485fc1c6f.png",
+  "f94f15058678432ff8fcd1a2dd7fc88bf8a0909348cc8e6b3909618748bf030b.jpg",
+  "fca039ed81d8cbada6469a5b0bbd08f097017e813bebb958c56a887a82168f23.png"
+ ]
+}

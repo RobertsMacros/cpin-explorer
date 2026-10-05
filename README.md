@@ -23,31 +23,76 @@ It has three parts:
 
 ## Status
 
-**2 October 2026: one tested run. Not yet sustained operation.**
+**5 October 2026: handover, archive integration and PDF-only cleanup reviewed for publication to `main`.**
+The owner authorised the push on 5 October. Publication checks are recorded in
+[the main review](docs/reviews/2026-10-05-main-review.md). The live site remains the earlier deployment from
+`f389a3e`; Cloudflare publication requires the missing repository secrets. These are tested runs, not
+evidence of sustained operation.
 
-- **Full sync:** 47 countries, 164 HTML notes and 175 PDFs (173.4 MB) in 3 min 49 s, no errors.
-- **`verify --live --pdf`:**
-  - All 164 bodies and 175 PDFs match their recorded hashes.
-  - Every country, note and PDF GOV.UK lists is stored.
-  - A live re-fetch of all 164 notes was byte-identical to the stored bodies.
-  - Across 147,182 sentences, 96.6% of the HTML edition's sentences appear word for word in the PDF edition, and 3.2% are the same words split by page layout. 0.2% are unmatched, mostly chart captions that the PDF holds as images.
-  - Every note scores at least 95%.
-- **Internet Archive backfill:** running. The first two countries yielded 28 earlier editions at URLs GOV.UK has since retired. For example, Afghanistan "fear of the Taliban" goes from v2.0 (Feb 2022) to v5.0 (Oct 2025).
-- **Images:** all 408 images the current notes embed (mostly SVG maps and charts, 44.0 MB) are mirrored and hash-verified. `verify` confirms every image a current note uses is held. None of the source images has alt text.
-- **PDF-only editions:** eleven reports have a current edition with no web version (Gambia's one report; France: safe third
-  country; Ghana and Brazil: sexual orientation; Palestine: humanitarian situation in Gaza; India: political parties; two for
-  Zimbabwe; fact-finding reports for Albania, Sri Lanka and Vietnam). Their text is taken from the PDFs and laid out like any
-  other edition (`./cpin pdftext`, `src/cpin/pdftext.py`), so they can be read, searched, cited and compared; each is marked
-  "From the PDF" and links the PDF, because the layout is a reconstruction. See "Text from PDFs" below.
-- **Kept verbatim, as published:**
-  - Title typos: "(accesible)", "country police and information note", "country and policy information note".
-  - A broken Markdown link in a China note.
-- **Since then (4 October 2026):** the Internet Archive backfill covered all 47 countries (239 archive
-  copies, which are 158 archived editions: two copies whose words are the same, white space aside, are one
-  edition); 333 editions are grouped into 197 reports; the link checker has tested 16,495 cited links; the
-  site is hosted on Cloudflare and redeployed after each sync that changes content.
-- **Not done yet:**
-  - R2 storage for PDFs.
+- **Held and displayed:** 47 current countries and 12 former countries; 175 current reports; 435 report
+  histories, of which 217 hold multiple editions; 664 archived editions, including 504 recovered as PDFs.
+  There are 706 country-report PDFs and a separate PDF of GOV.UK's About CPINs publication.
+- **Withdrawn and removed countries:** the seven withdrawn pages and their 17 PDFs are held, with withdrawal
+  dates and grey reading pages. Archive recovery also holds nine PDFs and three web captures for the five
+  taken-down countries. Former countries remain separate from the 47 current countries.
+- **Archive catalogue:** all **829 of 829 catalogued editions** are held, across the 47 current countries and
+  five taken-down countries. This is full coverage of the existing catalogue, not proof that every historical
+  report ever issued has been discovered. The manual National Archives list now has zero outstanding editions.
+- **Archive import, 5 October 2026:** all 138 distinct National Archives PDFs from the 1,265 browser-downloaded
+  captures, plus Home Office copies of Kenya operational guidance (December 2013) and Pakistan Ahmadis
+  (June 2018) recovered from ecoi.net, are registered, extracted and displayed in Explorer. All 140 exported
+  editions were individually checked against their original PDF hashes, titles, sources and capture dates;
+  each is historical and marked “From the PDF”. Both citation formats were checked for all 140 real editions. Repository copies have no invented capture dates. Citations,
+  reader source panels and dashboard tooltips name the actual archive or repository.
+  Original bytes remain in `data/pdfs/files/`, with all 140 friendly named links and the download indices in
+  `data/pdfs/national-archives/`. The wider 4,200-link search collection was not downloaded; its extra captures
+  are not needed to close the existing catalogue's gaps. The pipeline's National Archives HTTP guard remains
+  enabled; this import is offline. The original 32 failed-fetch attempts are retained with resolution evidence:
+  all 32 editions have valid held PDFs, leaving zero unresolved editions. The failed capture URLs themselves
+  were not repaired. See `import-report.json` and `integration-check.json` in the download folder.
+- **Citations:** saved highlights retain their saved edition, paragraph and source. A verified match in
+  current guidance is shown separately; choosing “Cite the current edition instead” changes the citation.
+  Reader, Saved and Word export were checked with an older Iran edition and a recovered Afghan PDF edition.
+- **Local verification:** 277 Python tests and 322 JavaScript tests; 405 stored bodies, 707 PDFs and 682 images
+  match their hashes, with no integrity or current-collection completeness problems. The site build contains
+  7,905 files (452 MB), within its configured hosting limits.
+- **PDF extraction, 5 October 2026:** `pdftext-6`; all 535 PDF-only files audited against raw source text
+  and an independent Poppler reading. Old contents/margin furniture and sentence-order faults were cleaned
+  in the derived view; 67 pipeline reading views changed (66 displayed editions). Original PDFs remain
+  untouched and all 532 displayed PDF edition identities remain reachable. The 164 web/PDF checks and
+  comparisons completed without failures; neither paired wording score worsened. All seven final picture
+  contact sheets match the inspected sheets. See [the PDF-only review](docs/reviews/2026-10-05-pdf-only-cleanup.md)
+  for source scores, manually resolved audit flags and the remaining reused-footnote-number limitation.
+- **Archive browser checks, 5 October 2026:** the rebuilt local site passed Chromium checks at 1440×900 and
+  390×844: dashboard to Afghanistan history to its January 2016 National Archives edition, Pakistan’s
+  June 2018 ecoi.net copy and return to current guidance, and Kenya’s December 2013 guidance. Source panels
+  name the correct provider, repository copies have no capture date, and there are no relevant console errors.
+  These new additions have not been separately retested in native Safari or on a physical iPhone.
+- **Earlier browser and performance checks, 4 October 2026:** Chromium and WebKit at 1440×900 and 390×844, native macOS Safari and
+  iPhone Simulator Safari. The reader's initial layout jump was fixed. Physical iPhone gestures remain
+  unchecked. See [the completion review](docs/reviews/2026-10-04-handover-completion.md) for measurements and scope.
+- **Daily workflow:** reviewed and corrected; fetched data is committed before later processing failures are
+  reported, and a failed sync cannot publish. Push validation now runs independently of Cloudflare secrets.
+  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are still missing, so publication is skipped. The
+  rewritten daily sync will become active on `main`; it has not yet completed a scheduled GitHub run.
+- **Dead-link archive refresh:** all 1,470 lookups completed near each note's own date, with archive copies
+  found for 677 dead cited links; 2 h 20 min 12 s, no lookup left undated. Link status was re-exported.
+
+**Earlier live-source check, 2 October 2026:** one full sync fetched 47 countries, 164 HTML notes and 175 PDFs
+(173.4 MB) in 3 min 49 s, without errors. A live re-fetch of all 164 HTML bodies was byte-identical; all current
+408 embedded images were held. The older sentence-based PDF check found 96.6% exact matches and 3.2% page-layout
+splits across 147,182 sentences, with every note scoring at least 95%. This historical check is distinct from
+the current extraction and word-by-word publication comparison. Source typos and broken source markup remain
+unchanged in stored bodies.
+
+To rebuild after importing already-downloaded archive PDFs:
+```bash
+.venv/bin/python scripts/import_archive_downloads.py  # offline; validates all files before writing the manifest
+./cpin pdftext
+./cpin export
+(cd web && npm run search-index && npm run site)
+```
+Re-importing the same hashes is idempotent and preserves any existing live file and all PDF history.
 
 ## What it collects
 
@@ -96,10 +141,30 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 ./cpin recover         # removed editions the backfill cannot see (PDF-only, or under a page's earlier address):
                        # catalogue (data/wayback-catalogue.json), then fetch what is not held; --discover-only stops after the catalogue
 ./cpin pdftext         # read the text of PDF-only editions, listed now or recovered
+./cpin supplementary   # hold the seven withdrawn countries, About CPINs and write the manual archive list
 ./cpin rederive        # recompute what is derived from stored bodies (version numbers, text fingerprints); bodies untouched
 ./cpin images          # mirror every image the current notes embed (sync does this for changed countries)
 ./cpin status
 ```
+
+### Save original PDFs from exact links
+
+Put one exact PDF link per line in a text file, then run from the repository root:
+
+```bash
+.venv/bin/python scripts/save_pdf_links.py links.txt --out ~/Downloads/CPIN-PDFs
+```
+
+The downloader uses the existing polite client, saves the original bytes under their content hashes,
+checks that each PDF is readable and not truncated, and writes a separate JSON report of sources and failures.
+It keeps existing files and earlier reports; it does not import the files into the site's edition histories.
+Five synthetic tests cover byte preservation, repeat downloads, invalid/truncated responses, existing-file
+corruption and refusal of National Archives requests. No live download was made to test this helper.
+
+Supply a dated archive capture when an earlier edition is wanted. A GOV.UK URL may now lead to a newer
+edition; a structural PDF check does not confirm its title or edition. Timeline pages are rejected, and
+National Archives requests remain blocked by the handover's manual-access rule. The helper does not discover
+captures, print pages to PDF or automate the National Archives list.
 
 ### Prototypes (site design)
 
@@ -112,6 +177,7 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
 #                                                                                 one report: read, history, changes
 # http://localhost:8781/prototypes/redline-timeline/                            redline sample (invented text)
 # http://localhost:8781/prototypes/saved/                                       saved highlights
+# http://localhost:8781/prototypes/about/                                       GOV.UK About CPINs
 # http://localhost:8781/prototypes/guide/                                       guide and glossary
 # http://localhost:8781/prototypes/dashboard/?q=internal%20relocation            search (one box: countries, reports, text)
 ```
@@ -275,8 +341,9 @@ tiny on a globe, so every country has a clickable pin and appears in the A–Z l
 **Credit:** the Home Office is credited in text ("Sources: Home Office, GOV.UK"). Its logo is not used:
 the Open Government Licence excludes departmental logos, and it would suggest official endorsement.
 
-`.github/workflows/sync.yml` runs a quick sync daily and a full sync weekly, commits changes to
-`data/`, and, when content changed, calls `deploy.yml`. PDFs are kept out of git
+The branch’s rewritten `.github/workflows/sync.yml` is configured for a quick sync daily and a full sync
+weekly, retaining changed `data/` before verification and deploying only after successful checks. It has not
+yet run on GitHub. PDFs are kept out of git
 (`data/pdfs/files/`); they are meant for Cloudflare R2, which is not set up yet.
 
 ## Hosting
@@ -289,10 +356,10 @@ The site is a static-assets-only Cloudflare Worker (`web/wrangler.jsonc`), live 
   can't fetch a page never sees its noindex.
 - **Build:** `web/build-site.mjs` copies only what the pages load into `site/` (gitignored), keeping the
   repo's layout so relative links work, and checks Cloudflare's limits (25 MB a file, 20,000 files).
-  PDFs are not shipped; PDF links go to GOV.UK.
+  PDFs are not shipped; PDF links go to GOV.UK or the recorded Internet Archive copy.
 - **Deploy by hand:** after `./cpin export` and `cd web && npm run search-index`, run
   `cd web && npm run deploy` (needs `npx wrangler login` once).
-- **Deploy automatically:** `.github/workflows/deploy.yml` runs after a sync that changed content, on
+- **Automatic deployment configuration (not yet verified on GitHub):** `.github/workflows/deploy.yml` runs after a sync that changed content, on
   pushes that change the site, or by hand. It needs two repository secrets, `CLOUDFLARE_API_TOKEN`
   (a token with "Edit Cloudflare Workers") and `CLOUDFLARE_ACCOUNT_ID`; without them it notes that and
   stops. Mirrored images are cached between runs, so only new ones are fetched.

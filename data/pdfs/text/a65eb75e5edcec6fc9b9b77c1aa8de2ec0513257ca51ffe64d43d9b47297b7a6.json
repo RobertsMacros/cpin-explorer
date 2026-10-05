@@ -1,0 +1,644 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 27,
+ "paragraphs": 113,
+ "list_items": 26,
+ "tables": 3,
+ "figures": 1,
+ "footnotes": 33,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 7, 11"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    242.36,
+    526.7,
+    255.74
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    434.74,
+    526.7,
+    448.12
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    402.58,
+    128.64,
+    523.94,
+    142.02
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    402.58,
+    263.06,
+    523.94,
+    276.44
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    397.46,
+    526.7,
+    410.84
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    402.58,
+    617.44,
+    523.94,
+    630.82
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    402.58,
+    191.66,
+    523.94,
+    205.04
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    402.58,
+    280.28,
+    523.94,
+    293.66
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.04,
+    164.06,
+    524.06,
+    177.44
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    360.04,
+    327.86,
+    524.72,
+    341.24
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.04,
+    665.02,
+    524.06,
+    678.4
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.04,
+    75.24,
+    524.06,
+    88.62
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    421.52,
+    526.7,
+    434.9
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    75.85,
+    183.28,
+    104.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.0,
+    130.08,
+    525.3,
+    143.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.0,
+    148.82,
+    525.3,
+    162.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.48,
+    167.6,
+    525.3,
+    180.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.0,
+    186.44,
+    525.3,
+    199.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.48,
+    205.22,
+    525.3,
+    218.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.48,
+    224.0,
+    525.3,
+    237.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Internal relocation ..................................................................................... 7",
+   "bbox": [
+    107.48,
+    242.78,
+    525.3,
+    256.16
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Certification .............................................................................................. 7",
+   "bbox": [
+    107.48,
+    261.62,
+    525.3,
+    275.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy Summary ............................................................................................... 7",
+   "bbox": [
+    84.0,
+    280.4,
+    525.3,
+    293.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 8",
+   "bbox": [
+    72.0,
+    299.24,
+    525.3,
+    312.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. General living standards .................................................................................. 8",
+   "bbox": [
+    84.0,
+    318.02,
+    525.3,
+    331.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Internally Displaced Persons (IDPs) ................................................................ 9",
+   "bbox": [
+    84.0,
+    336.8,
+    525.3,
+    350.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Humanitarian conditions ................................................................................ 11",
+   "bbox": [
+    84.0,
+    355.58,
+    525.3,
+    368.96
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Humanitarian assistance ............................................................................... 15",
+   "bbox": [
+    84.0,
+    374.42,
+    525.3,
+    387.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Government support ............................................................................... 15",
+   "bbox": [
+    107.48,
+    393.2,
+    525.3,
+    406.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Non-Government Organisation (NGO) support ...................................... 17",
+   "bbox": [
+    107.48,
+    411.98,
+    525.3,
+    425.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.3 International support ............................................................................... 20",
+   "bbox": [
+    107.48,
+    430.82,
+    525.3,
+    444.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 23",
+   "bbox": [
+    72.0,
+    449.62,
+    525.3,
+    463.0
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.0,
+    758.63,
+    97.05,
+    769.8
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  }
+ ],
+ "figure_pages": {
+  "e66f95cc0a1bbf4445baa0062b9cb915f76295aecc56271cf19b8a38f4986a64.png": 10
+ },
+ "figure_sizes": {
+  "e66f95cc0a1bbf4445baa0062b9cb915f76295aecc56271cf19b8a38f4986a64.png": [
+   919,
+   687
+  ]
+ },
+ "figure_text": {
+  "e66f95cc0a1bbf4445baa0062b9cb915f76295aecc56271cf19b8a38f4986a64.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Iraq: Humanitarian situation",
+ "cover_version": "3.0",
+ "cover_date": "August 2016",
+ "pdf_sha256": "a65eb75e5edcec6fc9b9b77c1aa8de2ec0513257ca51ffe64d43d9b47297b7a6",
+ "images": [
+  "e66f95cc0a1bbf4445baa0062b9cb915f76295aecc56271cf19b8a38f4986a64.png"
+ ]
+}

@@ -1,0 +1,699 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 20,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 30,
+ "paragraphs": 134,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 40,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 12"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    227.27,
+    526.76,
+    240.65
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    159.2,
+    526.76,
+    172.58
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    402.25,
+    526.76,
+    415.63
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    527.41,
+    526.76,
+    540.79
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    239.27,
+    526.76,
+    252.65
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    367.67,
+    526.76,
+    381.05
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    468.49,
+    526.76,
+    481.87
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    147.2,
+    526.76,
+    160.58
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    224.99,
+    526.76,
+    238.37
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    208.4,
+    526.76,
+    221.78
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    286.19,
+    526.76,
+    299.57
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    105.8,
+    526.76,
+    119.18
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    636.88,
+    526.76,
+    650.26
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    269.63,
+    526.76,
+    283.01
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    534.25,
+    526.76,
+    547.63
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    228.23,
+    526.76,
+    241.61
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    514.45,
+    526.76,
+    527.83
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    242.03,
+    526.76,
+    255.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    356.63,
+    526.76,
+    370.01
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    277.43,
+    526.76,
+    290.81
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    542.08,
+    526.76,
+    555.46
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    105.8,
+    526.76,
+    119.18
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    616.24,
+    526.76,
+    629.62
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    339.95,
+    526.76,
+    353.33
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.69,
+    185.37,
+    101.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    108.2,
+    525.44,
+    121.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ........................................................................................................ 4",
+   "bbox": [
+    72.02,
+    128.96,
+    525.44,
+    142.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ..................................................................................... 4",
+   "bbox": [
+    72.02,
+    149.6,
+    525.44,
+    162.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ................................................................................................. 5",
+   "bbox": [
+    72.02,
+    170.36,
+    525.44,
+    183.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 6",
+   "bbox": [
+    72.02,
+    191.0,
+    525.44,
+    204.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Geography and demography ............................................................................. 6",
+   "bbox": [
+    72.02,
+    211.76,
+    525.44,
+    225.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. History ................................................................................................................ 7",
+   "bbox": [
+    72.02,
+    232.43,
+    525.44,
+    245.81
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Economy ............................................................................................................ 7",
+   "bbox": [
+    72.02,
+    253.19,
+    525.44,
+    266.57
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Political System ................................................................................................. 8",
+   "bbox": [
+    72.02,
+    273.83,
+    525.44,
+    287.21
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Security Apparatus .......................................................................................... 10",
+   "bbox": [
+    72.02,
+    294.59,
+    525.44,
+    307.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9. Judiciary ........................................................................................................... 16",
+   "bbox": [
+    72.02,
+    315.23,
+    525.44,
+    328.61
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "10. Freedom of movement ..................................................................................... 18",
+   "bbox": [
+    72.02,
+    335.87,
+    525.44,
+    349.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "11. Citizenship ....................................................................................................... 19",
+   "bbox": [
+    72.02,
+    356.63,
+    525.44,
+    370.01
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 20",
+   "bbox": [
+    72.02,
+    377.27,
+    525.44,
+    390.65
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 20",
+   "bbox": [
+    274.85,
+    794.44,
+    322.47,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 20",
+   "bbox": [
+    272.57,
+    794.44,
+    324.63,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Jamaica: Background information, including actors of protection and internal relocation",
+ "cover_version": "1.0",
+ "cover_date": "May 2016",
+ "pdf_sha256": "dfd3480290488f7b2875d7fa751978cc69f00d71043badc4af0c833c40a39a10",
+ "images": []
+}

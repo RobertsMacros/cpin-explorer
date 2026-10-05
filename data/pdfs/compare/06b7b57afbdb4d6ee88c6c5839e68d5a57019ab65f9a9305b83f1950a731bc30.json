@@ -1,12 +1,12 @@
 {
  "method": "webpdf-8",
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "iraq/country-bulletin-internal-relocation-civil-documentation-and-returns-update-following-setting-aside-of-country-guidance-iraq-july-2026-accessib",
  "pdf_sha256": "06b7b57afbdb4d6ee88c6c5839e68d5a57019ab65f9a9305b83f1950a731bc30",
  "body_sha256": "047b9c46997a9f080046ccbb69d9b83f048f13465c4a15a643421326040e5566",
  "words": {
   "web": 5955,
-  "pdf": 5959
+  "pdf": 5956
  },
  "summary": {
   "wording": {
@@ -56,17 +56,12 @@
     "pdf_words": 0
    },
    "furniture": {
-    "differences": 1,
+    "differences": 0,
     "web_words": 0,
-    "pdf_words": 3
+    "pdf_words": 0
    }
   },
   "kinds": {
-   "back to contents": {
-    "differences": 1,
-    "web_words": 0,
-    "pdf_words": 3
-   },
    "heading": {
     "differences": 1,
     "web_words": 1,
@@ -155,24 +150,6 @@
    },
    "size": "word",
    "second": "agrees"
-  },
-  {
-   "kind": "back to contents",
-   "group": "furniture",
-   "verdict": "real",
-   "web": "",
-   "pdf": "Back to Contents",
-   "web_words": 0,
-   "pdf_words": 3,
-   "before": "well as via Baghdad International Airport if required.",
-   "after": "5.2 Returns statistics\n5.2 The table",
-   "before_pdf": "well as\nvia Baghdad International Airport if required.",
-   "where": {
-    "heading": "returns-statistics",
-    "paragraph": "5.1.7",
-    "section": "Country information",
-    "page": 11
-   }
   },
   {
    "kind": "numbering",

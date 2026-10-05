@@ -1,5 +1,5 @@
 {
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "pages": 35,
  "body_size": 12.0,
  "body_font": "arial",
@@ -14,20 +14,1254 @@
   "no bookmarks: headings found by type size and numbering",
   "footnotes with no mark found in the text: 3, 57, 58, 59"
  ],
+ "omitted_furniture": [
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    248.27,
+    526.78,
+    261.65
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    430.09,
+    526.78,
+    443.47
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    622.6,
+    526.78,
+    635.98
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    436.45,
+    526.78,
+    449.83
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    503.65,
+    526.78,
+    517.03
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    156.2,
+    526.78,
+    169.58
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    501.85,
+    526.78,
+    515.23
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    717.3,
+    526.78,
+    730.68
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    472.81,
+    526.78,
+    486.19
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    188.84,
+    526.78,
+    202.22
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    581.2,
+    526.78,
+    594.58
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    258.83,
+    526.78,
+    272.21
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    122.6,
+    526.78,
+    135.98
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    497.29,
+    526.78,
+    510.67
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    416.53,
+    526.78,
+    429.91
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    395.89,
+    526.78,
+    409.27
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    393.97,
+    526.78,
+    407.35
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    122.6,
+    526.78,
+    135.98
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    646.96,
+    526.78,
+    660.34
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    683.32,
+    526.78,
+    696.7
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    654.88,
+    526.78,
+    668.26
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    408.85,
+    526.78,
+    422.23
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    191.6,
+    526.78,
+    204.98
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    410.65,
+    526.78,
+    424.03
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    428.74,
+    197.6,
+    526.78,
+    210.98
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    345.83,
+    526.78,
+    359.21
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    286.43,
+    526.78,
+    299.81
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    108.8,
+    526.78,
+    122.18
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    192.56,
+    526.78,
+    205.94
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    396.01,
+    526.78,
+    409.39
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    197.6,
+    526.78,
+    210.98
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    519.25,
+    526.78,
+    532.63
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    367.67,
+    526.78,
+    381.05
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    75.69,
+    183.33,
+    104.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Policy Guidance ....................................................................................................... 5",
+   "bbox": [
+    72.02,
+    111.08,
+    525.46,
+    124.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 5",
+   "bbox": [
+    84.02,
+    129.92,
+    525.46,
+    143.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of claim ........................................................................................... 5",
+   "bbox": [
+    107.42,
+    148.64,
+    525.46,
+    162.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.2 Points to note ........................................................................................... 5",
+   "bbox": [
+    107.42,
+    167.48,
+    525.46,
+    180.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 5",
+   "bbox": [
+    84.02,
+    186.32,
+    525.46,
+    199.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 5",
+   "bbox": [
+    107.42,
+    205.04,
+    525.46,
+    218.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Particular social group .............................................................................. 5",
+   "bbox": [
+    107.42,
+    223.88,
+    525.46,
+    237.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Assessment of risk ................................................................................... 6",
+   "bbox": [
+    107.42,
+    242.75,
+    525.46,
+    256.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Protection ................................................................................................. 7",
+   "bbox": [
+    107.42,
+    261.47,
+    525.46,
+    274.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Internal relocation ..................................................................................... 8",
+   "bbox": [
+    107.42,
+    280.31,
+    525.46,
+    293.69
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.6 Certification .............................................................................................. 8",
+   "bbox": [
+    107.42,
+    299.15,
+    525.46,
+    312.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 9",
+   "bbox": [
+    84.02,
+    317.87,
+    525.46,
+    331.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ............................................................................................... 10",
+   "bbox": [
+    72.02,
+    336.71,
+    525.46,
+    350.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Types of FGM ................................................................................................ 10",
+   "bbox": [
+    84.02,
+    355.55,
+    525.46,
+    368.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Prevalence of FGM in Ghana ........................................................................ 10",
+   "bbox": [
+    84.02,
+    374.27,
+    525.46,
+    387.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 By type of FGM ...................................................................................... 10",
+   "bbox": [
+    107.42,
+    393.13,
+    525.46,
+    406.51
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 By age group .......................................................................................... 11",
+   "bbox": [
+    107.42,
+    411.97,
+    525.46,
+    425.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Trends .................................................................................................... 12",
+   "bbox": [
+    107.42,
+    430.69,
+    525.46,
+    444.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 By region ................................................................................................ 14",
+   "bbox": [
+    107.42,
+    449.53,
+    525.46,
+    462.91
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 By ethnic group ...................................................................................... 16",
+   "bbox": [
+    107.42,
+    468.37,
+    525.46,
+    481.75
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.6 By religion ............................................................................................... 16",
+   "bbox": [
+    107.42,
+    487.09,
+    525.46,
+    500.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.7 Other factors ........................................................................................... 17",
+   "bbox": [
+    107.42,
+    505.93,
+    525.46,
+    519.31
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.8 Actors of violence/harm .......................................................................... 18",
+   "bbox": [
+    107.42,
+    524.77,
+    525.46,
+    538.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Societal attitudes ........................................................................................... 19",
+   "bbox": [
+    84.02,
+    543.49,
+    525.46,
+    556.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. 2011 Multiple Indicator Cluster Study Tables ................................................ 20",
+   "bbox": [
+    84.02,
+    562.36,
+    525.46,
+    575.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Female genital mutilation/cutting (FGM/C) among women (aged 15-49) 20",
+   "bbox": [
+    107.42,
+    581.2,
+    525.46,
+    594.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Female genital mutilation/cutting (FGM/C) among girls (aged 0-15) ...... 21",
+   "bbox": [
+    107.42,
+    599.92,
+    525.46,
+    613.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.3 Approval of female genital mutilation/cutting (FGM/C) ........................... 22",
+   "bbox": [
+    107.42,
+    618.76,
+    525.46,
+    632.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Legal context ................................................................................................. 23",
+   "bbox": [
+    84.02,
+    637.6,
+    525.46,
+    650.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.1 Specific anti-FGM laws ........................................................................... 23",
+   "bbox": [
+    107.42,
+    656.32,
+    525.46,
+    669.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.2 Other provisions ..................................................................................... 24",
+   "bbox": [
+    107.42,
+    675.16,
+    525.46,
+    688.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9. State actions to tackle FGM and violence against women ............................. 26",
+   "bbox": [
+    84.02,
+    693.88,
+    525.46,
+    707.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.1 Laws in practice ...................................................................................... 26",
+   "bbox": [
+    107.42,
+    712.74,
+    525.46,
+    726.12
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.2 Prosecutions ........................................................................................... 27",
+   "bbox": [
+    107.42,
+    731.58,
+    525.46,
+    744.96
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "9.3 Public statements ................................................................................... 29",
+   "bbox": [
+    107.42,
+    750.3,
+    525.46,
+    763.68
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "9.4 Initiatives and programs ......................................................................... 29",
+   "bbox": [
+    107.42,
+    75.2,
+    525.46,
+    88.58
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "9.5 Training and awareness ......................................................................... 31",
+   "bbox": [
+    107.42,
+    94.04,
+    525.46,
+    107.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "10. Assistance available to women ...................................................................... 32",
+   "bbox": [
+    84.02,
+    112.76,
+    525.46,
+    126.14
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "10.1 Government run shelters ........................................................................ 32",
+   "bbox": [
+    107.42,
+    131.6,
+    525.46,
+    144.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "10.2 Non-government run shelters ................................................................. 32",
+   "bbox": [
+    107.42,
+    150.44,
+    525.46,
+    163.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11. Freedom of movement ................................................................................... 32",
+   "bbox": [
+    84.02,
+    169.16,
+    525.46,
+    182.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.1 Freedom of movement for women .......................................................... 32",
+   "bbox": [
+    107.42,
+    188.0,
+    525.46,
+    201.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "11.2 Economic opportunities .......................................................................... 33",
+   "bbox": [
+    107.42,
+    206.84,
+    525.46,
+    220.22
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 35",
+   "bbox": [
+    72.02,
+    225.56,
+    525.46,
+    238.94
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 35",
+   "bbox": [
+    274.87,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 35",
+   "bbox": [
+    272.59,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
  "figure_pages": {
-  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": 10,
+  "152d62edcd8eaeadd82e04e09a815ec124d744567bbd9cc38cdde32bb3f8ab24.png": 10,
   "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": 15,
   "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png": 16,
   "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png": 17,
   "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg": 18,
-  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": 20,
+  "4a648120cb9d2832c7d90a65baab14e6305044ad1e27f3c09100e1ca6c3e2bc6.jpg": 20,
   "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": 21,
-  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": 22
+  "46c38d7c685d0559f25b4545fa93c3017a7993593bac65cbdb1e51135c8f7ec8.jpg": 22
  },
  "figure_sizes": {
-  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": [
+  "152d62edcd8eaeadd82e04e09a815ec124d744567bbd9cc38cdde32bb3f8ab24.png": [
    829,
-   196
+   193
   ],
   "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": [
    920,
@@ -45,28 +1279,28 @@
    861,
    454
   ],
-  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": [
+  "4a648120cb9d2832c7d90a65baab14e6305044ad1e27f3c09100e1ca6c3e2bc6.jpg": [
    900,
-   1060
+   1059
   ],
   "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": [
    871,
    1177
   ],
-  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": [
+  "46c38d7c685d0559f25b4545fa93c3017a7993593bac65cbdb1e51135c8f7ec8.jpg": [
    923,
-   1124
+   1123
   ]
  },
  "figure_text": {
-  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png": 62,
+  "152d62edcd8eaeadd82e04e09a815ec124d744567bbd9cc38cdde32bb3f8ab24.png": 62,
   "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png": 0,
   "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png": 0,
   "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png": 0,
   "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg": 0,
-  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg": 2,
+  "4a648120cb9d2832c7d90a65baab14e6305044ad1e27f3c09100e1ca6c3e2bc6.jpg": 2,
   "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg": 1,
-  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg": 2
+  "46c38d7c685d0559f25b4545fa93c3017a7993593bac65cbdb1e51135c8f7ec8.jpg": 2
  },
  "first_bookmark_page": null,
  "cover_title": "Country Policy and Information Note Ghana: Female genital mutilation (FGM)",
@@ -75,12 +1309,12 @@
  "pdf_sha256": "bdc325d6028a24217f5eab872aeb75cd6fcbafe62d183564b88e7b0a45ed637c",
  "images": [
   "09b737773f337b6bf4060bcd5b10687bed485d1da10098b55502199a7a76432e.png",
+  "152d62edcd8eaeadd82e04e09a815ec124d744567bbd9cc38cdde32bb3f8ab24.png",
   "22e898b106dd8a4efffd89bc5f2dab598cc02229c6ca6f50a991afa95bb2a13f.png",
+  "46c38d7c685d0559f25b4545fa93c3017a7993593bac65cbdb1e51135c8f7ec8.jpg",
+  "4a648120cb9d2832c7d90a65baab14e6305044ad1e27f3c09100e1ca6c3e2bc6.jpg",
   "95d221c885c4449259a78b864da9add5b2f39c119df66e155018639d3aae6f5e.jpg",
-  "9b0f1954c98920d8db19ca1f5341cc0cd1c28a9651d5d6d6274018be85aef653.jpg",
   "a722971661350d2e31b6d93e130c6f20a3a670e9abdd1d040cbb407d124bb086.jpg",
-  "a7fa8cf6aa0848dff0e1cdf2a736bb8d1a0c66d294f3d603872682b92fc52140.jpg",
-  "bcef6abe957117fb3ad53c90f8518a6540c3c755bb062238acb3a4abdac22fc4.png",
   "f33d37fbfdf6b73a441d8f346667dce7d81d19b2597466005dfca249094b997c.png"
  ]
 }

@@ -24,7 +24,7 @@
 // Citations come from formatCitation (citation.js) and are not rewritten: its HTML (<i>, <a>) is turned
 // into Word runs, so the .docx says exactly what "Copy citation" copies.
 import { capFirst, citedMonth, formatCitation, formatPinpoint, longDate, quoteOf, sourceOf, STYLE_NAMES } from "./citation.js";
-import { citeContext, groupHighlights } from "./highlights.js";
+import { citeContext, groupHighlights, stillLine } from "./highlights.js";
 
 export const APP_NAME = "CPIN Explorer";
 
@@ -96,7 +96,7 @@ export function htmlRuns(html) {
 
 /** What a highlight's Heading 3 says: "Para 9.1.1 — 9. Armed forces structure". */
 export function highlightHeading(r) {
-  const now = r.check === "still" && r.current ? r.current : r;
+  const now = r;
   const pin = now.para ? capFirst(formatPinpoint(now.para)) : "Passage";
   const section = now.section ? collapse(now.section) : "";
   return { pin, section, text: section ? `${pin} — ${section}` : pin };
@@ -343,9 +343,8 @@ export async function buildCitationsDocx(docx, records, {
     const when = editions.map((e) => [e.month, e.version ? `v${e.version}` : ""].filter(Boolean).join(" · ")).filter(Boolean).join("  /  ");
     const versions = [...new Set(editions.map((e) => e.version).filter(Boolean))];
     const gone = ni.status && ni.status !== "live";
-    // Where the note is: for one read from a PDF, the PDF itself (its entry's GOV.UK address is the country's page).
-    const url = n.items[0].fromPdf ? String(n.items[0].cited.url || "").replace(/#.*$/, "")
-      : (gone ? ni.archive_url : ni.govuk_url) || ni.govuk_url || String(first.url || "").replace(/#.*$/, "");
+    // The same edition as the citation, including its archived copy where a reused GOV.UK URL has moved on.
+    const url = String(n.items[0].cited.url || "").replace(/#.*$/, "");
     return { kind, versions, when, gone, status: ni.status, url, title: n.items[0].cited.title || n.title || ni.title };
   }
 
@@ -383,8 +382,8 @@ export async function buildCitationsDocx(docx, records, {
     ];
     const status = [];
     if (r.createdAt) status.push(run(`Saved ${longDate(r.createdAt)}`, { size: 14, color: C.ink2 }));
-    if (r.check === "still" && r.current?.version) {
-      status.push(run(`${status.length ? " · " : ""}Still in v${r.current.version}: the words are unchanged and the citation points to where they now sit.`, { size: 14, color: C.ink2 }));
+    if (stillLine(r)) {
+      status.push(run(`${status.length ? " · " : ""}${stillLine(r)}. The citation stays with the edition saved.`, { size: 14, color: C.ink2 }));
     }
     if (status.length) kids.push(new D.Paragraph({ keepNext: true, spacing: { after: 140 }, children: status }));
     if (changed) {

@@ -47,3 +47,24 @@ def test_no_step_between_the_sync_and_the_commit_can_stop_the_commit():
 def test_a_quiet_day_makes_no_commit():
     commit = next(s for s in steps() if s["name"] == "Commit data changes")
     assert "grep -qv '^data/runs.jsonl$'" in commit["text"]
+
+
+def test_a_failed_sync_or_verification_cannot_publish_retained_data():
+    deploy = WORKFLOW.read_text().split("\n  deploy:\n", 1)[1]
+    assert "needs.sync.result == 'success'" in deploy
+    assert "needs.sync.outputs.changed == 'true'" in deploy
+    publication = WORKFLOW.with_name('deploy.yml').read_text()
+    assert 'python -m cpin images --all' in publication
+    assert publication.index('npm test') < publication.index('npx wrangler deploy')
+    assert publication.index('python -m cpin verify') < publication.index('npx wrangler deploy')
+
+
+def test_push_checks_run_without_cloudflare_and_a_failed_test_cannot_deploy():
+    publication = WORKFLOW.with_name('deploy.yml').read_text()
+    tests = publication.split('\n  test:\n', 1)[1].split('\n  check:\n', 1)[0]
+    assert 'if:' not in tests and 'secrets.' not in tests
+    assert 'pytest -q' in tests and 'npm test' in tests and 'python -m cpin verify' in tests
+    assert 'poppler-utils' in tests
+    deploy = publication.split('\n  deploy:\n', 1)[1]
+    assert 'needs: [test, check]' in deploy
+    assert 'if: needs.check.outputs.ready' in deploy and 'always()' not in deploy

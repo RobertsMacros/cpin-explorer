@@ -1,0 +1,930 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 29,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 37,
+ "paragraphs": 184,
+ "list_items": 14,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 30,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 29, 30"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    397.99,
+    262.07,
+    526.76,
+    275.45
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    397.99,
+    454.57,
+    526.76,
+    467.95
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    404.71,
+    683.68,
+    526.76,
+    697.06
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    136.4,
+    526.76,
+    149.78
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    588.88,
+    526.76,
+    602.26
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    503.65,
+    526.76,
+    517.03
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    638.08,
+    523.4,
+    651.46
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    216.05,
+    408.85,
+    532.1,
+    422.23
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    465.61,
+    523.4,
+    478.99
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    432.07,
+    410.65,
+    524.12,
+    424.03
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    108.8,
+    523.4,
+    122.18
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    272.63,
+    523.4,
+    286.01
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    396.07,
+    108.8,
+    524.84,
+    122.18
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    197.6,
+    523.4,
+    210.98
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    411.61,
+    523.4,
+    424.99
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    72.02,
+    136.4,
+    524.12,
+    149.78
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    432.07,
+    252.83,
+    524.12,
+    266.21
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    396.07,
+    286.43,
+    524.84,
+    299.81
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    114.62,
+    600.28,
+    523.4,
+    613.66
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    72.02,
+    95.0,
+    523.98,
+    108.38
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    75.69,
+    183.3,
+    104.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    111.08,
+    525.44,
+    124.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction .................................................................................................... 4",
+   "bbox": [
+    86.18,
+    129.92,
+    525.44,
+    143.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.42,
+    148.64,
+    525.44,
+    162.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.2 Other points to note .................................................................................. 4",
+   "bbox": [
+    107.42,
+    167.48,
+    525.44,
+    180.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................ 4",
+   "bbox": [
+    86.18,
+    186.32,
+    525.44,
+    199.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.42,
+    205.04,
+    525.44,
+    218.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Particular social group (PSG) ................................................................... 4",
+   "bbox": [
+    107.42,
+    223.88,
+    525.44,
+    237.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Assessment of risk ................................................................................... 5",
+   "bbox": [
+    107.42,
+    242.75,
+    525.44,
+    256.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Protection ................................................................................................. 7",
+   "bbox": [
+    107.42,
+    261.47,
+    525.44,
+    274.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Internal relocation ..................................................................................... 8",
+   "bbox": [
+    107.42,
+    280.31,
+    525.44,
+    293.69
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.6 Certification .............................................................................................. 9",
+   "bbox": [
+    107.42,
+    299.15,
+    525.44,
+    312.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................. 8",
+   "bbox": [
+    86.18,
+    317.87,
+    525.44,
+    331.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ............................................................................................... 10",
+   "bbox": [
+    72.02,
+    336.71,
+    525.44,
+    350.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Sexual and gender-based violence in Somalia ......................................... 10",
+   "bbox": [
+    86.18,
+    355.55,
+    525.44,
+    368.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.1 Overview ................................................................................................ 10",
+   "bbox": [
+    107.42,
+    374.27,
+    525.44,
+    387.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 State response to sexual and gender-based violence ............................ 14",
+   "bbox": [
+    107.42,
+    393.11,
+    525.44,
+    406.49
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.3 Displaced women ................................................................................... 17",
+   "bbox": [
+    107.42,
+    411.97,
+    525.44,
+    425.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.4 Assistance and support for women ........................................................ 18",
+   "bbox": [
+    107.42,
+    430.69,
+    525.44,
+    444.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Sexual and gender-based violence in south and central Somalia .......... 20",
+   "bbox": [
+    86.18,
+    449.53,
+    525.44,
+    462.91
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Rape and sexual violence ...................................................................... 20",
+   "bbox": [
+    107.42,
+    468.37,
+    525.44,
+    481.75
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Al-Shabaab and gender-based violence ................................................ 21",
+   "bbox": [
+    107.42,
+    487.09,
+    525.44,
+    500.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Sexual and gender-based violence in Somaliland .................................... 22",
+   "bbox": [
+    86.18,
+    505.93,
+    525.44,
+    519.31
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 Rape and sexual violence ...................................................................... 22",
+   "bbox": [
+    107.42,
+    524.77,
+    525.44,
+    538.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Sexual and gender-based violence in Puntland........................................ 22",
+   "bbox": [
+    86.18,
+    543.49,
+    525.44,
+    556.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Rape and sexual violence ...................................................................... 22",
+   "bbox": [
+    107.42,
+    562.36,
+    525.44,
+    575.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Gender-based violence .......................................................................... 23",
+   "bbox": [
+    107.42,
+    581.2,
+    525.44,
+    594.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Female genital mutilation (FGM) ................................................................ 24",
+   "bbox": [
+    86.18,
+    599.92,
+    525.44,
+    613.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.1 Overview ................................................................................................ 24",
+   "bbox": [
+    107.42,
+    618.76,
+    525.44,
+    632.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.2 FGM in Puntland .................................................................................... 26",
+   "bbox": [
+    107.42,
+    637.6,
+    525.44,
+    650.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8.3 FGM in Somaliland ................................................................................. 27",
+   "bbox": [
+    107.42,
+    656.32,
+    525.44,
+    669.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 28",
+   "bbox": [
+    72.02,
+    675.16,
+    525.44,
+    688.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 29",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    99.87,
+    769.85
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "2016",
+   "bbox": [
+    72.02,
+    758.75,
+    96.99,
+    769.85
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 29",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Somalia: Women fearing gender- based harm and violence",
+ "cover_version": "3.0",
+ "cover_date": "2 August 2016",
+ "pdf_sha256": "faf6ddd7fa024bedae4cc5bc6ecbc974eafabffe56854576ef570a48e3064aab",
+ "images": []
+}

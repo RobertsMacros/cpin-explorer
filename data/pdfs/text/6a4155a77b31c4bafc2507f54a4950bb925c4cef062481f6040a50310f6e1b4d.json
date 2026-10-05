@@ -1,0 +1,804 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 23,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 34,
+ "paragraphs": 122,
+ "list_items": 7,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 67,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    489.94,
+    526.7,
+    503.32
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    656.08,
+    526.7,
+    669.46
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    264.86,
+    526.76,
+    278.24
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    584.62,
+    526.76,
+    598.0
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    428.66,
+    526.76,
+    442.04
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    108.84,
+    526.76,
+    122.22
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    397.82,
+    526.76,
+    411.2
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    264.86,
+    526.76,
+    278.24
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    353.66,
+    526.76,
+    367.04
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    95.04,
+    526.76,
+    108.42
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    338.72,
+    526.76,
+    352.1
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    574.42,
+    526.76,
+    587.8
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    533.02,
+    526.7,
+    546.4
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    416.66,
+    526.7,
+    430.04
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    434.68,
+    526.7,
+    448.06
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    75.85,
+    183.28,
+    104.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.0,
+    130.08,
+    525.24,
+    143.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.0,
+    148.88,
+    525.24,
+    162.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.0,
+    167.6,
+    525.24,
+    180.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.48,
+    186.44,
+    525.24,
+    199.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.0,
+    205.22,
+    525.24,
+    218.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Is the person’s account credible? ............................................................. 4",
+   "bbox": [
+    107.48,
+    224.0,
+    525.24,
+    237.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Does the person have a well-founded fear of persecution? ..................... 4",
+   "bbox": [
+    107.48,
+    242.78,
+    525.24,
+    256.16
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Does the person fall to be excluded from a grant of protection? .............. 5",
+   "bbox": [
+    107.48,
+    261.62,
+    525.24,
+    275.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Is the humanitarian situation in Pakistan so severe that removal would be",
+   "bbox": [
+    107.48,
+    280.34,
+    523.44,
+    293.72
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "a breach of Article 3 of the ECHR? .................................................................. 6",
+   "bbox": [
+    107.48,
+    294.2,
+    525.24,
+    307.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Is there indiscriminate violence in Pakistan, which is at such a level that",
+   "bbox": [
+    107.48,
+    312.92,
+    514.16,
+    326.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "substantial grounds exist for believing that the person, solely by being present",
+   "bbox": [
+    107.48,
+    326.72,
+    523.64,
+    340.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "there, faces a real risk of harm which threatens their life or person? ............... 6",
+   "bbox": [
+    107.48,
+    340.58,
+    525.24,
+    353.96
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.6 Are those at risk able to internally relocate within Pakistan? .................... 7",
+   "bbox": [
+    107.48,
+    359.42,
+    525.24,
+    372.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.7 If refused, is the claim likely to be certifiable as ‘clearly unfounded’? ....... 7",
+   "bbox": [
+    107.48,
+    378.2,
+    525.24,
+    391.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 8",
+   "bbox": [
+    84.0,
+    396.98,
+    525.24,
+    410.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 9",
+   "bbox": [
+    72.0,
+    415.88,
+    525.24,
+    429.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. The protagonists .............................................................................................. 9",
+   "bbox": [
+    84.0,
+    434.62,
+    525.24,
+    448.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Nature and levels of violence ........................................................................... 9",
+   "bbox": [
+    84.0,
+    453.4,
+    525.24,
+    466.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Trends in 2013/2014 .............................................................................. 10",
+   "bbox": [
+    107.48,
+    472.24,
+    525.24,
+    485.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Trends in 2015 ....................................................................................... 11",
+   "bbox": [
+    107.48,
+    491.02,
+    525.24,
+    504.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 Drone strikes .......................................................................................... 14",
+   "bbox": [
+    107.48,
+    509.8,
+    525.24,
+    523.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 Impact on women and children ............................................................... 15",
+   "bbox": [
+    107.48,
+    528.58,
+    525.24,
+    541.96
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Counter-terrorism strategies .......................................................................... 17",
+   "bbox": [
+    84.0,
+    547.42,
+    525.24,
+    560.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 Military operations .................................................................................. 17",
+   "bbox": [
+    107.48,
+    566.2,
+    525.24,
+    579.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.2 National Action Plan (NAP) .................................................................... 18",
+   "bbox": [
+    107.48,
+    584.98,
+    525.24,
+    598.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Humanitarian situation ................................................................................... 19",
+   "bbox": [
+    84.0,
+    603.82,
+    525.24,
+    617.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Internally displaced persons (IDPs) ........................................................ 19",
+   "bbox": [
+    107.48,
+    622.6,
+    525.24,
+    635.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.2 Afghan refugees ..................................................................................... 20",
+   "bbox": [
+    107.48,
+    641.38,
+    525.24,
+    654.76
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.3 Aid workers, journalists and and human rights defenders ...................... 21",
+   "bbox": [
+    107.48,
+    660.22,
+    525.24,
+    673.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 23",
+   "bbox": [
+    72.0,
+    679.06,
+    525.24,
+    692.44
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 23",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 23",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  }
+ ],
+ "figure_pages": {
+  "f7d7bf0c2d1ac2cd5c4dd5c360847c3900323c2630b8401067d010d329952648.png": 14,
+  "34de2df3c93653bfbd7aab7047531272266981f76c9ec2dabc1fb67eb98230c3.png": 15
+ },
+ "figure_sizes": {
+  "f7d7bf0c2d1ac2cd5c4dd5c360847c3900323c2630b8401067d010d329952648.png": [
+   917,
+   484
+  ],
+  "34de2df3c93653bfbd7aab7047531272266981f76c9ec2dabc1fb67eb98230c3.png": [
+   628,
+   247
+  ]
+ },
+ "figure_text": {
+  "f7d7bf0c2d1ac2cd5c4dd5c360847c3900323c2630b8401067d010d329952648.png": 0,
+  "34de2df3c93653bfbd7aab7047531272266981f76c9ec2dabc1fb67eb98230c3.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Pakistan: Security and humanitarian situation",
+ "cover_version": "1.0",
+ "cover_date": "November 2015",
+ "pdf_sha256": "6a4155a77b31c4bafc2507f54a4950bb925c4cef062481f6040a50310f6e1b4d",
+ "images": [
+  "34de2df3c93653bfbd7aab7047531272266981f76c9ec2dabc1fb67eb98230c3.png",
+  "f7d7bf0c2d1ac2cd5c4dd5c360847c3900323c2630b8401067d010d329952648.png"
+ ]
+}

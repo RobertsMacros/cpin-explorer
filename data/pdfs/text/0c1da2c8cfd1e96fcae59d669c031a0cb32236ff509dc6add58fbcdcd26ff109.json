@@ -1,0 +1,353 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 15,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 24,
+ "paragraphs": 64,
+ "list_items": 5,
+ "tables": 0,
+ "figures": 2,
+ "footnotes": 40,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    42.54,
+    50.11,
+    157.78,
+    79.08
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface",
+   "bbox": [
+    42.54,
+    105.85,
+    97.01,
+    121.44
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Paragraphs",
+   "bbox": [
+    503.26,
+    144.57,
+    555.28,
+    154.61
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance",
+   "bbox": [
+    42.54,
+    179.85,
+    110.23,
+    195.44
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Basis of claim 1.1",
+   "bbox": [
+    78.0,
+    207.38,
+    528.68,
+    221.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Specific issues 1.2",
+   "bbox": [
+    78.0,
+    221.18,
+    528.68,
+    234.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Consideration of issues  1.3",
+   "bbox": [
+    78.0,
+    234.98,
+    528.68,
+    248.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Information",
+   "bbox": [
+    42.54,
+    263.13,
+    123.43,
+    278.72
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Overview 2.1",
+   "bbox": [
+    78.0,
+    290.18,
+    528.68,
+    304.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Non state armed groups 2.2",
+   "bbox": [
+    78.0,
+    303.98,
+    528.68,
+    318.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "The Pakistani Taliban 2.2.2",
+   "bbox": [
+    92.16,
+    317.78,
+    538.72,
+    332.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Sectarian violence 2.3",
+   "bbox": [
+    78.0,
+    331.58,
+    528.68,
+    345.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Politically motivated violence 2.4",
+   "bbox": [
+    78.0,
+    345.38,
+    528.68,
+    359.66
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Internally displaced persons (IDPs) 2.5",
+   "bbox": [
+    78.0,
+    359.18,
+    528.68,
+    373.46
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 15",
+   "bbox": [
+    269.3,
+    781.37,
+    328.81,
+    792.54
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 15",
+   "bbox": [
+    266.48,
+    781.37,
+    331.57,
+    792.54
+   ]
+  }
+ ],
+ "figure_pages": {
+  "7fcc54f1d4d011f481c6b1f9a1964140fa558fe88fbd0dd37f5bcbbdeee0417f.png": 4,
+  "708e3966b1d7261dcb1ab085f1b02f2a46e31e5f4dd6b5e5e54bc6f8bcdd7abf.jpg": 13
+ },
+ "figure_sizes": {
+  "7fcc54f1d4d011f481c6b1f9a1964140fa558fe88fbd0dd37f5bcbbdeee0417f.png": [
+   977,
+   1479
+  ],
+  "708e3966b1d7261dcb1ab085f1b02f2a46e31e5f4dd6b5e5e54bc6f8bcdd7abf.jpg": [
+   469,
+   638
+  ]
+ },
+ "figure_text": {
+  "7fcc54f1d4d011f481c6b1f9a1964140fa558fe88fbd0dd37f5bcbbdeee0417f.png": 2006,
+  "708e3966b1d7261dcb1ab085f1b02f2a46e31e5f4dd6b5e5e54bc6f8bcdd7abf.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Pakistan: Fear of the Taliban and other militant groups",
+ "cover_version": null,
+ "cover_date": null,
+ "pdf_sha256": "0c1da2c8cfd1e96fcae59d669c031a0cb32236ff509dc6add58fbcdcd26ff109",
+ "images": [
+  "708e3966b1d7261dcb1ab085f1b02f2a46e31e5f4dd6b5e5e54bc6f8bcdd7abf.jpg",
+  "7fcc54f1d4d011f481c6b1f9a1964140fa558fe88fbd0dd37f5bcbbdeee0417f.png"
+ ]
+}

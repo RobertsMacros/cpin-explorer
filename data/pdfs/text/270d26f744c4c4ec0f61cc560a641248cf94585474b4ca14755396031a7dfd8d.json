@@ -1,0 +1,1282 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 71,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 31,
+ "paragraphs": 421,
+ "list_items": 34,
+ "tables": 4,
+ "figures": 0,
+ "footnotes": 58,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 4, 5, 8, 16, 17, 18, 19, 20, 21, 22, 23, 24…"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    207.44,
+    526.76,
+    220.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    341.87,
+    526.49,
+    355.25
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    652.48,
+    526.76,
+    665.86
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    240.23,
+    526.76,
+    253.61
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    490.45,
+    526.76,
+    503.83
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    202.4,
+    526.76,
+    215.78
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    552.61,
+    526.19,
+    565.99
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    133.4,
+    526.76,
+    146.78
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    481.81,
+    526.19,
+    495.19
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    667.12,
+    526.76,
+    680.5
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    519.13,
+    526.76,
+    532.51
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "navigation",
+   "text": "Back to contents",
+   "bbox": [
+    434.71,
+    436.57,
+    526.76,
+    449.95
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.69,
+    185.34,
+    101.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    108.2,
+    525.44,
+    121.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ........................................................................................................ 4",
+   "bbox": [
+    72.02,
+    128.96,
+    525.44,
+    142.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ..................................................................................... 4",
+   "bbox": [
+    72.02,
+    149.6,
+    525.44,
+    162.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.02,
+    170.36,
+    525.44,
+    183.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Sources .............................................................................................................. 7",
+   "bbox": [
+    72.02,
+    191.0,
+    525.44,
+    204.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Returns statistics ............................................................................................... 9",
+   "bbox": [
+    72.02,
+    211.76,
+    525.44,
+    225.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Treatment of returns ........................................................................................ 11",
+   "bbox": [
+    72.02,
+    232.4,
+    525.44,
+    245.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex A – IGC FAS survey, 18 November 2014 .................................................. 17",
+   "bbox": [
+    72.02,
+    253.19,
+    525.44,
+    266.57
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex B – IGC survey of FNOs, 18 November 2014 ............................................ 21",
+   "bbox": [
+    72.02,
+    273.83,
+    525.44,
+    287.21
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex C – IGC survey of FAS returns, August 2013 ........................................... 26",
+   "bbox": [
+    72.02,
+    294.59,
+    525.44,
+    307.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex D – IGC survey of FNOs, 16 December 2013 ............................................ 32",
+   "bbox": [
+    72.02,
+    315.23,
+    525.44,
+    328.61
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex E – FCO letter of meeting with French official ......................................... 38",
+   "bbox": [
+    72.02,
+    335.87,
+    525.44,
+    349.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex F – FCO letter of meeting with Belgian official ........................................ 39",
+   "bbox": [
+    72.02,
+    356.63,
+    525.44,
+    370.01
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex G – FCO letter of meeting with Swiss official .......................................... 42",
+   "bbox": [
+    72.02,
+    377.27,
+    525.44,
+    390.65
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex H – FCO letter of meeting with Kinshasa-based human rights",
+   "bbox": [
+    72.02,
+    398.05,
+    461.41,
+    411.43
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "organisation ............................................................................................................ 44",
+   "bbox": [
+    72.02,
+    418.69,
+    525.44,
+    432.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex I: FCO letter of meeting with UNHRO ....................................................... 47",
+   "bbox": [
+    72.02,
+    439.45,
+    525.44,
+    452.83
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex J – FCO letter of conversation with returnee, 11 December  2014 ......... 49",
+   "bbox": [
+    72.02,
+    460.09,
+    525.44,
+    473.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex K – FCO letter of meeting with IOM, 20 November 2014 ......................... 51",
+   "bbox": [
+    72.02,
+    480.85,
+    525.44,
+    494.23
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex L – FCO letter re return of 13/14 October 2014 ........................................ 53",
+   "bbox": [
+    72.02,
+    501.49,
+    525.44,
+    514.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex M – FCO letter re return of 16/17 October 2014 ....................................... 54",
+   "bbox": [
+    72.02,
+    522.25,
+    525.44,
+    535.63
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex N – FCO letter re return of 13/14 November  2014 ................................... 55",
+   "bbox": [
+    72.02,
+    542.89,
+    525.44,
+    556.27
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex P – FCO letter re two returns on 5/6 December 2014 .............................. 57",
+   "bbox": [
+    72.02,
+    563.68,
+    525.44,
+    577.06
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex Q – FCO letter of meeting with DGM, 23 January 2014 ........................... 58",
+   "bbox": [
+    72.02,
+    584.32,
+    525.44,
+    597.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex R – FCO letter, Interview with DGM of 24 September 2014 ..................... 60",
+   "bbox": [
+    72.02,
+    605.08,
+    525.44,
+    618.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex S - FCO letter re meeting with the Director N’Djili Airport ...................... 63",
+   "bbox": [
+    72.02,
+    625.72,
+    525.44,
+    639.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex T – notes of meetings with DGM secondee, 15 October 2014 ................ 64",
+   "bbox": [
+    72.02,
+    646.48,
+    525.44,
+    659.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex U – IOM assisted voluntary returns data .................................................. 67",
+   "bbox": [
+    72.02,
+    667.12,
+    525.44,
+    680.5
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex V – Home Office note on facilitated returns scheme ............................... 68",
+   "bbox": [
+    72.02,
+    687.88,
+    525.44,
+    701.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex W – Home Office FNO returns data ........................................................... 70",
+   "bbox": [
+    72.02,
+    708.52,
+    525.44,
+    721.9
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 71",
+   "bbox": [
+    72.02,
+    729.3,
+    525.44,
+    742.68
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 71",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 44 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 45 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 46 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 47 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 48 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 49 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 50 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 51 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 52 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 53 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 54 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 55 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 56 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "page number",
+   "text": "Page 57 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "page number",
+   "text": "Page 58 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "page number",
+   "text": "Page 59 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "page number",
+   "text": "Page 60 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 61,
+   "kind": "page number",
+   "text": "Page 61 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "page number",
+   "text": "Page 62 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "page number",
+   "text": "Page 63 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "page number",
+   "text": "Page 64 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "page number",
+   "text": "Page 65 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "page number",
+   "text": "Page 66 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 67,
+   "kind": "page number",
+   "text": "Page 67 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 68,
+   "kind": "page number",
+   "text": "Page 68 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "page number",
+   "text": "Page 69 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "page number",
+   "text": "Page 70 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "page number",
+   "text": "Page 71 of 71",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Democratic Republic of Congo: treatment on return",
+ "cover_version": "1.1",
+ "cover_date": "September 2015",
+ "pdf_sha256": "270d26f744c4c4ec0f61cc560a641248cf94585474b4ca14755396031a7dfd8d",
+ "images": []
+}

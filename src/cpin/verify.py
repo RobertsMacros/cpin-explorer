@@ -38,7 +38,10 @@ def check_integrity(store: Store) -> dict:
             else:
                 bodies += 1
     pdfs = 0
-    for url, entry in store.load_pdf_manifest().items():
+    manifest = store.load_pdf_manifest()
+    entries = [(url, record) for url, entry in manifest.items()
+               for record in (entry, *entry.get("previous", []))]
+    for url, entry in entries:
         path = store.pdf_path(entry["sha256"])
         if path.exists():
             if sha256_bytes(path.read_bytes()) != entry["sha256"]:

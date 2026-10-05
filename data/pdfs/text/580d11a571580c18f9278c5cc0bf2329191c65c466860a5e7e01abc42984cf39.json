@@ -1,0 +1,677 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 37,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 42,
+ "paragraphs": 290,
+ "list_items": 13,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 98,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 12, 54, 97, 98"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    193.22,
+    556.18,
+    206.6
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    101.1,
+    556.18,
+    114.48
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    452.74,
+    556.18,
+    466.12
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    122.7,
+    556.18,
+    136.08
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    47.7,
+    556.18,
+    61.08
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    85.08,
+    574.06,
+    553.18,
+    587.44
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    42.54,
+    142.52,
+    507.26,
+    155.9
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    438.58,
+    272.72,
+    539.98,
+    286.1
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    438.58,
+    474.28,
+    539.98,
+    487.66
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    537.28,
+    556.18,
+    550.66
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    503.68,
+    556.18,
+    517.06
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    438.58,
+    584.68,
+    536.68,
+    598.06
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    413.06,
+    556.18,
+    426.44
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    88.08,
+    170.12,
+    556.18,
+    183.5
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    312.26,
+    556.18,
+    325.64
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    438.58,
+    156.32,
+    536.68,
+    169.7
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    438.58,
+    472.72,
+    539.98,
+    486.1
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    590.32,
+    556.18,
+    603.7
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    203.24,
+    556.18,
+    216.62
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 37",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "2015",
+   "bbox": [
+    42.54,
+    772.61,
+    67.59,
+    783.78
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "2014",
+   "bbox": [
+    42.54,
+    772.61,
+    67.59,
+    783.78
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "2014",
+   "bbox": [
+    42.54,
+    772.61,
+    67.59,
+    783.78
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 37",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  }
+ ],
+ "figure_pages": {
+  "90c0188597de352408d8d0a20a7a1b68bd8677f86d26a9177457c370edfb5cb7.jpg": 36
+ },
+ "figure_sizes": {
+  "90c0188597de352408d8d0a20a7a1b68bd8677f86d26a9177457c370edfb5cb7.jpg": [
+   1037,
+   804
+  ]
+ },
+ "figure_text": {
+  "90c0188597de352408d8d0a20a7a1b68bd8677f86d26a9177457c370edfb5cb7.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Egypt: Background information, including actors of protection and internal relocation. May 2015",
+ "cover_version": null,
+ "cover_date": "May 2015",
+ "pdf_sha256": "580d11a571580c18f9278c5cc0bf2329191c65c466860a5e7e01abc42984cf39",
+ "images": [
+  "90c0188597de352408d8d0a20a7a1b68bd8677f86d26a9177457c370edfb5cb7.jpg"
+ ]
+}

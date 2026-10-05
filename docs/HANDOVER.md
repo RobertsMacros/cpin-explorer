@@ -3,6 +3,83 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Main publication review, 5 October 2026
+
+The owner authorised pushing the completed work to `main` on 5 October. This supersedes the publication
+hold in the historical sections below. See [the main publication review](reviews/2026-10-05-main-review.md)
+for the final checks and GitHub outcome, and [the PDF-only cleanup review](reviews/2026-10-05-pdf-only-cleanup.md)
+for source evidence and the remaining reused-footnote-number limitation. Local suites now pass 277 Python
+and 322 JavaScript tests. Push validation runs without Cloudflare credentials; publication still requires
+both missing secrets. The scheduled workflow will be active on `main`, but a scheduled run remains unverified.
+
+## Local completion, 4 October 2026
+
+Codex completed the interrupted work locally on this branch, based on `c5f7c5d`. Changes remain
+uncommitted, unpushed and undeployed; live remains the earlier `f389a3e` deployment. Read
+[the completion and audit review](reviews/2026-10-04-handover-completion.md) and
+[the PDF extraction review](reviews/2026-10-04-pdf-extraction.md) for the current results and limits.
+
+Recovered PDF editions are displayed and cite their archive source. Seven withdrawn and five taken-down
+countries are held and shown as former countries. About CPINs is linked from the Guide. The manual National
+Archives list now has 140 editions. Pinned highlights, current-match notes, the current-edition action and
+Word export were checked and corrected. Local suites pass 251 Python and 320 JavaScript tests; integrity
+and completeness checks pass. The code and performance audit and desktop/phone browser rendering checks
+are recorded in the reviews. Physical iPhone gestures remain unchecked.
+
+The dead-link archive refresh completed all 1,470 lookups, finding copies for 677 dead cited links; the
+link status was re-exported. GitHub's two Cloudflare secrets are still missing, and the rewritten workflow
+has never run there. The citation's
+section name for repeated paragraph numbers remains enabled pending the owner's decision. Do not commit,
+push, merge or deploy until the owner says “push”.
+
+A later local helper, `scripts/save_pdf_links.py`, saves exact PDF links serially using the existing polite
+client. It preserves bytes, validates PDF structure and records sources and failures; it does not automate
+the National Archives or import files into report histories. The full Python suite now has 256 passing tests.
+See README’s “Save original PDFs from exact links” section.
+
+At the owner's later explicit request, Codex collected National Archives links through the browser:
+two supplied search exports and all 141 timeline addresses for the 140 missing editions. The timelines
+list 1,265 dated PDF links for 138 PDF addresses, plus 18 HTML captures; two addresses say URL not found.
+Files are in `~/Documents/GitHub/outputs/CPIN National Archives PDF links.txt` and the companion coverage
+CSV. The wider export-and-timeline union has 4,200 links. At the owner's subsequent explicit download
+request, all 1,265 requested timeline PDF captures were downloaded through the ordinary browser and
+validated. They contain 138 distinct PDFs (81,815,314 bytes, 5,135 pages), saved under
+`data/pdfs/files/`, with friendly named links in `data/pdfs/national-archives/By country/`.
+The download records and indices are in `data/pdfs/national-archives/`. Four initial timeouts succeeded on retry;
+there are no failed or pending downloads in that set. `PDF index.csv` lists the 138 files;
+`Capture index.csv` and `download-report.json` preserve all 1,265 source URLs and hashes.
+The wider 4,200-link union was not downloaded. At that stage no files were imported into report histories; the 5 October completion below supersedes
+that status. The pipeline's National Archives guard remains enabled. Read
+[the link collection and download record](reviews/2026-10-04-national-archives-links.md). The original manual-only
+instructions below describe the earlier handover; do not treat this browser collection as permission to
+turn on unattended archive downloads.
+
+## Archive integration completed locally, 5 October 2026
+
+The 138 National Archives PDFs and two remaining Home Office PDFs from ecoi.net are now imported,
+extracted and displayed. The existing catalogue is fully held: 829 of 829 editions, zero missing.
+All 32 earlier failed attempts retain their errors and now record valid PDF evidence for the edition;
+none remains unresolved. This resolves missing editions, not the failed capture URLs themselves.
+
+Run `scripts/import_archive_downloads.py` with the project's Python to re-import the local records;
+it makes no network requests and preserves live files and history. The National Archives HTTP guard
+remains enabled. `data/pdfs/national-archives/PDF index.csv` now lists all 140 original files,
+`import-report.json` records import and failure reconciliation, and `integration-check.json` records
+all 140 exported editions with exact source addresses and hashes. The manual hand-check HTML is
+refreshed to zero outstanding editions; its original version is retained with the download records.
+
+Current local totals: 435 report histories (217 comparable), 664 archived editions, 706 country PDFs
+plus the About PDF. All 535 PDF-only editions have extracted text; zero extraction failures.
+The rebuilt search index has 4,335 current-guidance records and the site has 7,905 files (452 MB).
+Suites pass 263 Python and 322 JavaScript tests; integrity and current-collection completeness pass.
+The source labels and citations distinguish Internet Archive, National Archives and ecoi.net.
+Desktop and mobile Chromium checks cover National Archives and both ecoi.net recoveries, plus returning
+to Pakistan's current edition. Native Safari was tested before this import, not rerun on these additions.
+Changes remain uncommitted, unpushed and undeployed until the owner says “push”.
+
+The sections below preserve the original handover snapshot from `c5f7c5d`; their stopped/not-started labels
+and counts describe that earlier point. Use the reviews above and README Status for current local state.
+
 ## What this is
 
 A mirror of the UK Home Office's Country Policy and Information Notes (CPINs) from GOV.UK, for an asylum
@@ -105,6 +182,7 @@ Done and checked in the browser this round:
 ./cpin pdftext [--figures|--check|--sheets DIR]
 ./cpin compare [--force] [--page FILE]
 ./cpin recover                       ./cpin images [--all]
+./cpin supplementary [--hand-list FILE]
 ./cpin rederive                      ./cpin export
 cd web && npm run search-index && npm run site && npx wrangler deploy     # only when the owner says "push"
 ```

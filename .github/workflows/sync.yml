@@ -111,6 +111,6 @@ jobs:
   # Publish what was committed (a push by this workflow's token doesn't trigger deploy.yml itself).
   deploy:
     needs: sync
-    if: ${{ !cancelled() && needs.sync.outputs.changed == 'true' }}
+    if: ${{ !cancelled() && needs.sync.result == 'success' && needs.sync.outputs.changed == 'true' }}
     uses: ./.github/workflows/deploy.yml
     secrets: inherit

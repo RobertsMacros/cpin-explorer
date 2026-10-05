@@ -1,0 +1,797 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 21,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 29,
+ "paragraphs": 125,
+ "list_items": 4,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 44,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    269.87,
+    526.76,
+    283.25
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    468.37,
+    526.76,
+    481.75
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    575.2,
+    526.76,
+    588.58
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    164.0,
+    526.76,
+    177.38
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    264.83,
+    526.76,
+    278.21
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    440.65,
+    526.76,
+    454.03
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    122.6,
+    526.76,
+    135.98
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    401.05,
+    526.76,
+    414.43
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    535.45,
+    526.76,
+    548.83
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    715.84,
+    526.76,
+    729.22
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    277.67,
+    526.76,
+    291.05
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    453.49,
+    526.76,
+    466.87
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    122.6,
+    526.76,
+    135.98
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    189.8,
+    526.76,
+    203.18
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    383.03,
+    527.86,
+    396.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    414.85,
+    526.76,
+    428.23
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    164.0,
+    526.76,
+    177.38
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    414.85,
+    526.76,
+    428.23
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    399.97,
+    526.76,
+    413.35
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.95,
+    365.15,
+    526.76,
+    378.53
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    75.69,
+    183.3,
+    104.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.02,
+    129.92,
+    525.37,
+    143.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents .................................................................................................................... 3",
+   "bbox": [
+    72.02,
+    148.64,
+    525.37,
+    162.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    167.48,
+    525.37,
+    180.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.02,
+    186.32,
+    525.37,
+    199.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.42,
+    205.04,
+    525.37,
+    218.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.02,
+    223.88,
+    525.37,
+    237.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Is the person’s account a credible one? ....Error! Bookmark not defined.",
+   "bbox": [
+    107.42,
+    242.75,
+    525.37,
+    256.13
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Are Kurds at risk of persecution or serious harm in Turkey? .................... 4",
+   "bbox": [
+    107.42,
+    261.47,
+    525.37,
+    274.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Conclusion ....................................................................................................... 5",
+   "bbox": [
+    107.42,
+    280.31,
+    525.37,
+    293.69
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Are those at risk able to seek effective protection? .................................. 5",
+   "bbox": [
+    107.42,
+    299.15,
+    525.37,
+    312.53
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Are those at risk able to internally relocate? ............................................. 6",
+   "bbox": [
+    107.42,
+    317.87,
+    525.37,
+    331.25
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 If refused, is the claim likely to be certifiable as ‘clearly unfounded’? Error!",
+   "bbox": [
+    107.42,
+    336.71,
+    526.26,
+    350.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Bookmark not defined.",
+   "bbox": [
+    107.42,
+    350.51,
+    239.96,
+    363.89
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 6",
+   "bbox": [
+    84.02,
+    369.35,
+    525.37,
+    382.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.02,
+    388.07,
+    525.37,
+    401.45
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Background ..................................................................................................... 7",
+   "bbox": [
+    84.02,
+    406.93,
+    525.37,
+    420.31
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.1 Demography ............................................................................................. 7",
+   "bbox": [
+    107.42,
+    425.77,
+    525.37,
+    439.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 Legal and constitutional framework .......................................................... 7",
+   "bbox": [
+    107.42,
+    444.49,
+    525.37,
+    457.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.3 History ...................................................................................................... 7",
+   "bbox": [
+    107.42,
+    463.33,
+    525.37,
+    476.71
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Treatment of Kurds ........................................................................................ 11",
+   "bbox": [
+    84.02,
+    482.17,
+    525.37,
+    495.55
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Language ............................................................................................... 11",
+   "bbox": [
+    107.42,
+    500.89,
+    525.37,
+    514.27
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Political participation ............................................................................... 14",
+   "bbox": [
+    107.42,
+    519.73,
+    525.37,
+    533.11
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Back to Contents .................................................................................................. 15",
+   "bbox": [
+    84.02,
+    538.57,
+    525.37,
+    551.95
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Societal violence and hate speech ......................................................... 15",
+   "bbox": [
+    107.42,
+    557.29,
+    525.37,
+    570.67
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 Anti-discrimination legislation ................................................................. 16",
+   "bbox": [
+    107.42,
+    576.16,
+    525.37,
+    589.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 Newroz celebrations ............................................................................... 18",
+   "bbox": [
+    107.42,
+    595.0,
+    525.37,
+    608.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Back to Contents .................................................................................................. 18",
+   "bbox": [
+    84.02,
+    613.72,
+    525.37,
+    627.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.6 Police treatment of Kurds and anti-terrorism laws .................................. 18",
+   "bbox": [
+    107.42,
+    632.56,
+    525.37,
+    645.94
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 21",
+   "bbox": [
+    72.02,
+    651.4,
+    525.37,
+    664.78
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 21",
+   "bbox": [
+    274.85,
+    794.44,
+    323.57,
+    803.41
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 21",
+   "bbox": [
+    272.57,
+    794.44,
+    325.73,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Turkey: Kurdish ethnicity",
+ "cover_version": "1.0",
+ "cover_date": "February 2016",
+ "pdf_sha256": "a7a29b5f1be2dd1b0c27567604630e39f7b6457dac5938b75c70ad6eacefb575",
+ "images": []
+}

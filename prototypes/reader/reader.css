@@ -24,7 +24,12 @@
 html { scroll-padding-top: calc(var(--stick-top, var(--top-h)) + var(--bar-h, 0px) + 1.25rem); }
 .sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
 .spacer { flex: 1; }
-body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; overflow-x: hidden; }
+/* Several bands precede the reader. A three-row grid stretched the empty masthead while
+   data loaded, then moved the whole reading area when that row acquired its text. */
+body { min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+body > main { flex: 1; }
+body > .top, body > .foot { flex-shrink: 0; }
+body.is-loading > :not(.top, .skip) { visibility: hidden; }
 body > * { min-width: 0; }                 /* a one-line caption or bar must never widen the page: it is cut short instead */
 .skip { position: absolute; left: -999px; top: .5rem; z-index: 60; display: flex; align-items: center; height: calc(1.55em + 1rem); background: var(--blue); color: var(--blue-ink); padding: 0 .8rem; font-family: var(--font-mono); font-size: .8rem; line-height: normal; }
 .skip:focus { left: .5rem; }

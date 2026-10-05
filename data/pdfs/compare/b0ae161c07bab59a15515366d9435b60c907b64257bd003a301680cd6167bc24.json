@@ -1,12 +1,12 @@
 {
  "method": "webpdf-8",
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "namibia/country-policy-and-information-note-women-fearing-gender-based-violence-namibia-december-2025-accessible",
  "pdf_sha256": "b0ae161c07bab59a15515366d9435b60c907b64257bd003a301680cd6167bc24",
  "body_sha256": "1c0ad2f91dfaa3c4213639c63d7ccf12e4da005daa7d93038ee751cc4633b8c9",
  "words": {
   "web": 23379,
-  "pdf": 23294
+  "pdf": 23290
  },
  "summary": {
   "wording": {
@@ -90,14 +90,14 @@
    }
   },
   "ours": {
-   "differences": 6,
-   "web_words": 11,
-   "pdf_words": 2
+   "differences": 3,
+   "web_words": 1,
+   "pdf_words": 1
   },
   "moved": {
-   "differences": 1,
+   "differences": 0,
    "web_words": 0,
-   "pdf_words": 11
+   "pdf_words": 0
   },
   "unresolved": {
    "differences": 0,
@@ -127,7 +127,7 @@
   },
   "footnotes": {
    "web": 209,
-   "pdf": 207,
+   "pdf": 209,
    "pdf_raw": 209,
    "differ": false
   },
@@ -247,23 +247,6 @@
  ],
  "ours": [
   {
-   "kind": "footnote",
-   "group": "wording",
-   "verdict": "artefact",
-   "web": "FH, Freedom in the World 2024 (Namibia), 29 February 2024",
-   "pdf": "175",
-   "web_words": 10,
-   "pdf_words": 1,
-   "before": "FH, Freedom in the World 2025 (Namibia), 2025",
-   "after": "USSSD, 2025 Investment ... (Legal System and Judicial Independence),",
-   "where": {
-    "heading": "independent-advisory-group-on-country-information",
-    "paragraph": "18.1.7",
-    "section": "Version control and feedback",
-    "page": 46
-   }
-  },
-  {
    "kind": "spacing",
    "group": "form",
    "verdict": "artefact",
@@ -310,40 +293,6 @@
    "where": {
     "heading": "fair-trial",
     "paragraph": "15.1.4",
-    "section": "Country information",
-    "page": 46
-   }
-  },
-  {
-   "kind": "numbering",
-   "group": "numbering",
-   "verdict": "artefact",
-   "web": "",
-   "pdf": "174",
-   "web_words": 0,
-   "pdf_words": 0,
-   "before": "candidates for a High Court judgeship in December.’",
-   "after": "15.2.3 The USSD’s 2025 Investment",
-   "where": {
-    "heading": "fair-trial",
-    "paragraph": "15.2.3",
-    "section": "Country information",
-    "page": 46
-   }
-  },
-  {
-   "kind": "numbering",
-   "group": "numbering",
-   "verdict": "artefact",
-   "web": "",
-   "pdf": "175",
-   "web_words": 0,
-   "pdf_words": 0,
-   "before": "a backlog of cases across the judicial spectrum ...’",
-   "after": "15.3 Gender specific assistance\n15.3.1",
-   "where": {
-    "heading": "gender-specific-assistance",
-    "paragraph": "15.2.3",
     "section": "Country information",
     "page": 46
    }

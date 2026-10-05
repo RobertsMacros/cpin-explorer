@@ -307,7 +307,7 @@ export function citeContext(rec, { accessed = new Date() } = {}) {
 }
 
 /** Are the words of a highlight from an older edition still in the current one (as last checked)? */
-export const stillCurrent = (rec) => rec.check === "still" && !!rec.current;
+export const stillCurrent = (rec) => rec.check === "still" && !!rec.current && rec.current.current !== false;
 
 /**
  * What to say beside such a highlight: "Still in the current edition (v7.0, para 9.1.1)", with the paragraph
@@ -339,6 +339,7 @@ export function citeCurrent(rec) {
     // where the check kept them: the note that edition is filed under, the words either side, and how the quote reads there
     ...(c.note ? { note: c.note } : {}), ...(has("prefix") ? { prefix: c.prefix, suffix: c.suffix } : {}),
     ...(has("lead") ? { lead: c.lead } : {}), ...(has("spaced") ? { spaced: c.spaced } : {}),
+    ...(has("quote") ? { quote: c.quote } : {}), ...(has("sources") ? { sources: c.sources } : {}),
     check: "current", current: null, archivedCopy: null,
   };
 }

@@ -15,7 +15,7 @@ const TOLERANCE_MS = 60_000;                                // GOV.UK's stamp an
  * lists (gone: true). The caller must not pass an empty list: no pages listed is no answer.
  */
 export function compareWithGovuk(ours, docs, at) {
-  const byPath = new Map(ours.map((c) => [String(c.govuk_url || "").replace(/^https:\/\/www\.gov\.uk/, ""), c]));
+  const byPath = new Map(ours.filter((c) => !c.dropped_from_collection).map((c) => [String(c.govuk_url || "").replace(/^https:\/\/www\.gov\.uk/, ""), c]));
   const newer = [];
   const listed = new Set();
   for (const d of docs || []) {

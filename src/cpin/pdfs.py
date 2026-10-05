@@ -45,7 +45,7 @@ def mirror_pdfs(client: PoliteClient, store: Store, publications: dict[str, dict
             previous = list(entry.get("previous", [])) if entry else []
             if entry and entry["sha256"] != sha:
                 stats["replaced_same_url"] += 1
-                previous.append({k: entry.get(k) for k in ("sha256", "bytes", "first_seen", "last_seen")})
+                previous.append({k: v for k, v in entry.items() if k != "previous"})
             manifest[url] = {
                 "sha256": sha,
                 "bytes": len(r.content),

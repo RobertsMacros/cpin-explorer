@@ -71,7 +71,10 @@ export function editionSource(edition, { note = {}, index = {} } = {}) {
   return { url: note.archive_url || note.govuk_url || "", archived: !!note.archive_url, capturedAt: null };
 }
 
-const isSafe = (url) => !/^\s*(javascript|data|vbscript):/i.test(url || "");
+// Browsers ignore control characters in a URL's scheme, including character references
+// already decoded by the HTML parser. Check that reading before allowing a source link.
+export const sourceUrlAllowed = (url) => !/^(javascript|data|vbscript):/i.test(
+  String(url || "").replace(/[\u0000-\u0020\u007f]/g, ""));
 
 /**
  * Parse a verbatim body into a detached element, dropping anything executable. The words are not
@@ -85,7 +88,7 @@ export function parseBody(html, doc = document) {
   for (const el of root.querySelectorAll("*")) {
     for (const attr of [...el.attributes]) {
       const name = attr.name.toLowerCase();
-      if (name.startsWith("on") || ((name === "href" || name === "src" || name === "xlink:href") && !isSafe(attr.value))) el.removeAttribute(attr.name);
+      if (name.startsWith("on") || ((name === "href" || name === "src" || name === "xlink:href") && !sourceUrlAllowed(attr.value))) el.removeAttribute(attr.name);
     }
   }
   const govspeak = root.querySelector(".govspeak");
@@ -118,10 +121,10 @@ const PARA_EXCLUDE = "table, .footnotes, li, blockquote, .info-notice, .call-to-
  */
 export function analyseBody(root) {
   const doc = root.ownerDocument || document;
-  const starts = new Map(), parts = [];
+  const starts = new Map(), parts = [], nodes = [], offsets = [];
   let off = 0;
   const walker = doc.createTreeWalker(root, 4 /* NodeFilter.SHOW_TEXT */);
-  for (let n = walker.nextNode(); n; n = walker.nextNode()) { starts.set(n, off); parts.push(n.data); off += n.data.length; }
+  for (let n = walker.nextNode(); n; n = walker.nextNode()) { starts.set(n, off); nodes.push(n); offsets.push(off); parts.push(n.data); off += n.data.length; }
   const text = parts.join("");
   const firstTextAt = (el) => {
     const w = doc.createTreeWalker(el, 4);
@@ -167,7 +170,7 @@ export function analyseBody(root) {
     const link = clone.querySelector("a[href^='http']");
     fns.set(n, { n, text: clone.textContent.replace(/\s+/g, " ").trim(), url: link?.getAttribute("href") || null, html: clone.innerHTML.trim() });
   }
-  return { text, depth, paras, anchors, sections, refs, fns, twice };
+  return { text, depth, paras, anchors, sections, refs, fns, twice, nodes, starts: offsets };
 }
 
 /** Paragraph (or range), section and the footnote sources a passage [s, e) cites, including footnotes

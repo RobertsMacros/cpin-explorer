@@ -1,0 +1,1270 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 43,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 43,
+ "paragraphs": 193,
+ "list_items": 0,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 190,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 1,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "page number",
+   "text": "Page 1 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "CONTENTS",
+   "bbox": [
+    267.56,
+    144.03,
+    346.78,
+    159.62
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "1. Introduction 1.1 – 1.4",
+   "bbox": [
+    62.1,
+    171.38,
+    537.4,
+    184.76
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "2. Country assessment 2.1 – 2.2",
+   "bbox": [
+    62.1,
+    198.56,
+    537.4,
+    211.94
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Actors of protection",
+   "bbox": [
+    78.0,
+    214.34,
+    188.1,
+    227.72
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "UNWRA and Article 1D of the 1951 Refugee Convention",
+   "bbox": [
+    78.0,
+    230.24,
+    408.2,
+    243.62
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Internal relocation 2.3",
+   "bbox": [
+    78.0,
+    246.08,
+    507.4,
+    259.52
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Country guidance caselaw  2.4",
+   "bbox": [
+    62.1,
+    277.82,
+    507.4,
+    291.26
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "3. Main categories of claims 3.1 – 3.8",
+   "bbox": [
+    62.1,
+    305.06,
+    537.4,
+    318.44
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "General country situation  3.9",
+   "bbox": [
+    78.0,
+    320.84,
+    507.4,
+    334.28
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Current security and humanitarian situation in the Gaza",
+   "bbox": [
+    106.4,
+    336.74,
+    403.28,
+    350.12
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Current security and humanitarian situation in the West Bank",
+   "bbox": [
+    106.4,
+    352.58,
+    432.62,
+    365.96
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Members of militant groups and those perceived to be involved in security 3.10",
+   "bbox": [
+    78.0,
+    368.48,
+    514.06,
+    381.92
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "offences by the Israeli security services",
+   "bbox": [
+    78.0,
+    384.32,
+    290.1,
+    397.7
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Fatah members and perceived supporters residing in Gaza 3.11",
+   "bbox": [
+    78.0,
+    400.22,
+    514.06,
+    413.66
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Hamas members and perceived supporters residing in the West Bank 3.12",
+   "bbox": [
+    78.0,
+    416.08,
+    514.06,
+    429.52
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Forced recruitment to armed groups 3.13",
+   "bbox": [
+    78.0,
+    431.98,
+    514.06,
+    445.42
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Israeli collaborators 3.14",
+   "bbox": [
+    78.0,
+    447.82,
+    514.06,
+    461.26
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Statelessness and right of re-entry 3.15",
+   "bbox": [
+    78.0,
+    463.72,
+    514.06,
+    477.16
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Prison Conditions 3.16",
+   "bbox": [
+    78.0,
+    479.56,
+    514.06,
+    493.0
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Israel",
+   "bbox": [
+    106.4,
+    495.46,
+    139.08,
+    508.84
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "West Bank",
+   "bbox": [
+    106.4,
+    511.3,
+    167.76,
+    524.68
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Gaza",
+   "bbox": [
+    106.4,
+    527.2,
+    138.42,
+    540.58
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "4. Discretionary Leave 4.1 – 4.2",
+   "bbox": [
+    62.1,
+    554.38,
+    537.4,
+    567.76
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Minors claiming in their own right 4.3",
+   "bbox": [
+    78.0,
+    570.22,
+    507.4,
+    583.66
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Medical treatment 4.4",
+   "bbox": [
+    78.0,
+    586.06,
+    507.4,
+    599.5
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "5. Returns 5.1 – 5.4",
+   "bbox": [
+    62.1,
+    613.3,
+    537.4,
+    626.68
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 43",
+   "bbox": [
+    272.12,
+    814.93,
+    325.7,
+    824.97
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "running header",
+   "text": "Occupied Palestinian Territories OGN v4 19 March 2013",
+   "bbox": [
+    172.64,
+    17.15,
+    425.53,
+    28.32
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 43",
+   "bbox": [
+    269.66,
+    814.93,
+    328.22,
+    824.97
+   ]
+  }
+ ],
+ "figure_pages": {
+  "37d94fb8d303faee72a7ebaf035c8b61e132239612ea9efd8e5c9263c147262f.png": 1
+ },
+ "figure_sizes": {
+  "37d94fb8d303faee72a7ebaf035c8b61e132239612ea9efd8e5c9263c147262f.png": [
+   146,
+   152
+  ]
+ },
+ "figure_text": {
+  "37d94fb8d303faee72a7ebaf035c8b61e132239612ea9efd8e5c9263c147262f.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "OPERATIONAL GUIDANCE NOTE OCCUPIED PALESTINIAN TERRITORIES",
+ "cover_version": "4",
+ "cover_date": "19 March 2013",
+ "pdf_sha256": "d6dd0d45cdcdac24dc61b0566b9fcb8af18f5bcbcfe61ffe4f283fc6f3c78cf9",
+ "images": [
+  "37d94fb8d303faee72a7ebaf035c8b61e132239612ea9efd8e5c9263c147262f.png"
+ ]
+}

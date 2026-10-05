@@ -30,7 +30,7 @@ import os
 import re
 from dataclasses import dataclass, field
 
-EXTRACTOR = "pdftext-2"          # bump when the output for the same PDF would change
+EXTRACTOR = "pdftext-6"          # bump when the output for the same PDF would change
 
 BOLD, ITALIC, SUPER = 16, 2, 1
 PARA_NO = re.compile(r"^\d{1,3}(?:\.\d{1,3}){1,4}\.?$")
@@ -38,7 +38,10 @@ SECTION_NO = re.compile(r"^(\d{1,3}(?:\.\d{1,3}){0,3})\.?\s+\S")
 PAGE_NO = re.compile(r"^(page\s+)?\d+(\s+of\s+\d+)?$", re.I)
 BACK = re.compile(r"^back to contents?$", re.I)
 COVER_DATE = re.compile(r"^(version:?\s*\d+(\.\d+)*|(\d{1,2}\s+)?(january|february|march|april|may|june|july|august|september|october|november|december)(\s+20\d\d)?|20\d\d)$", re.I)
-CONTENTS_LINE = re.compile(r"\.{4,}\s*\d+\s*$")       # "1.1 Credibility ........ 6"
+CONTENTS_LINE = re.compile(r"\.{4,}\s*\d+(?:\.\d+)*(?:\s*[–-]\s*\d+(?:\.\d+)*)?\s*$")
+CONTENTS_REF = re.compile(r"^\d+(?:\.\d+)*(?:\s*[–-]\s*\d+(?:\.\d+)*)?$")
+CONTENTS_ERROR = re.compile(r"\.{4,}\s*Error! Bookmark", re.I)
+MONTH = r"(?:January|February|March|April|May|June|July|August|September|October|November|December)"
 
 BULLET = re.compile("^\\s*([\u2022\u00b7\uf0b7\uf0a7\u25aa\u25a0\u25e6\u25cb\u27a2\uf0d8]|o(?=\\s))\\s*")    # Word's bullet glyphs, and its hollow "o"
 REDACT_START = re.compile(r"official\s*[–-]\s*sensitive.*start of section", re.I)
@@ -124,7 +127,48 @@ def _family(font: str) -> str:
 
 # ------------------------------------------------------------------------------------------ reading a page
 
-def _page_lines(page, pno: int, pymupdf) -> tuple[list[Line], list[Line]]:
+def _visual_lines(line: dict) -> list[dict]:
+    """Some Word PDFs put several physical baselines into one raw line. Split by character origin,
+    before merging adjacent runs; their aggregate tall bounding box otherwise joins unrelated lines.
+    A normally raised footnote stays with its line. Actual coordinates, not inferred wording, decide.
+    """
+    # A rotated table heading has a different y coordinate for every character, not several
+    # horizontal baselines. Keep that run intact so the cell reader retains the whole label.
+    if abs(line.get("dir", (1, 0))[1]) > .1:
+        return [line]
+    chars = [(span, ch) for span in line["spans"] for ch in span["chars"]]
+    if not chars:
+        return [line]
+    # A whitespace glyph in a defective embedded font can have a box several lines high,
+    # although its ink is invisible. Keep the original text/width; use ink for vertical bounds.
+    ink = [ch["bbox"] for _, ch in chars if ch["c"].strip()]
+    if ink:
+        x0, _, x1, _ = line["bbox"]
+        line = {**line, "bbox": (x0, min(b[1] for b in ink), x1, max(b[3] for b in ink))}
+    baselines = [ch["origin"][1] for _, ch in chars]
+    main_size = max((s["size"] for s in line["spans"]), default=12)
+    if max(baselines) - min(baselines) <= main_size * .75:
+        return [line]
+    groups: dict[float, list] = {}
+    for span, ch in chars:
+        groups.setdefault(round(ch["origin"][1], 1), []).append((span, ch))
+    result = []
+    for baseline in sorted(groups):
+        runs = []
+        previous = None
+        for span, ch in groups[baseline]:
+            if span is not previous:
+                runs.append({**span, "chars": []})
+                previous = span
+            runs[-1]["chars"].append(ch)
+        boxes = [ch["bbox"] for _, ch in groups[baseline] if ch["c"].strip()]
+        if not boxes:
+            continue
+        result.append({**line, "spans": runs, "bbox": (min(b[0] for b in boxes), min(b[1] for b in boxes),
+                                                       max(b[2] for b in boxes), max(b[3] for b in boxes))})
+    return result
+
+def _page_lines(page, pno: int, pymupdf, omitted: list | None = None) -> tuple[list[Line], list[Line]]:
     """The page's visual lines, top to bottom: characters grouped by style and link, pieces on one baseline
     joined. Also the runs as the PDF has them, unjoined, which is what a table's cells are read from."""
     # Links out, and links within the document. Word also makes each footnote mark a tiny link to its
@@ -135,7 +179,15 @@ def _page_lines(page, pno: int, pymupdf) -> tuple[list[Line], list[Line]]:
     flags = pymupdf.TEXTFLAGS_RAWDICT & ~pymupdf.TEXT_PRESERVE_LIGATURES & ~pymupdf.TEXT_PRESERVE_IMAGES
     raw = []
     for block in page.get_text("rawdict", flags=flags)["blocks"]:
+        originals = []
         for line in block.get("lines", []):
+            # GOV.UK stamps withdrawn PDFs diagonally. That page furniture is not a word in the
+            # paragraph it overlaps; ordinary horizontal uses of "archived" remain untouched.
+            stamp = "".join(ch['c'] for span in line['spans'] for ch in span['chars']).strip()
+            if stamp.lower() in {'archived', 'withdrawn'} and abs(line.get('dir', (1, 0))[1]) > 0.1 and max((s['size'] for s in line['spans']), default=0) > 30:
+                continue
+            originals.extend(_visual_lines(line))
+        for line in originals:
             pieces, word_end, ink = [], None, False
             lx0, ly0, lx1, ly1 = line["bbox"]
             near = [l for l in links if l["from"].y0 <= ly1 and l["from"].y1 >= ly0]
@@ -165,7 +217,15 @@ def _page_lines(page, pno: int, pymupdf) -> tuple[list[Line], list[Line]]:
                     else:
                         pieces.append(Piece(ch["c"], span["size"], span["flags"], span["font"], href, goto))
             if pieces:
-                raw.append(Line(pno, lx0, ly0, lx1, ly1, pieces, (word_end if word_end is not None else lx1) - lx0))
+                original = Line(pno, lx0, ly0, lx1, ly1, pieces, (word_end if word_end is not None else lx1) - lx0)
+                cleaned = _without_navigation(original, omitted)
+                if cleaned.text != original.text and cleaned.text.strip():
+                    kept_chars = [ch for span in line["spans"] for ch in span["chars"]][:len(cleaned.text)]
+                    cleaned.x1 = max(ch["bbox"][2] for ch in kept_chars if ch["c"].strip())
+                raw.append(cleaned)
+    # Remove navigation before joining baselines: a separate link can share a paragraph's baseline.
+    # A phrase within a source sentence is kept unless the PDF explicitly links that suffix internally.
+    raw = [l for l in raw if l.text.strip()]
     # Word sets a paragraph number and its text as two runs on one baseline: join what shares a line.
     raw.sort(key=lambda l: (round(l.y0), l.x0))
     for l in raw:                                     # a footnote mark is small against its own run, not against the page
@@ -194,6 +254,54 @@ def _page_lines(page, pno: int, pymupdf) -> tuple[list[Line], list[Line]]:
         for p in l.pieces:
             p.raised = p.raised or p.size < main * 0.8
     return lines, raw
+
+
+def _omission(omitted: list | None, line: Line, kind: str, text: str | None = None):
+    if omitted is not None:
+        omitted.append({"page": line.page + 1, "kind": kind, "text": line.text.strip() if text is None else text,
+                        "bbox": [round(v, 2) for v in (line.x0, line.y0, line.x1, line.y1)]})
+
+
+def _without_navigation(line: Line, omitted: list | None = None) -> Line:
+    match = re.search(r"\bBack to Contents?\s*$", line.text, re.I)
+    if not match:
+        return line
+    at, linked = 0, True
+    for piece in line.pieces:
+        if at + len(piece.text) > match.start() and piece.text[max(0, match.start() - at):].strip() and piece.goto is None:
+            linked = False
+        at += len(piece.text)
+    if line.text[:match.start()].strip() and not linked:
+        return line
+    _omission(omitted, line, "navigation", match.group().strip())
+    pieces, at = [], 0
+    for piece in line.pieces:
+        kept = piece.text[:max(0, match.start() - at)]
+        if kept:
+            pieces.append(piece.but(kept))
+        at += len(piece.text)
+    return Line(line.page, line.x0, line.y0, line.x1, line.y1, pieces, line.first_word)
+
+
+def _running_headers(pages: list[list[Line]], heights: list[float]) -> set[tuple]:
+    """Short, dated document labels repeated in the top margin; never general repeated prose.
+
+    Source notes and repeated table headings are deliberately outside this rule. Position and
+    repetition alone are insufficient: the label must include a publication date or an OGN version.
+    """
+    seen: dict[tuple, set] = {}
+    for lines, height in zip(pages, heights):
+        for line in lines:
+            text = line.text.strip()
+            if line.y1 >= height * .08 or len(text) > 100 or len(text.split()) > 16:
+                continue
+            if not (re.search(r"\bOGN\s+v\.?\s*\d", text, re.I)
+                    or re.search(rf"\b{MONTH}\s+20\d\d\b", text, re.I)):
+                continue
+            key = (" ".join(text.casefold().split()), round(line.y0 / 3))
+            seen.setdefault(key, set()).add(line.page)
+    # Facing pages can reverse the country and date; either label occurs on about half the pages.
+    return {key for key, pages_seen in seen.items() if len(pages_seen) >= max(3, len(pages) // 3)}
 
 
 def _footnote_rule(page, lines: list[Line], body_size: float) -> float | None:
@@ -405,8 +513,10 @@ def pdf_to_html(path) -> Extraction:
 
 def _extract(doc, pymupdf) -> Extraction:
     warnings: list[str] = []
-    read = [_page_lines(page, i, pymupdf) for i, page in enumerate(doc)]
+    omitted: list[dict] = []
+    read = [_page_lines(page, i, pymupdf, omitted) for i, page in enumerate(doc)]
     pages, runs = [r[0] for r in read], [r[1] for r in read]
+    headers = _running_headers(pages, [page.rect.height for page in doc])
     chars = sum(len(l.text.strip()) for lines in pages for l in lines)
     if chars < 40 * max(1, doc.page_count):
         raise NoTextLayer(f"{chars} characters of text on {doc.page_count} pages")
@@ -454,19 +564,44 @@ def _extract(doc, pymupdf) -> Extraction:
     # Reading starts at the cover, though the bookmarks begin later: GOV.UK's web version keeps what a cover
     # says under its title (a bulletin's reference and summary, a mission's dates), and the Preface that older
     # notes carry, with no bookmark, before the contents list.
-    cover = _cover(pages[0] if pages else [])
+    # Withdrawn PDFs can have an archive notice before the original cover. Find that cover by its
+    # large note title, rather than assuming page one; keep the notice's own small text as well.
+    cover_page = next((i for i, lines in enumerate(pages[:max(1, first_page)])
+                       if re.search(r"country\s+(?:policy\s+and\s+information|background|information)\s+note",
+                                    " ".join(l.text for l in lines if l.size >= body_size * 1.5), re.I)), 0)
+    cover = _cover(pages[cover_page] if pages else [])
     in_contents = False                                                 # the page before held part of the contents list
-    version_lead = first_page > 0 and bool(cover["cover_version"])      # "Version 2.0, July 2026" opens the text
+    version_lead = bool(cover["cover_version"]) and (first_page > 0 or any(re.search(r"\bOGN\s+v", l.text, re.I) for l in pages[cover_page]))
     for pno in range(0, doc.page_count):
         page = doc[pno]
         height, width = page.rect.height, page.rect.width
         lines = [l for l in pages[pno] if l.text.strip()]
-        lines = [l for l in lines if not (PAGE_NO.match(l.text.strip()) and (l.y0 > height * 0.9 or l.y1 < height * 0.08))]
+        kept = []
+        removed = []
+        for l in lines:
+            text = l.text.strip()
+            header = l.y1 < height * .08 and (" ".join(text.casefold().split()), round(l.y0 / 3)) in headers
+            page_number = PAGE_NO.match(text) and (l.y0 > height * .9 or l.y1 < height * .08
+                          or (re.fullmatch(r"Page\s+\d+\s+of\s+\d+", text, re.I) and l.y0 > height * .8))
+            if header or page_number:
+                _omission(omitted, l, "running header" if header else "page number")
+                removed.append(l)
+            else:
+                kept.append(l)
+        lines = kept
         lines = [l for l in lines if not BACK.match(l.text.strip())]
+        before_contents = list(lines)
         lines, in_contents = _without_contents(lines, carried=in_contents)
+        removed_contents = [l for l in before_contents if not any(l is kept for kept in lines)]
+        for l in removed_contents:
+            _omission(omitted, l, "contents")
+        removed.extend(removed_contents)
+        # A table's cell reader uses the unjoined runs. Exclude the same furniture there too.
+        page_runs = [r for r in runs[pno] if not any(l.y0 - 1 <= (r.y0 + r.y1) / 2 <= l.y1 + 1
+                     and l.x0 - 2 <= (r.x0 + r.x1) / 2 <= l.x1 + 2 for l in removed)]
         # The cover is read without its title (the page's own heading on GOV.UK), and nothing on it is taken
         # for a section heading. Its version and date are not repeated where they already open the text.
-        on_cover = pno == 0 and (first_page > 0 or not toc) and any(l.size >= body_size * 1.8 for l in lines)
+        on_cover = pno in {0, cover_page} and (first_page > pno or not toc) and any(l.size >= body_size * 1.8 for l in lines)
         if on_cover:
             lines = [l for l in lines if l.size < body_size * 1.5 and not (version_lead and COVER_DATE.match(l.text.strip()))]
         rule = _footnote_rule(page, lines, body_size)
@@ -497,7 +632,7 @@ def _extract(doc, pymupdf) -> Extraction:
                 warnings.append(f"page {pno + 1}: tables not analysed ({error})")
         table_boxes = [pymupdf.Rect(t.bbox) for t in tables]
         # The picture on a cover is the department's logo, which is not shown here: a cover gives text only.
-        figure_boxes = [] if on_cover else _figure_boxes(page, body, table_boxes, body_font, pymupdf)
+        figure_boxes = [] if on_cover or pno < first_page else _figure_boxes(page, body, table_boxes, body_font, pymupdf)
         placed: set = set()
         prev: Line | None = None
         prev_began_item = False
@@ -523,7 +658,7 @@ def _extract(doc, pymupdf) -> Extraction:
                     flush()
                     placed.add(key)
                     if t_hit is not None:
-                        blocks.append({"kind": "table", "rows": _cells(tables[t_hit], runs[pno]), "page": pno})
+                        blocks.append({"kind": "table", "rows": _cells(tables[t_hit], page_runs), "page": pno})
                     else:
                         blocks.append(_figure(page, figure_boxes[f_hit], images, pymupdf))
                     prev = None
@@ -617,6 +752,7 @@ def _extract(doc, pymupdf) -> Extraction:
         "tables": sum(1 for b in blocks if b["kind"] == "table"),
         "figures": sum(1 for b in blocks if b["kind"] == "figure"),
         "footnotes": len(footnotes), "bookmarks": len(toc), "warnings": warnings,
+        "omitted_furniture": omitted,
         "figure_pages": {b["src"][len(IMAGE_SRC):]: b["page"] + 1 for b in blocks if b["kind"] == "figure"},
         "figure_sizes": {b["src"][len(IMAGE_SRC):]: b["px"] for b in blocks if b["kind"] == "figure"},    # pixels, at 144 dpi
         "figure_text": {b["src"][len(IMAGE_SRC):]: b["chars"] for b in blocks if b["kind"] == "figure"},  # characters of text in it
@@ -647,12 +783,20 @@ def _shaded(filled: list[int], cols: int) -> bool:
 
 def _is_chart(t, lines: list[Line], body_font: str) -> bool:
     """A chart whose gridlines the table finder took for a table: its lettering is in another typeface (the
-    Home Office's charts come from Excel), where a real table is set in the body's. It is then a figure."""
+    Home Office's charts come from Excel). Short labels in another typeface can be a figure; long prose in
+    a bordered annex table is still table text, even when its typeface differs from the main report."""
     x0, y0, x1, y1 = t.bbox
     inside = [l for l in lines if x0 - 1 <= (l.x0 + l.x1) / 2 <= x1 + 1 and y0 - 1 <= (l.y0 + l.y1) / 2 <= y1 + 1]
     total = sum(len(l.text.strip()) for l in inside)
     other = sum(len(l.text.strip()) for l in inside if _family(l.font) != body_font)
-    return total > 0 and other / total > 0.6
+    if total <= 0 or other / total <= .6:
+        return False
+    # A bordered annex table may use another font. Require a genuinely long prose cell, not
+    # merely many year labels or numbers: a dense chart can exceed the lettering limit too.
+    if total > WORDY and any(len(re.findall(r"\b[^\W\d_]{2,}\b", cell or "")) >= 15
+                             for row in t.extract() for cell in row):
+        return False
+    return True
 
 
 def _cells(table, lines: list[Line]) -> list[list]:
@@ -721,10 +865,23 @@ def _without_contents(lines: list[Line], carried: bool = False) -> tuple[list[Li
     the first entry) down to the last entry, so an entry that runs over two lines goes whole. An entry ends
     in leader dots and a page number; three on a page make it a contents list, or one where the list carries
     on from the page before (carried). An entry's first line, when it runs over, sits close above its second."""
-    entries = [l for l in lines if CONTENTS_LINE.search(l.text)]
+    title = next((l for l in lines if l.text.strip().lower() in {"contents", "table of contents"}), None)
+    entries = [l for l in lines if CONTENTS_LINE.search(l.text)
+               or ((title or carried) and CONTENTS_ERROR.search(l.text))]
+    # Older OGN/CIG contents tables use a separate paragraph-reference column, without leaders.
+    # Require an explicit contents title and at least three separate references: a number at the
+    # end of ordinary prose is not sufficient evidence of a contents entry.
+    if title:
+        for l in lines:
+            ink = [p.text.strip() for p in l.pieces if p.text.strip()]
+            last_piece = next((p for p in reversed(l.pieces) if p.text.strip()), None)
+            if l.y0 > title.y0 and last_piece and not last_piece.raised and last_piece.size >= l.size * .9 and "." in ink[-1] and (
+                    (len(ink) > 1 and CONTENTS_REF.fullmatch(ink[-1]))
+                    or (len(ink) == 1 and l.x0 > max(x.x1 for x in lines) * .8 and CONTENTS_REF.fullmatch(ink[0]))):
+                if l not in entries:
+                    entries.append(l)
     if len(entries) < (1 if carried else 3):
         return lines, False
-    title = next((l for l in lines if l.text.strip().lower() == "contents"), None)
     top = min(title.y0 if title else entries[0].y0, min(l.y0 for l in entries))
     for l in sorted((l for l in lines if l.y1 <= top + 1), key=lambda l: -l.y0):      # upwards from the first entry
         if top - l.y1 < (l.y1 - l.y0) * 0.6 and not ENDS.search(l.text.strip()):
@@ -732,6 +889,18 @@ def _without_contents(lines: list[Line], carried: bool = False) -> tuple[list[Li
         else:
             break
     bottom = max(l.y1 for l in entries)
+    # A final "Version control 53" sometimes has no leaders; Word's broken bookmark message
+    # can also wrap onto the next line. Extend only to adjacent, short contents continuations.
+    for l in sorted((l for l in lines if l.y0 >= bottom - 1), key=lambda l: l.y0):
+        if l.y1 <= bottom + 1:
+            continue
+        text = l.text.strip()
+        if l.y0 - bottom > (l.y1 - l.y0) * 1.5:
+            break
+        if re.fullmatch(r"(?:Version control|Feedback to the Home Office|Sources consulted)\s+\d+", text, re.I) or re.fullmatch(r"(?:not )?defined\.", text, re.I):
+            bottom = l.y1
+        else:
+            break
     kept = [l for l in lines if not top - 1 <= (l.y0 + l.y1) / 2 <= bottom + 1]
     for l in kept:                               # a second, stray title that a text box overprints: read as part of its line
         if len(l.pieces) > 1 and any(p.text.strip().lower() == "contents" for p in l.pieces):
@@ -888,12 +1057,12 @@ def _render(blocks, footnotes, heading_id, warnings, lead: str = "") -> str:
 def _cover(lines: list[Line]) -> dict:
     """What the cover says: the title, the version and the month."""
     text = " ".join(l.text.strip() for l in lines if l.text.strip())
-    version = re.search(r"\bversion\s+(\d+\.\d+)", text, re.I)
-    month = re.search(r"(?:(?<![\d.])(\d{1,2})\s+)?\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(20\d\d)\b", text)
+    version = re.search(r"\b(?:version\s+|OGN\s+v\.?\s*)(\d+(?:\.\d+)*)", text, re.I)
+    month = re.search(rf"(?:(?<![\w.])(\d{{1,2}})\s+)?\b({MONTH})\s+(20\d\d)\b", text, re.I)
     big = [l.text.strip() for l in lines if l.text.strip() and l.size >= 16]
     return {"cover_title": re.sub(r"\s+", " ", " ".join(big)).strip() or None,
             "cover_version": version.group(1) if version else None,
-            "cover_date": f"{month.group(1) + ' ' if month.group(1) else ''}{month.group(2)} {month.group(3)}" if month else None}
+            "cover_date": f"{month.group(1) + ' ' if month.group(1) else ''}{month.group(2).title()} {month.group(3)}" if month else None}
 
 
 # ---------------------------------------------------------------- how good is it? (pairs with a web version)
@@ -1119,7 +1288,7 @@ def _figures_one(job):
         return label, {"error": f"{type(error).__name__}: {error}"}, {}
 
 
-def missing_figures_into_store(store, jobs: list, workers: int = 4, log=lambda *a: None, force: bool = False) -> dict:
+def missing_figures_into_store(store, jobs: list, workers: int = 3, log=lambda *a: None, force: bool = False) -> dict:
     """For each PDF with a web version beside it, work out which of its pictures the web version leaves out and
     keep them: data/pdfs/figures/<pdf sha256>.json (which picture goes after which block of the web body) and
     the pictures themselves beside the other extracted ones. jobs: [(label, pdf path, pdf sha, web body, body sha)].
@@ -1205,7 +1374,7 @@ def _check_one(job):
         return label, {"error": f"{type(error).__name__}: {error}"}
 
 
-def check_pairs(jobs: list, workers: int = 6) -> dict:
+def check_pairs(jobs: list, workers: int = 3) -> dict:
     """Extract every PDF that has a web version beside it and compare the two. jobs: [(label, pdf path, web body)]."""
     from multiprocessing import Pool
     with Pool(workers) as pool:

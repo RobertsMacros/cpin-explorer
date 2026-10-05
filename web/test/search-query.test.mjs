@@ -102,7 +102,9 @@ test("a country named in the query filters by country, and is not searched for i
 test("when the named country has no such report, the same topic elsewhere is still found", () => {
   const p = parse("Iran actors of protection");
   assert.deepEqual(p.countries, ["iran"]);
-  assert.equal(matchReports(p, countries).length, 0, "Iran has no report with that title");
+  const current = countries.map((c) => ({ ...c, reports: c.reports.filter((r) => r.status === "live") }));
+  assert.equal(matchReports(p, current).length, 0, "Iran has no current report with that title");
+  assert.ok(matchReports(p, countries).every((x) => x.r.status !== "live"), "the recovered background report is found as historical guidance");
   const elsewhere = matchReports(p, countries, { anyCountry: true });
   assert.ok(elsewhere.length >= 10 && elsewhere.every((x) => /actors of protection/i.test(x.r.topic)));
 });
@@ -231,7 +233,7 @@ test("the real data through the reviewed table: the owner's queries", async () =
   const names = (g) => g.rows.map((x) => `${x.c.name}${x.qualifier ? ` · ${x.qualifier}` : ""}`);
 
   const hum = run("humanitarian");
-  assert.equal(hum.out.length, 1, "everything in one list: nothing left over as a separate result");
+  assert.ok(hum.out.slice(1).every((e) => e.rows ? e.rows.every((x) => x.r.status !== "live") : e.r.status !== "live"), "older combined reports with a different scope retain their own titles");
   assert.equal(hum.out[0].label, "Humanitarian situation");
   assert.equal(hum.out[0].rest.length, 0);
   assert.ok(names(hum.out[0]).includes("Somalia · Mogadishu") && names(hum.out[0]).includes("Palestine · Gaza"), names(hum.out[0]).join("; "));
@@ -256,7 +258,8 @@ test("the real data through the reviewed table: the owner's queries", async () =
   assert.match(run("gangs").out[0].label, /^Gangs/);
   assert.equal(run("actors of protection").out[0].rest.length, 0);
   const pkk = run("PKK").out;
-  assert.ok(pkk.length === 1 && !pkk[0].rows && pkk[0].r.topic === "PKK", "a standalone subject: no heading");
+  assert.ok(!pkk[0].rows && pkk[0].r.topic === "PKK" && pkk[0].r.status === "live", "the current standalone subject comes first");
+  assert.ok(pkk.slice(1).every((e) => !e.rows && e.r.status !== "live"), "older reports matching PKK retain their own titles");
 
   // Every report is listed at least once whatever the query, and a standalone report is never also in a group.
   const all = run("country report").out;

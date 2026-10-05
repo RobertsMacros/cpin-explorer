@@ -1,0 +1,214 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 8,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 13,
+ "paragraphs": 51,
+ "list_items": 5,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 2,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    688.48,
+    526.76,
+    701.86
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    462.85,
+    526.76,
+    476.23
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    442.81,
+    526.76,
+    456.19
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.69,
+    185.37,
+    101.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    108.2,
+    525.44,
+    121.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ........................................................................................................ 4",
+   "bbox": [
+    72.02,
+    128.96,
+    525.44,
+    142.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ..................................................................................... 4",
+   "bbox": [
+    72.02,
+    149.6,
+    525.44,
+    162.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 6",
+   "bbox": [
+    72.02,
+    170.36,
+    525.44,
+    183.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Double Jeopardy ................................................................................................ 6",
+   "bbox": [
+    72.02,
+    191.0,
+    525.44,
+    204.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ................................................................................. 8",
+   "bbox": [
+    72.02,
+    211.76,
+    525.44,
+    225.14
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 8",
+   "bbox": [
+    277.01,
+    794.44,
+    321.29,
+    803.41
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance China: Fear of punishment on return to China for crimes committed in other countries (‘Double Jeopardy’)",
+ "cover_version": "1.0",
+ "cover_date": "September 2015",
+ "pdf_sha256": "9dfff799db23d089f1af34ea5a865cd081a5aa590de46d8b8b41e031a0e36866",
+ "images": []
+}

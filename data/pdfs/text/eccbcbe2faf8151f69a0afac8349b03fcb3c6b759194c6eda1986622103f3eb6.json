@@ -1,0 +1,839 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 27,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 30,
+ "paragraphs": 173,
+ "list_items": 5,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 53,
+ "bookmarks": 27,
+ "warnings": [],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    253.01,
+    526.66,
+    268.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    445.49,
+    526.66,
+    461.46
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    107.57,
+    526.66,
+    123.54
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    228.17,
+    526.66,
+    244.14
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    348.77,
+    526.66,
+    364.74
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    469.37,
+    526.66,
+    485.34
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    216.17,
+    526.66,
+    232.14
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    412.61,
+    526.66,
+    428.58
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    454.97,
+    526.66,
+    470.94
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    442.97,
+    526.66,
+    458.94
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    298.97,
+    526.66,
+    314.94
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    231.77,
+    526.66,
+    247.74
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    361.97,
+    526.66,
+    377.94
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    148.97,
+    526.66,
+    164.94
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    318.77,
+    526.66,
+    334.74
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    271.37,
+    526.66,
+    287.34
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    577.37,
+    526.66,
+    593.34
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    182.57,
+    526.66,
+    198.54
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    237.77,
+    526.66,
+    253.74
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.88,
+    386.21,
+    526.66,
+    402.18
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    73.04,
+    183.27,
+    107.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Policy guidance ........................................................................................................ 4",
+   "bbox": [
+    72.0,
+    109.8,
+    525.34,
+    126.43
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.0,
+    128.69,
+    525.34,
+    144.66
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of claim ........................................................................................... 4",
+   "bbox": [
+    107.4,
+    147.41,
+    525.34,
+    163.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of issues ................................................................................... 4",
+   "bbox": [
+    84.0,
+    166.25,
+    525.34,
+    182.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Credibility .................................................................................................. 4",
+   "bbox": [
+    107.4,
+    185.09,
+    525.34,
+    201.06
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Assessment of risk ................................................................................... 4",
+   "bbox": [
+    107.4,
+    203.81,
+    525.34,
+    219.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Protection ................................................................................................. 6",
+   "bbox": [
+    107.4,
+    222.65,
+    525.34,
+    238.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 Internal relocation ..................................................................................... 6",
+   "bbox": [
+    107.4,
+    241.49,
+    525.34,
+    257.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.5 Certification .............................................................................................. 6",
+   "bbox": [
+    107.4,
+    260.21,
+    525.34,
+    276.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 6",
+   "bbox": [
+    84.0,
+    279.05,
+    525.34,
+    295.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country information ................................................................................................. 8",
+   "bbox": [
+    72.0,
+    297.84,
+    525.34,
+    314.47
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Religion in Iran ................................................................................................. 8",
+   "bbox": [
+    84.0,
+    316.61,
+    525.34,
+    332.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.1 Religious demography .............................................................................. 8",
+   "bbox": [
+    107.4,
+    335.45,
+    525.34,
+    351.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4.2 Legal framework ....................................................................................... 8",
+   "bbox": [
+    107.4,
+    354.29,
+    525.34,
+    370.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Restrictions on practising Christianity .............................................................. 9",
+   "bbox": [
+    84.0,
+    373.01,
+    525.34,
+    388.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.1 Treatment of Christians ............................................................................ 9",
+   "bbox": [
+    107.4,
+    391.85,
+    525.34,
+    407.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.2 Arrests of Christians ............................................................................... 10",
+   "bbox": [
+    107.4,
+    410.69,
+    525.34,
+    426.66
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.3 Ethnic minority churches ........................................................................ 13",
+   "bbox": [
+    107.4,
+    429.41,
+    525.34,
+    445.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.4 Evangelical Protestant churches ............................................................ 15",
+   "bbox": [
+    107.4,
+    448.25,
+    525.34,
+    464.22
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5.5 House churches ..................................................................................... 17",
+   "bbox": [
+    107.4,
+    467.09,
+    525.34,
+    483.06
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Christian converts .......................................................................................... 19",
+   "bbox": [
+    84.0,
+    485.81,
+    525.34,
+    501.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 Treatment ............................................................................................... 19",
+   "bbox": [
+    107.4,
+    504.65,
+    525.34,
+    520.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.2 Arrests of converts ................................................................................. 20",
+   "bbox": [
+    107.4,
+    523.49,
+    525.34,
+    539.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.3 Societal treatment of converts ................................................................ 22",
+   "bbox": [
+    107.4,
+    542.21,
+    525.34,
+    558.18
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Treatment of family members ........................................................................ 23",
+   "bbox": [
+    84.0,
+    561.05,
+    525.34,
+    577.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "8. Treatment of those returning to Iran who have converted abroad ................. 24",
+   "bbox": [
+    84.0,
+    579.89,
+    525.34,
+    595.86
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version control and contacts ................................................................................ 27",
+   "bbox": [
+    72.0,
+    598.56,
+    525.34,
+    615.19
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 27",
+   "bbox": [
+    274.8,
+    793.51,
+    323.5,
+    804.22
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 27",
+   "bbox": [
+    272.52,
+    793.51,
+    325.66,
+    804.22
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": 4,
+ "cover_title": "Country Policy and Information Note Iran: Christians and Christian converts",
+ "cover_version": "3.0",
+ "cover_date": "February 2017",
+ "pdf_sha256": "eccbcbe2faf8151f69a0afac8349b03fcb3c6b759194c6eda1986622103f3eb6",
+ "images": []
+}

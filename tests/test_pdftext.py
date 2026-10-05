@@ -254,6 +254,37 @@ def test_pictures_and_drawn_charts_become_figures_in_their_place(tmp_path):
     assert kinds == ["1.1.1", "<figure", "1.1.2", "<figure", "1.1.3"] and order == sorted(order), "each sits after the paragraph that introduces it"
 
 
+def test_withdrawal_sheet_before_cover_does_not_show_the_department_logo(tmp_path):
+    path = _figures_pdf(tmp_path / "withdrawn.pdf")
+    with pymupdf.open(path) as doc:
+        doc[0].insert_text((LEFT, 300), "Version 2.0", fontsize=12)
+        doc[0].insert_text((LEFT, 320), "July 2026", fontsize=12)
+        notice = doc.new_page(pno=0)
+        notice.insert_text((LEFT, 120), "This publication was archived", fontsize=26)
+        notice.insert_text((LEFT, 180), "This publication is no longer current and is not being updated.", fontsize=12)
+        doc.set_toc([[1, "Country information", 3]])
+        doc.saveIncr()
+    result = pdftext.pdf_to_html(path)
+    assert result.meta["figures"] == 2
+    assert set(result.meta["figure_pages"].values()) == {3}
+    assert result.meta["cover_version"] == "2.0"
+    assert result.meta["cover_date"] == "July 2026"
+    assert "Country Policy and Information Note" not in result.html
+    assert "no longer current and is not being updated" in result.html
+
+
+def test_diagonal_archive_watermark_is_not_part_of_a_quotation(tmp_path):
+    path = _figures_pdf(tmp_path / 'watermark.pdf')
+    with pymupdf.open(path) as doc:
+        doc[1].insert_text((140, 500), 'Archived', fontsize=80,
+                           morph=(pymupdf.Point(140, 500), pymupdf.Matrix(45)))
+        doc[1].insert_text((TEXT, 650), 'Archived reports remain available for reference.', fontsize=12)
+        doc.saveIncr()
+    result = pdftext.pdf_to_html(path)
+    assert result.html.count('Archived') == 1
+    assert 'Archived reports remain available for reference.' in result.html
+
+
 def test_a_charts_lettering_is_part_of_the_picture_not_stray_paragraphs(tmp_path):
     html = pdftext.pdf_to_html(_figures_pdf(tmp_path / "figs.pdf")).html
     text = re.sub(r"<[^>]+>", " ", html)
@@ -427,6 +458,158 @@ def test_the_end_of_a_contents_list_on_its_own_page_and_a_wrapped_entry_are_left
     assert [l.text for l in kept] == ["Preface"] and was, "two entries are enough where the list carries on from the page before"
     kept, was = pdftext._without_contents(list(last), carried=False)
     assert len(kept) == 4 and not was, "on their own, two lines ending in a number are not a contents list"
+
+
+def test_old_contents_references_are_removed_but_the_body_on_the_same_page_is_kept():
+    def line(y, *texts, x=72):
+        return pdftext.Line(0, x, y, 540, y + 13, [pdftext.Piece(t, 12, 0, "Arial") for t in texts])
+    body = line(230, "1. Introduction")
+    quotation = line(250, "1.1 A genuine quotation .... and a year 2012.")
+    lines = [line(80, "Contents"), line(110, "1. Introduction ", "1.1 – 1.4"),
+             line(140, "2. Assessment ", "2.1"), line(170, "3. Claims ", "3.1 – 3.4"), body, quotation]
+    kept, was = pdftext._without_contents(lines)
+    assert was and kept == [body, quotation]
+    assert pdftext._without_contents(lines[1:])[0] == lines[1:], "plain references require a contents title"
+
+
+def test_decimal_contents_and_a_plain_last_row_do_not_leak_into_the_body():
+    line = lambda y, text: pdftext.Line(0, 72, y, 540, y + 13, [pdftext.Piece(text, 12, 0, "Arial")])
+    lines = [line(80, "Contents"), line(105, "Geography ........ 1.01"), line(125, "Economy ........ 2.08"),
+             line(145, "History ........ 3.01"), line(162, "Version control 53"), line(220, "1. Geography")]
+    kept, was = pdftext._without_contents(lines)
+    assert was and kept == lines[-1:]
+
+
+def test_word_bookmark_errors_are_only_removed_within_a_proven_contents_list():
+    line = lambda y, text: pdftext.Line(0, 72, y, 540, y + 13, [pdftext.Piece(text, 12, 0, "Arial")])
+    lines = [line(80, "Contents"), line(105, "Introduction ........ Error! Bookmark not defined."),
+             line(135, "Law ........ Error! Bookmark not defined."),
+             line(165, "History ........ Error! Bookmark"), line(181, "not defined."),
+             line(240, "A source says (n Error! Bookmark not defined.) and supplies no number.")]
+    assert pdftext._without_contents(lines)[0] == lines[-1:]
+    assert pdftext._without_contents(lines[1:])[0] == lines[1:], "a source's own errors stay untouched"
+
+
+def test_only_a_linked_navigation_suffix_is_trimmed_from_a_source_sentence():
+    def line(link):
+        return pdftext.Line(0, 72, 200, 540, 213, [pdftext.Piece("1.1 The evidence remains. ", 12, 0, "Arial"),
+                            pdftext.Piece("Back to Contents", 12, 0, "Arial", goto=link)])
+    audit = []
+    assert pdftext._without_navigation(line((1, 80)), audit).text == "1.1 The evidence remains. "
+    assert audit[0]["text"] == "Back to Contents" and audit[0]["page"] == 1
+    literal = line(None)
+    assert pdftext._without_navigation(literal).text == literal.text
+
+
+def test_repeated_dated_headers_and_inset_footers_are_removed_with_original_words_kept(tmp_path):
+    doc = pymupdf.open()
+    for i in range(3):
+        page = doc.new_page()
+        page.insert_text((72, 35), "Example OGN v7 March 2013", fontsize=10)
+        page.insert_text((72, 120), f"1.{i + 1} The source paragraph remains unchanged.", fontsize=12)
+        page.insert_text((72, 160), "Example OGN v7 March 2013 is quoted in the body.", fontsize=12)
+        page.insert_text((72, 200), "A form contains dots .... and a printed number 42.", fontsize=12)
+        page.insert_text((72, 730), "This substantive source note must remain.", fontsize=9)
+        page.insert_text((275, 715), f"Page {i + 1} of 3", fontsize=8)
+    path = tmp_path / "old-template.pdf"
+    doc.save(path)
+    doc.close()
+    result = pdftext.pdf_to_html(path)
+    assert result.html.count("Example OGN v7 March 2013") == 3, "body quotations are untouched"
+    assert result.html.count("The source paragraph remains unchanged.") == 3
+    assert "Page 1 of 3" not in result.html and "Page 2 of 3" not in result.html
+    assert "A form contains dots .... and a printed number 42." in result.html
+    assert result.html.count("This substantive source note must remain.") == 3
+    assert (result.meta["cover_version"], result.meta["cover_date"]) == ("7", "March 2013"), "v7 is a version, not a day of the month"
+    assert result.html.startswith('<div class="govspeak"><p>Version 7, March 2013</p>')
+    assert sum(o["kind"] == "running header" for o in result.meta["omitted_furniture"]) == 3
+
+
+def test_navigation_is_removed_before_it_can_merge_with_a_paragraph_baseline(tmp_path):
+    doc = pymupdf.open()
+    page = doc.new_page()
+    page.insert_text((72, 120), "1.1 A complete source sentence.", fontsize=12)
+    page.insert_text((420, 120), "Back to Contents", fontsize=10)
+    page.insert_text((72, 160), "1.2 The next paragraph is preserved.", fontsize=12)
+    path = tmp_path / "navigation.pdf"
+    doc.save(path)
+    doc.close()
+    html = pdftext.pdf_to_html(path).html
+    assert "Back to Contents" not in html
+    assert "1.1 A complete source sentence." in html and "1.2 The next paragraph is preserved." in html
+
+
+def test_a_raw_line_spanning_multiple_physical_baselines_is_split_before_joining():
+    doc = pymupdf.open()
+    page = doc.new_page()
+    for y, text in [(120, "Notify the authority."), (136, "The court may impose a penalty."),
+                    (170, "The next programme is described separately.")]:
+        page.insert_text((72, y), text, fontsize=12)
+    raw = [line for b in page.get_text("rawdict")["blocks"] for line in b.get("lines", [])]
+    # The defect found in older Word PDFs: all three real lines are held as one tall raw run.
+    combined = {**raw[0], "spans": [s for l in raw for s in l["spans"]], "bbox": (72, 100, 500, 180)}
+    split = pdftext._visual_lines(combined)
+    assert ["".join(ch["c"] for s in l["spans"] for ch in s["chars"]) for l in split] == [
+        "Notify the authority.", "The court may impose a penalty.", "The next programme is described separately."]
+    assert all(l["bbox"][3] - l["bbox"][1] < 20 for l in split)
+    doc.close()
+
+
+def test_a_tall_whitespace_glyph_does_not_merge_adjacent_source_sentences():
+    from types import SimpleNamespace
+    doc = pymupdf.open()
+    page = doc.new_page()
+    texts = ["Notify the authority.", "The court may impose a penalty.", "Court... ", "The next programme is separate."]
+    for y, text in zip([120, 136, 152, 172], texts):
+        page.insert_text((72, y), text, fontsize=12)
+    raw = page.get_text("rawdict")
+    for b in raw["blocks"]:
+        for line in b.get("lines", []):
+            if "".join(ch["c"] for s in line["spans"] for ch in s["chars"]).startswith("Court..."):
+                # A malformed whitespace box, as found in old embedded fonts: source ink is unchanged.
+                line["spans"][-1]["chars"][-1]["bbox"] = (115, 125, 118, 180)
+                line["bbox"] = (72, 125, 118, 180)
+    fake_page = SimpleNamespace(get_links=lambda: [], get_text=lambda *a, **k: raw)
+    lines, _ = pdftext._page_lines(fake_page, 0, pymupdf)
+    assert [l.text.strip() for l in lines] == [t.strip() for t in texts]
+    assert all(l.y1 - l.y0 < 20 for l in lines)
+    doc.close()
+
+
+def test_rotated_table_labels_remain_whole_in_the_cell_reader():
+    doc = pymupdf.open()
+    page = doc.new_page()
+    page.insert_text((120, 200), "Medical registration", fontsize=12, rotate=90)
+    raw = [line for b in page.get_text("rawdict")["blocks"] for line in b.get("lines", [])]
+    assert len(pdftext._visual_lines(raw[0])) == 1
+    _, runs = pdftext._page_lines(page, 0, pymupdf)
+    assert [r.text for r in runs] == ["Medical registration"]
+    doc.close()
+
+
+def test_a_bordered_prose_table_in_an_annex_is_not_a_chart_because_its_font_differs(tmp_path):
+    doc = pymupdf.open()
+    page = doc.new_page()
+    for i in range(10):
+        page.insert_text((72, 80 + 15 * i), "The main report uses this typeface for its ordinary substantive text.", fontsize=12)
+    for x in [72, 285, 540]:
+        page.draw_line((x, 250), (x, 430))
+    for y in [250, 280, 330, 380, 430]:
+        page.draw_line((72, y), (540, y))
+    for i in range(4):
+        for x, label in [(78, "Institution"), (291, "Training content")]:
+            y = [270, 295, 345, 395][i]
+            page.insert_text((x, y), label if i == 0 else
+                             "Detailed source information about", fontsize=11, fontname="tiro")
+            if i:
+                page.insert_text((x, y + 13), "the institution and training provided.", fontsize=11, fontname="tiro")
+                page.insert_text((x, y + 26), "including its continuing work and staff.", fontsize=11, fontname="tiro")
+    path = tmp_path / "annex-table.pdf"
+    doc.save(path)
+    doc.close()
+    result = pdftext.pdf_to_html(path)
+    assert result.meta["tables"] == 1 and result.meta["figures"] == 0
+    assert "Detailed source information about the institution and training provided." in result.html
 
 
 def test_a_lone_o_is_a_bullet_in_any_typeface_but_a_wrapped_line_opening_with_the_word_is_not(tmp_path):

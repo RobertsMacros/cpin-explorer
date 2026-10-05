@@ -1,0 +1,462 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 20,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 30,
+ "paragraphs": 106,
+ "list_items": 11,
+ "tables": 0,
+ "figures": 5,
+ "footnotes": 37,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    42.54,
+    43.39,
+    157.78,
+    72.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface",
+   "bbox": [
+    42.54,
+    99.19,
+    97.01,
+    114.78
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Paragraphs",
+   "bbox": [
+    503.26,
+    127.45,
+    555.28,
+    137.49
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance",
+   "bbox": [
+    42.54,
+    152.43,
+    110.23,
+    168.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Basis of claim 3.1",
+   "bbox": [
+    78.0,
+    179.96,
+    528.68,
+    193.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Summary of issues 3.1.1",
+   "bbox": [
+    78.0,
+    193.76,
+    538.72,
+    207.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Consideration of issues: risks of persecution",
+   "bbox": [
+    78.0,
+    207.98,
+    342.02,
+    221.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3.1.4",
+   "bbox": [
+    508.66,
+    221.36,
+    538.72,
+    234.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Information",
+   "bbox": [
+    42.54,
+    235.71,
+    123.43,
+    251.3
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3.2",
+   "bbox": [
+    508.66,
+    248.96,
+    528.68,
+    262.34
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Overview 3.2.1",
+   "bbox": [
+    78.0,
+    262.76,
+    538.72,
+    277.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Violence against women 3.2.2",
+   "bbox": [
+    78.0,
+    276.56,
+    538.72,
+    290.9
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Domestic violence 3.2.8",
+   "bbox": [
+    92.16,
+    290.36,
+    538.72,
+    304.64
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "“Honour” crimes  3.2.13",
+   "bbox": [
+    92.16,
+    304.16,
+    545.38,
+    318.44
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Rape during the civil war 3.2.17",
+   "bbox": [
+    92.16,
+    317.96,
+    545.38,
+    332.24
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Fear of killing due to previous sexual violence 3.2.19",
+   "bbox": [
+    92.16,
+    331.76,
+    545.38,
+    346.04
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "“Social rehabilitation” facilities 3.2.20",
+   "bbox": [
+    78.0,
+    345.56,
+    545.38,
+    359.9
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 20",
+   "bbox": [
+    269.3,
+    794.15,
+    328.81,
+    805.32
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 20",
+   "bbox": [
+    266.48,
+    794.15,
+    331.57,
+    805.32
+   ]
+  }
+ ],
+ "figure_pages": {
+  "4eeb57966b76e040cdbbd00b8b83f2d68b483a2ce704b230fc2461a5ac88c558.png": 4,
+  "b1ffcb8d195538c1eca9e56e0003217e91d2e0e65c314d0951c88926110c0eea.png": 5,
+  "28865c7679cd06e243dd4aac5ba799db484f8a20e74665dd4737f83de90d2863.png": 6,
+  "b8911912bc8853aafc6b0560427f79f5a30cbd7260a4c3483c26460f58bc5d1a.png": 7,
+  "2dd8667b69684bedcf775d1baa5c6a8fb5f51e5a948887a480f9f2a82e3cb91f.jpg": 16
+ },
+ "figure_sizes": {
+  "4eeb57966b76e040cdbbd00b8b83f2d68b483a2ce704b230fc2461a5ac88c558.png": [
+   541,
+   1508
+  ],
+  "b1ffcb8d195538c1eca9e56e0003217e91d2e0e65c314d0951c88926110c0eea.png": [
+   977,
+   1509
+  ],
+  "28865c7679cd06e243dd4aac5ba799db484f8a20e74665dd4737f83de90d2863.png": [
+   277,
+   1509
+  ],
+  "b8911912bc8853aafc6b0560427f79f5a30cbd7260a4c3483c26460f58bc5d1a.png": [
+   277,
+   1519
+  ],
+  "2dd8667b69684bedcf775d1baa5c6a8fb5f51e5a948887a480f9f2a82e3cb91f.jpg": [
+   968,
+   1168
+  ]
+ },
+ "figure_text": {
+  "4eeb57966b76e040cdbbd00b8b83f2d68b483a2ce704b230fc2461a5ac88c558.png": 870,
+  "b1ffcb8d195538c1eca9e56e0003217e91d2e0e65c314d0951c88926110c0eea.png": 1774,
+  "28865c7679cd06e243dd4aac5ba799db484f8a20e74665dd4737f83de90d2863.png": 21,
+  "b8911912bc8853aafc6b0560427f79f5a30cbd7260a4c3483c26460f58bc5d1a.png": 84,
+  "2dd8667b69684bedcf775d1baa5c6a8fb5f51e5a948887a480f9f2a82e3cb91f.jpg": 46
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Libya: Violence Against Women 8 October 2014",
+ "cover_version": null,
+ "cover_date": "8 October 2014",
+ "pdf_sha256": "087af9325255fc9580030fbe83c015671ab090026c0d7a5e5ddeabe479a6a1f1",
+ "images": [
+  "28865c7679cd06e243dd4aac5ba799db484f8a20e74665dd4737f83de90d2863.png",
+  "2dd8667b69684bedcf775d1baa5c6a8fb5f51e5a948887a480f9f2a82e3cb91f.jpg",
+  "4eeb57966b76e040cdbbd00b8b83f2d68b483a2ce704b230fc2461a5ac88c558.png",
+  "b1ffcb8d195538c1eca9e56e0003217e91d2e0e65c314d0951c88926110c0eea.png",
+  "b8911912bc8853aafc6b0560427f79f5a30cbd7260a4c3483c26460f58bc5d1a.png"
+ ]
+}

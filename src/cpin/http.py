@@ -22,6 +22,21 @@ from . import config
 RETRY_STATUSES = {429, 500, 502, 503, 504}
 
 
+def robots_response(client, url, **kwargs):
+    """Read robots redirects explicitly so a forbidden archive host is never contacted."""
+    for _ in range(6):
+        p = urlsplit(url)
+        if p.hostname == "webarchive.nationalarchives.gov.uk" or p.scheme not in {"http", "https"}:
+            raise ValueError("robots redirect cannot be fetched automatically")
+        r = client.get(url, follow_redirects=False, **kwargs)
+        if r.status_code not in {301, 302, 303, 307, 308}:
+            return r
+        if not r.headers.get("location"):
+            raise ValueError("robots redirect has no address")
+        url = urljoin(url, r.headers["location"])
+    raise ValueError("too many robots redirects")
+
+
 @dataclass
 class FetchResult:
     url: str
@@ -80,11 +95,11 @@ class PoliteClient:
             unread = None
             for attempt in range(self.max_retries + 1):
                 try:
-                    r = self._client.get(origin + "/robots.txt", follow_redirects=True)
-                    unread = f"HTTP {r.status_code}" if r.status_code in RETRY_STATUSES else None
-                except httpx.HTTPError as e:
+                    r = robots_response(self._client, origin + "/robots.txt")
+                    unread = f"HTTP {r.status_code}" if r.status_code in RETRY_STATUSES | {401, 403, 451} or 300 <= r.status_code < 400 else None
+                except (httpx.HTTPError, ValueError) as e:
                     r, unread = None, f"{type(e).__name__}: {e}"[:200]
-                if unread is None or attempt == self.max_retries:
+                if unread is None or (r is not None and r.status_code in {401, 403, 451}) or attempt == self.max_retries:
                     break
                 self._sleep(2.0 ** (attempt + 1))
             if unread:
@@ -115,6 +130,8 @@ class PoliteClient:
 
     def _get_once(self, url: str, *, etag: str | None, accept: str | None) -> FetchResult:
         parts = urlsplit(url)
+        if parts.hostname == "webarchive.nationalarchives.gov.uk":
+            return FetchResult(url, "robots", error="National Archives: manual checking only")
         if not self._robots_for(parts.scheme, parts.netloc).can_fetch(self.user_agent, url):
             unread = self._unread.get(f"{parts.scheme}://{parts.netloc}")
             return FetchResult(url, "robots", error=f"robots.txt could not be read ({unread}), so nothing was asked of this host"

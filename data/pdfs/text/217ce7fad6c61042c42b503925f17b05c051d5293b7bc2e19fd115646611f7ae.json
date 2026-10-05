@@ -1,5 +1,5 @@
 {
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "pages": 14,
  "body_size": 12.0,
  "body_font": "arial",
@@ -12,6 +12,470 @@
  "bookmarks": 0,
  "warnings": [
   "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    408.92,
+    526.7,
+    422.3
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    75.24,
+    526.76,
+    88.62
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    310.82,
+    526.7,
+    324.2
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    230.36,
+    526.7,
+    243.74
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    347.66,
+    526.76,
+    361.04
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    432.04,
+    75.24,
+    526.76,
+    88.62
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    197.66,
+    526.7,
+    211.04
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    446.2,
+    526.7,
+    459.58
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.0,
+    75.85,
+    183.28,
+    104.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.0,
+    130.08,
+    525.24,
+    143.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Guidance ................................................................................................................... 4",
+   "bbox": [
+    72.0,
+    148.88,
+    525.24,
+    162.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 4",
+   "bbox": [
+    84.0,
+    167.6,
+    525.24,
+    180.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "1.1 Basis of Claim .......................................................................................... 4",
+   "bbox": [
+    107.48,
+    186.44,
+    525.24,
+    199.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2. Consideration of Issues ................................................................................... 4",
+   "bbox": [
+    84.0,
+    205.22,
+    525.24,
+    218.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.1 Is the person’s account credible? ............................................................. 4",
+   "bbox": [
+    107.48,
+    224.0,
+    525.24,
+    237.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.2 Is the person reasonably likely to be imprisoned on return?..................... 4",
+   "bbox": [
+    107.48,
+    242.78,
+    525.24,
+    256.16
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.3 Are prison conditions so severe that prisoners suffer treatment contrary to",
+   "bbox": [
+    107.48,
+    261.56,
+    526.11,
+    274.94
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Article 3 ECHR? ............................................................................................... 5",
+   "bbox": [
+    107.48,
+    275.42,
+    525.24,
+    288.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2.4 If refused, is the claim likely to be certifiable as ‘clearly unfounded’? ....... 5",
+   "bbox": [
+    107.48,
+    294.2,
+    525.24,
+    307.58
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "3. Policy summary ............................................................................................... 6",
+   "bbox": [
+    84.0,
+    312.98,
+    525.24,
+    326.36
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Country Information ................................................................................................. 7",
+   "bbox": [
+    72.0,
+    331.88,
+    525.24,
+    345.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "4. Penal code ....................................................................................................... 7",
+   "bbox": [
+    84.0,
+    350.6,
+    525.24,
+    363.98
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "5. Death penalty .................................................................................................. 7",
+   "bbox": [
+    84.0,
+    369.38,
+    525.24,
+    382.76
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6. Prison overview ............................................................................................... 7",
+   "bbox": [
+    84.0,
+    388.22,
+    525.24,
+    401.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.1 Number of prisons and prisoners ............................................................. 7",
+   "bbox": [
+    107.48,
+    407.0,
+    525.24,
+    420.38
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "6.2 Conditions of prisons and treatment of prisoners ..................................... 8",
+   "bbox": [
+    107.48,
+    425.78,
+    525.24,
+    439.16
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7. Oversight, review and monitoring .................................................................. 12",
+   "bbox": [
+    84.0,
+    444.64,
+    525.24,
+    458.02
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "7.1 Methods .................................................................................................. 12",
+   "bbox": [
+    107.48,
+    463.42,
+    525.24,
+    476.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Version Control and Contacts ............................................................................... 14",
+   "bbox": [
+    72.0,
+    482.26,
+    525.24,
+    495.64
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 14",
+   "bbox": [
+    274.82,
+    794.5,
+    323.54,
+    803.4
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 14",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 14",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 14",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 14",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 14",
+   "bbox": [
+    272.6,
+    794.5,
+    325.76,
+    803.4
+   ]
+  }
  ],
  "figure_pages": {},
  "figure_sizes": {},

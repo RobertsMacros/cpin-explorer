@@ -1,13 +1,11 @@
 {
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "philippines/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
  "pdf_sha256": "35f7f8f6ea70d6e92347713b9cd957860aece558d93e980930635d84179f1d58",
  "body_sha256": "cbf2c586e7d8bb3ca453c79a742b713cd833fc0ae9474c32775872e11688adbd",
  "figures": [],
  "unplaced": 0,
- "pdf_figures": 1,
+ "pdf_figures": 0,
  "web_figures": 0,
- "left_in_pdf": {
-  "front": 1
- }
+ "left_in_pdf": {}
 }

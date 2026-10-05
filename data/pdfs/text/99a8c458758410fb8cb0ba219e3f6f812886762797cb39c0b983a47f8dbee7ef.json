@@ -1,0 +1,258 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 12,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 22,
+ "paragraphs": 76,
+ "list_items": 2,
+ "tables": 1,
+ "figures": 0,
+ "footnotes": 15,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    306.5,
+    556.18,
+    319.88
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    449.68,
+    556.18,
+    463.06
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    642.1,
+    556.18,
+    655.48
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    776.52,
+    556.18,
+    789.9
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    649.78,
+    556.18,
+    663.16
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    42.78,
+    556.18,
+    56.16
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.38,
+    275.6,
+    556.12,
+    288.98
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    42.78,
+    556.18,
+    56.16
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    332.6,
+    556.18,
+    345.98
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    189.02,
+    556.18,
+    202.4
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 12",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 12",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 12",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 12",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Somalia: Prison Conditions February 2015",
+ "cover_version": null,
+ "cover_date": "February 2015",
+ "pdf_sha256": "99a8c458758410fb8cb0ba219e3f6f812886762797cb39c0b983a47f8dbee7ef",
+ "images": []
+}

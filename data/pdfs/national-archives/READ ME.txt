@@ -1,0 +1,23 @@
+CPIN Explorer — recovered historical PDFs
+
+140 distinct original PDFs, filed in By country by country and edition title.
+138 came from the National Archives: all 1,265 dated captures were downloaded and validated.
+The remaining two Home Office PDFs (Kenya operational guidance, December 2013; Pakistan Ahmadis, June 2018)
+were recovered from ecoi.net. They have source links and download dates, not archive capture dates.
+
+PDF index.csv lists all 140 original PDFs and their source details.
+Capture index.csv lists all 1,265 National Archives capture URLs.
+download-report.json preserves the National Archives download records.
+repository-downloads.json preserves the two ecoi.net successes and the refused Refworld attempt.
+import-report.json records the completed offline import and reconciliation of 32 earlier fetch failures.
+integration-check.json verifies all 140 PDFs against their extracted and exported Explorer editions.
+original-hand-check-list.html preserves the earlier 140-edition manual list; its current copy now has zero outstanding editions.
+
+All 829 editions in the existing catalogue are held. These 140 PDFs are integrated into Explorer,
+with reader text, history, comparisons and citations linked to the correct source. They remain historical.
+No missing edition or extraction failure remains. Rebuilt locally, not pushed or deployed.
+The wider 4,200-link search-export union remains in queue.txt; only its first 1,265 entries were downloaded from the National Archives.
+
+Storage: /Users/robertnew/Developer/cpin-explorer/data/pdfs/national-archives
+Original PDFs: /Users/robertnew/Developer/cpin-explorer/data/pdfs/files
+The files shortcut points to the PDF store. By country contains friendly named links to the same bytes.

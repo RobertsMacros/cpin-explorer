@@ -1,0 +1,687 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 22,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 15,
+ "paragraphs": 123,
+ "list_items": 3,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 63,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 1,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "page number",
+   "text": "1",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "CONTENTS",
+   "bbox": [
+    55.02,
+    145.64,
+    124.38,
+    159.02
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "1. Introduction 1.1 – 1.4",
+   "bbox": [
+    55.02,
+    170.78,
+    501.98,
+    184.22
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "2. Country assessment 2.1",
+   "bbox": [
+    55.02,
+    195.86,
+    475.34,
+    209.3
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Actors of protection  2.2",
+   "bbox": [
+    55.02,
+    209.66,
+    471.98,
+    223.04
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Internal relocation 2.3",
+   "bbox": [
+    55.02,
+    223.46,
+    471.98,
+    236.84
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Country guidance caselaw  2.4",
+   "bbox": [
+    55.02,
+    237.26,
+    471.98,
+    250.64
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "3. Main categories of claims 3.1 – 3.9",
+   "bbox": [
+    55.02,
+    262.34,
+    501.98,
+    275.78
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Christians/Christian Converts 3.10",
+   "bbox": [
+    55.02,
+    276.14,
+    478.64,
+    289.52
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Political Opposition Activists and perceived opponents of the 3.11",
+   "bbox": [
+    55.02,
+    289.94,
+    478.64,
+    303.32
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "government 3.12",
+   "bbox": [
+    55.02,
+    303.74,
+    478.64,
+    317.12
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Members of the Muslim Brotherhood 3.13",
+   "bbox": [
+    55.02,
+    317.54,
+    478.64,
+    330.92
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Women 3.14",
+   "bbox": [
+    55.02,
+    331.34,
+    478.64,
+    344.72
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Prison Conditions",
+   "bbox": [
+    55.02,
+    345.14,
+    152.4,
+    358.52
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "4. Minors claiming in their own right 4.1 – 4.3",
+   "bbox": [
+    55.02,
+    370.22,
+    501.98,
+    383.66
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "5.  Medical Treatment 5.1 – 5.5",
+   "bbox": [
+    55.02,
+    409.18,
+    501.98,
+    422.62
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "6. Returns 6.1 – 6.5",
+   "bbox": [
+    55.02,
+    434.26,
+    501.98,
+    447.7
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "2",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "3",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "4",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "5",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "6",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "7",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "8",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "9",
+   "bbox": [
+    294.86,
+    802.25,
+    303.25,
+    813.42
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "10",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "11",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "12",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "13",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "14",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "15",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "16",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "17",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "18",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "19",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "20",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "21",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "running header",
+   "text": "Egypt OGN v.3.1 19 December 2013 (re-issued October 2014)",
+   "bbox": [
+    124.22,
+    17.15,
+    407.35,
+    28.32
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "22",
+   "bbox": [
+    292.1,
+    802.25,
+    306.01,
+    813.42
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "EGYPT",
+ "cover_version": "3.1",
+ "cover_date": "19 December 2013",
+ "pdf_sha256": "38a68a3f09395093910758b8a651538391f626612b3989db28cd147ae17881e8",
+ "images": []
+}

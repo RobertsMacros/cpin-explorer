@@ -1,12 +1,12 @@
 {
  "method": "webpdf-8",
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "philippines/report-of-a-fact-finding-mission-domestic-violence-philippines-february-2023-accessible",
  "pdf_sha256": "35f7f8f6ea70d6e92347713b9cd957860aece558d93e980930635d84179f1d58",
  "body_sha256": "cbf2c586e7d8bb3ca453c79a742b713cd833fc0ae9474c32775872e11688adbd",
  "words": {
   "web": 29555,
-  "pdf": 29568
+  "pdf": 29565
  },
  "summary": {
   "wording": {
@@ -54,17 +54,12 @@
     "pdf_words": 10
    },
    "furniture": {
-    "differences": 1,
+    "differences": 0,
     "web_words": 0,
-    "pdf_words": 3
+    "pdf_words": 0
    }
   },
   "kinds": {
-   "back to contents": {
-    "differences": 1,
-    "web_words": 0,
-    "pdf_words": 3
-   },
    "list marker": {
     "differences": 10,
     "web_words": 0,
@@ -111,7 +106,7 @@
   },
   "pictures": {
    "web": 0,
-   "pdf": 1
+   "pdf": 0
   },
   "tables": {
    "web": 0,
@@ -130,23 +125,6 @@
   }
  },
  "differences": [
-  {
-   "kind": "back to contents",
-   "group": "furniture",
-   "verdict": "real",
-   "web": "",
-   "pdf": "Back to Contents",
-   "web_words": 0,
-   "pdf_words": 3,
-   "before": "legality etc. how does this work in practice?",
-   "after": "List of sources\nBritish Embassy\nBahay Kanlungan\nQuezon",
-   "where": {
-    "heading": "bookmark9",
-    "paragraph": null,
-    "section": "List of sources",
-    "page": 5
-   }
-  },
   {
    "kind": "list marker",
    "group": "form",

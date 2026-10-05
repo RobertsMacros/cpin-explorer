@@ -3,7 +3,7 @@
 // (pages live in prototypes/ and reach ../../assets and ../../data). Adds robots.txt, _headers
 // (noindex: public but hidden from search engines), _redirects (/ -> the globe) and a 404 page.
 // Run after `./cpin export` and `npm run search-index`, which write the derived data it needs.
-import { cp, mkdir, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
@@ -13,6 +13,7 @@ const MAX_FILES = 20000;                  // and per deployment (free plan)
 
 // What the pages need, relative to the repo root.
 const INCLUDE = [
+  "prototypes/about",
   "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search", "prototypes/guide",
   "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data",
   "prototypes/package.json",
@@ -30,9 +31,30 @@ for (const rel of REQUIRED) {
   catch { console.error(`missing ${rel}: run ./cpin export, ./cpin images and (cd web && npm run search-index) first`); process.exit(1); }
 }
 
+// Only referenced PDF pictures belong in a build. Older derived files can remain in the
+// history store, including front matter removed by a newer extractor.
+const pdfPictures = new Set();
+async function collectPictures(dir) {
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const file = path.join(dir, entry.name);
+    if (entry.isDirectory()) await collectPictures(file);
+    else if (entry.name.endsWith(".json") && entry.name !== "similarity-cache.json") {
+      const series = JSON.parse(await readFile(file, "utf8"));
+      for (const source of Object.values(series.images || {})) {
+        if (source.startsWith("../../data/pdfs/text/images/")) pdfPictures.add(path.basename(source));
+      }
+    }
+  }
+}
+await collectPictures(path.join(ROOT, "prototypes/data/series"));
+
 await rm(OUT, { recursive: true, force: true });
 await mkdir(OUT, { recursive: true });
-const keep = (src) => !EXCLUDE.some((re) => re.test(path.relative(ROOT, src).split(path.sep).join("/")));
+const keep = (src) => {
+  const rel = path.relative(ROOT, src).split(path.sep).join("/");
+  if (EXCLUDE.some((re) => re.test(rel))) return false;
+  return !rel.startsWith("data/pdfs/text/images/") || pdfPictures.has(path.basename(src));
+};
 for (const rel of INCLUDE) await cp(path.join(ROOT, rel), path.join(OUT, rel), { recursive: true, filter: keep });
 
 await writeFile(path.join(OUT, "_redirects"), "/ /prototypes/dashboard/ 302\n/favicon.ico /assets/cpin-explorer/favicon.svg 302\n");

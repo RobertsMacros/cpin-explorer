@@ -40,11 +40,18 @@ def test_robots_txt_that_cannot_be_read_is_not_permission(robots):
     assert again.get(PAGE).ok
 
 
-@pytest.mark.parametrize("status", [404, 410, 403])
+@pytest.mark.parametrize("status", [404, 410])
 def test_a_host_with_no_robots_txt_has_no_rules(status):
     handler, asked = site(httpx.Response(status))
     client, _ = client_for(handler)
     assert client.get(PAGE).ok and asked == ["/robots.txt", "/api/content/some/page"]
+
+
+@pytest.mark.parametrize("status", [401, 403, 451])
+def test_a_refused_robots_file_is_unknown_not_permission(status):
+    handler, asked = site(httpx.Response(status))
+    client, _ = client_for(handler)
+    assert client.get(PAGE).status == "robots" and asked == ["/robots.txt"]
 
 
 def test_robots_txt_that_recovers_on_the_second_try_is_read():
@@ -63,3 +70,18 @@ def test_crawl_delay_is_honoured_when_it_is_longer_than_our_own():
     client, slept = client_for(handler)
     assert client.get(PAGE).ok and client.get(PAGE).ok
     assert slept and 6 < max(slept) <= 7, "the second request waited for the delay the site asks for"
+
+
+def test_the_national_archives_is_never_fetched_even_for_robots(site, client):
+    result = client.get('https://webarchive.nationalarchives.gov.uk/ukgwa/timeline/https://www.gov.uk/example')
+    assert result.status == 'robots' and not site.requests
+
+
+def test_robots_redirect_cannot_contact_the_national_archives():
+    asked = []
+    def handler(request):
+        asked.append(str(request.url))
+        return httpx.Response(302, headers={"location": "https://webarchive.nationalarchives.gov.uk/robots.txt"})
+    client, _ = client_for(handler)
+    assert client.get(PAGE).status == "robots"
+    assert all("nationalarchives" not in url for url in asked)

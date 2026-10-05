@@ -1,0 +1,615 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 35,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 32,
+ "paragraphs": 230,
+ "list_items": 5,
+ "tables": 1,
+ "figures": 8,
+ "footnotes": 51,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    184.1,
+    556.18,
+    197.48
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    357.32,
+    556.18,
+    370.7
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    578.02,
+    556.18,
+    591.4
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    319.4,
+    556.18,
+    332.78
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    619.9,
+    556.18,
+    633.28
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    628.96,
+    556.18,
+    642.34
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    396.2,
+    556.18,
+    409.58
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    380.6,
+    556.18,
+    393.98
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    192.8,
+    556.18,
+    206.18
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    561.76,
+    556.18,
+    575.14
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    179.0,
+    556.18,
+    192.38
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    204.8,
+    556.18,
+    218.18
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    147.14,
+    556.18,
+    160.52
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 35",
+   "bbox": [
+    274.82,
+    810.1,
+    322.42,
+    819.0
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "2014",
+   "bbox": [
+    42.54,
+    786.41,
+    70.35,
+    797.58
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 35",
+   "bbox": [
+    272.6,
+    810.1,
+    324.64,
+    819.0
+   ]
+  }
+ ],
+ "figure_pages": {
+  "d7eb717878c83f8b48cb50b39402929b008c73f762583bf8bfb75a1dccb5ac6c.jpg": 27,
+  "ac582bed69ce834a2d74aae07ad9703021fc2855ae3022e1e15e03602a5c5820.jpg": 28,
+  "515f916fadd8dba2c977ad4aec2703ff7896ca32dcc9fe5f5082e25a7a23227b.jpg": 29,
+  "457bbe49c596cc226e5d091a1aec6044be2be8771d2997334ee27ceafba39190.jpg": 30,
+  "b2d3e846be508795018690f034515aa7d68df8a1de2ed5a32cc62e8041f55514.png": 31,
+  "e7ab5f17f393834e35d32d8a48c8423c7cbb10c7df009a9acdbf22d8f85df36a.png": 32,
+  "de6c9c35c9d6d6f888284314919a306b1c39c49a827d2b09375f81f65f3e9284.jpg": 33,
+  "f0425bb2d538911a3656ae401b1b1685be55270affd618869ac6aeb757184cdc.png": 34
+ },
+ "figure_sizes": {
+  "d7eb717878c83f8b48cb50b39402929b008c73f762583bf8bfb75a1dccb5ac6c.jpg": [
+   866,
+   1191
+  ],
+  "ac582bed69ce834a2d74aae07ad9703021fc2855ae3022e1e15e03602a5c5820.jpg": [
+   869,
+   1190
+  ],
+  "515f916fadd8dba2c977ad4aec2703ff7896ca32dcc9fe5f5082e25a7a23227b.jpg": [
+   888,
+   1247
+  ],
+  "457bbe49c596cc226e5d091a1aec6044be2be8771d2997334ee27ceafba39190.jpg": [
+   894,
+   1249
+  ],
+  "b2d3e846be508795018690f034515aa7d68df8a1de2ed5a32cc62e8041f55514.png": [
+   893,
+   1244
+  ],
+  "e7ab5f17f393834e35d32d8a48c8423c7cbb10c7df009a9acdbf22d8f85df36a.png": [
+   886,
+   1252
+  ],
+  "de6c9c35c9d6d6f888284314919a306b1c39c49a827d2b09375f81f65f3e9284.jpg": [
+   886,
+   1252
+  ],
+  "f0425bb2d538911a3656ae401b1b1685be55270affd618869ac6aeb757184cdc.png": [
+   897,
+   1244
+  ]
+ },
+ "figure_text": {
+  "d7eb717878c83f8b48cb50b39402929b008c73f762583bf8bfb75a1dccb5ac6c.jpg": 0,
+  "ac582bed69ce834a2d74aae07ad9703021fc2855ae3022e1e15e03602a5c5820.jpg": 0,
+  "515f916fadd8dba2c977ad4aec2703ff7896ca32dcc9fe5f5082e25a7a23227b.jpg": 0,
+  "457bbe49c596cc226e5d091a1aec6044be2be8771d2997334ee27ceafba39190.jpg": 0,
+  "b2d3e846be508795018690f034515aa7d68df8a1de2ed5a32cc62e8041f55514.png": 0,
+  "e7ab5f17f393834e35d32d8a48c8423c7cbb10c7df009a9acdbf22d8f85df36a.png": 0,
+  "de6c9c35c9d6d6f888284314919a306b1c39c49a827d2b09375f81f65f3e9284.jpg": 0,
+  "f0425bb2d538911a3656ae401b1b1685be55270affd618869ac6aeb757184cdc.png": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Nigeria: Sexual orientation and gender identity March 2015",
+ "cover_version": null,
+ "cover_date": "March 2015",
+ "pdf_sha256": "8c8d5e11adb0a7d38d8b2eb07a6dc4b313476fffa72bafec7bcca90f7f117666",
+ "images": [
+  "457bbe49c596cc226e5d091a1aec6044be2be8771d2997334ee27ceafba39190.jpg",
+  "515f916fadd8dba2c977ad4aec2703ff7896ca32dcc9fe5f5082e25a7a23227b.jpg",
+  "ac582bed69ce834a2d74aae07ad9703021fc2855ae3022e1e15e03602a5c5820.jpg",
+  "b2d3e846be508795018690f034515aa7d68df8a1de2ed5a32cc62e8041f55514.png",
+  "d7eb717878c83f8b48cb50b39402929b008c73f762583bf8bfb75a1dccb5ac6c.jpg",
+  "de6c9c35c9d6d6f888284314919a306b1c39c49a827d2b09375f81f65f3e9284.jpg",
+  "e7ab5f17f393834e35d32d8a48c8423c7cbb10c7df009a9acdbf22d8f85df36a.png",
+  "f0425bb2d538911a3656ae401b1b1685be55270affd618869ac6aeb757184cdc.png"
+ ]
+}

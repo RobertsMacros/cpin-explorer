@@ -4,6 +4,7 @@
 // Data: data.json, written by `./cpin export` from the scraper's store.
 import { createGlobe, feature, geoBounds, geoContains } from "../vendor/globe-deps.js";
 import { brandMark, startCountry, startView } from "../shared/brand-mark.js";
+import { archiveName } from "../shared/archive-source.js";
 import { makeCountryLocator } from "../shared/country-locator.js";
 import { hydrateFlags, sampleFlag } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
@@ -50,6 +51,7 @@ const bySlug = new Map(countries.map((c) => [c.slug, c]));
 const liveNotes = (c) => c.notes.filter((n) => n.status === "live");
 const isRecent = (c) => c.updated && daysAgo(c.updated) <= 30;
 const liveCount = (c) => c.reports?.filter((r) => r.status === "live").length ?? liveNotes(c).length;
+const countryCount = (c) => c.dropped_from_collection ? (c.reports || []).length : liveCount(c);
 // What a kind tag stands for, from the glossary ("CPIN" -> "Country Policy and Information Note"), as a tooltip.
 const kindFull = (kind) => kindTitle(kind, glossaryEntry(kindTermId(kind)));
 const kindTip = (kind) => { const full = kindFull(kind); return full ? ` title="${esc(full)}"` : ""; };
@@ -98,7 +100,7 @@ const SLATE = () => (isDark() ? [0.5, 0.55, 0.7] : [0.42, 0.48, 0.6]);
 const markerSize = (c) => (c.slug === selected ? 0.07 : 0.03 + 0.0028 * Math.min(liveNotes(c).length, 12));
 function markers() {
   const blue = palette().markerColor, slate = SLATE();
-  return countries.map((c) => ({
+  return countries.filter((c) => c.marker && !c.dropped_from_collection).map((c) => ({
     location: c.marker,
     size: markerSize(c),
     color: c.slug === selected || isRecent(c) ? blue : slate,
@@ -233,13 +235,13 @@ function flyTo(latLon) {
 
 // Pins: a focusable button on every marker (for the keyboard and screen readers), carrying a label
 // with a dotted flag. The pointer does not use them: hitAt() below picks the dot.
-const pins = countries.map((c) => {
+const pins = countries.filter((c) => c.marker && !c.dropped_from_collection).map((c) => {
   const el = document.createElement("button");
   el.type = "button";
   el.className = `pin${isRecent(c) ? " is-recent" : ""}`;
   el.dataset.slug = c.slug;
   el.dataset.place = "top";
-  el.setAttribute("aria-label", `${c.name}: ${c.reports?.length ?? liveNotes(c).length} reports`);
+  el.setAttribute("aria-label", `${c.name}: ${count(liveCount(c), "report")}`);
   el.innerHTML = `<span class="tag pin-label">${flagCanvas(c, 8, "dotflag--tag")}<span>${esc(c.name)}</span><b>${liveCount(c)}</b></span>`;
   pinsEl.append(el);
   return { c, slug: c.slug, el, label: el.firstElementChild, behind: null, visible: false, labelled: false, place: "top",
@@ -452,7 +454,7 @@ $("#zoomCtl")?.addEventListener("click", (e) => {
   if (!b) return;
   if (b.dataset.zoom === "in") zoomTarget = clampZoom(zoomTarget * 1.45);
   else if (b.dataset.zoom === "out") zoomTarget = clampZoom(zoomTarget / 1.45);
-  else { zoomTarget = 1; if (selected) flyTo(bySlug.get(selected).marker); }
+  else { zoomTarget = 1; if (selected && bySlug.get(selected).marker) flyTo(bySlug.get(selected).marker); }
   lastInteract = performance.now();
 });
 // The pins themselves answer the keyboard (Enter or Space on a focused pin is a click).
@@ -617,7 +619,7 @@ function select(slug, { fly = true, record = true, report = null } = {}) {
   brandMark.show(slug);                                    // the header mark turns to it too
   pinsDirty = true;
   try { slug ? localStorage.setItem("cpin-last-country", slug) : localStorage.removeItem("cpin-last-country"); } catch {}
-  if (slug && fly) flyTo(bySlug.get(slug).marker);
+  if (slug && fly && bySlug.get(slug).marker) flyTo(bySlug.get(slug).marker);
   if (record) syncUrl();
   renderSoon(() => (report ? showReport(report) : scrollPanelTop()));
 }
@@ -670,10 +672,10 @@ function overview() {
     <div class="stats">${stat(t.countries, "Countries")}${stat(t.notes, "Notes")}${stat(t.pdfs, "PDF editions")}${stat(t.archived_editions, "Archived editions")}</div>
     <p class="meta-line"><span>COPY FETCHED ${ukDateTime(data.last_sync)}</span><a href="${esc(data.source)}" target="_blank" rel="noopener">SOURCE: GOV.UK ↗</a></p>
     <section class="section" style="margin-top:2.4rem">
-      <div class="section-head"><h2 class="eyebrow">All countries</h2><span class="eyebrow">${countries.length}</span></div>
-      <div class="country-index">${countries.map((c) => { const full = esc(`${c.name}: ${count(liveNotes(c).length, "report")}${isRecent(c) ? ", updated in the last 30 days" : ""}`); return `<button class="country-row${isRecent(c) ? " is-recent" : ""}" data-slug="${c.slug}" title="${full}" aria-label="${full}">
+      <div class="section-head"><h2 class="eyebrow">All countries</h2><span class="eyebrow">${t.countries} current · ${t.former_countries || 0} former</span></div>
+      <div class="country-index">${countries.map((c) => { const full = esc(`${c.name}${c.dropped_from_collection ? ", former" : ""}: ${count(countryCount(c), "report")}${isRecent(c) ? ", updated in the last 30 days" : ""}`); return `<button class="country-row${isRecent(c) ? " is-recent" : ""}" data-slug="${c.slug}" title="${full}" aria-label="${full}">
         <i class="fresh${isRecent(c) ? "" : " stale"}" title="${isRecent(c) ? "Updated in the last 30 days" : ""}"></i>
-        ${flagCanvas(c, 8, "dotflag--row")}<span class="name">${esc(c.name)}</span><span class="count">${liveNotes(c).length}</span></button>`; }).join("")}</div>
+        ${flagCanvas(c, 8, "dotflag--row")}<span class="name">${esc(c.name)}${c.dropped_from_collection ? ' · former' : ''}</span><span class="count">${countryCount(c)}</span></button>`; }).join("")}</div>
     </section>
     <section class="section">
       <div class="section-head"><h2 class="eyebrow">Recent changes</h2><span class="eyebrow">As published on GOV.UK</span></div>
@@ -707,7 +709,7 @@ function reportCard(r, i) {
   const gone = r.status !== "live";
   const L = r.latest || {};
   const left = leftGovuk(r.left_govuk, fmtDate);                 // the day it was found gone, where this copy saw it go
-  const status = r.status === "removed" ? `<span class="tag tag--muted"${left ? ` title="${esc(left.sentence)}"` : ""}>Removed from GOV.UK${left ? ` · ${esc(left.when)}` : ""}</span>`
+  const status = r.withdrawn_at ? `<span class="tag tag--muted">Withdrawn ${esc(fmtDate(r.withdrawn_at))}</span>` : r.status === "removed" ? `<span class="tag tag--muted"${left ? ` title="${esc(left.sentence)}"` : ""}>Removed from GOV.UK${left ? ` · ${esc(left.when)}` : ""}</span>`
     : r.status === "archived" ? `<span class="tag tag--muted">Archived copy only</span>` : "";
   const editions = r.editions > 1 ? `${r.editions} EDITIONS ON RECORD · SINCE ${fmtDate(r.earliest)}` : "1 EDITION ON RECORD";
   // Its current edition is a PDF with no web version: the text held here is an earlier edition, and must not pass for the current one.
@@ -725,7 +727,7 @@ function reportCard(r, i) {
   return `<article class="note${gone ? " is-gone" : ""}" data-card="${esc(r.key)}" style="--i:${i}">
     <div class="note-top"><span class="tag ${gone ? "tag--muted" : "tag--outline"}"${kindTip(r.kind)}>${esc(r.kind)}</span>
       <span class="note-when">${reportWhen(r)}</span>${r.pdf_only || pdfNow ? `<span class="tag tag--muted"${pdfNow ? ' title="The current edition is published as a PDF only"' : ""}>PDF only</span>`
-        : L.text_from_pdf ? `<span class="tag tag--muted" title="${archivedPdf ? "No longer on GOV.UK: the text here is taken from the Internet Archive’s copy of the PDF, with its layout rebuilt" : "Published as a PDF only: the text here is taken from the PDF, with its layout rebuilt"}">From the PDF</span>` : ""}${status}</div>
+        : L.text_from_pdf ? `<span class="tag tag--muted" title="${archivedPdf ? `No longer on GOV.UK: the text here is taken from the PDF copy held by ${esc(archiveName(L))}, with its layout rebuilt` : "Published as a PDF only: the text here is taken from the PDF, with its layout rebuilt"}">From the PDF</span>` : ""}${status}</div>
     <h3 class="note-title">${esc(r.topic)}</h3>
     ${change}
     <div class="note-meta">${editions}${r.history_count ? ` · ${plural(r.history_count, "GOV.UK UPDATE")}` : ""}</div>
@@ -734,7 +736,7 @@ function reportCard(r, i) {
       ${r.read_url ? `<a class="btn" href="${esc(r.read_url)}#history">History${r.editions > 1 ? " & changes" : ""}</a>` : ""}
       ${L.govuk_url && !r.pdf_only ? `<a class="btn" href="${esc(L.govuk_url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : ""}
       ${L.pdf_url && r.read_url && !pdfNow && !archivedPdf ? `<a class="btn" href="${esc(L.pdf_url)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
-      ${gone && L.archive_url ? `<a class="btn" href="${esc(L.archive_url)}" target="_blank" rel="noopener"${archivedPdf ? ' title="The Internet Archive’s copy of the PDF this edition is read from"' : ""}>Archived copy ↗</a>` : ""}
+      ${gone && L.archive_url ? `<a class="btn" href="${esc(L.archive_url)}" target="_blank" rel="noopener"${archivedPdf ? ` title="The PDF copy held by ${esc(archiveName(L))} that this edition is read from"` : ""}>Archived copy ↗</a>` : ""}
     </div></article>`;
 }
 function notesList(c) {
@@ -761,7 +763,8 @@ function countryView(c) {
       ${flagCanvas(c, 24, "dotflag--hero", true, true)}
       <div><p class="eyebrow">Country</p><h1 class="country-title">${esc(c.name)}</h1></div>
     </div>
-    <p class="meta-line"><span>UPDATED ${fmtDate(c.updated)}</span><span>${plural(live.length, "REPORT")}</span>
+    <p class="meta-line"><span>UPDATED ${fmtDate(c.updated)}</span><span>${plural(live.length, c.dropped_from_collection ? "CURRENT REPORT" : "REPORT")}</span>
+      ${c.withdrawn_at ? `<span>Withdrawn ${esc(fmtDate(c.withdrawn_at))}</span>` : c.dropped_from_collection ? '<span>No longer in the current collection</span>' : ''}
       ${archived ? `<span>${plural(archived, "ARCHIVED EDITION")}</span>` : ""}
       <a href="${esc(c.govuk_url)}" target="_blank" rel="noopener">GOV.UK PAGE ↗</a></p>
     ${c.caveat ? `<p class="caveat">${esc(c.caveat)}</p>` : ""}
@@ -866,7 +869,7 @@ function searchView() {
   const hint = parsed.generic && parsed.matchAll && !parsed.countries.length
     ? `<p class="search-hint">Every report here is a country report: a country policy and information note (CPIN) or one of its relatives. ${parsed.kinds ? "These are the ones of that kind" : `All ${num(hits.length)} are below, by topic`}; add a country or a topic to narrow them, such as “Iran” or “internal relocation”.</p>` : "";
   const countryGroup = cs.length ? `<div class="results-group"><div class="section-head"><h2 class="eyebrow">Countries</h2><span class="eyebrow">${cs.length}</span></div>
-      ${cs.map((c) => `<button class="hit" data-slug="${c.slug}">${flagCanvas(c, 8, "dotflag--row")}<span>${highlight(c.name, parsed)}</span><small>${plural((c.reports || []).filter((r) => r.status === "live").length, "REPORT")} · UPDATED ${fmtDate(c.updated)}</small></button>`).join("")}</div>` : "";
+      ${cs.map((c) => `<button class="hit" data-slug="${c.slug}">${flagCanvas(c, 8, "dotflag--row")}<span>${highlight(c.name, parsed)}</span><small>${plural(countryCount(c), "REPORT")} · ${c.dropped_from_collection ? "FORMER" : `UPDATED ${fmtDate(c.updated)}`}</small></button>`).join("")}</div>` : "";
   const more = entries.length > notesShown
     ? `<button class="more" type="button" data-action="more-notes">Show all ${num(hits.length)} reports</button>` : "";
   const reportsGroup = hits.length ? `<div class="results-group"><div class="section-head"><h2 class="eyebrow">Reports</h2><span class="eyebrow">${num(hits.length)}</span></div>

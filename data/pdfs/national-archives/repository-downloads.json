@@ -1,0 +1,46 @@
+{
+  "records": [
+    {
+      "original_url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/565882/Kenya-operational-guidance-v8-2013.pdf",
+      "url": "https://www.ecoi.net/en/file/local/1344462/1226_1386165740_kenyaogn.pdf",
+      "source_page": "https://www.ecoi.net/en/document/1344462.html",
+      "provider": "ecoi.net",
+      "country_slug": "kenya",
+      "country": "Kenya",
+      "edition": "Operational guidance note: Kenya, December 2013",
+      "downloaded_at": "2026-10-05T06:15:56Z",
+      "status": "saved",
+      "sha256": "a3e450a2db9b3bab30b80daf12da93ce0a897561999c6be50d88e82197a60ada",
+      "bytes": 422934,
+      "pages": 31,
+      "file": "../files/a3e450a2db9b3bab30b80daf12da93ce0a897561999c6be50d88e82197a60ada.pdf"
+    },
+    {
+      "original_url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/717821/CPIN-Pakistan-Ahmadis-v3.0-June_2018.pdf",
+      "url": "https://www.refworld.org/sites/default/files/legacy-pdf/en/2018-6/5b2a7ec17.pdf",
+      "source_page": "https://www.refworld.org/reference/countryrep/ukho/2018/120962",
+      "provider": "Refworld",
+      "country_slug": "pakistan",
+      "country": "Pakistan",
+      "edition": "Country policy and information note: Ahmadis, Pakistan, June 2018",
+      "downloaded_at": "2026-10-05T06:15:56Z",
+      "status": "failed",
+      "error": "robots.txt could not be read (HTTP 403), so nothing was asked of this host"
+    },
+    {
+      "original_url": "https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/717821/CPIN-Pakistan-Ahmadis-v3.0-June_2018.pdf",
+      "url": "https://www.ecoi.net/en/file/local/1435872/1226_1529569452_cpin-pakistan-ahmadis-v3-0-june-2018.pdf",
+      "source_page": "https://www.ecoi.net/en/document/1435872.html",
+      "provider": "ecoi.net",
+      "country_slug": "pakistan",
+      "country": "Pakistan",
+      "edition": "Country policy and information note: Ahmadis, Pakistan, June 2018",
+      "downloaded_at": "2026-10-05T06:17:30Z",
+      "status": "saved",
+      "sha256": "db35b338fe78273bdabecabc9c0a91a7e959138f92f8782b7daf09b85a94f34a",
+      "bytes": 1236506,
+      "pages": 77,
+      "file": "../files/db35b338fe78273bdabecabc9c0a91a7e959138f92f8782b7daf09b85a94f34a.pdf"
+    }
+  ]
+}

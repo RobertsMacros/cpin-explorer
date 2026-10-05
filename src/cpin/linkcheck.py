@@ -20,7 +20,7 @@ import time
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
-from urllib.parse import quote, urldefrag, urlsplit
+from urllib.parse import quote, urldefrag, urljoin, urlsplit
 from urllib.robotparser import RobotFileParser
 
 import httpx
@@ -29,8 +29,10 @@ from . import config
 from .changes import valid_from
 from .links import extract_links
 from .store import Store, now_iso, read_json, write_json
+from .titles import parse_note_title
+from .http import PoliteClient, robots_response
 
-HEAD_UNRELIABLE = {400, 403, 404, 405, 406, 429, 500, 501, 502, 503}   # retry these with GET
+HEAD_UNRELIABLE = {400, 404, 405, 406, 500, 501, 502, 503}   # never retry an access refusal or rate limit
 RESTRICTED = {401, 403, 429, 451}
 PER_SITE_DELAY = 1.5
 
@@ -89,7 +91,8 @@ def cited_urls(store: Store, countries: set[str] | None = None) -> dict[str, dic
             continue
         current = next(v for v in index["versions"] if v["sha256"] == index["current_sha256"])
         body = store.read_body(country, note, index["current_sha256"])
-        cited_at = valid_from(body) or current.get("public_updated_at") or current["first_seen"]
+        month = parse_note_title(current.get("title") or index["title"]).month
+        cited_at = valid_from(body) or (f"{month}-01T00:00:00Z" if month else None) or current["first_seen"]
         for link in extract_links(body):
             if link["kind"] not in ("external", "govuk"):
                 continue
@@ -109,6 +112,8 @@ class SiteChecker:
 
     def __init__(self, client: httpx.Client, delay: float = PER_SITE_DELAY, sleep=time.sleep):
         self.client, self.delay, self.sleep = client, delay, sleep
+        self.policies = {}
+        self.last_request = {}
 
     def robots(self, origin: str) -> tuple[RobotFileParser, dict | None]:
         """The site's rules; and, when they could not be read, what that request found (then no link of the
@@ -117,11 +122,11 @@ class SiteChecker:
         rp = RobotFileParser()
         code = error = None
         try:
-            r = self.client.get(origin + "/robots.txt", follow_redirects=True, timeout=10)
+            r = robots_response(self.client, origin + "/robots.txt", timeout=10)
             code = r.status_code
-        except httpx.HTTPError as e:
+        except (httpx.HTTPError, ValueError) as e:
             error = f"{type(e).__name__}: {e}"[:160]
-        if error or code == 429 or code >= 500:
+        if error or code in RESTRICTED or code >= 500 or 300 <= code < 400:
             return rp, {"code": code, "final_url": None, "error": error, "asked": "robots.txt"}
         if code == 200:
             rp.parse(r.text.splitlines())
@@ -129,15 +134,43 @@ class SiteChecker:
             rp.allow_all = True
         return rp, None
 
+    def request(self, method, url):
+        """Follow each hop only after checking its own host's policy. Read GET headers only."""
+        for _ in range(11):
+            p = urlsplit(url)
+            origin = f"{p.scheme}://{p.netloc}"
+            if p.hostname == "webarchive.nationalarchives.gov.uk":
+                return None, url, {"status": "robots", "error": "National Archives: manual checking only"}
+            if origin not in self.policies:
+                self.policies[origin] = self.robots(origin)
+                self.last_request[origin] = time.monotonic()
+            rp, unread = self.policies[origin]
+            if unread:
+                return None, url, {"status": classify(unread['code'], url, None, unread['error']), **unread}
+            if not rp.can_fetch(config.USER_AGENT, url):
+                return None, url, {"status": "robots", "error": None}
+            delay = max(self.delay, float(rp.crawl_delay(config.USER_AGENT) or 0))
+            self.sleep(max(0, delay - (time.monotonic() - self.last_request.get(origin, 0))))
+            with self.client.stream(method, url, follow_redirects=False) as r:
+                code, location = r.status_code, r.headers.get('location')
+            self.last_request[origin] = time.monotonic()
+            if code not in (301, 302, 303, 307, 308) or not location:
+                return code, url, None
+            url = urljoin(url, location)
+            if urlsplit(url).scheme not in ('http', 'https'):
+                raise ValueError('redirect is not an HTTP address')
+        raise ValueError('too many redirects')
+
     def check(self, url: str) -> dict:
         code = final = error = None
         try:
-            r = self.client.head(url, follow_redirects=True)
-            code, final = r.status_code, str(r.url)
+            code, final, refusal = self.request('HEAD', url)
+            if refusal:
+                return {"code": code, "final_url": final if final != url else None, **refusal}
             if code in HEAD_UNRELIABLE:
-                self.sleep(self.delay)
-                with self.client.stream("GET", url, follow_redirects=True) as g:   # headers only; no body read
-                    code, final = g.status_code, str(g.url)
+                code, final, refusal = self.request('GET', url)
+                if refusal:
+                    return {"code": code, "final_url": final if final != url else None, **refusal}
         except (httpx.HTTPError, ValueError) as e:
             code, error = None, f"{type(e).__name__}: {e}"[:160]
         result = {"status": classify(code, url, final, error), "code": code,
@@ -149,7 +182,12 @@ class SiteChecker:
 
     def run(self, urls: list[str]) -> dict[str, dict]:
         parts = urlsplit(urls[0])
+        if parts.hostname == "webarchive.nationalarchives.gov.uk":
+            return {url: {"status": "robots", "code": None, "final_url": None, "error": None,
+                          "checked_at": now_iso()} for url in urls}
         rp, unread = self.robots(f"{parts.scheme}://{parts.netloc}")
+        self.policies[f"{parts.scheme}://{parts.netloc}"] = (rp, unread)
+        self.last_request[f"{parts.scheme}://{parts.netloc}"] = time.monotonic()
         if unread:                           # the answer robots.txt got is all that is known of the site today
             return {url: {"status": classify(unread["code"], url, None, unread["error"]), **unread, "checked_at": now_iso()}
                     for url in urls}
@@ -167,23 +205,27 @@ class SiteChecker:
         return results
 
 
-def archived_copy(client: httpx.Client, url: str, cited_at: str) -> dict | None:
+def archived_copy(client: PoliteClient, url: str, cited_at: str) -> dict | None:
     """The Internet Archive capture closest to when the note cited the link, if any."""
     stamp = cited_at[:10].replace("-", "")
     try:
-        r = client.get(f"https://archive.org/wayback/available?url={quote(url, safe='')}&timestamp={stamp}", timeout=30)
-        closest = r.json().get("archived_snapshots", {}).get("closest") if r.status_code == 200 else None
-    except (httpx.HTTPError, ValueError):
-        return None
-    if not closest or not closest.get("available") or str(closest.get("status")) not in ("200", "None"):
-        return None
-    t = closest["timestamp"]
-    return {"archived_url": closest["url"].replace("http://", "https://", 1),
-            "archived_at": f"{t[0:4]}-{t[4:6]}-{t[6:8]}T{t[8:10]}:{t[10:12]}:{t[12:14]}Z"}
+        r = client.get(f"https://archive.org/wayback/available?url={quote(url, safe='')}&timestamp={stamp}")
+        if not r.ok:
+            raise RuntimeError(f"archive lookup failed: {r.status} {r.error or ''}")
+        closest = r.json().get("archived_snapshots", {}).get("closest")
+        if not closest or not closest.get("available") or str(closest.get("status")) not in ("200", "None"):
+            return None
+        t = closest["timestamp"]
+        if not re.fullmatch(r"\d{14}", t):
+            raise ValueError("invalid capture timestamp")
+        return {"archived_url": closest["url"].replace("http://", "https://", 1),
+                "archived_at": f"{t[0:4]}-{t[4:6]}-{t[6:8]}T{t[8:10]}:{t[10:12]}:{t[12:14]}Z"}
+    except (httpx.HTTPError, ValueError, AttributeError, KeyError, TypeError) as error:
+        raise RuntimeError(f"archive lookup failed: {error}") from error
 
 
 def check_links(store: Store, *, max_age_days: int = 30, limit: int | None = None, countries: set[str] | None = None,
-                workers: int = 12, transport: httpx.BaseTransport | None = None, sleep=time.sleep,
+                workers: int = 3, transport: httpx.BaseTransport | None = None, sleep=time.sleep,
                 log=print) -> dict:
     """Check cited links that are new or were last checked more than max_age_days ago."""
     path = store.root / "links" / "manifest.json"
@@ -239,19 +281,31 @@ def check_links(store: Store, *, max_age_days: int = 30, limit: int | None = Non
     dead = [u for u in cited if manifest.get(u, {}).get("status") in ("broken", "unreachable", "server-error")
             and ("archived_url" not in manifest[u] or manifest[u].get("archived_for") != manifest[u]["cited_at"][:10])]
     log(f"  looking up archived copies for {len(dead)} dead links")
-    with httpx.Client(**client_args) as client:
+    lookup_failures = 0
+    with PoliteClient(transport=transport, sleep=sleep, timeout=30, max_retries=1) as client:
         for i, url in enumerate(dead):
             if i:
                 sleep(1.0)
-            found = archived_copy(client, url, manifest[url]["cited_at"])
+            try:
+                found = archived_copy(client, url, manifest[url]["cited_at"])
+            except RuntimeError as error:
+                lookup_failures += 1
+                manifest[url]["archive_lookup_error"] = str(error)
+                # An unavailable archive or unreadable robots.txt is not evidence of no capture.
+                # Leave the date unmarked so a later run retries it, and stop asking this host now.
+                log(str(error))
+                break
+            manifest[url].pop("archive_lookup_error", None)
             manifest[url].update(found or {"archived_url": None})
             manifest[url]["archived_for"] = manifest[url]["cited_at"][:10]      # the date the copy was sought for
             if i % 100 == 99:
                 write_json(path, dict(sorted(manifest.items())))
+                log(f"  {i + 1}/{len(dead)} archive lookups completed")
     for url, entry in manifest.items():                     # links no longer cited stay, marked as such
         entry["still_cited"] = url in cited
     write_json(path, dict(sorted(manifest.items())))
     summary = summarise(manifest, cited)
+    summary['archive_lookup_failures'] = lookup_failures
     store.append_run({"kind": "links", "mode": "check", "started": started, "finished": now_iso(),
                       "checked": len(due), "summary": summary})
     return summary

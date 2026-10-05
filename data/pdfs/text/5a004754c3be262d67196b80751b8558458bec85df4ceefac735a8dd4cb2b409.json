@@ -1,0 +1,599 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 19,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 21,
+ "paragraphs": 103,
+ "list_items": 0,
+ "tables": 0,
+ "figures": 0,
+ "footnotes": 61,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 1,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "page number",
+   "text": "Page 1 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "CONTENTS",
+   "bbox": [
+    272.93,
+    179.84,
+    342.29,
+    193.22
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "1. Introduction 1.1 – 1.4",
+   "bbox": [
+    62.06,
+    209.6,
+    476.96,
+    222.98
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "2. Country assessment 2.1",
+   "bbox": [
+    62.06,
+    236.84,
+    446.96,
+    250.22
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Actors of protection  2.2",
+   "bbox": [
+    77.9,
+    252.68,
+    446.96,
+    266.06
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Internal relocation 2.3",
+   "bbox": [
+    77.9,
+    268.52,
+    446.96,
+    281.9
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Country guidance caselaw  2.4",
+   "bbox": [
+    62.06,
+    284.39,
+    446.96,
+    297.77
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "3. Main categories of claims 3.1 – 3.8",
+   "bbox": [
+    62.06,
+    311.63,
+    476.96,
+    325.01
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Women victims of domestic violence 3.9",
+   "bbox": [
+    77.9,
+    327.47,
+    446.96,
+    340.85
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Gay men, lesbians, bisexual and transgender persons 3.10",
+   "bbox": [
+    77.9,
+    343.31,
+    453.68,
+    356.69
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Prison Conditions 3.11",
+   "bbox": [
+    77.9,
+    359.15,
+    453.68,
+    372.53
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "4. Discretionary Leave 4.1 – 4.2",
+   "bbox": [
+    62.06,
+    386.39,
+    476.96,
+    399.77
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Minors claiming in their own right 4.3",
+   "bbox": [
+    77.9,
+    402.23,
+    446.96,
+    415.61
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "Medical treatment 4.4",
+   "bbox": [
+    77.9,
+    418.07,
+    446.96,
+    431.45
+   ]
+  },
+  {
+   "page": 1,
+   "kind": "contents",
+   "text": "5. Returns 5.1 – 5.5",
+   "bbox": [
+    62.06,
+    445.31,
+    476.96,
+    458.69
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 19",
+   "bbox": [
+    272.09,
+    815.03,
+    325.61,
+    825.07
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "running header",
+   "text": "South Africa OGN v7 March 2013",
+   "bbox": [
+    223.13,
+    23.87,
+    374.84,
+    34.97
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 19",
+   "bbox": [
+    269.57,
+    815.03,
+    328.13,
+    825.07
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "SOUTH AFRICA",
+ "cover_version": "7",
+ "cover_date": "March 2013",
+ "pdf_sha256": "5a004754c3be262d67196b80751b8558458bec85df4ceefac735a8dd4cb2b409",
+ "images": []
+}

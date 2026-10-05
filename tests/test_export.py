@@ -1,5 +1,6 @@
 import json
 import re
+import pytest
 
 from conftest import BODY, NOTE_PATH, PDF_URL, govuk
 
@@ -588,18 +589,24 @@ def recovered(store, slug, title, text, *, sha, captured="2019-07-26T16:10:37Z",
     return url, entry
 
 
-def test_an_edition_recovered_as_a_pdf_takes_its_place_in_its_reports_history(store, tmp_path):
+@pytest.mark.parametrize("source,provider", [("wayback", "Internet Archive"),
+                                               ("national-archives", "National Archives"),
+                                               ("repository", "ecoi.net")])
+def test_an_edition_recovered_as_a_pdf_takes_its_place_in_its_reports_history(store, tmp_path, source, provider):
     live = edition(store, "kenya", "Country policy and information note: actors of protection, Kenya, July 2026 (accessible)",
                    "Version control: version 3.0, valid from 20 July 2026. Protection now.", live=True)
     page(store, "kenya", "Kenya", [live], [("2019-03-08T16:17:35+00:00", "Actors of protection version 2.0 added.")])
     url, entry = recovered(store, "kenya", "Country policy and information note: actors of protection, Kenya, March 2019",
                            "Version control: version 2.0, valid from 8 March 2019. Protection then.", sha="a" * 64)
+    entry.update(source=source, archive_provider=provider)
+    store.save_pdf_manifest({url: entry})
     (kenya,) = build_dashboard(store, CONFIG, series_out=tmp_path)["countries"]
     series = json.loads((tmp_path / "kenya" / "note--actors-protection.json").read_text("utf-8"))
     old, now = series["versions"]                                    # by its own date: before the edition on GOV.UK now
     assert (old["source"], old["version"], old["published"], old["published_from"]) == ("pdf", "2.0", "2019-03-08T00:00:00Z", "valid from")
     # An archived copy of a PDF: both. Its source is the Archive's address, never GOV.UK's (which now leads elsewhere).
     assert (old["archive_url"], old["pdf_url"], old["captured_at"]) == (entry["archive_url"], entry["archive_url"], entry["captured_at"])
+    assert old["archive_provider"] == provider
     assert (old["listed"], old["current"], old["govuk_url"], old["note"]) == (False, False, None, None)
     assert (old["listed_from"], old["listed_until"]) == ("2019-07-24T07:30:03Z", "2022-06-12T02:07:41Z")
     assert old["extracted"]["pdf_sha256"] == "a" * 64 and "Protection then." in old["body"]
@@ -608,6 +615,17 @@ def test_an_edition_recovered_as_a_pdf_takes_its_place_in_its_reports_history(st
     assert (series["status"], series["current_pdf_only"], series["pdf_editions"]) == ("live", False, [])
     (report,) = kenya["reports"]
     assert (report["status"], report["editions"]) == ("live", 2) and "text_from_pdf" not in report["latest"]
+
+
+def test_an_older_country_wide_guidance_note_has_a_readable_report_name(store, tmp_path):
+    page(store, "kenya", "Kenya", [])
+    recovered(store, "kenya", "Operational guidance note: Kenya, December 2013",
+              "Version 8.0, December 2013. Guidance.", sha="e" * 64)
+    data = build_dashboard(store, CONFIG, series_out=tmp_path / "series")
+    (report,) = data["countries"][0]["reports"]
+    assert report["topic"] == "Operational guidance note"
+    assert report["key"] == "note:untitled", "Keep existing history and saved-highlight addresses"
+    assert report["status"] == "archived"
 
 
 def test_a_report_with_only_recovered_editions_is_a_report_no_longer_on_govuk(store, tmp_path):
@@ -660,3 +678,23 @@ def test_two_recovered_copies_of_one_text_are_one_edition(store, tmp_path):
     (only,) = series["versions"]
     assert only["id"] == "b" * 16 and only["also_held_as"] == [
         {"id": "c" * 16, "note": None, "source": "pdf", "captured_at": "2020-01-01T00:00:00Z", "archive_url": again["archive_url"]}]
+
+
+def test_two_files_recovered_at_one_address_keep_both_editions_and_extraction_jobs(store, tmp_path):
+    from cpin.export import recovered_pdf_jobs
+    page(store, 'kenya', 'Kenya', [])
+    old_url, old = recovered(store, 'kenya', 'Country policy and information note: prison conditions, Kenya, March 2019',
+                             'Version control: version 1.0, valid from 8 March 2019. Old prisons.', sha='b' * 64)
+    url, latest = recovered(store, 'kenya', 'Country policy and information note: prison conditions, Kenya, May 2021',
+                             'Version control: version 2.0, valid from 3 May 2021. New prisons.', sha='c' * 64, captured='2021-06-01T00:00:00Z')
+    manifest = store.load_pdf_manifest()
+    del manifest[old_url]
+    manifest[url] = {**latest, 'previous': [old]}
+    store.save_pdf_manifest(manifest)
+    jobs = list(recovered_pdf_jobs(store))
+    assert [job[3]['sha256'] for job in jobs] == ['b' * 64, 'c' * 64]
+    assert [job[2] for job in jobs] == [url, url]
+    build_dashboard(store, CONFIG, series_out=tmp_path)
+    series = json.loads((tmp_path / 'kenya' / 'note--conditions-prison.json').read_text())
+    assert [(v['version'], v['id'], v['archive_url']) for v in series['versions']] == [
+        ('1.0', 'b' * 16, old['archive_url']), ('2.0', 'c' * 16, latest['archive_url'])]

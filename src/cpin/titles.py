@@ -14,7 +14,7 @@ MONTHS = ["january", "february", "march", "april", "may", "june", "july", "augus
 _DATE_RE = re.compile(r"(,\s*|\s*\(|\s+)\b(" + "|".join(MONTHS) + r")\s+(\d{4})\)?\s*$", re.IGNORECASE)
 _RANGE_END_RE = re.compile(r"(\bto|[-–])$", re.IGNORECASE)
 # 'acces+ible' also matches GOV.UK's own typo '(accesible)' (Vietnam, September 2025).
-_FFM_RE = re.compile(r"^report of (?:a |the )?(?:home office )?fact[- ]finding mission\b", re.IGNORECASE)
+_FFM_RE = re.compile(r"^report of (?:a |the )?(?:joint )?(?:home office )?fact[- ]finding mission\b", re.IGNORECASE)
 _ACCESSIBLE_RE = re.compile(r"\s*\(acces+ible(?: version)?\)\s*$", re.IGNORECASE)
 # A title with a comma where the colon should be, after the kind of document.
 _KIND_COMMA_RE = re.compile(r"^(country policy and information note|country information note|country information and guidance"
@@ -78,7 +78,7 @@ def _strip_country(text: str, country: str | None) -> tuple[str, str | None]:
 
 
 def parse_note_title(title: str, country: str | None = None) -> NoteTitle:
-    text = title.strip()
+    text = re.sub(r"^\[(?:archived|withdrawn)\]\s*", "", title.strip(), flags=re.I)
     if text and " " not in text and "-" in text:
         text = title_from_slug(text)
     accessible = bool(_ACCESSIBLE_RE.search(text))

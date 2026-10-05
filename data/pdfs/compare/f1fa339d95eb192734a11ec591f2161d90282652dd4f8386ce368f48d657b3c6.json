@@ -1,12 +1,12 @@
 {
  "method": "webpdf-8",
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "china/country-policy-and-information-note-hong-kong-national-security-legislation-china-april-2025",
  "pdf_sha256": "f1fa339d95eb192734a11ec591f2161d90282652dd4f8386ce368f48d657b3c6",
  "body_sha256": "60623da3e87b08d789bef6cb2f6e6d63143171f2583f537d84ac3679bd62fb58",
  "words": {
   "web": 17885,
-  "pdf": 17942
+  "pdf": 17939
  },
  "summary": {
   "wording": {
@@ -58,17 +58,12 @@
     "pdf_words": 2
    },
    "furniture": {
-    "differences": 1,
+    "differences": 0,
     "web_words": 0,
-    "pdf_words": 3
+    "pdf_words": 0
    }
   },
   "kinds": {
-   "back to contents": {
-    "differences": 1,
-    "web_words": 0,
-    "pdf_words": 3
-   },
    "heading": {
     "differences": 2,
     "web_words": 2,
@@ -357,23 +352,6 @@
    }
   },
   {
-   "kind": "back to contents",
-   "group": "furniture",
-   "verdict": "real",
-   "web": "",
-   "pdf": "Back to Contents",
-   "web_words": 0,
-   "pdf_words": 3,
-   "before": "2.12 See also The National Security Law",
-   "after": "7.3 Law enforcement powers\n7.3.1",
-   "where": {
-    "heading": "law-enforcement-powers",
-    "paragraph": "7.2.12",
-    "section": "Country information",
-    "page": 15
-   }
-  },
-  {
    "kind": "numbering",
    "group": "numbering",
    "verdict": "real",
@@ -519,7 +497,7 @@
  "unresolved": [],
  "not_listed": 0,
  "paragraphs": {
-  "same": 158,
+  "same": 157,
   "different": {
    "3.16": "3.1.6"
   },

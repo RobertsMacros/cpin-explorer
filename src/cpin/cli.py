@@ -37,6 +37,19 @@ def cmd_sync(args, store):
     return 1 if report.errors else 0
 
 
+def cmd_supplementary(args, store):
+    from pathlib import Path
+    from .supplementary import archive_hand_list, collect
+    from .store import read_json
+    with PoliteClient() as client:
+        report = collect(client, store)
+    _print_run(report)
+    if args.hand_list:
+        count = archive_hand_list(read_json(store.root / "wayback-catalogue.json", {}), Path(args.hand_list))
+        print(f"wrote {count} editions for manual checking to {args.hand_list}")
+    return 1 if report.errors else 0
+
+
 def cmd_links(args, store):
     from pathlib import Path
 
@@ -46,7 +59,7 @@ def cmd_links(args, store):
     print("links:", " · ".join(f"{k} {v}" for k, v in sorted(summary.items())))
     n = export_link_status(store, Path(args.out))
     print(f"wrote link status for {n} countries to {args.out}/")
-    return 0
+    return 1 if summary.get('archive_lookup_failures') else 0
 
 
 def cmd_images(args, store):
@@ -96,7 +109,7 @@ def cmd_pdftext(args, store):
     from pathlib import Path
 
     from . import pdftext
-    from .export import pdf_only_files, recovered_pdf_files
+    from .export import pdf_only_files, recovered_pdf_jobs
     from .govuk import html_attachments, note_slug
     from .verify import pair_pdfs
     manifest = store.load_pdf_manifest()
@@ -123,7 +136,7 @@ def cmd_pdftext(args, store):
         summary = pdftext.missing_figures_into_store(store, jobs, log=lambda m: print(m, flush=True), force=args.force)
         print(f"pdftext figures: {summary['pairs']} reports with a web version and a PDF · {summary['figures']} pictures the web versions"
               f" leave out, kept · {summary['unplaced']} could not be placed · {summary['errors']} PDFs failed")
-        return 0
+        return 1 if summary['errors'] else 0
     if args.check:
         jobs = []
         for slug in sorted(store.load_state()["countries"]):
@@ -150,16 +163,16 @@ def cmd_pdftext(args, store):
             print(f"  {key}: same count in {same} of {len(good)}")
         Path(args.report).write_text(json.dumps(dict(sorted(results.items())), indent=1) + "\n", "utf-8")
         print(f"  details: {args.report}")
-        return 0
+        return 1 if len(good) != len(results) else 0
     # Two kinds of edition are read from a PDF: one the country page lists now with no web version, and one it
     # no longer lists, recovered from the Internet Archive (./cpin recover) with no web version held.
-    done = problems = recovered = 0
-    wanted = [(slug, title, url, False) for slug, title, url in pdf_only_files(store)]
-    wanted += [(slug, title, url, True) for slug, title, url in recovered_pdf_files(store)]
-    for slug, title, url, archived in sorted(wanted):
+    done = problems = recovered = withdrawn = 0
+    state = store.load_state()
+    wanted = [(slug, title, url, False, manifest.get(url)) for slug, title, url in pdf_only_files(store)]
+    wanted += [(slug, title, url, True, entry) for slug, title, url, entry in recovered_pdf_jobs(store)]
+    for slug, title, url, archived, entry in sorted(wanted, key=lambda job: (job[0], job[1], job[2], job[4].get('sha256', '') if job[4] else '')):
         if args.country and slug not in args.country:
             continue
-        entry = manifest.get(url)
         if not entry:
             print(f"  {slug}: not mirrored: {title}")
             problems += 1
@@ -175,12 +188,13 @@ def cmd_pdftext(args, store):
         else:
             done += 1
             recovered += archived
+            withdrawn += not archived and bool(state['countries'].get(slug, {}).get('withdrawn_at'))
             print(f"  {slug}: {title} ({where}): {meta['pages']} pages, {meta['headings']} headings, {meta['paragraphs']} paragraphs, "
                   f"{meta['footnotes']} footnotes, {meta['tables']} tables, {meta['figures']} figures"
                   f"{', ' + str(len(meta['warnings'])) + ' warnings' if meta['warnings'] else ''}", flush=True)
-    print(f"pdftext: {done} PDF-only editions have text ({done - recovered} listed on GOV.UK now,"
-          f" {recovered} recovered from the Internet Archive) · {problems} without")
-    return 0
+    print(f"pdftext: {done} PDF-only editions have text ({done - recovered - withdrawn} current, {withdrawn} withdrawn on GOV.UK,"
+          f" {recovered} recovered from archives and repositories) · {problems} without")
+    return 1 if problems else 0
 
 
 def cmd_compare(args, store):
@@ -220,7 +234,7 @@ def cmd_compare(args, store):
         from . import discrepancies
         made = discrepancies.write(store, args.page)
         print(f"  to read through: {made['path']} ({made['notes']} notes, {made['bytes'] // 1024} KB)")
-    return 0
+    return 1 if done['errors'] else 0
 
 
 def cmd_backfill(args, store):
@@ -336,11 +350,11 @@ def cmd_export(args, store):
     data = export_dashboard(store, Path(args.out), series_out=Path(args.series_out))
     t = data["totals"]
     written = len(list(Path(args.series_out).glob("*/*.json")))
-    comparable = {(c["slug"], n["series"]) for c in data["countries"] for n in c["notes"] if n.get("compare_url")}
+    comparable = {(c["slug"], r["key"]) for c in data["countries"] for r in c["reports"] if r["editions"] > 1}
     print(f"wrote {args.out}: {t['countries']} countries, {t['notes']} live notes, "
           f"{t['archived_editions']} archived editions, {len(data['recent_changes'])} recent changes")
     print(f"wrote {written} report histories to {args.series_out}/ ({len(comparable)} with 2+ editions to compare)")
-    missing = [c["slug"] for c in data["countries"] if not c["iso_n3"]]
+    missing = [c["slug"] for c in data["countries"] if not c["iso_n3"] and not c["dropped_from_collection"]]
     if missing:
         print(f"  countries with no map entry in config/countries.json: {', '.join(missing)}")
         return 1
@@ -355,6 +369,9 @@ def main(argv=None):
     p.add_argument("--no-assets", action="store_true", help="skip mirroring PDFs and images")
     p.add_argument("--country", action="append", default=[], help="limit to a country slug (repeatable)")
     p.set_defaults(func=cmd_sync)
+    p = sub.add_parser("supplementary", help="hold the approved withdrawn pages and About CPINs")
+    p.add_argument("--hand-list", metavar="FILE", help="also write the National Archives manual-check list (no requests to it)")
+    p.set_defaults(func=cmd_supplementary)
     p = sub.add_parser("images", help="mirror every image the current notes embed")
     p.add_argument("--all", action="store_true", help="every edition held, not only the current ones (archived and replaced editions too)")
     p.set_defaults(func=cmd_images)

@@ -8,6 +8,13 @@ __pycache__/
 # Mirrored PDFs are large and reproducible from data/pdfs/manifest.json; they go to R2, not git.
 data/pdfs/files/
 
+# Local views and browser-event scratch for downloaded National Archives PDFs.
+# Source URLs, hashes and indices remain in data/pdfs/national-archives/.
+data/pdfs/national-archives/By country/
+data/pdfs/national-archives/files
+data/pdfs/national-archives/browser-downloads.jsonl
+data/pdfs/national-archives/tool-log-offset.txt
+
 # Atomic-write temp files
 .tmp-*
 

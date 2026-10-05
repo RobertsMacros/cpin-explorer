@@ -1,0 +1,31 @@
+{
+  "import": {
+    "registered": 140,
+    "already_registered": 0,
+    "preserved_live": 0
+  },
+  "catalogue": {
+    "totals": {
+      "editions": 829,
+      "held": 829,
+      "held_under_another_listing": 17,
+      "recoverable_html": 0,
+      "recoverable_pdf_only": 0,
+      "not_archived": 0,
+      "other_files": 0,
+      "not_held": 0,
+      "not_held_in_archive": 0,
+      "not_held_not_in_archive": 0,
+      "html_captures_to_read": 89,
+      "pdfs_to_fetch": 0,
+      "pdf_bytes_to_fetch": 0,
+      "pdfs_beside_held_web_versions": 146,
+      "listing_captures_read": 3138
+    },
+    "failures": {
+      "attempts_retained": 32,
+      "editions_held": 32,
+      "unresolved": 0
+    }
+  }
+}

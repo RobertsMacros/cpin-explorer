@@ -31,7 +31,7 @@ import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
 import { formatDisplay } from "../shared/display-format.js";
 import { placePdfFigures } from "../shared/pdf-figures.js";
 import {
-  alignHeadings, archiveCopy, buildTimeline, captionSource, capturedAt, computedSummary, currentPdf, editionForStop, editionsBetweenNotHeld, editionWhere, findParaRefs, findSectionNames, firstSeen,
+  alignHeadings, archiveCopy, archiveName, buildTimeline, captionSource, capturedAt, computedSummary, currentPdf, editionForStop, editionsBetweenNotHeld, editionWhere, findParaRefs, findSectionNames, firstSeen,
   headingKey, increasing, isArchivedPdf, isRewrite, keptPercent, leadingNumber, mapThrough, phrasesOf, phrasesShared, reportUrl, resolveParaRef, seriesPath,
   leftGovuk, readOnGovuk, sourceWords, updateKind, versionsNotHeld,
 } from "../shared/report-history.js";
@@ -263,6 +263,7 @@ async function boot() {
     showEdition(e, { initial: true });
   }
   applyModeUI();
+  await document.fonts?.ready;
   S.ready = true;
   document.body.classList.remove("is-loading");
   H.onHighlightsChange(sync);
@@ -270,7 +271,6 @@ async function boot() {
   syncUrl();
   linksP.then((map) => { S.linkMap = map || {}; decorateView(); });
   idle(warmEngine, 300);
-  await document.fonts?.ready;
   rollers.forEach((r) => r.remeasure(true));
   measureBars();
   slider.cull();
@@ -305,7 +305,7 @@ function updateWords(stop) {
   if (kind === "removed") return { kind, tag: "Removed", facts: "report removed",
     why: "With this update GOV.UK took the report down. Nothing was published, so there is no edition from it to hold." };
   return { kind, tag: "Not held", facts: "edition not held",
-    why: "GOV.UK does not keep earlier editions. Editions from before this site began copying GOV.UK come from the Internet Archive, where it captured the report’s web page or its PDF; it has neither from this update. (Until late 2021 the notes were published as PDFs only.)" };
+    why: "GOV.UK does not keep earlier editions. This site recovers earlier web pages and PDFs from the Internet Archive, the National Archives and document repositories; no copy of this update is held. (Until late 2021 the notes were published as PDFs only.)" };
 }
 /** Where an edition can be read, for links and citations: GOV.UK while it is the live edition, else its archived
  *  copy; for an edition read from a PDF, the PDF (the Internet Archive's copy of it, where GOV.UK no longer lists
@@ -333,6 +333,7 @@ function renderHead() {
         <p class="eyebrow mh-eyebrow"><a class="mh-back" href="${esc(back)}" title="Back to ${esc(c.name)}: all its reports"><span aria-hidden="true">←</span> ${esc(c.name)}</a><span class="mh-kind">${esc(s.kind || "Report")}</span></p>
         <h1 class="report-title">${esc(topic)}</h1>
         <div class="mh-meta">
+          ${s.withdrawn_at ? `<p class="meta-line">Withdrawn ${esc(fmtDate(s.withdrawn_at))}</p>` : ""}
           <p class="meta-line" id="metaLine"></p>
           <div class="mh-chips">
             <button type="button" class="chip" id="sourcesChip" data-hpop="sources" aria-expanded="false" aria-controls="hpop" hidden></button>
@@ -343,9 +344,9 @@ function renderHead() {
         </div>
       </div>
     </div>${gone() ? `
-    <p class="notice notice--gone" style="--i:1"><span class="tag">${s.status === "removed" ? "Removed" : "Archived"}</span><span><strong>No longer on GOV.UK${left ? ` since ${esc(left.when)}` : ""}.</strong>
+    <p class="notice notice--gone" style="--i:1"><span class="tag">${s.withdrawn_at ? "Withdrawn" : s.status === "removed" ? "Removed" : "Archived"}</span><span><strong>${s.withdrawn_at ? "Withdrawn guidance" : `No longer on GOV.UK${left ? ` since ${esc(left.when)}` : ""}`}.</strong>
       The Home Office has withdrawn this report${left ? ` (${esc(left.sentence.replace(/^GOV\.UK withdrew it /, "").replace(/\.$/, ""))})` : ""}. ${
-        s.versions.every(isArchivedPdf) ? "Every edition here is read from the Internet Archive’s copy of its PDF, with the layout rebuilt"
+        s.versions.every(isArchivedPdf) ? "Every edition here is read from a historical copy of its PDF, with the layout rebuilt"
         : s.versions.some((v) => v.source === "pdf") ? "Every edition here is the text as it was published, or, where marked From the PDF, read from its PDF with the layout rebuilt"
         : "Every edition here is the text as it was published"}; none of it is current guidance.</span></p>` : ""}${pdfNow() ? pdfNotice() : ""}`;
   Promise.all([document.fonts?.ready, ready]).then(() => idle(() => hydrateFlags($("#head")), 300));
@@ -366,9 +367,11 @@ function verbatimInfo(E) {
     // Recovered from the Internet Archive as a PDF: GOV.UK no longer lists it. Two things, and both are said: the
     // words are read from a PDF (the layout is rebuilt here), and that PDF is the Archive's copy, not GOV.UK's.
     const when = capturedAt(v) ? `, captured ${fmtDate(capturedAt(v))}` : "";
-    return { pdf: true, archived: true, short: `Text taken from the Internet Archive’s copy of the Home Office’s PDF${when}; the layout is rebuilt here`,
+    const provider = archiveName(v);
+    const owner = provider === "National Archives" ? "the National Archives’" : provider === "Internet Archive" ? "the Internet Archive’s" : `${provider}’s`;
+    return { pdf: true, archived: true, short: `Text taken from ${owner} copy of the Home Office’s PDF${when}; the layout is rebuilt here`,
       html: `This edition is no longer on GOV.UK, and no web version of it is held. The words below are taken from
-        <a href="${esc(v.archive_url)}" target="_blank" rel="noopener">the Internet Archive’s copy of the Home Office’s PDF${esc(when)} ↗</a> (the PDF’s own text: nothing is read by OCR).
+        <a href="${esc(v.archive_url)}" target="_blank" rel="noopener">${esc(owner)} copy of the Home Office’s PDF${esc(when)} ↗</a> (the PDF’s own text: nothing is read by OCR).
         The paragraphs, lists, tables and footnotes are rebuilt from its pages by this site, so where exact wording or layout matters, check the PDF.` };
   }
   if (v.source === "pdf") {
@@ -411,7 +414,7 @@ function updateHead() {
   const meta = [
     E.version ? `<span><span class="m-l">Version </span><span class="m-s">v</span><b>${esc(E.version)}</b></span>` : "",
     published ? `<span><span class="m-l">${dated}</span>${esc(published)}</span>` : "",
-    src.archived ? `<a href="${esc(src.url)}" target="_blank" rel="noopener" title="The Internet Archive's copy of this edition${src.pdf ? "’s PDF" : ""}${src.capturedAt ? `, captured ${esc(fmtDate(src.capturedAt))}` : ""}${src.pdf ? ": the text here is taken from it" : ""}">Archived copy${src.capturedAt ? `<span class="m-l">, ${esc(fmtDate(src.capturedAt))}</span>` : ""} ↗</a>`
+    src.archived ? `<a href="${esc(src.url)}" target="_blank" rel="noopener" title="${esc(archiveName({ archive_url: src.url }))}'s copy of this edition${src.pdf ? "’s PDF" : ""}${src.capturedAt ? `, captured ${esc(fmtDate(src.capturedAt))}` : ""}${src.pdf ? ": the text here is taken from it" : ""}">Archived copy${src.capturedAt ? `<span class="m-l">, ${esc(fmtDate(src.capturedAt))}</span>` : ""} ↗</a>`
       : src.pdf ? (src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener" title="This edition is published as a PDF only: the text here is taken from it">PDF ↗</a>` : "")
       : src.url ? `<a href="${esc(src.url)}" target="_blank" rel="noopener">GOV.UK ↗</a>` : "",
     pdf && !src.pdf ? `<a href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : "",
@@ -1947,9 +1950,12 @@ function place(rec, { fresh = false } = {}) {
   let patch = null;
   if (res.status === "still") {
     const info = describe(res.match.start, res.match.end), src = editionSource(E);
-    const cur = { sha: fullSha(E), version: E.version || null, title: E.v.title, month: monthOf(E), para: info.para, section: info.section, ...(info.twice ? { paraTwice: true } : {}),
+    const selector = H.makeSelector(S.C.text, res.match.start, res.match.end);
+    const cur = { sha: fullSha(E), current: !gone() && !pdfNow(), note: noteIdOf(E), version: E.version || null, title: E.v.title, month: monthOf(E), para: info.para, section: info.section, paraTwice: !!info.twice,
+      prefix: selector.prefix, suffix: selector.suffix, quote: selector.quote, sources: info.sources, spaced: spacedAt(res.match.start, res.match.end), lead: info.lead,
       url: src.url, archived: src.archived, capturedAt: src.capturedAt, ...publicationOf(E, src, info.para), pos: { start: res.match.start, end: res.match.end } };
-    if (rec.check !== "still" || rec.current?.version !== cur.version || rec.current?.para !== cur.para || String(rec.current?.sha || "").slice(0, 16) !== E.id) patch = { check: "still", current: cur };
+    const orig = S.E.find((x) => sameEdition(rec, x));
+    patch = { check: "still", current: cur, archivedCopy: copyOf(orig?.v) || rec.archivedCopy || null };
   } else if (res.status === "changed") {
     const orig = S.E.find((x) => sameEdition(rec, x));
     if (rec.check !== "changed" || String(rec.current?.sha || "").slice(0, 16) !== E.id) {
@@ -2327,7 +2333,7 @@ function statusHtml(rec) {
     return `<span class="badge badge--changed">Changed since you saved it (v${esc(rec.version || "?")} → v${esc(to || "?")})</span>${
       orig && orig.i !== S.tl.latest ? ` <button type="button" class="badge-link linklike" data-act="compare" data-from="${orig.i}">Show the changes →</button>` : ""}`;
   }
-  if (chk?.status === "still") return `<span class="badge">${isLatest(S.C.e) ? "Still" : "Also"} in ${esc(vLabel(S.E[S.C.e]))}</span>`;
+  if (chk?.status === "still") return `<span class="badge">${isLatest(S.C.e) && H.stillCurrent(rec) ? esc(H.stillLine(rec)) : `Also in ${esc(vLabel(S.E[S.C.e]))}`}</span>`;
   if (chk?.status === "unanchored") return `<span class="badge badge--changed">Could not be placed in the text</span>`;
   if (chk?.status === "current" && !isLatest(S.C?.e)) return `<span class="badge">Saved from ${esc(vLabel(S.E[S.C.e]))}</span>`;
   return "";
@@ -2343,8 +2349,8 @@ function openHighlight(id, anchorEl, point) {
   marks.forEach((m) => m.classList.add("is-hot"));
   document.querySelectorAll(`.saved-item[data-hid="${CSS.escape(id)}"]`).forEach((x) => x.classList.add("is-hot"));
   popState = { kind: "hl", id };
-  const pinned = rec.check === "still" && rec.current ? rec.current.para : rec.para;
-  const section = rec.check === "still" && rec.current ? rec.current.section : rec.section;
+  const pinned = rec.para;
+  const section = rec.section;
   const placed = marks.length > 0;
   const sources = rec.sources || [];
   showPop(`
@@ -2362,6 +2368,7 @@ function openHighlight(id, anchorEl, point) {
       <div class="pop-actions">
         <button type="button" class="btn btn--primary" data-act="copy-both">${ICON.quote}Copy quote + citation</button>
         <button type="button" class="btn" data-act="copy-cite">${ICON.copy}Copy citation</button>
+        ${H.stillCurrent(rec) && rec.current.current === true && isLatest(S.C.e) ? '<button type="button" class="btn" data-act="cite-current">Cite the current edition instead</button>' : ""}
         <button type="button" class="btn btn-del" data-act="delete">Delete</button>
       </div>
     </div>`, anchorRect(id, anchor, point), { scroll: !!anchor?.matches?.("mark.hl") });
@@ -2418,6 +2425,10 @@ pop.addEventListener("click", (e) => {
   if (!rec) return;
   if (act === "copy-both") copyRich(quoteWithCitation(H.citeContext(rec), citeStyle, rec.sources)).then((ok) => toast(ok ? "Copied quote and citation" : "Your browser blocked the clipboard"));
   if (act === "copy-cite") copyRich(citationFor(rec)).then((ok) => toast(ok ? `Copied ${STYLE_NAMES[citeStyle]} citation` : "Your browser blocked the clipboard"));
+  if (act === "cite-current" && isLatest(S.C.e)) {
+    const patch = H.citeCurrent(rec);
+    if (patch) { unwrap(rec.id); S.checks.delete(rec.id); H.updateHighlight(rec.id, patch); openHighlight(rec.id); toast("Citation changed to the current edition"); }
+  }
   if (act === "delete") deleteHighlight(rec.id);
 });
 /** "Show the changes →" on a highlight whose words changed: the redline from its edition to the latest. */
@@ -2508,13 +2519,13 @@ function orderedRecords() {
 function savedHtml() {
   const recs = orderedRecords();
   const items = recs.map((r, i) => {
-    const pin = r.check === "still" && r.current ? r.current.para : r.para;
+    const pin = r.para;
     const chk = S.checks.get(r.id)?.status;
     const off = chk === "absent" || (chk === "changed") || (r.check === "changed" && isLatest(S.C?.e));
     const from = !sameEdition(r, S.E[S.C?.e ?? S.tl.latest]) && r.version ? ` · from v${r.version}` : "";
     return `<li class="saved-item${off ? " is-changed" : ""}" data-hid="${esc(r.id)}" style="--i:${i}">
       <button type="button" class="saved-open" data-hid="${esc(r.id)}">
-        <span class="saved-top"><span class="tag ${off ? "tag--muted" : "tag--outline"}">${esc(pinTag(pin, r.check === "still" && r.current ? r.current.section : r.section))}</span><span class="saved-when">${esc(from.slice(3))}</span></span>
+        <span class="saved-top"><span class="tag ${off ? "tag--muted" : "tag--outline"}">${esc(pinTag(pin, r.section))}</span><span class="saved-when">${esc(from.slice(3))}</span></span>
         <span class="saved-quote">“${esc(quoteOf(r))}”</span>
         ${r.comment ? `<span class="saved-comment">${esc(r.comment)}</span>` : ""}
       </button>

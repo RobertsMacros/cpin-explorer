@@ -1,0 +1,3943 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 146,
+ "body_size": 12.0,
+ "body_font": "timesnewroman",
+ "headings": 9,
+ "paragraphs": 2403,
+ "list_items": 92,
+ "tables": 0,
+ "figures": 26,
+ "footnotes": 123,
+ "bookmarks": 11,
+ "warnings": [
+  "page 1: bookmark not found in the text: 'Blank Page'",
+  "page 135: bookmark not found in the text: 'A5. Agreement on Provision of Legal Aid for Asylum Seekers b'"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    72.44,
+    527.88,
+    85.82
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    537.49,
+    526.78,
+    550.87
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    588.52,
+    526.78,
+    601.9
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    125.84,
+    526.78,
+    139.22
+   ]
+  },
+  {
+   "page": 134,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    218.96,
+    526.78,
+    232.34
+   ]
+  },
+  {
+   "page": 146,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    719.34,
+    530.02,
+    732.72
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 2 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.81,
+    183.33,
+    101.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex 3 ..................................................................................................................... 3",
+   "bbox": [
+    72.02,
+    108.32,
+    525.46,
+    121.7
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "About the country information ................................................................................. 3",
+   "bbox": [
+    84.02,
+    127.16,
+    525.46,
+    140.54
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A1. Visit to Kinigi Integrated Development Program (IDP) Model Village",
+   "bbox": [
+    84.02,
+    145.88,
+    464.84,
+    159.26
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "(Musanze), 20 January 2022 ........................................................................... 5",
+   "bbox": [
+    107.42,
+    159.68,
+    525.46,
+    173.06
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A2. Isange One Stop Centre, meeting at the hospital, 19 January 2022 .............. 14",
+   "bbox": [
+    84.02,
+    178.52,
+    525.46,
+    191.9
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A3. Meeting with Alight, 23 March 2022 ............................................................... 17",
+   "bbox": [
+    84.02,
+    197.36,
+    525.46,
+    210.74
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A4. Institute of Legal Practice and Development (ILPD) and Ministry of  Justice,",
+   "bbox": [
+    84.02,
+    216.08,
+    507.37,
+    229.46
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Refugee law and refugee status determination process: training manual,",
+   "bbox": [
+    107.42,
+    229.91,
+    493.74,
+    243.29
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "October 2022 ................................................................................................. 22",
+   "bbox": [
+    107.42,
+    243.71,
+    525.46,
+    257.09
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A5. Agreement on Provision of Legal Aid for Asylum Seekers between the Ministry",
+   "bbox": [
+    84.02,
+    262.55,
+    524.34,
+    275.93
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "of Justice and the Rwanda Bar Association, 1 March 2023 ......................... 134",
+   "bbox": [
+    107.42,
+    276.35,
+    525.46,
+    289.73
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 3 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 4 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 5 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 6 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 7 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 8 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 9 of 145",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 10 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 11 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 12 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 13 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 14 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 15 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 16 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 17 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 18 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 19 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 20 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 21 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 22 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 23 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    117.35,
+    129.17,
+    132.89
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.1. Historical background of refugees’ protection ...........................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    149.78,
+    526.2,
+    162.0
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.2. International refugee law and standard ............................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    178.22,
+    526.2,
+    190.44
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.2.1. The 1951 Convention relating to the Status of Refugees ........... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    208.46,
+    525.94,
+    219.5
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "Who is a refugee under the 1951 Convention? ......................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    236.33,
+    526.2,
+    248.55
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.2.2. The 1967 Protocol relating to the Status of Refugees ................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    266.45,
+    525.94,
+    277.49
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.3. Regional laws and standards ............................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    294.29,
+    526.2,
+    306.51
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.3.1. The 1969 Organization of African Unity (OAU) Convention Governing the Specific Aspects of",
+   "bbox": [
+    83.06,
+    324.53,
+    525.66,
+    335.57
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "Refugee Problems in Africa .................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    339.89,
+    525.94,
+    350.93
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.3.2. The 1984 Cartagena Declaration ................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    369.41,
+    525.94,
+    380.45
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.3.3. The Middle East and Asia ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    398.83,
+    525.94,
+    409.87
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.3.4. The European Refugee protection framework ........................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    428.23,
+    525.94,
+    439.27
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.4. Other international legal standards that protect asylum-seekers and refugeesError! Bookmark",
+   "bbox": [
+    72.02,
+    456.07,
+    526.19,
+    468.29
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "not defined.",
+   "bbox": [
+    72.02,
+    470.59,
+    130.46,
+    482.81
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.4.1. International human rights law .................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    500.83,
+    525.94,
+    511.87
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.4.2. Regional human rights instruments relevant to refugee protectionError! Bookmark not",
+   "bbox": [
+    83.06,
+    530.23,
+    525.87,
+    541.27
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    83.06,
+    545.71,
+    123.48,
+    556.75
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.4.3. International humanitarian law .................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    575.14,
+    525.94,
+    586.18
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.5. Other sources of law and guidance ..................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    602.98,
+    526.2,
+    615.2
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.5.1. UN General Assembly Resolutions and Declarations ................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    633.1,
+    525.94,
+    644.14
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.5.2. UNHCR Executive Committee Conclusions ................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    662.62,
+    525.94,
+    673.66
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.5.3. UNHCR Guidance ........................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    692.02,
+    525.94,
+    703.06
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "I.6. Understanding key terms and principles from refugee and asylum seeker protective instruments",
+   "bbox": [
+    72.02,
+    719.88,
+    523.46,
+    732.1
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "contents",
+   "text": "...............................................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    734.4,
+    526.2,
+    746.62
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 24 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.1. Refugee ....................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    74.18,
+    525.94,
+    85.22
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.1.1. Interpretation of the key elements from the definition .......... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    103.58,
+    525.94,
+    114.62
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "a) “well-founded fear of being persecuted” ..................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    131.54,
+    525.94,
+    144.14
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "The subjective element: fear ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    160.94,
+    525.94,
+    173.54
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "The objective element: well-founded ............................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    190.34,
+    525.94,
+    202.94
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "Persecution ....................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    219.86,
+    525.94,
+    232.46
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "Religion ............................................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    249.29,
+    525.94,
+    261.89
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "b)Outside Country of Nationality/Former Habitual",
+   "bbox": [
+    93.98,
+    278.57,
+    526.06,
+    290.79
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "Residence ......................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    293.33,
+    525.94,
+    305.93
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.2. Asylum seeker ............................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    324.29,
+    525.94,
+    335.33
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.3. Economic migrant ....................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    353.69,
+    525.94,
+    364.73
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.4. Forced migrant ............................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    383.21,
+    525.94,
+    394.25
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.6.5. Difference between the terms .................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    412.63,
+    525.94,
+    423.67
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.7. Who should be excluded from refugee status? ............................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    442.03,
+    525.94,
+    453.07
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "I.8. The principle of non-refoulement ....................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    469.87,
+    526.2,
+    482.09
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "MODULE 2: THE PROTECTION OF REFUGEES AND ASYLUM SEEKERS IN RWANDA",
+   "bbox": [
+    72.02,
+    498.43,
+    523.26,
+    510.65
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "...............................................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    512.95,
+    526.2,
+    525.17
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "Learning objectives .............................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    543.19,
+    525.94,
+    554.23
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "Indicative content ................................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    572.62,
+    525.94,
+    583.66
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "MODULE 2: THE PROTECTION OF REFUGEES AND ASYLUM SEEKERS IN RWANDA",
+   "bbox": [
+    72.02,
+    600.34,
+    523.21,
+    612.56
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "...............................................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    614.98,
+    526.2,
+    627.2
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "contents",
+   "text": "II.1. Normative and Institutional framework ....................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    645.22,
+    525.94,
+    656.26
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 25 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "II.2. State responsibility in protecting refugees .....................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    72.5,
+    526.2,
+    84.72
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3. Refugees rights and levels of attachment ......................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    101.06,
+    526.2,
+    113.28
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3.1. Subject to a state jurisdiction ................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    131.3,
+    525.94,
+    142.34
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3.2. Freedom of Movement ............................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    160.7,
+    525.94,
+    171.74
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3.3. Rights to work and rights at work ............................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    190.1,
+    525.94,
+    201.14
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3.4. Right to private property .......................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    219.62,
+    525.94,
+    230.66
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3.5. Access to financial services ....................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    249.05,
+    525.94,
+    260.09
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.4. Obligations/duties of refugees and asylum seekers .................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    278.57,
+    525.94,
+    289.61
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "MODULE 3: REFUGEE STATUS DETERMINATION PROCEDUREError! Bookmark not",
+   "bbox": [
+    72.02,
+    306.29,
+    526.13,
+    318.51
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    72.02,
+    320.81,
+    112.34,
+    333.03
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "I. Learning objectives ...................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    351.05,
+    525.94,
+    362.09
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "II. Core messages to be delivered .................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    380.45,
+    525.94,
+    391.49
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III. Participants .............................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    409.99,
+    525.94,
+    421.03
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "IV. Indicative content .................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    439.39,
+    525.94,
+    450.43
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "MODULE 3: REFUGEE STATUS DETERMINATION PROCEDUREError! Bookmark not",
+   "bbox": [
+    72.02,
+    467.11,
+    526.12,
+    479.33
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    72.02,
+    481.75,
+    112.34,
+    493.97
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.1. What is the nature of the Procedures relating to the determination of refugee status? .. Error!",
+   "bbox": [
+    83.06,
+    511.87,
+    525.91,
+    522.91
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "Bookmark not defined.",
+   "bbox": [
+    83.06,
+    527.35,
+    190.95,
+    538.39
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.2. Minimum procedural guarantees ................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    556.9,
+    525.94,
+    567.94
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.3. The right to privacy and Confidentiality ...................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    586.3,
+    525.94,
+    597.34
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.4. Burden of proof and standard of proof ....................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    615.7,
+    525.94,
+    626.74
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.5. What are the indicators for assessing well-foundedness of fear?Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    645.22,
+    525.94,
+    656.26
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "contents",
+   "text": "III.6. Individual Refugee Status Determination Process ....................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    674.62,
+    525.94,
+    685.66
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 26 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.1.1. Application for refugee status ........................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    117.5,
+    525.94,
+    130.1
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.1.2. Registration of the asylum application at the immigration and emigration office ... Error!",
+   "bbox": [
+    93.98,
+    146.9,
+    525.91,
+    159.5
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "Bookmark not defined.",
+   "bbox": [
+    93.98,
+    163.94,
+    201.87,
+    174.98
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.1.3. Review by the Refugee Status determination committee (RSDC)Error! Bookmark not",
+   "bbox": [
+    93.98,
+    191.78,
+    525.87,
+    204.38
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    93.98,
+    208.82,
+    134.4,
+    219.86
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.2. Effects or Consequences of claim registration and appeals ..... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    238.25,
+    525.94,
+    249.29
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.3. What are the requirements for obtaining asylum in Rwanda? Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    267.77,
+    525.94,
+    278.81
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.4. What are the consequences of being denied refugee status? . Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    297.17,
+    525.94,
+    308.21
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.5. Who are the persons ineligible for refugee status? ................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    326.57,
+    525.94,
+    337.61
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III.6.6. What is meant by \"prima facie\" eligibility? .............................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    356.09,
+    525.94,
+    367.13
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "MODULE 4. INTERVIEWING APPLICANTS FOR REFUGEE STATUS ...................................... 83",
+   "bbox": [
+    72.02,
+    383.81,
+    526.2,
+    396.03
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "I. Learning objectives ...................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    414.07,
+    525.94,
+    425.11
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "II. Core messages to be delivered .................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    443.47,
+    525.94,
+    454.51
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "III. Participants .............................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    472.99,
+    525.94,
+    484.03
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV. Indicative content .................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    502.39,
+    525.94,
+    513.43
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "MODULE 4. INTERVIEWING APPLICANTS FOR REFUGEE STATUSError! Bookmark not",
+   "bbox": [
+    72.02,
+    530.11,
+    526.15,
+    542.33
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    72.02,
+    544.75,
+    112.34,
+    556.97
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1. Preparing for an interview ........................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    575.02,
+    525.94,
+    586.06
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.1. Identifying sources of information....................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    602.86,
+    525.94,
+    615.46
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.2. Knowing the content of the application ............................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    632.26,
+    525.94,
+    644.86
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.3. Preparing the interpreter ...................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    661.78,
+    525.94,
+    674.38
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.3. The importance of the physical setting and your attitude ....... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    692.74,
+    525.94,
+    703.78
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.3.1. Privacy .............................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    720.6,
+    525.94,
+    733.2
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "contents",
+   "text": "IV.1.3.2. No interruptions ................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    750.12,
+    525.94,
+    762.72
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 27 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.1.3.3. Seating arrangements and the interview room .................. Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    72.62,
+    525.94,
+    85.22
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.1.4. Planning your time .................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    103.58,
+    525.94,
+    114.62
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.1.5. Recalling the objectives ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    133.1,
+    525.94,
+    144.14
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2. Conducting the Interview..............................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    160.82,
+    526.2,
+    173.04
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.1. Opening the interview .............................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    191.06,
+    525.94,
+    202.1
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 1: Putting the applicant at ease ................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    220.46,
+    525.94,
+    231.5
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 2: Introducing the interpreter...................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    250.01,
+    525.94,
+    261.05
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 3: Reviewing basic personal information ..................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    279.41,
+    525.94,
+    290.45
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 4: Providing some background explanations ............................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    308.81,
+    525.94,
+    319.85
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 5: Reminding the applicant of his or her rights and obligations .. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    338.33,
+    525.94,
+    349.37
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "Step 6: Explaining the process ............................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    367.73,
+    525.94,
+    378.77
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.2. Maintaining the applicant’s confidence ................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    397.15,
+    525.94,
+    408.19
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.3. Putting your questions .............................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    426.67,
+    525.94,
+    437.71
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.3.1. Your reaction to silences ................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    454.51,
+    525.94,
+    467.11
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.3.2. Types of questions ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    483.91,
+    525.94,
+    496.51
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.3.2.1. Open questions ............................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    513.43,
+    525.94,
+    526.03
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "When to avoid open questions ......................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    542.83,
+    525.94,
+    555.43
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.3.2.2. Closed questions ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    572.26,
+    525.94,
+    584.86
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "IV.2.4. Closing the interview ................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    603.34,
+    525.94,
+    614.38
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "MODULE 5. DEALING WITH SPECIAL CATEGORIES OF REFUGEES: MINORS, WOMEN",
+   "bbox": [
+    72.02,
+    631.06,
+    526.0,
+    643.28
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "AND GIRLS .........................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    645.58,
+    526.2,
+    657.8
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "I. Learning objectives ........................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    675.82,
+    525.94,
+    686.86
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "II. Core messages to be delivered .................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    705.34,
+    525.94,
+    716.38
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "contents",
+   "text": "III. Participants ..................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    734.76,
+    525.94,
+    745.8
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 28 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "IV. Indicative content ........................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    74.18,
+    525.94,
+    85.22
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "Module 5. Dealing with special categories of refugees: minors, women and girlsError! Bookmark",
+   "bbox": [
+    72.02,
+    101.9,
+    526.14,
+    114.12
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "not defined.",
+   "bbox": [
+    72.02,
+    116.54,
+    130.46,
+    128.76
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1. Understanding the special categories of refugees and asylum seekersError! Bookmark not",
+   "bbox": [
+    83.06,
+    146.66,
+    525.88,
+    157.7
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "defined.",
+   "bbox": [
+    83.06,
+    162.14,
+    123.48,
+    173.18
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1.1. Minors ........................................................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    191.54,
+    525.94,
+    202.58
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1.2. Mentally disturbed persons ....................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    221.06,
+    525.94,
+    232.1
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1.3. Women and Girls ....................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    250.49,
+    525.94,
+    261.53
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1.4. Legal Elderly ............................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    280.01,
+    525.94,
+    291.05
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.2. Legal protection as per their special status .................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    309.41,
+    525.94,
+    320.45
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.2.1. Minors (Children).................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    337.25,
+    525.94,
+    349.85
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.2.2. Women and Girls ....................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    368.33,
+    525.94,
+    379.37
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "V.1.3. Legal Elderly ............................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    397.75,
+    525.94,
+    408.79
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "Independence entailing the following: ............................................. Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    425.59,
+    525.94,
+    438.19
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "Participation entailing the following: ............................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    455.11,
+    525.94,
+    467.71
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "Care entailing the following: ............................................................ Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    484.51,
+    525.94,
+    497.11
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "-Self fulfilling entailing the following ............................................. Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    513.91,
+    525.94,
+    526.51
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "-Dignity entailing the following ....................................................... Error! Bookmark not defined.",
+   "bbox": [
+    93.98,
+    543.43,
+    525.94,
+    556.03
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "MODULE 6. PROTECTION OF REFUGEES AND ASYLUM SEEKERS FROM HUMAN TRAFFICKING",
+   "bbox": [
+    83.06,
+    574.42,
+    523.3,
+    585.46
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "...................................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    589.9,
+    525.94,
+    600.94
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "I. Learning objectives ........................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    619.3,
+    525.94,
+    630.34
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "II. Core messages to be delivered .................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    648.7,
+    525.94,
+    659.74
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "III. Participants ..................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    678.22,
+    525.94,
+    689.26
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "contents",
+   "text": "IV. Indicative content ........................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    707.64,
+    525.94,
+    718.68
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 29 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "INTRODUCTION ...............................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    72.39,
+    526.2,
+    85.69
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.1. WHAT IS HUMAN TRAFFICKING? .....................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    102.15,
+    526.2,
+    115.45
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.1.1. ACT-MEANS-PURPOSE ..................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    131.79,
+    525.94,
+    145.09
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.1.2. UNDERSTANDING EXPLOITATION .............................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    161.55,
+    525.94,
+    174.85
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.1.1. 3. Other Important features of the definition .................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    191.31,
+    525.94,
+    204.61
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.2. WHAT IS THE RELATIONSHIP BETWEEN THE REFUGEE DEFINITION UNDER",
+   "bbox": [
+    72.02,
+    220.95,
+    525.96,
+    234.25
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "INTERNATIONAL LAW AND TRAFFICKING IN PERSONS? .Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    236.7,
+    526.2,
+    250.0
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.2.1. What are the challenges in providing international protection as refugees to victims",
+   "bbox": [
+    83.06,
+    266.46,
+    526.03,
+    279.76
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "of trafficking? ..................................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    282.18,
+    525.94,
+    295.48
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.2.2. What solutions are available to victims of trafficking who are refugees? ........... Error!",
+   "bbox": [
+    83.06,
+    311.94,
+    525.91,
+    325.24
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "Bookmark not defined.",
+   "bbox": [
+    83.06,
+    329.45,
+    190.95,
+    340.49
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.2.3. Reducing trafficking risks for refugees .............................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    357.06,
+    525.94,
+    370.36
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.2.4. International protection for trafficked persons or those with a fear of being trafficked",
+   "bbox": [
+    83.06,
+    386.82,
+    523.35,
+    400.12
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "............................................................................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    404.35,
+    525.94,
+    415.39
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3. UNDERSTANDING AND RESPONDING TO THE SPECIAL NEEDS OF ASYLUM-",
+   "bbox": [
+    72.02,
+    431.96,
+    523.52,
+    445.26
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "SEEKING VICTIMS OF TRAFFICKING .........................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    447.68,
+    526.2,
+    460.98
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3.1. Need for trust building and rapport .................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    477.44,
+    525.94,
+    490.74
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3.2. Need for medical assistance, mental health and psychological support ............. Error!",
+   "bbox": [
+    83.06,
+    507.08,
+    525.91,
+    520.38
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "Bookmark not defined.",
+   "bbox": [
+    83.06,
+    524.59,
+    190.95,
+    535.63
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3.3. Need for legal support and advice ..................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    552.35,
+    525.94,
+    565.65
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3.4. Need for receiving information on the asylum process and identification procedures",
+   "bbox": [
+    83.06,
+    581.99,
+    526.1,
+    595.29
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "for trafficked victims......................................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    597.71,
+    525.94,
+    611.01
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.3.4. Specific needs relating to the asylum interview ............... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    627.47,
+    525.94,
+    640.77
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.4. WHAT ARE THE OBLIGATIONS OF STATES WITH RESPECT TO TRAFFICKING?",
+   "bbox": [
+    72.02,
+    657.23,
+    523.32,
+    670.53
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "...............................................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    673.06,
+    526.2,
+    685.28
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.4.1. Victim identification ............................................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    701.51,
+    525.94,
+    714.81
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "contents",
+   "text": "VI.4.2. Provision of immediate protection and support .............. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    731.17,
+    525.94,
+    744.47
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 30 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.4.3. Legal assistance and involvement ...................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    72.39,
+    525.94,
+    85.69
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.4.4. Non-criminalization of trafficked persons ........................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    102.15,
+    525.94,
+    115.45
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.5. RWANDA’S POLICY AND LEGAL FRAMEWORK ON HUMAN TRAFFICKING",
+   "bbox": [
+    72.02,
+    131.79,
+    523.35,
+    145.09
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "...............................................................................................................Error! Bookmark not defined.",
+   "bbox": [
+    72.02,
+    147.62,
+    526.2,
+    159.84
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.5.1. Rwanda’s Constitution ......................................................... Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    176.07,
+    525.94,
+    189.37
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.5.2. Prevention of Traffic In Person (TIP) ................................. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    205.83,
+    525.94,
+    219.13
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.5.3. Protection of and assistance provided to victims ............. Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    235.62,
+    525.94,
+    248.92
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "contents",
+   "text": "VI.5.4. Penalties for offences of TIP ................................................ Error! Bookmark not defined.",
+   "bbox": [
+    83.06,
+    265.26,
+    525.94,
+    278.56
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 31 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 32 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 33 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 34 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 35 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 36 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 37 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 38 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 39 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 40 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 41 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 42 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 43 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 44 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 45 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 46 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 47 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 48 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 49 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 50 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 51 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 52 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 53 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 54 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 55 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "page number",
+   "text": "Page 56 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "page number",
+   "text": "Page 57 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "page number",
+   "text": "Page 58 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "page number",
+   "text": "Page 59 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 61,
+   "kind": "page number",
+   "text": "Page 60 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "page number",
+   "text": "Page 61 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "page number",
+   "text": "Page 62 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "page number",
+   "text": "Page 63 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "page number",
+   "text": "Page 64 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "page number",
+   "text": "Page 65 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 67,
+   "kind": "page number",
+   "text": "Page 66 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 68,
+   "kind": "page number",
+   "text": "Page 67 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "page number",
+   "text": "Page 68 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "page number",
+   "text": "Page 69 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "page number",
+   "text": "Page 70 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 72,
+   "kind": "page number",
+   "text": "Page 71 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 73,
+   "kind": "page number",
+   "text": "Page 72 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 74,
+   "kind": "page number",
+   "text": "Page 73 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "page number",
+   "text": "Page 74 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 76,
+   "kind": "page number",
+   "text": "Page 75 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 77,
+   "kind": "page number",
+   "text": "Page 76 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 78,
+   "kind": "page number",
+   "text": "Page 77 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "page number",
+   "text": "Page 78 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 80,
+   "kind": "page number",
+   "text": "Page 79 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 81,
+   "kind": "page number",
+   "text": "Page 80 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 82,
+   "kind": "page number",
+   "text": "Page 81 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 83,
+   "kind": "page number",
+   "text": "Page 82 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 84,
+   "kind": "page number",
+   "text": "Page 83 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 85,
+   "kind": "page number",
+   "text": "Page 84 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 86,
+   "kind": "page number",
+   "text": "Page 85 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 87,
+   "kind": "page number",
+   "text": "Page 86 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 88,
+   "kind": "page number",
+   "text": "Page 87 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "page number",
+   "text": "Page 88 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 90,
+   "kind": "page number",
+   "text": "Page 89 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "page number",
+   "text": "Page 90 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 92,
+   "kind": "page number",
+   "text": "Page 91 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 93,
+   "kind": "page number",
+   "text": "Page 92 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 94,
+   "kind": "page number",
+   "text": "Page 93 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 95,
+   "kind": "page number",
+   "text": "Page 94 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 96,
+   "kind": "page number",
+   "text": "Page 95 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 97,
+   "kind": "page number",
+   "text": "Page 96 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 98,
+   "kind": "page number",
+   "text": "Page 97 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 99,
+   "kind": "page number",
+   "text": "Page 98 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 100,
+   "kind": "page number",
+   "text": "Page 99 of 145",
+   "bbox": [
+    270.41,
+    801.76,
+    328.01,
+    810.73
+   ]
+  },
+  {
+   "page": 101,
+   "kind": "page number",
+   "text": "Page 100 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 102,
+   "kind": "page number",
+   "text": "Page 101 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 103,
+   "kind": "page number",
+   "text": "Page 102 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 104,
+   "kind": "page number",
+   "text": "Page 103 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 105,
+   "kind": "page number",
+   "text": "Page 104 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 106,
+   "kind": "page number",
+   "text": "Page 105 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 107,
+   "kind": "page number",
+   "text": "105",
+   "bbox": [
+    72.02,
+    758.82,
+    84.96,
+    766.17
+   ]
+  },
+  {
+   "page": 107,
+   "kind": "page number",
+   "text": "Page 106 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 108,
+   "kind": "page number",
+   "text": "Page 107 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 109,
+   "kind": "page number",
+   "text": "Page 108 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 110,
+   "kind": "page number",
+   "text": "Page 109 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 111,
+   "kind": "page number",
+   "text": "Page 110 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 112,
+   "kind": "page number",
+   "text": "Page 111 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 113,
+   "kind": "page number",
+   "text": "Page 112 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 114,
+   "kind": "page number",
+   "text": "Page 113 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 115,
+   "kind": "page number",
+   "text": "Page 114 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 116,
+   "kind": "page number",
+   "text": "Page 115 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 117,
+   "kind": "page number",
+   "text": "Page 116 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 118,
+   "kind": "page number",
+   "text": "Page 117 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 119,
+   "kind": "page number",
+   "text": "Page 118 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 120,
+   "kind": "page number",
+   "text": "Page 119 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 121,
+   "kind": "page number",
+   "text": "Page 120 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 122,
+   "kind": "page number",
+   "text": "Page 121 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 123,
+   "kind": "page number",
+   "text": "Page 122 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 124,
+   "kind": "page number",
+   "text": "Page 123 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 125,
+   "kind": "page number",
+   "text": "Page 124 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 126,
+   "kind": "page number",
+   "text": "Page 125 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 127,
+   "kind": "page number",
+   "text": "Page 126 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 128,
+   "kind": "page number",
+   "text": "Page 127 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 129,
+   "kind": "page number",
+   "text": "Page 128 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 130,
+   "kind": "page number",
+   "text": "Page 129 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 131,
+   "kind": "page number",
+   "text": "Page 130 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 132,
+   "kind": "page number",
+   "text": "Page 131 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 133,
+   "kind": "page number",
+   "text": "Page 132 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 134,
+   "kind": "page number",
+   "text": "Page 133 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 135,
+   "kind": "page number",
+   "text": "Page 134 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 136,
+   "kind": "page number",
+   "text": "Page 135 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 137,
+   "kind": "page number",
+   "text": "Page 136 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 138,
+   "kind": "page number",
+   "text": "Page 137 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 139,
+   "kind": "page number",
+   "text": "Page 138 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 140,
+   "kind": "page number",
+   "text": "Page 139 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 141,
+   "kind": "page number",
+   "text": "Page 140 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 142,
+   "kind": "page number",
+   "text": "Page 141 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 143,
+   "kind": "page number",
+   "text": "Page 142 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 144,
+   "kind": "page number",
+   "text": "Page 143 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 145,
+   "kind": "page number",
+   "text": "Page 144 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  },
+  {
+   "page": 146,
+   "kind": "page number",
+   "text": "Page 145 of 145",
+   "bbox": [
+    268.13,
+    801.76,
+    330.17,
+    810.73
+   ]
+  }
+ ],
+ "figure_pages": {
+  "f1be6d33e6dfe9da99c80c63dfab8e9475b5a692a9df6c98aadab1982dc4c2a4.png": 2,
+  "a1b5e6f24c95047912999f4ac14b8f4ac4222a741263f610812b62e37e56e20a.jpg": 7,
+  "ca622559ece3587118f689fec402eb9bd85a33884b456d27f76d4034a129dd04.jpg": 7,
+  "daeadbbdc5b224b3a7a1abca052711437f1e080cd4c7cd7b61d031a088c3c806.jpg": 8,
+  "656cfcb0b71ab0b32e7423e9f46c6cf8f64170fb1c0168cb8e2ded5312ba289d.jpg": 8,
+  "fa5d8e945eec0609fd3c40ca8890507f3b70194ec1897c55c0fd0c269f196b41.jpg": 9,
+  "10410ce01ba7af0f4fb8e686b9f90da10828ca9cccdd029dd7e9505d5089054b.jpg": 11,
+  "b507a3fe5d9b5c0288504e764c6e55e6fb38a91e3db0a3ed7eadc1c4cab7e9d3.jpg": 11,
+  "c59b63fe0d62b47b09ccba30037027c1cb704055e7f80ac59ef4a25b103077b4.jpg": 12,
+  "4b32b78a0d2c3128ca40ea00a19fc84c95c5376767e882283bed81c75efb1026.jpg": 13,
+  "62fc3891f482692b8ab2d4d2c3f5dd29db9b088dd18f88aaf375ba9d8ac54bbc.jpg": 14,
+  "f507d9446bda8767f6f0437ab838693bb3c119a7780ae16ab430e2d1119aa87f.jpg": 17,
+  "ab25d74e4c884c64cb7cc23409684221558d045abced89ef0b3f2751fad4e723.jpg": 91,
+  "a68b01ee9aa5d256284d011e9125a69ed972f77c8b4957515bf49ff76db720dc.png": 117,
+  "f8d7e6948c27350e84f5a23129ff4b7e89f9c724dc97569c1de528fdadb7e67d.png": 135,
+  "891bbdc92b9756b5bf0e538c00e0ec86b20d46ffad485d1beab06b3d97ce64c0.jpg": 136,
+  "d411c97153621c30cc34382b918416bfd05ae9878da2990d9d63e5fc12e19f00.jpg": 137,
+  "325f6c069f516260e963cc7e129e0a89d070cb5fee466ab4db11cae6e4eaf774.jpg": 138,
+  "d22b8bc6d345aa8a7e6e964c0eb5de2490070bbcd1bbfa9cc0f0094f855b45c9.jpg": 139,
+  "2b22e5e18e0443a30752046415e42e6c5127b56d078124de22bc5a5753d2d609.jpg": 140,
+  "7bc50fe212ccc3a8eaf61a70d3571bf6a340b55c585a243cf3ee80cb3fbd70f7.jpg": 141,
+  "5b86b23c938d673a95727d5c84e8b469a09d805c80c30ee544e769c898c62a32.jpg": 142,
+  "105281557b8129e149bea86976bc99864e2cd9365343f6dfe93d0e2075707d9e.jpg": 143,
+  "1780540799b143dd0103321c34a5563a018f4e71224d105db5119746a57772d9.jpg": 144,
+  "706b8abf09be94209b4c7f5be336d71e60b3e319b2543c4f8a5d69199df098c9.jpg": 145,
+  "e3a5fb37b721009cb49a1c37f8def8b35ce9e9f4d1872916d929b86dc6d5ef6b.jpg": 146
+ },
+ "figure_sizes": {
+  "f1be6d33e6dfe9da99c80c63dfab8e9475b5a692a9df6c98aadab1982dc4c2a4.png": [
+   318,
+   148
+  ],
+  "a1b5e6f24c95047912999f4ac14b8f4ac4222a741263f610812b62e37e56e20a.jpg": [
+   463,
+   474
+  ],
+  "ca622559ece3587118f689fec402eb9bd85a33884b456d27f76d4034a129dd04.jpg": [
+   903,
+   590
+  ],
+  "daeadbbdc5b224b3a7a1abca052711437f1e080cd4c7cd7b61d031a088c3c806.jpg": [
+   537,
+   875
+  ],
+  "656cfcb0b71ab0b32e7423e9f46c6cf8f64170fb1c0168cb8e2ded5312ba289d.jpg": [
+   476,
+   386
+  ],
+  "fa5d8e945eec0609fd3c40ca8890507f3b70194ec1897c55c0fd0c269f196b41.jpg": [
+   545,
+   1259
+  ],
+  "10410ce01ba7af0f4fb8e686b9f90da10828ca9cccdd029dd7e9505d5089054b.jpg": [
+   900,
+   569
+  ],
+  "b507a3fe5d9b5c0288504e764c6e55e6fb38a91e3db0a3ed7eadc1c4cab7e9d3.jpg": [
+   904,
+   701
+  ],
+  "c59b63fe0d62b47b09ccba30037027c1cb704055e7f80ac59ef4a25b103077b4.jpg": [
+   909,
+   613
+  ],
+  "4b32b78a0d2c3128ca40ea00a19fc84c95c5376767e882283bed81c75efb1026.jpg": [
+   725,
+   870
+  ],
+  "62fc3891f482692b8ab2d4d2c3f5dd29db9b088dd18f88aaf375ba9d8ac54bbc.jpg": [
+   577,
+   391
+  ],
+  "f507d9446bda8767f6f0437ab838693bb3c119a7780ae16ab430e2d1119aa87f.jpg": [
+   906,
+   740
+  ],
+  "ab25d74e4c884c64cb7cc23409684221558d045abced89ef0b3f2751fad4e723.jpg": [
+   956,
+   564
+  ],
+  "a68b01ee9aa5d256284d011e9125a69ed972f77c8b4957515bf49ff76db720dc.png": [
+   859,
+   353
+  ],
+  "f8d7e6948c27350e84f5a23129ff4b7e89f9c724dc97569c1de528fdadb7e67d.png": [
+   919,
+   1173
+  ],
+  "891bbdc92b9756b5bf0e538c00e0ec86b20d46ffad485d1beab06b3d97ce64c0.jpg": [
+   919,
+   1339
+  ],
+  "d411c97153621c30cc34382b918416bfd05ae9878da2990d9d63e5fc12e19f00.jpg": [
+   919,
+   1321
+  ],
+  "325f6c069f516260e963cc7e129e0a89d070cb5fee466ab4db11cae6e4eaf774.jpg": [
+   919,
+   1345
+  ],
+  "d22b8bc6d345aa8a7e6e964c0eb5de2490070bbcd1bbfa9cc0f0094f855b45c9.jpg": [
+   919,
+   1294
+  ],
+  "2b22e5e18e0443a30752046415e42e6c5127b56d078124de22bc5a5753d2d609.jpg": [
+   919,
+   1266
+  ],
+  "7bc50fe212ccc3a8eaf61a70d3571bf6a340b55c585a243cf3ee80cb3fbd70f7.jpg": [
+   919,
+   1270
+  ],
+  "5b86b23c938d673a95727d5c84e8b469a09d805c80c30ee544e769c898c62a32.jpg": [
+   919,
+   1317
+  ],
+  "105281557b8129e149bea86976bc99864e2cd9365343f6dfe93d0e2075707d9e.jpg": [
+   919,
+   1334
+  ],
+  "1780540799b143dd0103321c34a5563a018f4e71224d105db5119746a57772d9.jpg": [
+   919,
+   1269
+  ],
+  "706b8abf09be94209b4c7f5be336d71e60b3e319b2543c4f8a5d69199df098c9.jpg": [
+   919,
+   1339
+  ],
+  "e3a5fb37b721009cb49a1c37f8def8b35ce9e9f4d1872916d929b86dc6d5ef6b.jpg": [
+   919,
+   1298
+  ]
+ },
+ "figure_text": {
+  "f1be6d33e6dfe9da99c80c63dfab8e9475b5a692a9df6c98aadab1982dc4c2a4.png": 0,
+  "a1b5e6f24c95047912999f4ac14b8f4ac4222a741263f610812b62e37e56e20a.jpg": 0,
+  "ca622559ece3587118f689fec402eb9bd85a33884b456d27f76d4034a129dd04.jpg": 312,
+  "daeadbbdc5b224b3a7a1abca052711437f1e080cd4c7cd7b61d031a088c3c806.jpg": 77,
+  "656cfcb0b71ab0b32e7423e9f46c6cf8f64170fb1c0168cb8e2ded5312ba289d.jpg": 2,
+  "fa5d8e945eec0609fd3c40ca8890507f3b70194ec1897c55c0fd0c269f196b41.jpg": 78,
+  "10410ce01ba7af0f4fb8e686b9f90da10828ca9cccdd029dd7e9505d5089054b.jpg": 31,
+  "b507a3fe5d9b5c0288504e764c6e55e6fb38a91e3db0a3ed7eadc1c4cab7e9d3.jpg": 273,
+  "c59b63fe0d62b47b09ccba30037027c1cb704055e7f80ac59ef4a25b103077b4.jpg": 319,
+  "4b32b78a0d2c3128ca40ea00a19fc84c95c5376767e882283bed81c75efb1026.jpg": 212,
+  "62fc3891f482692b8ab2d4d2c3f5dd29db9b088dd18f88aaf375ba9d8ac54bbc.jpg": 31,
+  "f507d9446bda8767f6f0437ab838693bb3c119a7780ae16ab430e2d1119aa87f.jpg": 300,
+  "ab25d74e4c884c64cb7cc23409684221558d045abced89ef0b3f2751fad4e723.jpg": 2,
+  "a68b01ee9aa5d256284d011e9125a69ed972f77c8b4957515bf49ff76db720dc.png": 2,
+  "f8d7e6948c27350e84f5a23129ff4b7e89f9c724dc97569c1de528fdadb7e67d.png": 121,
+  "891bbdc92b9756b5bf0e538c00e0ec86b20d46ffad485d1beab06b3d97ce64c0.jpg": 8,
+  "d411c97153621c30cc34382b918416bfd05ae9878da2990d9d63e5fc12e19f00.jpg": 8,
+  "325f6c069f516260e963cc7e129e0a89d070cb5fee466ab4db11cae6e4eaf774.jpg": 8,
+  "d22b8bc6d345aa8a7e6e964c0eb5de2490070bbcd1bbfa9cc0f0094f855b45c9.jpg": 8,
+  "2b22e5e18e0443a30752046415e42e6c5127b56d078124de22bc5a5753d2d609.jpg": 8,
+  "7bc50fe212ccc3a8eaf61a70d3571bf6a340b55c585a243cf3ee80cb3fbd70f7.jpg": 8,
+  "5b86b23c938d673a95727d5c84e8b469a09d805c80c30ee544e769c898c62a32.jpg": 8,
+  "105281557b8129e149bea86976bc99864e2cd9365343f6dfe93d0e2075707d9e.jpg": 8,
+  "1780540799b143dd0103321c34a5563a018f4e71224d105db5119746a57772d9.jpg": 8,
+  "706b8abf09be94209b4c7f5be336d71e60b3e319b2543c4f8a5d69199df098c9.jpg": 8,
+  "e3a5fb37b721009cb49a1c37f8def8b35ce9e9f4d1872916d929b86dc6d5ef6b.jpg": 8
+ },
+ "first_bookmark_page": 1,
+ "cover_title": "This publication was archived on 24 April 2025",
+ "cover_version": null,
+ "cover_date": "24 April 2025",
+ "pdf_sha256": "bc27bdab8f0f307c377cd240537b028500f4092100e22a268efde37af4b64df5",
+ "images": [
+  "10410ce01ba7af0f4fb8e686b9f90da10828ca9cccdd029dd7e9505d5089054b.jpg",
+  "105281557b8129e149bea86976bc99864e2cd9365343f6dfe93d0e2075707d9e.jpg",
+  "1780540799b143dd0103321c34a5563a018f4e71224d105db5119746a57772d9.jpg",
+  "2b22e5e18e0443a30752046415e42e6c5127b56d078124de22bc5a5753d2d609.jpg",
+  "325f6c069f516260e963cc7e129e0a89d070cb5fee466ab4db11cae6e4eaf774.jpg",
+  "4b32b78a0d2c3128ca40ea00a19fc84c95c5376767e882283bed81c75efb1026.jpg",
+  "5b86b23c938d673a95727d5c84e8b469a09d805c80c30ee544e769c898c62a32.jpg",
+  "62fc3891f482692b8ab2d4d2c3f5dd29db9b088dd18f88aaf375ba9d8ac54bbc.jpg",
+  "656cfcb0b71ab0b32e7423e9f46c6cf8f64170fb1c0168cb8e2ded5312ba289d.jpg",
+  "706b8abf09be94209b4c7f5be336d71e60b3e319b2543c4f8a5d69199df098c9.jpg",
+  "7bc50fe212ccc3a8eaf61a70d3571bf6a340b55c585a243cf3ee80cb3fbd70f7.jpg",
+  "891bbdc92b9756b5bf0e538c00e0ec86b20d46ffad485d1beab06b3d97ce64c0.jpg",
+  "a1b5e6f24c95047912999f4ac14b8f4ac4222a741263f610812b62e37e56e20a.jpg",
+  "a68b01ee9aa5d256284d011e9125a69ed972f77c8b4957515bf49ff76db720dc.png",
+  "ab25d74e4c884c64cb7cc23409684221558d045abced89ef0b3f2751fad4e723.jpg",
+  "b507a3fe5d9b5c0288504e764c6e55e6fb38a91e3db0a3ed7eadc1c4cab7e9d3.jpg",
+  "c59b63fe0d62b47b09ccba30037027c1cb704055e7f80ac59ef4a25b103077b4.jpg",
+  "ca622559ece3587118f689fec402eb9bd85a33884b456d27f76d4034a129dd04.jpg",
+  "d22b8bc6d345aa8a7e6e964c0eb5de2490070bbcd1bbfa9cc0f0094f855b45c9.jpg",
+  "d411c97153621c30cc34382b918416bfd05ae9878da2990d9d63e5fc12e19f00.jpg",
+  "daeadbbdc5b224b3a7a1abca052711437f1e080cd4c7cd7b61d031a088c3c806.jpg",
+  "e3a5fb37b721009cb49a1c37f8def8b35ce9e9f4d1872916d929b86dc6d5ef6b.jpg",
+  "f1be6d33e6dfe9da99c80c63dfab8e9475b5a692a9df6c98aadab1982dc4c2a4.png",
+  "f507d9446bda8767f6f0437ab838693bb3c119a7780ae16ab430e2d1119aa87f.jpg",
+  "f8d7e6948c27350e84f5a23129ff4b7e89f9c724dc97569c1de528fdadb7e67d.png",
+  "fa5d8e945eec0609fd3c40ca8890507f3b70194ec1897c55c0fd0c269f196b41.jpg"
+ ]
+}

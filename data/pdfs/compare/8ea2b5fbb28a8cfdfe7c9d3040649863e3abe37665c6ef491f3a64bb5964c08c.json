@@ -1,12 +1,12 @@
 {
  "method": "webpdf-8",
- "extractor": "pdftext-2",
+ "extractor": "pdftext-6",
  "note": "iran/country-policy-and-information-note-sexual-orientation-and-gender-identity-or-expression-iran-june-2022-accessible",
  "pdf_sha256": "8ea2b5fbb28a8cfdfe7c9d3040649863e3abe37665c6ef491f3a64bb5964c08c",
  "body_sha256": "472e932ae238603fb8511ba8451608921b9c1db5bcaedfb367da837d393e14c4",
  "words": {
   "web": 30919,
-  "pdf": 30926
+  "pdf": 30923
  },
  "summary": {
   "wording": {
@@ -56,17 +56,12 @@
     "pdf_words": 0
    },
    "furniture": {
-    "differences": 1,
+    "differences": 0,
     "web_words": 0,
-    "pdf_words": 3
+    "pdf_words": 0
    }
   },
   "kinds": {
-   "back to contents": {
-    "differences": 1,
-    "web_words": 0,
-    "pdf_words": 3
-   },
    "numbering": {
     "differences": 1,
     "web_words": 0,
@@ -160,25 +155,6 @@
    },
    "size": "word",
    "second": "cannot tell"
-  },
-  {
-   "kind": "back to contents",
-   "group": "furniture",
-   "verdict": "real",
-   "web": "",
-   "pdf": "Back to Contents",
-   "web_words": 0,
-   "pdf_words": 3,
-   "before": "to demonstrate they face persecution or serious harm.",
-   "after": "Assessment\nSection updated: 19 December 2025\nAbout the",
-   "where": {
-    "heading": "assessment",
-    "paragraph": null,
-    "section": "Assessment",
-    "page": 2
-   },
-   "opening": true,
-   "opening_passage": false
   },
   {
    "kind": "numbering",

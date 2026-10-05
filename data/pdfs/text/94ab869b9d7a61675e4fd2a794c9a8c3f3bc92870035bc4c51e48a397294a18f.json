@@ -1,0 +1,490 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 27,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 33,
+ "paragraphs": 166,
+ "list_items": 5,
+ "tables": 1,
+ "figures": 1,
+ "footnotes": 50,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering",
+  "footnotes with no mark found in the text: 46"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    161.42,
+    556.18,
+    174.8
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    336.38,
+    556.18,
+    349.76
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    704.56,
+    556.18,
+    717.94
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    671.68,
+    556.18,
+    685.06
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    351.86,
+    556.18,
+    365.24
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    95.1,
+    556.18,
+    108.48
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    81.3,
+    556.18,
+    94.68
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    47.7,
+    556.18,
+    61.08
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    75.3,
+    556.18,
+    88.68
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    47.7,
+    556.18,
+    61.08
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    373.46,
+    556.18,
+    386.84
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    596.74,
+    556.18,
+    610.12
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    598.9,
+    556.18,
+    612.28
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    614.86,
+    556.18,
+    628.24
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    461.44,
+    168.14,
+    556.18,
+    181.52
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 27",
+   "bbox": [
+    274.82,
+    796.3,
+    322.42,
+    805.2
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 27",
+   "bbox": [
+    272.6,
+    796.3,
+    324.64,
+    805.2
+   ]
+  }
+ ],
+ "figure_pages": {
+  "1208dcf092e4ae51f3efe9ccc30de996d3986399bcf7b08c3a61d398c1a072d8.jpg": 25
+ },
+ "figure_sizes": {
+  "1208dcf092e4ae51f3efe9ccc30de996d3986399bcf7b08c3a61d398c1a072d8.jpg": [
+   920,
+   765
+  ]
+ },
+ "figure_text": {
+  "1208dcf092e4ae51f3efe9ccc30de996d3986399bcf7b08c3a61d398c1a072d8.jpg": 0
+ },
+ "first_bookmark_page": null,
+ "cover_title": "Country Information and Guidance Vietnam: Religious minority groups December 2014",
+ "cover_version": null,
+ "cover_date": "December 2014",
+ "pdf_sha256": "94ab869b9d7a61675e4fd2a794c9a8c3f3bc92870035bc4c51e48a397294a18f",
+ "images": [
+  "1208dcf092e4ae51f3efe9ccc30de996d3986399bcf7b08c3a61d398c1a072d8.jpg"
+ ]
+}

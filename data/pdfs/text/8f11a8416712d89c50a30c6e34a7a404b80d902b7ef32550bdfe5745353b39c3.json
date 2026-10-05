@@ -1,0 +1,2000 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 91,
+ "body_size": 12.0,
+ "body_font": "timesnewroman",
+ "headings": 27,
+ "paragraphs": 560,
+ "list_items": 167,
+ "tables": 2,
+ "figures": 35,
+ "footnotes": 0,
+ "bookmarks": 21,
+ "warnings": [
+  "page 1: bookmark not found in the text: 'Blank Page'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 1: bookmark not found in the text: 'Untitled'",
+  "page 59: bookmark not found in the text: 'A7. Memorandum of Understanding between Migration and Econom'",
+  "page 73: bookmark not found in the text: 'A10. GoR, Asylum seeker registration form, May 2023'"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 4,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    686.59,
+    526.81,
+    699.97
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    652.59,
+    526.81,
+    665.97
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    72.42,
+    526.81,
+    85.8
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    631.09,
+    526.81,
+    644.47
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    396.17,
+    248.22,
+    491.04,
+    261.6
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    492.29,
+    526.81,
+    505.67
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    503.04,
+    526.81,
+    516.42
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    727.11,
+    526.81,
+    740.49
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    716.86,
+    526.81,
+    730.24
+   ]
+  },
+  {
+   "page": 72,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    249.72,
+    526.81,
+    263.1
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    590.56,
+    526.81,
+    603.94
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    685.59,
+    526.81,
+    698.97
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.92,
+    738.86,
+    526.81,
+    752.24
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 2 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.03,
+    73.0,
+    183.31,
+    101.99
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Annex 1 ......................................................................................................................... 3",
+   "bbox": [
+    72.03,
+    108.42,
+    525.46,
+    121.8
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "About the country information ................................................................................... 3",
+   "bbox": [
+    84.03,
+    127.19,
+    525.46,
+    140.57
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A1.  GoR response to written questions submitted by UKHO, returned 11",
+   "bbox": [
+    84.03,
+    145.94,
+    473.63,
+    159.32
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "December 2023 ................................................................................................ 4",
+   "bbox": [
+    114.55,
+    159.69,
+    525.46,
+    173.07
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A2. Standard Operating Procedures on identifying and safeguarding vulnerable",
+   "bbox": [
+    84.03,
+    178.44,
+    507.1,
+    191.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "persons under the MEDP, April 2024 .............................................................. 7",
+   "bbox": [
+    114.55,
+    192.44,
+    525.46,
+    205.82
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A3. Standard Operating Procedures on reception and accommodation facilities,",
+   "bbox": [
+    84.03,
+    211.22,
+    508.13,
+    224.6
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "April 2024 ........................................................................................................ 18",
+   "bbox": [
+    114.55,
+    224.97,
+    525.46,
+    238.35
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A4. Standard Operating Procedures on health services to be provided to",
+   "bbox": [
+    84.03,
+    243.72,
+    470.9,
+    257.1
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Relocated Individuals under the MEDP, April 2024 ...................................... 35",
+   "bbox": [
+    114.55,
+    257.47,
+    525.46,
+    270.85
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A5. Asylum and humanitarian protection decision making Standard Operating",
+   "bbox": [
+    84.03,
+    276.46,
+    497.62,
+    289.84
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Procedures, 20 April 2024 .............................................................................. 45",
+   "bbox": [
+    114.55,
+    290.24,
+    525.46,
+    303.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A6. Manual on Refugee Appeal Tribunal Standard Operating Procedures, 20 April",
+   "bbox": [
+    84.03,
+    308.99,
+    520.82,
+    322.37
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "2024 ................................................................................................................ 52",
+   "bbox": [
+    114.55,
+    322.74,
+    525.46,
+    336.12
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A7. Memorandum of Understanding between Migration and Economic",
+   "bbox": [
+    84.03,
+    341.49,
+    458.17,
+    354.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Development Partnership-Coordination Unit (MEDP-CU) and Ndera",
+   "bbox": [
+    114.55,
+    355.49,
+    476.93,
+    368.87
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Neuropsychiatric Teaching Hospital, April 2024............................................ 59",
+   "bbox": [
+    114.55,
+    369.24,
+    525.46,
+    382.62
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A8. Agreement between Migration and Economic Development Partnership-",
+   "bbox": [
+    84.03,
+    388.01,
+    487.95,
+    401.39
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "Coordination Unit (MEDP-CU) and Rwanda Military Hospital, April 2024.... 65",
+   "bbox": [
+    114.55,
+    401.76,
+    525.46,
+    415.14
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A9. GoR, Asylum interview template, no date ........................................................ 70",
+   "bbox": [
+    84.03,
+    420.51,
+    525.46,
+    433.89
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A10. GoR, Asylum seeker registration form, May 2023 ......................................... 73",
+   "bbox": [
+    84.03,
+    439.26,
+    525.46,
+    452.64
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A11.   GoR, Notification of First Instance Body decision, no date ......................... 76",
+   "bbox": [
+    84.03,
+    458.29,
+    525.46,
+    471.67
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "A12. Contract for provision of medical insurance services for individuals under",
+   "bbox": [
+    84.03,
+    477.04,
+    500.81,
+    490.42
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "contents",
+   "text": "MEDP, May 2024 ........................................................................................... 80",
+   "bbox": [
+    114.55,
+    490.79,
+    525.46,
+    504.17
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 3 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 4 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 5 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 6 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 7 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 8 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 9 of 90",
+   "bbox": [
+    275.13,
+    783.23,
+    322.6,
+    792.15
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 10 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 11 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 12 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 13 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 14 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 15 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 16 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 17 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 18 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "CONTENTS",
+   "bbox": [
+    72.03,
+    483.89,
+    164.08,
+    501.61
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "I. INTRODUCTION AND BACKGROUND .................................................................... 2",
+   "bbox": [
+    72.03,
+    503.46,
+    525.97,
+    516.74
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "1.1. PURPOSE OF THE SOPS ........................................................................................ 2",
+   "bbox": [
+    84.03,
+    522.21,
+    525.97,
+    535.49
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "1.2. SCOPE ........................................................................................................................ 3",
+   "bbox": [
+    84.03,
+    541.21,
+    525.97,
+    554.49
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "1.3. DEFINITIONS ........................................................................................................... 3",
+   "bbox": [
+    84.03,
+    559.98,
+    525.97,
+    573.26
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "II. RESPONSIBILITIES ................................................................................................... 4",
+   "bbox": [
+    72.03,
+    578.74,
+    525.97,
+    592.02
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "2.1. RESPONSIBILITIES OF SERVICE PROVIDER FOR RECEPTION",
+   "bbox": [
+    84.03,
+    597.48,
+    475.82,
+    610.76
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "FACILITIES .............................................................................................................. 4",
+   "bbox": [
+    114.55,
+    611.23,
+    525.97,
+    624.51
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "2.2. RESPONSIBILITIES OF RIs .................................................................................. 6",
+   "bbox": [
+    84.03,
+    630.26,
+    525.97,
+    643.54
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "2.3. RESPONSIBILITIES OF MEDP-CU ..................................................................... 8",
+   "bbox": [
+    84.03,
+    649.01,
+    525.97,
+    662.29
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "III. ACCOMMODATION FACILITIES .......................................................................... 9",
+   "bbox": [
+    72.03,
+    667.76,
+    525.97,
+    681.04
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "3.1. DETAILS ABOUT THE TYPES OF ACCOMMODATION FACILITIES ....... 9",
+   "bbox": [
+    84.03,
+    686.51,
+    525.97,
+    699.79
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "3.2. ADMISSION PROCEDURES ................................................................................ 10",
+   "bbox": [
+    84.03,
+    705.26,
+    525.97,
+    718.54
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "3.3. ACCOMMODATION PLACEMENT .................................................................. 10",
+   "bbox": [
+    84.03,
+    724.28,
+    525.97,
+    737.56
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "contents",
+   "text": "IV. PSYCHOSOCIAL SUPPORT ................................................................................... 11",
+   "bbox": [
+    72.03,
+    743.03,
+    525.97,
+    756.32
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 19 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "4.1. COUNSELING SERVICES ................................................................................... 11",
+   "bbox": [
+    84.03,
+    72.59,
+    525.97,
+    85.87
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "4.2. RECREATIONAL ACTIVITIES .......................................................................... 12",
+   "bbox": [
+    84.03,
+    91.34,
+    525.97,
+    104.62
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "V. COMPLAINTS MECHANISMS .................................................................................. 12",
+   "bbox": [
+    72.03,
+    110.09,
+    525.97,
+    123.37
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "VI. APPENDICES ............................................................................................................. 12",
+   "bbox": [
+    72.03,
+    129.11,
+    525.97,
+    142.39
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- COMMITMENT FOR ROOM ALLOCATED IN THE RECEPTION CENTER",
+   "bbox": [
+    84.03,
+    147.86,
+    515.52,
+    161.14
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "14",
+   "bbox": [
+    114.55,
+    161.61,
+    136.8,
+    174.89
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- LOCATION PLAN/MAP ........................................................................................... 14",
+   "bbox": [
+    84.03,
+    180.36,
+    525.97,
+    193.64
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- ROOM ALLOCATION FORM ................................................................................ 15",
+   "bbox": [
+    84.03,
+    199.11,
+    525.97,
+    212.39
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- INCIDENT REPORT FORM .................................................................................... 16",
+   "bbox": [
+    84.03,
+    218.14,
+    525.97,
+    231.42
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- MEALS REQUEST FORM ....................................................................................... 17",
+   "bbox": [
+    84.03,
+    236.89,
+    525.97,
+    250.17
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- EVACUATION PLAN ............................................................................................... 18",
+   "bbox": [
+    84.03,
+    255.64,
+    525.97,
+    268.92
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "REFUSAL OF MEDICAL ASSESSMENT ON ARRIVAL .............................................. 20",
+   "bbox": [
+    72.03,
+    274.38,
+    525.97,
+    287.66
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- MAINTENANCE REQUEST FORM: ..................................................................... 22",
+   "bbox": [
+    84.03,
+    293.16,
+    525.97,
+    306.44
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "contents",
+   "text": "- USEFUL CONTACTS ................................................................................................... 23",
+   "bbox": [
+    72.03,
+    312.16,
+    525.97,
+    325.44
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 20 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 21 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 22 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 23 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 24 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 25 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 26 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 27 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 28 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 29 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 30 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 31 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 32 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 33 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 34 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 35 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 36 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 37 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 38 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 39 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 40 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 41 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 42 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 43 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 44 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 45 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 46 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 47 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 48 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 49 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 50 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 51 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 52 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 53 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 54 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 55 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 57,
+   "kind": "page number",
+   "text": "Page 56 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 58,
+   "kind": "page number",
+   "text": "Page 57 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 59,
+   "kind": "page number",
+   "text": "Page 58 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 60,
+   "kind": "page number",
+   "text": "Page 59 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 61,
+   "kind": "page number",
+   "text": "Page 60 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 62,
+   "kind": "page number",
+   "text": "Page 61 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 63,
+   "kind": "page number",
+   "text": "Page 62 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 64,
+   "kind": "page number",
+   "text": "Page 63 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 65,
+   "kind": "page number",
+   "text": "Page 64 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 66,
+   "kind": "page number",
+   "text": "Page 65 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 67,
+   "kind": "page number",
+   "text": "Page 66 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 68,
+   "kind": "page number",
+   "text": "Page 67 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 69,
+   "kind": "page number",
+   "text": "Page 68 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 70,
+   "kind": "page number",
+   "text": "Page 69 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 71,
+   "kind": "page number",
+   "text": "Page 70 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 72,
+   "kind": "page number",
+   "text": "Page 71 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 73,
+   "kind": "page number",
+   "text": "Page 72 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 74,
+   "kind": "page number",
+   "text": "Page 73 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 75,
+   "kind": "page number",
+   "text": "Page 74 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 76,
+   "kind": "page number",
+   "text": "Page 75 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 77,
+   "kind": "page number",
+   "text": "Page 76 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 78,
+   "kind": "page number",
+   "text": "Page 77 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 79,
+   "kind": "page number",
+   "text": "Page 78 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 80,
+   "kind": "page number",
+   "text": "Page 79 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 81,
+   "kind": "page number",
+   "text": "Page 80 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 82,
+   "kind": "page number",
+   "text": "Page 81 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 83,
+   "kind": "page number",
+   "text": "Page 82 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 84,
+   "kind": "page number",
+   "text": "Page 83 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 85,
+   "kind": "page number",
+   "text": "Page 84 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 86,
+   "kind": "page number",
+   "text": "Page 85 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 87,
+   "kind": "page number",
+   "text": "Page 86 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 88,
+   "kind": "page number",
+   "text": "Page 87 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 89,
+   "kind": "page number",
+   "text": "Page 88 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 90,
+   "kind": "page number",
+   "text": "Page 89 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  },
+  {
+   "page": 91,
+   "kind": "page number",
+   "text": "Page 90 of 90",
+   "bbox": [
+    272.88,
+    783.23,
+    324.87,
+    792.15
+   ]
+  }
+ ],
+ "figure_pages": {
+  "afaa6592fd7db7f9ba7797c290c1264ac20a16f96c9da77eb0b5806c8cf6c3ff.png": 2,
+  "17d974247b1cf42ab3324b69a827030f9fa0d360f6f330894823afc763976010.png": 8,
+  "dda7f08d0a8679181305b4837526d2e21c8a72443f0130648106db7c759f1eaa.png": 19,
+  "7c3d6d427897055099e5f65e2c4361f1fe1a61ee80699c0ada991c6b10214040.png": 36,
+  "644baf3b43de77fb120d928e578400a7b62903a659d41467dbc298ba23d67dc4.png": 46,
+  "3d466f71beba751b513b130bb664a823ec93dd3da163b5df573a29c928021d7c.png": 53,
+  "cb420a6427b8b692c5bc9e4731bc0504af9cb0326d5041eb84e3d297b461498b.jpg": 59,
+  "b29a715c9a5891f83e5ffec94c04ecf406b7fe150991a5d52f5a1f56ea38270c.jpg": 60,
+  "af28bbb84e550a26059c2369d5c5b66821a5176556156c8ae361d75fb3677885.jpg": 61,
+  "bfa5a56b3c6821c1a21935830ca22260b050234ea0724db1ce98031c16247558.jpg": 62,
+  "830debca9e50839bd87af7f2bd446b4c3337aceca9b87ec4ea47fb19fc25a12a.jpg": 63,
+  "079fda60d5e511aee4f3f2c2d3a18e6e151d4721202a2a3a7229d7e06b88078c.jpg": 64,
+  "772a6d2bed0e6be46ae9838fa530ea27a40690fe63e8e64d2f410a5009cdeaf2.jpg": 65,
+  "c50f05a9fd945b99ba4e5fcf4e9bed57f4c737f30e526a87be9fbfe4109cb316.jpg": 66,
+  "1d31398727aa8fbf464d4cbd0f51e2212d1190cc8e471106109ef4cf884678ad.jpg": 67,
+  "9e6c1b28a31afb0f9ff3143e541a7e3007ac80697e2cbc097178a315218dddee.jpg": 68,
+  "b042b012b1e728f73cc6a6427843a78607f36a4d59918c50f079febee7a7eafc.jpg": 69,
+  "0e1fd1460d5eaf3ec784137a2e89fc95885d6d24ba4796109a147769e60f6237.png": 70,
+  "386739aa0e5a3578cf206a16a0a0601a3ca368bca07bd3c12bd66dfe05c2ef55.jpg": 73,
+  "be5939798e6e6f17cdf6b7bafe95b1b07a921f2c6ff10a680a7b374f4d73f8ea.jpg": 74,
+  "aa76fa6719b0e50a278116cdcdbf06982c1e6f4c5b33151ef3179f10bb0f8d4a.jpg": 75,
+  "1f8b189941ce36f3724061ffeb4aecc1628c786106e1b94683e3e9f29445c9bc.png": 76,
+  "cf20933066407d795042862e73974970befafad6fd30c6ed400289e42c9da9dd.png": 77,
+  "8e8b3fdbad4c93b295f995c9b0d77faf1e362ab19ff53585ed1615a4cc259467.jpg": 80,
+  "975a55944a7af19c2400828178a782c08e0efdcad7e88f8c0e94a248e801d1b6.jpg": 81,
+  "57d6bb08799c0e98d2dc6b7139b2558ca19edf72631b60c8408b6ab9344d1da5.jpg": 82,
+  "93550482c815f7325a52f1c2a70d518d5362b45f58b4361397c505b5eaed97a7.jpg": 83,
+  "daf4511c076ce45918147c71dc4d4bbc4139af6990e6828edececf91034e04f8.jpg": 84,
+  "3ac38402da4d1ae81ec548cc1e6804965e66d7709237fd2912ccbdbb18311a80.jpg": 85,
+  "e48bd1bfd6498bbac97a86f824000f28ab2e044f6c5b606d4faadbe4d13162d8.jpg": 86,
+  "30f92aeba59078752fb80c8f2025607f455fb2bebfb00bc4de81b86f4d037539.jpg": 87,
+  "2b5c1f5c9925cb84a3b443ae4fa4736374376e40ecb039a321287afbcb082fc8.jpg": 88,
+  "b43f395386f1f2322d6ad97d9c7281c1b232c3c5a417323b6a2aeb2d1c414fe4.jpg": 89,
+  "4174209be1b9efdd71550a5ecbc8edc459fc1c41766d88caa5561b0db784f0dc.jpg": 90,
+  "82d1b30a458ddcdd9fd1ba868c61df1de8612bff90887d0e81e253f49769350e.jpg": 91
+ },
+ "figure_sizes": {
+  "afaa6592fd7db7f9ba7797c290c1264ac20a16f96c9da77eb0b5806c8cf6c3ff.png": [
+   318,
+   147
+  ],
+  "17d974247b1cf42ab3324b69a827030f9fa0d360f6f330894823afc763976010.png": [
+   727,
+   322
+  ],
+  "dda7f08d0a8679181305b4837526d2e21c8a72443f0130648106db7c759f1eaa.png": [
+   164,
+   183
+  ],
+  "7c3d6d427897055099e5f65e2c4361f1fe1a61ee80699c0ada991c6b10214040.png": [
+   267,
+   275
+  ],
+  "644baf3b43de77fb120d928e578400a7b62903a659d41467dbc298ba23d67dc4.png": [
+   230,
+   249
+  ],
+  "3d466f71beba751b513b130bb664a823ec93dd3da163b5df573a29c928021d7c.png": [
+   230,
+   250
+  ],
+  "cb420a6427b8b692c5bc9e4731bc0504af9cb0326d5041eb84e3d297b461498b.jpg": [
+   919,
+   1392
+  ],
+  "b29a715c9a5891f83e5ffec94c04ecf406b7fe150991a5d52f5a1f56ea38270c.jpg": [
+   919,
+   1290
+  ],
+  "af28bbb84e550a26059c2369d5c5b66821a5176556156c8ae361d75fb3677885.jpg": [
+   919,
+   1328
+  ],
+  "bfa5a56b3c6821c1a21935830ca22260b050234ea0724db1ce98031c16247558.jpg": [
+   919,
+   1307
+  ],
+  "830debca9e50839bd87af7f2bd446b4c3337aceca9b87ec4ea47fb19fc25a12a.jpg": [
+   919,
+   1314
+  ],
+  "079fda60d5e511aee4f3f2c2d3a18e6e151d4721202a2a3a7229d7e06b88078c.jpg": [
+   919,
+   1314
+  ],
+  "772a6d2bed0e6be46ae9838fa530ea27a40690fe63e8e64d2f410a5009cdeaf2.jpg": [
+   919,
+   1208
+  ],
+  "c50f05a9fd945b99ba4e5fcf4e9bed57f4c737f30e526a87be9fbfe4109cb316.jpg": [
+   919,
+   1226
+  ],
+  "1d31398727aa8fbf464d4cbd0f51e2212d1190cc8e471106109ef4cf884678ad.jpg": [
+   919,
+   1197
+  ],
+  "9e6c1b28a31afb0f9ff3143e541a7e3007ac80697e2cbc097178a315218dddee.jpg": [
+   919,
+   1173
+  ],
+  "b042b012b1e728f73cc6a6427843a78607f36a4d59918c50f079febee7a7eafc.jpg": [
+   919,
+   1214
+  ],
+  "0e1fd1460d5eaf3ec784137a2e89fc95885d6d24ba4796109a147769e60f6237.png": [
+   375,
+   319
+  ],
+  "386739aa0e5a3578cf206a16a0a0601a3ca368bca07bd3c12bd66dfe05c2ef55.jpg": [
+   912,
+   1310
+  ],
+  "be5939798e6e6f17cdf6b7bafe95b1b07a921f2c6ff10a680a7b374f4d73f8ea.jpg": [
+   916,
+   1245
+  ],
+  "aa76fa6719b0e50a278116cdcdbf06982c1e6f4c5b33151ef3179f10bb0f8d4a.jpg": [
+   919,
+   1040
+  ],
+  "1f8b189941ce36f3724061ffeb4aecc1628c786106e1b94683e3e9f29445c9bc.png": [
+   161,
+   155
+  ],
+  "cf20933066407d795042862e73974970befafad6fd30c6ed400289e42c9da9dd.png": [
+   161,
+   154
+  ],
+  "8e8b3fdbad4c93b295f995c9b0d77faf1e362ab19ff53585ed1615a4cc259467.jpg": [
+   842,
+   1185
+  ],
+  "975a55944a7af19c2400828178a782c08e0efdcad7e88f8c0e94a248e801d1b6.jpg": [
+   919,
+   1285
+  ],
+  "57d6bb08799c0e98d2dc6b7139b2558ca19edf72631b60c8408b6ab9344d1da5.jpg": [
+   919,
+   1286
+  ],
+  "93550482c815f7325a52f1c2a70d518d5362b45f58b4361397c505b5eaed97a7.jpg": [
+   919,
+   1297
+  ],
+  "daf4511c076ce45918147c71dc4d4bbc4139af6990e6828edececf91034e04f8.jpg": [
+   919,
+   1309
+  ],
+  "3ac38402da4d1ae81ec548cc1e6804965e66d7709237fd2912ccbdbb18311a80.jpg": [
+   919,
+   1285
+  ],
+  "e48bd1bfd6498bbac97a86f824000f28ab2e044f6c5b606d4faadbe4d13162d8.jpg": [
+   919,
+   1288
+  ],
+  "30f92aeba59078752fb80c8f2025607f455fb2bebfb00bc4de81b86f4d037539.jpg": [
+   919,
+   1290
+  ],
+  "2b5c1f5c9925cb84a3b443ae4fa4736374376e40ecb039a321287afbcb082fc8.jpg": [
+   919,
+   1312
+  ],
+  "b43f395386f1f2322d6ad97d9c7281c1b232c3c5a417323b6a2aeb2d1c414fe4.jpg": [
+   919,
+   1279
+  ],
+  "4174209be1b9efdd71550a5ecbc8edc459fc1c41766d88caa5561b0db784f0dc.jpg": [
+   919,
+   1291
+  ],
+  "82d1b30a458ddcdd9fd1ba868c61df1de8612bff90887d0e81e253f49769350e.jpg": [
+   919,
+   1297
+  ]
+ },
+ "figure_text": {
+  "afaa6592fd7db7f9ba7797c290c1264ac20a16f96c9da77eb0b5806c8cf6c3ff.png": 0,
+  "17d974247b1cf42ab3324b69a827030f9fa0d360f6f330894823afc763976010.png": 75,
+  "dda7f08d0a8679181305b4837526d2e21c8a72443f0130648106db7c759f1eaa.png": 0,
+  "7c3d6d427897055099e5f65e2c4361f1fe1a61ee80699c0ada991c6b10214040.png": 1,
+  "644baf3b43de77fb120d928e578400a7b62903a659d41467dbc298ba23d67dc4.png": 0,
+  "3d466f71beba751b513b130bb664a823ec93dd3da163b5df573a29c928021d7c.png": 2,
+  "cb420a6427b8b692c5bc9e4731bc0504af9cb0326d5041eb84e3d297b461498b.jpg": 161,
+  "b29a715c9a5891f83e5ffec94c04ecf406b7fe150991a5d52f5a1f56ea38270c.jpg": 8,
+  "af28bbb84e550a26059c2369d5c5b66821a5176556156c8ae361d75fb3677885.jpg": 8,
+  "bfa5a56b3c6821c1a21935830ca22260b050234ea0724db1ce98031c16247558.jpg": 8,
+  "830debca9e50839bd87af7f2bd446b4c3337aceca9b87ec4ea47fb19fc25a12a.jpg": 8,
+  "079fda60d5e511aee4f3f2c2d3a18e6e151d4721202a2a3a7229d7e06b88078c.jpg": 8,
+  "772a6d2bed0e6be46ae9838fa530ea27a40690fe63e8e64d2f410a5009cdeaf2.jpg": 8,
+  "c50f05a9fd945b99ba4e5fcf4e9bed57f4c737f30e526a87be9fbfe4109cb316.jpg": 8,
+  "1d31398727aa8fbf464d4cbd0f51e2212d1190cc8e471106109ef4cf884678ad.jpg": 8,
+  "9e6c1b28a31afb0f9ff3143e541a7e3007ac80697e2cbc097178a315218dddee.jpg": 8,
+  "b042b012b1e728f73cc6a6427843a78607f36a4d59918c50f079febee7a7eafc.jpg": 8,
+  "0e1fd1460d5eaf3ec784137a2e89fc95885d6d24ba4796109a147769e60f6237.png": 100,
+  "386739aa0e5a3578cf206a16a0a0601a3ca368bca07bd3c12bd66dfe05c2ef55.jpg": 52,
+  "be5939798e6e6f17cdf6b7bafe95b1b07a921f2c6ff10a680a7b374f4d73f8ea.jpg": 8,
+  "aa76fa6719b0e50a278116cdcdbf06982c1e6f4c5b33151ef3179f10bb0f8d4a.jpg": 8,
+  "1f8b189941ce36f3724061ffeb4aecc1628c786106e1b94683e3e9f29445c9bc.png": 0,
+  "cf20933066407d795042862e73974970befafad6fd30c6ed400289e42c9da9dd.png": 0,
+  "8e8b3fdbad4c93b295f995c9b0d77faf1e362ab19ff53585ed1615a4cc259467.jpg": 8,
+  "975a55944a7af19c2400828178a782c08e0efdcad7e88f8c0e94a248e801d1b6.jpg": 8,
+  "57d6bb08799c0e98d2dc6b7139b2558ca19edf72631b60c8408b6ab9344d1da5.jpg": 8,
+  "93550482c815f7325a52f1c2a70d518d5362b45f58b4361397c505b5eaed97a7.jpg": 8,
+  "daf4511c076ce45918147c71dc4d4bbc4139af6990e6828edececf91034e04f8.jpg": 8,
+  "3ac38402da4d1ae81ec548cc1e6804965e66d7709237fd2912ccbdbb18311a80.jpg": 8,
+  "e48bd1bfd6498bbac97a86f824000f28ab2e044f6c5b606d4faadbe4d13162d8.jpg": 8,
+  "30f92aeba59078752fb80c8f2025607f455fb2bebfb00bc4de81b86f4d037539.jpg": 8,
+  "2b5c1f5c9925cb84a3b443ae4fa4736374376e40ecb039a321287afbcb082fc8.jpg": 8,
+  "b43f395386f1f2322d6ad97d9c7281c1b232c3c5a417323b6a2aeb2d1c414fe4.jpg": 8,
+  "4174209be1b9efdd71550a5ecbc8edc459fc1c41766d88caa5561b0db784f0dc.jpg": 8,
+  "82d1b30a458ddcdd9fd1ba868c61df1de8612bff90887d0e81e253f49769350e.jpg": 8
+ },
+ "first_bookmark_page": 1,
+ "cover_title": "This publication was archived on 24 April 2025",
+ "cover_version": null,
+ "cover_date": "24 April 2025",
+ "pdf_sha256": "8f11a8416712d89c50a30c6e34a7a404b80d902b7ef32550bdfe5745353b39c3",
+ "images": [
+  "079fda60d5e511aee4f3f2c2d3a18e6e151d4721202a2a3a7229d7e06b88078c.jpg",
+  "0e1fd1460d5eaf3ec784137a2e89fc95885d6d24ba4796109a147769e60f6237.png",
+  "17d974247b1cf42ab3324b69a827030f9fa0d360f6f330894823afc763976010.png",
+  "1d31398727aa8fbf464d4cbd0f51e2212d1190cc8e471106109ef4cf884678ad.jpg",
+  "1f8b189941ce36f3724061ffeb4aecc1628c786106e1b94683e3e9f29445c9bc.png",
+  "2b5c1f5c9925cb84a3b443ae4fa4736374376e40ecb039a321287afbcb082fc8.jpg",
+  "30f92aeba59078752fb80c8f2025607f455fb2bebfb00bc4de81b86f4d037539.jpg",
+  "386739aa0e5a3578cf206a16a0a0601a3ca368bca07bd3c12bd66dfe05c2ef55.jpg",
+  "3ac38402da4d1ae81ec548cc1e6804965e66d7709237fd2912ccbdbb18311a80.jpg",
+  "3d466f71beba751b513b130bb664a823ec93dd3da163b5df573a29c928021d7c.png",
+  "4174209be1b9efdd71550a5ecbc8edc459fc1c41766d88caa5561b0db784f0dc.jpg",
+  "57d6bb08799c0e98d2dc6b7139b2558ca19edf72631b60c8408b6ab9344d1da5.jpg",
+  "644baf3b43de77fb120d928e578400a7b62903a659d41467dbc298ba23d67dc4.png",
+  "772a6d2bed0e6be46ae9838fa530ea27a40690fe63e8e64d2f410a5009cdeaf2.jpg",
+  "7c3d6d427897055099e5f65e2c4361f1fe1a61ee80699c0ada991c6b10214040.png",
+  "82d1b30a458ddcdd9fd1ba868c61df1de8612bff90887d0e81e253f49769350e.jpg",
+  "830debca9e50839bd87af7f2bd446b4c3337aceca9b87ec4ea47fb19fc25a12a.jpg",
+  "8e8b3fdbad4c93b295f995c9b0d77faf1e362ab19ff53585ed1615a4cc259467.jpg",
+  "93550482c815f7325a52f1c2a70d518d5362b45f58b4361397c505b5eaed97a7.jpg",
+  "975a55944a7af19c2400828178a782c08e0efdcad7e88f8c0e94a248e801d1b6.jpg",
+  "9e6c1b28a31afb0f9ff3143e541a7e3007ac80697e2cbc097178a315218dddee.jpg",
+  "aa76fa6719b0e50a278116cdcdbf06982c1e6f4c5b33151ef3179f10bb0f8d4a.jpg",
+  "af28bbb84e550a26059c2369d5c5b66821a5176556156c8ae361d75fb3677885.jpg",
+  "afaa6592fd7db7f9ba7797c290c1264ac20a16f96c9da77eb0b5806c8cf6c3ff.png",
+  "b042b012b1e728f73cc6a6427843a78607f36a4d59918c50f079febee7a7eafc.jpg",
+  "b29a715c9a5891f83e5ffec94c04ecf406b7fe150991a5d52f5a1f56ea38270c.jpg",
+  "b43f395386f1f2322d6ad97d9c7281c1b232c3c5a417323b6a2aeb2d1c414fe4.jpg",
+  "be5939798e6e6f17cdf6b7bafe95b1b07a921f2c6ff10a680a7b374f4d73f8ea.jpg",
+  "bfa5a56b3c6821c1a21935830ca22260b050234ea0724db1ce98031c16247558.jpg",
+  "c50f05a9fd945b99ba4e5fcf4e9bed57f4c737f30e526a87be9fbfe4109cb316.jpg",
+  "cb420a6427b8b692c5bc9e4731bc0504af9cb0326d5041eb84e3d297b461498b.jpg",
+  "cf20933066407d795042862e73974970befafad6fd30c6ed400289e42c9da9dd.png",
+  "daf4511c076ce45918147c71dc4d4bbc4139af6990e6828edececf91034e04f8.jpg",
+  "dda7f08d0a8679181305b4837526d2e21c8a72443f0130648106db7c759f1eaa.png",
+  "e48bd1bfd6498bbac97a86f824000f28ab2e044f6c5b606d4faadbe4d13162d8.jpg"
+ ]
+}

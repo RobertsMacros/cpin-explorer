@@ -1,0 +1,8 @@
+.top .theme-btn { margin-left: auto; }
+.top-crumb { font-family: var(--font-pixel); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); padding-left: .9rem; border-left: 1px solid var(--line); white-space: nowrap; }
+@media (max-width: 600px) { .top-crumb { display: none; } }
+.about { width: 100%; max-width: 56rem; margin: 3rem auto; padding: 0 var(--page-pad, 1.4rem); }
+.about [aria-busy="true"] { min-height: 100svh; }
+.about .hero-title { margin: .4rem 0 1rem; }
+.about .doc-body { margin-top: 2.5rem; }
+.about .doc-body h2 { scroll-margin-top: 6rem; }

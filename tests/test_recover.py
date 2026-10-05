@@ -441,3 +441,44 @@ def test_a_403_from_the_archive_stops_everything(archive, archive_client, store)
     report = recover.recover(archive_client, store, log=lambda m: None)
     assert report.errors[-1]["stage"] == "stopped" and "refused" in report.errors[-1]["error"]
     assert len(archive.requests) == 1                                            # one refusal is enough
+
+
+def test_replaced_archive_files_keep_each_editions_metadata_and_aliases(site, client, store):
+    """Two editions at one address, followed by a new address for the first edition's bytes."""
+    from cpin.sync import RunReport
+    url = 'https://example.org/a.pdf'
+    first, second = b'%PDF-1.4\nfirst\n%%EOF\n', b'%PDF-1.4\nsecond\n%%EOF\n'
+    def job(stamp, data, title, address=url):
+        return dict(url=address, timestamp=stamp, original=address, digest=sha1_base32(data),
+                    country='kenya', title=title, first_listed=stamp, last_listed=stamp,
+                    listed_at=[OLD_PATH], pages=None, also_listed_as=[])
+    jobs = [job('20170101000000', first, 'First edition'), job('20180101000000', second, 'Second edition'),
+            job('20190101000000', first, 'First edition', 'https://example.org/z.pdf')]
+    for entry, data in zip(jobs, (first, second, first)):
+        site.raw(recover.page_url(entry['timestamp'], entry['original']), data)
+    report = RunReport(kind='recover', mode='wayback', started='2026-10-04T00:00:00Z')
+    stats = recover.fetch_pdfs(client, store, jobs, report, Guard(), log=lambda _: None)
+    entry = store.load_pdf_manifest()[url]
+    assert stats['downloaded'] == 2 and stats['already_fetched'] == 1 and not report.errors
+    assert entry['title'] == 'Second edition' and 'also_listed_as' not in entry
+    previous = entry['previous'][0]
+    assert previous['title'] == 'First edition' and previous['source'] == 'wayback'
+    assert previous['also_listed_as'] == ['https://example.org/z.pdf']
+    store.pdf_path(previous['sha256']).unlink()
+    restored = recover.restore_missing_pdfs(client, store, report, Guard(), log=lambda _: None)
+    assert restored == dict(missing=1, restored=1, failed=0)
+    assert store.pdf_path(previous['sha256']).read_bytes() == first
+    assert store.load_pdf_manifest()[url] == entry
+
+
+def test_held_lookup_identifies_the_earlier_bytes_at_a_reused_url(store):
+    url = 'https://example.org/reused.pdf'
+    old = {'sha256': 'old-bytes', 'source': 'wayback', 'archive_digest': 'OLD',
+           'title': 'Country policy and information note: actors of protection, Kenya, July 2020'}
+    new = {'sha256': 'new-bytes', 'source': 'wayback', 'archive_digest': 'NEW',
+           'title': 'Country policy and information note: actors of protection, Kenya, July 2026', 'previous': [old]}
+    store.save_pdf_manifest({url: new})
+    held = recover.Held(store)
+    assert held.find({'url': url, 'title': old['title']})['sha256'] == 'old-bytes'
+    assert held.find({'url': 'https://example.org/alias.pdf', 'title': old['title'], 'archive': [{'digest': 'OLD'}]})['sha256'] == 'old-bytes'
+    assert held.find({'url': url, 'title': 'Country policy and information note: actors of protection, Kenya, July 2018'}) is None
