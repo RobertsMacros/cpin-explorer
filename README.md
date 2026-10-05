@@ -50,6 +50,12 @@ mismatch is minor; the published Afghanistan returnee inconsistency is major
 because it affects the account of returnee treatment. Older private issues without
 severity retain a grey flag until classified. All 335 JavaScript tests pass;
 desktop and 390px touch checks confirm both severity choices survive reloads.
+Commit `c90ca81` is live as Cloudflare version
+`95fffb24-7217-4201-b716-f9fb24ecbab5`. Both changed assets match the deployed
+reader responses byte for byte; live desktop/mobile severity and persistence
+checks pass. [GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37352572538)
+records the checks for this code revision. Publication used the existing local
+Wrangler login.
 
 **5 October 2026: Syria source pilot checked; reviews and Saved pins live.**
 For held editions published from 1 January 2023, the pilot indexes 17 snapshots,
