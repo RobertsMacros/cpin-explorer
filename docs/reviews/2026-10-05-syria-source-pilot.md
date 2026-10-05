@@ -75,3 +75,22 @@ The phone footnote sheet fits the viewport after its animation finishes and has
 no horizontal overflow. No console warnings or errors were recorded. Test browser
 contexts were isolated and closed; their test notes were not added to user storage.
 These checks cover Chromium, not native Edge, Safari or a physical iPhone.
+
+## Publication and live checks
+
+Pushed to `main` as `5178f26`, then deployed using existing local Wrangler OAuth
+to the existing Worker at <https://cpin-explorer.robert-m-w-stevens.workers.dev>.
+Cloudflare version `3c38496c-d57d-4dea-9b5c-b8e341b618cb` serves 100% of traffic.
+The public deployment contains the reader/Saved features and curated review
+metadata, not the private full-document cache or an AI contradiction analysis.
+
+The same desktop/touch interaction checks pass on the live site, with no console
+warnings or errors. All 29 selected live assets match the build byte for byte:
+the changed reader/Saved/review files, dashboard/About assets, robots.txt and all
+14 Syria report histories. The root redirects to the dashboard, noindex headers
+remain present, missing pages return 404 and the private evidence address returns
+404. Browser/check receipts and screenshots are retained in the owner's outputs
+folder. [GitHub validation of `5178f26`](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37336806773)
+passed the Python tests, retained-data verification, offline export and JavaScript
+tests. The GitHub deploy job was skipped because the publication secrets are still
+missing. The verified local deployment does not enable that automated path.

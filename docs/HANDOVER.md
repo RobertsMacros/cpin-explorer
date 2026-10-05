@@ -3,6 +3,25 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Source reviews and Syria pilot published, 5 October 2026
+
+At the owner's request, `main` commit `5178f26` was pushed and deployed to the
+existing Cloudflare Worker. Version `3c38496c-d57d-4dea-9b5c-b8e341b618cb` serves
+100% of traffic. The live site now has separate Published reviews, AI review and
+Manual additions in footnotes, strictly edition-bound whole-report review links,
+browser-local country/report pins and the source-preview/selection fixes.
+Live Chromium checks at 1280×900 and 390×844 touch pass without console errors;
+29 deployed assets, including all Syria histories, match the assembled site.
+
+The Syria pilot selects held editions published from 1 January 2023: 17 snapshots,
+3,055 footnotes, 1,577 addresses with settled outcomes and 70.3% readable source
+coverage. It reused and hash-checked existing captures. No AI contradiction checks
+ran; full source text stays private and unapproved for model/public use. See
+[the pilot record](reviews/2026-10-05-syria-source-pilot.md). The wider source job
+is still running through its slow tail. No recurring review checks were configured.
+GitHub's Cloudflare publication secrets remain missing; local deployment does not
+enable automated republishing. Native Edge still needs checking.
+
 ## Live publication, 5 October 2026
 
 The owner subsequently requested an update to the live site. Local Wrangler OAuth access was already

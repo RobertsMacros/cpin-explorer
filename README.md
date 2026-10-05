@@ -23,14 +23,25 @@ It has three parts:
 
 ## Status
 
-**5 October 2026: Syria source pilot checked; publication requested.**
+**5 October 2026: Syria source pilot checked; reviews and Saved pins live.**
 For held editions published from 1 January 2023, the pilot indexes 17 snapshots,
 3,055 footnotes and 1,577 source/PDF addresses. Every address has a recorded outcome;
 2,149 footnotes (70.3%) have readable linked-source text. The pilot reuses the
 catalogue-wide capture and verifies 1,009 distinct files with zero hash problems.
 Failures remain explicit; there are no AI contradiction judgements. Full evidence
 stays private. All 317 Python and 333 JavaScript tests pass, retained CPIN integrity
-passes and Wrangler's dry run succeeds. See [scope, coverage and limits](docs/reviews/2026-10-05-syria-source-pilot.md).
+passes and Wrangler's dry run succeeds. The owner authorised publication: `main`
+commit `5178f26` is deployed as Cloudflare version `3c38496c-d57d-4dea-9b5c-b8e341b618cb`,
+serving 100% of traffic. Live review metadata, reader/Saved assets and all Syria
+histories match 29 checked build assets byte for byte. Chromium desktop and 390px
+touch checks pass for the review overlay, edition-bound report reviews, private-note
+and pin persistence, source previews and highlighting, without console warnings
+or errors. Root redirect, noindex and 404 checks pass; private evidence is not served.
+This supersedes the earlier undeployed statuses below. Notes and pins remain
+browser-local; AI analysis and recurring review checks have not been enabled.
+[GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37336806773)
+also passed; its deploy job was skipped, so publication used the existing local login.
+See [scope, coverage and limits](docs/reviews/2026-10-05-syria-source-pilot.md).
 
 **5 October 2026: external-review directory and backfill implemented locally; not deployed.**
 Seven publishers and 42 curated publications cover direct CPIN reviews, international

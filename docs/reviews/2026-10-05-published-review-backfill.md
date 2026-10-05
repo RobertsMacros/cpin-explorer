@@ -4,6 +4,11 @@ Implemented and checked locally. Not pushed or deployed. The owner prefers daily
 checks eventually, but explicitly asked to focus on backfilling first; no recurring
 automation or GitHub workflow was enabled.
 
+Later on 5 October, the owner authorised publication. The public metadata and
+review panels were pushed in `5178f26` and deployed with the Syria pilot; their
+live assets and edition-specific rendering passed checks. This supersedes the
+initial unpublished status above. See [the publication checks](2026-10-05-syria-source-pilot.md#publication-and-live-checks).
+
 The [curated directory](published-review-directory.md) contains seven publishers and
 42 publications: direct CPIN reviews, reviews of European and US country reports,
 and separately labelled practitioner or policy context. It includes all 19 review
