@@ -5,12 +5,13 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 
 ## Main publication review, 5 October 2026
 
-The owner authorised pushing the completed work to `main` on 5 October. This supersedes the publication
-hold in the historical sections below. See [the main publication review](reviews/2026-10-05-main-review.md)
+The owner authorised pushing the completed work to `main` on 5 October, and the push is complete.
+GitHub validation of `e06b66a` passed 278 Python and 322 JavaScript tests, retained-data verification and
+the offline export. This supersedes the publication hold in the historical sections below. See [the main publication review](reviews/2026-10-05-main-review.md)
 for the final checks and GitHub outcome, and [the PDF-only cleanup review](reviews/2026-10-05-pdf-only-cleanup.md)
 for source evidence and the remaining reused-footnote-number limitation. Local suites now pass 278 Python
 and 322 JavaScript tests. Push validation runs without Cloudflare credentials; publication still requires
-both missing secrets. The scheduled workflow will be active on `main`, but a scheduled run remains unverified.
+both missing secrets. The scheduled workflow is active on `main`, but a scheduled run remains unverified.
 
 ## Local completion, 4 October 2026
 

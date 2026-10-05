@@ -23,8 +23,9 @@ It has three parts:
 
 ## Status
 
-**5 October 2026: handover, archive integration and PDF-only cleanup reviewed for publication to `main`.**
-The owner authorised the push on 5 October. Publication checks are recorded in
+**5 October 2026: handover, archive integration and PDF-only cleanup pushed to `main`.**
+The owner authorised the push on 5 October. GitHub validation of `e06b66a` passed all 278 Python and
+322 JavaScript tests, including retained-data verification and the offline export. Publication checks are recorded in
 [the main review](docs/reviews/2026-10-05-main-review.md). The live site remains the earlier deployment from
 `f389a3e`; Cloudflare publication requires the missing repository secrets. These are tested runs, not
 evidence of sustained operation.
@@ -74,7 +75,7 @@ evidence of sustained operation.
 - **Daily workflow:** reviewed and corrected; fetched data is committed before later processing failures are
   reported, and a failed sync cannot publish. Push validation now runs independently of Cloudflare secrets.
   `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are still missing, so publication is skipped. The
-  rewritten daily sync will become active on `main`; it has not yet completed a scheduled GitHub run.
+  rewritten daily sync is active on `main`; it has not yet completed a scheduled GitHub run.
 - **Dead-link archive refresh:** all 1,470 lookups completed near each note's own date, with archive copies
   found for 677 dead cited links; 2 h 20 min 12 s, no lookup left undated. Link status was re-exported.
 
