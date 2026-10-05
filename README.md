@@ -23,6 +23,14 @@ It has three parts:
 
 ## Status
 
+**5 October 2026: local mechanical citation screen.** The since-2020 inventory's
+84,612 footnotes now have a private title/date triage record; 32,621 could be
+screened against readable held sources. All 10,764 source files used passed hash
+checks. Title/date signals are candidates for inspection, not identity or
+contextual approval; missing evidence and parsing gaps remain explicit. No
+requests, model calls or live-site flags were added. All 328 Python tests pass.
+See [the run, examples and limits](docs/reviews/2026-10-05-citation-identity-screen.md).
+
 **5 October 2026: review-first backfill and scoped 2026 comparisons.**
 The directory now contains 60 publications from nine publishers, including newly
 found historical IAGCI packages, ARC critiques and 2026 publications. Sixteen

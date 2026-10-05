@@ -42,6 +42,34 @@ anchor checks. Unreferenced footnotes remain separately counted in the inventory
 
 ## A bounded review batch
 
+### Mechanical citation identity screening
+
+```sh
+.venv/bin/python scripts/check_citation_identity.py \
+  --out data/source-evidence/since-2020
+```
+
+This private, network-free screen hashes the held source bytes and compares
+candidate citation titles with HTML title metadata/opening text or the first
+three physical PDF pages. Where both are explicit, it compares the citation's
+publication date with HTML publication metadata. Access dates are excluded.
+Truncated or ambiguous titles, multiple source links, absent text and absent
+publication metadata remain separate gaps. The full citation, including source
+page/paragraph references, and the CPIN edition identity are retained.
+
+Outputs are `citation-identity-triage.jsonl` and its summary in the private
+inventory directory. Neither a title match nor matching publication metadata is
+a completed document-identity or contextual check. Publisher, source pinpoint,
+historical applicability and the argument still need assessment. A failed match
+is a review candidate, never an automatic error; a matching title can occur in a
+landing page or contents list. Metadata dates can represent website preparation
+rather than a report's release. No model, public flags or source-text publication
+are involved. Source header work is reused by content hash across citation uses.
+The first tested run and limits are recorded in
+[the mechanical screening record](../reviews/2026-10-05-citation-identity-screen.md).
+
+### Reading and assessing a source use
+
 Start with 10–25 citation uses sharing a source report. Read the surrounding CPIN
 passages and the source's relevant pages, neighbouring qualifications, methodology,
 date and references. Use raw PDF text and an independent reader for consequential
