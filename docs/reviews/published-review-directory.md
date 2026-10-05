@@ -1,6 +1,6 @@
 # Published country-report review directory
 
-Checked 2026-10-05. 7 publishers; 42 curated publications.
+Checked 2026-10-05. 7 publishers; 44 curated publications.
 
 All findings remain independently unassessed. Dates below are publication dates, not the dates of the reports reviewed. A link’s inclusion does not certify its arguments or make them applicable to a newer edition.
 
@@ -50,5 +50,7 @@ The repeatable collector and assessment rules are in [the method](../methods/pub
 | [Albanian blood feuds: an update](<https://gardencourtchambers.co.uk/albanian-blood-feuds-an-update/>) | Garden Court Chambers | 2020-04-16 | albania | direct-review · uk-cpin |
 | [ARC and Dutch Council for Refugees: comments on EASO Pakistan security and Afghanistan recruitment reports](<https://www.ecoi.net/en/file/local/1298399/90_1477293099_arc-dcr-2016-10-19-comments-easo-reports-pak-afg.pdf>) | Asylum Research Centre (ARC) | 2016-10-19 | afghanistan, pakistan | direct-review · easo-coi |
 | [Asylos commentary on Afghanistan Fear of the Taliban CPIN (V4.0 and V5.0)](<https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf>) | Asylos | 2025-11 | afghanistan | direct-review · uk-cpin |
+| [Review of country information and guidance on Syria: Security and humanitarian situation, December 2014](<https://www.gov.uk/government/publications/syria-country-information-and-guidance-iagci-review>) | IAGCI / Independent Chief Inspector of Borders and Immigration | 2016-12-02 | syria | direct-review · uk-cig |
+| [Commentary on the EASO Country of Origin Information Reports on Syria (December 2019 – May 2020)](<https://asylumresearchcentre.org/wp-content/uploads/2020/07/Commentary-EASO-COI-on-Syria_July2020.pdf>) | Asylum Research Centre (ARC) | 2020-07 | syria | direct-review · easo-coi |
 
 Copies, joint publications, alternate formats and corrigenda are linked to their parent work in the machine-readable directory. General country evidence and practitioner toolkits are labelled as context, not direct audits.

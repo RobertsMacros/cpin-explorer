@@ -171,7 +171,7 @@ def test_html_extraction_keeps_evidence_words_and_original_download_links():
     result=extracted(body.encode(),'text/html','https://example.org/article')
     assert result['status']=='extracted' and result['verified'] is False
     assert 'evidence and qualifications' in result['text']
-    assert result['document_links']==[{'url':'https://example.org/report.pdf','href':'/report.pdf','label':'Download full report'}]
+    assert result['document_links']==[{'url':'https://example.org/report.pdf','href':'/report.pdf','label':'Download full report','discovery':'anchor'}]
 
 
 def test_interrupted_journal_tail_does_not_swallow_the_next_completed_attempt(tmp_path):
@@ -239,6 +239,22 @@ def test_identical_landing_page_bytes_keep_relative_pdf_links_in_each_url_contex
         url=f'https://example.org/{folder}/landing'
         append_json(tmp_path/'attempts.jsonl',{'url':url,'final_url':url,'status':'downloaded','sha256':digest})
     assert [r['url'] for r in linked_documents(tmp_path,[])]==['https://example.org/one/download','https://example.org/two/download']
+
+
+def test_explicit_embedded_un_pdf_is_discovered_but_tracking_iframe_is_not(tmp_path):
+    from cpin.source_collect import append_json, linked_documents, document_links
+    from cpin.store import write_json, atomic_write
+    from lxml import html
+    content=b'<html><iframe src="https://tracker.example/frame"></iframe><iframe src="https://documents.un.org/api/symbol/access?s=A/HRC/52/69&amp;l=en&amp;t=pdf"></iframe></html>'
+    links=document_links(html.fromstring(content))
+    assert len(links)==1 and links[0]['discovery']=='embedded-pdf'
+    digest=hashlib.sha256(content).hexdigest()
+    atomic_write(tmp_path/'documents'/digest,content)
+    write_json(tmp_path/'text'/f'{digest}.json',{'kind':'html','text':'Document viewer'})
+    append_json(tmp_path/'attempts.jsonl',{'url':'https://docs.un.org/en/A/HRC/52/69','status':'downloaded','sha256':digest})
+    row=linked_documents(tmp_path,[])[0]
+    assert row['url']=='https://documents.un.org/api/symbol/access?s=A/HRC/52/69&l=en&t=pdf'
+    assert row['linked_from'][0]['discovery']=='embedded-pdf'
 
 
 def test_empty_successful_response_is_not_a_readable_source():

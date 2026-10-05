@@ -1624,6 +1624,66 @@
       "publishers": [
         "Asylos"
       ]
+    },
+    {
+      "id": "iagci-syria-security-humanitarian-2014",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Review of country information and guidance on Syria: Security and humanitarian situation, December 2014",
+      "url": "https://www.gov.uk/government/publications/syria-country-information-and-guidance-iagci-review",
+      "countries": [
+        "syria"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Review of the December 2014 predecessor to CPINs, with Home Office replies. Historical background only; not a review of the held 2020–2026 editions. Merits unassessed.",
+      "verificationLocation": "GOV.UK publication date, document titles and Details; review and two responses linked separately.",
+      "workId": "iagci-syria-security-humanitarian-2014",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a8189f8ed915d74e6232d01/Review-of-the-UK-Home-Office-Country-Information-and-Guidance-on-Syria1.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a802adaed915d74e33f8d7f/HO-response-to-IAGCI-review-Syria-Sec-Hmn-Sit-CIG.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "arc-dcr-syria-easo-2020",
+      "publisherIds": [
+        "arc"
+      ],
+      "coAuthors": [
+        "Dutch Council for Refugees"
+      ],
+      "title": "Commentary on the EASO Country of Origin Information Reports on Syria (December 2019 – May 2020)",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2020/07/Commentary-EASO-COI-on-Syria_July2020.pdf",
+      "countries": [
+        "syria"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "easo-coi",
+      "publishedAt": "2020-07",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Joint ARC and Dutch Council for Refugees commentary on seven EASO Syria reports. A critique of source reports, not a direct audit of a UK CPIN. Exact applicability and arguments unassessed.",
+      "verificationLocation": "Named ecoi.net repository record 2032701 identifies both authors, July 2020 publication, original address and seven reports reviewed; publisher access failed. Contents not analysed.",
+      "workId": "arc-dcr-syria-easo-2020",
+      "relatedUrls": [
+        "https://www.ecoi.net/en/document/2032701.html",
+        "https://www.ecoi.net/en/file/local/2032701/Commentary-EASO-COI-on-Syria_July2020.pdf"
+      ],
+      "targets": [],
+      "scope": "country",
+      "provenance": "Named repository copy; original publisher unavailable in this check. Copies count as one work.",
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
     }
   ]
 }

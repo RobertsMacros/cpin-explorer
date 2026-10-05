@@ -36,7 +36,7 @@ export function reviewStatus(records) {
 }
 export function badgeHtml(records) {
   const s = reviewStatus(records);
-  return `<span class="source-review-badge sr-${s.tone}" role="img" aria-label="${esc(s.label)}" title="${esc(s.label)}"><span aria-hidden="true">${s.symbol}</span><span class="sr-label" aria-hidden="true">${esc(s.label)}</span></span>`;
+  return `<span class="source-review-badge sr-${s.tone}" role="img" aria-label="${esc(s.label)}" title="${esc(s.label)}"><span aria-hidden="true">${s.symbol}</span></span>`;
 }
 
 export function createPrivateStore(getStorage = () => globalThis.localStorage) {

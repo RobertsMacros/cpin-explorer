@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "coverage": "One manually mapped pilot finding. No automatic AI checks or comprehensive review import have run.",
+  "coverage": "One manually mapped external finding and two scoped interactive Syria AI checks. No automatic AI checks or exhaustive contradiction analysis have run. AI no-issue results do not certify a source or report.",
   "records": [
     {
       "id": "iagci-afghanistan-2026-returnees-279",
@@ -59,6 +59,94 @@
         "publicDisplayApproved": true,
         "rightsBasis": "Limited attributed quotation for criticism/review of the CPIN under fair dealing; no whole-article reproduction.",
         "rightsAssessment": "An 11-word passage supporting a specific published criticism, with author, article title, location and link. The accompanying criticism supplies the review purpose; the extract does not substitute for the article. This is a scoped editorial assessment, not a blanket licence for this publisher or for AI ingestion."
+      }
+    },
+    {
+      "id": "ai-syria-military-2025-fn5-link-mismatch",
+      "kind": "ai",
+      "status": "possible-issue",
+      "issueType": "citation-link-mismatch",
+      "target": {
+        "country": "syria",
+        "series": "note:military-service",
+        "editionId": "752f74bfa052f37c",
+        "textSha": "86c8e7896379e8f328b32df86e59d73e58e88a1426521e0356d58c62c8d0ebba",
+        "footnote": 5,
+        "paragraph": "8.1.1",
+        "section": "8. Military conscription",
+        "sourceUrl": "https://www.ecoi.net/en/file/local/2116502/2024_10_EUAA_COI_Report_Syria_Country_Focus.pdf"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T17:20:28.059089Z",
+      "model": "Codex assistant; exact model version not exposed",
+      "promptVersion": "syria-evidence-review-1",
+      "sourceSha256": "201f6047d00df5cf31d4539c0da5acfb903660cb0e4c88e444130ae75f318400",
+      "sourceRetrievedAt": "2026-10-05T13:51:54Z",
+      "summary": "The footnote names Syria: Military service, April 2021, page 13, but the linked PDF is Syria: Country Focus, October 2024. This is a citation-link mismatch, not evidence that the stated ages or service duration are false. The intended April 2021 report supports ages 18–42 and 18–21 months on page 13. Paragraph 8.1.1 expressly concerns the Assad regime; section 8.2 separately discusses subsequent voluntary recruitment. Human review remains pending.",
+      "scope": "This use of footnote 5 only; neither the whole report nor all underlying evidence has been checked.",
+      "publication": {
+        "title": "Read the intended April 2021 report",
+        "url": "https://coi.euaa.europa.eu/administration/easo/PLib/2021_04_EASO_COI_Report_Military_Service.pdf#page=13",
+        "location": "Printed and physical PDF page 13"
+      },
+      "evidence": {
+        "quote": "Country Focus",
+        "title": "EUAA, Syria: Country Focus, October 2024",
+        "author": "European Union Agency for Asylum",
+        "url": "https://www.ecoi.net/en/file/local/2116502/2024_10_EUAA_COI_Report_Syria_Country_Focus.pdf",
+        "location": "Cover, physical PDF page 1; date October 2024",
+        "retrievedAt": "2026-10-05T13:51:54Z",
+        "sha256": "201f6047d00df5cf31d4539c0da5acfb903660cb0e4c88e444130ae75f318400",
+        "publicDisplayApproved": true,
+        "rightsBasis": "EUAA reproduction permission on physical page 3, with source acknowledgement; cover text only, no illustration.",
+        "rightsAssessment": "Two-word cover label distinguishes the linked report from the citation. Publication credited and linked; no third-party material or full text reproduced."
+      },
+      "verification": {
+        "rawPdf": "PyMuPDF text layer",
+        "secondReader": "pdftotext agrees on cover and intended report page 13",
+        "cpinBodySha": "752f74bfa052f37c2136a9fed27c5b028c328d94c89ccaa6343f3e45b7cda582",
+        "intendedSourceSha": "73a810fcce555759e52dd1c293e145cd047d192849393b7493b4fe33f957c89a",
+        "publishedReviewContext": "Historical IAGCI 2014 and EASO 2020 reviews do not address this July 2025 citation; no merits findings imported."
+      }
+    },
+    {
+      "id": "ai-syria-kurds-2025-fn202-quote-check",
+      "kind": "ai",
+      "status": "no-issue",
+      "target": {
+        "country": "syria",
+        "series": "note:areas-kurdish-kurds",
+        "editionId": "755cd16bbd4dff3d",
+        "textSha": "ee082bd4eb5b7fed8ec1235fac73de12260cd7a1cf70ae8f6fd746f5a74c50ba",
+        "footnote": 202,
+        "paragraph": "16.2.9",
+        "section": "16. Treatment of Kurds in Syria",
+        "sourceUrl": "https://coi.euaa.europa.eu/administration/easo/PLib/2024-10-EUAA_COI_Report_Syria_Security_Situation.pdf"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05T17:20:28.059089Z",
+      "model": "Codex assistant; exact model version not exposed",
+      "promptVersion": "syria-evidence-review-1",
+      "sourceSha256": "c489157f1d06586f2d400edd32678e0dcfedfb55bc571a4a932fa51646d7c11f",
+      "sourceRetrievedAt": "2026-10-05T13:31:19Z",
+      "summary": "The quoted figures and attribution match EUAA’s October 2024 report, printed page 31 (physical PDF page 32): 35 civilian deaths attributed to the SDF in the first half of 2024, approximately 8% of documented deaths, including seven deaths due to torture. The CPIN preserves the time period and SNHR attribution. No contradiction found in this quotation; the underlying SNHR evidence and the wider report assessment have not been independently verified. This is an AI check, not human approval.",
+      "scope": "Quotation fidelity, attribution and date scope for paragraph 16.2.9/footnote 202 only.",
+      "evidence": {
+        "quote": "SNHR documented 35 civilian deaths",
+        "title": "EUAA, Syria: Security Situation, October 2024",
+        "author": "European Union Agency for Asylum",
+        "url": "https://coi.euaa.europa.eu/administration/easo/PLib/2024-10-EUAA_COI_Report_Syria_Security_Situation.pdf#page=32",
+        "location": "Printed page 31, physical PDF page 32",
+        "retrievedAt": "2026-10-05T13:31:19Z",
+        "sha256": "c489157f1d06586f2d400edd32678e0dcfedfb55bc571a4a932fa51646d7c11f",
+        "publicDisplayApproved": true,
+        "rightsBasis": "Six-word attributed extract for quotation review; EUAA reproduction permission with acknowledgement recorded on physical page 3.",
+        "rightsAssessment": "Small passage identifies the precise quotation examined; original report is linked. Does not establish a licence for third-party reports cited by EUAA."
+      },
+      "verification": {
+        "rawPdf": "PyMuPDF text layer",
+        "secondReader": "pdftotext agrees on counts, attribution and time period",
+        "publishedReviewContext": "2014 IAGCI and 2020 EASO reviews predate this evidence and edition; no merits findings carried over."
       }
     }
   ]

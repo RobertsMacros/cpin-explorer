@@ -341,8 +341,7 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .pop-fn { display: grid; gap: .55rem; }
 .pop-fn p { margin: 0; }
 .source-reviews { border-top: 1px solid var(--line); padding-top: .65rem; }
-.source-review-badge { display: inline-flex; align-items: baseline; gap: .25rem; margin-inline-start: .35rem; font-family: var(--font-mono); font-size: .7rem; }
-.pop-fn .source-review-badge .sr-label { display: none; }
+.source-review-badge { display: inline-flex; align-items: baseline; justify-content: center; min-width: 1em; margin-inline-start: .35rem; font-family: var(--font-mono); font-size: 1rem; line-height: 1; }
 .sr-red { color: var(--del); }
 .sr-yellow { color: var(--review-yellow, #946300); }
 .sr-green { color: var(--review-green, #137447); }

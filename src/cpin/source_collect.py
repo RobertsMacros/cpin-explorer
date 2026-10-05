@@ -17,7 +17,7 @@ from collections import Counter, defaultdict, deque
 from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from functools import lru_cache
 from pathlib import Path
-from urllib.parse import urldefrag, urljoin, urlsplit, urlunsplit
+from urllib.parse import parse_qs, urldefrag, urljoin, urlsplit, urlunsplit
 
 import httpx
 from lxml import html
@@ -72,6 +72,27 @@ def public_url(url):
 
 def plain(el):
     return " ".join(el.text_content().split())
+
+
+def document_links(root):
+    """Explicit PDF links/embeds only, excluding arbitrary embedded web content."""
+    links = []
+    for el in root.iter():
+        if el.tag not in {"a", "iframe", "embed", "object"}:
+            continue
+        href = el.get("href") if el.tag == "a" else el.get("data") if el.tag == "object" else el.get("src")
+        if not href:
+            continue
+        try:
+            parsed = urlsplit(href)
+        except ValueError:
+            continue
+        label = plain(el) if el.tag == "a" else "Embedded PDF"
+        pdf = (parsed.path.lower().endswith(".pdf") or el.get("type") == "application/pdf"
+               or parse_qs(parsed.query).get("t") == ["pdf"])
+        if pdf or (el.tag == "a" and re.search(r"\bPDF\b", label)):
+            links.append({"href":href, "label":label, "discovery":"anchor" if el.tag == "a" else "embedded-pdf"})
+    return links
 
 
 def edition_index(report, edition):
@@ -276,12 +297,8 @@ def extracted(content, mime, url):
         text = trafilatura.extract(content,url=url,include_comments=False,include_tables=True,favor_recall=True) or ""
         root = html.fromstring(content)
         titles = root.xpath("//title/text()")
-        documents = []
-        for a in root.iter("a"):
-            link = source_url(a.get("href"),url)
-            label=plain(a)
-            if link and (urlsplit(link).path.lower().endswith(".pdf") or a.get("type")=="application/pdf" or re.search(r"\bPDF\b",label)):
-                documents.append({"url":link,"href":a.get("href"),"label":label})
+        documents = [{**link,"url":source_url(link["href"],url)} for link in document_links(root)
+                     if source_url(link["href"],url)]
         return {"status":"extracted" if len(text.strip()) >= 100 else "no-text", "kind":"html", "text":text,
                 "title":titles[0].strip() if titles else "", "document_links":documents,
                 "extractor":f'Trafilatura {importlib.metadata.version("trafilatura")}', "verified":False}
@@ -442,9 +459,7 @@ def linked_documents(out, known_urls):
         if digest not in definitions:
             try:
                 root=html.fromstring((out/"documents"/digest).read_bytes())
-                definitions[digest]=[{"href":a.get("href", ""),"label":plain(a)} for a in root.iter("a")
-                                     if (urlsplit(a.get("href", "")).path.lower().endswith(".pdf") or
-                                         a.get("type")=="application/pdf" or re.search(r"\bPDF\b",plain(a)))]
+                definitions[digest]=document_links(root)
             except (OSError,ValueError):
                 definitions[digest]=text.get("document_links",[])
         choices=[]
@@ -452,12 +467,12 @@ def linked_documents(out, known_urls):
         for link in definitions[digest]:
             url=source_url(link.get("href") or link.get("url"),base)
             if url and (len(text.get("text", ""))<1500 or re.search(r"download|full report|full text|pdf", link["label"], re.I)):
-                choices.append({"url":url,"label":link["label"]})
+                choices.append({"url":url,"label":link["label"],"discovery":link.get("discovery","anchor")})
         for link in choices[:2]:
             if link["url"] in known:
                 continue
             row=found.setdefault(link["url"],{"url":link["url"],"current":False,"linked_from":[],"cited_by":{}})
-            row["linked_from"].append({"url":record["url"],"sha256":record["sha256"],"label":link["label"]})
+            row["linked_from"].append({"url":record["url"],"sha256":record["sha256"],"label":link["label"],"discovery":link["discovery"]})
     rows=sorted(found.values(),key=lambda r:r["url"])
     atomic_write(out/"linked-documents.jsonl",("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in rows)).encode())
     return rows

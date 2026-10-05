@@ -17,8 +17,9 @@ consider daily collection later; scheduling remains off.
 ## Intended behaviour
 
 The owner refined the design: use the existing **footnote overlay** as the main
-place to show checks. Put a small status icon beside each cited source, with a
-text label, and allow the evidence passage to expand beneath it. A secondary
+place to show checks. Put a small status symbol beside each cited source, with its
+meaning in the hover title and accessible label, and allow the evidence passage to expand beneath it. The owner's later feedback removed
+the long visible status labels throughout the overlay. A secondary
 review queue can collect findings across the report. Keep three kinds of record
 distinct:
 
