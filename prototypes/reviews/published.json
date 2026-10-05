@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "coverage": "One manually mapped external finding and seven scoped interactive Syria AI checks. No automatic AI checks or exhaustive contradiction analysis have run. AI no-issue results do not certify a source or report.",
+  "coverage": "Two distinct mapped external criticisms (three citation records), nine scoped interactive AI citation checks, and separate edition-bound published-review follow-ups in the directory. No exhaustive contradiction analysis or human sign-off.",
   "records": [
     {
       "id": "iagci-afghanistan-2026-returnees-279",
@@ -284,6 +284,97 @@
       "summary": "The account that some Syrian army defectors were appointed military commanders is supported by the EUAA passage describing a December list of 49 commanders including defected officers. This checks that narrow paraphrase, not the amnesty’s scope or actual protection.",
       "verification": "Raw PyMuPDF page checked with independent pdftotext; relevant prose agrees, layout and footer order differ. CPIN edition/text and reader paragraph/section anchors checked. This remains AI analysis without human approval.",
       "limitations": "Underlying source assertions and other citations not independently checked. Other historical editions require separate review. Found Syria background reviews concern other/older products and do not directly audit this March 2025 report."
+    },
+    {
+      "id": "ai-afghanistan-2025-unama-breakdown",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "major",
+      "issueType": "source-summary-contradiction",
+      "target": {
+        "country": "afghanistan",
+        "series": "note:fear-taliban",
+        "editionId": "a7c78fef364ac1e2",
+        "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+        "footnote": 106,
+        "paragraph": "10.6.2",
+        "section": "10. People associated with the former government and its security forces",
+        "sourceUrl": "https://unama.unmissions.org/sites/default/files/a_barrier_to_securing_peace_aug_2023_english_.pdf"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05",
+      "promptVersion": "published-review-followup-1",
+      "summary": "Paragraph 10.6.2 says UNAMA did not clarify the types or counts of violations. The original report defines the types on printed page 5 and gives separate figures on pages 6–9: at least 218 killings and 14 disappearances, more than 424 arrests/detentions and 144 torture/ill-treatment cases. That absence-of-breakdown statement conflicts with the cited source. The lack of exact profession-specific counts is a separate limitation. The February 2026 edition replaces this wording and includes the figures. Human review remains pending.",
+      "scope": "Types and counts statement in the August 2025 paragraph only; not a legal risk determination.",
+      "severityReason": "The paragraph discounts a material human-rights source on a factual basis contradicted by that source.",
+      "sourceSha256": "25e7dd7403d23c389485a6cd4451b3f82b372063ceafe4a7d302e629b5f2bf47",
+      "sourceRetrievedAt": "2026-10-05T13:20:31Z",
+      "sourceCopyUrl": "https://unama.unmissions.org/sites/default/files/a_barrier_to_securing_peace_aug_2023_english_.pdf#page=7",
+      "sourceLocation": "Printed pages 5–9; physical PDF pages 7–11",
+      "publication": {
+        "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=17",
+        "title": "Asylos quantitative-risk discussion",
+        "location": "Physical PDF page 17 reproduces this CPIN wording; our factual comparison is separate from its legal argument."
+      },
+      "verification": {
+        "rawPdf": "PyMuPDF original page text",
+        "secondReader": "pdftotext agrees on definition and separate figures",
+        "scope": "Our AI factual comparison, not an assertion that Asylos made this precise finding."
+      }
+    },
+    {
+      "id": "ai-afghanistan-2026-unama-correction",
+      "kind": "ai",
+      "status": "no-issue",
+      "target": {
+        "country": "afghanistan",
+        "series": "note:fear-taliban",
+        "editionId": "2c5e35429f512dbf",
+        "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d",
+        "footnote": 135,
+        "paragraph": "10.3.5",
+        "section": "10. People associated with the former government, security forces and allies",
+        "sourceUrl": "https://unama.unmissions.org/sites/default/files/a_barrier_to_securing_peace_aug_2023_english_.pdf"
+      },
+      "author": "Codex · interactive AI analysis",
+      "reviewedAt": "2026-10-05",
+      "promptVersion": "published-review-followup-1",
+      "summary": "This February 2026 paragraph includes UNAMA’s reported types and figures instead of the older claim that the report supplied none. The cited August 2023 PDF contains these categories and reported figures on printed pages 5–9. The source reports lower bounds, not an exhaustive count of abuses. This checks the specific correction only; it does not certify the whole paragraph, report or risk assessment.",
+      "scope": "Follow-up on the omission of types and counts only.",
+      "sourceSha256": "25e7dd7403d23c389485a6cd4451b3f82b372063ceafe4a7d302e629b5f2bf47",
+      "sourceRetrievedAt": "2026-10-05T13:20:31Z",
+      "sourceCopyUrl": "https://unama.unmissions.org/sites/default/files/a_barrier_to_securing_peace_aug_2023_english_.pdf#page=7",
+      "sourceLocation": "Printed pages 5–9; physical PDF pages 7–11",
+      "verification": {
+        "rawPdf": "PyMuPDF original page text",
+        "secondReader": "pdftotext agrees on definition and figures"
+      }
+    },
+    {
+      "id": "iagci-colombia-2026-questioned-source-102",
+      "kind": "external",
+      "status": "issue",
+      "severity": "major",
+      "target": {
+        "country": "colombia",
+        "series": "note:internal-relocation",
+        "editionId": "887cdf8ab3396185",
+        "textSha": "e639eac51c0014c95cc0625f7f9deb49ffd6a5fe0a1acac52b98d0212bfb8f69",
+        "footnote": 102,
+        "paragraph": "6.1.2",
+        "section": "6. Social support",
+        "sourceUrl": "https://www.socialprotection-toolbox.org/practice/colombias-family-subsidy-system?utm_source=chatgpt.com"
+      },
+      "author": "Robert Karl · IAGCI-commissioned reviewer",
+      "publishedAt": "2026-06-02",
+      "summary": "The published reviewer questioned the social-support sources in paragraph 6.1.2, citing redirects, a ChatGPT tracking parameter and inability to locate the quoted wording, and suggested possible AI hallucination. These observations do not by themselves prove that AI fabricated the source. The Home Office accepted replacement with the 2021 international-organisations report.",
+      "response": "Accepted; the Home Office undertook to replace the source. The March 2026 edition now cites the suggested 2021 report. This historical finding remains attached to February 2025.",
+      "publication": {
+        "title": "IAGCI review: Colombia internal relocation",
+        "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=111",
+        "location": "Printed page 105; physical PDF page 111"
+      },
+      "severityReason": "Potentially unreliable or nonexistent supporting source for social support, as attributed by the reviewer; the generation mechanism is not established."
     }
   ]
 }

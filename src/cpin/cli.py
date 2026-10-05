@@ -78,7 +78,7 @@ def cmd_reviews(args, store):
     print(f"review directory: {len(registry['publishers'])} publishers · {len(registry['reviews'])} curated publications · {count} edition contexts")
     if not args.refresh:
         return 0
-    summary = refresh(registry, Path(args.out), max_age=args.max_age, max_requests=args.limit)
+    summary = refresh(registry, Path(args.out), max_age=args.max_age, max_requests=args.limit, index_pages=args.index_pages)
     print("review collection:", summary)
     return 1 if summary['stopped'] or any(k != '200' for k in summary['outcomes']) or any(k != 'extracted' for k in summary['quality']) else 0
 
@@ -447,6 +447,7 @@ def main(argv=None):
     p.add_argument("--refresh", action="store_true", help="check publisher indexes and review documents; discoveries stay private")
     p.add_argument("--max-age", type=int, choices=range(0,366), default=7, help="days before rechecking an address (0 forces refresh)")
     p.add_argument("--limit", type=int, choices=range(1,501), default=100, help="maximum requested URLs per run")
+    p.add_argument("--index-pages", type=int, choices=range(1,101), default=3, help="maximum extra index pages per publisher; traversal gaps are reported")
     p.set_defaults(func=cmd_reviews)
     p = sub.add_parser("sources", help="index footnotes and privately collect cited source documents (no AI)")
     p.add_argument("--all-editions", action="store_true", help="include historical editions, with current sources first")

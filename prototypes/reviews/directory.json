@@ -68,7 +68,8 @@
       "name": "IAGCI / Independent Chief Inspector of Borders and Immigration",
       "identityUrl": "https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci",
       "discoveryUrls": [
-        "https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci"
+        "https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci",
+        "https://www.gov.uk/government/collections/inspection-review-country-information-and-guidance-reports"
       ],
       "allowedHosts": [
         "www.gov.uk",
@@ -107,6 +108,36 @@
       ],
       "credibilityBasis": "Original practitioner publications name the researcher and sources; Albania paper also hosted by MiCLU.",
       "limitations": "Legal argument is distinct from factual COI criticism; copies and corrigenda must not be counted as independent reviews.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "unhcr",
+      "name": "UN High Commissioner for Refugees (UNHCR)",
+      "identityUrl": "https://www.refworld.org/",
+      "discoveryUrls": [
+        "https://www.refworld.org/policy/countrypos/unhcr/2026/en/151369"
+      ],
+      "allowedHosts": [
+        "www.refworld.org"
+      ],
+      "credibilityBasis": "UN refugee agency; official policy guidance with sources and stated scope.",
+      "limitations": "Protection guidance is contextual evidence, not a direct CPIN audit or certification of every source.",
+      "checkedAt": "2026-10-05"
+    },
+    {
+      "id": "network-myanmar",
+      "name": "Network Myanmar / Derek Tonkin",
+      "identityUrl": "https://networkmyanmar.org/ESW/Files/Network-Myanmar-About.pdf",
+      "discoveryUrls": [
+        "https://www.networkmyanmar.org/",
+        "https://www.networkmyanmar.org/blogs"
+      ],
+      "allowedHosts": [
+        "networkmyanmar.org",
+        "www.networkmyanmar.org"
+      ],
+      "credibilityBasis": "Identifiable named author with regional diplomatic experience and primary-hosted annotated CPIN commentary. Publisher identity explains that the present website is his individual initiative.",
+      "limitations": "Individual opinion and advocacy; no independent peer review or institutional endorsement established. Arguments require verification, including against sources the author disputes.",
       "checkedAt": "2026-10-05"
     }
   ],
@@ -656,11 +687,12 @@
       "publishedAt": "2026-06-02",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
-      "summary": "Independent expert review with Home Office responses; the existing citation pilot concerns only the August 2025 Taliban CPIN, not its later edition.",
+      "summary": "Kauthar Menhal and Robert Karl review six 2024/2025 Afghanistan and Colombia CPINs and selected COIRs, with Home Office responses. Separate scoped AI follow-ups compare selected criticisms with 2026 editions; other arguments remain unassessed.",
       "verificationLocation": "Primary GOV.UK publication and existing manually scoped pilot.",
       "workId": "iagci-afghanistan-colombia-2026",
       "relatedUrls": [
-        "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf"
+        "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf",
+        "https://www.gov.uk/government/publications/response-to-a-report-on-country-of-origin-information-afghanistan-and-colombia"
       ],
       "targets": [
         {
@@ -674,6 +706,274 @@
         }
       ],
       "verifiedSnapshotSha": "5b31cb0e0a741883a7439a588f3259e745ea6fec902a7a702e51ef9a245b73b4",
+      "applications": [
+        {
+          "id": "afghanistan-returnee-inconsistency-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "superseded",
+          "scope": "Old paragraphs 16.2.6–16.2.7 only",
+          "paragraphs": [
+            "16.1",
+            "16.2"
+          ],
+          "reviewFinding": "Kauthar Menhal identified tension between the August 2025 no-evidence-of-mistreatment sentence and the adjoining RFE/RL account.",
+          "response": "Accepted; the Home Office undertook to revise the next CPIN.",
+          "summary": "The February 2026 body no longer contains the challenged no-evidence sentence or the old adjoining paragraph pair. Its returnee section is reorganised and uses different evidence. The historical finding stays attached to August 2025; this check does not certify the new returnee account.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=49",
+            "location": "Physical PDF page 49"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-children-reporting-limits-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:children-unaccompanied",
+            "editionId": "0032f789b9347dea",
+            "textSha": "6b3bcc2d27f40e6b975dfd606b3c2a6712de43a2723fdc889b00ff28a5688706"
+          },
+          "assessment": "superseded",
+          "scope": "Explicit reporting-limits guidance only",
+          "paragraphs": [
+            "Decision-making guidance"
+          ],
+          "reviewFinding": "The reviewer asked for data-collection constraints and the risks of drawing adverse inferences from missing information to be acknowledged in the other Afghanistan notes.",
+          "response": "Partially accepted; the Home Office agreed to add a similar explanation when updating the other CPINs.",
+          "summary": "The 2026 edition’s decision-making guidance explicitly discusses restricted civic space, media freedom, risks of retaliation and the need not to draw automatic adverse inferences from a lack of reporting. The narrow omission is addressed. This is a wording/coverage check, not a review of every supporting source.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=19",
+            "location": "Physical PDF page 19"
+          },
+          "verification": {
+            "cpinBodySha": "0032f789b9347deaed5b3f7878a04b44c3bd1c61c463844647fb930322c0e957",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-humanitarian-reporting-limits-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:humanitarian-situation",
+            "editionId": "537945e737aed705",
+            "textSha": "23274c06f4368322487cbf6eaae4637d86afca84c09ac4807f958bef7721d3e1"
+          },
+          "assessment": "superseded",
+          "scope": "Explicit reporting-limits guidance only",
+          "paragraphs": [
+            "Decision-making guidance"
+          ],
+          "reviewFinding": "The reviewer asked for data-collection constraints and the risks of drawing adverse inferences from missing information to be acknowledged in the other Afghanistan notes.",
+          "response": "Partially accepted; the Home Office agreed to add a similar explanation when updating the other CPINs.",
+          "summary": "The 2026 edition’s decision-making guidance explicitly discusses restricted civic space, media freedom, risks of retaliation and the need not to draw automatic adverse inferences from a lack of reporting. The narrow omission is addressed. This is a wording/coverage check, not a review of every supporting source.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=78",
+            "location": "Physical PDF page 78"
+          },
+          "verification": {
+            "cpinBodySha": "537945e737aed705f1807f1051abc48b693f72445c83913fd8fe7cc0611b7974",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-social-support-source-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:internal-relocation",
+            "editionId": "3db3bc2badbeb094",
+            "textSha": "a834e0aafdcc0d95a471cb99b534244a07c4c744f62c23b030998bee07a44487"
+          },
+          "assessment": "superseded",
+          "scope": "Older social-support source and wording only",
+          "paragraphs": [
+            "6.1.2"
+          ],
+          "reviewFinding": "Robert Karl questioned the existence and reliability of the sources supporting the February 2025 social-support passage and suggested possible AI hallucination.",
+          "response": "Accepted; replace the source with the 2021 international-organisations report supplied by the reviewer.",
+          "summary": "The March 2026 passage now names that 2021 ECLAC report and links to its UN ESCAP repository record in footnotes 92–93. The source has been replaced. This does not prove how the older source was generated or verify every statement in the new passage.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=111",
+            "location": "Physical PDF page 111"
+          },
+          "verification": {
+            "cpinBodySha": "3db3bc2badbeb0941d2a95cb7dba807a6ce530d442795ddb81fc1fee49020798",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-healthcare-source-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:internal-relocation",
+            "editionId": "3db3bc2badbeb094",
+            "textSha": "a834e0aafdcc0d95a471cb99b534244a07c4c744f62c23b030998bee07a44487"
+          },
+          "assessment": "superseded",
+          "scope": "Older opening healthcare source only",
+          "paragraphs": [
+            "9.1.1"
+          ],
+          "reviewFinding": "The reviewer said the February 2025 opening healthcare paragraph relied on the same allegedly nonexistent source as the social-support passage.",
+          "response": "Accepted; remove that paragraph and begin with the following healthcare overview.",
+          "summary": "The March 2026 healthcare opening now cites the US International Trade Administration instead of the Social Protection Toolbox. The disputed source is removed from that location. The replacement overview’s substantive accuracy has not been fully checked.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=113",
+            "location": "Physical PDF page 113"
+          },
+          "verification": {
+            "cpinBodySha": "3db3bc2badbeb0941d2a95cb7dba807a6ce530d442795ddb81fc1fee49020798",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-police-case-update-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:actors-protection",
+            "editionId": "21bb81b53787f515",
+            "textSha": "279aa237fb4e4698844974a44d1cf21e09d24d6a337764b99d390bf56fcbd31c"
+          },
+          "assessment": "superseded",
+          "scope": "Old assertion that no further case update was found",
+          "paragraphs": [
+            "6.5.11",
+            "6.5.12"
+          ],
+          "reviewFinding": "The reviewer supplied a September 2024 Infobae update on the Sucre killings, contradicting the older claim that CPIT had found no further update.",
+          "response": "Accepted; include the update.",
+          "summary": "The March 2026 edition now includes the May 2023 sentence and September 2024 disciplinary sanctions, attributed to Infobae, in paragraph 6.5.12. The specific omission is addressed; this check does not independently verify the court and disciplinary records.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=123",
+            "location": "Physical PDF page 123"
+          },
+          "verification": {
+            "cpinBodySha": "21bb81b53787f515f27a149aaee10ecd629069901cdc64b8569204f9d3e39dd7",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-sexual-violence-counts-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:armed-criminal-gangs-groups",
+            "editionId": "be0dd5f4b636ec3f",
+            "textSha": "d7631e277d2840cdcffdacdd9de37322a52921aecfe7e91a10f731aa756c59f8"
+          },
+          "assessment": "superseded",
+          "scope": "Old no-quantification statement about ICRC reporting",
+          "paragraphs": [
+            "8.3.11",
+            "8.3.12"
+          ],
+          "reviewFinding": "The reviewer pointed out that the ICRC report gave treatment figures and that later ICRC reporting quantified documented sexual-violence cases.",
+          "response": "Accepted; consult the sources and add the highlighted information.",
+          "summary": "The March 2026 edition now includes 1,170 people treated in 2022 and 50 documented cases in 2023, preserving the warning that documented cases reflect only a fraction of the total. These measure different things and must not be treated as comparable incidence totals. The old no-quantification sentence is absent.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=138",
+            "location": "Physical PDF page 138"
+          },
+          "verification": {
+            "cpinBodySha": "be0dd5f4b636ec3f34a8bc7f592b4291fd641421b337e1265371a311dfa4d0b4",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-map-limits-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:armed-criminal-gangs-groups",
+            "editionId": "be0dd5f4b636ec3f",
+            "textSha": "d7631e277d2840cdcffdacdd9de37322a52921aecfe7e91a10f731aa756c59f8"
+          },
+          "assessment": "superseded",
+          "scope": "Scope of the 2022 interactive map",
+          "paragraphs": [
+            "8.2.1",
+            "8.2.2"
+          ],
+          "reviewFinding": "The reviewer cautioned that the 2022 InSight Crime map covered national armed groups and omitted regional criminal groups and later changes.",
+          "response": "Accepted; identify the map’s limitations and add newer reporting.",
+          "summary": "The March 2026 paragraphs state that territorial control changes and that the map is not exhaustive, covering national but not regional groups. The named map limitation is now explicit; the map’s territorial data have not been independently refreshed here.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=137",
+            "location": "Physical PDF page 137"
+          },
+          "verification": {
+            "cpinBodySha": "be0dd5f4b636ec3f34a8bc7f592b4291fd641421b337e1265371a311dfa4d0b4",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "colombia-cordillera-2026",
+          "kind": "ai",
+          "target": {
+            "country": "colombia",
+            "series": "note:armed-criminal-gangs-groups",
+            "editionId": "be0dd5f4b636ec3f",
+            "textSha": "d7631e277d2840cdcffdacdd9de37322a52921aecfe7e91a10f731aa756c59f8"
+          },
+          "assessment": "superseded",
+          "scope": "Requested example of regional and inter-regional criminal links",
+          "paragraphs": [
+            "9.4.5–9.4.7"
+          ],
+          "reviewFinding": "The reviewer argued that focusing on national groups overlooked regional groups with wider connections, using La Cordillera as an example.",
+          "response": "The Home Office agreed to include recent La Cordillera information and check for further reporting.",
+          "summary": "The March 2026 body now includes La Cordillera, its regional authority and links with the Gulf Clan. The specific coverage request is addressed. This is not a finding that coverage of all regional groups is exhaustive or that relocation is safe or unsafe in an individual case.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=133",
+            "location": "Physical PDF page 133"
+          },
+          "verification": {
+            "cpinBodySha": "be0dd5f4b636ec3f34a8bc7f592b4291fd641421b337e1265371a311dfa4d0b4",
+            "reviewPdfSha": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        }
+      ],
+      "author": "Kauthar Menhal (Afghanistan); Robert Karl (Colombia)",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -691,7 +991,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2025-07-10",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -704,6 +1004,39 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "954cb21fb8812ec2ab860a4597b398a444186880609a9a7cfddf2464bb208bbc",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
+      "applications": [
+        {
+          "id": "vietnam-neutral-category-2026",
+          "kind": "ai",
+          "target": {
+            "country": "vietnam",
+            "series": "note:buddhism-hao-hoa",
+            "editionId": "423b36e054f6512e",
+            "textSha": "97553123cf5eb38a143370019638b60a1a204f9a62916344e5a8d3e70cdee14a"
+          },
+          "assessment": "superseded",
+          "scope": "Disputed classification and follower estimate only",
+          "paragraphs": [
+            "3.1",
+            "9.1"
+          ],
+          "reviewFinding": "The reviewer disputed the January 2024 three-sect taxonomy, especially a neutral sect, and the interview estimate of 400 followers.",
+          "response": "No formal response because this CPIN was outside the commissioned remit; the Home Office maintained its overall assessment.",
+          "summary": "The March 2026 body contains neither neutral Hoa Hao nor the 400-follower estimate. It distinguishes registered and unregistered groups and cites other sources. The specific disputed wording is removed. This does not prove every part of the reviewer’s account or settle the revised risk assessment.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://assets.publishing.service.gov.uk/media/6a217e42f56856fd11c0b039/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025_.pdf#page=79",
+            "location": "Physical PDF page 79"
+          },
+          "verification": {
+            "cpinBodySha": "423b36e054f6512eab9e4f1bd08c70465d7eb41bbae5ee3ce30c104e24c631c2",
+            "reviewPdfSha": "f924dab1438bcd59a005d9431d1a15abb2cfcfced4694b0a8b28d81c059bd1d4",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        }
+      ],
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -720,7 +1053,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2024-10-24",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -733,6 +1066,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "50d40bd8a4d7d49b8cfc036cd56acdc2dbbb3fbd625ccc07b7aa4ce21809e4e0",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -749,7 +1083,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2024-09-09",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -761,6 +1095,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "6c3be9a198fb7102bbac8eec2dc8890a0d2a81fe3cab115112d997872b5f67c9",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -835,7 +1170,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2024-02-29",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
@@ -847,6 +1182,7 @@
       "targets": [],
       "scope": "thematic",
       "verifiedSnapshotSha": "7fdb01317936fc32687a1b43c8773ba7ca3b351f624efe5b45f15aa7edd1a0ce",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -865,7 +1201,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2023-06-29",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -878,6 +1214,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "45dbdd46924cf51580f2b082db85169c185131d1ef430d8b9aa22ab1e66bfadc",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -895,7 +1232,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2022-10-19",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -907,6 +1244,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "20704732208501b0e4e44b426b429ecd627f571e8ea8e273b72d2d4ab7be9b3a",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -925,7 +1263,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2022-04-28",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -937,6 +1275,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "29207f82b4aa30f852bf67aa4c8800d92fbd55746ea7c9babf0a55f33ed5199a",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -954,7 +1293,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2021-02-22",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -966,6 +1305,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "0d385206b4cea91300771f9fcc49a8042a5c1052635ff671bd9a875a35f27510",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1040,7 +1380,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2020-12-08",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
@@ -1052,6 +1392,7 @@
       "targets": [],
       "scope": "thematic",
       "verifiedSnapshotSha": "42702c4195565c8805df7988882eb1c8d794a3e86e497b519e7cb66287ded78f",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1072,7 +1413,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2020-07-20",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1084,6 +1425,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "a254a6444ee9cd629cf107617351d10558795db388b87449dfacfcec34a1fb2f",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1101,7 +1443,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2020-02-11",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1113,6 +1455,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "e7cc466817cf0cd6a4d1ccf8b34919b4b57bb05fab37c41515ee3a288f3e5173",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1131,7 +1474,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2019-06-18",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1143,6 +1486,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "b8611e3ae609e9094c3f482119945cd208c1b96cdc9c4734fd113f388d37aecb",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1160,7 +1504,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2018-12-05",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1172,6 +1516,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "3ca0ed15b0f1dae895cd677659c5d810a13f6c5c4297017d74f8f1dfbdf85d82",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1191,7 +1536,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2017-07-13",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1203,6 +1548,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "a6bc14f6d8b191352eb0283f3cfe7cb0e1d6d9c133af412c9519c49ebedeac5f",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1222,7 +1568,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2017-02-03",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1234,6 +1580,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "70e174b9ca66b0424122bab34f53223d544b6ab62b2b75693d553b3ed034f6ea",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1252,7 +1599,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2016-07-21",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
@@ -1264,6 +1611,7 @@
       "targets": [],
       "scope": "country",
       "verifiedSnapshotSha": "95bdf868084e0b79d630e6f2e70788014c68f26fe3da3795d3fadbcb671e50a9",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1338,7 +1686,7 @@
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
-      "publishedAt": null,
+      "publishedAt": "2018-01-30",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Cross-cutting or production-method review; country-specific applicability needs checking. Findings and replies remain unassessed.",
@@ -1350,6 +1698,7 @@
       "targets": [],
       "scope": "thematic",
       "verifiedSnapshotSha": "78d00510ad00701a8ef9ea98af6a66e3d44be549f25e2c9a52a8423aa3ce3c24",
+      "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
       "publishers": [
         "IAGCI / Independent Chief Inspector of Borders and Immigration"
       ]
@@ -1595,7 +1944,7 @@
       "publishedAt": "2025-11",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
-      "summary": "Review focuses on former government officials, quantitative risk assessment and reporting limitations. It also signposts later COI; merits and citation applicability remain unassessed.",
+      "summary": "Critiques former-official risk reasoning, quantitative assessment, reporting limits and the currency of 2024/2025 evidence. Selected 2026 follow-ups are separate AI assessments, not Asylos approval of the newer edition.",
       "verificationLocation": "Primary Asylos project page and commentary introduction name August 2024 and August 2025 editions.",
       "workId": "asylos-afghanistan-taliban-2025",
       "relatedUrls": [
@@ -1619,6 +1968,157 @@
           "scope": "whole-report",
           "mapping": "edition-declaration-checked",
           "citationFindingsMapped": false
+        }
+      ],
+      "applications": [
+        {
+          "id": "afghanistan-risk-wording-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "partly supported",
+          "scope": "Comparison of former-official assessment wording",
+          "paragraphs": [
+            "3.3.1–3.3.11"
+          ],
+          "reviewFinding": "Asylos criticised the 2024/2025 general no-risk conclusion for former civilian officials as insufficiently supported by the reported abuses.",
+          "response": "No direct Home Office response to this Asylos paper is recorded. The separate IAGCI review contains disputed policy criticism and a Home Office defence; they are not interchangeable.",
+          "summary": "The February 2026 section is substantially rewritten. It now expressly records persistent reprisals, possible under-reporting, unclear motives and mixed statistics; the old general no-risk sentence is absent. This addresses specific presentation concerns but does not independently determine individual protection needs.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=8",
+            "location": "Physical PDF page 8"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "ca65eabe3ce4b53cf0f270a9ea2e6cf34190c71dd3aa5480aad5f6e54df9e986",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-statistical-risk-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "unresolved",
+          "scope": "Legal and methodological argument, not a numerical fact check",
+          "paragraphs": [
+            "3.3",
+            "10.3"
+          ],
+          "reviewFinding": "Asylos questioned using incident counts and population comparisons as a statistical probability model for persecution risk.",
+          "response": "",
+          "summary": "The 2026 edition explains overlapping statistics and under-reporting. Whether the revised assessment applies the correct legal evidential threshold requires a separate legal review; the existence of abuses alone does not settle that question. No factual error flag or checked tick is assigned from this argument.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=17",
+            "location": "Physical PDF page 17"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "ca65eabe3ce4b53cf0f270a9ea2e6cf34190c71dd3aa5480aad5f6e54df9e986",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-current-evidence-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "superseded",
+          "scope": "Claim that former-official COI was not updated in August 2025",
+          "paragraphs": [
+            "3.3.2",
+            "3.3.6",
+            "10.3"
+          ],
+          "reviewFinding": "The commentary found that the August 2025 update retained older former-official information rather than updating that profile.",
+          "response": "",
+          "summary": "The February 2026 edition cites and discusses 2024 and 2025 reporting and quarterly figures through September 2025. The claim that this later edition has no updated former-official COI no longer applies. These later sources have not all been independently verified.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=6",
+            "location": "Physical PDF page 6"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "ca65eabe3ce4b53cf0f270a9ea2e6cf34190c71dd3aa5480aad5f6e54df9e986",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-reporting-limits-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "superseded",
+          "scope": "Explicit treatment of reporting limits in the assessment",
+          "paragraphs": [
+            "3.3.2",
+            "3.3.6"
+          ],
+          "reviewFinding": "Asylos found minimal explanation of how reporting restrictions were weighed in assessing former-official risk.",
+          "response": "",
+          "summary": "The February 2026 assessment explicitly warns that reprisals may be under-reported owing to media restrictions and that cited sources indicate likely under-reporting. That specific omission is addressed. The weight ultimately given to the warning remains a methodological/legal judgement.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=18",
+            "location": "Physical PDF page 18"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "ca65eabe3ce4b53cf0f270a9ea2e6cf34190c71dd3aa5480aad5f6e54df9e986",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
+        },
+        {
+          "id": "afghanistan-unama-breakdown-2026",
+          "kind": "ai",
+          "target": {
+            "country": "afghanistan",
+            "series": "note:fear-taliban",
+            "editionId": "2c5e35429f512dbf",
+            "textSha": "fecc0bda4eaf10383b7f40dbfafa61469c825114705ba9c353817ac0a478c82d"
+          },
+          "assessment": "superseded",
+          "scope": "Follow-up on older source-summary wording",
+          "paragraphs": [
+            "10.3.5"
+          ],
+          "reviewFinding": "The older CPIN said UNAMA did not explain or quantify its reported violations; the Asylos discussion reproduces that wording in its quantitative-risk critique.",
+          "response": "This specific factual comparison is our follow-up; do not infer a Home Office admission from the broader IAGCI review.",
+          "summary": "The February 2026 paragraph now gives the types and figures: 218 killings, 14 disappearances, 424 arrests/detentions and 144 torture/ill-treatment cases. These figures are present in UNAMA’s original report. The older absence-of-breakdown wording is corrected; the adequacy of the wider risk assessment is a separate question.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://asylos.org/wp-content/uploads/2025/11/Afghanistan-commentary-2025_final.pdf#page=17",
+            "location": "Physical PDF page 17"
+          },
+          "verification": {
+            "cpinBodySha": "2c5e35429f512dbf570c7ce6d5c78f2e819185ccfe7390c18bceaabca84a5588",
+            "reviewPdfSha": "ca65eabe3ce4b53cf0f270a9ea2e6cf34190c71dd3aa5480aad5f6e54df9e986",
+            "method": "Older review argument and reply read in raw PDF; current verbatim web wording compared. Text-change check, not independent verification of all country conditions."
+          }
         }
       ],
       "publishers": [
@@ -1683,6 +2183,513 @@
       "provenance": "Named repository copy; original publisher unavailable in this check. Copies count as one work.",
       "publishers": [
         "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-sri-lanka-religious-minorities-2021",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "ARC commentary on Sri Lanka: religious minorities (August 2021 CPIN)",
+      "url": "https://www.ecoi.net/en/file/local/2065114/ARC-commentary_Sri-Lanka-CPIN-Religious-Minorities_December-2021.pdf",
+      "countries": [
+        "sri-lanka"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2021-12",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Critiques protection and access to redress in the August 2021 CPIN, including political context and religion-specific risk. Merits remain unassessed.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "arc-sri-lanka-religious-minorities-2021",
+      "relatedUrls": [
+        "https://asylumresearchcentre.org/wp-content/uploads/2021/12/ARC-commentary_Sri-Lanka-CPIN-Religious-Minorities_December-2021.pdf",
+        "https://www.ecoi.net/en/document/2065114.html"
+      ],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-uwe-quantitative-risk-2021",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "ARC Foundation / UWE commentary on quantitative risk assessments in CPINs",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf",
+      "countries": [
+        "china",
+        "eritrea",
+        "pakistan"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2021-11-12",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Methodological and legal criticism of statistical risk reasoning. Examples include 2021 China, Eritrea and Pakistan CPINs; this is not a direct audit of every country or later edition.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "arc-uwe-quantitative-risk-2021",
+      "relatedUrls": [],
+      "targets": [],
+      "scope": "thematic",
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "arc-sri-lanka-ffm-2020",
+      "publisherIds": [
+        "arc"
+      ],
+      "title": "ARC observations on the Home Office Sri Lanka fact-finding mission report",
+      "url": "https://asylumresearchcentre.org/wp-content/uploads/2020/07/ARC-Foundation-observations-on-HO-Sri-Lanka-FFM_July2020.pdf",
+      "countries": [
+        "sri-lanka"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-ffm",
+      "publishedAt": "2020-07",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Review of the January 2020 fact-finding mission report, including source selection and presentation. This concerns a source product, not every Sri Lanka CPIN.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "arc-sri-lanka-ffm-2020",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Asylum Research Centre (ARC)"
+      ]
+    },
+    {
+      "id": "miclu-albania-research-gaps-2018",
+      "publisherIds": [
+        "miclu"
+      ],
+      "title": "Albania: reviewing the country of origin literature and addressing gaps in research",
+      "url": "https://miclu.org/assets/uploads/2018/07/Conference-Paper-Reviewing-the-country-of-origin-literature-and-addressing-the-gaps-in-research.pdf",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2018-06-01",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Dr Rachel Alsop discusses gaps in evidence on unaccompanied Albanian young people. A historical methodological paper, not a review of a 2026 edition.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "miclu-albania-research-gaps-2018",
+      "relatedUrls": [],
+      "targets": [],
+      "publishers": [
+        "Migrant & Refugee Children’s Legal Unit (MiCLU)"
+      ]
+    },
+    {
+      "id": "asylos-trafficking-principles-2026",
+      "publisherIds": [
+        "asylos"
+      ],
+      "title": "Asylos principles for COI research on trafficking in human beings",
+      "url": "https://asylos.org/wp-content/uploads/2026/04/Asylos-Principles-Trafficking-in-Human-Beings-2026-Final.pdf",
+      "countries": [
+        "afghanistan",
+        "albania",
+        "china",
+        "france",
+        "nigeria",
+        "philippines",
+        "vietnam"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2026",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Research principles reporting an unpublished rapid CPIN review and broad information gaps as of March 2026. The underlying rapid review is not publicly available; these are not verified passage-specific errors.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "asylos-trafficking-principles-2026",
+      "relatedUrls": [],
+      "targets": [],
+      "scope": "thematic",
+      "publishers": [
+        "Asylos"
+      ]
+    },
+    {
+      "id": "asylos-vietnam-trafficking-2026",
+      "publisherIds": [
+        "asylos"
+      ],
+      "title": "Human trafficking in Vietnam: patterns of exploitation, risk factors and access to support",
+      "url": "https://asylos.org/vietnam-trafficking-2026-report/",
+      "countries": [
+        "vietnam"
+      ],
+      "kind": "context",
+      "reviewedProduct": "country-evidence",
+      "publishedAt": "2026-04",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Fatima Ali’s original COI research, updated June 2026 to restore missing underlying citations. Context and possible sources, not a CPIN audit or independent corroboration of every interview.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "asylos-vietnam-trafficking-2026",
+      "relatedUrls": [
+        "https://asylos.org/wp-content/uploads/2026/07/Human-Trafficking-in-Vietnam-2026-updated-29-June.pdf"
+      ],
+      "targets": [],
+      "publishers": [
+        "Asylos"
+      ]
+    },
+    {
+      "id": "asylos-china-trafficking-support-2025",
+      "publisherIds": [
+        "asylos"
+      ],
+      "title": "China: loan sharks, police protection and support for female returnee trafficking victims",
+      "url": "https://asylos.org/china-loan-sharks-police-corruption-support-female-trafficking-returnees/",
+      "countries": [
+        "china"
+      ],
+      "kind": "context",
+      "reviewedProduct": "country-evidence",
+      "publishedAt": "2025-09",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Original research on debt, policing and reintegration support, including mental healthcare. Relevant background for modern slavery; not a direct audit of the August 2026 CPIN.",
+      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "workId": "asylos-china-trafficking-support-2025",
+      "relatedUrls": [
+        "https://asylos.org/wp-content/uploads/2025/11/ASI2025-01_China_Loan-Shark-Police-Corruption-support-mental-health-female-returnee-victims-trafficking.pdf"
+      ],
+      "targets": [],
+      "publishers": [
+        "Asylos"
+      ]
+    },
+    {
+      "id": "iagci-china-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "China: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/china-country-information-and-guidance-iagci-review",
+      "countries": [
+        "china"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of the UK Home Office country information and guidance – China: Christians (13 June 2014); Home Office response to IAGCI review: China (Christians) CIG, June 2014; Home Office response to IAGCI review: China COIRs, April 2014 – January 2015. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-china-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a7f715e40f0b6230268f865/IAGCI-Review-of-the-Home-Offices-China-Country-Information-and-Guidance.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f4f0540f0b62305b865b3/HO-Response-to-IAGCI-Review-China-Christians.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f87d440f0b62305b87b57/HO-Response-to-IAGCI-Review-China-COIRs.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "cc18e1eed3931719ad3f1d8604ec4bb36292580d495e9801bec6a5931b43bfe3",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-eritrea-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Eritrea: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/eritrea-country-information-and-guidance-iagci-review",
+      "countries": [
+        "eritrea"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of UK Home Office Country Information and Guidance on national (incl. Military) service‘ and  exit; Review of UK Home Office Country Information and Guidance on national (incl. military) service and  exit - Appendix 1, 2, 3 and 5; Review of UK Home Office Country Information and Guidance on national (incl. military) service and  exit - Appendix 4 (tax form); Home Office response to IAGCI review: national service and illegal exit, September 2015; Report by the IAGCI on Eritrea country information and guidance reports; Home Office response to IAGCI review: covering note, November 2015. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-eritrea-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a81a6f6ed915d74e33ff5c5/Review-of-Home-Office-CIGs-on-Eritrea-Dec-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f32ff40f0b6230268e0c6/Eritrea-Appendix-I-II-III-V-Dec-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f3596ed915d74e62290d2/Eritrea-Appendix-IV.-2--Tax-form-Dec-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a80be9d40f0b62305b8ce81/HO-response-to-IAGCI-review-Eritrea.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a814f52e5274a2e87dbcec5/Eritrea-report-IAGCI-19-May-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f5f21ed915d74e33f605c/IAGCI-HO-Covering-Response.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "aa333505ff119573ab68f60aed853effdcfd996ae711550f8f7007c6da35f0a6",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-india-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "India: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/india-country-information-and-guidance-iagci-review",
+      "countries": [
+        "india"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of the UK Home Office country information and guidance – sexual orientation and gender identity; Home Office response to IAGCI review: India, sexual orientation and gender identity, CIG, July 2014; Home Office response to IAGCI review: India: responses to COI requests, February 2013 – January 2015. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-india-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a7f46d540f0b62305b86294/IAGCI-Review-India-Sexual-Orientation-and-Gender-Identity.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f230c40f0b62305b854cd/HO-Response-to-IAGCI-Review-India-Sexual-Orientation-and-Gender-Identity-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a800b9fe5274a2e87db7867/HO-Response-to-IAGCI-Review-India-COIRs.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "f0cfc9a75b0e19f98165fc0cc59ff8c6c7329829c4c834cc8f84383e1fc142df",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-iraq-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Iraq: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/iraq-country-information-and-guidance-iagci-review",
+      "countries": [
+        "iraq"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of humanitarian situation in Baghdad, the south (including Babil) and the Kurdistan Region of Iraq, issued in June 2015 and republished in July 2015; Home Office response to IAGCI review: humanitarian situation in Baghdad, the south (including Babil) and the Kurdistan Region of Iraq, June 2015 (re-published July 2015); Review of security situation in Baghdad, southern governorates and the Kurdistan Region of Iraq (KRI), April 2015; Home Office response to IAGCI review: security situation in Baghdad, southern governorates and the Kurdistan Region of Iraq (KRI), April 2015; Review of ‘responses to Iraq country of origin information requests’; Home Office response to IAGCI review: Iraq country of origin information (COI) requests, October 2014 – March 2015. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-iraq-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a801bbfe5274a2e8ab4e3bb/Review-of-Iraq-Humanitarian-Situation-CIG-Oct-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a804d9840f0b62302692b4b/Review-of-Iraq-Humanitarian-Situation-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a80566640f0b62302692e88/Review-of-Iraq-Security-Situation-CIG-Nov-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a81a39e40f0b62302698641/HO-response-to-IAGCI-review-Iraq-Sec-Sit-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a8034c8ed915d74e622d18e/Review-of-Iraq-Responses-to-Info-Requests-Nov-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a75c8e240f0b6737932292d/HO-response-to-IAGCI-review-Iraq-COI-requests.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "7a8f77b2c355d8a8a5bc3c08eee7e511d66ca34b0a33d58ba2be8d249ae20db9",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-libya-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Libya: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/libya-country-information-and-guidance-iagci-review",
+      "countries": [
+        "libya"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of Libya: minority ethnic groups, country information and guidance, 18 February 2015; Home Office response to IAGCI review: minority ethnic groups, country information and guidance, 18 February 2015; Review of ‘responses to Libya country of origin information requests’. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-libya-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a817b6ded915d74e6232810/Review-of-Libya-Minority-Ethnic-Groups-CIG-Oct-2015.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a74d45a40f0b65f61322919/Review-of-Libya-Minority-Ethnic-Groups-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a806a65ed915d74e622e52d/Review-of-Libya-Responses-to-Info-Requests-Nov-2015.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "ff1ee401119c6ca269f86a3b880a8c8b2c663222380cede0eddce3e51d82abb9",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-pakistan-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Pakistan: historical IAGCI response package (review attachment mislinked)",
+      "url": "https://www.gov.uk/government/publications/pakistan-country-information-and-guidance-iagci-review",
+      "countries": [
+        "pakistan"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "GOV.UK hosts Pakistan Home Office responses on sexual orientation/gender identity and COIRs. Its main review attachment actually contains the India review, confirmed on the raw PDF cover; it is not counted as a verified Pakistan review or separate corroboration. The original Pakistan critique has not been recovered here.",
+      "verificationLocation": "Landing-page attachments checked; raw PyMuPDF cover and independent pdftotext confirm that the main review PDF concerns India despite being linked from Pakistan. Pakistan responses remain separately attributed.",
+      "workId": "iagci-pakistan-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a7f15dd40f0b62305b84fad/IAGCI-Review-India-Sexual-Orientation-and-Gender-Identity.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f9dfbed915d74e33f7857/HO-Response-to-IAGCI-Review-Pakistan-Sexual-Orientation-and-Gender-Identity-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a805769e5274a2e8ab4f979/Home-Office-Response-to-IAGCI-Review-on-Pakistan-COIRs.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "d2339ce701ea9934996bb2dfd7df737fb26979e174ca1d46a2558fc4aec7e753",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "iagci-uganda-legacy-cig-2016",
+      "publisherIds": [
+        "iagci"
+      ],
+      "title": "Uganda: historical country information and guidance IAGCI review",
+      "url": "https://www.gov.uk/government/publications/uganda-country-information-and-guidance-iagci-review",
+      "countries": [
+        "uganda"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cig",
+      "publishedAt": "2016-12-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Historical CIG package: Review of the UK Home Office country information and guidance  on sexual orientation and gender identity, August 2014; Home Office response to IAGCI review: sexual orientation and gender identity, CIG, August 2014; Home Office response to IAGCI review: Uganda COIRs, August 2014 – January 2015. Arguments and applicability to current CPINs remain unassessed; replies and appendices are parts of the package, not separate corroborating reviews.",
+      "verificationLocation": "GOV.UK legacy collection and country publication attachment list, checked 5 October 2026.",
+      "workId": "iagci-uganda-legacy-cig-2016",
+      "relatedUrls": [
+        "https://assets.publishing.service.gov.uk/media/5a74bf21e5274a3f93b487b8/IAGCI-Review-of-the-UK-Home-Office-Country-Information-and-Guidance-----Uganda-Sexual-Orientation-and-Gender-Identity.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a80489aed915d74e622d8da/Home-Office-Response-to-IAGCI-Review-Uganda-Sexual-Orientation-and-Gender-Identity-CIG.pdf",
+        "https://assets.publishing.service.gov.uk/media/5a7f547a40f0b6230268ed75/Home-Office-Response-to-IAGCI-Review-Uganda-COIRs.pdf"
+      ],
+      "targets": [],
+      "verifiedSnapshotSha": "a39fe70cc8b101c2c9fa156f9454401cb07804f416239ab68f9961ac1ebc14f6",
+      "publicationDateEvidence": "GOV.UK page publication date; attachment titles name the earlier reviewed editions.",
+      "publishers": [
+        "IAGCI / Independent Chief Inspector of Borders and Immigration"
+      ]
+    },
+    {
+      "id": "unhcr-albania-guidance-2026",
+      "publisherIds": [
+        "unhcr"
+      ],
+      "title": "UNHCR Guidance Note on Albania",
+      "url": "https://www.refworld.org/policy/countrypos/unhcr/2026/en/151369",
+      "countries": [
+        "albania"
+      ],
+      "kind": "context",
+      "reviewedProduct": "country-evidence",
+      "publishedAt": "2026-02",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Official international protection guidance on risk, state protection and relocation. Relevant background; not a line-by-line CPIN audit.",
+      "verificationLocation": "Primary publication cover and publisher identity checked 5 October 2026.",
+      "workId": "unhcr-albania-guidance-2026",
+      "relatedUrls": [
+        "https://www.refworld.org/sites/default/files/2026-02/Guidance%20Note%20on%20Albania%20-%20Feb%202026%20%28FINAL%29.pdf"
+      ],
+      "targets": [],
+      "publishers": [
+        "UN High Commissioner for Refugees (UNHCR)"
+      ]
+    },
+    {
+      "id": "tonkin-myanmar-rohingya-2026",
+      "publisherIds": [
+        "network-myanmar"
+      ],
+      "title": "Derek Tonkin: commentary on the January 2026 Rohingya CPIN",
+      "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf",
+      "countries": [
+        "burma"
+      ],
+      "kind": "direct-review",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2026-02-21",
+      "checkedAt": "2026-10-05",
+      "assessment": "unassessed",
+      "summary": "Individual annotated commentary on the January 2026 version 4.0 CPIN, covering sections 1–8.1 and one point at 9.6.3. Publication is attributed opinion, not an institutional audit or proof of the criticisms.",
+      "verificationLocation": "Web-indexed primary PDF cover and physical pages 2 and 8 identify author, 21 February 2026 date, version 4.0 and paragraph 3.1.4. Local DNS resolution fails: no raw PDF hash or second-reader verification available.",
+      "workId": "tonkin-myanmar-rohingya-2026",
+      "relatedUrls": [],
+      "targets": [
+        {
+          "country": "burma",
+          "series": "note:bangladesh-rohingya",
+          "editionId": "9af70f7edeb2e0f5",
+          "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked",
+          "citationFindingsMapped": false
+        }
+      ],
+      "author": "Derek Tonkin",
+      "reviewedEdition": {
+        "country": "burma",
+        "series": "note:bangladesh-rohingya",
+        "label": "Myanmar: Rohingya (including Rohingya in Bangladesh), January 2026",
+        "month": "2026-01",
+        "version": "4.0"
+      },
+      "applications": [
+        {
+          "id": "myanmar-icc-warrant-2026",
+          "kind": "ai",
+          "target": {
+            "country": "burma",
+            "series": "note:bangladesh-rohingya",
+            "editionId": "9af70f7edeb2e0f5",
+            "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86"
+          },
+          "assessment": "supported",
+          "severity": "major",
+          "scope": "Internal inconsistency about an ICC application and an issued warrant",
+          "paragraphs": [
+            "3.1.4",
+            "9.6.2"
+          ],
+          "reviewFinding": "Tonkin says paragraph 3.1.4 incorrectly presents the prosecutor’s application as a warrant issued by the ICC.",
+          "response": "No published Home Office response to this individual commentary found.",
+          "summary": "The held January 2026 web text says issued in 3.1.4, while 9.6.2 explicitly describes an application. The ICC situation summary also describes an application. This supports the specific internal-consistency criticism; it does not establish that no later or confidential warrant exists, or endorse the commentary’s wider risk assessment.",
+          "author": "Codex · interactive AI analysis",
+          "reviewedAt": "2026-10-05",
+          "publication": {
+            "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=8",
+            "location": "Physical PDF page 8; indexed text, local copy unavailable"
+          },
+          "evidenceLinks": [
+            {
+              "url": "https://www.icc-cpi.int/bangladesh-myanmar",
+              "title": "ICC situation summary: application for an arrest warrant"
+            }
+          ],
+          "verification": {
+            "cpinBodySha": "9af70f7edeb2e0f5bd025a13808f2b30b108323d0cf15d68c894b0adfb619fbf",
+            "method": "Verbatim web paragraphs compared directly; original ICC summary checked through web index. Review PDF local DNS unavailable; no PDF wording difference asserted."
+          }
+        }
+      ],
+      "publishers": [
+        "Network Myanmar / Derek Tonkin"
       ]
     }
   ]

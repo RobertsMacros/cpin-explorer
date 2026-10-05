@@ -25,6 +25,14 @@ export function backgroundReviews(reviews, target) {
   const exact = new Set(reportReviews(reviews, target).map((r) => r.id));
   return reviews.filter((r) => r.countries?.includes(target.country) && !exact.has(r.id));
 }
+export function applicationChecks(reviews, target) {
+  // A fresh follow-up on a later edition is our AI assessment, not evidence
+  // that the original reviewer audited that edition or every citation in it.
+  return reviews.flatMap((r) => (Array.isArray(r.applications) ? r.applications : []).filter((a) => a?.kind === "ai"
+    && /^[a-f0-9]{16,64}$/.test(a.target?.editionId || "") && /^[a-f0-9]{64}$/.test(a.target?.textSha || "")
+    && ["country", "series", "editionId", "textSha"].every((key) => a.target[key] && a.target[key] === target[key]))
+    .map((a) => ({ ...a, reviewTitle: r.title, reviewUrl: r.url })));
+}
 export function sourceCopies(copies, target) {
   return copies.filter((r) => /^[a-f0-9]{64}$/.test(r.sha256 || "") && httpUrl(r.url)
     && r.targets?.some((t) => ["country", "series", "editionId", "textSha", "footnote"].every((key) => t[key] === target[key])
@@ -120,6 +128,7 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
   const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
   const manual = active.find((r) => r.kind === "manual");
   const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai");
+  const followups = applicationChecks([...editionReviews, ...countryReviews], target);
   const states = { note: "Private note", checked: "Checked this citation", "minor-issue": "Minor error · yellow flag", "major-issue": "Major error · red flag" };
   const editorStatus = manual?.status === "issue" ? (manual.severity ? `${manual.severity}-issue` : "issue") : manual?.status;
   if (editorStatus === "issue") states.issue = "Issue recorded · choose severity";
@@ -148,6 +157,16 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
       ${publicLoading ? '<p class="sr-meta">Loading AI review records…</p>' : ""}
       ${publicUnavailable ? '<p class="sr-meta">AI review records could not be loaded.</p>' : ""}
       ${ai.length ? ai.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No AI review recorded for this citation.</p>' : ""}
+      ${followups.length ? `<details class="sr-review-followups"><summary>Published-review follow-up for this edition (${followups.length})</summary>
+        <p class="sr-meta">Scoped AI comparisons with published reviews. These do not check every citation or provide human sign-off.</p>
+        ${followups.map((a) => `<article class="sr-record"><p class="sr-meta">${["major", "minor"].includes(a.severity) ? badgeHtml([{kind:"ai",status:"possible-issue",severity:a.severity}]) + " " : ""}${esc(a.assessment)} · ${esc(a.scope)}</p>
+          <p><strong>Published criticism:</strong> ${esc(a.reviewFinding)}</p>
+          ${a.response ? `<p><strong>Home Office response:</strong> ${esc(a.response)}</p>` : ""}
+          <p><strong>AI follow-up:</strong> ${esc(a.summary)}</p>
+          <p class="sr-meta">${esc(a.author)} · ${esc(a.reviewedAt)} · ${esc((a.paragraphs || []).join(", "))}</p>
+          ${(a.evidenceLinks || []).length ? `<p>${a.evidenceLinks.map((e) => link(e.url, e.title || "Evidence")).join(" · ")}</p>` : ""}
+          <p>${link(a.publication?.url || a.reviewUrl, a.reviewTitle)}${a.publication?.location ? ` · ${esc(a.publication.location)}` : ""}</p>
+          </article>`).join("")}</details>` : ""}
     </section>
     <section class="sr-review-group" data-review-kind="manual"><h3 class="sr-group-heading">Manual additions</h3>
     ${manual ? recordHtml(manual) : '<p class="sr-meta">No manual additions yet.</p>'}

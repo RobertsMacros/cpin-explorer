@@ -23,6 +23,22 @@ It has three parts:
 
 ## Status
 
+**5 October 2026: review-first backfill and scoped 2026 comparisons.**
+The directory now contains 60 publications from nine publishers, including newly
+found historical IAGCI packages, ARC critiques and 2026 publications. Sixteen
+scoped AI follow-ups across eight held 2026 reports appear separately in the
+footnote overlay. They preserve criticisms and replies and identify corrected,
+unresolved and supported points. A major report-level AI flag records Myanmar’s
+ICC application/warrant inconsistency. Historical Afghanistan and Colombia
+citation findings stay with their original editions; no human tick is inferred.
+The search is thorough but bounded, with four inaccessible publisher indexes;
+it is not exhaustive, and entire publications and most citations remain
+unassessed. The 2026 inventory has 48 editions and 10,162 footnotes; source-cache
+reuse makes no new requests or paid AI calls. All 324 Python and 339 JavaScript
+tests and canonical verification pass. See [findings, search coverage and the
+48-edition inventory](docs/reviews/2026-10-05-published-reviews-2026.md).
+
+
 **5 October 2026: all found reviews and further Syria checks live; 2020 backfill prepared.**
 All 44 curated publications are available from footnote overlays as exact-edition
 reviews or explicitly unassessed country background. Checked EUAA PDF copies

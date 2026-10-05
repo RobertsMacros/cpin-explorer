@@ -53,6 +53,15 @@ def load_registry(path):
                     or not re.fullmatch(r"[a-f0-9]{16,64}", t.get("editionId", ""))
                     or not re.fullmatch(r"[a-f0-9]{64}", t.get("textSha", ""))):
                 raise ValueError("Invalid edition mapping")
+        for a in r.get("applications", []):
+            t = a.get("target", {})
+            if (a.get("kind") != "ai" or a.get("assessment") not in {"supported", "partly supported", "disputed", "unresolved", "superseded"}
+                    or not t.get("country") or not t.get("series")
+                    or not re.fullmatch(r"[a-f0-9]{16,64}", t.get("editionId", ""))
+                    or not re.fullmatch(r"[a-f0-9]{64}", t.get("textSha", ""))
+                    or (a.get("severity") is not None and a["severity"] not in {"minor", "major"})
+                    or not all(a.get(k) for k in ("scope", "summary", "reviewFinding", "author", "reviewedAt"))):
+                raise ValueError("Invalid published-review follow-up")
     return registry
 
 
@@ -67,7 +76,7 @@ def directory_markdown(registry, destination):
     names = {p["id"]: p["name"] for p in registry["publishers"]}
     lines = ["# Published country-report review directory", "",
              f"Checked {registry['checkedAt']}. {len(names)} publishers; {len(registry['reviews'])} curated publications.", "",
-             "All findings remain independently unassessed. Dates below are publication dates, not the dates of the reports reviewed. "
+             "Directory inclusion does not assess a whole publication. Selected, separately labelled AI follow-ups are available in the overlay. Dates below are publication dates, not the dates of the reports reviewed. "
              "A link’s inclusion does not certify its arguments or make them applicable to a newer edition.", "",
              "The repeatable collector and assessment rules are in [the method](../methods/published-reviews.md). "
              "Raw snapshots and newly discovered candidates stay in the private local cache.", "",
@@ -124,7 +133,10 @@ def discovery_links(content, base, allowed_hosts, *, attachments=False):
         label = " ".join(a.text_content().split())
         text = label + " " + urlsplit(url).path.replace("-", " ").replace("_", " ")
         pdf = urlsplit(url).path.lower().endswith(".pdf") or a.get("type") == "application/pdf"
-        pagination = "next" in a.get("rel", "").split() or label.lower() in {"next", "next page", "older posts", "older entries"}
+        navigation = label.lower().strip("«»‹›←→ \t")
+        pagination = ("next" in a.get("rel", "").split()
+                      or navigation in {"next", "next page", "older posts", "older entries"}
+                      or a.get("aria-label", "").lower() in {"next page", "go to next page"})
         if pagination:
             found[url] = {"url": url, "label": label, "kind": "pagination"}
         elif (REVIEW.search(text) and PRODUCT.search(text)) or (attachments and pdf):
@@ -148,7 +160,7 @@ def due(record, age_days):
         return True
 
 
-def refresh(registry, out, *, max_age=7, max_requests=100, retriever=None):
+def refresh(registry, out, *, max_age=7, max_requests=100, index_pages=3, retriever=None):
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     previous = cached_records(out)
@@ -167,6 +179,7 @@ def refresh(registry, out, *, max_age=7, max_requests=100, retriever=None):
         if old.get("fetched_at"):
             retriever.client.remember_request(old.get("final_url") or old["url"], old["fetched_at"])
     queue, seen, page_counts = deque(), set(), Counter()
+    index_visited, index_gaps, index_limited, index_queued = [], [], set(), set()
     for p in registry["publishers"]:
         for url in p["discoveryUrls"]:
             queue.append({"url": url, "publisherIds": [p["id"]], "kind": "index", "depth": 0})
@@ -245,6 +258,10 @@ def refresh(registry, out, *, max_age=7, max_requests=100, retriever=None):
                             results["hash-mismatch"] += 1
             results[str(receipt.get("status", "unknown"))] += 1
             quality_counts[receipt.get("quality", {}).get("state", "unavailable")] += 1
+            if item["kind"] == "index":
+                index_visited.append(url)
+                if not content or not receipt.get("quality", {}).get("readable_source"):
+                    index_gaps.append(url)
             if not content or not receipt.get("quality", {}).get("readable_source") or receipt.get("mime") not in {"text/html", "application/xhtml+xml"}:
                 continue
             allowed = {h for p in registry["publishers"] if p["id"] in item["publisherIds"] for h in p["allowedHosts"]}
@@ -252,13 +269,18 @@ def refresh(registry, out, *, max_age=7, max_requests=100, retriever=None):
             attachments = 0
             for link in links:
                 if link["kind"] == "pagination":
-                    # Only pagination of curated index paths, at most three extra pages per publisher.
+                    # Only explicit pagination of curated index paths. Report
+                    # limits rather than silently implying a completed search.
                     if item["kind"] != "index" or urlsplit(link["url"]).path.split("/page/")[0].rstrip("/") != urlsplit(url).path.split("/page/")[0].rstrip("/"):
                         continue
                     key = tuple(item["publisherIds"])
-                    if page_counts[key] >= 3 or link["url"] in seen:
+                    if link["url"] in seen or link["url"] in index_queued:
+                        continue
+                    if page_counts[key] >= index_pages:
+                        index_limited.add(link["url"])
                         continue
                     page_counts[key] += 1
+                    index_queued.add(link["url"])
                     queue.append({**link, "kind": "index", "publisherIds": item["publisherIds"], "depth": 0})
                     continue
                 if item["depth"] >= 2:
@@ -279,6 +301,9 @@ def refresh(registry, out, *, max_age=7, max_requests=100, retriever=None):
     summary = {"started": started, "finished": now_iso(), "requests": requests,
                "outcomes": dict(results), "quality": dict(quality_counts), "candidateUrls": len(candidates), "changed": changed,
                "pending": len({source_url(i["url"]) for i in queue} - seen), "stopped": stopped,
+               "indexTraversal": {"visited": index_visited, "inaccessible": index_gaps,
+                                  "paginationLimited": sorted(index_limited), "extraPageLimit": index_pages,
+                                  "complete": not index_gaps and not index_limited and not stopped and not queue},
                "aiChecks": 0, "automaticFindingsPublished": 0}
     write_json(out / "summary.json", summary)
     return summary

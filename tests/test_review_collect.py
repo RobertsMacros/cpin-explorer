@@ -41,6 +41,31 @@ def test_discovery_filters_navigation_and_external_hosts_but_accepts_internation
     assert all('evil.org' not in l['url'] for l in links)
 
 
+def test_wordpress_and_drupal_next_links_are_not_silently_missed():
+    links = discovery_links(b'''<a href="/reviews/page/2/">&laquo; Older Entries</a>
+      <a href="/reviews/?page=1" aria-label="Go to next page">&gt;</a>''',
+      'https://example.org/reviews/', {'example.org'})
+    assert len(links) == 2 and all(l['kind'] == 'pagination' for l in links)
+
+
+def test_index_traversal_reports_pagination_limits(tmp_path):
+    def handler(req):
+        if req.url.path == '/robots.txt': return httpx.Response(404)
+        page = 3 if '/page/2/' in req.url.path else 2
+        return httpx.Response(200, text='<html><main><p>' + 'COI evidence. '*30
+            + f'</p><a href="/reviews/page/{page}/">&laquo; Older Entries</a></main></html>',
+            headers={'content-type':'text/html'})
+    retriever = make_retriever(handler)
+    try:
+        result = refresh(REGISTRY, tmp_path, index_pages=1, retriever=retriever)
+        audit = result['indexTraversal']
+        assert len(audit['visited']) == 2
+        assert audit['paginationLimited'] == ['https://example.org/reviews/page/3/']
+        assert not audit['complete']
+    finally:
+        retriever.close()
+
+
 def test_search_tracking_is_removed_without_losing_document_query_identity():
     links = discovery_links(b'<html><a href="/cpin-review/?id=17&amp;_rt_nonce=abc&amp;_rt=1">CPIN review</a></html>',
                             'https://gardencourtchambers.co.uk/', {'gardencourtchambers.co.uk'})

@@ -1,11 +1,32 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { activeRecords, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
+import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
 const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, severity: "minor", author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
+
+test("later-edition follow-ups stay separate from external findings and citation badges", () => {
+  const application = { kind:'ai', target:{...target}, assessment:'superseded', scope:'Old passage only',
+    reviewFinding:'Older criticism', summary:'Specific wording removed', author:'AI reviewer', reviewedAt:'2026-10-05' };
+  const review = {id:'old', title:'Original review', url:'https://example.org/review', applications:[application]};
+  assert.equal(applicationChecks([review], target).length, 1);
+  for (const key of ['editionId','textSha','country','series'])
+    assert.equal(applicationChecks([review], {...target,[key]:'other'}).length, 0);
+  assert.equal(applicationChecks([{...review,applications:[{...application,kind:'manual'}]}],target).length,0);
+  const panel = panelHtml(target, [], {countryReviews:[review]});
+  assert.match(panel,/Published-review follow-up for this edition/);
+  assert.match(panel,/Specific wording removed/);
+  assert.match(panel,/do not check every citation/);
+  assert.equal(reviewStatus([]).tone,'grey');
+  assert.equal(applicationChecks([{...review,applications:{}}],target).length,0);
+  const issuePanel=panelHtml(target, [], {countryReviews:[{...review,applications:[{...application,severity:"major",assessment:"supported"}]}]});
+  assert.match(issuePanel,/sr-red/);
+  assert.match(issuePanel,/awaiting human review/);
+  const escaped = panelHtml(target, [], {countryReviews:[{...review,applications:[{...application,summary:'<script>bad</script>'}]}]});
+  assert.ok(!escaped.includes('<script>bad</script>'));
+});
 
 test("a matching report copy preserves the original source and never awards a checked tick", async () => {
   const data = JSON.parse(await readFile(new URL('../../prototypes/reviews/source-copies.json', import.meta.url)));
@@ -139,7 +160,7 @@ test("published pilot is an external finding with the original edition and sourc
   assert.equal(data.records[0].kind, "external");
   assert.equal(data.records[0].target.editionId, "a7c78fef364ac1e2");
   assert.match(data.records[0].summary, /internal consistency/);
-  assert.match(data.coverage, /No automatic AI checks/);
+  assert.match(data.coverage, /No exhaustive contradiction analysis or human sign-off/);
 });
 
 test("new Syria wording checks retain exact current edition identity and source page evidence without human approval", async () => {

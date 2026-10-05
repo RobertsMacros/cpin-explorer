@@ -17,6 +17,8 @@ certify that a finding is correct. Review publishers can be added internationall
 | Rainbow Migration | Specialist LGBTQI+ asylum organisation; joint Georgia commentary with Asylos | [Publications and news](https://www.rainbowmigration.org.uk/news/) |
 | IAGCI / ICIBI | Independent expert reviews through the statutory inspection process, with Home Office responses | [Review collection](https://www.gov.uk/government/collections/the-independent-advisory-group-on-country-information-iagci) |
 | Helen Bamber Foundation | Survivor casework and sourced Albania briefing | [Resources](https://www.helenbamber.org/resources) |
+| UNHCR | Official international protection guidance, labelled as country context | [Albania guidance](https://www.refworld.org/policy/countrypos/unhcr/2026/en/151369) |
+| Network Myanmar / Derek Tonkin | Identified individual author and primary-hosted annotated commentary; no institutional peer review established | [Website](https://www.networkmyanmar.org/) |
 
 ILPA, EIN and ecoi.net can help discover reviews, but a republished copy is not a
 second independent review. General UNHCR, Amnesty or Human Rights Watch country
@@ -31,12 +33,13 @@ From the repository root:
 ./cpin reviews                         # metadata and analysis contexts; no network
 ./cpin reviews --refresh               # check addresses older than seven days
 ./cpin reviews --refresh --max-age 0    # force a fresh, polite check
+./cpin reviews --refresh --index-pages 100 --limit 500  # deeper bounded backfill
 ```
 
 The existing `PoliteClient`, redirect guards and raw PDF/HTML extraction are reused.
 No new crawler library is introduced. The collector checks the configured indexes,
 curated publications and previously discovered candidates. It follows likely
-review links, up to three extra index pages per publisher and two levels of document
+review links, up to three extra index pages per publisher by default (`--index-pages` changes the cap) and two levels of document
 links, within the explicit publisher host allowlist. Traversal is bounded, so it
 does not establish exhaustive coverage of a publisher’s archives. The default run
 has a 100-address limit, 25 MiB per response, a 512 MiB private document cache and a
@@ -50,7 +53,7 @@ Changed documents enter the recheck queue; prior bytes remain available. A recen
 failed address is not retried until its refresh interval expires, unless forced.
 No private third-party text is automatically approved for public display or model
 use. New discoveries stay private in `candidates.json`; no automatic finding or
-quotation is published. `summary.json` records gaps, limits and changed URLs.
+quotation is published. `summary.json` records gaps, limits and changed URLs. Its `indexTraversal` names visited indexes, inaccessible indexes and pagination stopped by the cap; a completed linked traversal does not establish universal search coverage.
 
 This command is repeatable. A scheduler is a separate configuration; the seven-day
 cache interval alone does not cause it to run automatically. The GitHub daily sync
@@ -90,7 +93,7 @@ including the Home Office response when published. Distinguish factual contradic
 omitted qualification, unsupported inference, policy/legal argument and later
 country developments. Record our assessment separately as unassessed, supported,
 partly supported, disputed, unresolved or superseded, with reasons and evidence.
-The present curated records all have **unassessed** merits.
+Whole-publication merits remain **unassessed**. Selected arguments now have separate `applications` with our AI assessment, exact current-edition identity, scope, paragraph locations, reasoning and published responses. These appear in the **AI review** section, never as approval from the original reviewer or as a source-level flag for every citation. A report-level issue can have a severity flag inside its scoped follow-up, while unrelated footnote badges stay unchanged. See [the 2026 run](../reviews/2026-10-05-published-reviews-2026.md).
 
 Joint reviews and mirrors share a work identity. Keep corrigenda and revisions
 linked to the original; do not treat them as independent corroboration. In particular,

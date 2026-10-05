@@ -3,6 +3,24 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Published-review search and 2026 follow-ups, 5 October 2026
+
+The newer directory has 60 publications and nine publishers. Sixteen scoped AI
+comparisons across eight held 2026 reports are separate from attributed external
+findings and manual notes. A specific Myanmar assessment/country-information
+inconsistency concerns an ICC application versus an issued warrant. Older
+Afghanistan/Colombia flags do not transfer to corrected 2026 passages. There are
+48 held editions and 10,162 footnotes in the 2026 inventory, not 10,162 completed
+checks. Whole-publication merits and bulk semantic analysis remain pending.
+
+Read [the search audit and current findings](reviews/2026-10-05-published-reviews-2026.md).
+The search found omissions and remains bounded by four inaccessible indexes;
+never call it universally exhaustive or treat reviewers as automatically correct.
+`./cpin reviews --refresh --index-pages 100 --limit 500` follows explicit linked
+pagination and reports access/cap gaps. New discoveries still need curation;
+collection makes no AI or paid API calls. Local verification is 324 Python tests,
+339 JavaScript tests and canonical hashes/completeness. No recurring job added.
+
 ## Review integration and 2020 backfill, 5 October 2026
 
 The latest work exposes all 44 found review publications in footnote overlays,
