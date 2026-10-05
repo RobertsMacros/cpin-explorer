@@ -23,6 +23,19 @@ It has three parts:
 
 ## Status
 
+**5 October 2026: expanded mechanical checks and overnight run started.**
+The private runner implements 51 rule types covering reference mappings, source
+identity signals, pinpoints, quotations and omissions, aligned figures, narrowly
+specified arithmetic and explicit evidence gaps. All 345 Python tests pass;
+450 Syria/Afghanistan pilot blocks completed without processing errors. A local,
+resumable background run is now screening all 116,125 linked blocks in the held
+since-2020 inventory, including bibliography entries. It uses held evidence and
+makes no requests or model calls. The full run is still in progress; candidates
+require inspection and do not automatically appear on the site. An hourly
+completion follow-up is enabled, quiet while the job is healthy. See the
+[catalogue](docs/methods/mechanical-source-checks.md) and
+[run record and limits](docs/reviews/2026-10-05-mechanical-overnight.md).
+
 **5 October 2026: local mechanical citation screen.** The since-2020 inventory's
 84,612 footnotes now have a private title/date triage record; 32,621 could be
 screened against readable held sources. All 10,764 source files used passed hash

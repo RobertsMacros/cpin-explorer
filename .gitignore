@@ -50,3 +50,6 @@ data/source-evidence/
 
 # Third-party review snapshots and unvetted discovery queue; never deployed.
 data/review-evidence/
+
+# Private bounded discovery work; the assessed report is retained in docs.
+data/research/mechanical-source-checks/

@@ -4,8 +4,9 @@ The owner requested an inventory of deterministic checks on 5 October 2026,
 with archive recovery deferred on the first pass. Use held source captures first;
 original-address retrieval can fill gaps under the existing polite collector.
 Do not start new archive searches for this pass. Existing archived captures may
-be screened with their provenance intact. This catalogue is a proposed extension
-to the existing title/date screen, not a record that all checks have run.
+be screened with their provenance intact. The private runner now implements 51
+rule types, including eligibility/gap routes as well as comparisons. Implementation
+is not proof that every rule applies to every passage or that any claim is correct.
 
 ## Result vocabulary
 
@@ -65,15 +66,119 @@ all relevant inputs; a change in a source, source pinpoint or relevant context
 invalidates the affected check. Reusing computation does not automatically
 extend a published external criticism to another edition.
 
-## Implemented versus proposed
+## Running the expanded screen
 
-The collector already records mapping diagnostics, reachability, redirects,
-source types, extraction status and immutable hashes. The first citation screen
-has run on all 84,612 indexed since-2020 footnotes, with title/date comparisons
-possible for 32,621 uses and 10,764 source objects hash-checked. It does not yet
-establish publisher identity, source pinpoint accuracy or contextual support.
-Quotation, numeric/arithmetic, qualifier and other comparisons in this catalogue
-are proposed and have not run across the collection. Their eligible counts and
-error rates are not yet measured. See the
-[first screen record](../reviews/2026-10-05-citation-identity-screen.md) and
-[batch review method](source-review-batches.md).
+```sh
+.venv/bin/python scripts/run_mechanical_checks.py \
+  --inventory data/source-evidence/since-2020 \
+  --out data/source-evidence/mechanical-overnight-2026-10-05 \
+  --cache data/source-evidence --max-hours 10 --max-gb 6
+```
+
+The active inventory contains 116,125 blocks with at least one HTTP source URL.
+The 4,012 other blocks remain outside this linked-source pass; their absence of a
+usable link is an evidence gap. Bibliography lines remain included and classified
+separately. Every occurrence retains its country, report, edition, full CPIN text
+hash, original citation, source capture and surrounding paragraphs.
+
+SQLite stores each occurrence, result history and shared comparisons. Only
+identical relevant context/citation/source inputs share computation. CPIN
+paragraph numbering and reference-marker changes can be ignored for source
+comparisons; mapping checks and dates remain occurrence-specific. Original href
+fragments survive the collector's fragment-free fetch URLs and invalidate reuse
+when the source pinpoint changes. Source bytes, extraction fingerprints, evaluator
+code and independent-reader changes invalidate affected cached work.
+
+Outputs remain private: `results.sqlite3`, `job.json`, `summary.json`,
+`candidates.csv`, `candidate-sample.json`, `REPORT.md` and compressed hash-keyed
+source readings. Summary/candidate exports are written at the end or a budget
+stop. The job checkpoints continuously, has a process lock, a 6 GiB derived-output
+budget and a 2 GiB free-space floor. It makes no requests or model calls and
+publishes no flags. An interrupted job resumes with the same command. Time/disk
+limits and processing errors are surfaced, not described as a completed review.
+
+The overnight LaunchAgent wraps the command in `caffeinate -i -s`, keeping idle
+sleep inhibited while it runs without keeping the display on. The Mac still needs
+to remain powered and operational; closing its lid can interrupt it. The task's
+follow-up checks completion and cleans up this one-off agent. It does not start
+another source collector or archive recovery.
+
+## Implemented rules and remaining boundaries
+
+The existing collector provides the URL receipts and raw source text. The new
+runner adds conservative quote/ellipsis location, bounded near-quote alignment,
+changed number/negation/qualifier/unit candidates, independent PDF corroboration,
+printed-label/physical-page and retained-fragment checks, document year and stable
+identifier signals, ISBN checksums, date/citation consistency and narrowly
+specified arithmetic. Typography-only differences remain observations. Metadata
+mismatches remain candidates, not established errors.
+
+Structured table-row interpretation, general paraphrase verification, legislation
+version applicability, legal holdings, publisher-alias authentication and historical
+source version selection remain unassessed. Rules explicitly route those cases to
+appropriate gaps. Numbers are compared within aligned quotations, never by finding
+the same number somewhere in a document. Numerical changes in PDFs do not become
+candidates without independent agreement. Ellipsis qualification flags identify
+words in omitted spans; they do not judge the omissions' materiality.
+
+The 450-block Syria/Afghanistan source-format pilots completed without processing
+errors. All 345 Python tests pass, including interrupted/resumed result reuse,
+changed-byte invalidation, paragraph versus source-pinpoint changes, ambiguous
+alignment, rounding, page numbering, negation preservation and independent-reader
+artefacts. This establishes tested runs, not an accuracy/error-rate benchmark or
+sustained unattended operation. See the [run record](../reviews/2026-10-05-mechanical-overnight.md)
+and [reuse decision](../research/mechanical-source-checks/REPORT.md).
+
+| Rule ID | Comparison or explicit route |
+| --- | --- |
+| `reference-target` | Footnote reference resolves in the retained index |
+| `duplicate-reference` | Duplicate footnote IDs/markers |
+| `source-url-boundary` | Possible punctuation or line-wrap in source URL |
+| `bibliography-link` | Source URL also occurs in the edition bibliography |
+| `bibliography-date` | Footnote and bibliography explicit publication dates |
+| `source-retrieval` | Recorded source retrieval outcome |
+| `source-redirect` | Recorded redirect destination |
+| `source-integrity` | Retained source bytes match their SHA256 |
+| `source-readable` | Usable source text rather than error/challenge response |
+| `source-scan-limit` | Whole source text fits the bounded first-pass scan |
+| `citation-title` | Candidate cited title in source front matter |
+| `document-edition-year` | Highly similar document titles name different years |
+| `identifier-conflict` | Different unique stable identifiers in front matter |
+| `citation-title-truncation` | Citation title contains ellipsis |
+| `citation-publisher` | Cited publisher name observed in front matter |
+| `publication-date` | Citation date versus explicit HTML publication metadata |
+| `source-future-date` | Source citation date later than known CPIN edition date |
+| `access-before-publication` | Explicit citation access date before publication |
+| `capture-applicability` | Held source capture versus historical CPIN edition |
+| `doi` | Cited DOI observed in source front matter |
+| `isbn` | Cited ISBN observed in source front matter |
+| `isbn-checksum` | Cited ISBN mathematical checksum |
+| `invalid-calendar-date` | Impossible explicit citation calendar date |
+| `case-identifier` | Neutral case citation/ECLI observed in source |
+| `source-html-fragment` | Cited HTML ID/name fragment exists |
+| `source-text-fragment` | Browser text-fragment excerpt located |
+| `source-physical-page` | Explicit PDF #page target within physical pages |
+| `source-printed-page` | Cited printed page resolved using declared PDF labels |
+| `source-paragraph` | Cited source paragraph number located |
+| `quotation-exact` | Complete candidate quotation located |
+| `quotation-ellipsis` | Quoted segments located in order and gaps retained |
+| `quotation-repetition` | Repeated quotation locations remain ambiguous |
+| `quotation-pinpoint` | Quotation occurs at the resolved source location |
+| `quotation-independent-reader` | PDF text match checked with independent reader |
+| `quotation-near-match` | Bounded comparison with uniquely aligned similar text |
+| `near-match-independent-reader` | Independent PDF reader supports the same aligned differences |
+| `changed-number` | Numbers differ in a bounded near-matching quotation |
+| `changed-negation` | Negation differs in a bounded near-matching quotation |
+| `changed-qualifier` | Bound/estimate wording differs in aligned text |
+| `changed-unit` | Units differ in aligned text |
+| `editorial-insertion` | Square-bracket additions in quoted wording |
+| `figure-context` | Numbers belong to a located quotation, not a global number search |
+| `percentage-arithmetic` | Explicit n out of N percentage within rounding tolerance |
+| `impossible-percentage` | Ordinary explicit percentages outside 0–100 |
+| `reversed-range` | Explicit from X to Y ranges ordered where labelled as a range |
+| `duplicate-url-citation-date` | Same source URL given different citation dates in edition |
+| `source-pinpoint-present` | Source pinpoint preserved in comparison inputs |
+| `source-content-type` | PDF-looking address versus retained document type |
+| `table-scope` | Table/cell claims routed away from plain-text approval |
+| `legal-scope` | Legal meaning/version applicability remains contextual |
+| `contextual-support` | Contextual assessment is outside mechanical screening |
