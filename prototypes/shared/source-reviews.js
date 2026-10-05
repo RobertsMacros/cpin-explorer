@@ -29,8 +29,18 @@ export function activeRecords(records) {
 }
 export function reviewStatus(records) {
   const active = activeRecords(records);
-  if (active.some((r) => ["manual", "external"].includes(r.kind) && r.status === "issue")) return { tone: "red", symbol: "⚑", label: "Issue identified by a reviewer" };
-  if (active.some((r) => r.kind === "ai" && r.status === "possible-issue")) return { tone: "yellow", symbol: "⚑", label: "AI flag · awaiting review" };
+  const issues = active.filter((r) => (["manual", "external"].includes(r.kind) && r.status === "issue")
+    || (r.kind === "ai" && r.status === "possible-issue"));
+  for (const [severity, tone] of [["major", "red"], ["minor", "yellow"]]) {
+    const finding = issues.find((r) => r.severity === severity);
+    if (finding) {
+      const by = { ai: "AI finding · awaiting human review", external: "Published reviewer’s finding", manual: "Local reviewer’s finding" }[finding.kind];
+      return { tone, symbol: "⚑", label: `${severity === "major" ? "Major" : "Minor"} error · ${by}` };
+    }
+  }
+  // Older private entries have no severity. Keep the issue visible without
+  // inventing an impact assessment or allowing a checked tick to hide it.
+  if (issues.length) return { tone: "grey", symbol: "⚑", label: "Issue recorded · severity not assigned" };
   if (active.some((r) => r.kind === "manual" && r.status === "checked" && r.author?.trim())) return { tone: "green", symbol: "✓", label: "Marked checked locally" };
   return { tone: "grey", symbol: "○", label: active.some((r) => r.kind === "ai" && r.status === "no-issue") ? "AI found no issue · not human reviewed" : "No human review recorded" };
 }
@@ -53,14 +63,17 @@ export function createPrivateStore(getStorage = () => globalThis.localStorage) {
   }
   return {
     load,
-    save(target, { status, author, organisation = "", comment = "", excerpt = "" }, now = new Date().toISOString()) {
+    save(target, { status, severity, author, organisation = "", comment = "", excerpt = "" }, now = new Date().toISOString()) {
+      if (["minor-issue", "major-issue"].includes(status)) { severity = status.split("-")[0]; status = "issue"; }
       if (!validTarget(target)) throw new Error("This citation cannot be anchored reliably; review it in the original document.");
       if (!["note", "checked", "issue"].includes(status)) throw new Error("Choose a review status.");
+      if (status === "issue" && !["minor", "major"].includes(severity)) throw new Error("Choose minor or major error.");
       if (!author.trim()) throw new Error("Enter the reviewer's name.");
       if (!comment.trim()) throw new Error("Add a note describing what you checked or found.");
       const record = { id: globalThis.crypto.randomUUID(), kind: "manual", target: { ...target }, status,
         author: author.trim().slice(0, 120), organisation: organisation.trim().slice(0, 120),
         comment: comment.trim().slice(0, 4000), excerpt: excerpt.trim().slice(0, 4000), reviewedAt: now };
+      if (status === "issue") record.severity = severity;
       journal = [...load(), record];
       try {
         const storage = getStorage();
@@ -84,7 +97,8 @@ function evidenceHtml(r) {
 }
 function recordHtml(r, previous = false) {
   const kind = { ai: "AI review", external: "Published review", manual: "Private human review · self-reported" }[r.kind] || "Review";
-  return `<article class="sr-record"><p class="sr-meta">${esc(kind)}${previous ? " · previous entry" : ""}</p>
+  const impact = ["issue", "possible-issue"].includes(r.status) ? ({ major: " · Major error", minor: " · Minor error" }[r.severity] || " · Severity not assigned") : "";
+  return `<article class="sr-record"><p class="sr-meta">${esc(kind)}${impact}${previous ? " · previous entry" : ""}</p>
     <p>${esc(r.comment || r.summary || "")}</p>
     ${r.kind === "external" ? '<p class="sr-meta">Reviewer’s finding · not independently assessed here.</p>' : ""}
     <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
@@ -96,7 +110,9 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
   const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
   const manual = active.find((r) => r.kind === "manual");
   const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai");
-  const states = { note: "Private note", checked: "Checked this citation", issue: "Issue found" };
+  const states = { note: "Private note", checked: "Checked this citation", "minor-issue": "Minor error · yellow flag", "major-issue": "Major error · red flag" };
+  const editorStatus = manual?.status === "issue" ? (manual.severity ? `${manual.severity}-issue` : "issue") : manual?.status;
+  if (editorStatus === "issue") states.issue = "Issue recorded · choose severity";
   const scope = target.paragraph ? `Paragraph ${target.paragraph} · ${target.section}` : "This footnote";
   return `<section class="sr-source" data-source-url="${esc(target.sourceUrl || "")}">
     <p class="sr-scope">${esc(scope)}</p>${badgeHtml(records)}
@@ -124,7 +140,7 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
       <p class="sr-meta">Only kept in this browser. Names and organisations are self-reported; this is not a team sign-off.</p>
       <label>Your name<input name="author" required maxlength="120" autocomplete="name" value="${esc(manual?.author || "")}"></label>
       <label>Organisation (optional)<input name="organisation" maxlength="120" value="${esc(manual?.organisation || "")}"></label>
-      <label>Status<select name="status">${Object.entries(states).map(([v, label]) => `<option value="${v}"${manual?.status === v ? " selected" : ""}>${esc(label)}</option>`).join("")}</select></label>
+      <label>Status<select name="status">${Object.entries(states).map(([v, label]) => `<option value="${v}"${editorStatus === v ? " selected" : ""}>${esc(label)}</option>`).join("")}</select></label>
       <label>What you checked or found<textarea name="comment" required maxlength="4000" rows="3">${esc(manual?.comment || "")}</textarea></label>
       <label>Source passage (optional)<textarea name="excerpt" maxlength="4000" rows="4" placeholder="Paste the relevant passage for comparison here">${esc(manual?.excerpt || "")}</textarea></label>
       <button type="submit" class="btn">Save private review</button><p class="sr-form-result" role="status"></p>

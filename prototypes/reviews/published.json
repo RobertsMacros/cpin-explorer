@@ -24,7 +24,9 @@
         "title": "IAGCI review: Afghanistan and Colombia",
         "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=49",
         "location": "Printed page 43 (PDF page 49)"
-      }
+      },
+      "severity": "major",
+      "severityReason": "The published reviewer identifies an internal inconsistency affecting the account of returnee treatment; potentially material to the report assessment. The finding remains attributed and not independently assessed here."
     },
     {
       "id": "iagci-afghanistan-2026-returnees-280",
@@ -59,7 +61,9 @@
         "publicDisplayApproved": true,
         "rightsBasis": "Limited attributed quotation for criticism/review of the CPIN under fair dealing; no whole-article reproduction.",
         "rightsAssessment": "An 11-word passage supporting a specific published criticism, with author, article title, location and link. The accompanying criticism supplies the review purpose; the extract does not substitute for the article. This is a scoped editorial assessment, not a blanket licence for this publisher or for AI ingestion."
-      }
+      },
+      "severity": "major",
+      "severityReason": "The published reviewer identifies an internal inconsistency affecting the account of returnee treatment; potentially material to the report assessment. The finding remains attributed and not independently assessed here."
     },
     {
       "id": "ai-syria-military-2025-fn5-link-mismatch",
@@ -107,7 +111,9 @@
         "cpinBodySha": "752f74bfa052f37c2136a9fed27c5b028c328d94c89ccaa6343f3e45b7cda582",
         "intendedSourceSha": "73a810fcce555759e52dd1c293e145cd047d192849393b7493b4fe33f957c89a",
         "publishedReviewContext": "Historical IAGCI 2014 and EASO 2020 reviews do not address this July 2025 citation; no merits findings imported."
-      }
+      },
+      "severity": "minor",
+      "severityReason": "The citation opens the wrong report, but the intended report supports the stated ages and service duration."
     },
     {
       "id": "ai-syria-kurds-2025-fn202-quote-check",

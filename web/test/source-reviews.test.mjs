@@ -5,7 +5,7 @@ import { activeRecords, badgeHtml, createPrivateStore, forTarget, httpUrl, panel
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
-const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
+const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, severity: "minor", author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
 
 test("whole-report reviews are edition-bound context and never source flags", () => {
   const r = { kind: "direct-review", reviewedProduct: "uk-cpin", title: "Named review", url: "https://example.org/review.pdf",
@@ -32,14 +32,41 @@ test("AI alone never awards a green tick, and a local check cannot hide an indep
   assert.equal(reviewStatus([record("ai", "possible-issue")]).tone, "yellow");
   assert.equal(reviewStatus([record("manual", "checked")]).tone, "green");
   assert.equal(reviewStatus([record("manual", "checked", { author: "" })]).tone, "grey");
-  assert.equal(reviewStatus([record("manual", "checked"), record("external", "issue")]).tone, "red");
+  assert.equal(reviewStatus([record("manual", "checked"), record("external", "issue", { severity: "major" })]).tone, "red");
   assert.equal(reviewStatus([record("manual", "checked"), record("ai", "possible-issue")]).tone, "yellow");
+});
+
+test("flag colour describes severity regardless of reviewer, with major findings taking priority", () => {
+  for (const kind of ["ai", "external", "manual"]) {
+    const status = kind === "ai" ? "possible-issue" : "issue";
+    assert.equal(reviewStatus([record(kind, status, { severity: "major" })]).tone, "red");
+    assert.equal(reviewStatus([record(kind, status, { severity: "minor" })]).tone, "yellow");
+  }
+  assert.match(reviewStatus([record("ai", "possible-issue", { severity: "major" })]).label, /awaiting human review/);
+  assert.equal(reviewStatus([record("external", "issue"), record("ai", "possible-issue", { severity: "major" })]).tone, "red");
+  assert.deepEqual(reviewStatus([record("manual", "checked"), record("external", "issue", { severity: undefined })]),
+    { tone: "grey", symbol: "⚑", label: "Issue recorded · severity not assigned" });
+});
+
+test("manual review severity survives save/reload, and an unclassified issue must be assigned", () => {
+  const storage = new Map();
+  const access = () => ({ getItem: (k) => storage.get(k), setItem: (k, v) => storage.set(k, v) });
+  const store = createPrivateStore(access);
+  for (const severity of ["major", "minor"]) {
+    store.save(target, { status: `${severity}-issue`, author: "Jo", comment: "Checked the impact." });
+    const latest = createPrivateStore(access).load().at(-1);
+    assert.equal(latest.status, "issue");
+    assert.equal(latest.severity, severity);
+    assert.match(panelHtml(target, [latest]), new RegExp(`value="${severity}-issue" selected`));
+  }
+  assert.equal(reviewStatus(store.load()).tone, "yellow");
+  assert.throws(() => store.save(target, { status: "issue", author: "Jo", comment: "Unchecked impact." }), /minor or major/);
 });
 
 test("manual edits preserve history and only the latest decision is active", () => {
   const storage = new Map();
   const store = createPrivateStore(() => ({ getItem: (k) => storage.get(k), setItem: (k, v) => storage.set(k, v) }));
-  assert.equal(store.save(target, { status: "issue", author: "Jo", comment: "Different population." }).persisted, true);
+  assert.equal(store.save(target, { status: "issue", severity: "major", author: "Jo", comment: "Different population." }).persisted, true);
   store.save(target, { status: "checked", author: "Jo", comment: "Checked the narrower population.", excerpt: "Source passage." });
   const journal = store.load();
   assert.equal(journal.length, 2);
@@ -67,7 +94,7 @@ test("review text and links cannot inject active content; public evidence requir
   malicious.evidence = { quote: "Approved passage", title: "Published source", url: "https://example.org/a", publicDisplayApproved: true, rightsBasis: "permission" };
   assert.match(panelHtml(target, [malicious]), /Approved passage/);
   assert.equal(httpUrl("data:text/html,x"), "");
-  assert.match(badgeHtml([record("external", "issue")]), /Issue identified by a reviewer/);
+  assert.match(badgeHtml([record("external", "issue")]), /Minor error/);
 });
 
 test("published pilot is an external finding with the original edition and source anchored", async () => {

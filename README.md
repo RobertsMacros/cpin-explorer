@@ -43,6 +43,14 @@ passed; its deploy job was skipped, so the existing local Wrangler login was use
 This supersedes the earlier no-AI-analysis status below. See
 [scope, findings and gaps](docs/reviews/2026-10-05-syria-ai-and-source-gaps.md).
 
+The owner's subsequent severity rule is red for major errors and yellow for minor
+errors, regardless of reviewer type. The manual status menu records that choice;
+AI findings remain labelled as awaiting human review. The Syria citation-link
+mismatch is minor; the published Afghanistan returnee inconsistency is major
+because it affects the account of returnee treatment. Older private issues without
+severity retain a grey flag until classified. All 335 JavaScript tests pass;
+desktop and 390px touch checks confirm both severity choices survive reloads.
+
 **5 October 2026: Syria source pilot checked; reviews and Saved pins live.**
 For held editions published from 1 January 2023, the pilot indexes 17 snapshots,
 3,055 footnotes and 1,577 source/PDF addresses. Every address has a recorded outcome;

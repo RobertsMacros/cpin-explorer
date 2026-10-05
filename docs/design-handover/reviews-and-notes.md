@@ -42,8 +42,14 @@ PDF extraction pipeline.
 ### Footnote interaction and scale
 
 - Grey: not checked, checking or unable to check, with the precise state labelled.
-- Yellow: AI has flagged a possible issue, awaiting review.
-- Red: an internal or published reviewer has identified an issue, with attribution.
+- Yellow flag: a minor error, such as a citation-link mismatch that does not change
+  the supported claim.
+- Red flag: a major error that materially affects the claim or its assessment.
+  Colour describes impact, independently of whether the finding comes from AI,
+  a published review or a private reviewer. AI findings remain explicitly labelled
+  as awaiting human review, including red flags.
+- An older issue without an assigned severity keeps a grey flag until classified;
+  it is not silently treated as a minor error or hidden by a checked tick.
 - Green tick: a human has checked this use of the source, with the reviewer,
   date and scope shown. An AI run finding no issue is labelled separately and
   does not receive this human-check status.
@@ -51,6 +57,11 @@ PDF extraction pipeline.
 These states concern the **CPIN claim's use of the source**, not the source's
 general credibility. The same source can support one passage and conflict with
 another. Link reachability remains a separate status.
+
+Manual reviewers select Minor error or Major error in the existing status menu.
+Severity is recorded separately from reviewer identity and status. The most severe
+active finding determines the source's flag; a later local edit preserves history
+and cannot erase a separate published or AI finding.
 
 Fetch and extract sources through a background process; serve cached evidence
 in the overlay when it opens. Browser-side requests cannot reliably read other
