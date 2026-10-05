@@ -1,0 +1,2 @@
+# Download indices and supplied CSV exports use standard CRLF records.
+*.csv whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -28,8 +28,23 @@ holds 829/829 listed editions, with zero unresolved editions among the 32 retain
 ## Main integration and fresh checkout
 
 The remote advanced to `6bbbe5b` while the handover was being completed. It contains observation timestamps
-and the daily run log, not new source bodies or code. These observations must be preserved when integrating
-the reviewed branch. Fresh-checkout validation and the final GitHub outcome are recorded below when complete.
+and the daily run log, not new source bodies or code. The integration preserves all 794 changed remote observation timestamps or later local observations and
+all 20 run-log entries. The 408 conflicting image observation timestamps were resolved to the later value.
+All 405 stored source bodies remain byte-identical and all 707 PDF manifest identities and historical hashes
+are unchanged. CSV indices retain their standard CRLF records; `.gitattributes` makes the whitespace check
+accept those line endings rather than changing the supplied exports. Both staged and working-tree whitespace
+checks pass.
+
+A fresh tree assembled from the Git index passes all 277 Python tests and retained-data verification. With
+no original PDF directory, export preserves all 532 displayed PDF editions and all 535 reachable PDF IDs
+including aliases; every one of the 140 imported archive editions is reachable. The web-image cache was
+copied locally to simulate the deployment mirror cache. Search and site builds pass from this fresh tree:
+4,335 current search records and 7,905 site files (452 MB). This checks build reproducibility without
+requesting any archive PDF or depending on locally held originals. The rebuilt working checkout also passes
+322 JavaScript tests and produces the same site file count. The earlier browser checks still apply because
+this final review made no reader or extractor changes.
+
+The GitHub push and validation outcome will be added after the run finishes.
 
 Cloudflare secrets are absent. Pushing to `main` activates the rewritten daily workflow and push checks;
 it does not update the live site while publication is skipped. The live deployment remains `f389a3e`.
