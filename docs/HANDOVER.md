@@ -8,7 +8,7 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 The owner authorised pushing the completed work to `main` on 5 October. This supersedes the publication
 hold in the historical sections below. See [the main publication review](reviews/2026-10-05-main-review.md)
 for the final checks and GitHub outcome, and [the PDF-only cleanup review](reviews/2026-10-05-pdf-only-cleanup.md)
-for source evidence and the remaining reused-footnote-number limitation. Local suites now pass 277 Python
+for source evidence and the remaining reused-footnote-number limitation. Local suites now pass 278 Python
 and 322 JavaScript tests. Push validation runs without Cloudflare credentials; publication still requires
 both missing secrets. The scheduled workflow will be active on `main`, but a scheduled run remains unverified.
 

@@ -53,7 +53,7 @@ evidence of sustained operation.
 - **Citations:** saved highlights retain their saved edition, paragraph and source. A verified match in
   current guidance is shown separately; choosing “Cite the current edition instead” changes the citation.
   Reader, Saved and Word export were checked with an older Iran edition and a recovered Afghan PDF edition.
-- **Local verification:** 277 Python tests and 322 JavaScript tests; 405 stored bodies, 707 PDFs and 682 images
+- **Local verification:** 278 Python tests and 322 JavaScript tests; 405 stored bodies, 707 PDFs and 682 images
   match their hashes, with no integrity or current-collection completeness problems. The site build contains
   7,905 files (452 MB), within its configured hosting limits.
 - **PDF extraction, 5 October 2026:** `pdftext-6`; all 535 PDF-only files audited against raw source text

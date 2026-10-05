@@ -747,6 +747,10 @@ def build_dashboard(store: Store, countries_config: dict, series_out: Path | Non
 
 def export_dashboard(store: Store, out: Path, countries_config_path: Path = COUNTRIES_CONFIG,
                      series_out: Path | None = None) -> dict:
+    # A fresh build also needs the retained source-link checks; export them without fetching again.
+    if series_out:
+        from .linkcheck import export_link_status
+        export_link_status(store, Path(series_out).parent / "links")
     # The Home Office's own account, kept separately from country reports and their counts.
     about = store.root / "about" / "text.json"
     if series_out and about.exists():

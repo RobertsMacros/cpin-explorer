@@ -698,3 +698,27 @@ def test_two_files_recovered_at_one_address_keep_both_editions_and_extraction_jo
     series = json.loads((tmp_path / 'kenya' / 'note--conditions-prison.json').read_text())
     assert [(v['version'], v['id'], v['archive_url']) for v in series['versions']] == [
         ('1.0', 'b' * 16, old['archive_url']), ('2.0', 'c' * 16, latest['archive_url'])]
+
+
+def test_fresh_export_includes_retained_archive_links_without_rechecking(site, client, store, tmp_path, monkeypatch):
+    from cpin import linkcheck
+    from cpin.export import export_dashboard
+    from cpin.store import write_json
+
+    govuk(site)
+    sync(client, store)
+    entry = {"status": "broken", "code": 404, "used_by": ["kenya/report"],
+             "archived_url": "https://web.archive.org/web/20260101/https://source.example/report",
+             "archived_at": "2026-01-01T00:00:00Z"}
+    manifest = store.root / "links" / "manifest.json"
+    write_json(manifest, {"https://source.example/report": entry})
+    original = manifest.read_bytes()
+    monkeypatch.setattr(linkcheck, "check_links", lambda *a, **kw: pytest.fail("export must be offline"))
+    countries_config = tmp_path / "countries.json"
+    write_json(countries_config, CONFIG)
+    destination = tmp_path / "fresh-site" / "data"
+    export_dashboard(store, destination / "dashboard.json", countries_config, series_out=destination / "series")
+    links = json.loads((destination / "links" / "kenya.json").read_text())
+    assert links["https://source.example/report"]["archived_url"] == entry["archived_url"]
+    assert links["https://source.example/report"]["status"] == "broken"
+    assert manifest.read_bytes() == original

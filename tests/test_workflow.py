@@ -65,6 +65,7 @@ def test_push_checks_run_without_cloudflare_and_a_failed_test_cannot_deploy():
     assert 'if:' not in tests and 'secrets.' not in tests
     assert 'pytest -q' in tests and 'npm test' in tests and 'python -m cpin verify' in tests
     assert 'poppler-utils' in tests
+    assert tests.index('python -m cpin export') < tests.index('npm test')
     deploy = publication.split('\n  deploy:\n', 1)[1]
     assert 'needs: [test, check]' in deploy
     assert 'if: needs.check.outputs.ready' in deploy and 'always()' not in deploy

@@ -37,6 +37,8 @@ jobs:
         run: |
           pytest -q
           python -m cpin verify
+      - name: Export retained data for real-edition tests
+        run: python -m cpin export
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
