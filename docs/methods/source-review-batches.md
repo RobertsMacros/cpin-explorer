@@ -44,6 +44,11 @@ anchor checks. Unreferenced footnotes remain separately counted in the inventory
 
 ### Mechanical citation identity screening
 
+The [mechanical check catalogue](mechanical-source-checks.md) defines additional
+tests, prerequisites and scoped outcomes. Archive recovery is deferred for its
+first pass; an unavailable source remains an evidence gap rather than a claim
+error.
+
 ```sh
 .venv/bin/python scripts/check_citation_identity.py \
   --out data/source-evidence/since-2020
