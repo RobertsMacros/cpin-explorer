@@ -26,9 +26,13 @@ It has three parts:
 **5 October 2026: handover, archive integration and PDF-only cleanup pushed to `main`.**
 The owner authorised the push on 5 October. GitHub validation of `e06b66a` passed all 278 Python and
 322 JavaScript tests, including retained-data verification and the offline export. Publication checks are recorded in
-[the main review](docs/reviews/2026-10-05-main-review.md). The live site remains the earlier deployment from
-`f389a3e`; Cloudflare publication requires the missing repository secrets. These are tested runs, not
-evidence of sustained operation.
+[the main review](docs/reviews/2026-10-05-main-review.md). At the owner's subsequent request, the live site
+was updated from reviewed `main` commit `e176b37` using local Wrangler authentication. Cloudflare version
+`687bb668-ad2b-4bd4-8539-0c3042fc2a6b` is serving 100% of traffic. Live checks match 143 assets byte for byte,
+including the histories containing all 140 imported editions. The dashboard-to-archive reader flow and
+National Archives source panel pass in Chromium at 1280×720, with no relevant console warnings or errors.
+GitHub's two Cloudflare secrets are still missing, so automatic publication remains unavailable. These are
+tested runs, not evidence of sustained operation.
 
 - **Held and displayed:** 47 current countries and 12 former countries; 175 current reports; 435 report
   histories, of which 217 hold multiple editions; 664 archived editions, including 504 recovered as PDFs.
@@ -74,7 +78,7 @@ evidence of sustained operation.
   unchecked. See [the completion review](docs/reviews/2026-10-04-handover-completion.md) for measurements and scope.
 - **Daily workflow:** reviewed and corrected; fetched data is committed before later processing failures are
   reported, and a failed sync cannot publish. Push validation now runs independently of Cloudflare secrets.
-  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are still missing, so publication is skipped. The
+  `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` are still missing, so GitHub publication is skipped. The
   rewritten daily sync is active on `main`; it has not yet completed a scheduled GitHub run.
 - **Dead-link archive refresh:** all 1,470 lookups completed near each note's own date, with archive copies
   found for 677 dead cited links; 2 h 20 min 12 s, no lookup left undated. Link status was re-exported.

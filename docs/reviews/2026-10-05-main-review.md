@@ -71,3 +71,34 @@ that tool is not invoked by the daily sync or publication jobs. Border generatio
 Natural Earth GeoJSON. These dependency warnings remain unresolved; npm's suggested automatic change
 would downgrade the direct tool to 0.6.13, which has not been validated against the project's UK-boundary
 output. No force update was applied and this review does not claim a clean dependency audit.
+
+## Subsequent live publication
+
+At the owner's explicit request to update the live site, the existing local Wrangler 4.147.0 OAuth
+session was verified against the existing `cpin-explorer` Worker. Its prior version was
+`cc79c5da-2579-476d-ac76-5f2fac086326`. Remote inspection showed no bindings; configuration and target
+were preserved. The site rebuilt to 7,905 files (452 MB), passed `wrangler deploy --dry-run` and was
+deployed from reviewed `main` commit `e176b37` using the
+[documented deploy command](https://developers.cloudflare.com/workers/wrangler/commands/workers/#deploy).
+Cloudflare uploaded 2,667 changed assets and reused 5,236 existing assets. Production deployment
+`86f95da7-fd6b-43cb-9289-46f894fdc8a5`, created 5 October 2026 at 10:56:34 UTC, serves version
+`687bb668-ad2b-4bd4-8539-0c3042fc2a6b` at 100%.
+
+Live verification confirms 143 assets byte-identical to the build, including every history containing
+an imported edition (all 140 IDs present), dashboard data, reader and saved code, archive-source and
+citation helpers, About content, source-link status files, search script and favicon. Live totals are
+47 current countries, 12 former countries, 175 reports, 706 country PDFs and 664 archived editions.
+The root redirects to the dashboard, responses retain noindex, and an unknown route returns the custom
+404 page. These requests only read this site's own public assets; no National Archives request was made.
+
+The live Chromium browser flow at 1280×720 is dashboard → Afghanistan → Hindus and Sikhs history →
+January 2016 v2.0 → From the PDF panel. The reading body changes edition, retains the historical warning,
+and names the National Archives copy captured 21 December 2016 with its exact source PDF URL. The
+recovered edition's ID is `6881a08705293a50`; page identity, visible body, source panel and interaction
+all pass, with zero console warnings or errors. No phone or native Safari check was added during this
+publication run; the earlier local checks remain separate. Evidence is saved in the workspace outputs
+as `CPIN live deployment checks.json` and `CPIN live National Archives edition.png`.
+
+GitHub's Cloudflare secrets are still absent, so the daily sync cannot automatically publish. This direct
+local deployment updates the live site without changing credential configuration or claiming scheduled
+operation. The publication record is committed separately from the deployed source/data build.

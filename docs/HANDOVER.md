@@ -3,6 +3,18 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Live publication, 5 October 2026
+
+The owner subsequently requested an update to the live site. Local Wrangler OAuth access was already
+available, so reviewed `main` commit `e176b37` was rebuilt and deployed directly to the existing
+`cpin-explorer` Worker. Cloudflare version `687bb668-ad2b-4bd4-8539-0c3042fc2a6b` serves 100% of traffic.
+The live dashboard, source-link data, About page, search script and histories containing all 140 imported
+editions match 143 checked build assets byte for byte. The dashboard-to-Afghanistan history-to-January 2016
+National Archives reader flow passes at 1280×720; source labelling is correct and the console is clean.
+Root redirect, noindex headers and the 404 page also pass. See the later live-publication section in
+[the main review](reviews/2026-10-05-main-review.md). GitHub's Cloudflare secrets are still missing; this
+manual deployment does not enable automatic republishing. Earlier undeployed statuses below are dated history.
+
 ## Main publication review, 5 October 2026
 
 The owner authorised pushing the completed work to `main` on 5 October, and the push is complete.
