@@ -23,6 +23,26 @@ It has three parts:
 
 ## Status
 
+**5 October 2026: compact source marks and first Syria AI checks live.**
+Source badges now show a symbol only, with accessible labels and tooltips. Two
+interactive AI checks are published: a yellow flag for military-service footnote
+5 linking a named April 2021 report to an October 2024 PDF, and a scoped no-issue
+quotation check for Kurds paragraph 16.2.9. Neither confers human approval.
+All 23 held Syria editions (14 reports, 3,440 footnotes) are inventoried, but the
+full contradiction analysis remains pending; no automated AI service or API
+credentials are configured. The previous 70.3% is retrieval coverage, not review
+coverage. Its 906 gaps have an explicit reason breakdown. The review directory
+now includes 44 publications, including two historical Syria works whose merits
+and applicability remain unassessed. All 318 Python and 333 JavaScript tests pass.
+Commit `41ba54f` is deployed as Cloudflare version
+`23af3904-7891-4009-a53d-c6b65017213d`, serving 100% of traffic. All four changed
+assets match the build byte for byte; live desktop and 390px touch Chromium
+checks pass with no console warnings or errors, and private evidence paths
+return 404. [GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37348069618)
+passed; its deploy job was skipped, so the existing local Wrangler login was used.
+This supersedes the earlier no-AI-analysis status below. See
+[scope, findings and gaps](docs/reviews/2026-10-05-syria-ai-and-source-gaps.md).
+
 **5 October 2026: Syria source pilot checked; reviews and Saved pins live.**
 For held editions published from 1 January 2023, the pilot indexes 17 snapshots,
 3,055 footnotes and 1,577 source/PDF addresses. Every address has a recorded outcome;

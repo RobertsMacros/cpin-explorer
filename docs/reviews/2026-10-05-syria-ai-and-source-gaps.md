@@ -113,4 +113,16 @@ Syria reviewers is a commissioning announcement, not a completed review.
 318 Python tests and 333 JavaScript tests pass. The rebuilt site excludes private
 evidence. Desktop and 390px touch Chromium checks confirm compact symbols,
 accessible labels and edition-bound AI records. Native Edge remains untested.
-Publication and live verification are recorded after deployment below.
+Commit `41ba54f` was pushed to main and deployed with the existing Wrangler login
+as version `23af3904-7891-4009-a53d-c6b65017213d`, serving 100% of traffic. All
+four changed assets match the local build byte for byte when read as actual
+reader resources. Live desktop and 390px touch Chromium checks confirm both
+edition-bound AI records and their yellow/grey symbols, with no console warnings
+or errors. Two private evidence paths return 404. Python urllib's direct request
+returned 403; navigating to CSS as a browser document also introduced a response
+decoding artefact. Verification therefore read the bytes from the actual reader's
+resource responses rather than treating those tool effects as product failures.
+
+[GitHub validation](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37348069618)
+passed, including retained-data verification; its deploy job was skipped because
+the GitHub Cloudflare secrets remain absent. No new recurring job was configured.
