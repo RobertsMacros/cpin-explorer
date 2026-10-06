@@ -46,11 +46,52 @@ def test_near_match_exposes_number_and_negation_but_not_ambiguous_alignment():
     assert m.near_quote('218 ' + m.normal('An unrelated article has different subject matter and timeframe.'), quote) is None
 
 
+def test_leading_source_marker_does_not_crash_or_hide_changed_number():
+    quote = 'The detailed survey found that 218 people returned to their original homes during the reporting period.'
+    source = quote.replace('218', '281')
+    evidence = doc(source)
+    evidence['furniture'] = [{'marker': '1', 'before': '', 'after': 'The detailed survey'}]
+    checks = m.quotation_checks('‘' + quote + '’', evidence, 'https://example.org/source')
+    assert any(c['rule'] == 'changed-number' and c['state'] == 'candidate' for c in checks)
+
+
+def test_inline_glossary_restores_words_and_negation_only_with_unique_context():
+    from lxml import html
+    source = 'The detailed survey found that people did not return to their original homes during the reporting period.'
+    extracted = source.replace('did not return', 'did return')
+    tree = html.fromstring('<p>' + source.replace('not', '<button class="definition-term__link">not</button>') + '</p>')
+    recovered, proof = m.recover_inline_glossary(tree, extracted)
+    assert recovered == m.normal(source) and proof[0]['label'] == 'not'
+    evidence = doc(extracted)
+    evidence['comparisonNorm'], evidence['inlineRecoveries'] = recovered, proof
+    checks = m.quotation_checks('‘' + extracted + '’', evidence, 'https://example.org/source')
+    assert any(c['rule'] == 'changed-negation' and c['state'] == 'candidate' for c in checks)
+    assert not any(c['rule'] == 'quotation-exact' and c['state'] == 'pass' for c in checks)
+    assert m.recover_inline_glossary(tree, extracted + ' ' + extracted)[1] == []
+    tree = html.fromstring('<p>' + source.replace('not', '<button>not</button>') + '</p>')
+    assert m.recover_inline_glossary(tree, extracted)[1] == []
+
+
+def test_case_identifier_zero_padding_does_not_hide_distinct_cases():
+    for observed, conflict in [('[2016] UKUT 66', False), ('[2016] UKUT 67', True)]:
+        evidence = doc(observed)
+        evidence.update(headers=[observed], dates=[], anchors=[])
+        checks = m.source_checks('AR and NH [2016] UKUT 00066', 'https://example.org/case', evidence)
+        assert any(c['rule'] == 'identifier-conflict' for c in checks) == conflict
+
+
 @pytest.mark.parametrize('text,state', [('7 out of 9 (78%)', 'pass'), ('7 out of 9 (77%)', 'observation'), ('Exactly 7 out of 9 (77%)', 'candidate'), ('700 out of 900 (77%)', 'candidate'), ('1 out of 3 (33.3%)', 'pass'), ('1 out of 0 (5%)', 'candidate')])
 def test_arithmetic_has_explicit_denominators_and_rounding(text, state):
     result = m.arithmetic(text)
     assert result[0]['rule'] == 'percentage-arithmetic' and result[0]['state'] == state
     assert m.arithmetic('There were 7 people. Another survey reported 9 people and 77%.') == []
+
+
+def test_percentage_ranges_and_url_escapes_preserve_real_invalid_shares():
+    assert m.arithmetic('26%-50% received a visit. https://example.org/2019%2011%20report.pdf') == []
+    assert m.arithmetic('1%-2% had access.') == []
+    assert any(c['state'] == 'candidate' for c in m.arithmetic('The share was -50%.'))
+    assert any(c['state'] == 'candidate' for c in m.arithmetic('The share ranged from 26%-150%.'))
 
 
 def doc(text, kind='html', second=None):

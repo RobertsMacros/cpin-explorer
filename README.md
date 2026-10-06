@@ -23,6 +23,26 @@ It has three parts:
 
 ## Status
 
+**6 October 2026: bounded AI queue review and further parser repairs.**
+All **2,267 distinct v2 questions** have private dispositions: 64 direct
+comparisons, 257 wording/identity comparisons and 1,946 metadata/ellipsis triage
+questions. Metadata triage is not 1,946 factual approvals. Six new narrow minor
+findings join the two previously inspected typos; no new major claim error was
+confirmed. Historical versions and contextual evidence gaps remain explicit.
+The screen now guards leading source markers, restores uniquely anchored inline
+glossary terms from held HTML, distinguishes case-number zero padding and handles
+percentage ranges/URL escapes. **398 Python tests pass**; 74 additional targeted
+replays are retained. No new whole-corpus count has been measured.
+
+All 60 review publications have an identity/scope disposition, with 32 scoped
+argument applications across 20 held direct reviews. This is a first batch, not
+exhaustive merits assessment: 389 pages containing paragraph-specific arguments
+have locators, and remaining individual arguments stay pending. Historical or
+missing editions, background research and reviews of other products are kept
+separate. No paid model call, local model trial, new bulk source retrieval,
+public flag, push or deployment was made in this batch. See
+[scope, outcomes and evidence gaps](docs/reviews/2026-10-06-agent-queue-review.md).
+
 **6 October 2026: mechanical screen completed; further checks hardened.**
 The corrected full pass screened all 116,125 linked blocks with zero pending and
 zero processing errors, including the four previous failures. Candidate blocks

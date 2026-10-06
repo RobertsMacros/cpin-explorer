@@ -4,7 +4,7 @@ The owner requested an inventory of deterministic checks on 5 October 2026,
 with archive recovery deferred on the first pass. Use held source captures first;
 original-address retrieval can fill gaps under the existing polite collector.
 Do not start new archive searches for this pass. Existing archived captures may
-be screened with their provenance intact. The private runner now implements 55
+be screened with their provenance intact. The private runner now implements 56
 rule types, including eligibility/gap routes as well as comparisons. Implementation
 is not proof that every rule applies to every passage or that any claim is correct.
 
@@ -163,11 +163,12 @@ and [reuse decision](../research/mechanical-source-checks/REPORT.md).
 | `source-retrieval` | Recorded source retrieval outcome |
 | `source-redirect` | Recorded redirect destination |
 | `source-integrity` | Retained source bytes match their SHA256 |
+| `source-extraction-recovery` | Missing inline glossary text restored only where the original HTML has one uniquely matching local context; observation, never factual approval |
 | `source-readable` | Usable source text rather than error/challenge response |
 | `source-scan-limit` | Whole source text fits the bounded first-pass scan |
 | `citation-title` | Candidate cited title in source front matter |
 | `document-edition-year` | Highly similar document titles name different years |
-| `identifier-conflict` | Different unique stable identifiers in front matter |
+| `identifier-conflict` | Different unique stable identifiers in front matter; UKUT case-number zero padding is equivalent, changed case numbers are not |
 | `citation-title-truncation` | Citation title contains ellipsis |
 | `citation-publisher` | Cited publisher name observed in front matter |
 | `publication-date` | Citation date versus explicit HTML publication metadata |
@@ -198,7 +199,7 @@ and [reuse decision](../research/mechanical-source-checks/REPORT.md).
 | `editorial-insertion` | Square-bracket additions in quoted wording |
 | `figure-context` | Numbers belong to a located quotation, not a global number search |
 | `percentage-arithmetic` | Explicit n out of N percentage within rounding tolerance |
-| `impossible-percentage` | Ordinary explicit percentages outside 0–100 |
+| `impossible-percentage` | Explicit percentages outside 0–100, excluding intact URL escapes and preserving range signs; denominator/context review remains required |
 | `reversed-range` | Explicit from X to Y ranges ordered where labelled as a range |
 | `duplicate-url-citation-date` | Same source URL given different citation dates in edition |
 | `source-pinpoint-present` | Source pinpoint preserved in comparison inputs |

@@ -39,6 +39,7 @@ RULES = {
     'citation-title': 'Candidate cited title in source front matter',
     'document-edition-year': 'Highly similar document titles name different years',
     'identifier-conflict': 'Different unique stable identifiers in front matter',
+    'source-extraction-recovery': 'Missing inline glossary terms recovered from uniquely anchored original HTML',
     'citation-title-truncation': 'Citation title contains ellipsis',
     'citation-publisher': 'Cited publisher name observed in front matter',
     'publication-date': 'Citation date versus explicit HTML publication metadata',
@@ -319,6 +320,8 @@ def quantity_units(text):
 
 
 def arithmetic(text):
+    # Percent escapes in addresses are not reported statistical values.
+    text = re.sub(r'https?://\S+', ' ', text)
     checks = []
     pattern = r'\b(\d[\d,]*)\s+(?:out of|of)\s+(\d[\d,]*)\s*\(\s*(\d+(?:\.\d+)?)\s*(?:%|per cent|percent)\s*\)'
     for match in re.finditer(pattern, text, re.I):
@@ -338,6 +341,8 @@ def arithmetic(text):
                        'evidence': match.group(), 'calculated': actual, 'roundingTolerance': tolerance})
     for match in re.finditer(r'(?<![\w.])([−-]?\d+(?:\.\d+)?)\s*(?:%|per cent\b|percent\b)', text, re.I):
         value = float(match[1].replace('−', '-'))
+        if value < 0 and re.search(r'\d\s*%\s*$', text[:match.start()]):
+            value = abs(value)  # 26%-50% is a range, not a negative share.
         if value < 0 or value > 100:
             context = text[max(0, match.start()-120):match.end()+80]
             relative = re.search(r'\b(?:increase|increased|growth|grew|rise|rose|decline|decrease|change|higher|lower|more than|less than)\b', context, re.I)
@@ -467,6 +472,40 @@ def html_headings(tree):
         if 1 <= len(text.split()) <= 14:
             headings.append(text)
     return list(dict.fromkeys(headings))
+
+
+def recover_inline_glossary(tree, text):
+    """Restore only a missing inline glossary label with unique DOM context."""
+    value, recoveries = normal(text), []
+    for el in tree.xpath('//button[contains(concat(" ", normalize-space(@class), " "), " definition-term__link ")]'):
+        parent = el.getparent()
+        if parent is None or parent.tag not in {'p', 'span'}:
+            continue
+        label = normal(el.text_content())
+        if not label or len(label.split()) > 8:
+            continue
+        # Serialize the parent around this exact element, preserving neighbouring
+        # inline text. A single matching gap is required; never insert globally.
+        placeholder = 'CPINGLOSSARYPLACEHOLDER'
+        original = el.text
+        children = len(el)
+        if children:
+            continue
+        try:
+            el.text = placeholder
+            context = normal(' '.join(parent.itertext()))
+        finally:
+            el.text = original
+        before, separator, after = context.partition(placeholder.lower())
+        if not separator:
+            continue
+        left, right = ' '.join(before.split()[-8:]), ' '.join(after.split()[:8])
+        gap = normal(left + ' ' + right)
+        restored = normal(left + ' ' + label + ' ' + right)
+        if len(left.split()) >= 3 and len(right.split()) >= 3 and value.count(gap) == 1 and restored not in value:
+            value = value.replace(gap, restored, 1)
+            recoveries.append({'label': label, 'before': left, 'after': right})
+    return value, recoveries
 
 
 def html_note_markers(tree):
@@ -657,7 +696,8 @@ class SourceReader:
                         doc['dates'].append(value[:10])
         doc['norm'] = normal(body)
         if doc['kind'] != 'pdf':
-            without_notes, removed = remove_notes(doc['norm'], html_markers)
+            recovered, doc['inlineRecoveries'] = recover_inline_glossary(tree, body) if doc['kind'] == 'html' else (doc['norm'], [])
+            without_notes, removed = remove_notes(recovered, html_markers)
             doc['comparisonNorm'], doc['furniture'] = comparison_text(without_notes, doc['headings'])
             doc['furniture'] += removed
         doc['quality'] = source_quality({'url': 'https://source.invalid/', 'final_url': 'https://source.invalid/'}, text)
@@ -724,7 +764,10 @@ def source_checks(cite, url, doc):
         regex = {'dois': DOI, 'isbns': ISBN, 'cases': CASE}[field]
         front = ' '.join(doc['headers'])[:8000]
         observed = list(dict.fromkeys(doi_values(front) if field == 'dois' else regex.findall(front)))
-        if len(exp[field]) == len(observed) == 1 and normal(exp[field][0]) != normal(observed[0]):
+        def identity(value):
+            value = normal(value)
+            return re.sub(r'(\bukut\s+)0+(?=\d)', r'\1', value) if field == 'cases' else value
+        if len(exp[field]) == len(observed) == 1 and identity(exp[field][0]) != identity(observed[0]):
             add('identifier-conflict', 'candidate', identifierType=field, cited=exp[field][0], observed=observed[0],
                 reason='incompatible unique identifier in front matter; not a confirmed citation error')
     fragment = unquote(urlsplit(url).fragment)
@@ -770,13 +813,17 @@ def editorial_citations(raw_text, footnotes):
 def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
     checks = []
     for quote in quotations(text):
-        match = locate(doc['norm'], quote)
+        match = locate(doc['comparisonNorm'] if doc.get('inlineRecoveries') else doc['norm'], quote)
         adjusted = False
         if match['state'] != 'pass' and doc.get('comparisonNorm'):
             derived = locate(doc['comparisonNorm'], quote)
             if derived['state'] == 'pass':
                 match, adjusted = derived, True
         base = {'url': url, 'sha256': doc['sha256'], 'quoted': quote, 'extractionSha256': doc['extractionSha256']}
+        if doc.get('inlineRecoveries'):
+            checks.append({'rule': 'source-extraction-recovery', 'state': 'observation', **base,
+                           'recoveries': doc['inlineRecoveries'],
+                           'reason': 'comparison restores uniquely anchored original HTML glossary labels; no source validity or contextual approval'})
         is_ellipsis = '…' in quote or '...' in quote
         checks.append({'rule': 'quotation-ellipsis' if is_ellipsis else 'quotation-exact', **base, **match,
                        'identityEstablished': False, 'normalisation': 'case, whitespace, typographic quotes; words and signs preserved'})
@@ -807,7 +854,10 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
                 for item in doc.get('furniture', []):
                     if 'marker' not in item or not item.get('after'):
                         continue
-                    before = item['before'].split()[-1]
+                    preceding = item.get('before', '').split()
+                    if not preceding:
+                        continue
+                    before = preceding[-1]
                     after = ' '.join(item['after'].split()[:3])
                     if len(after.split()) < 3 or not re.search(r'[a-z]{3}', before):
                         continue
