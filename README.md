@@ -37,8 +37,8 @@ ecoi.net mirror and corrected its CPIN scope. The 60-publication directory retai
 two full-file retrieval gaps and two unheld Rwanda editions; it is not an
 exhaustive inventory of every review. Historical criticism never transfers merely
 because a country or report title matches. Canonical CPIN bodies are unchanged.
-**400 Python and 344 JavaScript tests pass** before reconciling the latest daily
-sync. Publication and final merged verification are recorded in
+**408 Python and 344 JavaScript tests pass** after reconciling the latest daily
+sync and image-publication repair. Publication and final merged verification are recorded in
 [the integration record](docs/reviews/2026-10-06-review-integration.md).
 
 **6 October 2026: bounded AI queue review and further parser repairs.**

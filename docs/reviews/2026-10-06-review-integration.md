@@ -91,3 +91,11 @@ Final merged checks, deployment revision and live evidence are recorded below
 when completed. Private receipts and test logs are retained in
 `data/source-evidence/review-integration-2026-10-06/`; original retrieval attempts
 and the Sri Lanka PDF are in `data/review-evidence/integration-2026-10-06/`.
+
+Merged verification: 408 Python and 344 JavaScript tests pass. Integrity checks
+confirm 406 bodies, 707 PDFs and 684 images against their retained hashes with
+zero problems. Every required publication image is present and hash-valid; no
+image recovery request was needed locally. The rebuilt site contains 7,888 files
+(453 MB). Browser switching from January 2023 blood feuds to July 2024 removes the
+historical marker; redline view contains no markers and returning to the exact
+clean edition restores its one grouped marker.

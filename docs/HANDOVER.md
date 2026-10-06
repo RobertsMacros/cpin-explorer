@@ -3,6 +3,21 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Reader review integration, 6 October 2026
+
+The owner has authorised publishing AI review without a human approval gate.
+Published reviewers, AI assessments and optional browser-local human notes stay
+separate. The reader now supports exact-edition passage, footnote and link
+annotations; ambiguous anchors are left unmarked. The new whitelist has eight
+short attributed reviewer excerpts, 32 scoped AI context comparisons and ten
+minor AI findings. Context comparison is not full factual verification.
+
+Sri Lanka's July 2020 ARC review was recovered from ecoi.net and its mixed FFM/CPIN
+scope checked. Two raw review files and two exact Rwanda editions remain gaps.
+Read [the integration record](reviews/2026-10-06-review-integration.md) for source
+scope, quotations, tests and publication evidence. Historical dated handover
+sections below retain their earlier status; the current record takes precedence.
+
 ## Published-review search and 2026 follow-ups, 5 October 2026
 
 The newer directory has 60 publications and nine publishers. Sixteen scoped AI
