@@ -87,8 +87,7 @@ Browser checks cover the healthcare footnote and unfootnoted sentence, Georgia's
 source marker, mobile overlay layout, empty marker text and keyboard dismissal.
 These checks do not establish physical iPhone or native Edge behaviour.
 
-Final merged checks, deployment revision and live evidence are recorded below
-when completed. Private receipts and test logs are retained in
+Final merged checks, deployment revision and live evidence are recorded below. Private receipts and test logs are retained in
 `data/source-evidence/review-integration-2026-10-06/`; original retrieval attempts
 and the Sri Lanka PDF are in `data/review-evidence/integration-2026-10-06/`.
 
@@ -99,3 +98,27 @@ image recovery request was needed locally. The rebuilt site contains 7,888 files
 (453 MB). Browser switching from January 2023 blood feuds to July 2024 removes the
 historical marker; redline view contains no markers and returning to the exact
 clean edition restores its one grouped marker.
+
+Publication completed through GitHub Actions run
+[37512124936](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37512124936)
+from main `f9d2632`. Both test and deployment jobs passed 408 Python and 344
+JavaScript tests. Cloudflare version `34f997ca-82e9-45aa-a3e6-29209f796bcf` was
+published at 18:38 UTC on 6 October. Seven changed assets on
+https://cpin-explorer.co.uk match local SHA256 hashes. Two selected private
+source-evidence paths return 404. Desktop footnote 74 shows the attributed
+reviewer's quotation separately from the scoped AI comparison. The unfootnoted
+7.1.2 marker opens at 390×844 with no horizontal overflow, all three sections and
+empty marker text. Browser warning/error logs are empty. Native Edge and physical
+iPhone checks remain separate.
+
+The first GitHub attempt on `4458b78` failed because the new Python annotation
+check relied on an ignored local export. It did not deploy. The test now builds a
+temporary export from retained repository data; fresh-checkout CI verifies the
+same exact anchors rather than skipping them. The later successful publication
+used existing repository credentials, without reading secret values or changing
+schedules. This confirms GitHub publication, not a genuine subsequent scheduled
+sync-to-publication cycle.
+
+The private source plan now marks this bounded integration complete, retains
+unresolved original-source work, and shows human additions as optional parallel
+work. It does not close full factual merits assessment or local-model trials.

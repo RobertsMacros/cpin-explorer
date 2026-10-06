@@ -38,7 +38,9 @@ two full-file retrieval gaps and two unheld Rwanda editions; it is not an
 exhaustive inventory of every review. Historical criticism never transfers merely
 because a country or report title matches. Canonical CPIN bodies are unchanged.
 **408 Python and 344 JavaScript tests pass** after reconciling the latest daily
-sync and image-publication repair. Publication and final merged verification are recorded in
+sync and image-publication repair. Published on `cpin-explorer.co.uk` through GitHub Actions run `37512124936`,
+Cloudflare version `34f997ca-82e9-45aa-a3e6-29209f796bcf`. Seven live assets
+match; desktop and mobile review overlays pass. Publication details are recorded in
 [the integration record](docs/reviews/2026-10-06-review-integration.md).
 
 **6 October 2026: bounded AI queue review and further parser repairs.**
