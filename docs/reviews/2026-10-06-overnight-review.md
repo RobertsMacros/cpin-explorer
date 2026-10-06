@@ -109,3 +109,25 @@ Private supporting records: `completion-error-verification.json`,
 `reconciled-question-dispositions.jsonl`, and the adjacent
 `review-expansion-2026-10-06/survivor-inspected-findings.json` and
 `apparent-match-sample.json`. No canonical CPIN text was changed.
+
+## Final publication verification
+
+Code commit `827ddeb8f6f49cf1812b4897dc2b5cfea6cea7f9` is on main and live.
+[GitHub run 37545932744](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37545932744)
+passed **413 Python and 346 JavaScript tests** and deployed Worker version
+`f835f628-a6ce-4e97-a658-dc205cd342bf`. Live annotations, review directory and
+source-review code match the local build hashes. Both sampled private evidence
+paths return 404. The edition-panel AI empty-state now accounts for separately
+stored directory assessments and unavailable/loading records. Canonical CPIN
+text and hashes remain unchanged.
+
+The private Source review plan and its pipeline are updated in place, with
+Hide completed on by default. The completed-run heartbeat is paused; the worker
+and caffeinate wrapper have exited. Neither earlier one-off LaunchAgent is loaded
+or remains on disk. Source evidence and losslessly compressed older journals are
+retained. No new model or publisher schedule was created.
+
+An additional inspection of the strongest negation survivor finds a historical
+version gap: the held Human Dignity Trust Zimbabwe page reports an October 2026
+revision. Its present wording cannot establish the wording available to the
+earlier CPIN. It remains unresolved, without a public substantive error flag.
