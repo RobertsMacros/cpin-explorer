@@ -2795,10 +2795,10 @@
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
       "publishedAt": "2026-02-21",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-06",
       "assessment": "unassessed",
       "summary": "Individual annotated commentary on the January 2026 version 4.0 CPIN, covering sections 1–8.1 and one point at 9.6.3. Publication is attributed opinion, not an institutional audit or proof of the criticisms.",
-      "verificationLocation": "Web-indexed primary PDF cover and physical pages 2 and 8 identify author, 21 February 2026 date, version 4.0 and paragraph 3.1.4. Local DNS resolution fails: no raw PDF hash or second-reader verification available.",
+      "verificationLocation": "Original 86-page PDF held: SHA256 73f225bc3a72891eacbe7831fb8c8460f96e3e430250ef596ac994a49871e93d. Physical page 2 identifies author, date and January 2026 version 4.0, and assigns red comments to Tonkin. Page 8 and a separate Poppler extraction confirm the short author quotation; broader criticisms remain unassessed.",
       "workId": "tonkin-myanmar-rohingya-2026",
       "relatedUrls": [],
       "targets": [
@@ -2844,7 +2844,7 @@
           "reviewedAt": "2026-10-05",
           "publication": {
             "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=8",
-            "location": "Physical PDF page 8; indexed text, local copy unavailable"
+            "location": "Physical PDF page 8; original held and short author quotation independently checked"
           },
           "evidenceLinks": [
             {
@@ -2854,7 +2854,7 @@
           ],
           "verification": {
             "cpinBodySha": "9af70f7edeb2e0f5bd025a13808f2b30b108323d0cf15d68c894b0adfb619fbf",
-            "method": "Verbatim web paragraphs compared directly; original ICC summary checked through web index. Review PDF local DNS unavailable; no PDF wording difference asserted."
+            "method": "Verbatim web paragraphs compared directly; original ICC summary checked through web index on 5 October. Review PDF recovered on 6 October: author roles and page 8 short quotation checked in the original and independent Poppler. No assertion about later/confidential warrants or PDF/web wording difference."
           }
         }
       ]

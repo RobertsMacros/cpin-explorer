@@ -4,7 +4,7 @@ The owner authorised material overnight progress on published reviews and cheap 
 
 ## Hardened full run
 
-The v3 mechanical rerun started at 22:06:04 UTC under `caffeinate -i -s`, using the same 116,125 linked blocks and frozen receipts as the corrected v2 run. Output: `data/source-evidence/mechanical-final-2026-10-06`. Scope: `0cd594ca2b9b0b85b6149ad75d5be112ccdebbd7fbdd75e9606e10cad82e2e97`. Limits: eight hours, 4 GiB output, 2 GiB free-disk floor. Network requests and model calls are zero. `launch.json`, `job.json` and `process.log` show actual state; do not start another run.
+The v3 mechanical rerun started at 22:06:04 UTC under `caffeinate -i -s`, using the same 116,125 linked blocks and frozen receipts as the corrected v2 run. Output: `data/source-evidence/mechanical-final-2026-10-06`. Scope: `0cd594ca2b9b0b85b6149ad75d5be112ccdebbd7fbdd75e9606e10cad82e2e97`. Limits: eight hours, 4 GiB screening database/readings budget (final exports excluded), 2 GiB free-disk floor. Network requests and model calls are zero. `launch.json`, `job.json` and `process.log` show actual state; do not start another run.
 
 The existing hourly follow-up is active and watches this run quietly. It must verify terminal totals, reuse, evidence gaps and candidates, compare v1/v2/v3, inspect bounded strong survivors, then report and pause. There is no new LaunchAgent. The Mac must remain powered and running. Source and result journals remain private and retained.
 
@@ -12,14 +12,14 @@ The existing hourly follow-up is active and watches this run quietly. It must ve
 
 Prepared and integrated 433 short IAGCI reviewer-owned excerpts across nine held
 licensed works, with 251 separately labelled Home Office reply extracts and 218
-unambiguous inline paragraph applications. Another 37 section indexes link every
+unambiguous inline paragraph applications. Another 38 section indexes link every
 physical page of the scoped reviews, including passages that could not safely be
-copied. Five further short attributed concerns cover Iraq blood feuds, Georgia
+copied. Six further short attributed concerns cover Iraq blood feuds, Georgia
 LGBTI protection, Afghanistan former officials, Sri Lanka religious minorities
-and Albania blood feuds. Their severity denotes the reviewer's concern; it is not
+Albania blood feuds and the January 2026 Rohingya commentary. Their severity denotes the reviewer's concern; it is not
 automatic agreement with its merits.
 
-The public whitelist now contains 527 records: 483 external records and 44 AI
+The public whitelist now contains 529 records: 485 external records and 44 AI
 records. It retains all earlier entries. New comments are collapsed by default.
 Original hashes, column-role decisions and independent Poppler concordance are
 retained privately under `data/source-evidence/review-expansion-2026-10-06`.
@@ -27,7 +27,7 @@ Forty-eight cells failed reader concordance; 222 lacked a sufficiently long own
 prefix before a nested source quotation. Ambiguous layouts, including El Salvador
 and statelessness, retain page indexes rather than guessed comment attribution.
 This is selective detailed integration, not a claim that every argument is copied
-or factually verified. Two raw review files and two exact Rwanda editions remain
+or factually verified. The ARC/UWE quantitative-risk raw review file and two exact Rwanda editions remain
 missing; pre-2020 legacy reviews are outside this recent backfill.
 
 ## Substantive scoped AI findings
@@ -60,3 +60,9 @@ comments, separately labelled replies and the new AI overlays. The Afghanistan
 finding is absent from current February 2026 guidance. These checks do not establish
 native Edge or physical iPhone behaviour. Publication and final scan results are
 recorded below after verification.
+
+The Myanmar review was recovered through the normal guarded collector. Its author,
+21 February 2026 date, version 4.0 and red-comment role were verified on original
+pages 2 and 8. The 16-word extract agrees with independent Poppler text. An exact
+paragraph 3.1.4 concern and a full page index are attributed to Derek Tonkin;
+they do not establish current ICC warrant status or the wider criticism.

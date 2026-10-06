@@ -20555,7 +20555,7 @@
       "reviewedAt": "2026-10-06",
       "summary": "Paragraph 2.1.10 assigns a prejudice motive to all 107 recorded victims. Colombia Diversa reports 107 victims in total, but confirms that motive for at least 18 victims in 12 cases; the motive was undetermined in 72 cases. The summary overstates what is known about motive. “At least 18” does not mean only 18 were affected by prejudice. This comparison does not decide the overall persecution or protection conclusion.",
       "sourceCopyUrl": "https://colombiadiversa.org/wp-content/uploads/2025/08/InformeDDHHColDIV2022-2.pdf#page=63",
-      "sourceLocation": "Full report on 2022 events: pages 51–52 (total), 63 (confirmed motive), 65 (unknown motive). The originally cited executive-summary URL is unavailable; this is corroboration from the publisher’s full report, not a byte-identical replacement.",
+      "sourceLocation": "Full report on 2022 events, published December 2023 (publication page 162): pages 51–52 (total), 63 (confirmed motive), 65 (unknown motive). The originally cited executive-summary URL is unavailable; this is corroboration from the publisher’s full report, not a byte-identical replacement.",
       "evidence": {
         "quote": "por lo menos 12 casos de violencia policial (con 18 víctimas) estuvieron motivados por el prejuicio",
         "url": "https://colombiadiversa.org/wp-content/uploads/2025/08/InformeDDHHColDIV2022-2.pdf#page=63",
@@ -20642,6 +20642,412 @@
         }
       ],
       "scope": "High confidence in the limited source-description discrepancy. No conclusion about total people affected, civilian-only counts or overall persecution risk."
+    },
+    {
+      "id": "published-expanded-tonkin-myanmar-rohingya-2026",
+      "kind": "external",
+      "status": "criticism",
+      "severity": "major",
+      "summary": "ICC application presented as an issued warrant",
+      "author": "Derek Tonkin",
+      "publishedAt": "2026-02-21",
+      "publication": {
+        "title": "Commentary on the January 2026 Rohingya CPIN",
+        "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=8",
+        "location": "Physical PDF page 8"
+      },
+      "evidence": {
+        "quote": "The International Criminal Court has not issued a warrant for the arrest of Min Aung Hlaing.",
+        "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=8",
+        "title": "Reviewer’s original wording",
+        "location": "Physical PDF page 8; red author commentary identified on page 2",
+        "publicDisplayApproved": true,
+        "rightsBasis": "16-word attributed quotation for criticism and review; full annotated report linked."
+      },
+      "summaryDetail": "Individual commentary dated 21 February 2026. This attributed concern does not establish the current status of any later or confidential warrant, or endorse the reviewer’s wider risk assessment.",
+      "targets": [
+        {
+          "country": "burma",
+          "series": "note:bangladesh-rohingya",
+          "editionId": "9af70f7edeb2e0f5",
+          "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "3.1.4",
+              "quote": "3.1.4 The Rohingya face systematic discrimination and human rights violations, including enforced disappearance, detention, torture, indiscriminate killings, rape, destruction of property and forced displacement, particularly since 2012. Security operations in"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "published-comment-section-tonkin-myanmar-rohingya-2026",
+      "kind": "external",
+      "status": "context",
+      "collapsible": true,
+      "summary": "Read the full annotated review · pages 1–86",
+      "author": "Derek Tonkin",
+      "publishedAt": "2026-02-21",
+      "publication": {
+        "title": "Commentary on the January 2026 Rohingya CPIN",
+        "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf"
+      },
+      "reviewPages": [
+        {
+          "page": 1,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=1"
+        },
+        {
+          "page": 2,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=2"
+        },
+        {
+          "page": 3,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=3"
+        },
+        {
+          "page": 4,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=4"
+        },
+        {
+          "page": 5,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=5"
+        },
+        {
+          "page": 6,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=6"
+        },
+        {
+          "page": 7,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=7"
+        },
+        {
+          "page": 8,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=8"
+        },
+        {
+          "page": 9,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=9"
+        },
+        {
+          "page": 10,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=10"
+        },
+        {
+          "page": 11,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=11"
+        },
+        {
+          "page": 12,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=12"
+        },
+        {
+          "page": 13,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=13"
+        },
+        {
+          "page": 14,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=14"
+        },
+        {
+          "page": 15,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=15"
+        },
+        {
+          "page": 16,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=16"
+        },
+        {
+          "page": 17,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=17"
+        },
+        {
+          "page": 18,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=18"
+        },
+        {
+          "page": 19,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=19"
+        },
+        {
+          "page": 20,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=20"
+        },
+        {
+          "page": 21,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=21"
+        },
+        {
+          "page": 22,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=22"
+        },
+        {
+          "page": 23,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=23"
+        },
+        {
+          "page": 24,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=24"
+        },
+        {
+          "page": 25,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=25"
+        },
+        {
+          "page": 26,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=26"
+        },
+        {
+          "page": 27,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=27"
+        },
+        {
+          "page": 28,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=28"
+        },
+        {
+          "page": 29,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=29"
+        },
+        {
+          "page": 30,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=30"
+        },
+        {
+          "page": 31,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=31"
+        },
+        {
+          "page": 32,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=32"
+        },
+        {
+          "page": 33,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=33"
+        },
+        {
+          "page": 34,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=34"
+        },
+        {
+          "page": 35,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=35"
+        },
+        {
+          "page": 36,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=36"
+        },
+        {
+          "page": 37,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=37"
+        },
+        {
+          "page": 38,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=38"
+        },
+        {
+          "page": 39,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=39"
+        },
+        {
+          "page": 40,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=40"
+        },
+        {
+          "page": 41,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=41"
+        },
+        {
+          "page": 42,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=42"
+        },
+        {
+          "page": 43,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=43"
+        },
+        {
+          "page": 44,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=44"
+        },
+        {
+          "page": 45,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=45"
+        },
+        {
+          "page": 46,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=46"
+        },
+        {
+          "page": 47,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=47"
+        },
+        {
+          "page": 48,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=48"
+        },
+        {
+          "page": 49,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=49"
+        },
+        {
+          "page": 50,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=50"
+        },
+        {
+          "page": 51,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=51"
+        },
+        {
+          "page": 52,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=52"
+        },
+        {
+          "page": 53,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=53"
+        },
+        {
+          "page": 54,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=54"
+        },
+        {
+          "page": 55,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=55"
+        },
+        {
+          "page": 56,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=56"
+        },
+        {
+          "page": 57,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=57"
+        },
+        {
+          "page": 58,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=58"
+        },
+        {
+          "page": 59,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=59"
+        },
+        {
+          "page": 60,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=60"
+        },
+        {
+          "page": 61,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=61"
+        },
+        {
+          "page": 62,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=62"
+        },
+        {
+          "page": 63,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=63"
+        },
+        {
+          "page": 64,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=64"
+        },
+        {
+          "page": 65,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=65"
+        },
+        {
+          "page": 66,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=66"
+        },
+        {
+          "page": 67,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=67"
+        },
+        {
+          "page": 68,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=68"
+        },
+        {
+          "page": 69,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=69"
+        },
+        {
+          "page": 70,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=70"
+        },
+        {
+          "page": 71,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=71"
+        },
+        {
+          "page": 72,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=72"
+        },
+        {
+          "page": 73,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=73"
+        },
+        {
+          "page": 74,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=74"
+        },
+        {
+          "page": 75,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=75"
+        },
+        {
+          "page": 76,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=76"
+        },
+        {
+          "page": 77,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=77"
+        },
+        {
+          "page": 78,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=78"
+        },
+        {
+          "page": 79,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=79"
+        },
+        {
+          "page": 80,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=80"
+        },
+        {
+          "page": 81,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=81"
+        },
+        {
+          "page": 82,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=82"
+        },
+        {
+          "page": 83,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=83"
+        },
+        {
+          "page": 84,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=84"
+        },
+        {
+          "page": 85,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=85"
+        },
+        {
+          "page": 86,
+          "url": "https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf#page=86"
+        }
+      ],
+      "summaryDetail": "Red comments are the author’s annotations; the black CPIN text is reproduced for context. Linked pages include material not copied here. Attribution does not establish the criticisms as correct.",
+      "targets": [
+        {
+          "country": "burma",
+          "series": "note:bangladesh-rohingya",
+          "editionId": "9af70f7edeb2e0f5",
+          "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86"
+        }
+      ]
     }
   ]
 }
