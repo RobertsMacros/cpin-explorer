@@ -34,13 +34,16 @@ glossary terms from held HTML, distinguishes case-number zero padding and handle
 percentage ranges/URL escapes. **398 Python tests pass**; 74 additional targeted
 replays are retained. No new whole-corpus count has been measured.
 
-All 60 review publications have an identity/scope disposition, with 32 scoped
-argument applications across 20 held direct reviews. This is a first batch, not
-exhaustive merits assessment: 389 pages containing paragraph-specific arguments
-have locators, and remaining individual arguments stay pending. Historical or
-missing editions, background research and reviews of other products are kept
-separate. No paid model call, local model trial, new bulk source retrieval,
-public flag, push or deployment was made in this batch. See
+All 60 review publications have an identity/scope disposition. The continuation
+completed bounded AI screening and attributed context assessment for the 20 held
+direct reviews, with 108 closer comparison assessments and two further private
+minor citation findings. The 1,301 screened extraction units include pages,
+fragments and front matter; they are not that many independently verified claims.
+Two mistaken Palestinian edition associations were removed: criticism of a 2018
+CPIN cannot attach to a later FFM or Gaza note. There are now 53 associations
+across 48 held bodies. Full factual merits checks and missing original evidence
+remain unresolved. No paid model call, local-model trial, new source retrieval,
+public flag, push or deployment was made. See
 [scope, outcomes and evidence gaps](docs/reviews/2026-10-06-agent-queue-review.md).
 
 **6 October 2026: mechanical screen completed; further checks hardened.**

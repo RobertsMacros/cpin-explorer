@@ -48,7 +48,7 @@ does not automatically approve the remaining text. The original preparation
 packets are immutable, with post-fix comparisons in a separate journal. No new
 full-corpus reduction estimate is available.
 
-## Published reviews: first batch and remaining work
+## Published reviews: held-evidence screening and contextual pass
 
 All 60 publications have identity/scope triage:
 
@@ -63,7 +63,10 @@ All 60 publications have identity/scope triage:
 
 The pass saves **32 scoped argument applications across the 20 held direct
 reviews**, including Home Office responses and contrary considerations where
-inspected. There are 55 edition associations, including distinct body variants.
+inspected. The corrected export has 53 edition associations across 48 held bodies.
+The statelessness review's December 2018 Palestinian CPIN was previously mapped
+to a later fact-finding report and July 2022 Gaza note; those two associations
+have been removed. The original journal is retained alongside the correction.
 Original PDF bytes were hash checked; 78 document reading records retain PyMuPDF
 and independent Poppler output. Copies/large-print versions are not independent
 corroboration. The review directory does not establish exhaustive publisher
@@ -84,15 +87,34 @@ and a later Fastbase listing cannot establish its historical content. The review
 26–50% follow-up band also does not establish strictly more than half missed care
 at the upper endpoint. Reviewers are not assumed correct.
 
-**The published-review task remains partially complete.** There are locators for
-389 pages containing paragraph-specific arguments. Locators, report associations
-and representative applications are preparation/triage, not completed merits
-checks of every recommendation. Other available individual arguments still need
-contextual assessment; five full-review/exact-edition gaps and historical source
-versions cannot be resolved from the current held evidence. They are not marked
-approved or silently dropped. A larger interactive pass would consume more
-Codex allowance; the user has been asked for a usage boundary. The local-model
-trial, human workflow and publication stages have not started.
+The continuation finishes **bounded AI screening and publication-level contextual
+assessment**, with 108 closer comparison-packet assessments. The 1,301 extraction
+units screened include table fragments, pages, repeated material and front matter;
+they are not 1,301 independently verified claims. Zero pending screening does not
+mean zero unresolved merits. Individual source verification is still required
+where the retained evidence does not establish a conclusion.
+
+Two further private minor citation findings were supported: Georgia's December
+2023 political note labels a Georgia CIA target as India, and Colombia's January
+2025 actors-of-protection bibliography misnames and mislinks an Amnesty report.
+The original Amnesty cover and the correct citations in footnotes 108–110 show
+that the review's claim that the report was not cited is wrong for the held bodies.
+No new major claim error was independently confirmed. A Colombia prejudice-motive
+summary is a strong unresolved comparison: it describes all 107 recorded victims
+as prejudice-motivated while its detailed source quotation identifies a confirmed
+subset of 18 victims. The exact primary PDF returned 404 in the held snapshot.
+
+Preparation now recovers paragraph references followed by a full stop, retains
+whole original pages for ambiguous table-cell roles, excludes private Myanmar
+military-service COIR pages and removes scripts/navigation from the Garden Court
+article reading. Neither Home Office acceptance nor a proposed source replacement
+proves a factual correction. Quoted source errors and alternative spellings are
+kept distinct from CPIN copying errors.
+
+Five full-review/exact-edition gaps, historical source versions and disputed
+claims remain explicit. The private `PUBLISHED-REVIEW-REPORT.md` records the
+continuation's methods, findings and limits. The local-model trial, human workflow
+and publication stages have not started.
 
 ## Private results
 
@@ -104,7 +126,13 @@ The retained local directory is
 - `post-fix-replays.json`: latest targeted code comparisons.
 - `inspected-findings.json`: eight narrow minor findings, with original evidence.
 - `publication-dispositions.json`: all 60 publication routes.
-- `publication-applications.jsonl`: 32 scoped applications, not global verdicts.
+- `publication-applications-corrected.jsonl`: 32 scoped applications with the
+  Palestinian mapping correction; the original journal is retained.
+- `publication-ai-screening-assessments.jsonl`: 1,301 bounded screening outcomes,
+  not factual approvals.
+- `publication-detailed-comparison-assessments.jsonl`: 108 closer assessments.
+- `publication-inspected-findings.json`: two additional narrow minor findings.
+- `PUBLISHED-REVIEW-REPORT.md`: continuation results and unresolved evidence.
 - `publication-argument-locators.jsonl`: remaining argument locations, no merits verdict.
 - `afghanistan-section-10-6-reuse-proof.json`: exact body comparison proof.
 
