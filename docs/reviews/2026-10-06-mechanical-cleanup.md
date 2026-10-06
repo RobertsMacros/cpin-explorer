@@ -3,7 +3,7 @@
 The owner requested correction of the four processing failures and systematic
 false positives, followed by a comparable full rerun and a smaller ranked review
 queue. No paid AI service is enabled. This record distinguishes verified repairs,
-one inspected finding and the ongoing full pass.
+the completed full pass and subsequent bounded hardening replay.
 
 ## Baseline and repairs
 
@@ -73,8 +73,21 @@ the original CPIN index and extraction pipeline are unchanged.
 
 The final tested marker cleanup was then restarted under the same one-off
 LaunchAgent. The earlier progress belongs to the interrupted preliminary scope.
-The final candidate reduction and error count are not yet known; current worker,
-scope and totals are in the private `job.json`.
+The final scope completed on 6 October: **116,125 screened, zero pending, zero
+processing errors**, including all four previously failed occurrences. It recorded
+**7,975 candidate blocks**, compared with the baseline 8,249 (274 fewer, 3.32%).
+Changed-number candidates fell from 247 to 65. The 2,267 distinct review
+questions comprise 64 priority 1, 257 priority 2 and 1,946 priority 3 questions.
+Priority describes the evidence route, never confidence.
+
+There were 104,251 distinct computations and 11,874 exact reuses. Availability
+gaps include 49,681 unavailable source-use receipts; quotation, ellipsis and
+printed-page gaps overlap. No semantic support assessment was performed. The
+completion inspection read 20 direct questions and four matching controls,
+retained the unresolved source-version questions and confirmed two minor typos
+(the Cameroon date below and Syria’s “milliion”). These are not substantive
+claim contradictions. Full private results are in `FOLLOW-UP.md`,
+`completion-sample-assessments.json` and `inspected-findings.json`.
 
 Outputs live in `data/source-evidence/mechanical-cleanup-2026-10-06/` and retain
 the baseline separately. Final exports include `ranked-review-queue.json` with
@@ -84,12 +97,10 @@ This ordering is not a confidence score and never propagates a verdict to an
 unexamined claim. Repeated metadata questions can group without pretending their
 underlying claims have been assessed.
 
-The worker has a process lock, transactional checkpoints, a ten-hour limit,
-6 GiB output limit, 2 GiB free-space floor and `caffeinate -i -s`. The Mac needs
-to remain powered and operational. The existing completion follow-up has been
-updated for this rerun and will compare final counts, inspect a bounded sample,
-report failures/budget stops and then remove this task's one-off native job and
-pause itself. It makes no new downloads, model calls or public findings.
+The completed worker had a process lock, transactional checkpoints, a ten-hour limit,
+6 GiB output limit, 2 GiB free-space floor and `caffeinate -i -s`. The Mac needed to remain powered and
+operational during that run. The completion follow-up has reported the result,
+removed the one-off native job and paused itself. No new downloads, model calls or public findings were made.
 
 ## One inspected, minor finding
 
@@ -114,3 +125,67 @@ Further contextual review will read the strongest remaining questions in bounded
 batches. The owner is not being asked to inspect thousands of raw rows. A flag
 still needs source identity, meaningful discrepancy and exact edition/anchor
 validation; absence of a match remains an evidence gap.
+
+## Further hardening before the next number review
+
+Method `mechanical-source-use-v3` is tested against the retained completion
+sample, separately from another full corpus run. Literal quotations and canonical
+CPIN bodies are untouched. The additional rules distinguish derived numeral
+formatting, omitted source attribution and unresolved percentage notation.
+
+- Bounded number words (0–999), comma/space thousands groups and unambiguous
+  decimal commas compare as quantities in aligned passages. Space grouping needs
+  a matching comma-grouped counterpart. Three-digit decimal-comma ambiguities
+  are not normalised into approval. Literal matches remain separate observations.
+- Ordered numerical comparisons preserve swapped figures. Ordered units and
+  numerical slots preserve swapped scales and moved percentage signs. Signs,
+  negation and qualifiers remain significant. Missing percentage notation remains
+  a contextual gap and wording candidate, not a changed digit.
+- PDF notes recognise single-span bottom references, explicit endnote sections
+  and linked numbered bibliographic lists. A bottom note needs smaller type and
+  a matching raised reference before exclusion from a derived body view. Legal
+  numerical superscripts and common measurement exponents are preserved. Both
+  raw readings and each adjustment stay available; Poppler must independently
+  support an alleged PDF discrepancy.
+- HTML accessible “Footnote 24” references resolve their actual targets. Unlinked
+  superscripts need corresponding bracketed note entries. Ambiguous or repeated
+  contexts remain untouched. Copied source markers in a CPIN quotation are routed
+  using the evidenced source context, not treated as altered quantities.
+- A currency conversion inside a quotation needs its own retained footnote to
+  another source before separation from the underlying quoted fee. The conversion
+  remains unverified, with its supporting URLs retained. That mapping now forms
+  part of the reuse key; harmless renumbering can still reuse computation.
+- Explicit omitted email/interview attribution dates remain contextual questions.
+  Unit misspellings remain wording candidates rather than changed numerical scale.
+  Neither route approves a quotation or suppresses other altered values.
+- Queue preparation hashes each distinct held source and extraction. Rewritten
+  bytes invalidate persisted reuse even when file sizes and timestamps are
+  preserved. Derived readings are checked against source/extraction hashes and
+  their own checksum before reuse. Malformed, duplicate or incomplete PDF page
+  inventories are explicit evidence gaps.
+- Runner regression checks cover lock collisions, database failure, finite budgets,
+  empty scopes, mid-batch time stops and checkpointed resumption. Completion is
+  recorded only after exports; CSV/report replacement is atomic. Time and free
+  space are checked between rows; output size remains checked between batches.
+  An in-flight document read and queue preparation are not forcibly interrupted.
+
+All **394 Python tests pass**, including 66 mechanical tests, with the existing
+five PyMuPDF deprecation warnings. `./cpin verify` checks 405 bodies, 707 PDFs
+and 682 images with zero integrity or completeness problems. The selected
+20-case replay reduced changed-number candidates **18 → 5**, changed-unit
+candidates **3 → 0**, and near-quotation candidates **19 → 10**. The five
+numerical survivors include the Nigeria year question and four source-version
+gaps; they are still candidates, not established errors. Cameroon’s impossible
+date remains a candidate; Syria’s spelling typo remains a wording candidate.
+All four previously inspected quotation controls still match, with no new
+candidate rules on those controls.
+
+Private replay: `data/source-evidence/mechanical-hardening-pilot-2026-10-06/`,
+including `summary.json`, `inspected-sample-replay.json`,
+`match-controls-replay.json` and `former-errors-replay.json`. This deliberately
+selected regression sample cannot establish a false-positive rate or predict
+whole-corpus reduction. Source bytes, old run journals and exact edition targets
+remain retained. No new full run, retrieval, model calls, public flags or site
+deployment were started. The next work is bounded inspection of the uninspected
+direct questions; the original 44-question count remains a v2 queue count until
+that queue is replayed.

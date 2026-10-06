@@ -23,7 +23,7 @@ from .source_collect import source_quality
 from .webpdf import read_pdf_second
 from .store import atomic_write
 
-METHOD = 'mechanical-source-use-v2'
+METHOD = 'mechanical-source-use-v3'
 MAX_TEXT = 2_000_000
 RULES = {
     'reference-target': 'Footnote reference resolves in the retained index',
@@ -78,6 +78,9 @@ RULES = {
     'legal-scope': 'Legal meaning/version applicability remains contextual',
     'contextual-support': 'Contextual assessment is outside mechanical screening',
     'source-furniture': 'Structurally evidenced source markers/headings excluded from derived comparison',
+    'quotation-number-format': 'Aligned numeral formatting differs without changing values',
+    'quotation-attribution': 'Omitted source attribution remains a contextual question',
+    'quotation-unit-scope': 'Missing percentage notation needs contextual interpretation',
 }
 
 MONTHS = 'January February March April May June July August September October November December'.split()
@@ -91,6 +94,7 @@ ISBN = re.compile(r'\bISBN(?:-1[03])?\s*:?\s*([\dXx][\dXx -]{8,20}[\dXx])')
 CASE = re.compile(r'\[\d{4}\]\s+(?:UKUT|UKSC|EWCA|EWHC|UKIAT|UKAIT)\s+(?:[A-Z]+\s+)?\d+|\bECLI:[A-Z0-9:._-]+', re.I)
 BIB_SECTIONS = {'Sources cited', 'Sources consulted but not cited', 'Bibliography'}
 OCCURRENCE_RULES = {'reference-target', 'duplicate-reference', 'source-future-date', 'capture-applicability', 'duplicate-url-citation-date'}
+EXPONENT_BASES = {'km', 'cm', 'mm', 'm', 'metres', 'meters', 'log', 'ln', 'x', 'y', 'z'}
 
 
 def digest_json(value):
@@ -207,6 +211,8 @@ def near_quote(text, quote):
         if end >= 0:
             candidate = text[pos:end + len(last)]
             ratio = SequenceMatcher(None, words, candidate.split(), autojunk=False).ratio()
+            q_values, s_values = quantity_texts(q, candidate)
+            ratio = max(ratio, SequenceMatcher(None, format_words(q_values).split(), format_words(s_values).split(), autojunk=False).ratio())
             if ratio >= .90 and candidate != q:
                 candidates[candidate] = {'excerpt': candidate, 'offset': pos, 'similarity': round(ratio, 4)}
         pos = text.find(first, pos + len(first))
@@ -219,17 +225,97 @@ def near_quote(text, quote):
     for tag, a, b, c, d in SequenceMatcher(None, words, source_words, autojunk=False).get_opcodes():
         if tag != 'equal':
             best['differences'].append({'quoted': ' '.join(words[a:b]), 'source': ' '.join(source_words[c:d])})
-    best['changed'] = {k: Counter(regex.findall(q)) != Counter(regex.findall(best['excerpt']))
+    best['changed'] = {k: regex.findall(q) != regex.findall(best['excerpt'])
                        for k, regex in [('number', NUMBER), ('negation', NEGATION), ('qualifier', QUALIFIER), ('unit', UNIT)]}
-    best['changed']['unit'] = numerical_units(q) != numerical_units(best['excerpt'])
+    quoted_values, source_values = quantity_texts(q, best['excerpt'])
+    best['changed']['number'] = number_values(quoted_values) != number_values(source_values)
+    best['numberFormatOnly'] = quoted_values != q or source_values != best['excerpt']
+    # A misspelt unit remains a wording question, rather than a claim that the
+    # numerical scale changed. Both recognised units must still be compared.
+    unit_q = quoted_values
+    unit_words = {'million', 'billion', 'thousand', 'people', 'persons', 'families', 'households', 'deaths', 'cases', 'incidents', 'days', 'months', 'years', 'dollars', 'pounds'}
+    for difference in best['differences']:
+        a, b = re.findall(r'\w+', difference['quoted']), re.findall(r'\w+', difference['source'])
+        if len(a) == len(b) == 1 and a[0] not in unit_words and b[0] in unit_words and SequenceMatcher(None, a[0], b[0]).ratio() >= .85:
+            unit_q = re.sub(r'\b' + re.escape(a[0]) + r'\b', b[0], unit_q)
+    best['changed']['unit'] = numerical_units(unit_q) != numerical_units(source_values) or any(
+        number_values(d['quoted']) and number_values(d['quoted']) == number_values(d['source'])
+        and numerical_units(d['quoted']) != numerical_units(d['source']) for d in best['differences'])
+    if number_values(unit_q) == number_values(source_values):
+        best['changed']['unit'] |= quantity_units(unit_q) != quantity_units(source_values)
+    best['formatEquivalent'] = format_words(quoted_values) == format_words(source_values)
     return best
+
+
+SMALL_NUMBERS = dict(zip(('zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen').split(), range(20)))
+SMALL_NUMBERS.update(dict(zip(('twenty thirty forty fifty sixty seventy eighty ninety').split(), range(20, 100, 10))))
+ONES = '|'.join(list(SMALL_NUMBERS)[:10])
+TENS = '|'.join(list(SMALL_NUMBERS)[20:])
+WORD_NUMBER = re.compile(r'\b(?:(' + ONES + r') hundred(?: and)?(?: (?:' + TENS + r')(?:[- ](?:' + ONES + r'))?| (?:' + '|'.join(list(SMALL_NUMBERS)[:20]) + r'))?|(?:' + TENS + r')(?:[- ](?:' + ONES + r'))?|' + '|'.join(list(SMALL_NUMBERS)[:20]) + r')\b')
+
+
+def quantity_texts(quoted, source):
+    """Derived quantity comparison only; literal quotation text is untouched.
+
+    Space grouping needs a comma-grouped counterpart. Decimal commas with three
+    trailing digits are deliberately not interpreted as decimals. Bounded English
+    number phrases cover 0–999; a bare 'one' needs a digit counterpart or unit.
+    """
+    results = []
+    for text, other in ((quoted, source), (source, quoted)):
+        digits = set(NUMBER.findall(other))
+        digits = {v.replace(',', '').rstrip('%').strip().lstrip('+') for v in digits}
+        def numeral(match):
+            phrase = match.group()
+            if phrase == 'one' and '1' not in digits and not re.match(r'\s+(?:hundred|thousand|million|billion|people|persons|cases|days|months|years)\b', text[match.end():]):
+                return phrase
+            value = 0
+            for word in phrase.replace('-', ' ').split():
+                if word == 'hundred':
+                    value *= 100
+                elif word != 'and':
+                    value += SMALL_NUMBERS[word]
+            return str(value)
+        text = WORD_NUMBER.sub(numeral, text)
+        for match in list(re.finditer(r'(?<![\w.,])\d{1,3}(?: \d{3})+(?!\d|[.,]\d)', text))[::-1]:
+            value = match.group().replace(' ', '')
+            # A sequence of separate numbers is not assumed to be a grouping.
+            counterpart = re.search(r'(?<!\w)' + re.escape(f'{int(value):,}') + r'(?!\w)', other)
+            if counterpart:
+                text = text[:match.start()] + value + text[match.end():]
+        text = re.sub(r'(?<![\w.,])([−+-]?\d+),(\d{1,2})(?!\d|[.,]\d)', r'\1.\2', text)
+        text = re.sub(r'(?<!\w)\d{1,3}(?:,\d{3})+(?!\d)', lambda m: m.group().replace(',', ''), text)
+        results.append(text)
+    return results
+
+
+def format_words(text):
+    # Punctuation typography only. Mathematical signs, slash, currency and
+    # percentage survive; words, quantities, qualifiers and order survive.
+    text = re.sub(r'([%£$€])', r' \1 ', text)
+    return re.sub(r'\s+', ' ', re.sub(r'[\"\'“”‘’.,;:()–—]', ' ', text)).strip()
+
+
+def number_values(text):
+    # A missing percent sign is a unit/wording question, not a changed digit.
+    return [value.rstrip('%').strip() for value in NUMBER.findall(text)]
 
 
 def numerical_units(text):
     """Population words count as units only when attached to a numerical value."""
     number = r'[−+-]?\d+(?:,\d{3})*(?:\.\d+)?'
     units = r'per cent|percent|percentage|people|persons|families|households|deaths|cases|incidents|million|billion|thousand|days|months|years|dollars|pounds'
-    return Counter(re.findall(r'(?:' + number + r'\s*(' + units + r'|%)(?!\w))|([£$€])\s*' + number, text, re.I))
+    return re.findall(r'(?:' + number + r'\s*(' + units + r'|%)(?!\w))|([£$€])\s*' + number, text, re.I)
+
+
+def quantity_units(text):
+    """Associate recognised units with ordered numerical slots, including gaps."""
+    slots = []
+    for match in NUMBER.finditer(text):
+        following = re.match(r'\s*(per cent|percent|percentage|people|persons|families|households|deaths|cases|incidents|million|billion|thousand|days|months|years|dollars|pounds)\b', text[match.end():])
+        currency = re.search(r'([£$€])\s*$', text[:match.start()])
+        slots.append('%' if match.group().rstrip().endswith('%') else following[1] if following else currency[1] if currency else None)
+    return slots
 
 
 def arithmetic(text):
@@ -292,23 +378,71 @@ def declared_labels(pdf):
     return labels, uncovered
 
 
-def pdf_note_markers(page):
+def pdf_note_markers(page, endnotes=()):
     """Raised numeric spans with a matching bottom-of-page note, never bare digits."""
     lines = [line['spans'] for b in page.get_text('dict')['blocks'] for line in b.get('lines', [])]
-    notes = {spans[0]['text'].strip() for spans in lines if spans and spans[0]['text'].strip().isdigit()
-             and not spans[0]['flags'] & 1 and spans[0]['bbox'][1] > page.rect.height * .65
-             and len(spans) > 1 and any(s['text'].strip() for s in spans[1:])}
+    notes = set(endnotes)
+    for spans in lines:
+        if spans and not spans[0]['flags'] & 1 and spans[0]['bbox'][1] > page.rect.height * .65:
+            match = re.match(r'^(\d{1,4})\s+\S', ''.join(s['text'] for s in spans).strip())
+            if match:
+                notes.add(match[1])
     markers = []
     flat = [s for spans in lines for s in spans]
     for i, span in enumerate(flat):
         value = span['text'].strip()
         if value not in notes or not span['flags'] & 1 or not 0 < i < len(flat)-1:
             continue
-        before = normal(flat[i-1]['text'])[-50:]
-        after = normal(flat[i+1]['text'])[:50]
-        if before and after:
+        before = next((normal(s['text'])[-50:] for s in reversed(flat[:i]) if normal(s['text'])), '')
+        after = next((normal(s['text'])[:50] for s in flat[i+1:] if normal(s['text'])), '')
+        # A legal provision (239¹), exponent or numerical suffix is not a
+        # prose reference, even if a note with that number exists elsewhere.
+        last_word = re.findall(r'\w+', before)[-1:] or ['']
+        if before and after and re.search(r'[a-z]', before) and not re.search(r'\d\s*$', before) and last_word[0] not in EXPONENT_BASES:
             markers.append({'marker': value, 'before': before, 'after': after})
     return markers
+
+
+def pdf_endnotes(pdf):
+    notes, started = set(), False
+    size = 0
+    for page in pdf:
+        text = page.get_text()
+        size += len(text)
+        if size > MAX_TEXT:
+            break
+        if re.search(r'^\s*(?:endnotes|notes|references)\s*$', text, re.I | re.M):
+            started = True
+        entries = re.findall(r'^\s*(\d{1,4})[.\t ]+[^\d\s]', text, re.M)
+        # Some publishers leave the final note list untitled. Require a run of
+        # numbered entries and bibliographic links, not a lone numeral/table.
+        if len(set(entries)) >= 3 and len(re.findall(r'https?://|\bavailable at\b', text, re.I)) >= 3:
+            started = True
+        if started:
+            notes.update(entries)
+    return notes
+
+
+def pdf_bottom_notes(page, markers):
+    """Retain bottom notes separately when matching raised references exist."""
+    ids = {m['marker'] for m in markers}
+    notes = []
+    blocks = page.get_text('dict')['blocks']
+    body_sizes = [s['size'] for b in blocks for line in b.get('lines', []) for s in line['spans']
+                  if s['text'].strip() and not s['flags'] & 1 and s['bbox'][1] < page.rect.height * .65]
+    if not body_sizes:
+        return notes
+    body_size = sorted(body_sizes)[len(body_sizes)//2]
+    for block in blocks:
+        lines = block.get('lines', [])
+        if not lines or block['bbox'][1] <= page.rect.height * .65:
+            continue
+        text = normal(' '.join(''.join(s['text'] for s in line['spans']) for line in lines))
+        match = re.match(r'^(\d{1,4})\s+\S', text)
+        sizes = [s['size'] for line in lines for s in line['spans'] if s['text'].strip()]
+        if match and match[1] in ids and len(text.split()) >= 4 and max(sizes) <= body_size * .9:
+            notes.append(text)
+    return notes
 
 
 def remove_notes(text, markers):
@@ -316,10 +450,14 @@ def remove_notes(text, markers):
     removed = []
     for item in markers:
         pattern = re.escape(item['before']) + r'\s*' + re.escape(item['marker']) + r'\s*' + re.escape(item['after'])
-        value, count = re.subn(pattern, item['before'] + ' ' + item['after'], value)
+        # A repeated anchored context is ambiguous, not permission to remove all.
+        count = len(re.findall(pattern, value))
+        if count != 1:
+            continue
+        value = re.sub(pattern, lambda _: item['before'] + ' ' + item['after'], value, count=1)
         if count:
             removed.append({**item, 'occurrences': count})
-    return value, removed
+    return normal(value), removed
 
 
 def html_headings(tree):
@@ -334,13 +472,26 @@ def html_headings(tree):
 def html_note_markers(tree):
     markers = []
     ids = set(tree.xpath('//*[@id]/@id | //a[@name]/@name'))
-    for el in tree.xpath('//a[@href]'):
+    bracket_notes = set()
+    for p in tree.xpath('//p|//li'):
+        match = re.match(r'^\s*\[(\d{1,4})\]\s+\S', p.text_content())
+        if match:
+            bracket_notes.add(match[1])
+    elements = tree.xpath('//a[@href] | //sup[not(.//a)]')
+    for el in elements:
         label = normal(el.text_content())
         href = el.get('href', '')
-        if not re.fullmatch(r'\[?\d{1,4}\]?', label) or not href.startswith('#') or href[1:] not in ids:
+        number = re.fullmatch(r'(?:footnote\s*)?\[?(\d{1,4})\]?', label)
+        if not number:
+            continue
+        if el.tag == 'sup':
+            if number[1] not in bracket_notes:
+                continue
+            href = 'bracket-note:' + number[1]
+        elif not href.startswith('#') or href[1:] not in ids:
             continue
         parents = list(el.iterancestors())
-        if not (any(p.tag == 'sup' for p in parents) or re.search(r'(?:^#fn|ftn|edn|footnote|endnote|ref|note|cite)', href, re.I)
+        if not (el.tag == 'sup' or any(p.tag == 'sup' for p in parents) or re.search(r'(?:^#fn|ftn|edn|footnote|endnote|ref|note|cite)', href, re.I)
                 or el.get('role') == 'doc-noteref'):
             continue
         parent = next((p for p in parents if p.tag in {'p','li','div'}), None)
@@ -351,6 +502,8 @@ def html_note_markers(tree):
         if content.count(label) != 1:
             continue
         before, after = content.split(label)
+        if el.tag == 'sup' and (re.findall(r'\w+', before)[-1:] or [''])[0] in EXPONENT_BASES:
+            continue
         if len(before.split()) + len(after.split()) >= 4:
             markers.append({'marker':label,'before':before[-50:],'after':after[:50], 'target':href})
     return markers
@@ -397,12 +550,6 @@ class SourceReader:
         reader_stat = stat_key(shutil.which('pdftotext') or '/not-installed')
         key = digest_json([METHOD, hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), digest, raw_stat, text_stat, reader_stat])
         saved = self.output / 'readings' / f'{key}.json.gz'
-        if saved.exists():
-            try:
-                with gzip.open(saved, 'rt', encoding='utf-8') as stream:
-                    return json.load(stream)
-            except (OSError, ValueError, EOFError):
-                pass  # Rebuild only our derived reading, never the retained source.
         obj = cache / 'documents' / digest
         if not obj.exists():
             return {'problem': 'source-bytes-missing'}
@@ -413,8 +560,22 @@ class SourceReader:
         if not text_path.exists():
             return {'problem': 'source-extraction-missing'}
         raw_text = text_path.read_bytes()
+        extraction_sha = hashlib.sha256(raw_text).hexdigest()
+        if tuple(stat_key(obj) or ()) != raw_stat or tuple(stat_key(text_path) or ()) != text_stat:
+            return {'problem': 'source-changed-since-queue-preparation'}
+        if saved.exists():
+            try:
+                with gzip.open(saved, 'rt', encoding='utf-8') as stream:
+                    held = json.load(stream)
+                required = {'kind', 'headers', 'norm', 'comparisonNorm', 'pages', 'second', 'bounded', 'furniture', 'pageLabels', 'dates', 'anchors'}
+                if isinstance(held, dict) and required <= held.keys() and held.get('sha256') == digest and held.get('extractionSha256') == extraction_sha and held.get('readingSha256') == digest_json({k: v for k, v in held.items() if k != 'readingSha256'}):
+                    return held
+            except (OSError, ValueError, EOFError):
+                pass  # Rebuild only our derived reading, never retained evidence.
         text = json.loads(raw_text)
-        doc = {'sha256': digest, 'extractionSha256': hashlib.sha256(raw_text).hexdigest(),
+        if not isinstance(text, dict) or text.get('kind') not in {'pdf', 'html', 'text'}:
+            return {'problem': 'unsupported-source-extraction'}
+        doc = {'sha256': digest, 'extractionSha256': extraction_sha,
                'kind': text.get('kind'), 'headers': [text.get('title', '')], 'dates': [],
                'anchors': [], 'pageLabels': {}, 'pages': [], 'second': None, 'bounded': False,
                'headings': [], 'furniture': [], 'labelGaps': []}
@@ -428,16 +589,28 @@ class SourceReader:
                 doc['pageLabels'], doc['labelGaps'] = declared_labels(pdf)
                 size = 0
                 markers = {}
+                bottom_notes = []
+                endnotes = pdf_endnotes(pdf)
+                seen = set()
                 for p in text.get('pages', []):
                     size += len(p.get('text', ''))
                     if size > MAX_TEXT:
                         doc['bounded'] = True
                         break
-                    number = p['page']
-                    markers[number] = pdf_note_markers(pdf[number-1])
+                    number = p.get('page')
+                    if type(number) is not int or not 1 <= number <= pdf.page_count or number in seen:
+                        return {'problem': 'invalid-or-duplicate-extracted-page'}
+                    seen.add(number)
+                    markers[number] = pdf_note_markers(pdf[number-1], endnotes)
                     cleaned, removed = remove_notes(p.get('text', ''), markers[number])
+                    notes = pdf_bottom_notes(pdf[number-1], markers[number])
+                    cleaned, note_removals = comparison_text(cleaned, notes)
+                    bottom_notes += notes
                     doc['furniture'] += [{'physicalPage': number, **m} for m in removed]
+                    doc['furniture'] += [{'physicalPage': number, 'bottomNote': m['heading']} for m in note_removals]
                     doc['pages'].append({'physicalPage': number, 'text': normal(p.get('text', '')), 'comparison': cleaned})
+                if not doc['bounded'] and len(seen) != pdf.page_count:
+                    return {'problem': 'incomplete-extracted-page-inventory'}
             doc['headers'] += [p.get('text', '') for p in text.get('pages', [])[:3]]
             # Same independent reader used by the established PDF comparison method.
             second = None
@@ -462,6 +635,7 @@ class SourceReader:
                 # removed. If the independent text differs, leave it untouched.
                 all_markers = [m for ms in markers.values() for m in ms]
                 doc['secondComparison'], _ = remove_notes(doc['second'], all_markers)
+                doc['secondComparison'], _ = comparison_text(doc['secondComparison'], bottom_notes)
             body = '\n'.join(p['text'] for p in doc['pages'])
             doc['comparisonNorm'] = normal(' '.join(p['comparison'] for p in doc['pages']))
         else:
@@ -487,6 +661,7 @@ class SourceReader:
             doc['comparisonNorm'], doc['furniture'] = comparison_text(without_notes, doc['headings'])
             doc['furniture'] += removed
         doc['quality'] = source_quality({'url': 'https://source.invalid/', 'final_url': 'https://source.invalid/'}, text)
+        doc['readingSha256'] = digest_json(doc)
         atomic_write(saved, gzip.compress(json.dumps(doc, ensure_ascii=False).encode()))
         return doc
 
@@ -583,7 +758,16 @@ def source_checks(cite, url, doc):
     return checks
 
 
-def quotation_checks(text, doc, url):
+def editorial_citations(raw_text, footnotes):
+    insertions = []
+    for match in re.finditer(r'\(([^()]*)\[footnote\s+(\d+)\]\)', raw_text, re.I):
+        content = normal(match[1])
+        urls = sorted({l.get('url') for f in footnotes if f.get('id') == 'fn:' + match[2] for l in f.get('links', []) if l.get('url')})
+        insertions.append({'text': '(' + content + ')', 'supportingUrls': urls})
+    return insertions
+
+
+def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
     checks = []
     for quote in quotations(text):
         match = locate(doc['norm'], quote)
@@ -618,18 +802,63 @@ def quotation_checks(text, doc, url):
         else:
             near = near_quote(doc.get('comparisonNorm', doc['norm']), quote)
             if near:
+                q_values, s_values = quantity_texts(normal(quote), near['excerpt'])
+                copied_markers = []
+                for item in doc.get('furniture', []):
+                    if 'marker' not in item or not item.get('after'):
+                        continue
+                    before = item['before'].split()[-1]
+                    after = ' '.join(item['after'].split()[:3])
+                    if len(after.split()) < 3 or not re.search(r'[a-z]{3}', before):
+                        continue
+                    marker = {'marker': item['marker'], 'before': before, 'after': after}
+                    q_values, removed = remove_notes(q_values, [marker])
+                    copied_markers += removed
+                if copied_markers:
+                    near['changed']['number'] = number_values(q_values) != number_values(s_values)
+                    checks.append({'rule': 'source-furniture', 'state': 'observation', **base,
+                                   'adjustments': copied_markers, 'reason': 'structurally evidenced source reference also copied into quote; wording/context unassessed'})
                 if marker_shaped_difference(near):
                     checks.append({'rule': 'source-furniture', 'state': 'unable', **base, **near,
                                    'reason': 'difference has an unproven source-marker shape; no number-error finding or match approval'})
                     continue
+                q_units, s_units = numerical_units(q_values), numerical_units(s_values)
+                percent = ('%', '')
+                if near['changed']['unit'] and q_units.count(percent) != s_units.count(percent) and [u for u in q_units if u != percent] == [u for u in s_units if u != percent]:
+                    near['changed']['unit'] = False
+                    checks.append({'rule': 'quotation-unit-scope', 'state': 'unable', **base,
+                                   'reason': 'percent sign missing in one aligned passage; numerical digits unchanged only if separately established, contextual scale unresolved'})
                 second_text = doc.get('secondComparison', doc['second'])
                 second_exact = doc['kind'] == 'pdf' and second_text is not None and locate(second_text, quote)['state'] == 'pass'
-                typography_only = re.findall(r'\w+', normal(quote)) == re.findall(r'\w+', near['excerpt']) and not any(near['changed'].values())
+                omitted = [a for a in re.findall(r'\((?:e-?mail|personal communication|interview)[^()]*\b(?:19|20)\d{2}\)', near['excerpt'], re.I) if a not in normal(quote)]
+                if omitted:
+                    for attribution in omitted:
+                        s_values = s_values.replace(attribution, '')
+                    near['changed']['number'] = number_values(q_values) != number_values(s_values)
+                    checks.append({'rule': 'quotation-attribution', 'state': 'unable', **base,
+                                   'omittedAttributions': omitted, 'reason': 'attribution omission, not a numerical proposition; significance unassessed'})
+                additions = []
+                if raw_text:
+                    for insertion in editorial_citations(raw_text, footnotes):
+                        content = insertion['text'][1:-1]
+                        if any(u != url for u in insertion['supportingUrls']) and re.fullmatch(r'[\d., ]+\s*(?:gbp|usd|eur|£|\$|€)', content, re.I) and insertion['text'] in normal(quote) and insertion['text'] not in near['excerpt']:
+                            additions.append(insertion)
+                    if additions:
+                        for insertion in additions:
+                            q_values = q_values.replace(insertion['text'], '')
+                        near['changed']['number'] = number_values(q_values) != number_values(s_values)
+                        near['changed']['unit'] = numerical_units(q_values) != numerical_units(s_values)
+                        checks.append({'rule': 'editorial-insertion', 'state': 'unable', **base, 'insertions': additions,
+                                       'reason': 'separately footnoted conversion; amount and conversion basis have not been verified'})
+                typography_only = (near['formatEquivalent'] or re.findall(r'\w+', normal(quote)) == re.findall(r'\w+', near['excerpt'])) and not any(near['changed'].values())
                 second_near = near_quote(second_text, quote) if doc['kind'] == 'pdf' and second_text is not None and not second_exact else None
                 independent = doc['kind'] != 'pdf' or bool(second_near and second_near['differences'] == near['differences'])
                 state = 'observation' if typography_only else 'candidate' if independent and not second_exact else 'unable'
                 checks.append({'rule': 'quotation-near-match', 'state': state, **base, **near,
-                               'reason': 'typography-only difference' if typography_only else 'independent reader has quoted text: extraction artefact' if second_exact else 'similar text; independent/context/identity validation remains required'})
+                               'reason': 'formatting-only difference; literal wording and context remain separate' if typography_only else 'independent reader has quoted text: extraction artefact' if second_exact else 'similar text; independent/context/identity validation remains required'})
+                if near['numberFormatOnly']:
+                    checks.append({'rule': 'quotation-number-format', 'state': 'observation' if independent else 'unable', **base,
+                                   'reason': 'derived numeral-format comparison only; no literal match or contextual approval', 'differences': near['differences']})
                 if doc['kind'] == 'pdf':
                     checks.append({'rule': 'near-match-independent-reader', 'state': 'observation' if independent else 'unable', **base,
                                    'agreedDifferences': second_near['differences'] if independent and second_near else [],
@@ -674,6 +903,9 @@ def screen(payload, reader):
         if doc.get('problem'):
             add('source-integrity', 'unable', url=url, reason=doc['problem'])
             continue
+        if source.get('observedExtractionSha256') and source['observedExtractionSha256'] != doc['extractionSha256']:
+            add('source-integrity', 'unable', url=url, reason='extraction-changed-since-queue-preparation')
+            continue
         add('source-integrity', 'pass', url=url, sha256=record['sha256'])
         quality = source_quality(record, {'kind': doc['kind'], 'status': 'extracted', 'title': doc['headers'][0], 'text': doc['norm']})
         if not quality['readable_source']:
@@ -701,7 +933,7 @@ def screen(payload, reader):
             # resolve them from the retained original href, not the fetch URL.
             fragment_rules = {'source-html-fragment', 'source-text-fragment', 'source-physical-page', 'source-pinpoint-present'}
             checks.extend(c for c in source_checks('', url + '#' + fragment, doc) if c['rule'] in fragment_rules)
-        checks.extend(quotation_checks(text, doc, url))
+        checks.extend(quotation_checks(text, doc, url, claim['text'], footnotes))
         # Pinpoint quotation comparison is available only with declared PDF labels
         # or an explicit physical #page. Absence elsewhere is never a hard failure.
         page_targets = []

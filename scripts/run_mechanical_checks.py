@@ -9,6 +9,7 @@ import csv
 import fcntl
 import hashlib
 import json
+import math
 import os
 import signal
 import shutil
@@ -22,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from cpin import mechanical as mc
 from cpin.source_collect import cached_records, inventory_paths
-from cpin.store import now_iso, read_json, write_json
+from cpin.store import atomic_write, now_iso, read_json, write_json
 
 
 def links(obj):
@@ -67,6 +68,16 @@ def prepare(con, inventory, output, caches, country=None, limit=None, receipt_sn
                     captured[url] = {'cache': str(cache.resolve()), 'record': record}
         write_json(snapshot_file, captured)
     signatures = {}
+    content_hashes = {}
+    def held_hash(path):
+        key = str(path.resolve())
+        if key not in content_hashes:
+            try:
+                with path.open('rb') as stream:
+                    content_hashes[key] = hashlib.file_digest(stream, 'sha256').hexdigest()
+            except OSError:
+                content_hashes[key] = None
+        return content_hashes[key]
     for url, value in captured.items():
         value = dict(value)
         digest = value['record'].get('sha256')
@@ -74,6 +85,10 @@ def prepare(con, inventory, output, caches, country=None, limit=None, receipt_sn
         valid = bool(digest and __import__('re').fullmatch(r'[a-f0-9]{64}', digest))
         value['rawStat'] = mc.stat_key(cache / 'documents' / digest) if valid else None
         value['textStat'] = mc.stat_key(cache / 'text' / f'{digest}.json') if valid else None
+        # Stat fingerprints alone cannot detect a rewritten file whose size and
+        # timestamp were preserved. Hash once per held object, before reuse.
+        value['observedRawSha256'] = held_hash(cache / 'documents' / digest) if valid else None
+        value['observedExtractionSha256'] = held_hash(cache / 'text' / f'{digest}.json') if valid else None
         signatures[url] = value
     total = 0
     for path in inventory_paths(inventory):
@@ -124,6 +139,7 @@ def prepare(con, inventory, output, caches, country=None, limit=None, receipt_sn
                                        'following': mc.claim_text(claims[i+1]) if i+1 < len(claims) else ''},
                            'citations': sorted([(f['text'], sorted(l['url'] for l in links(f))) for f in footnotes])})
             shared['originalLinks'] = sorted((l['url'], l.get('href', ''), l.get('boundary_uncertain', False)) for l in all_links)
+            shared['editorialCitations'] = mc.editorial_citations(c['text'], footnotes)
             # Marker mappings and edition dates are evaluated per occurrence;
             # they do not prevent reusing equivalent source comparisons.
             group_key = mc.digest_json(shared)
@@ -172,7 +188,8 @@ def export(con, scope, output):
     candidates = Counter()
     samples = []
     groups = {}
-    with (output / 'candidates.csv').open('w', encoding='utf-8', newline='') as stream:
+    candidate_tmp = output / 'candidates.csv.tmp'
+    with candidate_tmp.open('w', encoding='utf-8', newline='') as stream:
         writer = csv.writer(stream)
         writer.writerow(['Country', 'Report', 'Edition', 'CPIN text hash', 'Claim', 'Paragraph', 'Section', 'Rule', 'Source URL', 'Source hash', 'Reason'])
         for encoded, result, group_key in con.execute('SELECT payload,result,group_key FROM occurrences WHERE scope=? AND result IS NOT NULL', (scope,)):
@@ -200,6 +217,7 @@ def export(con, scope, output):
                 writer.writerow(["'"+v if isinstance(v, str) and v[:1] in '=+-@\t\r' else v for v in values])
                 if len(samples) < 120:
                     samples.append({'target': target, 'claim': payload['claim'], 'check': check})
+    os.replace(candidate_tmp, output / 'candidates.csv')
     totals = status(con, scope)
     ranked = sorted(groups.values(), key=lambda g:(g['priority'], g['rule'], g['id']))
     write_json(output / 'ranked-review-queue.json', ranked)
@@ -222,23 +240,32 @@ def export(con, scope, output):
              'See ranked-review-queue.json; metadata/ellipsis questions stay separate from the first direct-comparison queue.']
     text += ['', 'Missing evidence and unsupported inputs remain explicit in summary.json and results.sqlite3.',
              'No archive lookup, new download, model call, contextual assessment or public flag was made.', '']
-    (output / 'REPORT.md').write_text('\n'.join(text))
+    atomic_write(output / 'REPORT.md', '\n'.join(text).encode())
     return summary
 
 
 def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, max_gb=4, receipt_snapshot=None, reading_cache=None):
+    if not math.isfinite(max_hours) or max_hours <= 0 or not math.isfinite(max_gb) or not 1 <= max_gb <= 8 or (limit is not None and limit < 1):
+        raise ValueError('Use finite positive limits and a 1–8 GiB result budget')
     inventory, output = Path(inventory), Path(output)
     output.mkdir(parents=True, exist_ok=True)
     lock = (output / 'run.lock').open('a')
-    fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    con = connect(output / 'results.sqlite3')
+    try:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BaseException:
+        lock.close()
+        raise
+    con = None
     start = time.monotonic()
     meta = {'method': mc.METHOD, 'pid': os.getpid(), 'startedAt': now_iso(), 'state': 'preparing',
             'inventory': str(inventory.resolve()), 'output': str(output.resolve()), 'networkRequests': 0, 'modelCalls': 0}
-    write_json(output / 'job.json', meta)
-    print('Preparing frozen source receipts and resumable occurrence queue.', flush=True)
     try:
+        write_json(output / 'job.json', meta)
+        print('Preparing frozen source receipts and resumable occurrence queue.', flush=True)
+        con = connect(output / 'results.sqlite3')
         scope, total = prepare(con, inventory, output, [Path(c) for c in caches], country, limit, receipt_snapshot)
+        if not total:
+            raise ValueError('No eligible linked blocks; check inventory and country filter')
         meta.update({'scope': scope, 'total': total, 'state': 'running'})
         reader = mc.SourceReader(output, reading_cache)
         last_progress = 0
@@ -255,6 +282,12 @@ def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, ma
                 meta['state'] = 'disk-budget-stopped'
                 break
             for occurrence, input_sha, key, encoded in batch:
+                if time.monotonic() - start > max_hours * 3600:
+                    meta['state'] = 'time-budget-stopped'
+                    break
+                if shutil.disk_usage(output).free < 2 * 1024**3:
+                    meta['state'] = 'disk-budget-stopped'
+                    break
                 payload = json.loads(encoded)
                 try:
                     old = con.execute('SELECT result FROM computations WHERE key=?', (key,)).fetchone()
@@ -282,9 +315,12 @@ def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, ma
                     print(json.dumps(current), flush=True)
                     last_progress = time.monotonic()
             con.commit()
+            if meta['state'] in {'time-budget-stopped', 'disk-budget-stopped'}:
+                break
         meta.update(status(con, scope))
         meta['state'] = 'complete' if meta['remaining'] == 0 else meta['state']
         meta.update({'updatedAt': now_iso(), 'reusedComputationsThisProcess': reused})
+        write_json(output / 'job.json', {**meta, 'state': 'exporting' if meta['remaining'] == 0 else meta['state']})
         summary = export(con, scope, output)
         if summary['rowStates'].get('processing-error'):
             meta['state'] = 'completed-with-processing-errors' if meta['remaining'] == 0 else meta['state']
@@ -292,11 +328,15 @@ def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, ma
         print(json.dumps(meta, indent=2), flush=True)
         return summary
     except BaseException as error:
-        con.commit()
-        write_json(output / 'job.json', {**meta, 'state': 'interrupted' if isinstance(error, KeyboardInterrupt) else 'failed', 'error': type(error).__name__, 'updatedAt': now_iso()})
+        if con is not None:
+            con.commit()
+        if meta.get('scope') and con is not None:
+            meta.update(status(con, meta['scope']))
+        write_json(output / 'job.json', {**meta, 'state': 'interrupted' if isinstance(error, KeyboardInterrupt) else 'failed', 'error': type(error).__name__, 'errorDetail': str(error)[:300], 'updatedAt': now_iso()})
         raise
     finally:
-        con.close()
+        if con is not None:
+            con.close()
         lock.close()
 
 
@@ -323,7 +363,7 @@ if __name__ == '__main__':
         parser.error('Keep result directory separate from source inventory')
     if any(p and not p.resolve().is_relative_to(base) for p in (args.receipt_snapshot, args.reading_cache)):
         parser.error('Reuse evidence only from private data/source-evidence paths')
-    if (args.limit is not None and args.limit < 1) or args.max_hours <= 0 or not 1 <= args.max_gb <= 8:
+    if (args.limit is not None and args.limit < 1) or not math.isfinite(args.max_hours) or args.max_hours <= 0 or not math.isfinite(args.max_gb) or not 1 <= args.max_gb <= 8:
         parser.error('Use positive limits and a 1–8 GiB result budget')
     result = run(args.inventory, args.out, args.cache, args.country, args.limit, args.max_hours, args.max_gb, args.receipt_snapshot, args.reading_cache)
     sys.exit(bool(result['remaining'] or result['rowStates'].get('processing-error')))

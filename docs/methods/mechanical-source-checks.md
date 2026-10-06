@@ -4,7 +4,7 @@ The owner requested an inventory of deterministic checks on 5 October 2026,
 with archive recovery deferred on the first pass. Use held source captures first;
 original-address retrieval can fill gaps under the existing polite collector.
 Do not start new archive searches for this pass. Existing archived captures may
-be screened with their provenance intact. The private runner now implements 52
+be screened with their provenance intact. The private runner now implements 55
 rule types, including eligibility/gap routes as well as comparisons. Implementation
 is not proof that every rule applies to every passage or that any claim is correct.
 
@@ -207,3 +207,11 @@ and [reuse decision](../research/mechanical-source-checks/REPORT.md).
 | `legal-scope` | Legal meaning/version applicability remains contextual |
 | `contextual-support` | Contextual assessment is outside mechanical screening |
 | `source-furniture` | Structurally evidenced source markers/headings excluded from derived comparison |
+| `quotation-number-format` | Aligned numeral formatting differs without changing values |
+| `quotation-attribution` | Omitted source attribution remains a contextual question |
+| `quotation-unit-scope` | Missing percentage notation needs contextual interpretation |
+
+Method v3 and its bounded regression replay are described in
+[the repair record](../reviews/2026-10-06-mechanical-cleanup.md).
+Literal quotations remain separate from derived quantity-format observations;
+source-version and contextual gaps never become an overall approval.

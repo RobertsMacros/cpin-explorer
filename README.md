@@ -23,17 +23,26 @@ It has three parts:
 
 ## Status
 
-**6 October 2026: mechanical false-positive repairs and comparable rerun.**
-All four previous processing failures now replay successfully. The corrected
-runner handles uncovered PDF page-label intervals, structurally evidenced
-footnote markers and headings, grouped numbers, population words and coarse
-ratios. All 359 Python tests pass. A rerun of all 116,125 linked blocks is active
-using the original frozen source receipts; its final reduction is not yet known.
-The export groups repeated review questions and ranks direct comparisons ahead
-of metadata/ellipsis questions, without turning priority into confidence.
-One minor bibliography access-date typo has been independently inspected in
-the exact archived Cameroon edition; findings remain private. See the
-[repairs, evidence and run status](docs/reviews/2026-10-06-mechanical-cleanup.md).
+**6 October 2026: mechanical screen completed; further checks hardened.**
+The corrected full pass screened all 116,125 linked blocks with zero pending and
+zero processing errors, including the four previous failures. Candidate blocks
+fell from 8,249 to 7,975; 2,267 distinct review questions remained (64 direct,
+257 wording/identity, 1,946 metadata/ellipsis). Candidates are not factual errors.
+The one-off worker and its monitor have finished and been removed/paused.
+
+Method `mechanical-source-use-v3` now handles the surviving numeral formats,
+source footnote styles, copied source markers and separately cited conversions.
+Reuse is invalidated by evidence content hashes, not only timestamps; malformed
+PDF inventories and stale/corrupt readings stay evidence gaps. All **394 Python
+tests pass**, and `./cpin verify` reports no integrity/completeness problems.
+In the selected 20-case regression replay, changed-number candidates fell
+**18 → 5**, changed-unit candidates **3 → 0**, and all four quotation-match
+controls still matched. Historical source versions, wording and meaning remain
+unassessed where noted. This selected sample is not a corpus reduction estimate.
+No further full run, source retrieval, paid call, public flag or deployment was
+started. The next step is bounded review of the remaining direct comparisons.
+See the [repairs, evidence and limits](docs/reviews/2026-10-06-mechanical-cleanup.md)
+and the private [review plan and pipeline](https://chatgpt.com/space/page_bbc9800f0e6081919996aa393ee957e8).
 
 **5 October 2026: expanded mechanical checks and overnight run started.**
 The private runner implements 51 rule types covering reference mappings, source

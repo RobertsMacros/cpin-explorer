@@ -297,3 +297,227 @@ def test_pdf_marker_proof_requires_raised_span_and_matching_note():
     assert len(m.pdf_note_markers(Page()))==1
     assert m.pdf_note_markers(Page(raised=False))==[]
     assert m.pdf_note_markers(Page(note=False))==[]
+
+
+@pytest.mark.parametrize('quoted,source', [('40 names and over 80 people', 'forty names and over eighty people'), ('8 urban and 7 rural', 'eight urban and seven rural'), ('8,680 days and 5,326 days', '8 680 days and 5 326 days'), ('7.4% and 4.1%', '7,4% and 4,1%')])
+def test_aligned_equivalent_numerals_are_observations_not_literal_passes(quoted, source):
+    q = 'The detailed country survey reported ' + quoted + ' during the full reporting period for the country.'
+    s = q.replace(quoted, source)
+    checks = m.quotation_checks('‘'+q+'’', doc(s, 'pdf', s), 'https://example.org/source.pdf')
+    assert not any(c['state'] == 'candidate' for c in checks)
+    assert any(c['rule'] == 'quotation-number-format' and c['state'] == 'observation' for c in checks)
+    assert not any(c['rule'] == 'quotation-exact' and c['state'] == 'pass' for c in checks)
+
+
+@pytest.mark.parametrize('a,b,rule', [('40 names and 80 people', 'eighty names and forty people', 'changed-number'), ('40 names', 'forty thousand names', 'changed-unit'), ('−7.4%', '7,4%', 'changed-number'), ('40 million people', '40 billion people', 'changed-unit'), ('1979', '1967', 'changed-number'), ('40 people did return', 'forty people did not return', 'changed-negation')])
+def test_format_cleanup_preserves_real_swaps_signs_scales_years_and_negation(a,b,rule):
+    q = 'The detailed country survey reported that ' + a + ' were recorded during the full reporting period in this country.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace(a,b)),'https://example.org/source')
+    assert any(c['rule']==rule and c['state']=='candidate' for c in checks)
+
+
+def test_ambiguous_grouping_is_not_approved_and_unit_typo_stays_wording_candidate():
+    q='The detailed country survey reported that 1.234 people were recorded during the full reporting period in this country.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace('1.234','1,234')),'https://example.org/source')
+    assert any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    q=q.replace('1.234 people','20 milliion people')
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace('milliion','million')),'https://example.org/source')
+    assert any(c['rule']=='quotation-near-match' and c['state']=='candidate' for c in checks)
+    assert not any(c['rule'] in {'changed-unit','changed-number'} and c['state']=='candidate' for c in checks)
+
+
+def test_structural_html_accessible_labels_and_bracket_endnotes_keep_real_digits():
+    from lxml import html
+    for markup in ['<p>The survey found 980 registered organisations.<sup><a href="#fn24"><span>Footnote </span>24</a></sup> Most had closed.</p><dd id="fn24">Original survey report.</dd>', '<p>The survey found 980 registered organisations.<sup>108</sup> Most had closed.</p><p>[108] Original survey report.</p>']:
+        tree=html.fromstring(markup)
+        value,changes=m.remove_notes(tree.text_content(),m.html_note_markers(tree))
+        assert changes and '980' in value
+        assert 'organisations. most' in value
+    assert m.html_note_markers(html.fromstring('<p>The area is 980 km<sup>2</sup> and the temperature changed.</p>'))==[]
+
+
+def test_editorial_conversion_requires_a_separate_retained_footnote():
+    q='The detailed country survey reported that the fee was 6,000 Iraqi dinars (3.39 GBP) during the full reporting period for all residents.'
+    source=q.replace(' (3.39 GBP)','')
+    raw=q.replace('GBP)','GBP[footnote 4])')
+    f={'id':'fn:4','links':[{'url':'https://example.org/conversion'}]}
+    checks=m.quotation_checks('‘'+q+'’',doc(source),'https://example.org/source',raw,[f])
+    assert not any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    assert any(c['rule']=='editorial-insertion' and c['state']=='unable' for c in checks)
+    checks=m.quotation_checks('‘'+q+'’',doc(source),'https://example.org/source')
+    assert any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    # Editing the underlying fee must still survive the insertion routing.
+    checks=m.quotation_checks('‘'+q+'’',doc(source.replace('6,000','7,000')),'https://example.org/source',raw,[f])
+    assert any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+
+
+def test_omitted_attribution_date_is_not_a_changed_quantity_but_stays_unassessed():
+    q='The detailed country survey reported that a father can apply without the consent of the mother under the existing rules.'
+    source=q.replace('mother under','mother (email, December 2014) under')
+    checks=m.quotation_checks('‘'+q+'’',doc(source),'https://example.org/source')
+    assert not any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    assert any(c['rule']=='quotation-attribution' and c['state']=='unable' for c in checks)
+    assert any(c['rule']=='quotation-near-match' and c['state']=='candidate' for c in checks)
+
+
+def test_same_stat_content_mutation_invalidates_resume(tmp_path):
+    import os
+    inventory,output,sha,edition=fixture(tmp_path)
+    first=runner.run(inventory,output)
+    path=inventory/'documents'/sha
+    st=path.stat();content=path.read_bytes()
+    path.write_bytes(bytes([content[0]^1])+content[1:]);os.utime(path,ns=(st.st_atime_ns,st.st_mtime_ns))
+    assert m.stat_key(path)==[st.st_size,st.st_mtime_ns]
+    changed=runner.run(inventory,output)
+    assert changed['checkStates']['source-integrity:unable']==1
+    assert 'quotation-exact:pass' not in changed['checkStates']
+
+
+def test_derived_reading_tampering_is_rebuilt(tmp_path):
+    import gzip
+    inventory,output,sha,edition=fixture(tmp_path)
+    args=(str(inventory),sha,tuple(m.stat_key(inventory/'documents'/sha)),tuple(m.stat_key(inventory/'text'/f'{sha}.json')))
+    first=m.SourceReader(output).read(*args)
+    path=next((output/'readings').glob('*.gz'))
+    reading=json.loads(gzip.decompress(path.read_bytes()));reading['norm']='fabricated retained reading'
+    path.write_bytes(gzip.compress(json.dumps(reading).encode()))
+    assert m.SourceReader(output).read(*args)['norm']==first['norm']
+
+
+@pytest.mark.parametrize('hours,gb', [(float('nan'),4),(float('inf'),4),(1,float('nan')),(0,4)])
+def test_non_finite_or_non_positive_budgets_cannot_start(tmp_path,hours,gb):
+    with pytest.raises(ValueError): runner.run(tmp_path/'inventory',tmp_path/'out',max_hours=hours,max_gb=gb)
+    assert not (tmp_path/'out').exists()
+
+
+def test_database_failure_releases_run_lock_and_reports_failure(tmp_path,monkeypatch):
+    inventory,output,sha,edition=fixture(tmp_path)
+    original=runner.connect
+    monkeypatch.setattr(runner,'connect',lambda *a: (_ for _ in ()).throw(RuntimeError('database unavailable')))
+    with pytest.raises(RuntimeError): runner.run(inventory,output)
+    assert json.loads((output/'job.json').read_text())['state']=='failed'
+    monkeypatch.setattr(runner,'connect',original)
+    assert runner.run(inventory,output)['remaining']==0
+
+
+@pytest.mark.parametrize('a,b', [('121 people','one hundred and twenty-one people'), ('8,680.','8 680.'), ('21 days','twenty-one days')])
+def test_bounded_number_phrases_and_sentence_final_groups(a,b):
+    q='The detailed country survey reported that '+a+' This continued during the full reporting period for the country.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace(a,b)),'https://example.org/source')
+    assert not any(c['state']=='candidate' for c in checks)
+    assert any(c['rule']=='quotation-number-format' for c in checks)
+
+
+def test_missing_percentage_notation_stays_unresolved_not_a_changed_digit():
+    q='The detailed country survey reported that prevalence was 7.4% and 4.1% of respondents during the full reporting period.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace('7.4%','7,4%').replace('4.1% of','4,1')),'https://example.org/source')
+    assert not any(c['rule'] in {'changed-number','changed-unit'} and c['state']=='candidate' for c in checks)
+    assert any(c['rule']=='quotation-unit-scope' and c['state']=='unable' for c in checks)
+    assert any(c['rule']=='quotation-near-match' and c['state']=='candidate' for c in checks)
+
+
+def test_resume_detects_same_stat_extraction_change(tmp_path):
+    import os
+    inventory,output,sha,edition=fixture(tmp_path)
+    runner.run(inventory,output)
+    path=inventory/'text'/f'{sha}.json';st=path.stat();raw=path.read_bytes()
+    assert b'218' in raw
+    path.write_bytes(raw.replace(b'218',b'281'));os.utime(path,ns=(st.st_atime_ns,st.st_mtime_ns))
+    result=runner.run(inventory,output)
+    assert result['checkStates']['changed-number:candidate']==1
+    assert 'quotation-exact:pass' not in result['checkStates']
+
+
+def test_empty_scope_reports_failure_instead_of_false_completion(tmp_path):
+    inventory,output,sha,edition=fixture(tmp_path)
+    with pytest.raises(ValueError,match='No eligible linked blocks'): runner.run(inventory,output,country='absent')
+    assert json.loads((output/'job.json').read_text())['state']=='failed'
+
+
+def test_lock_collision_keeps_existing_job_untouched(tmp_path):
+    import fcntl
+    inventory,output,sha,edition=fixture(tmp_path)
+    write_json(output/'job.json',{'state':'running','pid':12345})
+    with (output/'run.lock').open('a') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        with pytest.raises(BlockingIOError): runner.run(inventory,output)
+        assert json.loads((output/'job.json').read_text())=={'state':'running','pid':12345}
+    assert runner.run(inventory,output)['remaining']==0
+
+
+def test_editorial_proof_is_part_of_reuse_key_but_renumbering_can_reuse(tmp_path):
+    inventory,output,sha,edition=fixture(tmp_path)
+    c=edition['claims'][0];c['text']=c['text'].replace('218 people','218 people (3.39 GBP[footnote 4])');c['footnotes']+=['fn:4']
+    edition['footnotes'].append({'id':'fn:4','number':4,'text':'Conversion source','links':[{'url':'https://example.org/conversion'}]})
+    second=json.loads(json.dumps(edition));second['editionId']='c'*16;second['textSha']='d'*64
+    second['claims'][0]['text']=second['claims'][0]['text'].replace('footnote 4','footnote 9')
+    second['claims'][0]['footnotes'][-1]='fn:9';second['footnotes'][-1]['id']='fn:9';second['footnotes'][-1]['number']=9
+    write_json(inventory/'index/test.json',edition);write_json(inventory/'index/second.json',second)
+    write_json(inventory/'inventory.json',{'index_paths':['index/test.json','index/second.json']})
+    assert runner.run(inventory,output)['distinctComputations']==1
+    second['claims'][0]['text']=second['claims'][0]['text'].replace('(3.39 GBP[footnote 9])','(3.39 GBP)[footnote 9]')
+    write_json(inventory/'index/second.json',second)
+    assert runner.run(inventory,output)['distinctComputations']==2
+
+
+def test_pdf_notes_are_separate_from_body_and_legal_superscripts(tmp_path):
+    import pymupdf
+    from cpin.source_collect import extracted
+    pdf=pymupdf.open();page=pdf.new_page(width=400,height=400)
+    page.insert_text((30,60),'The detailed country survey found injuries.',fontsize=12)
+    page.insert_text((261,56),'1',fontsize=7)
+    page.insert_text((270,60),' Further detail.',fontsize=12)
+    page.insert_text((30,90),'The legal provision is Article 239',fontsize=12)
+    page.insert_text((202,86),'1',fontsize=7)
+    page.insert_text((212,90),' in the law.',fontsize=12)
+    page.insert_text((30,350),'1 This report was finalised on 17 June.',fontsize=8)
+    data=pdf.tobytes();pdf.close();sha=hashlib.sha256(data).hexdigest()
+    cache=tmp_path/'cache';(cache/'documents').mkdir(parents=True)
+    (cache/'documents'/sha).write_bytes(data)
+    write_json(cache/'text'/f'{sha}.json',extracted(data,'application/pdf','https://example.org/source.pdf'))
+    def read(): return m.SourceReader(tmp_path/'out').read(str(cache),sha,tuple(m.stat_key(cache/'documents'/sha)),tuple(m.stat_key(cache/'text'/f'{sha}.json')))
+    result=read()
+    assert 'this report was finalised' in result['norm']
+    assert 'this report was finalised' not in result['comparisonNorm']
+    assert '2391' in result['comparisonNorm'].replace(' ','')
+    assert any('bottomNote' in f for f in result['furniture'])
+    extraction=json.loads((cache/'text'/f'{sha}.json').read_text());extraction['pages']+=extraction['pages']
+    write_json(cache/'text'/f'{sha}.json',extraction)
+    assert read()['problem']=='invalid-or-duplicate-extracted-page'
+
+
+@pytest.mark.parametrize('a,b', [('10 million and 20 billion','10 billion and 20 million'), ('10% and 20','10 and 20%')])
+def test_unit_assignments_cannot_hide_in_matching_totals(a,b):
+    q='The detailed country survey reported that '+a+' were recorded during the full reporting period in this country.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace(a,b)),'https://example.org/source')
+    assert any(c['rule']=='changed-unit' and c['state']=='candidate' for c in checks)
+
+
+def test_retained_attribution_is_not_removed_from_one_side():
+    q='The detailed country survey reported that a father can apply (email, December 2014) without consent under the existing rules.'
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace('can apply','can usually apply')),'https://example.org/source')
+    assert not any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    assert not any(c['rule']=='quotation-attribution' for c in checks)
+
+
+def test_mid_batch_time_stop_commits_progress_and_can_resume(tmp_path,monkeypatch):
+    inventory,output,sha,edition=fixture(tmp_path)
+    second=json.loads(json.dumps(edition));second['editionId']='c'*16;second['textSha']='d'*64
+    write_json(inventory/'index/second.json',second)
+    write_json(inventory/'inventory.json',{'index_paths':['index/test.json','index/second.json']})
+    clock={'value':0};original=m.screen
+    monkeypatch.setattr(runner.time,'monotonic',lambda:clock['value'])
+    def slow(*a):
+        result=original(*a);clock['value']=4000;return result
+    monkeypatch.setattr(m,'screen',slow)
+    result=runner.run(inventory,output,max_hours=1)
+    assert result['screened']==result['remaining']==1
+    assert json.loads((output/'job.json').read_text())['state']=='time-budget-stopped'
+    monkeypatch.setattr(m,'screen',original)
+    assert runner.run(inventory,output,max_hours=1)['remaining']==0
+
+
+def test_unlinked_html_superscript_exponent_is_preserved_even_with_matching_endnote():
+    from lxml import html
+    tree=html.fromstring('<p>The affected area was 980 km<sup>2</sup> during the period.</p><p>[2] A separate cited source.</p>')
+    assert m.html_note_markers(tree)==[]
