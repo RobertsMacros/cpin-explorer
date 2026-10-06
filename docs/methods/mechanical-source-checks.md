@@ -4,7 +4,7 @@ The owner requested an inventory of deterministic checks on 5 October 2026,
 with archive recovery deferred on the first pass. Use held source captures first;
 original-address retrieval can fill gaps under the existing polite collector.
 Do not start new archive searches for this pass. Existing archived captures may
-be screened with their provenance intact. The private runner now implements 51
+be screened with their provenance intact. The private runner now implements 52
 rule types, including eligibility/gap routes as well as comparisons. Implementation
 is not proof that every rule applies to every passage or that any claim is correct.
 
@@ -90,7 +90,7 @@ when the source pinpoint changes. Source bytes, extraction fingerprints, evaluat
 code and independent-reader changes invalidate affected cached work.
 
 Outputs remain private: `results.sqlite3`, `job.json`, `summary.json`,
-`candidates.csv`, `candidate-sample.json`, `REPORT.md` and compressed hash-keyed
+`candidates.csv`, `candidate-sample.json`, `ranked-review-queue.json`, `REPORT.md` and compressed hash-keyed
 source readings. Summary/candidate exports are written at the end or a budget
 stop. The job checkpoints continuously, has a process lock, a 6 GiB derived-output
 budget and a 2 GiB free-space floor. It makes no requests or model calls and
@@ -104,6 +104,30 @@ follow-up checks completion and cleans up this one-off agent. It does not start
 another source collector or archive recovery.
 
 ## Implemented rules and remaining boundaries
+
+The v2 cleanup preserves original source text while making separate comparison
+readings. Raised PDF numeric spans are excluded only with matching bottom-of-page
+notes and anchored text on both sides; bare numbers remain. HTML headings require
+structural markup, with raw matches attempted first. Uncovered PDF page-label
+intervals remain gaps rather than causing an exception or being inferred from
+physical page counts. Units require adjacent numerical values; grouped numbers
+are parsed whole; coarse small-denominator ratios and relative growth percentages
+stay observations where their interpretation is ambiguous. All comparison
+adjustments are recorded and do not approve the broader claim.
+Explicit HTML footnotes need retained targets and anchored surrounding text.
+Unproven marker-shaped differences remain furniture gaps, with no match approval
+or number-error candidate. DOI terminal citation punctuation is normalised only
+for identifier comparison; source text and balanced internal parentheses survive.
+
+For a controlled rerun use `--receipt-snapshot` with the baseline's frozen JSON.
+`--reading-cache` can reuse its compatible independent PDF readings after source
+and extraction hashes and reader fingerprints match. Review questions retain
+every edition target: repeated metadata questions group separately, while
+wording questions also require exact source/context grouping. Priority 1 routes
+direct number/negation/unit, arithmetic and locator checks; priority 2 routes
+aligned wording and identity candidates; priority 3 routes metadata, mapping and
+ellipsis questions. These ranks are evidence types, not probabilities or public
+verdicts. See [the v2 run record](../reviews/2026-10-06-mechanical-cleanup.md).
 
 The existing collector provides the URL receipts and raw source text. The new
 runner adds conservative quote/ellipsis location, bounded near-quote alignment,
@@ -182,3 +206,4 @@ and [reuse decision](../research/mechanical-source-checks/REPORT.md).
 | `table-scope` | Table/cell claims routed away from plain-text approval |
 | `legal-scope` | Legal meaning/version applicability remains contextual |
 | `contextual-support` | Contextual assessment is outside mechanical screening |
+| `source-furniture` | Structurally evidenced source markers/headings excluded from derived comparison |

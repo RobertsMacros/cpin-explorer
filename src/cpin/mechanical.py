@@ -23,7 +23,7 @@ from .source_collect import source_quality
 from .webpdf import read_pdf_second
 from .store import atomic_write
 
-METHOD = 'mechanical-source-use-v1'
+METHOD = 'mechanical-source-use-v2'
 MAX_TEXT = 2_000_000
 RULES = {
     'reference-target': 'Footnote reference resolves in the retained index',
@@ -77,6 +77,7 @@ RULES = {
     'table-scope': 'Table/cell claims routed away from plain-text approval',
     'legal-scope': 'Legal meaning/version applicability remains contextual',
     'contextual-support': 'Contextual assessment is outside mechanical screening',
+    'source-furniture': 'Structurally evidenced source markers/headings excluded from derived comparison',
 }
 
 MONTHS = 'January February March April May June July August September October November December'.split()
@@ -123,7 +124,7 @@ def dates(text):
 
 
 def citation(cite):
-    main, *access = re.split(r'\blast accessed\b|\baccessed on\b', cite, flags=re.I)
+    main, *access = re.split(r'\b(?:last\s+)?accessed\b(?:\s+on)?', cite, flags=re.I)
     quoted = [m[0] or m[1] or m[2] for m in re.findall(r'‘([^’]+)’|“([^”]+)”|"([^\"]+)"', main)]
     quoted = [s for s in quoted if len(s.split()) >= 3 and len(s) >= 15]
     title = quoted[0] if len(quoted) == 1 else None
@@ -139,8 +140,18 @@ def citation(cite):
     para = re.findall(r'\b(?:paragraphs?|paras?\.?)\s+(\d+(?:\.\d+)*)', main, re.I)
     return {'title': title, 'publisher': main.split(',', 1)[0].strip() if ',' in main else None,
             'publicationDates': dates(main), 'accessDates': dates(' '.join(access)),
-            'pages': page, 'paragraphs': para, 'dois': DOI.findall(main),
+            'pages': page, 'paragraphs': para, 'dois': doi_values(main),
             'isbns': ISBN.findall(main), 'cases': CASE.findall(main)}
+
+
+def doi_values(text):
+    values = []
+    for value in DOI.findall(text):
+        value = value.rstrip('.,;:')
+        while value.endswith(')') and value.count(')') > value.count('('):
+            value = value[:-1]
+        values.append(value)
+    return values
 
 
 def quotations(text):
@@ -210,7 +221,15 @@ def near_quote(text, quote):
             best['differences'].append({'quoted': ' '.join(words[a:b]), 'source': ' '.join(source_words[c:d])})
     best['changed'] = {k: Counter(regex.findall(q)) != Counter(regex.findall(best['excerpt']))
                        for k, regex in [('number', NUMBER), ('negation', NEGATION), ('qualifier', QUALIFIER), ('unit', UNIT)]}
+    best['changed']['unit'] = numerical_units(q) != numerical_units(best['excerpt'])
     return best
+
+
+def numerical_units(text):
+    """Population words count as units only when attached to a numerical value."""
+    number = r'[−+-]?\d+(?:,\d{3})*(?:\.\d+)?'
+    units = r'per cent|percent|percentage|people|persons|families|households|deaths|cases|incidents|million|billion|thousand|days|months|years|dollars|pounds'
+    return Counter(re.findall(r'(?:' + number + r'\s*(' + units + r'|%)(?!\w))|([£$€])\s*' + number, text, re.I))
 
 
 def arithmetic(text):
@@ -225,15 +244,21 @@ def arithmetic(text):
             continue
         actual = 100 * n / total
         tolerance = .5 * 10 ** (-precision) + 1e-9
-        checks.append({'rule': 'percentage-arithmetic', 'state': 'pass' if abs(actual - float(percentage)) <= tolerance else 'candidate',
+        delta = abs(actual - float(percentage))
+        coarse = total <= 10 and delta <= 50 / total + tolerance and not re.search(r'\bexact(?:ly)?\b', text[max(0, match.start()-60):match.end()], re.I)
+        state = 'pass' if delta <= tolerance else 'observation' if coarse else 'candidate'
+        checks.append({'rule': 'percentage-arithmetic', 'state': state,
+                       'reason': 'small-denominator ratio may be an approximate rendering' if state == 'observation' else 'explicit arithmetic only; input basis unverified',
                        'evidence': match.group(), 'calculated': actual, 'roundingTolerance': tolerance})
     for match in re.finditer(r'(?<![\w.])([−-]?\d+(?:\.\d+)?)\s*(?:%|per cent\b|percent\b)', text, re.I):
         value = float(match[1].replace('−', '-'))
         if value < 0 or value > 100:
-            checks.append({'rule': 'impossible-percentage', 'state': 'candidate', 'evidence': match.group(),
+            context = text[max(0, match.start()-120):match.end()+80]
+            relative = re.search(r'\b(?:increase|increased|growth|grew|rise|rose|decline|decrease|change|higher|lower|more than|less than)\b', context, re.I)
+            checks.append({'rule': 'impossible-percentage', 'state': 'observation' if relative else 'candidate', 'evidence': match.group(),
                            'reason': 'outside 0–100; growth/change percentages may legitimately exceed these bounds'})
-    for match in re.finditer(r'\brange(?:d|s)?\s+from\s+(\d+(?:\.\d+)?)\s+to\s+(\d+(?:\.\d+)?)\b', text, re.I):
-        if float(match[1]) > float(match[2]):
+    for match in re.finditer(r'\brange(?:d|s)?\s+from\s+(\d+(?:,\d{3})*(?:\.\d+)?)(?![\d,.])\s+to\s+(\d+(?:,\d{3})*(?:\.\d+)?)(?![\d,.])\b', text, re.I):
+        if float(match[1].replace(',', '')) > float(match[2].replace(',', '')):
             checks.append({'rule': 'reversed-range', 'state': 'candidate', 'evidence': match.group()})
     return checks
 
@@ -246,10 +271,122 @@ def stat_key(path):
         return None
 
 
+def declared_labels(pdf):
+    """Only label covered intervals; uncovered pages have no inferred label."""
+    rules = pdf.get_page_labels()
+    labels, uncovered = {}, []
+    if not rules:
+        return labels, uncovered
+    for i, page in enumerate(pdf):
+        if not any(r.get('startpage', 0) <= i for r in rules):
+            if rules:
+                uncovered.append(i + 1)
+            continue
+        try:
+            label = page.get_label()
+        except (IndexError, ValueError, RuntimeError):
+            uncovered.append(i + 1)
+            continue
+        if label:
+            labels[str(i + 1)] = label
+    return labels, uncovered
+
+
+def pdf_note_markers(page):
+    """Raised numeric spans with a matching bottom-of-page note, never bare digits."""
+    lines = [line['spans'] for b in page.get_text('dict')['blocks'] for line in b.get('lines', [])]
+    notes = {spans[0]['text'].strip() for spans in lines if spans and spans[0]['text'].strip().isdigit()
+             and not spans[0]['flags'] & 1 and spans[0]['bbox'][1] > page.rect.height * .65
+             and len(spans) > 1 and any(s['text'].strip() for s in spans[1:])}
+    markers = []
+    flat = [s for spans in lines for s in spans]
+    for i, span in enumerate(flat):
+        value = span['text'].strip()
+        if value not in notes or not span['flags'] & 1 or not 0 < i < len(flat)-1:
+            continue
+        before = normal(flat[i-1]['text'])[-50:]
+        after = normal(flat[i+1]['text'])[:50]
+        if before and after:
+            markers.append({'marker': value, 'before': before, 'after': after})
+    return markers
+
+
+def remove_notes(text, markers):
+    value = normal(text)
+    removed = []
+    for item in markers:
+        pattern = re.escape(item['before']) + r'\s*' + re.escape(item['marker']) + r'\s*' + re.escape(item['after'])
+        value, count = re.subn(pattern, item['before'] + ' ' + item['after'], value)
+        if count:
+            removed.append({**item, 'occurrences': count})
+    return value, removed
+
+
+def html_headings(tree):
+    headings = []
+    for el in tree.xpath('//h1|//h2|//h3|//h4|//h5|//h6|//big[strong]'):
+        text = normal(el.text_content())
+        if 1 <= len(text.split()) <= 14:
+            headings.append(text)
+    return list(dict.fromkeys(headings))
+
+
+def html_note_markers(tree):
+    markers = []
+    ids = set(tree.xpath('//*[@id]/@id | //a[@name]/@name'))
+    for el in tree.xpath('//a[@href]'):
+        label = normal(el.text_content())
+        href = el.get('href', '')
+        if not re.fullmatch(r'\[?\d{1,4}\]?', label) or not href.startswith('#') or href[1:] not in ids:
+            continue
+        parents = list(el.iterancestors())
+        if not (any(p.tag == 'sup' for p in parents) or re.search(r'(?:^#fn|ftn|edn|footnote|endnote|ref|note|cite)', href, re.I)
+                or el.get('role') == 'doc-noteref'):
+            continue
+        parent = next((p for p in parents if p.tag in {'p','li','div'}), None)
+        if parent is None:
+            continue
+        content = normal(parent.text_content())
+        # Ambiguous repeated labels remain untouched.
+        if content.count(label) != 1:
+            continue
+        before, after = content.split(label)
+        if len(before.split()) + len(after.split()) >= 4:
+            markers.append({'marker':label,'before':before[-50:],'after':after[:50], 'target':href})
+    return markers
+
+
+def marker_shaped_difference(near):
+    """Unproven marker shapes are gaps, never silently stripped or approved."""
+    for d in near['differences']:
+        q, s = d['quoted'], d['source']
+        # Ignore no real numerical substitution: only inserted bracket references
+        # or digits attached after prose sentence punctuation are eligible.
+        if re.sub(r'\[\d{1,4}\]', '', s) == q and s != q:
+            continue
+        if q and re.search(r'[A-Za-z][.!?][\'\"]?$', q) and s.startswith(q) and re.fullmatch(r'\d{1,4}', s[len(q):]):
+            continue
+        return False
+    return bool(near['differences'])
+
+
+def comparison_text(text, headings):
+    value = text
+    removed = []
+    for heading in headings:
+        # Remove only unique, structurally established headings; raw matches are
+        # attempted first, so quotations of the heading itself are not lost.
+        if value.count(heading) == 1:
+            value = value.replace(heading, ' ')
+            removed.append({'heading': heading})
+    return normal(value), removed
+
+
 class SourceReader:
     """Hash-checked document readings, bounded in memory and retained privately."""
-    def __init__(self, output):
+    def __init__(self, output, reading_cache=None):
         self.output = Path(output)
+        self.reading_cache = Path(reading_cache) if reading_cache else None
         (self.output / 'readings').mkdir(parents=True, exist_ok=True)
         self.read = lru_cache(maxsize=12)(self._read)
 
@@ -257,7 +394,8 @@ class SourceReader:
         cache = Path(cache_path)
         if not re.fullmatch(r'[a-f0-9]{64}', digest or ''):
             return {'problem': 'invalid-source-hash'}
-        key = digest_json([METHOD, hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), digest, raw_stat, text_stat, stat_key(shutil.which('pdftotext') or '/not-installed')])
+        reader_stat = stat_key(shutil.which('pdftotext') or '/not-installed')
+        key = digest_json([METHOD, hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), digest, raw_stat, text_stat, reader_stat])
         saved = self.output / 'readings' / f'{key}.json.gz'
         if saved.exists():
             try:
@@ -278,28 +416,54 @@ class SourceReader:
         text = json.loads(raw_text)
         doc = {'sha256': digest, 'extractionSha256': hashlib.sha256(raw_text).hexdigest(),
                'kind': text.get('kind'), 'headers': [text.get('title', '')], 'dates': [],
-               'anchors': [], 'pageLabels': {}, 'pages': [], 'second': None, 'bounded': False}
+               'anchors': [], 'pageLabels': {}, 'pages': [], 'second': None, 'bounded': False,
+               'headings': [], 'furniture': [], 'labelGaps': []}
+        html_markers = []
         if text.get('kind') == 'pdf':
             import pymupdf
             with pymupdf.open(obj) as pdf:
                 if pdf.is_encrypted:
                     return {'problem': 'source-encrypted'}
                 doc['physicalPages'] = pdf.page_count
-                if pdf.get_page_labels():
-                    doc['pageLabels'] = {str(i + 1): page.get_label() for i, page in enumerate(pdf)}
-            size = 0
-            for p in text.get('pages', []):
-                size += len(p.get('text', ''))
-                if size > MAX_TEXT:
-                    doc['bounded'] = True
-                    break
-                doc['pages'].append({'physicalPage': p['page'], 'text': normal(p.get('text', ''))})
+                doc['pageLabels'], doc['labelGaps'] = declared_labels(pdf)
+                size = 0
+                markers = {}
+                for p in text.get('pages', []):
+                    size += len(p.get('text', ''))
+                    if size > MAX_TEXT:
+                        doc['bounded'] = True
+                        break
+                    number = p['page']
+                    markers[number] = pdf_note_markers(pdf[number-1])
+                    cleaned, removed = remove_notes(p.get('text', ''), markers[number])
+                    doc['furniture'] += [{'physicalPage': number, **m} for m in removed]
+                    doc['pages'].append({'physicalPage': number, 'text': normal(p.get('text', '')), 'comparison': cleaned})
             doc['headers'] += [p.get('text', '') for p in text.get('pages', [])[:3]]
             # Same independent reader used by the established PDF comparison method.
-            second = read_pdf_second(obj)
+            second = None
+            if self.reading_cache:
+                old_key = digest_json(['mechanical-source-use-v1', '081aeb1c3232d34bfc0f5d54f643392fd312150c20be6f0a3d963597cfd4c913', digest, raw_stat, text_stat, reader_stat])
+                old_path = self.reading_cache / 'readings' / f'{old_key}.json.gz'
+                if old_path.exists():
+                    try:
+                        with gzip.open(old_path, 'rt', encoding='utf-8') as stream:
+                            old = json.load(stream)
+                        if old.get('sha256') == digest and old.get('extractionSha256') == doc['extractionSha256']:
+                            doc['second'] = old.get('second')
+                            doc['secondReadingReused'] = doc['second'] is not None
+                    except (OSError, ValueError, EOFError):
+                        pass
+            if doc['second'] is None:
+                second = read_pdf_second(obj)
             if second is not None:
                 doc['second'] = normal('\n'.join(second)[:MAX_TEXT])
+            if doc['second'] is not None:
+                # Anchored contexts prove exactly which raised markers are being
+                # removed. If the independent text differs, leave it untouched.
+                all_markers = [m for ms in markers.values() for m in ms]
+                doc['secondComparison'], _ = remove_notes(doc['second'], all_markers)
             body = '\n'.join(p['text'] for p in doc['pages'])
+            doc['comparisonNorm'] = normal(' '.join(p['comparison'] for p in doc['pages']))
         else:
             body = text.get('text', '')
             doc['bounded'] = len(body) > MAX_TEXT
@@ -307,6 +471,8 @@ class SourceReader:
             doc['headers'].append(body[:2500])
             if text.get('kind') == 'html':
                 tree = html.fromstring(obj.read_bytes())
+                doc['headings'] = html_headings(tree)
+                html_markers = html_note_markers(tree)
                 doc['anchors'] = list(dict.fromkeys(tree.xpath('//*[@id]/@id | //a[@name]/@name')))[:50000]
                 for el in tree.xpath('//meta[@content]'):
                     name = (el.get('property') or el.get('name') or '').casefold()
@@ -316,6 +482,10 @@ class SourceReader:
                     if name in {'article:published_time', 'datepublished', 'pubdate', 'dc.date.issued', 'dcterms.issued'} and re.match(r'^\d{4}-\d{2}-\d{2}(?:[T ]|$)', value):
                         doc['dates'].append(value[:10])
         doc['norm'] = normal(body)
+        if doc['kind'] != 'pdf':
+            without_notes, removed = remove_notes(doc['norm'], html_markers)
+            doc['comparisonNorm'], doc['furniture'] = comparison_text(without_notes, doc['headings'])
+            doc['furniture'] += removed
         doc['quality'] = source_quality({'url': 'https://source.invalid/', 'final_url': 'https://source.invalid/'}, text)
         atomic_write(saved, gzip.compress(json.dumps(doc, ensure_ascii=False).encode()))
         return doc
@@ -377,7 +547,8 @@ def source_checks(cite, url, doc):
             add(rule, 'observation' if normal(identifier) in headers else 'unable', expected=identifier,
                 reason='identifier front-matter occurrence only; absence does not prove wrong document')
         regex = {'dois': DOI, 'isbns': ISBN, 'cases': CASE}[field]
-        observed = list(dict.fromkeys(regex.findall(' '.join(doc['headers'])[:8000])))
+        front = ' '.join(doc['headers'])[:8000]
+        observed = list(dict.fromkeys(doi_values(front) if field == 'dois' else regex.findall(front)))
         if len(exp[field]) == len(observed) == 1 and normal(exp[field][0]) != normal(observed[0]):
             add('identifier-conflict', 'candidate', identifierType=field, cited=exp[field][0], observed=observed[0],
                 reason='incompatible unique identifier in front matter; not a confirmed citation error')
@@ -402,6 +573,7 @@ def source_checks(cite, url, doc):
             wanted = [start, end] if end else [start]
             found = [physical for physical, label in doc['pageLabels'].items() if label in wanted]
             add('source-printed-page', 'observation' if found else 'unable', expected=wanted, physicalPages=found,
+                unlabelledPhysicalPages=doc.get('labelGaps', [])[:100],
                 reason='declared label presence, not proof of printed footer or passage identity')
     for paragraph in exp['paragraphs']:
         add('source-paragraph', 'observation' if re.search(r'(?<![\w.])' + re.escape(paragraph) + r'[.)]?\s', doc['norm']) else 'unable',
@@ -415,10 +587,19 @@ def quotation_checks(text, doc, url):
     checks = []
     for quote in quotations(text):
         match = locate(doc['norm'], quote)
+        adjusted = False
+        if match['state'] != 'pass' and doc.get('comparisonNorm'):
+            derived = locate(doc['comparisonNorm'], quote)
+            if derived['state'] == 'pass':
+                match, adjusted = derived, True
         base = {'url': url, 'sha256': doc['sha256'], 'quoted': quote, 'extractionSha256': doc['extractionSha256']}
         is_ellipsis = '…' in quote or '...' in quote
         checks.append({'rule': 'quotation-ellipsis' if is_ellipsis else 'quotation-exact', **base, **match,
                        'identityEstablished': False, 'normalisation': 'case, whitespace, typographic quotes; words and signs preserved'})
+        if adjusted:
+            checks.append({'rule': 'source-furniture', 'state': 'observation', **base,
+                           'reason': 'raw text differs only after structurally evidenced furniture exclusions; context unassessed',
+                           'adjustments': doc['furniture'][:30]})
         if match['state'] == 'pass':
             if match['occurrencesOfFirstSegment'] > 1:
                 checks.append({'rule': 'quotation-repetition', 'state': 'observation', **base,
@@ -427,18 +608,24 @@ def quotation_checks(text, doc, url):
                 checks.append({'rule': 'changed-qualifier', 'state': 'candidate' if any(QUALIFIER.search(g) or NEGATION.search(g) for g in match['gaps']) else 'observation',
                                **base, 'omittedText': match['gaps'], 'reason': 'possible qualifier/negation in omission; materiality unassessed'})
             if doc['kind'] == 'pdf':
-                second = locate(doc['second'], quote) if doc['second'] is not None else {'state': 'unable'}
+                second_text = doc.get('secondComparison', doc['second'])
+                second = locate(second_text, quote) if second_text is not None else {'state': 'unable'}
                 checks.append({'rule': 'quotation-independent-reader', 'state': 'pass' if second['state'] == 'pass' else 'unable', **base,
                                'reason': 'independent reader agrees' if second['state'] == 'pass' else 'independent agreement unavailable; no confirmed PDF finding'})
             if NUMBER.search(quote):
                 checks.append({'rule': 'figure-context', 'state': 'pass', **base,
                                'reason': 'figures within located quotation; source validity/context remains unassessed'})
         else:
-            near = near_quote(doc['norm'], quote)
+            near = near_quote(doc.get('comparisonNorm', doc['norm']), quote)
             if near:
-                second_exact = doc['kind'] == 'pdf' and doc['second'] is not None and locate(doc['second'], quote)['state'] == 'pass'
+                if marker_shaped_difference(near):
+                    checks.append({'rule': 'source-furniture', 'state': 'unable', **base, **near,
+                                   'reason': 'difference has an unproven source-marker shape; no number-error finding or match approval'})
+                    continue
+                second_text = doc.get('secondComparison', doc['second'])
+                second_exact = doc['kind'] == 'pdf' and second_text is not None and locate(second_text, quote)['state'] == 'pass'
                 typography_only = re.findall(r'\w+', normal(quote)) == re.findall(r'\w+', near['excerpt']) and not any(near['changed'].values())
-                second_near = near_quote(doc['second'], quote) if doc['kind'] == 'pdf' and doc['second'] is not None and not second_exact else None
+                second_near = near_quote(second_text, quote) if doc['kind'] == 'pdf' and second_text is not None and not second_exact else None
                 independent = doc['kind'] != 'pdf' or bool(second_near and second_near['differences'] == near['differences'])
                 state = 'observation' if typography_only else 'candidate' if independent and not second_exact else 'unable'
                 checks.append({'rule': 'quotation-near-match', 'state': state, **base, **near,

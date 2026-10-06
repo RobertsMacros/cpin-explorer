@@ -46,7 +46,7 @@ def test_near_match_exposes_number_and_negation_but_not_ambiguous_alignment():
     assert m.near_quote('218 ' + m.normal('An unrelated article has different subject matter and timeframe.'), quote) is None
 
 
-@pytest.mark.parametrize('text,state', [('7 out of 9 (78%)', 'pass'), ('7 out of 9 (77%)', 'candidate'), ('1 out of 3 (33.3%)', 'pass'), ('1 out of 0 (5%)', 'candidate')])
+@pytest.mark.parametrize('text,state', [('7 out of 9 (78%)', 'pass'), ('7 out of 9 (77%)', 'observation'), ('Exactly 7 out of 9 (77%)', 'candidate'), ('700 out of 900 (77%)', 'candidate'), ('1 out of 3 (33.3%)', 'pass'), ('1 out of 0 (5%)', 'candidate')])
 def test_arithmetic_has_explicit_denominators_and_rounding(text, state):
     result = m.arithmetic(text)
     assert result[0]['rule'] == 'percentage-arithmetic' and result[0]['state'] == state
@@ -173,3 +173,127 @@ def test_original_fragments_survive_fetch_url_normalisation_and_prevent_reuse(tm
     result = runner.run(inventory, output)
     assert result['distinctComputations'] == 2
     assert result['checkStates']['source-html-fragment:unable'] == 2
+
+
+def test_grouped_numbers_are_not_truncated_and_growth_is_not_a_share():
+    assert m.arithmetic('Pay raises range from 800 to 5,000 per month.') == []
+    assert m.arithmetic('Payments range from 5,000 to 800 per month.')[0]['state'] == 'candidate'
+    assert m.arithmetic('Payments range from 800 to 5,00 per month.') == []
+    assert m.arithmetic('Reported cases increased by 200%.')[0]['state'] == 'observation'
+    assert m.arithmetic('The surveyed population was 200% of the respondents.')[0]['state'] == 'candidate'
+    assert m.arithmetic('4 out of 5 (81%)')[0]['state'] == 'observation'
+    assert m.arithmetic('4 out of 5 (30%)')[0]['state'] == 'candidate'
+
+
+def test_population_word_without_a_number_is_not_a_numerical_unit():
+    quote = 'We work with partners around the globe to strengthen the capacity of the LGBTIQ human rights movement, document and amplify human rights violations, and advocate for inclusion and equality.'
+    source = quote.replace('violations,', 'violations against LGBTIQ people,')
+    assert not m.near_quote(m.normal(source), quote)['changed']['unit']
+    q = 'The detailed country survey found that 218 people returned to their original homes during the reporting period.'
+    assert m.near_quote(m.normal(q.replace('people', 'families')), q)['changed']['unit']
+
+
+def test_only_structural_headings_are_excluded_and_raw_heading_quotes_survive():
+    from lxml import html
+    q = 'Upon signing a contract a recruit receives no payment. The companies are private industrial firms with contracts for recruitment.'
+    heading = "'No Long-Term Planning'"
+    body = q.replace('payment. The', 'payment. '+heading+' The')
+    tree = html.fromstring('<article><p>Upon signing a contract a recruit receives no payment.</p><big><strong>'+heading+'</strong></big><p>The companies are private industrial firms with contracts for recruitment.</p><p><strong>Without payment people cannot return safely.</strong></p></article>')
+    assert m.html_headings(tree) == [m.normal(heading)]
+    d = doc(body); d['comparisonNorm'], d['furniture'] = m.comparison_text(d['norm'], m.html_headings(tree))
+    checks = m.quotation_checks('‘'+q+'’', d, 'https://example.org/report')
+    assert any(c['rule']=='source-furniture' for c in checks)
+    assert not any(c['state']=='candidate' for c in checks)
+
+
+def test_anchored_pdf_markers_preserve_real_numbers():
+    marker = {'marker':'150','before':'their lives.','after':'there have been no reports'}
+    cleaned, removed = m.remove_notes('Afghans returned at some point in their lives.150 There have been no reports of tension. 150 people returned.', [marker])
+    assert removed and 'lives. there' in cleaned and '150 people' in cleaned
+    assert m.remove_notes('There were 150 deaths and 150 people returned.', [marker])[1] == []
+
+
+def test_uncovered_pdf_labels_do_not_raise_or_invent_a_mapping():
+    class Page:
+        def __init__(self, i): self.i=i
+        def get_label(self):
+            if self.i < 2: raise IndexError('no applicable label rule')
+            return str(self.i+8)
+    class PDF:
+        def get_page_labels(self): return [{'startpage':2,'style':'D','firstpagenum':10}]
+        def __iter__(self): return iter([Page(i) for i in range(4)])
+    labels, gaps = m.declared_labels(PDF())
+    assert labels == {'3':'10','4':'11'} and gaps == [1,2]
+
+
+def test_access_date_syntax_does_not_become_publication_conflict():
+    assert m.citation('Publisher, Long country report title, 1 March 2024. Accessed: 2 April 2025')['publicationDates'] == ['2024-03-01']
+    assert m.citation('Publisher, Long country report title, 1 March 2024. Accessed: 2 April 2025')['accessDates'] == ['2025-04-02']
+
+
+def test_receipt_snapshot_stays_frozen_even_when_collector_changes(tmp_path):
+    inventory, output, sha, edition = fixture(tmp_path)
+    frozen=tmp_path/'frozen.json'
+    url=edition['footnotes'][0]['links'][0]['url']
+    write_json(frozen,{url:{'cache':str(inventory),'record':{'url':url,'status':'downloaded','sha256':sha}}})
+    (inventory/'attempts.jsonl').write_text(json.dumps({'url':url,'status':'robots'})+'\n')
+    result=runner.run(inventory,output,receipt_snapshot=frozen)
+    assert result['checkStates']['quotation-exact:pass']==1
+
+
+def test_review_grouping_retains_source_versions_and_context_for_wording():
+    p={'sources':[{'url':'https://example.org/report','record':{'sha256':'a'*64}}]}
+    c={'rule':'publication-date','state':'candidate','url':'https://example.org/report','cited':['2024-01-01'],'metadata':['2024-01-02']}
+    assert runner.review_group(c,p,'context1')==runner.review_group(c,p,'context2')
+    other=json.loads(json.dumps(p));other['sources'][0]['record']['sha256']='b'*64
+    assert runner.review_group(c,p,'context1')!=runner.review_group(c,other,'context1')
+    c['rule']='changed-number'
+    assert runner.review_group(c,p,'context1')!=runner.review_group(c,p,'context2')
+    assert runner.review_priority(c)==1
+    c['rule']='publication-date'
+    assert runner.review_priority(c)==3
+
+
+def test_html_footnotes_need_explicit_targets_and_keep_bare_numbers():
+    from lxml import html
+    tree=html.fromstring('<article><p>The source reports 52 deaths among surveyed people.[52]</p><a href="#fn52">[52]</a><p id="fn52">52 First source.</p></article>')
+    assert m.html_note_markers(tree)==[]
+    tree=html.fromstring('<article><p>The source reports 52 deaths among surveyed people.<a href="#fn52">[52]</a></p><p id="fn52">52 First source.</p></article>')
+    markers=m.html_note_markers(tree)
+    text, removed=m.remove_notes(m.normal(tree.text_content()),markers)
+    assert removed and '52 deaths' in text and 'people.[52]' not in text
+    tree=html.fromstring('<article><p>The source reports 52 deaths among surveyed people.<a href="#missing">[52]</a></p></article>')
+    assert m.html_note_markers(tree)==[]
+
+
+def test_unproven_marker_shapes_are_gaps_but_real_number_changes_survive():
+    q='The country survey found that 218 people did return to their original homes during the reporting period.'
+    d=doc(q.replace('homes','homes[52]'))
+    checks=m.quotation_checks('‘'+q+'’',d,'https://example.org/report')
+    assert any(c['rule']=='source-furniture' and c['state']=='unable' for c in checks)
+    assert not any(c['state']=='candidate' for c in checks)
+    checks=m.quotation_checks('‘'+q+'’',doc(q.replace('218','281')),'https://example.org/report')
+    assert any(c['rule']=='changed-number' and c['state']=='candidate' for c in checks)
+    assert not m.marker_shaped_difference({'differences':[{'quoted':'218','source':'2180'}]})
+
+
+def test_doi_citation_punctuation_does_not_become_identifier_conflict():
+    d=doc('source');d['headers']=['Article doi:10.1371/journal.pone.0219125']
+    checks=m.source_checks('Publisher, Long article report title, 1 March 2024, https://example.org?id=10.1371/journal.pone.0219125.','https://example.org/report',d)
+    assert not any(c['rule']=='identifier-conflict' for c in checks)
+    assert m.doi_values('10.1000/abc(def).')==['10.1000/abc(def)']
+
+
+def test_pdf_marker_proof_requires_raised_span_and_matching_note():
+    class Rect: height=100
+    def span(text,y,flags=0): return {'text':text,'bbox':(0,y,10,y+5),'flags':flags}
+    class Page:
+        rect=Rect()
+        def __init__(self, raised=True, note=True): self.raised=raised;self.note=note
+        def get_text(self, kind):
+            lines=[{'spans':[span('The survey found injuries.',20),span('25',19,1 if self.raised else 0),span(' More detail followed.',20)]}]
+            if self.note: lines.append({'spans':[span('25',80),span(' Survey report reference.',80)]})
+            return {'blocks':[{'lines':lines}]}
+    assert len(m.pdf_note_markers(Page()))==1
+    assert m.pdf_note_markers(Page(raised=False))==[]
+    assert m.pdf_note_markers(Page(note=False))==[]

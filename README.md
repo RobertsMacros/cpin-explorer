@@ -23,6 +23,18 @@ It has three parts:
 
 ## Status
 
+**6 October 2026: mechanical false-positive repairs and comparable rerun.**
+All four previous processing failures now replay successfully. The corrected
+runner handles uncovered PDF page-label intervals, structurally evidenced
+footnote markers and headings, grouped numbers, population words and coarse
+ratios. All 359 Python tests pass. A rerun of all 116,125 linked blocks is active
+using the original frozen source receipts; its final reduction is not yet known.
+The export groups repeated review questions and ranks direct comparisons ahead
+of metadata/ellipsis questions, without turning priority into confidence.
+One minor bibliography access-date typo has been independently inspected in
+the exact archived Cameroon edition; findings remain private. See the
+[repairs, evidence and run status](docs/reviews/2026-10-06-mechanical-cleanup.md).
+
 **5 October 2026: expanded mechanical checks and overnight run started.**
 The private runner implements 51 rule types covering reference mappings, source
 identity signals, pinpoints, quotations and omissions, aligned figures, narrowly

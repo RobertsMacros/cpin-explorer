@@ -45,14 +45,19 @@ def connect(path):
     return con
 
 
-def prepare(con, inventory, output, caches, country=None, limit=None):
+def prepare(con, inventory, output, caches, country=None, limit=None, receipt_snapshot=None):
     code_sha = mc.digest_json([hashlib.sha256(Path(mc.__file__).read_bytes()).hexdigest(),
                               hashlib.sha256(Path(__file__).read_bytes()).hexdigest(), sys.version,
-                              mc.stat_key(shutil.which('pdftotext') or '/not-installed')])
+                              mc.stat_key(shutil.which('pdftotext') or '/not-installed'),
+                              hashlib.sha256(Path(mc.read_pdf_second.__code__.co_filename).read_bytes()).hexdigest(),
+                              hashlib.sha256(Path(receipt_snapshot).read_bytes()).hexdigest() if receipt_snapshot else None])
     scope = mc.digest_json([code_sha, read_json(inventory / 'inventory.json'), country, limit])
     snapshot_file = output / f'sources-{scope}.json'
     if snapshot_file.exists():
         captured = read_json(snapshot_file)
+    elif receipt_snapshot:
+        captured = read_json(receipt_snapshot)
+        write_json(snapshot_file, captured)
     else:
         captured = {}
         for cache in [inventory, *caches]:
@@ -140,16 +145,37 @@ def status(con, scope):
     return {'total': total, 'screened': total - remaining, 'remaining': remaining}
 
 
+def review_priority(check):
+    """Ordering of evidence types, never a probability or public verdict."""
+    direct = {'changed-number', 'changed-negation', 'changed-unit', 'percentage-arithmetic',
+              'reversed-range', 'isbn-checksum', 'invalid-calendar-date', 'source-physical-page'}
+    aligned = {'quotation-near-match', 'identifier-conflict', 'document-edition-year'}
+    return 1 if check['rule'] in direct else 2 if check['rule'] in aligned else 3
+
+
+def review_group(check, payload, group_key):
+    metadata = {'publication-date', 'bibliography-date', 'duplicate-url-citation-date',
+                'document-edition-year', 'identifier-conflict', 'access-before-publication',
+                'invalid-calendar-date', 'source-content-type'}
+    # Metadata issues are grouped only as the same *question*, with every edition
+    # target retained. A grouping never propagates a contextual verdict.
+    evidence = {k:v for k,v in check.items() if k not in {'state','reason'}}
+    source_versions = [(s['url'],s['record'].get('sha256')) for s in payload['sources']
+                       if not check.get('url') or s['url']==check['url']]
+    return mc.digest_json([evidence, source_versions, None if check['rule'] in metadata else group_key])
+
+
 def export(con, scope, output):
     checks = Counter()
     states = Counter()
     rows = Counter()
     candidates = Counter()
     samples = []
+    groups = {}
     with (output / 'candidates.csv').open('w', encoding='utf-8', newline='') as stream:
         writer = csv.writer(stream)
         writer.writerow(['Country', 'Report', 'Edition', 'CPIN text hash', 'Claim', 'Paragraph', 'Section', 'Rule', 'Source URL', 'Source hash', 'Reason'])
-        for encoded, result in con.execute('SELECT payload,result FROM occurrences WHERE scope=? AND result IS NOT NULL', (scope,)):
+        for encoded, result, group_key in con.execute('SELECT payload,result,group_key FROM occurrences WHERE scope=? AND result IS NOT NULL', (scope,)):
             payload = json.loads(encoded)
             result = json.loads(result)
             rows[result['state']] += 1
@@ -161,13 +187,25 @@ def export(con, scope, output):
                 if state != 'candidate':
                     continue
                 candidates[rule] += 1
+                issue = review_group(check, payload, group_key)
+                if issue not in groups:
+                    groups[issue] = {'id':issue,'priority':review_priority(check),'rule':rule,
+                                     'check':check,'claim':payload['claim'], 'occurrences':[],
+                                     'assessment':None,'publicFlag':None}
+                groups[issue]['occurrences'].append({'target':target,'claimId':payload['claim']['id'],
+                                                     'paragraph':payload['claim']['paragraph'],
+                                                     'section':payload['claim']['section']})
                 values = [target['country'], target['series'], target['editionId'], target['textSha'], payload['claim']['id'],
                           payload['claim']['paragraph'], payload['claim']['section'], rule, check.get('url', ''), check.get('sha256', ''), check.get('reason', '')]
                 writer.writerow(["'"+v if isinstance(v, str) and v[:1] in '=+-@\t\r' else v for v in values])
                 if len(samples) < 120:
                     samples.append({'target': target, 'claim': payload['claim'], 'check': check})
     totals = status(con, scope)
+    ranked = sorted(groups.values(), key=lambda g:(g['priority'], g['rule'], g['id']))
+    write_json(output / 'ranked-review-queue.json', ranked)
+    priorities = Counter(g['priority'] for g in ranked)
     summary = {'method': mc.METHOD, 'checkedAt': now_iso(), 'scope': scope, **totals,
+               'distinctReviewQuestions':len(ranked),'reviewPriorities':dict(priorities),
                'rowStates': dict(rows), 'checkCounts': dict(checks), 'checkStates': dict(states), 'candidateCounts': dict(candidates),
                'distinctComputations': con.execute('SELECT COUNT(DISTINCT group_key) FROM occurrences WHERE scope=?', (scope,)).fetchone()[0],
                'networkRequests': 0, 'modelCalls': 0, 'publishedFlags': 0, 'contextualAssessments': 0,
@@ -178,13 +216,17 @@ def export(con, scope, output):
             '', 'All results are private. Candidate discrepancies require inspection; a pass applies only to its stated comparison.',
             '', '| Candidate check | Occurrences |', '| --- | ---: |']
     text += [f'| {rule} | {n:,} |' for rule, n in candidates.most_common()]
+    text += ['', f'{len(ranked):,} distinct review questions after grouping repeated metadata and exact source/context questions.',
+             f'Priority 1: {priorities[1]:,}; priority 2: {priorities[2]:,}; priority 3: {priorities[3]:,}.',
+             'The ordering is an evidence-type route, not a confidence score or a confirmed error. Each question retains all its edition targets.',
+             'See ranked-review-queue.json; metadata/ellipsis questions stay separate from the first direct-comparison queue.']
     text += ['', 'Missing evidence and unsupported inputs remain explicit in summary.json and results.sqlite3.',
              'No archive lookup, new download, model call, contextual assessment or public flag was made.', '']
     (output / 'REPORT.md').write_text('\n'.join(text))
     return summary
 
 
-def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, max_gb=4):
+def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, max_gb=4, receipt_snapshot=None, reading_cache=None):
     inventory, output = Path(inventory), Path(output)
     output.mkdir(parents=True, exist_ok=True)
     lock = (output / 'run.lock').open('a')
@@ -196,9 +238,9 @@ def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, ma
     write_json(output / 'job.json', meta)
     print('Preparing frozen source receipts and resumable occurrence queue.', flush=True)
     try:
-        scope, total = prepare(con, inventory, output, [Path(c) for c in caches], country, limit)
+        scope, total = prepare(con, inventory, output, [Path(c) for c in caches], country, limit, receipt_snapshot)
         meta.update({'scope': scope, 'total': total, 'state': 'running'})
-        reader = mc.SourceReader(output)
+        reader = mc.SourceReader(output, reading_cache)
         last_progress = 0
         reused = 0
         while True:
@@ -271,13 +313,17 @@ if __name__ == '__main__':
     parser.add_argument('--limit', type=int)
     parser.add_argument('--max-hours', type=float, default=10)
     parser.add_argument('--max-gb', type=float, default=4)
+    parser.add_argument('--receipt-snapshot', type=Path, help='Reuse exactly these frozen receipts for a comparable rerun')
+    parser.add_argument('--reading-cache', type=Path, help='Reuse compatible independent readings from the v1 run')
     args = parser.parse_args()
     base = (ROOT / 'data/source-evidence').resolve()
     if not args.out.resolve().is_relative_to(base) or not args.inventory.resolve().is_relative_to(base):
         parser.error('Use private data/source-evidence paths')
     if args.out.resolve() == args.inventory.resolve():
         parser.error('Keep result directory separate from source inventory')
+    if any(p and not p.resolve().is_relative_to(base) for p in (args.receipt_snapshot, args.reading_cache)):
+        parser.error('Reuse evidence only from private data/source-evidence paths')
     if (args.limit is not None and args.limit < 1) or args.max_hours <= 0 or not 1 <= args.max_gb <= 8:
         parser.error('Use positive limits and a 1–8 GiB result budget')
-    result = run(args.inventory, args.out, args.cache, args.country, args.limit, args.max_hours, args.max_gb)
+    result = run(args.inventory, args.out, args.cache, args.country, args.limit, args.max_hours, args.max_gb, args.receipt_snapshot, args.reading_cache)
     sys.exit(bool(result['remaining'] or result['rowStates'].get('processing-error')))
