@@ -1,10 +1,10 @@
 {
   "country": "iraq",
   "note": "country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
-  "title": "Country policy and information note: opposition to the government in the Kurdistan Region of Iraq (KRI), Iraq, July 2023 (accessible)",
+  "title": "Country policy and information note: opposition to the government in the Kurdistan Region of Iraq (KRI), Iraq, September 2026 (accessible)",
   "base_path": "/government/publications/iraq-country-policy-and-information-notes/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
   "status": "live",
-  "current_sha256": "760227c18ba875e35dffa20225c387b85ee92df55911a5220ff10b1df27fe70a",
+  "current_sha256": "c7ad6b0ca180e0c39ccd549310d3989279cc943f24822582f64a2fcf0c1da716",
   "versions": [
     {
       "sha256": "6b69dee605dacee356038baabcd54736089136d2b444ab1480ccced607dc237d",
@@ -51,6 +51,17 @@
           "digest": "NPEQV4LY4HJAPS7FWEFV3H3IWGONMJOL"
         }
       ]
+    },
+    {
+      "sha256": "c7ad6b0ca180e0c39ccd549310d3989279cc943f24822582f64a2fcf0c1da716",
+      "text_sha256": "bf244659450badc4e2701ed47779b7907ebe124c176b80df9f39eee18806916b",
+      "source": "live",
+      "title": "Country policy and information note: opposition to the government in the Kurdistan Region of Iraq (KRI), Iraq, September 2026 (accessible)",
+      "public_updated_at": "2026-10-06T12:20:04Z",
+      "first_seen": "2026-10-06T13:23:16Z",
+      "last_seen": "2026-10-06T13:23:16Z",
+      "version_banner": "4.0",
+      "bytes": 256917
     }
   ],
   "wayback_digests": [

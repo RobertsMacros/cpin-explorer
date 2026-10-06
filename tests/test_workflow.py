@@ -54,7 +54,7 @@ def test_a_failed_sync_or_verification_cannot_publish_retained_data():
     assert "needs.sync.result == 'success'" in deploy
     assert "needs.sync.outputs.changed == 'true'" in deploy
     publication = WORKFLOW.with_name('deploy.yml').read_text()
-    assert 'python -m cpin images --all' in publication
+    assert 'python -m cpin.deploy_images' in publication
     assert publication.index('npm test') < publication.index('npx wrangler deploy')
     assert publication.index('python -m cpin verify') < publication.index('npx wrangler deploy')
 

@@ -84,6 +84,31 @@ No further full run, source retrieval, paid call, public flag or deployment was
 started. The next step is bounded review of the remaining direct comparisons.
 See the [repairs, evidence and limits](docs/reviews/2026-10-06-mechanical-cleanup.md)
 and the private [review plan and pipeline](https://chatgpt.com/space/page_bbc9800f0e6081919996aa393ee957e8).
+**6 October 2026: GitHub publication image-cache repair.** The first publishing
+attempt with the owner's newly added Cloudflare secrets passed the Python and
+site tests but stopped before Cloudflare authentication: eight historical Gaza
+image URLs return HTTP 410. Their retained bytes still exist locally and on the
+published Explorer. Deployment now shares sync's file-cache path set and runs
+`python -m cpin.deploy_images`: verify cached hashes, restore exact manifest-named
+files from our own published deployment, then politely fetch only missing source
+images. This is deployment-backup recovery, not new third-party source collection.
+Missing or corrupt required images still fail publication; source refresh remains
+in daily sync. All 367 Python tests pass, and a live check restored all eight gone
+images with the original hashes. Two previously unlisted historical Botswana
+images were fetched from GOV.UK and added to the image manifest. No CPIN body was
+changed. GitHub publication with the new token is being checked separately.
+
+**6 October 2026: mechanical false-positive repairs and comparable rerun.**
+All four previous processing failures now replay successfully. The corrected
+runner handles uncovered PDF page-label intervals, structurally evidenced
+footnote markers and headings, grouped numbers, population words and coarse
+ratios. All 359 Python tests pass. A rerun of all 116,125 linked blocks is active
+using the original frozen source receipts; its final reduction is not yet known.
+The export groups repeated review questions and ranks direct comparisons ahead
+of metadata/ellipsis questions, without turning priority into confidence.
+One minor bibliography access-date typo has been independently inspected in
+the exact archived Cameroon edition; findings remain private. See the
+[repairs, evidence and run status](docs/reviews/2026-10-06-mechanical-cleanup.md).
 
 **5 October 2026: expanded mechanical checks and overnight run started.**
 The private runner implements 51 rule types covering reference mappings, source
@@ -565,14 +590,16 @@ tiny on a globe, so every country has a clickable pin and appears in the A–Z l
 the Open Government Licence excludes departmental logos, and it would suggest official endorsement.
 
 The branch’s rewritten `.github/workflows/sync.yml` is configured for a quick sync daily and a full sync
-weekly, retaining changed `data/` before verification and deploying only after successful checks. It has not
-yet run on GitHub. PDFs are kept out of git
+weekly, retaining changed `data/` before verification and deploying only after successful checks.
+The scheduled 6 October run passed and committed `fe19336`; its publication job
+was skipped before the owner added the Cloudflare secrets. PDFs are kept out of git
 (`data/pdfs/files/`); they are meant for Cloudflare R2, which is not set up yet.
 
 ## Hosting
 
 The site is a static-assets-only Cloudflare Worker (`web/wrangler.jsonc`), live at
-<https://cpin-explorer.robert-m-w-stevens.workers.dev> (`/` redirects to the globe).
+<https://cpin-explorer.co.uk> (`/` redirects to the globe); the existing
+<https://cpin-explorer.robert-m-w-stevens.workers.dev> address also remains configured.
 
 - **Public, hidden from search engines:** every response carries `X-Robots-Tag: noindex, nofollow,
   noarchive`. `robots.txt` keeps crawlers off the bulk data but not off pages, because a crawler that
@@ -582,10 +609,14 @@ The site is a static-assets-only Cloudflare Worker (`web/wrangler.jsonc`), live 
   PDFs are not shipped; PDF links go to GOV.UK or the recorded Internet Archive copy.
 - **Deploy by hand:** after `./cpin export` and `cd web && npm run search-index`, run
   `cd web && npm run deploy` (needs `npx wrangler login` once).
-- **Automatic deployment configuration (not yet verified on GitHub):** `.github/workflows/deploy.yml` runs after a sync that changed content, on
+- **Automatic deployment configuration:** `.github/workflows/deploy.yml` runs after a sync that changed content, on
   pushes that change the site, or by hand. It needs two repository secrets, `CLOUDFLARE_API_TOKEN`
-  (a token with "Edit Cloudflare Workers") and `CLOUDFLARE_ACCOUNT_ID`; without them it notes that and
-  stops. Mirrored images are cached between runs, so only new ones are fetched.
+  (Editor access scoped to the existing `cpin-explorer` Worker is sufficient) and
+  `CLOUDFLARE_ACCOUNT_ID`; without them it notes that and stops. Both secrets are
+  now present; the first authenticated publication is being verified. Retained
+  images are hash-checked and cached between runs. A cold cache recovers matching
+  image bytes from the existing published Explorer before asking GOV.UK for missing
+  originals, so retired source URLs do not discard historical pictures.
 
 ## Data layout
 

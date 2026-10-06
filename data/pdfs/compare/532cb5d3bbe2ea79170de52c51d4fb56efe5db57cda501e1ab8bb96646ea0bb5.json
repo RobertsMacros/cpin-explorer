@@ -1,0 +1,214 @@
+{
+ "method": "webpdf-8",
+ "extractor": "pdftext-6",
+ "note": "iraq/country-policy-and-information-note-opposition-to-the-government-in-the-kurdistan-region-of-iraq-kri-iraq-july-2023-accessible",
+ "pdf_sha256": "532cb5d3bbe2ea79170de52c51d4fb56efe5db57cda501e1ab8bb96646ea0bb5",
+ "body_sha256": "c7ad6b0ca180e0c39ccd549310d3989279cc943f24822582f64a2fcf0c1da716",
+ "words": {
+  "web": 28407,
+  "pdf": 28409
+ },
+ "summary": {
+  "wording": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0,
+   "share": 0.0,
+   "passages": 0,
+   "sizes": {}
+  },
+  "opening": {
+   "differences": 0,
+   "passages": 0,
+   "words": 0
+  },
+  "groups": {
+   "wording": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "numbering": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "picture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "withheld": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "address": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   },
+   "form": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   },
+   "furniture": {
+    "differences": 0,
+    "web_words": 0,
+    "pdf_words": 0
+   }
+  },
+  "kinds": {
+   "spacing": {
+    "differences": 2,
+    "web_words": 2,
+    "pdf_words": 4
+   }
+  },
+  "ours": {
+   "differences": 2,
+   "web_words": 1,
+   "pdf_words": 0
+  },
+  "moved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "unresolved": {
+   "differences": 0,
+   "web_words": 0,
+   "pdf_words": 0
+  },
+  "version": {
+   "web": "4.0",
+   "web_date": "September 2026",
+   "pdf": "4.0",
+   "pdf_date": "September 2026"
+  },
+  "section_updated": {
+   "web": [
+    "23 September 2026"
+   ],
+   "pdf": [
+    "23 September 2026"
+   ],
+   "same": true
+  },
+  "boxes": {
+   "web": 3,
+   "pdf": 3,
+   "web_notices": 5,
+   "pdf_notices": 5
+  },
+  "footnotes": {
+   "web": 134,
+   "pdf": 134,
+   "pdf_raw": 134,
+   "differ": false
+  },
+  "pictures": {
+   "web": 0,
+   "pdf": 0
+  },
+  "tables": {
+   "web": 1,
+   "pdf": 1
+  },
+  "headings": {
+   "web": 41,
+   "pdf": 39
+  },
+  "drafts": [],
+  "second": {
+   "reader": "pdftotext",
+   "agrees": 0,
+   "cannot_tell": 0,
+   "disputes": 0
+  }
+ },
+ "differences": [
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "Abdulrahman",
+   "pdf": "Abdu lrahman",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "of the PUK leadership, told Rudaw’s Sangar",
+   "after": "on Sunday, adding that: “There is no dialogue,",
+   "where": {
+    "heading": "the-kurdistan-democratic-party-kdp-and-the-patriotic-union-of-kurdistan-puk--the-ruling-parties",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 16
+   }
+  },
+  {
+   "kind": "spacing",
+   "group": "form",
+   "verdict": "real",
+   "web": "international",
+   "pdf": "inter national",
+   "web_words": 1,
+   "pdf_words": 2,
+   "before": "that: “There is no dialogue, except when an",
+   "after": "or regional power intervenes between us.”\nThe political",
+   "before_pdf": "that: \"There is no dialogue, except when an",
+   "where": {
+    "heading": "the-kurdistan-democratic-party-kdp-and-the-patriotic-union-of-kurdistan-puk--the-ruling-parties",
+    "paragraph": "10.2.4",
+    "section": "Country information",
+    "page": 16
+   }
+  }
+ ],
+ "ours": [
+  {
+   "kind": "bibliography",
+   "group": "wording",
+   "verdict": "artefact",
+   "web": "2025",
+   "pdf": "",
+   "web_words": 1,
+   "pdf_words": 0,
+   "before": "Zoom TV linked to Lahur Talabany, 29 August",
+   "after": "Lack of funds cripple electoral campaign of Lahur",
+   "where": {
+    "heading": "sources-cited",
+    "paragraph": "12.4.35",
+    "section": "Bibliography",
+    "page": 54
+   }
+  },
+  {
+   "kind": "numbering",
+   "group": "numbering",
+   "verdict": "artefact",
+   "web": "",
+   "pdf": "89",
+   "web_words": 0,
+   "pdf_words": 0,
+   "before": "met with any sort of force or intervention.",
+   "after": "12.3.17 It should be noted that",
+   "where": {
+    "heading": "protesters",
+    "paragraph": "12.3.17",
+    "section": "Country information",
+    "page": 42
+   }
+  }
+ ],
+ "unresolved": [],
+ "not_listed": 0,
+ "paragraphs": {
+  "same": 158,
+  "different": {},
+  "pdf_unnumbered": [],
+  "web_unnumbered": 0,
+  "repeated": [],
+  "unconfirmed": []
+ }
+}
