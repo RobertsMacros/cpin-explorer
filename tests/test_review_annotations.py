@@ -4,6 +4,8 @@ import re
 from pathlib import Path
 from lxml import html
 from cpin.fingerprint import text_sha256
+from cpin.export import build_dashboard
+from cpin.store import Store
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -12,14 +14,19 @@ def normalise(value):
     return ' '.join(value.split())
 
 
-def test_public_annotations_match_the_held_body_and_unique_original_passage():
+def test_public_annotations_match_the_held_body_and_unique_original_passage(tmp_path):
     records = json.loads((ROOT / 'prototypes/reviews/annotations.json').read_text())['records']
+    # A fresh checkout has no ignored prototypes/data export. Build this test's
+    # own derived view from retained Git data, without network or source changes.
+    series_root = tmp_path / 'series'
+    build_dashboard(Store(ROOT / 'data'), json.loads((ROOT / 'config/countries.json').read_text()),
+                    series_out=series_root)
     series_cache = {}
     for record in records:
         for target in record['targets']:
             key = (target['country'], target['series'])
             if key not in series_cache:
-                path = ROOT / 'prototypes/data/series' / key[0] / (key[1].replace(':', '--') + '.json')
+                path = series_root / key[0] / (key[1].replace(':', '--') + '.json')
                 series_cache[key] = json.loads(path.read_text())
             versions = [v for v in series_cache[key]['versions'] if v['id'] == target['editionId']]
             assert len(versions) == 1, record['id']
