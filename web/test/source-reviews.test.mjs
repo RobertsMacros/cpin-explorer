@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
+import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, recordHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
@@ -153,6 +153,21 @@ test("review text and links cannot inject active content; public evidence requir
   assert.match(panelHtml(target, [malicious]), /Approved passage/);
   assert.equal(httpUrl("data:text/html,x"), "");
   assert.match(badgeHtml([record("external", "issue")]), /Minor error/);
+});
+
+test("long attributed comments collapse with safe page links and separately labelled reply extracts", () => {
+  const r = record("external", "context", { collapsible: true, summary: '<img src=x> Reviewer comment',
+    summaryDetail: '<script>bad()</script>', response: 'Accepted for an update', responseIsExcerpt: true,
+    reviewPages: [{page: 18, url: 'https://example.org/review.pdf#page=18'}, {page: 19, url: 'javascript:bad()'}] });
+  const s = recordHtml(r);
+  assert.match(s, /^<details class="sr-record sr-comment"><summary>&lt;img/);
+  assert.match(s, /Home Office response · extract/);
+  assert.match(s, /no independent factual verdict/);
+  assert.match(s, /review.pdf#page=18/);
+  assert.ok(!s.includes('href="javascript:'));
+  assert.ok(!s.includes('<script>'));
+  assert.equal(reviewStatus([r]).tone, 'grey');
+  assert.equal(reviewStatus([r]).symbol, '○');
 });
 
 test("published pilot is an external finding with the original edition and source anchored", async () => {

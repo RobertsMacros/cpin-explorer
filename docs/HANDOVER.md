@@ -3,6 +3,10 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Overnight reviews and hardened rerun, 6 October 2026
+
+The owner requested overnight progress. Read [the active checkpoint](reviews/2026-10-06-overnight-review.md) before starting work. The v3 full mechanical run is already active; do not duplicate it.
+
 ## Logo clarification, 6 October 2026
 
 The browser-tab screenshot was misread as a request for its white silhouette.

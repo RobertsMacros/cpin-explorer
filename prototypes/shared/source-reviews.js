@@ -115,15 +115,18 @@ function evidenceHtml(r) {
 export function recordHtml(r, previous = false) {
   const kind = { ai: "AI review", external: "Published review", manual: "Private human review · self-reported" }[r.kind] || "Review";
   const impact = ["issue", "possible-issue", "criticism"].includes(r.status) ? ({ major: " · Major", minor: " · Minor" }[r.severity] || " · Severity not assigned") + (r.status === "criticism" ? " concern" : " error") : "";
-  return `<article class="sr-record"><p class="sr-meta">${esc(kind)}${impact}${previous ? " · previous entry" : ""}</p>
+  const body = `<p class="sr-meta">${esc(kind)}${impact}${previous ? " · previous entry" : ""}</p>
     <p>${esc(r.comment || r.summary || "")}</p>
     ${r.kind === "external" ? '<p class="sr-meta">Attributed to the published reviewer; any AI assessment is separate.</p>' : ""}
-    ${r.status === "context" ? `<p class="sr-meta">${r.kind === "ai" ? "Scoped context comparison" : "Report-level context"} · no passage-level factual verdict.</p>` : ""}
+    ${r.status === "context" ? `<p class="sr-meta">${r.kind === "ai" ? "Scoped context comparison" : "Attributed review context"} · no independent factual verdict.</p>` : ""}
+    ${r.summaryDetail ? `<p>${esc(r.summaryDetail)}</p>` : ""}
     <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
-    ${r.response ? `<p><strong>Home Office response:</strong> ${esc(r.response)}</p>` : ""}
+    ${r.response ? `<p><strong>Home Office response${r.responseIsExcerpt ? " · extract" : ""}:</strong> ${esc(r.response)}</p>` : ""}
     ${r.publication ? `<p>${link(r.publication.url, r.publication.title || "Read published review")}${r.publication.location ? ` · ${esc(r.publication.location)}` : ""}</p>` : ""}
     ${r.sourceCopyUrl ? `<p class="sr-meta">${link(r.sourceCopyUrl, "Source checked")}${r.sourceLocation ? ` · ${esc(r.sourceLocation)}` : ""}</p>` : ""}
-    ${evidenceHtml(r)}</article>`;
+    ${Array.isArray(r.reviewPages) ? `<nav class="sr-page-links" aria-label="Pages in this review section">${r.reviewPages.map((p) => link(p.url, `Page ${p.page}`)).filter(Boolean).join(" · ")}</nav>` : ""}
+    ${evidenceHtml(r)}`;
+  return r.collapsible === true ? `<details class="sr-record sr-comment"><summary>${esc(r.summary || "Published comment")}</summary>${body}</details>` : `<article class="sr-record">${body}</article>`;
 }
 export function reportPanelHtml(target, records, reviews, { unavailable = false, loading = false, passage = false } = {}) {
   const exact = reportReviews(reviews, target), background = backgroundReviews(reviews, target);

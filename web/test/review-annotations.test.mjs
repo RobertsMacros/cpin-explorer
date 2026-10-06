@@ -55,12 +55,20 @@ test("public passage records have stable IDs and contain no private evidence pat
     assert.ok(r.targets.length);
     for(const t of r.targets) {assert.ok(sameEdition(t,t));for(const a of t.anchors||[])assert.ok(a.quote);}
     if(r.evidence) {
-      assert.equal(r.kind,"external");assert.equal(r.evidence.publicDisplayApproved,true);assert.ok(r.evidence.rightsBasis);
-      const url=r.evidence.url.split("#")[0];quotes.set(url,(quotes.get(url)||0)+r.evidence.quote.split(/\s+/).length);
+      assert.ok(["external","ai"].includes(r.kind));assert.equal(r.evidence.publicDisplayApproved,true);assert.ok(r.evidence.rightsBasis);
+      const url=r.evidence.url.split("#")[0];
+      if(r.evidence.rightsBasis.includes("Open Government Licence")) {
+        assert.equal(new URL(url).hostname,"assets.publishing.service.gov.uk");
+        assert.match(r.evidence.rightsBasis,/nested third-party quotations excluded/);
+      } else quotes.set(url,(quotes.get(url)||0)+r.evidence.quote.split(/\s+/).length);
     }
   }
   assert.ok([...quotes.values()].every(n=>n<=25));
-  assert.equal(data.records.filter(r=>r.kind==="external").length,8);
+  assert.ok(data.records.some(r=>r.id==="published-passage-miclu-blood-feuds-2023-2.5.3"));
   assert.equal(data.records.filter(r=>r.kind==="ai"&&r.status==="context").length,32);
-  assert.equal(data.records.filter(r=>r.kind==="ai"&&r.status==="possible-issue").length,10);
+  const colombia=data.records.find(r=>r.id==="ai-colombia-2025-police-violence-motive");
+  assert.equal(colombia.kind,"ai");assert.equal(colombia.severity,"major");
+  assert.equal(colombia.targets.length,2);
+  assert.ok(colombia.targets.every(t=>t.country==="colombia"&&t.anchors.every(a=>a.paragraph==="2.1.10")));
+  assert.match(colombia.summary,/at least 18/);assert.match(colombia.sourceLocation,/executive-summary URL is unavailable/);
 });

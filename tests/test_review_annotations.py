@@ -41,6 +41,8 @@ def test_public_annotations_match_the_held_body_and_unique_original_passage(tmp_
                     if anchor.get('footnote'):
                         candidates = [a for a in candidates if a.xpath('ancestor::*[@id="fn:' + str(anchor['footnote']) + '"]')]
                     texts = [normalise(a.xpath('ancestor::p[1]')[0].text_content()) for a in candidates]
+                elif anchor['type'] == 'sentence':
+                    texts = [normalise(p.text_content()) for p in root.xpath('//p')]
                 else:
                     candidates = [p for p in root.xpath('//p') if re.match(re.escape(anchor['paragraph']) + r'(?:\s|\.)', normalise(p.text_content()))]
                     if anchor['type'] == 'footnote':

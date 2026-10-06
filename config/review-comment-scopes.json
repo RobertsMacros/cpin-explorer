@@ -1,0 +1,735 @@
+{
+  "schema": 1,
+  "scopeCheckedAt": "2026-10-06",
+  "scopeBasis": "Original review section covers and contents; historical exact edition declarations checked, not a factual verdict. Pages count from PDF start. COIR-only material excluded from comment excerpts.",
+  "works": [
+    {
+      "workId": "iagci-albania-pakistan-2024",
+      "title": "IAGCI review of Albania and Pakistan (October 2023)",
+      "publishedAt": "2024-02-29",
+      "url": "https://assets.publishing.service.gov.uk/media/65e079e97bc329001ab8c195/Inspection_report_on_Home_Office_country_of_origin_information__Albania_and_Pakistan__October_2023.pdf",
+      "sha256": "90986b00aca406ada91a1038046c3fc1201b5f2d19f3da89a76f00350a14a67b",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 16,
+          "lastPage": 37,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "albania",
+              "series": "note:blood-feuds",
+              "editionId": "9b83d14f78c579f0",
+              "textSha": "f655950677f6e622d91d3dc9fe927349dac3392a8b725f862124b8efb19eabb9",
+              "bodySha": "c83e0cd2f67a654c8e87a8cc8624e9c0f31165fd64eef854d93550a94abed949",
+              "path": "data/pdfs/text/9b83d14f78c579f039515b0587b113af29adac5715e4204971b1e0522abe35a2.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 38,
+          "lastPage": 55,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "albania",
+              "series": "note:trafficking",
+              "editionId": "01395d2a657117ef",
+              "textSha": "d20bec1d6b3dd78674f25f4466e48c32f9b406f85b8782a95cbcbaacf06fc6a9",
+              "bodySha": "01395d2a657117ef0a2ebb71784e287c7ed7e34551838c91cbb7b0b0ef71a5d6",
+              "path": "data/countries/albania/notes/country-policy-and-information-note-human-trafficking-albania-february-2023-accessible/01395d2a657117ef.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 61,
+          "lastPage": 69,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "pakistan",
+              "series": "note:actors-protection",
+              "editionId": "ca4a799b3973028b",
+              "textSha": "b4d027556b5f40c26e23ddf6f5f3573c63c038ce0a6762482893fafa18cb41cf",
+              "bodySha": "ca4a799b3973028b99b19142718ece31de9c2cd51c5ae330cacbed59fb0c54d6",
+              "path": "data/countries/pakistan/notes/country-policy-and-information-note-actors-of-protection-pakistan-may-2023-accessible/ca4a799b3973028b.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 72,
+          "lastPage": 88,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "pakistan",
+              "series": "note:affiliation-parties-political",
+              "editionId": "43d1cd0e1e18232d",
+              "textSha": "4ae3f7b92e3381d25d3be2be87a5a79f85f37e90d77c5b9f6e48d401292e43ec",
+              "bodySha": "43d1cd0e1e18232db1a92d6765a9773a631a442962c06bd0868c1330f36fdadd",
+              "path": "data/countries/pakistan/notes/country-policy-and-information-note-political-parties-and-affiliation-pakistan-may-2023-accessible/43d1cd0e1e18232d.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 91,
+          "lastPage": 95,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "pakistan",
+              "series": "note:internal-relocation",
+              "editionId": "3687f66433b9eeca",
+              "textSha": "25d39a1e46f67431e1f72d3eca02aa84c11657049505a7842fad757e2abd31d3",
+              "bodySha": "d9d87d9eb655cc25fad0cd9ac4ec969d2e652015582e8ec0d1d825c30f17ddc6",
+              "path": "data/pdfs/text/3687f66433b9eecae42ef135919c09bd532b5af1bad6c78e18100aa5e5c16a86.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            587.0,
+            791.2
+          ],
+          "physicalPage": 64,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-afghanistan-colombia-2026",
+      "title": "IAGCI review of Afghanistan and Colombia (December 2025)",
+      "publishedAt": "2026-06-02",
+      "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf",
+      "sha256": "84ea08f02efcc77753928d6c9313c2ad3b0f464f4ef54f63f454db2f85d0bca2",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 15,
+          "lastPage": 32,
+          "author": "Kauthar Menhal",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:children-unaccompanied",
+              "editionId": "18c115ec16481488",
+              "textSha": "e1588b74aa407727d65fb7c2d757c22130dc904011a8ddf89ad4361a97f81764",
+              "bodySha": "18c115ec164814887b11c38afd03157ca16e73cc87cb9beae4bd477d5d2c5a41",
+              "path": "data/countries/afghanistan/notes/country-policy-and-information-note-unaccompanied-children-afghanistan-november-2024-accessible/18c115ec16481488.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 33,
+          "lastPage": 52,
+          "author": "Kauthar Menhal",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:fear-taliban",
+              "editionId": "a7c78fef364ac1e2",
+              "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
+              "bodySha": "a7c78fef364ac1e23d4b9e65a65fa4def22f7c1a611cdf69203f880cf0a3fc44",
+              "path": "data/countries/afghanistan/notes/country-policy-and-information-note-fear-of-the-taliban-afghanistan-august-2025-accessible/a7c78fef364ac1e2.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 74,
+          "lastPage": 105,
+          "author": "Kauthar Menhal",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:humanitarian-situation",
+              "editionId": "b0219d809d9422f0",
+              "textSha": "6c644f7441d73c492ff26e5d9dc140c7d669c3fe76fcef2b171938a7cf914df2",
+              "bodySha": "b0219d809d9422f0282fab248de16331d16b81719458511eee89f4cf0d71349a",
+              "path": "data/countries/afghanistan/notes/country-policy-and-information-note-humanitarian-situation-afghanistan-february-2022-accessible/b0219d809d9422f0.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 106,
+          "lastPage": 117,
+          "author": "Robert Karl (personal capacity)",
+          "targets": [
+            {
+              "country": "colombia",
+              "series": "note:internal-relocation",
+              "editionId": "887cdf8ab3396185",
+              "textSha": "e639eac51c0014c95cc0625f7f9deb49ffd6a5fe0a1acac52b98d0212bfb8f69",
+              "bodySha": "887cdf8ab3396185c02915c79a26742477dba278b5371602aedc4efd3355da7b",
+              "path": "data/countries/colombia/notes/country-policy-and-information-note-internal-relocation-colombia-february-2025-accessible/887cdf8ab3396185.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 118,
+          "lastPage": 129,
+          "author": "Robert Karl (personal capacity)",
+          "targets": [
+            {
+              "country": "colombia",
+              "series": "note:actors-protection",
+              "editionId": "c4777bfda6c52e63",
+              "textSha": "2f64bc51c409d8f484d495128331a6b6fd9f6f8c00aaacf47cdc5c1e5ec90d89",
+              "bodySha": "c4777bfda6c52e6379215c80399bec989a7aee7b581065e09425f04ef6d61a45",
+              "path": "data/countries/colombia/notes/country-policy-and-information-note-actors-of-protection-columbia-january-2025-accessible/c4777bfda6c52e63.html"
+            },
+            {
+              "country": "colombia",
+              "series": "note:actors-protection",
+              "editionId": "ff49e1b1c39f2224",
+              "textSha": "551b35c1e3a55c4806f0e1d643006ac4676f36d07c9ac4c539ceb64591fd4742",
+              "bodySha": "ff49e1b1c39f22240ea1ae19ee976f5bbdca0e387b639f8aa6828c7752ee71b7",
+              "path": "data/countries/colombia/notes/country-policy-and-information-note-actors-of-protection-colombia-january-2025-accessible/ff49e1b1c39f2224.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 130,
+          "lastPage": 146,
+          "author": "Robert Karl (personal capacity)",
+          "targets": [
+            {
+              "country": "colombia",
+              "series": "note:armed-criminal-gangs-groups",
+              "editionId": "587b4358545494d3",
+              "textSha": "a6dcc487095836c8dae7f0dd7223ad5f14321c39548759818db51433cbb25777",
+              "bodySha": "587b4358545494d35480ae1fddf10e7096e55d38903825984064e3bd8f58c78b",
+              "path": "data/countries/colombia/notes/country-policy-and-information-note-armed-groups-and-criminal-gangs-colombia-november-2024-accessible/587b4358545494d3.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workId": "iagci-home-office-country-of-origin-information-on-turkey-and-vietnam-february-2025",
+      "title": "Inspection report on Home Office country of origin information on Turkey and Vietnam (February 2025)",
+      "publishedAt": "2025-07-10",
+      "url": "https://assets.publishing.service.gov.uk/media/6a217e42f56856fd11c0b039/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025_.pdf",
+      "sha256": "f924dab1438bcd59a005d9431d1a15abb2cfcfced4694b0a8b28d81c059bd1d4",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 14,
+          "lastPage": 23,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "turkey",
+              "series": "note:kurds",
+              "editionId": "32a566e864ca6323",
+              "textSha": "e3a0a9b7614e48a727b999850138c553ec35349440d5f19893cb35e97a5131f8",
+              "bodySha": "32a566e864ca6323048b84783a75e0eb96e6bd8fd4ceae07280723a6bd805ad5",
+              "path": "data/countries/turkey/notes/country-policy-and-information-note-kurds-turkey-october-2023-accessible/32a566e864ca6323.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 24,
+          "lastPage": 31,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "turkey",
+              "series": "note:military-service",
+              "editionId": "b2b94b4ac430f540",
+              "textSha": "b26bb2338978660ab61298e7c1c33df93fe1c1b9e3fe7fd1113a9571725da529",
+              "bodySha": "b2b94b4ac430f540d23dd9b41b8e36d60e1af75071012d1dbc37fbfc44d1b299",
+              "path": "data/countries/turkey/notes/country-policy-and-information-note-military-service-turkey-october-2023-accessible/b2b94b4ac430f540.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 42,
+          "lastPage": 55,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "turkey",
+              "series": "note:pkk",
+              "editionId": "851a2fcc73b0e1ec",
+              "textSha": "6470bc57b75a6f38381587973780bdf20e65629058c36fb5b7945c6e152b4cc3",
+              "bodySha": "851a2fcc73b0e1ec7f7326674a1d02e87c25af437bfe45d2caf2dd01957e3eeb",
+              "path": "data/countries/turkey/notes/country-policy-and-information-note-kurdistan-workers-party-pkk-turkey-october-2023-accessible/851a2fcc73b0e1ec.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 56,
+          "lastPage": 64,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "vietnam",
+              "series": "note:fear-illegal-moneylenders",
+              "editionId": "52e74e6b99bf04ae",
+              "textSha": "dcb22522db01e3a8352f2b867e9e38f78d2e2f5a54eeec160185444c73f3f9e4",
+              "bodySha": "52e74e6b99bf04aeb659237b733870408740db99be5626b416bcd26e02b2d71c",
+              "path": "data/countries/vietnam/notes/country-policy-and-information-note-fear-of-illegal-moneylenders-vietnam-january-2023-accessible/52e74e6b99bf04ae.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 65,
+          "lastPage": 73,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "vietnam",
+              "series": "note:children-unaccompanied",
+              "editionId": "45199fbdd108e16f",
+              "textSha": "9acf12a2751533eb0b03451aedbea983a66194be357f7869a5d93116d1d9166d",
+              "bodySha": "45199fbdd108e16f57d3d059c8e22483bf01dfcc8359fc41129b78384e511c31",
+              "path": "data/countries/vietnam/notes/country-policy-and-information-note-unaccompanied-children-vietnam-july-2024-accessible-version/45199fbdd108e16f.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 81,
+          "lastPage": 96,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "vietnam",
+              "series": "note:trafficking",
+              "editionId": "3103273c976deac9",
+              "textSha": "cda2e3b4c1976308441bc36675c0aa49e99231ffc93a3b2981e9b9141c924d2e",
+              "bodySha": "4c6fba2905615a2bcca625d3a33bbb42057f9e9e737246b26e7c7f05ffc27681",
+              "path": "data/pdfs/text/3103273c976deac987adf7e20582b9b3c13847093ef0f5b185acac8fe9a615af.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            519.0,
+            791.2
+          ],
+          "physicalPage": 17,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-home-office-country-of-origin-information-on-georgia-july-2024",
+      "title": "Inspection report on Home Office country of origin information on Georgia (July 2024)",
+      "publishedAt": "2024-10-24",
+      "url": "https://assets.publishing.service.gov.uk/media/6718afc138149ce9d09e3883/Inspection_report_on_Home_Office_country_of_origin_information_on_Georgia_July_2024_Accessible.pdf",
+      "sha256": "7ec7180cd4495704036113b2325a1cc2298aa30e30801c0ba39daa98c3953745",
+      "licencePage": 3,
+      "groups": [
+        {
+          "firstPage": 12,
+          "lastPage": 27,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "georgia",
+              "series": "note:expression-gender-identity-orientation-sexual",
+              "editionId": "046811771a498d79",
+              "textSha": "89874f635286a178e496f5425077f2d8b964070b0923720c7a19814dc702bf71",
+              "bodySha": "046811771a498d792a7956aa131add55b63b406c1fd6dd2c9c83a61d343112f2",
+              "path": "data/countries/georgia/notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-and-expression-georgia-december-2023-accessible/046811771a498d79.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 30,
+          "lastPage": 56,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "georgia",
+              "series": "note:affiliation-parties-political",
+              "editionId": "d7d228e51fb9dd83",
+              "textSha": "92c797b6c2e9498d19e109f383d4eb01325467e6965fa8b7300fde3525e9d32d",
+              "bodySha": "8f42e97efdd1e82c1b5243ce9c88a549fb5edd0a326a4150818d25883ec9cde5",
+              "path": "data/pdfs/text/d7d228e51fb9dd831fe6bcaf0d01d98e4c13814ce575cafeae2e61a359a4bf3e.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            621.0,
+            791.2
+          ],
+          "physicalPage": 42,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        },
+        {
+          "signature": [
+            51.2,
+            609.7,
+            791.2
+          ],
+          "physicalPage": 16,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-home-office-country-of-origin-information-thematic-report-on-the-coverage-of-statelessness-february-2023",
+      "title": "Inspection report on Home Office country of origin information: Thematic report on the coverage of statelessness (February 2023)",
+      "publishedAt": "2024-02-29",
+      "url": "https://assets.publishing.service.gov.uk/media/65e07b012f2b3b001c7cd773/Inspection_report_on_Home_Office_country_of_origin_information_-_Thematic_report_on_the_coverage_of_statelessness__February_2023.pdf",
+      "sha256": "55d3f70d280fafbb0622402558870221be512965bdbdb37858e7f8f24233d957",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 44,
+          "lastPage": 56,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "kuwait",
+              "series": "note:bidoons",
+              "editionId": "111db5f75320a877",
+              "textSha": "d751402fd90555e7ca770d212f6688cd1e797a667d815077ad731d60bdec779c",
+              "bodySha": "514bb6131a23cfff59c4b5f2a7a1a17c561fef20ddf03d53307f47769b4c4223",
+              "path": "data/pdfs/text/111db5f75320a8771b47ae647c000b120bf6bf45900309088918efec96821b76.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 63,
+          "lastPage": 68,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "syria",
+              "series": "note:returnees",
+              "editionId": "1369d8644e345027",
+              "textSha": "063856eab51e5e534d2d6027d99eb19315586384dbfd502495d6bc5e6849b886",
+              "bodySha": "1369d8644e3450278a5e82c50492a6feac61b057a54a277fdd550b3c2565c36a",
+              "path": "data/countries/syria/notes/country-policy-and-information-note-returnees-syria-june-2022-accessible/1369d8644e345027.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "workId": "iagci-home-office-country-of-origin-information-iraq-and-myanmar-burma-january-2023",
+      "title": "Inspection report on Home Office country of origin information, Iraq and Myanmar (Burma) (January 2023)",
+      "publishedAt": "2023-06-29",
+      "url": "https://assets.publishing.service.gov.uk/media/649d32fb06179b000c3f74d8/Inspection_report_on_Home_Office_country_of_origin_information__Iraq_and_Myanmar__Burma__January_2023.pdf",
+      "sha256": "c8661e51121552509e97a69546df0b72391ff38fe9b3648161c3e7b23a2a30ea",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 13,
+          "lastPage": 24,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "iraq",
+              "series": "note:humanitarian-situation",
+              "editionId": "bc0819572784630e",
+              "textSha": "92d8e06418ef40c92123247c6216f69b7ee060a2aa5493cbb577a5f494eb5fa3",
+              "bodySha": "bc0819572784630efeb36f3b8be699b3f5098ade40e1004fbf187619ce72d596",
+              "path": "data/countries/iraq/notes/country-policy-and-information-note-humanitarian-situation-iraq-august-2022-accessible/bc0819572784630e.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 25,
+          "lastPage": 40,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "iraq",
+              "series": "note:government-kri-kurdistan-opposition-region",
+              "editionId": "a4f07b4fe3130651",
+              "textSha": "347ac534c0cf6953ad8c82b6e1e7a9e60fb29e826347005ac462b23d5686e690",
+              "bodySha": "2758a325d25d9c0981716ce55ed3ca4dc0fc4ea5ffc959869f1cb3f0c629e5bd",
+              "path": "data/pdfs/text/a4f07b4fe3130651608da00d0564315d5a469b1b6ac8bbcca8af3342094356e3.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 41,
+          "lastPage": 48,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "iraq",
+              "series": "note:civil-documentation-internal-relocation-returns",
+              "editionId": "dda33bb0440013f9",
+              "textSha": "9db47383a417830d3ab851efe6b7e2d3e4ce5f92ac7a9915c25057d6c5d306b7",
+              "bodySha": "1f164c0d1aee6a5cec00a8da1fa41ea6bd78279952651459066ca3adbca76aa4",
+              "path": "data/pdfs/text/dda33bb0440013f9ee5ec846dd37b84483f4532414980151e6c39d358910c117.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 66,
+          "lastPage": 78,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "burma",
+              "series": "note:critics-military-regime",
+              "editionId": "bc7d30bed814da6c",
+              "textSha": "00405a0a6a69a8611793b0559a7cfa8baf4fa28cbae375db138d39d440019c01",
+              "bodySha": "bc7d30bed814da6cc283137d4764ad3ec4a5366863750493d1a09c6d5d2f8107",
+              "path": "data/countries/burma/notes/country-policy-and-information-note-critics-of-the-military-regime-myanmar-burma-july-2022-accessible/bc7d30bed814da6c.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            674.6,
+            790.9
+          ],
+          "physicalPage": 21,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-country-of-origin-information-afghanistan-and-china-june-2022",
+      "title": "Inspection report on Country of Origin Information, Afghanistan and China (June 2022)",
+      "publishedAt": "2022-10-19",
+      "url": "https://assets.publishing.service.gov.uk/media/634fa8698fa8f5346c39bb6e/Inspection_Report_on_Country_of_Origin_Information__Afghanistan_and_China_June_2022.pdf",
+      "sha256": "81f1a11916e48bdd62bdbe115b37463b5e43ae7632e5527302d9b169ded3bc15",
+      "licencePage": 4,
+      "groups": [
+        {
+          "firstPage": 21,
+          "lastPage": 34,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:fear-taliban",
+              "editionId": "4edf63b96befb378",
+              "textSha": "f223254be49cc47deccbf9c85d3db959cfe75bcbbf13dad931ea56ab822f0226",
+              "bodySha": "4edf63b96befb37838b706387cab52d958731bec1a27e01543de24256ce13982",
+              "path": "data/countries/afghanistan/notes/country-police-and-information-note-fear-of-the-taliban-afghanistan-february-2022-accessible/4edf63b96befb378.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 35,
+          "lastPage": 52,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:humanitarian-situation",
+              "editionId": "10ec7b046d19dd87",
+              "textSha": "62ff324d669980354aa6f37addaed9688841422aceea526c591a248a458a3ec5",
+              "bodySha": "10ec7b046d19dd87a9a8ed14a0ba651bbc5ca6ecfef5a8c0cd38e5481bfae686",
+              "path": "data/countries/afghanistan/notes/country-policy-and-information-note-humanitarian-situation-afghanistan-february-2022-accessible/10ec7b046d19dd87.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 53,
+          "lastPage": 70,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "afghanistan",
+              "series": "note:security-situation",
+              "editionId": "40fad59f9fe96d5f",
+              "textSha": "666db9a22e945e3d1910bcd63ace99fbe5c3e4da0853ebb0c3a7ee73fd7d2248",
+              "bodySha": "40fad59f9fe96d5fbe53c16cd0480ee57de2fcce19391732e57d6be716ac3f4f",
+              "path": "data/countries/afghanistan/notes/country-policy-and-information-note-security-situation-afghanistan-february-2022-accessible/40fad59f9fe96d5f.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 79,
+          "lastPage": 101,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "china",
+              "series": "note:hong-kong-protests",
+              "editionId": "93479c65e12f422b",
+              "textSha": "d1c75e928b604b23712d7cb94a4ef13defdda89dee2a39d898353acd8e63a8f5",
+              "bodySha": "bb23ccd0dbd72e9c8a28c1dbdae456f9c77f1d62bc9b309cb9573fd370dc14f2",
+              "path": "data/pdfs/text/93479c65e12f422be2f02aed9ba13642205943cdb097354a0d5980037f232d0c.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 102,
+          "lastPage": 116,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "china",
+              "series": "note:hong-kong-law-national-security",
+              "editionId": "237ba2a87f1d82ca",
+              "textSha": "c2a96be65fe4efbc1761fea69e70b30356655266b84d7f9c4df52c0a331d5004",
+              "bodySha": "0b092ab4c3c7417aaa7418d088ed8a5e8cced2f04cc2abde463cc09db2c967b8",
+              "path": "data/pdfs/text/237ba2a87f1d82ca9920dc9eb884ea98467564b090740c6b22df54b301f22a77.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 117,
+          "lastPage": 135,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "china",
+              "series": "note:muslims-uyghurs-xinjiang",
+              "editionId": "af0659e900d6f59e",
+              "textSha": "3c0a9d23c4135cfb578b2cc980e7cb7b8c956b37cc9dae0cc720d4c0c9459438",
+              "bodySha": "666fcdfcb7b01ddf8e902d8df519335992eac2e57d8c27e73dce7f9d24ff7c4b",
+              "path": "data/pdfs/text/af0659e900d6f59efbe1b348505b592459ba63088787c4a9cac5323657b02d3b.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            674.9,
+            791.2
+          ],
+          "physicalPage": 23,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-country-of-origin-information-ethiopia-iran-and-zimbabwe-january-2022",
+      "title": "Inspection report on Home Office country of origin information on Ethiopia, Iran and Zimbabwe (January 2022)",
+      "publishedAt": "2022-04-28",
+      "url": "https://assets.publishing.service.gov.uk/media/62691502d3bf7f55cd2bf1fd/Inspection_Report_on_Country_of_Origin_Information__Ethiopia__Iran_and_Zimbabwe_January_2022.pdf",
+      "sha256": "052c82b801bb776170b08690d0b51e7d291a4a77e7dcd66832cf96ec2cd8980a",
+      "licencePage": 3,
+      "groups": [
+        {
+          "firstPage": 11,
+          "lastPage": 33,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "ethiopia",
+              "series": "note:government-opposition",
+              "editionId": "2309d95a30a7fd4d",
+              "textSha": "627ad38f8299233b1b20feb3ace32d16a45e6e0f2be909ca5323bf67feecf7a8",
+              "bodySha": "c65ae457cc70bd78917757634505d0d63bf3539b7270701285e50f122c25fc5a",
+              "path": "data/pdfs/text/2309d95a30a7fd4d054508d0e52f68cf3afc801b541ce317ab7e3c8a3bfbcf70.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 41,
+          "lastPage": 51,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "iran",
+              "series": "note:based-fearing-honour-violence-women",
+              "editionId": "ab116372f7d8763b",
+              "textSha": "63bea3b727a310e0bdaa9710f9136f97f7533669b0cc9d2c98fdab29ac107a1a",
+              "bodySha": "a763fa67d1ad2271d9d499ceda953c8a40a9b6b02613dbf03c7222f00f7a2bda",
+              "path": "data/pdfs/text/ab116372f7d8763bcf97dedfb16b5a52bd39ab2b56b318451631b83088d19795.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 52,
+          "lastPage": 62,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "iran",
+              "series": "note:early-forced-marriage-women",
+              "editionId": "73649b15cccf79e6",
+              "textSha": "6bf34e8b93817e5991fb00e9578f76453e21549faa1e908cb5eac2c6fc23a9ae",
+              "bodySha": "c1d17f4a5ac58f42c22d58c25adc7321255fe4a27a3deb6c1056995a070462d9",
+              "path": "data/pdfs/text/73649b15cccf79e6ec1ee49eb6df8fc0a28633d181d521038d5024693c30bd43.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 80,
+          "lastPage": 89,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "zimbabwe",
+              "series": "note:government-opposition",
+              "editionId": "54d5ac085a69a474",
+              "textSha": "0f5c9bdf72035c692bb3f411ec486af8e02bbe3fca0dd8cf61035bc7bbcd8563",
+              "bodySha": "92287efe23a40ca2f991555d6dae1cde03b431c9a49e4e6fc7a09358135fa5f0",
+              "path": "data/pdfs/text/54d5ac085a69a474135820e805c7584cedbd5758b480c77db417a29000152b8c.html"
+            }
+          ]
+        },
+        {
+          "firstPage": 93,
+          "lastPage": 98,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "zimbabwe",
+              "series": "note:healthcare-medical",
+              "editionId": "3c81f8bb5869b40d",
+              "textSha": "51067ef920a38ad01f9f9c244c1e31089956c2fc4c9a2b5f807411bcd25759ed",
+              "bodySha": "5a7cf5569dbf29ae0e48145cf5cc21a7f33ed262d73f3fabc9dc21ddc0211488",
+              "path": "data/pdfs/text/3c81f8bb5869b40dc1289f599c490db31af65a124cadc4a068534fb57af9724e.html"
+            }
+          ]
+        }
+      ],
+      "columnRoles": [
+        {
+          "signature": [
+            51.2,
+            629.5,
+            791.2
+          ],
+          "physicalPage": 20,
+          "basis": "Original page visually inspected after undoing display rotation; reviewer left, Home Office reply right. Same boundaries only, within 2 PDF points. Nested reviewer replies inside response cells are excluded."
+        }
+      ]
+    },
+    {
+      "workId": "iagci-inspection-report-of-country-of-origin-information-el-salvador-and-sudan-december-2020",
+      "title": "Inspection report on Home Office country of origin information on El Salvador and Sudan (December 2020)",
+      "publishedAt": "2021-02-22",
+      "url": "https://assets.publishing.service.gov.uk/media/6033751bd3bf7f721b700f35/Inspection_Report_on_Country_of_Origin_Information_El_Salvador_and_Sudan_December_2020.pdf",
+      "sha256": "6dd92928eb46194733a207262a8d1bc269957b782b045cfc44fc948864292c96",
+      "licencePage": 3,
+      "groups": [
+        {
+          "firstPage": 64,
+          "lastPage": 114,
+          "author": "Commissioned IAGCI reviewer",
+          "targets": [
+            {
+              "country": "el-salvador",
+              "series": "note:gangs",
+              "editionId": "4ec7361526e5fbec",
+              "textSha": "98622d0b5c320de9219429e7e03f809076b68964508b859fd6494b01415d057d",
+              "bodySha": "973c35b9e64584bc49a0871394830c92976f1d6a3ccea958dbf46f2a09cf50be",
+              "path": "data/pdfs/text/4ec7361526e5fbec84f8fe10dae39345accef095d2b30b9456c6be8c015e686f.html"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
