@@ -3,6 +3,13 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Logo selection, 6 October 2026
+
+The owner has replaced the miniature globe logo with the fixed silhouette supplied
+in their browser-tab screenshot. Read [the logo record](reviews/2026-10-06-logo.md).
+The large COBE globe remains; `brand-mark.js` now prepares its stand-in rather
+than replacing the header's SVG with a canvas. Wordmark and RM footer stay.
+
 ## Reader review integration, 6 October 2026
 
 The owner has authorised publishing AI review without a human approval gate.

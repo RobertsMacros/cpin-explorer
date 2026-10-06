@@ -616,7 +616,7 @@ function select(slug, { fly = true, record = true, report = null } = {}) {
   for (const p of pins) p.el.classList.toggle("is-selected", p.c.slug === slug);
   markersDirty = true;
   glow.set(hovered || slug);                               // lights at once (it fades in; no waiting)
-  brandMark.show(slug);                                    // the header mark turns to it too
+  brandMark.show(slug);                                    // preserve the shared country-selection state
   pinsDirty = true;
   try { slug ? localStorage.setItem("cpin-last-country", slug) : localStorage.removeItem("cpin-last-country"); } catch {}
   if (slug && fly && bySlug.get(slug).marker) flyTo(bySlug.get(slug).marker);

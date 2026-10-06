@@ -1006,20 +1006,16 @@ These are Roberts Macros work tools. Each tool has its own product mark; the Rob
 
 ### 12.1 The product mark and wordmark
 
-- Where: the header, top left, as a link to the start page; the browser tab icon; the 404 page; exported documents.
-- The wordmark is the tool's name in two words at one size (`.95rem`): the first in Geist Pixel Square and blue, the second in Geist Mono and ink (6.1). The owner chose this from a sheet of seven variants in `prototypes/brand/index.html`: two fonts, same size, square pixel plus mono.
-- The mark is one small vector file drawn in `currentColor`, so it takes the page's blue, stays sharp at any size and follows the theme. It is a `<symbol id="mark">` in `assets/cpin-explorer/mark.svg`, used as `<svg class="brand-mark" viewBox="0 0 64 64"><use href="…/mark.svg#mark"/></svg>`. The favicon is the same shapes with the colour written in (`#2a3cf5`, and `#8b96ff` under `prefers-color-scheme: dark`).
+The owner chose a fixed silhouette from a browser-tab screenshot on 6 October 2026, replacing
+the miniature globe logo. The header, favicon, 404 page and Word exports share this mark.
+`web/build-mark.mjs` writes `assets/cpin-explorer/mark.svg` and `favicon.svg` from one path.
+The header uses ink on light pages and white on dark pages; the favicon follows system appearance.
+The existing wordmark stays: blue Geist Pixel Square “CPIN”, ink Geist Mono “EXPLORER”, at one size.
 
-### 12.2 How CPIN Explorer's mark was made
+### 12.2 Design history
 
-It is the globe in miniature. The owner chose "a dotted globe" from three options (dots, dots with a pin, a dotted wireframe; `prototypes/brand/`). The grammar, from `markShapes` in `prototypes/shared/mini-globe.js`, on a 64 × 64 box:
-
-- A thin ring: radius 45.5% of the box (29.12), stroke 1.7% of the box (1.09), opacity `.45`.
-- Dots inside it, only where they face the viewer (depth above 0.08, where depth runs from 0 at the edge to 1 at the centre). Each dot has radius `rmax × (0.38 + 0.62 × depth)` and opacity `0.3 + 0.7 × depth`: larger and stronger towards the middle, smaller and fainter towards the edge.
-- Optionally one solid dot for "the thing in hand" (radius at least 2, or 8.5% of the box), with a clear margin around it (at least 1, or 3.5% of the box).
-- One colour. No fills other than the dots. No outline on the dots.
-
-The first version (still in the repository as `mark-dots.svg`) placed the dots on rings of latitude: −60° to 60° in steps of 20°, about 19° apart along each ring, the globe rotated −28° and tilted 22°, `rmax` 2.1. The current one uses the real globe's land dots (the same spiral lattice as COBE, 520 points, turned to the opening view), written out by `web/build-mark.mjs`; in the header a script redraws it on a canvas so it can turn to the country being read.
+The earlier dotted globe options remain in `prototypes/brand/` and `assets/cpin-explorer/`.
+The dashboard's COBE globe and its stand-in remain separate from the fixed product logo.
 
 ### 12.3 Making a sibling mark for another tool
 

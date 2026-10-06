@@ -20,7 +20,7 @@
   .sizes span { display: block; font: .62rem var(--font-mono); color: var(--ink-2); text-align: center; margin-top: .3rem; }
   .pane.dark .sizes span { color: #8a93a6; }
   .header { display: flex; align-items: center; gap: .7rem; border: 1px solid var(--line); padding: .7rem .9rem; }
-  .header svg { width: 34px; height: 34px; color: var(--blue); flex: none; }
+  .header svg { width: 34px; height: 34px; color: var(--ink); flex: none; }
   .header .name { font: 500 .95rem var(--font-mono); letter-spacing: .22em; }
   .header .name b { font-family: var(--font-display); font-weight: 400; color: var(--blue); letter-spacing: .08em; font-size: 1.15rem; margin-right: .35rem; }
   .note { color: var(--ink-2); max-width: 46rem; }
@@ -30,8 +30,10 @@
 <body>
 <main>
   <p class="eyebrow">CPIN Explorer · header logo</p>
-  <p class="note"><strong>Chosen (3 Oct 2026):</strong> mark A, the dotted globe, with wordmark (a) — two fonts at the same size, square pixel “CPIN” and mono “EXPLORER”. Set in <code>prototypes/shared/brand.css</code> and <code>assets/cpin-explorer/mark.svg</code>. Later that day the mark became the globe itself in miniature (the same dots as the big globe, land only), turned to the country in hand and marking it with a dot: <code>prototypes/shared/brand-mark.js</code>.</p>
-  <h1>Logo options</h1>
+  <p class="note"><strong>Earlier choice (3 Oct 2026):</strong> mark A, the dotted globe, with wordmark (a) — two fonts at the same size, square pixel “CPIN” and mono “EXPLORER”. Set in <code>prototypes/shared/brand.css</code> and <code>assets/cpin-explorer/mark.svg</code>. Later that day the mark became the globe itself in miniature (the same dots as the big globe, land only), turned to the country in hand and marking it with a dot: <code>prototypes/shared/brand-mark.js</code>.</p>
+  <p class="note"><strong>Chosen (6 Oct 2026):</strong> the white silhouette supplied in the owner's browser-tab reference replaces the globe logo. It appears in ink on light pages and white on dark pages; the existing wordmark stays.</p>
+  <div class="header"><svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="../../assets/cpin-explorer/mark.svg#mark"/></svg><span class="brand-name"><b>CPIN</b>EXPLORER</span></div>
+  <h1>Earlier logo options</h1>
   <p class="note">Three marks in the globe's dotted style, shown at real sizes (16–128 px), in a header, light and dark. Each is one small vector file that takes the page's blue, so it stays sharp on 4K and follows the theme. The RM mark moves to the footer.</p>
   <div class="grid" id="grid"></div>
 
