@@ -5,7 +5,7 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 
 ## Overnight reviews and hardened rerun, 6 October 2026
 
-The owner requested overnight progress. Read [the active checkpoint](reviews/2026-10-06-overnight-review.md) before starting work. The v3 full mechanical run is already active; do not duplicate it.
+The owner requested overnight progress. Read [the active checkpoint](reviews/2026-10-06-overnight-review.md) before starting work. The v3 full mechanical run is complete: 116,125 screened, zero pending/errors, 7,949 candidate blocks and 2,223 distinct questions (43 direct / 245 aligned / 1,935 metadata). Do not rerun or treat these as confirmed errors. The public whitelist has 529 records, including 433 newly prepared licensed comments and two new major scoped AI findings. The Myanmar original is recovered; one ARC/UWE full-file gap remains.
 
 ## Logo clarification, 6 October 2026
 

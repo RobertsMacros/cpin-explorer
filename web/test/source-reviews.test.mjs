@@ -1,11 +1,21 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, recordHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
+import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, recordHtml, reportPanelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
 const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, severity: "minor", author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
+
+test("edition AI empty state accounts for directory assessments and unavailable records", () => {
+  const review = { applications: [{ kind: "ai", target: { ...target }, summary: "Scoped directory assessment" }] };
+  const panel = reportPanelHtml(target, [], [review]);
+  assert.match(panel, /Scoped directory assessment/);
+  assert.doesNotMatch(panel, /No AI review recorded/);
+  assert.match(reportPanelHtml({ ...target, editionId: "other" }, [], [review]), /No AI review recorded/);
+  assert.doesNotMatch(reportPanelHtml(target, [], [], { loading: true }), /No AI review recorded/);
+  assert.doesNotMatch(reportPanelHtml(target, [], [], { unavailable: true }), /No AI review recorded/);
+});
 
 test("later-edition follow-ups stay separate from external findings and citation badges", () => {
   const application = { kind:'ai', target:{...target}, assessment:'superseded', scope:'Old passage only',

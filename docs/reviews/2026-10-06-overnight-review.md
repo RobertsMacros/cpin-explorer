@@ -66,3 +66,46 @@ The Myanmar review was recovered through the normal guarded collector. Its autho
 pages 2 and 8. The 16-word extract agrees with independent Poppler text. An exact
 paragraph 3.1.4 concern and a full page index are attributed to Derek Tonkin;
 they do not establish current ICC warrant status or the wider criticism.
+
+
+## Final mechanical completion, 6 October 2026 at 23:12 UTC
+
+All 116,125 eligible linked blocks were screened; none remain. No processing
+errors, including all four previous failures rechecked by exact edition/text hash
+and claim identity. SQLite quick-check is clean. The process and caffeinate wrapper
+have exited. Source receipts are frozen; network requests and model calls are zero.
+
+Candidate blocks: baseline 8,249; corrected v2 7,975; hardened v3 **7,949**.
+The raw decrease is small because metadata dominates. Distinct questions are now
+**2,223**: **43** direct comparisons, **245** aligned wording/identity and **1,935**
+metadata/ellipsis. Changed-number candidate occurrences fell 247 → 65 → 43.
+Priority describes an evidence route, not confidence. A candidate is not an error.
+
+104,251 distinct computations; 11,874 exact computations reused. There remain
+49,681 unavailable source-use receipts. All 116,125 contextual-support checks are
+explicitly unable: a mechanical screen does not establish the underlying truth.
+4,012 unlinked blocks are outside this eligible inventory. Recent held coverage
+includes 203 editions / 58,444 linked blocks dated 2024–2026, and 252 / 68,253
+dated 2023–2026; this is not universal historical edition coverage.
+
+Exact original comparison inputs validate reuse of 707 previous scoped
+dispositions. No repaired-rule-not-reproduced verdict is carried onto a surviving
+candidate. Before the fresh sample, 273 direct/aligned questions lack a fully
+validated reusable disposition, and 1,243 metadata questions receive mechanical
+pattern routing. These are conservative reuse counts, not 273 newly discovered
+errors or 707 correctness approvals. Ten varied survivor comparisons and four
+apparent matches were checked against held original bytes; PDF matches were
+independently checked with Poppler. Source superscripts, bibliographical omissions,
+number spacing and quotation boundaries account for the sampled survivors. No
+new public flags result from those samples. Full contextual checks remain open.
+
+The run completed within its eight-hour / four-GiB screening database-and-readings
+budget and two-GiB free-space floor. Final exports are outside that byte budget.
+`completion-verification.json` records actual output bytes and limits. Cold v1/v2
+SQLite journals were losslessly compressed and round-trip/hash verified; their
+original bytes remain recoverable, and source evidence was retained.
+
+Private supporting records: `completion-error-verification.json`,
+`reconciled-question-dispositions.jsonl`, and the adjacent
+`review-expansion-2026-10-06/survivor-inspected-findings.json` and
+`apparent-match-sample.json`. No canonical CPIN text was changed.

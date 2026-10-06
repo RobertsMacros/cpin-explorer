@@ -130,6 +130,7 @@ export function recordHtml(r, previous = false) {
 }
 export function reportPanelHtml(target, records, reviews, { unavailable = false, loading = false, passage = false } = {}) {
   const exact = reportReviews(reviews, target), background = backgroundReviews(reviews, target);
+  const ai = records.filter((r) => r.kind === "ai"), followups = applicationChecks(reviews, target);
   const directory = (rs) => rs.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p class="sr-meta">${esc((r.publishers || []).join(" / "))} · ${esc(r.publishedAt || "Date not recorded")}${r.reviewedEdition?.label ? " · " + esc(r.reviewedEdition.label) : ""}</p>${r.summary ? `<p>${esc(r.summary)}</p>` : ""}${(r.relatedUrls || []).map((u) => link(u, "Related publication / response")).join(" · ")}</article>`).join("");
   return `<div class="source-reviews sr-report-panel">
     <p class="sr-scope">${passage ? "This passage in this exact edition only." : "This exact edition only."} Published criticism and AI assessment are separate; neither is a verdict on the whole report.</p>
@@ -140,8 +141,9 @@ export function reportPanelHtml(target, records, reviews, { unavailable = false,
       ${background.length ? `<details><summary>Other country reviews (${background.length})</summary><p class="sr-meta">Different editions or contextual publications; applicability to this edition is not established.</p>${directory(background)}</details>` : ""}
     </section>
     <section class="sr-review-group" data-review-kind="ai"><h3>AI review</h3>
-      ${records.filter((r) => r.kind === "ai").map((r) => recordHtml(r)).join("") || `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
-      ${applicationChecks(reviews, target).map((r) => recordHtml({ ...r, summary: r.summary, publication: r.publication || { url: r.reviewUrl, title: r.reviewTitle } })).join("")}
+      ${ai.map((r) => recordHtml(r)).join("")}
+      ${followups.map((r) => recordHtml({ ...r, summary: r.summary, publication: r.publication || { url: r.reviewUrl, title: r.reviewTitle } })).join("")}
+      ${ai.length || followups.length || loading || unavailable ? "" : `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
     </section>
     <section class="sr-review-group" data-review-kind="manual"><h3>Manual additions</h3><p class="sr-meta">Independent human notes can be added in a footnote overlay and are kept in this browser. They are optional and do not approve or replace AI findings.</p></section>
   </div>`;
