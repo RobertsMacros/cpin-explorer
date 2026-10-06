@@ -58,7 +58,12 @@ test("the tilt keeps within what the big globe allows", () => {
   }
 });
 
-test("the globe markers are in step with their country configuration", () => {
+test("the generated data is in step with its sources (npm run vendor, npm run mark)", () => {
   const config = JSON.parse(readFileSync(here("../../config/countries.json"), "utf8")).countries;
   assert.deepEqual(MARKERS, Object.fromEntries(Object.entries(config).map(([slug, c]) => [slug, c.marker])), "a marker for every country, as in config/countries.json");
+  const svg = readFileSync(here("../../assets/cpin-explorer/mark.svg"), "utf8");
+  const { dots } = markShapes({ size: 64, view: viewOf(HOME) });
+  assert.equal(svg.match(/<circle /g).length, dots.length + 1, "mark.svg is the mark at its opening view: the ring and every dot");
+  const first = dots[0];
+  assert.ok(svg.includes(`cx="${+first.x.toFixed(2)}" cy="${+first.y.toFixed(2)}"`), "dot for dot");
 });

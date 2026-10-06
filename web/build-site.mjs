@@ -57,7 +57,7 @@ const keep = (src) => {
 };
 for (const rel of INCLUDE) await cp(path.join(ROOT, rel), path.join(OUT, rel), { recursive: true, filter: keep });
 
-await writeFile(path.join(OUT, "_redirects"), "/ /prototypes/dashboard/ 302\n/favicon.ico /assets/cpin-explorer/favicon.svg 302\n");
+await writeFile(path.join(OUT, "_redirects"), "/ /prototypes/dashboard/ 302\n/favicon.ico /assets/cpin-explorer/favicon.png 302\n");
 // noindex on every response. robots.txt deliberately does not block pages: a crawler that can't fetch
 // a page never sees its noindex, and may still list the bare URL. It does keep bots off the bulk data.
 await writeFile(path.join(OUT, "_headers"), `/*
@@ -74,6 +74,7 @@ await writeFile(path.join(OUT, "robots.txt"), "User-agent: *\nDisallow: /data/\n
 await writeFile(path.join(OUT, "404.html"), `<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex"><title>Not found · CPIN Explorer</title>
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/cpin-explorer/favicon.png">
 <link rel="icon" type="image/svg+xml" href="/assets/cpin-explorer/favicon.svg">
 <link rel="stylesheet" href="/prototypes/shared/theme.css">
 <style>body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-text)}header{padding:.9rem clamp(1rem,2.4vw,2.75rem);border-bottom:1px solid var(--line)}

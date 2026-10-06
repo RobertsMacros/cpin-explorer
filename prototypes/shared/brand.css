@@ -3,7 +3,7 @@
    assets/roberts-macros/derived/ (RM mark with tagline, from the shared RM assets repo; see SOURCE.txt). */
 .brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none; flex: none; }
 .brand:hover { text-decoration: none; }
-.brand-mark { width: 2.1rem; height: 2.1rem; color: var(--ink); flex: none; transition: transform var(--t-slow, 520ms) var(--ease, ease); }
+.brand-mark { width: 2.1rem; height: 2.1rem; color: var(--blue); flex: none; transition: transform var(--t-slow, 520ms) var(--ease, ease); }
 .brand:hover .brand-mark { transform: rotate(-12deg); }
 /* Wordmark (owner's choice, 2026-10-03): two fonts at one size, "CPIN" in square pixel and blue, "EXPLORER" in mono. */
 .brand-name { font-family: var(--font-mono); font-size: .95rem; line-height: normal; letter-spacing: .22em; white-space: nowrap; }
@@ -39,16 +39,25 @@ footer.foot > span:not(.foot-rm):not(.foot-end), footer.site-foot > span:not(.fo
   .foot-end { margin-left: 0; width: 100%; flex-wrap: wrap; gap: .7rem 1.3rem; }
 }
 
-/* The fixed product mark carries between pages; the dashboard globe keeps its own identity. */
+/* --- Moving between pages ------------------------------------------------------------------------
+   Opening a report from the globe is a new page, but it should not feel like one. Where the browser
+   supports view transitions between pages (Chrome, Edge, Safari), the globe draws in to the header
+   mark, which is the same globe in miniature turned to the same place, while one page gives way to
+   the other; going back, the mark opens out into the globe. Quick and plain: a quarter of a second,
+   no flourish. Other browsers simply navigate. Reduced motion: no transition. */
 @view-transition { navigation: auto; }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
-.brand-mark { view-transition-name: cpin-mark; }
+
+/* One name for "the globe" on every page: the whole globe (its dots, the lit country, its labels) on
+   the start page, the mark elsewhere. */
+body:not(.dash) .brand-mark { view-transition-name: cpin-globe; }
 .dash .globe-wrap { view-transition-name: cpin-globe; }
-/* A stand-in holds the dashboard globe's place until COBE has drawn. */
+/* Until the real globe has drawn, a stand-in of the same dots in the same places (brand-mark.js) holds
+   its place, so the mark has a globe to open out into; it fades as the globe appears. */
 .globe-ghost { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; transition: opacity var(--t, 280ms) var(--ease, ease); }
 .globe-wrap:has(#globe.ready) .globe-ghost { opacity: 0; }
 
-::view-transition-group(cpin-mark), ::view-transition-group(cpin-globe) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.3, 0, .1, 1); }
+::view-transition-group(cpin-globe) { animation-duration: 260ms; animation-timing-function: cubic-bezier(.3, 0, .1, 1); }
 ::view-transition-old(cpin-globe), ::view-transition-new(cpin-globe) { height: 100%; width: 100%; object-fit: contain; animation-duration: 260ms; }
 ::view-transition-old(root) { animation: vt-out 140ms ease both; }
 ::view-transition-new(root) { animation: vt-in 220ms ease 40ms both; }

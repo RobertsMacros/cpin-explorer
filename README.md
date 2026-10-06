@@ -525,12 +525,15 @@ python3 scripts/serve.py 8781         # from the repo root, then open:
     dates (once per visit, reused for 30 minutes) and shows "Accurate as of <now>", "GOV.UK has N newer
     updates", or "Copy fetched <when>" (`sync-status.js`). It compares dates, not text; the weekly full
     sync catches silent edits. All times are UK time (`shared/uk-time.js`).
-- **The mark:** the owner-selected silhouette (6 October 2026), a fixed SVG in ink on light pages
-  and white on dark pages. `npm run mark` writes the header mark and theme-aware favicon. The
-  earlier globe marks remain in `assets/cpin-explorer/` as design history.
-  `shared/brand-mark.js` still prepares the dashboard globe's stand-in and starting country.
-- **Header and footer** (`shared/brand.css`): CPIN Explorer's silhouette and wordmark; in the footer
-  the RM mark, source credit, guide and glossary links, and "Report a bug".
+- **The mark** (`shared/brand-mark.js`, `shared/mini-globe.js`): the header mark is the globe in
+  miniature, the same dots in the same places (COBE's lattice and its land map, copied into
+  `vendor/globe-mini-data.js` by `npm run vendor`). It shows the globe's opening view until a country
+  is in hand (one open on the start page, a report being read), then turns to that country and marks
+  it. The same code draws the globe's stand-in, so the start page shows its land from the first frame
+  and the real globe settles in over it. `npm run mark` writes the static copies (`mark.svg`, favicon).
+- **Header and footer** (`shared/brand.css`): CPIN Explorer's dotted-globe mark and wordmark; in the footer
+  the RM mark, the sources credit, links to the guide and the glossary, and "Report a bug" (an email with
+  the page and browser filled in; address in `shared/site-config.js`).
 - **Text from PDFs** (`src/cpin/pdftext.py`, `./cpin pdftext`): the Home Office's PDFs are made in Word and carry
   their own text, so nothing is read by OCR (a scan would be refused, and left as a PDF). The extractor rebuilds the
   web layout from the pages: headings from the PDF's bookmarks (h2/h3/h4, as GOV.UK uses), numbered paragraphs, bulleted
