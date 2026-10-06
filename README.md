@@ -98,7 +98,18 @@ Missing or corrupt required images still fail publication; source refresh remain
 in daily sync. All 367 Python tests pass, and a live check restored all eight gone
 images with the original hashes. Two previously unlisted historical Botswana
 images were fetched from GOV.UK and added to the image manifest. No CPIN body was
-changed. GitHub publication with the new token is being checked separately.
+changed. GitHub Actions [run 37482334448](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37482334448)
+then passed 367 Python and 339 JavaScript tests and authenticated with the new
+repository secrets. It published Cloudflare version
+`7d5d68fa-ede8-44e4-b71f-fd110fc85941` at 15:08 UTC: all 684 required image
+references were satisfied (46 held, 636 restored, two source downloads), with no
+missing images or source errors. The shared cache was saved. A subsequent live
+check of the custom domain returned HTTP 200; all eight retired Gaza images and
+two Botswana additions matched their retained SHA256 values. Newer project
+publications have since followed; this records the first token verification.
+A future scheduled changed-content sync-to-publication cycle has not yet been
+observed with these credentials. One successful automated push publication does
+not establish sustained operation.
 
 **6 October 2026: mechanical false-positive repairs and comparable rerun.**
 All four previous processing failures now replay successfully. The corrected
@@ -615,7 +626,8 @@ The site is a static-assets-only Cloudflare Worker (`web/wrangler.jsonc`), live 
   pushes that change the site, or by hand. It needs two repository secrets, `CLOUDFLARE_API_TOKEN`
   (Editor access scoped to the existing `cpin-explorer` Worker is sufficient) and
   `CLOUDFLARE_ACCOUNT_ID`; without them it notes that and stops. Both secrets are
-  now present; the first authenticated publication is being verified. Retained
+  now present and authenticated GitHub publication succeeded in run `37482334448`.
+  A scheduled changed-content publication remains to be observed. Retained
   images are hash-checked and cached between runs. A cold cache recovers matching
   image bytes from the existing published Explorer before asking GOV.UK for missing
   originals, so retired source URLs do not discard historical pictures.
