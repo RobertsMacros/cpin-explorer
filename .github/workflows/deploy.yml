@@ -87,15 +87,17 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
 
-      # Mirrored images are not in git. Keep them between runs so only new ones are fetched
-      # (politely, from GOV.UK's asset host); a cold cache fetches each once.
+      # Share sync's retained-file cache, including its path set (cache versions depend on paths).
+      # Reuse exact image bytes: retired GOV.UK URLs can return 410 even while our copy is sound.
       - uses: actions/cache@v4
         with:
-          path: data/images/files
-          key: images-${{ hashFiles('data/images/manifest.json') }}
-          restore-keys: images-
-      - name: Mirror images
-        run: python -m cpin images --all
+          path: |
+            data/pdfs/files
+            data/images/files
+          key: mirror-${{ hashFiles('data/pdfs/manifest.json', 'data/images/manifest.json') }}
+          restore-keys: mirror-
+      - name: Prepare verified images
+        run: python -m cpin.deploy_images
 
       - name: Export site data
         run: python -m cpin export
