@@ -223,7 +223,7 @@ canvas.dotflag { display: inline-block; flex: none; aspect-ratio: 4 / 3; height:
 .doc li > .pdf-fig { margin: .9rem 0; }
 /* The tags this site adds inside the text (highlights.js: SITE_TAGS) are not the note's words: none can be selected.
    That is for the eye only. What keeps them out of a copy is the copy handler in reader.js (Safari copies unselectable text). */
-.doc .linkstatus, .doc .lc, .doc .badge, .doc .pdf-fig { -webkit-user-select: none; user-select: none; }
+.doc .linkstatus, .doc .lc, .doc .badge, .doc .pdf-fig, .doc .review-marker { -webkit-user-select: none; user-select: none; }
 .doc .footnotes { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--top-h) + 1.4rem); }
 .doc .footnotes::before { content: "Footnotes"; display: block; margin-bottom: .9rem; font-family: var(--font-pixel); font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); }
 .doc .footnotes ol { font-size: .86rem; line-height: 1.55; color: var(--ink-2); }
@@ -342,6 +342,13 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .pop-fn p { margin: 0; }
 .source-reviews { border-top: 1px solid var(--line); padding-top: .65rem; }
 .source-review-badge { display: inline-flex; align-items: baseline; justify-content: center; min-width: 1em; margin-inline-start: .35rem; font-family: var(--font-mono); font-size: 1rem; line-height: 1; }
+.review-marker { display: inline-flex; vertical-align: baseline; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; margin-inline-start: .2rem; padding: 0; border: 0; background: transparent; cursor: pointer; font-family: var(--font-mono); font-size: 1rem; line-height: 1; user-select: none; }
+.review-marker::before { content: attr(data-symbol); }
+.review-marker:hover { background: var(--blue-wash, #eef3ff); }
+.review-marker:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.sr-report-panel h3 { font: 600 1rem var(--font-sans); margin-block: 1rem .5rem; }
+.sr-report-panel details > summary { cursor: pointer; margin-block: .75rem; }
+@media (pointer: coarse) { .review-marker { min-width: 44px; min-height: 44px; } }
 .sr-red { color: var(--del); }
 .sr-yellow { color: var(--review-yellow, #946300); }
 .sr-green { color: var(--review-green, #137447); }

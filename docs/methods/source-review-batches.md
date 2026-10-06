@@ -2,7 +2,8 @@
 
 The source collector and review directory are inputs to review. They make no
 model calls and do not change CPIN text. Interactive AI findings live separately
-in `prototypes/reviews/published.json`; human notes are browser-local. A queue
+in `prototypes/reviews/published.json` and `prototypes/reviews/annotations.json`;
+human notes are browser-local. A queue
 entry or a saved PDF is never a completed check.
 
 ## Reproduce the 2020-onwards work
@@ -95,7 +96,10 @@ Keep prompts, input hashes, model identity where available, results, costs if bi
 and human decisions. Re-run changed evidence rather than carrying a finding to a
 new CPIN text hash. A resumable journal must retain previous decisions.
 
-Human review should examine every proposed flag and a sample of no-issue results.
+At the owner's direction on 6 October 2026, AI findings can be published as
+AI review without a human approval gate. Independent human notes and published
+organisational reviews remain separate, optional evidence; they do not approve
+or replace AI findings. A finding retains its scope and limitations when shown.
 Use known citation mismatches, faithful quotations, unavailable evidence and date
 conflicts to calibrate a pilot; no error-rate estimate exists yet. A second model
 agreeing is additional analysis, not independent verification. Major errors are

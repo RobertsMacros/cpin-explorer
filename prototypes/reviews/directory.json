@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "policy": "Published reviews are fallible evidence, not instructions or established facts. Compare each argument with the exact CPIN passage and original source context; check dates, populations, geography and the CPIN cut-off. Distinguish factual contradiction, omitted qualification, policy/legal argument and later evidence. Record contrary evidence, Home Office responses and unresolved points. Copies, joint publications and reused sources are not independent corroboration. Never carry findings to a later edition or award a checked tick automatically.",
-  "checkedAt": "2026-10-05",
+  "checkedAt": "2026-10-06",
   "publishers": [
     {
       "id": "miclu",
@@ -169,8 +169,7 @@
           "editionId": "9b83d14f78c579f0",
           "textSha": "f655950677f6e622d91d3dc9fe927349dac3392a8b725f862124b8efb19eabb9",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -213,8 +212,7 @@
           "editionId": "01643b820407e787",
           "textSha": "17be204ed59591518fd81a62358f31d9d6c37a1b76a94cdce82041c4292ef07c",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -260,8 +258,7 @@
           "editionId": "c39473fb6f849cac",
           "textSha": "7207b613c42ca4e7b694f354a457b35634bd926ce47bd13b1c2ff6cea7abf659",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -305,8 +302,7 @@
           "editionId": "01395d2a657117ef",
           "textSha": "d20bec1d6b3dd78674f25f4466e48c32f9b406f85b8782a95cbcbaacf06fc6a9",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -402,8 +398,7 @@
           "editionId": "af0659e900d6f59e",
           "textSha": "3c0a9d23c4135cfb578b2cc980e7cb7b8c956b37cc9dae0cc720d4c0c9459438",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -438,7 +433,32 @@
       "relatedUrls": [
         "https://www.ecoi.net/en/file/local/2043601/ARC-Foundation_Commentary-on-Iraq-CPINs-Baathists-FGM-Blood-Feuds_Dec-2020-.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "iraq",
+          "series": "note:athists-ba",
+          "editionId": "7255e2ebdef321d1",
+          "textSha": "9c9e9aec06ce5f19e0630ff92f0539309ad09712b32fe96a1881b5803d048d7c",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:female-fgm-genital-mutilation",
+          "editionId": "fa1a43b06aa7fe56",
+          "textSha": "fc3cbaffd6bbcf0908e0e88587ce3d5d4cf803d7d1b3f3c037a50b25c71bee06",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:blood-feuds",
+          "editionId": "f0943bc3d647ddaa",
+          "textSha": "aa0675afb21ded4d0d3e16905b1e8bd6445e39545e27e6226294ce732d5e8db8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "publishers": [
         "Asylum Research Centre (ARC)"
       ]
@@ -580,8 +600,7 @@
           "editionId": "046811771a498d79",
           "textSha": "89874f635286a178e496f5425077f2d8b964070b0923720c7a19814dc702bf71",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "reviewedEdition": {
@@ -653,8 +672,7 @@
           "editionId": "9b83d14f78c579f0",
           "textSha": "f655950677f6e622d91d3dc9fe927349dac3392a8b725f862124b8efb19eabb9",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         },
         {
           "country": "albania",
@@ -662,8 +680,31 @@
           "editionId": "01395d2a657117ef",
           "textSha": "d20bec1d6b3dd78674f25f4466e48c32f9b406f85b8782a95cbcbaacf06fc6a9",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "pakistan",
+          "series": "note:actors-protection",
+          "editionId": "ca4a799b3973028b",
+          "textSha": "b4d027556b5f40c26e23ddf6f5f3573c63c038ce0a6762482893fafa18cb41cf",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "pakistan",
+          "series": "note:affiliation-parties-political",
+          "editionId": "43d1cd0e1e18232d",
+          "textSha": "4ae3f7b92e3381d25d3be2be87a5a79f85f37e90d77c5b9f6e48d401292e43ec",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "pakistan",
+          "series": "note:internal-relocation",
+          "editionId": "3687f66433b9eeca",
+          "textSha": "25d39a1e46f67431e1f72d3eca02aa84c11657049505a7842fad757e2abd31d3",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
         }
       ],
       "verifiedSnapshotSha": "c23e1673d0fd2d9b1bfe9af38d4ee022dd5e1f5e002ae06c74db2bd1055ef08e",
@@ -697,12 +738,59 @@
       "targets": [
         {
           "country": "afghanistan",
+          "series": "note:children-unaccompanied",
+          "editionId": "18c115ec16481488",
+          "textSha": "e1588b74aa407727d65fb7c2d757c22130dc904011a8ddf89ad4361a97f81764",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "afghanistan",
           "series": "note:fear-taliban",
           "editionId": "a7c78fef364ac1e2",
           "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "afghanistan",
+          "series": "note:humanitarian-situation",
+          "editionId": "b0219d809d9422f0",
+          "textSha": "6c644f7441d73c492ff26e5d9dc140c7d669c3fe76fcef2b171938a7cf914df2",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "colombia",
+          "series": "note:internal-relocation",
+          "editionId": "887cdf8ab3396185",
+          "textSha": "e639eac51c0014c95cc0625f7f9deb49ffd6a5fe0a1acac52b98d0212bfb8f69",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "c4777bfda6c52e63",
+          "textSha": "2f64bc51c409d8f484d495128331a6b6fd9f6f8c00aaacf47cdc5c1e5ec90d89",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "ff49e1b1c39f2224",
+          "textSha": "551b35c1e3a55c4806f0e1d643006ac4676f36d07c9ac4c539ceb64591fd4742",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "colombia",
+          "series": "note:armed-criminal-gangs-groups",
+          "editionId": "587b4358545494d3",
+          "textSha": "a6dcc487095836c8dae7f0dd7223ad5f14321c39548759818db51433cbb25777",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
         }
       ],
       "verifiedSnapshotSha": "5b31cb0e0a741883a7439a588f3259e745ea6fec902a7a702e51ef9a245b73b4",
@@ -1001,7 +1089,56 @@
         "https://assets.publishing.service.gov.uk/media/686fd5702cfe301b5fb67a3c/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025___20_point_version_.pdf",
         "https://assets.publishing.service.gov.uk/media/6a217e42f56856fd11c0b039/Inspection_report_on_Home_Office_country_of_origin_information_on_Turkey_and_Vietnam__February_2025_.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "turkey",
+          "series": "note:military-service",
+          "editionId": "b2b94b4ac430f540",
+          "textSha": "b26bb2338978660ab61298e7c1c33df93fe1c1b9e3fe7fd1113a9571725da529",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "turkey",
+          "series": "note:pkk",
+          "editionId": "851a2fcc73b0e1ec",
+          "textSha": "6470bc57b75a6f38381587973780bdf20e65629058c36fb5b7945c6e152b4cc3",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "turkey",
+          "series": "note:kurds",
+          "editionId": "32a566e864ca6323",
+          "textSha": "e3a0a9b7614e48a727b999850138c553ec35349440d5f19893cb35e97a5131f8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "vietnam",
+          "series": "note:children-unaccompanied",
+          "editionId": "45199fbdd108e16f",
+          "textSha": "9acf12a2751533eb0b03451aedbea983a66194be357f7869a5d93116d1d9166d",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "vietnam",
+          "series": "note:trafficking",
+          "editionId": "3103273c976deac9",
+          "textSha": "cda2e3b4c1976308441bc36675c0aa49e99231ffc93a3b2981e9b9141c924d2e",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "vietnam",
+          "series": "note:fear-illegal-moneylenders",
+          "editionId": "52e74e6b99bf04ae",
+          "textSha": "dcb22522db01e3a8352f2b867e9e38f78d2e2f5a54eeec160185444c73f3f9e4",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "954cb21fb8812ec2ab860a4597b398a444186880609a9a7cfddf2464bb208bbc",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1063,7 +1200,24 @@
         "https://assets.publishing.service.gov.uk/media/6718afc138149ce9d09e3883/Inspection_report_on_Home_Office_country_of_origin_information_on_Georgia_July_2024_Accessible.pdf",
         "https://assets.publishing.service.gov.uk/media/6718b01438149ce9d09e3885/Inspection_report_on_Home_Office_country_of_origin_information_on_Georgia_July_2024__20pt.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "georgia",
+          "series": "note:affiliation-parties-political",
+          "editionId": "d7d228e51fb9dd83",
+          "textSha": "92c797b6c2e9498d19e109f383d4eb01325467e6965fa8b7300fde3525e9d32d",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "georgia",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "046811771a498d79",
+          "textSha": "89874f635286a178e496f5425077f2d8b964070b0923720c7a19814dc702bf71",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "50d40bd8a4d7d49b8cfc036cd56acdc2dbbb3fbd625ccc07b7aa4ce21809e4e0",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1179,7 +1333,24 @@
       "relatedUrls": [
         "https://assets.publishing.service.gov.uk/media/65e07b012f2b3b001c7cd773/Inspection_report_on_Home_Office_country_of_origin_information_-_Thematic_report_on_the_coverage_of_statelessness__February_2023.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "kuwait",
+          "series": "note:bidoons",
+          "editionId": "111db5f75320a877",
+          "textSha": "d751402fd90555e7ca770d212f6688cd1e797a667d815077ad731d60bdec779c",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "syria",
+          "series": "note:returnees",
+          "editionId": "1369d8644e345027",
+          "textSha": "063856eab51e5e534d2d6027d99eb19315586384dbfd502495d6bc5e6849b886",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "thematic",
       "verifiedSnapshotSha": "7fdb01317936fc32687a1b43c8773ba7ca3b351f624efe5b45f15aa7edd1a0ce",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1211,7 +1382,40 @@
         "https://assets.publishing.service.gov.uk/media/649d32fb06179b000c3f74d8/Inspection_report_on_Home_Office_country_of_origin_information__Iraq_and_Myanmar__Burma__January_2023.pdf",
         "https://assets.publishing.service.gov.uk/media/649d332d45b6a200123d44f9/Inspection_report_on_Home_Office_country_of_origin_information__Iraq_and_Myanmar__Burma__January_2023_20PT.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "iraq",
+          "series": "note:humanitarian-situation",
+          "editionId": "bc0819572784630e",
+          "textSha": "92d8e06418ef40c92123247c6216f69b7ee060a2aa5493cbb577a5f494eb5fa3",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:government-kri-kurdistan-opposition-region",
+          "editionId": "a4f07b4fe3130651",
+          "textSha": "347ac534c0cf6953ad8c82b6e1e7a9e60fb29e826347005ac462b23d5686e690",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:civil-documentation-internal-relocation-returns",
+          "editionId": "dda33bb0440013f9",
+          "textSha": "9db47383a417830d3ab851efe6b7e2d3e4ce5f92ac7a9915c25057d6c5d306b7",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "burma",
+          "series": "note:critics-military-regime",
+          "editionId": "bc7d30bed814da6c",
+          "textSha": "00405a0a6a69a8611793b0559a7cfa8baf4fa28cbae375db138d39d440019c01",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "45dbdd46924cf51580f2b082db85169c185131d1ef430d8b9aa22ab1e66bfadc",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1241,7 +1445,56 @@
       "relatedUrls": [
         "https://assets.publishing.service.gov.uk/media/634fa8698fa8f5346c39bb6e/Inspection_Report_on_Country_of_Origin_Information__Afghanistan_and_China_June_2022.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "afghanistan",
+          "series": "note:fear-taliban",
+          "editionId": "4edf63b96befb378",
+          "textSha": "f223254be49cc47deccbf9c85d3db959cfe75bcbbf13dad931ea56ab822f0226",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "afghanistan",
+          "series": "note:humanitarian-situation",
+          "editionId": "10ec7b046d19dd87",
+          "textSha": "62ff324d669980354aa6f37addaed9688841422aceea526c591a248a458a3ec5",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "afghanistan",
+          "series": "note:security-situation",
+          "editionId": "40fad59f9fe96d5f",
+          "textSha": "666db9a22e945e3d1910bcd63ace99fbe5c3e4da0853ebb0c3a7ee73fd7d2248",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "china",
+          "series": "note:hong-kong-protests",
+          "editionId": "93479c65e12f422b",
+          "textSha": "d1c75e928b604b23712d7cb94a4ef13defdda89dee2a39d898353acd8e63a8f5",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "china",
+          "series": "note:hong-kong-law-national-security",
+          "editionId": "237ba2a87f1d82ca",
+          "textSha": "c2a96be65fe4efbc1761fea69e70b30356655266b84d7f9c4df52c0a331d5004",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "china",
+          "series": "note:muslims-uyghurs-xinjiang",
+          "editionId": "af0659e900d6f59e",
+          "textSha": "3c0a9d23c4135cfb578b2cc980e7cb7b8c956b37cc9dae0cc720d4c0c9459438",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "20704732208501b0e4e44b426b429ecd627f571e8ea8e273b72d2d4ab7be9b3a",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1272,7 +1525,48 @@
       "relatedUrls": [
         "https://assets.publishing.service.gov.uk/media/62691502d3bf7f55cd2bf1fd/Inspection_Report_on_Country_of_Origin_Information__Ethiopia__Iran_and_Zimbabwe_January_2022.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "ethiopia",
+          "series": "note:government-opposition",
+          "editionId": "2309d95a30a7fd4d",
+          "textSha": "627ad38f8299233b1b20feb3ace32d16a45e6e0f2be909ca5323bf67feecf7a8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iran",
+          "series": "note:based-fearing-honour-violence-women",
+          "editionId": "ab116372f7d8763b",
+          "textSha": "63bea3b727a310e0bdaa9710f9136f97f7533669b0cc9d2c98fdab29ac107a1a",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iran",
+          "series": "note:early-forced-marriage-women",
+          "editionId": "73649b15cccf79e6",
+          "textSha": "6bf34e8b93817e5991fb00e9578f76453e21549faa1e908cb5eac2c6fc23a9ae",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "zimbabwe",
+          "series": "note:government-opposition",
+          "editionId": "54d5ac085a69a474",
+          "textSha": "0f5c9bdf72035c692bb3f411ec486af8e02bbe3fca0dd8cf61035bc7bbcd8563",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "zimbabwe",
+          "series": "note:healthcare-medical",
+          "editionId": "3c81f8bb5869b40d",
+          "textSha": "51067ef920a38ad01f9f9c244c1e31089956c2fc4c9a2b5f807411bcd25759ed",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "29207f82b4aa30f852bf67aa4c8800d92fbd55746ea7c9babf0a55f33ed5199a",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1302,7 +1596,16 @@
       "relatedUrls": [
         "https://assets.publishing.service.gov.uk/media/6033751bd3bf7f721b700f35/Inspection_Report_on_Country_of_Origin_Information_El_Salvador_and_Sudan_December_2020.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "el-salvador",
+          "series": "note:gangs",
+          "editionId": "4ec7361526e5fbec",
+          "textSha": "98622d0b5c320de9219429e7e03f809076b68964508b859fd6494b01415d057d",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "0d385206b4cea91300771f9fcc49a8042a5c1052635ff671bd9a875a35f27510",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -1722,7 +2025,24 @@
       "verificationLocation": "Raw PDF physical page 1 names January 2025 CIN v3.0; physical page 14 gives author and February 2025 date.",
       "workId": "miclu-albania-mental-health",
       "relatedUrls": [],
-      "targets": [],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "author": "Micah Anne Neale",
       "reviewedEdition": {
         "country": "albania",
@@ -1767,7 +2087,9 @@
       "summary": "Primary practitioner publication. Its evidence and precise edition applicability remain to be assessed.",
       "verificationLocation": "Raw PDF physical page 1 names authors and April 2025 publication date.",
       "workId": "miclu-trafficking-toolkit-2025",
-      "relatedUrls": [],
+      "relatedUrls": [
+        "https://miclu.org/assets/uploads/Albania-trafficking-and-organised-crime-paper-February-2025.pdf"
+      ],
       "targets": [],
       "author": "Claudia Neale and Micah Anne Neale",
       "publishers": [
@@ -1896,7 +2218,16 @@
       "verificationLocation": "MiCLU primary toolkit or references in the February 2023 blood-feud review; publication text to be checked.",
       "workId": "garden-court-blood-feuds-2020",
       "relatedUrls": [],
-      "targets": [],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:blood-feuds",
+          "editionId": "2495143820e08f93",
+          "textSha": "09d90389f95a070b0d3305a72834ee77592d2090329aa79b410b4528d703e8fe",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "publishers": [
         "Garden Court Chambers"
       ]
@@ -1957,8 +2288,7 @@
           "editionId": "272cfa5514dd72e6",
           "textSha": "937ed6e0aa3af8038c865b76bd31158746525aa2a72cf76997ad4cf88dbaff5a",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         },
         {
           "country": "afghanistan",
@@ -1966,8 +2296,7 @@
           "editionId": "a7c78fef364ac1e2",
           "textSha": "37c388b4f183b5ae13911578dcb8f2a6bc1f5263767870839072d21531f181e1",
           "scope": "whole-report",
-          "mapping": "edition-declaration-checked",
-          "citationFindingsMapped": false
+          "mapping": "edition-declaration-checked"
         }
       ],
       "applications": [
@@ -2207,7 +2536,16 @@
         "https://asylumresearchcentre.org/wp-content/uploads/2021/12/ARC-commentary_Sri-Lanka-CPIN-Religious-Minorities_December-2021.pdf",
         "https://www.ecoi.net/en/document/2065114.html"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "sri-lanka",
+          "series": "note:groups-minority-religious",
+          "editionId": "fc90355b95b66fed",
+          "textSha": "b5bd177f64f7e06a55196c83901f4d0ed3b07db8639aba658a144e1f4f842888",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "publishers": [
         "Asylum Research Centre (ARC)"
       ]
@@ -2220,17 +2558,18 @@
       "title": "ARC Foundation / UWE commentary on quantitative risk assessments in CPINs",
       "url": "https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf",
       "countries": [
-        "china",
-        "eritrea",
-        "pakistan"
+        "ghana",
+        "iraq",
+        "bangladesh",
+        "namibia"
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
       "publishedAt": "2021-11-12",
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
-      "summary": "Methodological and legal criticism of statistical risk reasoning. Examples include 2021 China, Eritrea and Pakistan CPINs; this is not a direct audit of every country or later edition.",
-      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "summary": "Cross-cutting quantitative risk commentary. These countries are examples declared on its cover; individual arguments and applicability require the full document.",
+      "verificationLocation": "Primary indexed PDF cover names Ghana SOGIE May 2020, Iraq SOGIE September 2021, Bangladesh women fearing gender-based violence June 2020 and Namibia women fearing gender-based violence September 2021. Full raw PDF remains inaccessible.",
       "workId": "arc-uwe-quantitative-risk-2021",
       "relatedUrls": [],
       "targets": [],
@@ -2255,10 +2594,28 @@
       "checkedAt": "2026-10-05",
       "assessment": "unassessed",
       "summary": "Review of the January 2020 fact-finding mission report, including source selection and presentation. This concerns a source product, not every Sri Lanka CPIN.",
-      "verificationLocation": "Primary publisher catalogue / publication checked 5 October 2026. Individual arguments require source comparison.",
+      "verificationLocation": "Original PDF physical pages 1–2 expressly name both products. Original text and independent Poppler agree. May 2020 CPIN v6.0 held edition identity checked; no association with later editions.",
       "workId": "arc-sri-lanka-ffm-2020",
-      "relatedUrls": [],
-      "targets": [],
+      "relatedUrls": [
+        "https://www.ecoi.net/en/file/local/2036163/ARC-Foundation-observations-on-HO-Sri-Lanka-FFM_July2020.pdf"
+      ],
+      "targets": [
+        {
+          "country": "sri-lanka",
+          "series": "note:separatism-tamil",
+          "editionId": "1ad495cdba0a2605",
+          "textSha": "66edc62e6849028430e9e051953d8b3ea4222f492b04e2307ee10ffd7b8c5c10",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
+      "reviewedProducts": [
+        "uk-ffm",
+        "uk-cpin"
+      ],
+      "reviewedEdition": {
+        "label": "January 2020 Sri Lanka FFM and May 2020 Tamil separatism CPIN v6.0"
+      },
       "publishers": [
         "Asylum Research Centre (ARC)"
       ]

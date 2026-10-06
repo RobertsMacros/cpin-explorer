@@ -23,7 +23,8 @@ test("later-edition follow-ups stay separate from external findings and citation
   assert.equal(applicationChecks([{...review,applications:{}}],target).length,0);
   const issuePanel=panelHtml(target, [], {countryReviews:[{...review,applications:[{...application,severity:"major",assessment:"supported"}]}]});
   assert.match(issuePanel,/sr-red/);
-  assert.match(issuePanel,/awaiting human review/);
+  assert.match(issuePanel,/AI review/);
+  assert.doesNotMatch(issuePanel,/awaiting human review/);
   const escaped = panelHtml(target, [], {countryReviews:[{...review,applications:[{...application,summary:'<script>bad</script>'}]}]});
   assert.ok(!escaped.includes('<script>bad</script>'));
 });
@@ -99,7 +100,7 @@ test("flag colour describes severity regardless of reviewer, with major findings
     assert.equal(reviewStatus([record(kind, status, { severity: "major" })]).tone, "red");
     assert.equal(reviewStatus([record(kind, status, { severity: "minor" })]).tone, "yellow");
   }
-  assert.match(reviewStatus([record("ai", "possible-issue", { severity: "major" })]).label, /awaiting human review/);
+  assert.match(reviewStatus([record("ai", "possible-issue", { severity: "major" })]).label, /AI review/);
   assert.equal(reviewStatus([record("external", "issue"), record("ai", "possible-issue", { severity: "major" })]).tone, "red");
   assert.deepEqual(reviewStatus([record("manual", "checked"), record("external", "issue", { severity: undefined })]),
     { tone: "grey", symbol: "⚑", label: "Issue recorded · severity not assigned" });

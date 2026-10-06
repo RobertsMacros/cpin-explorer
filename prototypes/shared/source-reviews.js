@@ -17,7 +17,7 @@ export function matches(record, target) {
 export function forTarget(records, target) { return records.filter((r) => matches(r, target)); }
 export function reportReviews(reviews, target) {
   // A report-level review provides context; it cannot assess every footnote.
-  return reviews.filter((r) => r.kind === "direct-review" && r.reviewedProduct === "uk-cpin"
+  return reviews.filter((r) => r.kind === "direct-review" && (r.reviewedProduct === "uk-cpin" || r.reviewedProducts?.includes("uk-cpin"))
     && r.targets?.some((t) => t.scope === "whole-report" && t.mapping === "edition-declaration-checked"
       && ["country", "series", "editionId", "textSha"].every((key) => t[key] && t[key] === target[key])));
 }
@@ -46,20 +46,20 @@ export function activeRecords(records) {
 }
 export function reviewStatus(records) {
   const active = activeRecords(records);
-  const issues = active.filter((r) => (["manual", "external"].includes(r.kind) && r.status === "issue")
+  const issues = active.filter((r) => (["manual", "external"].includes(r.kind) && ["issue", "criticism"].includes(r.status))
     || (r.kind === "ai" && r.status === "possible-issue"));
   for (const [severity, tone] of [["major", "red"], ["minor", "yellow"]]) {
     const finding = issues.find((r) => r.severity === severity);
     if (finding) {
-      const by = { ai: "AI finding · awaiting human review", external: "Published reviewer’s finding", manual: "Local reviewer’s finding" }[finding.kind];
-      return { tone, symbol: "⚑", label: `${severity === "major" ? "Major" : "Minor"} error · ${by}` };
+      const by = { ai: "AI review", external: "Published reviewer’s finding", manual: "Local reviewer’s finding" }[finding.kind];
+      return { tone, symbol: "⚑", label: `${severity === "major" ? "Major" : "Minor"} ${finding.status === "criticism" ? "concern" : "error"} · ${by}` };
     }
   }
   // Older private entries have no severity. Keep the issue visible without
   // inventing an impact assessment or allowing a checked tick to hide it.
   if (issues.length) return { tone: "grey", symbol: "⚑", label: "Issue recorded · severity not assigned" };
   if (active.some((r) => r.kind === "manual" && r.status === "checked" && r.author?.trim())) return { tone: "green", symbol: "✓", label: "Marked checked locally" };
-  return { tone: "grey", symbol: "○", label: active.some((r) => r.kind === "ai" && r.status === "no-issue") ? "AI found no issue · not human reviewed" : "No human review recorded" };
+  return { tone: "grey", symbol: "○", label: active.some((r) => r.kind === "ai" && r.status === "no-issue") ? "AI review · no issue found in this check" : active.length ? "Review context recorded" : "No review recorded" };
 }
 export function badgeHtml(records) {
   const s = reviewStatus(records);
@@ -104,7 +104,7 @@ export function createPrivateStore(getStorage = () => globalThis.localStorage) {
 }
 
 const link = (url, label) => httpUrl(url) ? `<a href="${esc(httpUrl(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>` : "";
-const date = (s) => { const d = new Date(s); return Number.isFinite(d.getTime()) ? d.toLocaleDateString("en-GB", { timeZone: "Europe/London" }) : "Date not recorded"; };
+const date = (s) => { const d = new Date(s); return Number.isFinite(d.getTime()) ? d.toLocaleDateString("en-GB", { timeZone: "Europe/London", ...(/^\d{4}-\d{2}$/.test(s) ? { month: "long", year: "numeric" } : {}) }) : "Date not recorded"; };
 function evidenceHtml(r) {
   if (r.kind === "manual" && r.excerpt) return `<div class="sr-evidence"><p class="field-label">Source passage · pasted by reviewer</p><blockquote>${esc(r.excerpt)}</blockquote>${link(r.target.sourceUrl, "Read full source")}</div>`;
   const e = r.evidence;
@@ -112,17 +112,36 @@ function evidenceHtml(r) {
   if (!e?.quote || e.publicDisplayApproved !== true || typeof e.rightsBasis !== "string" || !e.rightsBasis.trim() || !httpUrl(e.url)) return "";
   return `<div class="sr-evidence"><p class="field-label">${esc(e.title || "Source passage")}</p><blockquote>${esc(e.quote)}</blockquote><p>${esc([e.author, e.location].filter(Boolean).join(" · "))}</p>${link(e.url, "Read full source")}</div>`;
 }
-function recordHtml(r, previous = false) {
+export function recordHtml(r, previous = false) {
   const kind = { ai: "AI review", external: "Published review", manual: "Private human review · self-reported" }[r.kind] || "Review";
-  const impact = ["issue", "possible-issue"].includes(r.status) ? ({ major: " · Major error", minor: " · Minor error" }[r.severity] || " · Severity not assigned") : "";
+  const impact = ["issue", "possible-issue", "criticism"].includes(r.status) ? ({ major: " · Major", minor: " · Minor" }[r.severity] || " · Severity not assigned") + (r.status === "criticism" ? " concern" : " error") : "";
   return `<article class="sr-record"><p class="sr-meta">${esc(kind)}${impact}${previous ? " · previous entry" : ""}</p>
     <p>${esc(r.comment || r.summary || "")}</p>
-    ${r.kind === "external" ? '<p class="sr-meta">Reviewer’s finding · not independently assessed here.</p>' : ""}
+    ${r.kind === "external" ? '<p class="sr-meta">Attributed to the published reviewer; any AI assessment is separate.</p>' : ""}
+    ${r.status === "context" ? `<p class="sr-meta">${r.kind === "ai" ? "Scoped context comparison" : "Report-level context"} · no passage-level factual verdict.</p>` : ""}
     <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
     ${r.response ? `<p><strong>Home Office response:</strong> ${esc(r.response)}</p>` : ""}
     ${r.publication ? `<p>${link(r.publication.url, r.publication.title || "Read published review")}${r.publication.location ? ` · ${esc(r.publication.location)}` : ""}</p>` : ""}
     ${r.sourceCopyUrl ? `<p class="sr-meta">${link(r.sourceCopyUrl, "Source checked")}${r.sourceLocation ? ` · ${esc(r.sourceLocation)}` : ""}</p>` : ""}
     ${evidenceHtml(r)}</article>`;
+}
+export function reportPanelHtml(target, records, reviews, { unavailable = false, loading = false, passage = false } = {}) {
+  const exact = reportReviews(reviews, target), background = backgroundReviews(reviews, target);
+  const directory = (rs) => rs.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p class="sr-meta">${esc((r.publishers || []).join(" / "))} · ${esc(r.publishedAt || "Date not recorded")}${r.reviewedEdition?.label ? " · " + esc(r.reviewedEdition.label) : ""}</p>${r.summary ? `<p>${esc(r.summary)}</p>` : ""}${(r.relatedUrls || []).map((u) => link(u, "Related publication / response")).join(" · ")}</article>`).join("");
+  return `<div class="source-reviews sr-report-panel">
+    <p class="sr-scope">${passage ? "This passage in this exact edition only." : "This exact edition only."} Published criticism and AI assessment are separate; neither is a verdict on the whole report.</p>
+    ${loading ? '<p role="status">Loading reviews…</p>' : ""}${unavailable ? '<p role="status">Some review records could not be loaded.</p>' : ""}
+    <section class="sr-review-group" data-review-kind="external"><h3>Published reviews</h3>
+      ${records.filter((r) => r.kind === "external").map((r) => recordHtml(r)).join("")}
+      ${exact.length ? `<details open><summary>Reviews of this edition (${exact.length})</summary>${directory(exact)}</details>` : passage ? "" : '<p class="sr-meta">No whole-report review mapped to this edition.</p>'}
+      ${background.length ? `<details><summary>Other country reviews (${background.length})</summary><p class="sr-meta">Different editions or contextual publications; applicability to this edition is not established.</p>${directory(background)}</details>` : ""}
+    </section>
+    <section class="sr-review-group" data-review-kind="ai"><h3>AI review</h3>
+      ${records.filter((r) => r.kind === "ai").map((r) => recordHtml(r)).join("") || `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
+      ${applicationChecks(reviews, target).map((r) => recordHtml({ ...r, summary: r.summary, publication: r.publication || { url: r.reviewUrl, title: r.reviewTitle } })).join("")}
+    </section>
+    <section class="sr-review-group" data-review-kind="manual"><h3>Manual additions</h3><p class="sr-meta">Independent human notes can be added in a footnote overlay and are kept in this browser. They are optional and do not approve or replace AI findings.</p></section>
+  </div>`;
 }
 export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], countryReviews = [], matchingCopies = [], directoryUnavailable = false } = {}) {
   const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
@@ -158,7 +177,7 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
       ${publicUnavailable ? '<p class="sr-meta">AI review records could not be loaded.</p>' : ""}
       ${ai.length ? ai.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No AI review recorded for this citation.</p>' : ""}
       ${followups.length ? `<details class="sr-review-followups"><summary>Published-review follow-up for this edition (${followups.length})</summary>
-        <p class="sr-meta">Scoped AI comparisons with published reviews. These do not check every citation or provide human sign-off.</p>
+        <p class="sr-meta">Scoped AI comparisons with published reviews. These do not check every citation.</p>
         ${followups.map((a) => `<article class="sr-record"><p class="sr-meta">${["major", "minor"].includes(a.severity) ? badgeHtml([{kind:"ai",status:"possible-issue",severity:a.severity}]) + " " : ""}${esc(a.assessment)} · ${esc(a.scope)}</p>
           <p><strong>Published criticism:</strong> ${esc(a.reviewFinding)}</p>
           ${a.response ? `<p><strong>Home Office response:</strong> ${esc(a.response)}</p>` : ""}

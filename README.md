@@ -23,6 +23,24 @@ It has three parts:
 
 ## Status
 
+**6 October 2026: edition-scoped published and AI review integration.**
+The reader now has an edition Reviews panel and small markers on precisely
+matched paragraphs, footnotes and bibliography links. Published reviewers' own
+short quotations and report/page links are separate from AI assessments and
+optional browser-local human notes. Human approval is not a publication gate.
+The new public dataset contains **50 records: eight attributed excerpts, 32
+scoped AI context comparisons and ten narrow minor AI findings**. Context checks
+are not full factual approvals. The 12 earlier public records remain separate.
+
+The bounded publisher search recovered ARC's July 2020 Sri Lanka review from an
+ecoi.net mirror and corrected its CPIN scope. The 60-publication directory retains
+two full-file retrieval gaps and two unheld Rwanda editions; it is not an
+exhaustive inventory of every review. Historical criticism never transfers merely
+because a country or report title matches. Canonical CPIN bodies are unchanged.
+**400 Python and 344 JavaScript tests pass** before reconciling the latest daily
+sync. Publication and final merged verification are recorded in
+[the integration record](docs/reviews/2026-10-06-review-integration.md).
+
 **6 October 2026: bounded AI queue review and further parser repairs.**
 All **2,267 distinct v2 questions** have private dispositions: 64 direct
 comparisons, 257 wording/identity comparisons and 1,946 metadata/ellipsis triage

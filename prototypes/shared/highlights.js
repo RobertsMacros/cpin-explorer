@@ -161,7 +161,7 @@ export function makeSelector(text, start, end, n = CONTEXT_CHARS) {
 // Tags this site adds inside a note's text: link status, changed-link chips, badges, pictures from the PDF.
 // They are not the note's words. The reader's text index leaves them out, they cannot be selected
 // (reader.css), and nothing shown, copied or exported as a quote ever carries them.
-export const SITE_TAGS = ["linkstatus", "lc", "badge", "pdf-fig"];
+export const SITE_TAGS = ["linkstatus", "lc", "badge", "pdf-fig", "review-marker"];
 
 // A highlight is anchored in the text of the body with nothing between its text nodes, so two lines of
 // a table cell ("1890<br>447") or two cells with no white space between their tags run together there

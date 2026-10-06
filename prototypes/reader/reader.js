@@ -26,6 +26,7 @@ import {
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
 import * as Reviews from "../shared/source-reviews.js";
+import * as Annotations from "../shared/review-annotations.js";
 import { analyseBody, describePassage, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
 import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
 import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
@@ -126,7 +127,7 @@ const S = {
   marks: new Map(), checks: new Map(), pending: null, lastCopy: null, ready: false,
   linkMap: null, links: null, fullSha: new Map(), sums: [], sizes: [],
   cur: -1, hunks: new Map(),
-  reviewRecords: [], reviewDirectory: [], sourceCopies: [], directoryUnavailable: false, reviewsLoading: true, reviewsUnavailable: false,
+  reviewRecords: [], annotations: [], reviewLocations: new Map(), reviewDirectory: [], sourceCopies: [], directoryUnavailable: false, reviewsLoading: true, reviewsUnavailable: false,
 };
 const privateReviews = Reviews.createPrivateStore();
 let readyResolve;
@@ -229,8 +230,13 @@ async function boot() {
   }).catch(() => { S.directoryUnavailable = true; }), fetchJson("../reviews/source-copies.json").then((data) => {
     if (data.schema !== 1 || !Array.isArray(data.copies)) throw new Error("Unrecognised source copies");
     S.sourceCopies = data.copies;
-  }).catch(() => {})]).finally(() => {
+  }).catch(() => {}), fetchJson("../reviews/annotations.json").then((data) => {
+    if (data.schema !== 1 || !Array.isArray(data.records)) throw new Error("Unrecognised passage reviews");
+    S.annotations = data.records.filter((r) => ["ai", "external"].includes(r?.kind));
+  }).catch(() => { S.reviewsUnavailable = true; })]).finally(() => {
     S.reviewsLoading = false;
+    decorateReviews();
+    if (S.ready) updateHead();
     if (popState?.kind === "fn") openFootnote(popState.n, popState.anchor, popState.prefix);
   });
   let seriesP = SERIES ? fetchJson(seriesPath(COUNTRY, SERIES)) : null;
@@ -356,6 +362,7 @@ function renderHead() {
             <button type="button" class="chip" id="sourcesChip" data-hpop="sources" aria-expanded="false" aria-controls="hpop" hidden></button>
             <button type="button" class="chip" id="pdfChip" data-hpop="pdf" aria-expanded="false" aria-controls="hpop" hidden></button>
             <button type="button" class="chip" id="verbatimChip" data-hpop="verbatim" aria-expanded="false" aria-controls="hpop">Verbatim</button>
+            <button type="button" class="chip" id="reviewsChip" aria-haspopup="dialog" aria-expanded="false" aria-controls="pop" hidden>Reviews</button>
             <div class="hpop" id="hpop" role="dialog" aria-label="About the edition shown" hidden></div>
           </div>
         </div>
@@ -447,6 +454,13 @@ function updateHead() {
   if ($("#verbatimChip").textContent !== (how.pdf ? "From the PDF" : "Verbatim")) $("#verbatimChip").textContent = how.pdf ? "From the PDF" : "Verbatim";
   showPdfChip(v);
   showSourcesChip();
+  const reviewsChip = $("#reviewsChip");
+  const t = reviewEdition();
+  const reviewCount = Annotations.editionRecords([...S.reviewRecords, ...S.annotations], t).length;
+  const countryCount = S.reviewDirectory.filter((r) => r.countries?.includes(COUNTRY)).length;
+  reviewsChip.hidden = !reviewCount && !countryCount && !S.reviewsLoading && !S.reviewsUnavailable && !S.directoryUnavailable;
+  reviewsChip.textContent = S.reviewsLoading ? "Reviews…" : `Reviews${reviewCount ? ` · ${reviewCount}` : ""}`;
+  reviewsChip.onclick = () => openReportReviews(reviewsChip);
   if (hpopKind) renderHeadPop();
 }
 
@@ -1097,6 +1111,7 @@ function mountClean() {
   fullSha(S.E[S.C.e]);
   placeAllIfFresh();
   decorateView();
+  decorateReviews();
   afterShow();
 }
 /** Everything that follows the text shown: contents, rail, head, bar, notes, find, address. */
@@ -2147,7 +2162,7 @@ document.addEventListener("pointerdown", (e) => {
   tap = null;
   if (e.pointerType === "mouse") hideTool();
   else if (toolOpen() && e.isPrimary && e.timeStamp - lastScroll > 250) tap = { el: e.target.closest("a[href], mark.hl"), x: e.clientX, y: e.clientY, t: e.timeStamp };
-  if (popState && !$("#pop").contains(e.target) && !e.target.closest("mark.hl, .saved-open, sup a")) closePop();
+  if (popState && !$("#pop").contains(e.target) && !e.target.closest("mark.hl, .saved-open, sup a, .review-marker, #reviewsChip")) closePop();
 });
 document.addEventListener("pointerup", (e) => {
   pointerIsDown = false;
@@ -2335,12 +2350,19 @@ function showPop(html, anchorRect, opts) {
   pop.hidden = false;
   placePop(anchorRect, opts);
   if (wasHidden) { pop.classList.remove("is-in"); void pop.offsetWidth; pop.classList.add("is-in"); }
+  if (popState?.kind === "reviews") {
+    $("#reviewsChip").setAttribute("aria-expanded", String(popState.anchor === $("#reviewsChip")));
+    pop.querySelector('[data-act="close"]')?.focus({ preventScroll: true });
+  }
 }
 function closePop() {
   if (!popState) return;
+  const reviewAnchor = popState.kind === "reviews" ? popState.anchor : null;
   document.querySelectorAll("mark.hl.is-hot, .saved-item.is-hot").forEach((m) => m.classList.remove("is-hot"));
   popState = null;
   pop.hidden = true;
+  $("#reviewsChip")?.setAttribute("aria-expanded", "false");
+  reviewAnchor?.focus({ preventScroll: true });
 }
 
 function statusHtml(rec) {
@@ -2435,6 +2457,7 @@ pop.addEventListener("click", (e) => {
   if (!b) return;
   const act = b.dataset.act;
   if (act === "close") return closePop();
+  if (act === "edition-reviews") return openReportReviews($("#reviewsChip"));
   if (popState?.kind === "fn") {
     const n = popState.n;
     if (act === "goto-fn") { const prefix = popState.prefix; closePop(); return goToFootnote(n, prefix); }
@@ -2467,6 +2490,26 @@ function deleteHighlight(id) {
 }
 
 /* --- footnotes ----------------------------------------------------------------------------- */
+function reviewEdition() {
+  const E = S.E[shownEdition()];
+  return { country: COUNTRY, series: SERIES, editionId: E?.id, textSha: E?.v.text_sha256 };
+}
+function decorateReviews() {
+  if (!S.C || S.V?.kind !== "clean") return;
+  S.reviewLocations = Annotations.decorateAnnotations(S.C.root, S.C.A, reviewEdition(), [...S.reviewRecords, ...S.annotations]);
+  S.C.ix.dirty = true;
+}
+function openReportReviews(anchor) {
+  const target = reviewEdition(), records = Annotations.editionRecords([...S.reviewRecords, ...S.annotations], target);
+  popState = { kind: "reviews", anchor };
+  showPop(`<div class="pop-head"><span class="tag tag--outline">Edition reviews</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div><div class="pop-body">${Reviews.reportPanelHtml(target, records, S.reviewDirectory, { loading: S.reviewsLoading, unavailable: S.reviewsUnavailable || S.directoryUnavailable })}</div>`, anchor.getBoundingClientRect());
+}
+function openPassageReviews(anchor) {
+  const ids = new Set(anchor.dataset.reviewIds.split(" "));
+  const records = Annotations.editionRecords([...S.reviewRecords, ...S.annotations], reviewEdition()).filter((r) => ids.has(r.id));
+  popState = { kind: "reviews", anchor };
+  showPop(`<div class="pop-head"><span class="tag tag--outline">Passage reviews</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div><div class="pop-body">${Reviews.reportPanelHtml(reviewEdition(), records, [], { passage: true })}<button type="button" class="btn" data-act="edition-reviews">All edition reviews</button></div>`, anchor.getBoundingClientRect());
+}
 function openFootnote(n, anchor, prefix = "") {
   const f = S.C?.A.fns.get(n);
   if (!f || S.V.kind !== "clean") return goToFootnote(n, prefix);
@@ -2478,6 +2521,8 @@ function openFootnote(n, anchor, prefix = "") {
   template.innerHTML = f.html;
   const urls = [...new Set([...template.content.querySelectorAll("a[href]")].map((a) => Reviews.httpUrl(a.getAttribute("href"))).filter(Boolean))];
   const records = [...S.reviewRecords, ...privateReviews.load()];
+  const annotations = Annotations.editionRecords(S.annotations, reviewEdition()).filter((r) => (S.reviewLocations.get(r.id) || [])
+    .some((c) => c.type === "footnote" && (c.el === anchor || c.el.contains(anchor))));
   const targets = (urls.length ? urls : [""]).map((sourceUrl) => ({ country: COUNTRY, series: SERIES, editionId: edition.id,
     textSha: edition.v.text_sha256, footnote: n, paragraph: context.para || "", section: context.section || "", sourceUrl }));
   popState = { kind: "fn", n, anchor, prefix, targets };
@@ -2485,18 +2530,18 @@ function openFootnote(n, anchor, prefix = "") {
   template.innerHTML = footnoteHtml;
   for (const a of template.content.querySelectorAll("a[href]")) {
     const target = targets.find((t) => t.sourceUrl === Reviews.httpUrl(a.getAttribute("href")));
-    if (target) a.insertAdjacentHTML("afterend", Reviews.badgeHtml(Reviews.forTarget(records, target)));
+    if (target) a.insertAdjacentHTML("afterend", Reviews.badgeHtml([...Reviews.forTarget(records, target), ...annotations.filter((r) => Annotations.anchorsFor(r, reviewEdition()).some((x) => !x.sourceUrl || x.sourceUrl.split("#")[0] === target.sourceUrl.split("#")[0]))]));
   }
-  const panels = targets.map((target, i) => Reviews.panelHtml(target, Reviews.forTarget(records, target),
+  const panels = targets.map((target, i) => Reviews.panelHtml(target, [...Reviews.forTarget(records, target), ...(i === 0 ? annotations : [])],
     { publicUnavailable: S.reviewsUnavailable, publicLoading: S.reviewsLoading,
-      editionReviews: i === 0 ? Reviews.reportReviews(S.reviewDirectory, target) : [],
-      countryReviews: i === 0 ? Reviews.backgroundReviews(S.reviewDirectory, target) : [],
+      editionReviews: [], countryReviews: [],
       matchingCopies: Reviews.sourceCopies(S.sourceCopies, target),
       directoryUnavailable: i === 0 && S.directoryUnavailable })).join("");
   showPop(`
     <div class="pop-head"><span class="tag tag--outline">Footnote ${n}</span><button type="button" class="pop-x" data-act="close" aria-label="Close">×</button></div>
     <div class="pop-body"><div class="pop-fn">${template.innerHTML}</div>
       <div class="source-reviews"><p class="eyebrow">Reviews &amp; evidence</p>${panels}</div>
+      <button type="button" class="btn" data-act="edition-reviews">All edition reviews</button>
       <div class="pop-actions"><button type="button" class="btn" data-act="goto-fn">Go to footnote ↓</button><button type="button" class="btn" data-act="copy-fn">${ICON.copy}Copy source</button></div></div>`,
   anchor.getBoundingClientRect());
 }
@@ -2531,6 +2576,8 @@ function goToFootnote(n, prefix = "") {
 
 /* --- clicks in the text -------------------------------------------------------------------- */
 $("#doc").addEventListener("click", (e) => {
+  const reviewMarker = e.target.closest(".review-marker");
+  if (reviewMarker) { e.preventDefault(); openPassageReviews(reviewMarker); return; }
   const ref = e.target.closest('a[role="doc-noteref"], sup a.footnote');
   if (ref) {
     e.preventDefault();
