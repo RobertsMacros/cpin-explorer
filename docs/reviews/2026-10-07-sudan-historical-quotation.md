@@ -75,3 +75,8 @@ resizing closes the overlay: it now reopens footnote 17 at 390px and requires
 the AI card to be visible before measuring it. The final screenshot shows the
 open panel and no horizontal overflow. This corrected a verification gap, not
 a product defect. A 390px engine test is not a physical iPhone check.
+
+Scope correction from Robert: the original highlighting and ordinary-link
+overlay complaint concerns **Edge on Windows**. All Edge checks in this report
+ran on macOS. They do not establish a Windows fix; the Windows test remains
+outstanding. Mac lock/authentication is separate from Windows access.

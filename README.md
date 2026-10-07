@@ -28,6 +28,11 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: browser scope corrected.**
+The reported highlighting/link-overlay issue is Edge on Windows. The Mac Edge
+checks recorded below are useful macOS evidence only; Windows remains untested.
+See the current scope in [the handover](docs/HANDOVER.md).
+
 **7 October 2026: historical Sudan quotation recovered.**
 The last withheld private finding now has two digest-verified 2020 copies of
 the exact cited Dabanga article. Both say El Berdab; the December 2020 CPIN PDF
