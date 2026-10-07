@@ -29,16 +29,18 @@ code and standalone mark assets; other component credits remain separate.
 ## Status
 
 **7 October 2026: human feedback on AI assessments.**
-Approve/disagree controls and optional notes are prepared across all 98 visible
+Approve/disagree controls and optional notes are live across all 98 visible
 AI assessments, including legacy citation records and later-edition applications.
 Feedback uses approved accounts and exact AI-record hashes. Disagreement queues
 an evidence recheck and a ranked pool of unconfirmed peers; original human
 reviews/replies and AI records remain intact. Public counts are separate from
 notes shared with the owner and Codex process. Rechecks run in normal authorised
 Codex sessions; no paid endpoint or background schedule was added. Local checks
-pass 360 JavaScript tests, 91 real workerd/D1 checks and 20 desktop/mobile browser
-checks. The additive production D1 migration and read-only operator queue export
-are verified; public UI deployment is still pending at this dated preparation.
+pass 360 JavaScript tests, 91 real workerd/D1 checks and 22 desktop/mobile browser
+checks; GitHub also passes all 415 Python tests. Main `c769522` deployed through
+run `37622024402`, Worker `0ed29218-475e-4c25-9c81-ae47aa751884`.
+The additive production D1 migration, 33 live checks and read-only operator queue
+export are verified. The queue is empty; no genuine feedback has yet been rechecked.
 See [feedback behaviour, processing and limits](docs/review-feedback.md).
 
 **7 October 2026: publication and evidence follow-up.**

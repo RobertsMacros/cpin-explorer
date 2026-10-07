@@ -21,7 +21,14 @@ Supported corrections require source evidence and an explicit failure pattern.
 Do not modify canonical bodies or overwrite reviewer text. Keep original AI
 records/results as history; changes to published findings need validation.
 No new paid inference or background schedule is enabled. Production D1 migration
-0003 has been applied; deployment and live checks are recorded after publication.
+0003 is applied. Main `c769522` is live through successful GitHub run `37622024402`,
+Worker `0ed29218-475e-4c25-9c81-ae47aa751884`. Checks pass 415 Python, 360 JavaScript,
+91 disposable workerd/D1, 22 local browser and 33 live checks. All 98 live feedback
+identities match, notes remain non-public, and the operator export has zero tasks.
+Actual approved-user mutation and AI-result flows used synthetic local accounts;
+no production fixture votes were submitted. Native Edge/iPhone and genuine owner
+administration remain separate. Recheck results require an actual evidence-led
+Codex session: a submitted disagreement is queued, not automatically analysed.
 
 ## Source evidence follow-up, 7 October 2026
 

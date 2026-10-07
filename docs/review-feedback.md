@@ -92,5 +92,32 @@ Migration procedure follows [Cloudflare's migration documentation](https://devel
 
 Local runtime and browser checks use disposable synthetic accounts/D1. They do
 not establish sustained use, genuine owner administration, native Edge/iPhone
-behaviour or an unattended AI service. Publication and live checks are recorded
-below after deployment.
+behaviour or an unattended AI service.
+
+## Verified release, 7 October 2026
+
+- Main `c769522f1653f5cd3d862acb26aa9b7438ef082d` deployed successfully through
+  [GitHub run 37622024402](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37622024402).
+  Worker version: `0ed29218-475e-4c25-9c81-ae47aa751884`.
+- The additive production migration applied successfully. A read-only operator
+  export after deployment found zero active recheck tasks. No real submission
+  has been analysed, and no synthetic votes or results were written in production.
+- GitHub passed 415 Python tests, 360 JavaScript tests and 91 real workerd/D1
+  checks. The 22 local browser checks used disposable identities and exercised
+  approve → reload → disagree with note → owner queue → separate AI/peer result
+  → clear feedback, plus service failure and note-privacy behaviour.
+- The 33 live checks covered nine matching assets, all 98 record hashes and
+  anonymous views, report/footnote/later-edition overlays, a 390px viewport,
+  configured account state, rejected anonymous queue reads/writes and two private
+  evidence paths returning 404. No runtime page errors were observed. The three
+  original published review files remain unchanged.
+- Playwright used installed Chrome because the Browser plugin/skill was absent.
+  The first live-check script mistakenly waited for a test-only hook on an
+  ordinary URL, then used a footnote-text selector that missed GOV.UK's markup.
+  Both helper errors were corrected; no site repair was required. The final
+  script checks ordinary rendered text and the exact footnote anchor.
+- Private journals are retained in
+  `data/source-evidence/review-feedback/validation-2026-10-07/`. Screenshots are
+  outside the repository in the calling task's `review-feedback` visualisation
+  folder. Native Edge/physical iPhone, a genuine owner's administration and
+  sustained operation remain unverified. No scheduled AI processor was added.
