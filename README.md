@@ -25,9 +25,10 @@ It has three parts:
 
 **7 October 2026: optional approved accounts activation.**
 Password pages, individual owner approval and private account saves have been
-reconciled with the latest published reviews. Production storage is configured;
-publication and live verification are in progress. The owner must register their
-own password before operator promotion. Read [the implementation and activation record](docs/accounts.md).
+reconciled with the latest published reviews and deployed to `cpin-explorer.co.uk`.
+GitHub checks and live signup/saving checks passed; the test account was removed.
+The owner must register their own password before operator promotion. Read
+[the implementation and activation record](docs/accounts.md).
 
 
 **6 October 2026: edition-scoped published and AI review integration.**

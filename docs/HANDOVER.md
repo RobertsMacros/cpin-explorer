@@ -3,6 +3,26 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Approved accounts activated, 7 October 2026
+
+The owner authorised activation. Main `732562c` is live through GitHub Actions run
+`37580925378`, Cloudflare version `80461c7a-f324-420b-919e-c41c826e860f`. Dedicated D1
+account storage and the private authentication secret are configured; the real
+GitHub deployment retained both. Latest reader/review work is intact, with all
+529 public records and 16 checked live assets matching. Local and GitHub checks
+pass 413 Python, 355 JavaScript and 56 real workerd/D1 checks.
+
+Live signup, pending status and private pin/highlight/manual-note saving passed
+with browser saving declined, including a separate fresh mobile browser session.
+The temporary test account and its records were removed. Every main page footer
+credits COBE by Shu Ding. Reading remains public and all new accounts are pending.
+Robert must register his own password and confirm registration before operator
+owner promotion; the chosen address is retained privately in this account
+worktree’s ignored `.local/activation-owner.json`, never inferred from the
+bug-report email or automatically trusted because someone registers it. Do not
+ask for his password in chat or overwrite authentication tables manually. Read
+[the activation record](accounts.md) before further account work.
+
 ## Overnight reviews and hardened rerun, 6 October 2026
 
 The owner requested overnight progress. Read [the active checkpoint](reviews/2026-10-06-overnight-review.md) before starting work. The v3 full mechanical run is complete: 116,125 screened, zero pending/errors, 7,949 candidate blocks and 2,223 distinct questions (43 direct / 245 aligned / 1,935 metadata). Do not rerun or treat these as confirmed errors. The public whitelist has 529 records, including 433 newly prepared licensed comments and two new major scoped AI findings. The Myanmar original is recovered; one ARC/UWE full-file gap remains. Code 827ddeb is live with 413 Python/346 JavaScript checks passing on GitHub. Three live review assets match the build; private evidence paths return 404. The completion heartbeat is paused and the private plan is updated.
