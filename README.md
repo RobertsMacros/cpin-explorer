@@ -29,7 +29,7 @@ code and standalone mark assets; other component credits remain separate.
 ## Status
 
 **7 October 2026: further historical source evidence.**
-A further 19 scoped comparisons are resolved: 49 of the original 54, with five
+A further 20 scoped comparisons are resolved: 50 of the original 54, with four
 still open. The original Colombia Diversa executive summary is recovered and
 supports the existing police-violence motive finding. One separate AI evidence
 update preserves all 562 earlier records; there are now 563 records and 99 visible

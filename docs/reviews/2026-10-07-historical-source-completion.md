@@ -1,7 +1,7 @@
 # Further historical evidence and operational checks, 7 October 2026
 
-- Revisited all 24 remaining questions. **19 more scoped comparisons resolved;
-  49 of the original 54 are now resolved, with five still open.** No new factual
+- Revisited all 24 remaining questions. **20 more scoped comparisons resolved;
+  50 of the original 54 are now resolved, with four still open.** No new factual
   error group is established by this pass. Historical quotation matches do not
   approve the underlying country facts or current accuracy.
 - Verified archived payloads explain the Brazil 7.1 million quotation, J-PAL's
@@ -32,6 +32,11 @@ named leaders and locations appear. The CPIN repairs malformed grammar and omits
 a connector. That literal quotation alteration does not demonstrate a personnel
 or role contradiction; no new factual flag is published.
 
+Two digest-verified Commons captures, dated July and November 2024, both use
+“are”; the CPIN quotation uses “were”. This is an unmarked tense alteration,
+recorded with the mixed July introduction and November footnote references. It
+does not demonstrate a territorial-control error, and no factual flag is added.
+
 Still open:
 
 - Nigeria THE ranking: the recovered February 2024 page concerns the 2023
@@ -39,10 +44,8 @@ Still open:
 - India IPS salary: the recovered 2025-title pages do not match indexed payload
   digests. Neither salary reliability nor the separately cited exchange rates
   is settled by a rolling title.
-- Pakistan Grindr VPN guide: historical index requests returned 503; no historical
+- Pakistan Grindr VPN guide: historical index requests returned 503 or timed out; no historical
   title/ban finding is established.
-- Ukraine Commons briefing: no July 2024 capture returned; the wider date-window
-  request failed. The CPIN says July while its footnote names November 2024.
 - China Minghui: no successful pre-publication capture returned. The title says
   23 and the retained body 25; both use lower bounds. Historical quotation fidelity
   remains unresolved, not a demonstrated contradiction.
@@ -53,6 +56,17 @@ Still open:
   iPhone Mirroring is locked; user unlock is pending. Genuine scheduled publication
   needs a real changed-content run, rather than artificial data changes.
 
+The original evidence update is live in [GitHub deployment 37628567718](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37628567718),
+Cloudflare version `0bc8c198-fdee-4ace-b095-4545ac32b103`. Its CI passed 415
+Python tests, 360 JavaScript tests and 91 checks in workerd with ephemeral D1.
+Twenty-four anonymous live checks verified catalogue byte equality, all 99 AI
+feedback fingerprints, both exact Colombia editions and private-journal exclusion.
+A later visual check found internal panel overflow from long evidence hashes. The
+reader CSS now lets review content shrink and wrap; proposed-CSS checks at 390px
+and 1440px show no panel or internal overflow. Live verification of that small
+repair is recorded separately after deployment. No synthetic production vote
+was submitted.
+
 Four annotation/provenance/preservation tests and 25 relevant JavaScript tests
 passed; the static build passed (7,904 files, 454 MB). Retrieval failures,
 nonmatching digests and the truncated July Colombia copy are retained as evidence
@@ -62,5 +76,5 @@ scripts and device evidence are retained in
 `data/source-evidence/goal-completion-2026-10-07/` and excluded from publication.
 
 The [Project coordination roadmap](https://chatgpt.com/space/page_39c39136789481918c7686224105a5c7)
-remains the current plan. This pass does not mark the five questions, wider source
+remains the current plan. This pass does not mark the four questions, wider source
 context or device/scheduled-publication requirements complete.

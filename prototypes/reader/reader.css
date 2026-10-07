@@ -340,7 +340,7 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .pop-actions .btn-del:hover { color: var(--ink); border-color: var(--line-strong); }
 .pop-fn { display: grid; gap: .55rem; }
 .pop-fn p { margin: 0; }
-.source-reviews { border-top: 1px solid var(--line); padding-top: .65rem; }
+.source-reviews { min-width: 0; overflow-wrap: anywhere; border-top: 1px solid var(--line); padding-top: .65rem; }
 .source-review-badge { display: inline-flex; align-items: baseline; justify-content: center; min-width: 1em; margin-inline-start: .35rem; font-family: var(--font-mono); font-size: 1rem; line-height: 1; }
 .review-marker { display: inline-flex; vertical-align: baseline; align-items: center; justify-content: center; width: 1.6rem; height: 1.6rem; margin-inline-start: .2rem; padding: 0; border: 0; background: transparent; cursor: pointer; font-family: var(--font-mono); font-size: 1rem; line-height: 1; user-select: none; }
 .review-marker::before { content: attr(data-symbol); }
