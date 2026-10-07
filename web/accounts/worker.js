@@ -38,7 +38,7 @@ async function signedIn(auth, req, db) {
   const session = await auth.api.getSession({ headers: req.headers });
   if (!session?.user?.id) fail("Sign in to continue.", 401);
   // Always re-read approval; neither a cached user nor an old session grants access.
-  const user = await db.prepare('SELECT id, name, email, role, approved FROM "user" WHERE id = ?').bind(session.user.id).first();
+  const user = await db.prepare('SELECT u.id, u.name, u.email, u.role, u.approved, p.first_name AS firstName FROM "user" u LEFT JOIN account_profiles p ON p.user_id=u.id WHERE u.id = ?').bind(session.user.id).first();
   if (!user) fail("Sign in to continue.", 401);
   return { user: { ...user, approved: !!user.approved }, session: session.session };
 }
@@ -103,6 +103,15 @@ export default {
         return reply(await feedbackRead(db, (url.searchParams.get("ids") || "").split(",").filter(Boolean), reader));
       }
       const identity = await signedIn(auth, req, db); const { user } = identity;
+      if (path === "/api/account/profile" && req.method === "PUT") {
+        const data = await body(req);
+        if (Object.keys(data).some(key => key !== "firstName") || typeof data.firstName !== "string") fail("Use a first name.", 400);
+        const firstName = data.firstName.trim();
+        if (!firstName || firstName.length > 80 || /[\u0000-\u001f\u007f]/.test(firstName)) fail("Use a first name of 1 to 80 characters.", 400);
+        await db.prepare(`INSERT INTO account_profiles (user_id, first_name) VALUES (?, ?)
+          ON CONFLICT(user_id) DO UPDATE SET first_name=excluded.first_name`).bind(user.id, firstName).run();
+        return reply({ user: { ...user, firstName } });
+      }
       const feedbackPath = path.match(/^\/api\/review-feedback\/([\w.-]{1,180})$/);
       if (feedbackPath && req.method === "PUT") return reply(await feedbackWrite(db, user, feedbackPath[1], await body(req)));
       if (path === "/api/saved" && req.method === "GET") {

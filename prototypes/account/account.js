@@ -1,5 +1,6 @@
 import { api, accountReady, accountStore, SAVED_KEYS } from "../shared/account-state.js";
 import { escHtml as esc } from "../shared/citation.js";
+import { firstName } from "../shared/account-profile.js";
 import { pinId } from "../shared/pins.js";
 import { reviewTargets } from "../shared/review-feedback-core.js";
 const root=document.querySelector("#accountContent"), params=new URLSearchParams(location.search);
@@ -12,8 +13,9 @@ function download(){if(!accountStore.state.loaded)throw new Error("Account saves
 function render(){
   const s=accountStore.state;
   if(s.user && view!=="reset" && view!=="password") {
-    root.innerHTML=`<p class="eyebrow">Your account</p><h1>${s.user.approved ? "Saved with you" : "Awaiting approval"}</h1><div class="account-card"><p><b>${esc(s.user.name)}</b><br>${esc(s.user.email)}</p>
+    root.innerHTML=`<p class="eyebrow">Your account</p><h1>${firstName(s.user) ? `Hello ${esc(firstName(s.user))}` : "Your account"}</h1><div class="account-card"><p><b>${esc(s.user.name)}</b><br>${esc(s.user.email)}</p>
       <p>${s.user.approved ? "Your highlights, pinned countries and reports, and private review notes are saved to your account. They follow you when you sign in on another device." : "Your account request is pending. The owner must approve access before you can save to this account. You can continue reading without login."}</p>
+      <details class="profile-settings"><summary>Change first name</summary><form id="profileForm" class="account-form"><label for="firstName">First name<input id="firstName" name="firstName" autocomplete="given-name" value="${esc(firstName(s.user))}" required maxlength="80"></label><button type="submit" class="btn">Save first name</button><p class="account-message" role="status" id="profileMessage"></p></form></details>
       <p id="savingStatus">${s.user.approved ? `Saving status: <b>${esc(s.status)}</b>. ${esc(s.error)}` : ""}</p><div class="account-actions">
       ${s.user.approved ? '<a class="btn btn--primary" href="../saved/">Open Saved</a><button class="btn" data-action="import">Copy browser saves to account</button><button class="btn" data-action="download">Download account saves</button><button class="btn" data-action="retry">Retry saving</button><a class="btn" href="?view=password">Change password</a>' : ""}
       <button class="btn" data-action="signout">Sign out</button></div>
@@ -44,12 +46,32 @@ function render(){
       if(forgot){const r=await api("/api/password-help",{email:data.email});message(r.message);}
       else if(reset){if(!resetToken)throw new Error("This reset link is missing or expired. Request a new link.");await api("/api/auth/reset-password",{newPassword:data.password,token:resetToken});resetToken="";location.replace("?view=login");}
       else if(change){await api("/api/auth/change-password",{currentPassword:data.currentPassword,newPassword:data.password,revokeOtherSessions:true});form.reset();message("Password changed. Other sessions have been signed out.");}
-      else {await api(signup ? "/api/auth/sign-up/email" : "/api/auth/sign-in/email",{email:data.email,password:data.password,...(signup ? {name:data.name} : {})});location.replace(location.pathname);}
+      else {
+        await api(signup ? "/api/auth/sign-up/email" : "/api/auth/sign-in/email",{email:data.email,password:data.password,...(signup ? {name:data.name} : {})});
+        await accountStore.initialise();
+        if(accountStore.state.status==="unavailable") throw new Error(signup
+          ? "Your account request was created, but we could not load your account. Open Sign in and try again."
+          : "Sign-in succeeded, but we could not load your account. Reload this page and try again.");
+        if(!accountStore.state.user) throw new Error(signup
+          ? "Your account request was created, but this browser did not retain the sign-in session. Allow essential cookies, then sign in."
+          : "This browser did not retain the sign-in session. Allow essential cookies, then try again.");
+        view="account";history.replaceState(null,"",location.pathname);render();
+      }
     } catch(error){message(view==="login" && [400,401].includes(error.status) ? "Email or password is incorrect." : error.message,true);}
     finally{button.disabled=false;}
   });
 }
 function bind(){
+  root.querySelector("#profileForm")?.addEventListener("submit",async e=>{
+    e.preventDefault();const form=e.currentTarget,button=form.querySelector('[type="submit"]'),status=form.querySelector('#profileMessage');
+    button.disabled=true;status.textContent="Saving…";
+    try {
+      const result=await api("/api/account/profile",{firstName:new FormData(form).get("firstName")},"PUT");
+      accountStore.state.user=result.user;
+      root.querySelector("h1").textContent=`Hello ${firstName(result.user)}`;
+      form.elements.firstName.value=firstName(result.user);status.textContent="First name saved.";
+    }catch(error){status.textContent=error.message;}finally{button.disabled=false;}
+  });
   root.querySelectorAll("[data-reveal]").forEach(b=>b.addEventListener("click",()=>{const input=root.querySelector(`input[name="${b.dataset.reveal}"]`),show=input.type==="password";input.type=show ? "text" : "password";b.textContent=show ? "Hide" : "Show";b.setAttribute("aria-pressed",String(show));b.setAttribute("aria-label",`${show ? "Hide" : "Show"} password`);}));
   root.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("click",async()=>{
     b.disabled=true;

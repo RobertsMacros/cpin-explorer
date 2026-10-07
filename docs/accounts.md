@@ -26,6 +26,28 @@ Saving status and failures are visible. Concurrent changes use revision checks a
 
 The owner cannot read another user's private saved passages through the approval interface. Private reviews remain self-reported and edition-bound; account approval is not approval of their findings.
 
+## Account greeting and sign-in repair, 7 October 2026
+
+Robert confirmed his own registration; the chosen existing account was promoted
+through the operator-only path, with exact production role/approval readback.
+He then confirmed that Account approvals appears after sign-in. No password was
+handled by the agent, and no synthetic production accounts remain.
+
+The account header now has its own layout and omits the duplicate account link.
+Successful signup/sign-in confirms the session and renders the account view;
+missing cookies or failed account loads produce an explicit message. The account
+page suggests a first-name greeting from the registered name, with an editable
+first name retained in a separate private D1 profile table (migration 0004).
+Changing it cannot change approval, ownership or another account's profile.
+
+Checks: 362 JavaScript tests and 99 disposable workerd/D1 checks pass, including
+first-name validation, account isolation and persistence in another session.
+Rendered header checks cover 390, 441 and 1280 pixels in light/dark themes.
+The fixture names reported in signup were browser autofill, not shipped defaults
+or the registered profile. Browser security policy prevents the agent opening
+saved-autofill settings, so removal of those browser entries remains user work.
+Native Edge/iPhone and genuine cross-device private saving are separate checks.
+
 ## Passwords and reset links
 
 `web/accounts/auth.js` uses **Better Auth 1.7.7**, pinned in the lockfile, with its native D1 adapter, database sessions and rate limiter. Its installed licence is MIT. Passwords use its native asynchronous Node crypto scrypt; no custom password or session cryptography was added.

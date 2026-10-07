@@ -17,6 +17,28 @@ publication evidence: run `37680895495` and Worker `563caedd-1f09-491e-8210-f84a
 passed 21 live checks, with all 16 original draft groups now published. Preserve all
 human reviews, Home Office responses and earlier AI assessments.
 
+## Account greeting and sign-in repair, 7 October 2026
+
+Robert confirmed his own registration; the chosen existing account was promoted
+through the operator-only path, with exact production role/approval readback.
+He then confirmed that Account approvals appears after sign-in. No password was
+handled by the agent, and no synthetic production accounts remain.
+
+The account header now has its own layout and omits the duplicate account link.
+Successful signup/sign-in confirms the session and renders the account view;
+missing cookies or failed account loads produce an explicit message. The account
+page suggests a first-name greeting from the registered name, with an editable
+first name retained in a separate private D1 profile table (migration 0004).
+Changing it cannot change approval, ownership or another account's profile.
+
+Checks: 362 JavaScript tests and 99 disposable workerd/D1 checks pass, including
+first-name validation, account isolation and persistence in another session.
+Rendered header checks cover 390, 441 and 1280 pixels in light/dark themes.
+The fixture names reported in signup were browser autofill, not shipped defaults
+or the registered profile. Browser security policy prevents the agent opening
+saved-autofill settings, so removal of those browser entries remains user work.
+Native Edge/iPhone and genuine cross-device private saving are separate checks.
+
 ## Human feedback on AI reviews, 7 October 2026
 
 Read [the feedback workflow](review-feedback.md). All 98 visible AI summaries
@@ -88,7 +110,7 @@ Live signup, pending status and private pin/highlight/manual-note saving passed
 with browser saving declined, including a separate fresh mobile browser session.
 The temporary test account and its records were removed. Every main page footer
 credits COBE by Shu Ding. Reading remains public and all new accounts are pending.
-Robert must register his own password and confirm registration before operator
+Robert has registered and confirmed working owner sign-in following guarded operator
 owner promotion; the chosen address is retained privately in this account
 worktree’s ignored `.local/activation-owner.json`, never inferred from the
 bug-report email or automatically trusted because someone registers it. Do not

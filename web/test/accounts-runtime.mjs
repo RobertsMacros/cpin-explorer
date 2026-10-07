@@ -22,7 +22,7 @@ try {
   const environment=await runtime.getWorker().getEnv();
   assert.equal(environment.AUTH_ORIGIN,origin);
   const db=environment.ACCOUNTS;
-  for(const name of ['0001_accounts.sql','0002_saved_items.sql','0003_review_feedback.sql']) {
+  for(const name of ['0001_accounts.sql','0002_saved_items.sql','0003_review_feedback.sql','0004_account_profiles.sql']) {
     const sql=await readFile(new URL('../migrations/'+name,import.meta.url),'utf8');
     for(const statement of sql.replace(/^--.*$/gm,'').split(';').filter(s=>s.trim())) await db.prepare(statement).run();
   }
@@ -52,6 +52,12 @@ try {
   const signin=async(email,pass=password)=>call('/api/auth/sign-in/email',{email,password:pass});
   const a=await signin('alice@example.test');ok(a.status===200,'approved login');
   for(const attribute of ['HttpOnly','Secure','SameSite=Lax'])ok(a.headers.get('set-cookie').includes(attribute),attribute+' cookie');
+  ok((await call('/api/account/profile',{firstName:'Someone'},'','PUT')).status===401,'anonymous profile update blocked');
+  ok((await call('/api/account/profile',{firstName:'',role:'owner'},a.cookie,'PUT')).status===400,'profile cannot mutate privileges');
+  for(const firstName of ['', 'x'.repeat(81), 'Bad\nName']) ok((await call('/api/account/profile',{firstName},a.cookie,'PUT')).status===400,'invalid first name rejected');
+  ok((await call('/api/account/profile',{firstName:'  Alice-Marie  '},a.cookie,'PUT')).body.user.firstName==='Alice-Marie','first name saved and trimmed');
+  ok((await call('/api/account',undefined,(await signin('alice@example.test')).cookie)).body.user.firstName==='Alice-Marie','first name persists in another session');
+  ok((await call('/api/account',undefined,bob.cookie)).body.user.firstName===null,'profile belongs only to its account');
   const item={id:'h1',country:'syria',note:'fixture-note',quote:'Exact fixture words',editionSha:'a'.repeat(64)};
   const path='/api/saved/highlights/h1';
   let r=await call(path,{value:item,revision:0},a.cookie,'PUT');ok(r.status===200&&r.body.revision===1,'first save');

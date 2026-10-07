@@ -10,6 +10,6 @@ function show(){
   status.replaceChildren(document.createTextNode(labels[s.status]||""));
   if(!status.hidden){const a=document.createElement("a");a.href=link.href;a.textContent="View account";status.append(a);}
 }
-function mount(){const header=document.querySelector("header.top");if(header){header.insertBefore(link,header.querySelector(".theme-btn"));document.body.append(status);}show();}
+function mount(){const header=document.querySelector("header.top");if(header){if(!header.hasAttribute("data-account-page"))header.insertBefore(link,header.querySelector(".theme-btn"));document.body.append(status);}show();}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mount,{once:true});else mount();
 addEventListener("cpin-account-change",show);void accountReady.then(show);
