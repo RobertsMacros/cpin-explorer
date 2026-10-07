@@ -1,11 +1,35 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
-import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, panelHtml, recordHtml, reportPanelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
+import { activeRecords, applicationChecks, backgroundReviews, badgeHtml, createPrivateStore, forTarget, httpUrl, linkedReviewAssessments, panelHtml, recordHtml, reportPanelHtml, reportReviews, reviewStatus, sourceCopies } from "../../prototypes/shared/source-reviews.js";
 
 const target = { country: "afghanistan", series: "note:fear-taliban", editionId: "a7c78fef364ac1e2", textSha: "a".repeat(64), footnote: 279,
   paragraph: "16.2.6", section: "Returnees", sourceUrl: "https://example.org/report#page=3" };
 const record = (kind, status, changes = {}) => ({ target: { ...target }, kind, status, severity: "minor", author: "A Reviewer", comment: "Checked the scope of this claim.", ...changes });
+
+test("human criticism stays above its Home Office reply and separate AI assessment", () => {
+  const original = record("external", "criticism", {id:"published", comment:"Unchanged human criticism",
+    response:"Accepted published reply", publication:{url:"https://example.org/review",title:"Full review"},
+    evidence:{quote:"Original reviewer quotation",url:"https://example.org/review",publicDisplayApproved:true,rightsBasis:"Permitted"}});
+  const ai = record("ai", "context", {id:"followup",reviewOf:["published"],comment:"Disputed AI assessment"});
+  const before = JSON.stringify([original,ai]);
+  for (const render of [rs => reportPanelHtml(target,rs,[]),rs => panelHtml(target,rs)]) {
+    const panel = render([original,ai]);
+    assert.ok(panel.indexOf("Original reviewer quotation") < panel.indexOf("Accepted published reply"));
+    assert.ok(panel.indexOf("Accepted published reply") < panel.indexOf("Disputed AI assessment"));
+    assert.equal(panel.split("Disputed AI assessment").length-1,1);
+    assert.match(panel,/data-review-kind="home-office"/);
+    assert.match(panel,/AI assessment of this review/);
+    assert.doesNotMatch(panel,/No AI review recorded/);
+  }
+  assert.equal(JSON.stringify([original,ai]),before);
+  for (const key of ["country","series","editionId","textSha"]) {
+    const wrong=record("ai","context",{reviewOf:["published"],target:{...target,[key]:"changed"}});
+    assert.equal(linkedReviewAssessments([original,wrong],target).linked.size,0);
+  }
+  assert.equal(linkedReviewAssessments([ai],target).linked.size,0);
+  assert.equal(linkedReviewAssessments([original,record("manual","note",{reviewOf:["published"]})],target).linked.size,0);
+});
 
 test("edition AI empty state accounts for directory assessments and unavailable records", () => {
   const review = { applications: [{ kind: "ai", target: { ...target }, summary: "Scoped directory assessment" }] };

@@ -1,6 +1,7 @@
 """Public annotations retain exact held-edition identity and concrete locators."""
 import json
 import re
+import hashlib
 from pathlib import Path
 from lxml import html
 from cpin.fingerprint import text_sha256
@@ -8,6 +9,26 @@ from cpin.export import build_dashboard
 from cpin.store import Store
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def test_published_reviews_are_preserved_and_ai_followups_are_separate():
+    records = json.loads((ROOT / 'prototypes/reviews/annotations.json').read_text())['records']
+    by_id = {r['id']: r for r in records}
+    baseline = json.loads((ROOT / 'config/published-review-preservation.json').read_text())['records']
+    for record_id, digest in baseline.items():
+        record = by_id[record_id]
+        assert record['kind'] == 'external'
+        actual = hashlib.sha256(json.dumps(record, sort_keys=True, separators=(',', ':'),
+                                          ensure_ascii=False).encode()).hexdigest()
+        assert actual == digest, f'Published reviewer entry changed: {record_id}'
+    for record in records:
+        for record_id in record.get('reviewOf', []):
+            assert record['kind'] == 'ai'
+            original = by_id[record_id]
+            assert original['kind'] == 'external'
+            for target in record['targets']:
+                assert any(all(target[k] == t[k] for k in ('country', 'series', 'editionId', 'textSha'))
+                           for t in original['targets'])
 
 
 def normalise(value):

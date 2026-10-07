@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-10-06",
+  "checkedAt": "2026-10-07",
   "records": [
     {
       "id": "context-b9d040e0958d7518372d",
@@ -21048,6 +21048,216 @@
           "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86"
         }
       ]
+    },
+    {
+      "id": "ai-review-albania-2025-free-medicines",
+      "kind": "ai",
+      "status": "issue",
+      "summary": "New source evidence checked on 7 October updates the earlier 6 October evidence-gap assessment below. The January 2025 CIN says medicines on the reimbursable list are available free of charge. The exact 2024 List II linked in paragraph 6.1.1 instead includes a patient-price column (Çmimi i Pacientit): Fluoxetine Vir 20 mg has reference price 9.79, patient price 1.96 and reimbursement 7.83; Faverin 100 mg has patient price 4.67. Original table cells and independent Poppler text agree. This supports the reviewer’s objection to the blanket free-of-charge wording. It does not establish that every patient pays: exempt categories, eligibility and treatment protocols can affect the individual cost. The 2024 document was retrieved now; historical byte identity is not established.",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.2"
+      ],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        }
+      ],
+      "scope": "This identified reviewer argument and exact January 2025 bodies only.",
+      "publication": {
+        "title": "Analysis of the Home Office CIN on mental health in Albania",
+        "url": "https://miclu.org/assets/uploads/Analysis-of-the-Home-Office-CIN-on-Mental-Health-version-3.pdf#page=9",
+        "location": "PDF physical page 9"
+      },
+      "responseSearch": "No specific published Home Office response found in the MiCLU toolkit, curated IAGCI directory or bounded GOV.UK/publisher search checked 7 October 2026. This is a search limit, not proof that no response exists.",
+      "evidenceLinks": [
+        {
+          "title": "Cited 2024 List II · patient-price headings on page 1; psychiatric medicines on pages 20–21",
+          "url": "https://www.fsdksh.gov.al/wp-content/uploads/2019/10/LBR-2024-LISTA-2-me-kufizime-23082024-R.pdf#page=21"
+        },
+        {
+          "title": "Cited Decision 491 of 24 July 2024 · scanned original",
+          "url": "https://fsdksh.gov.al/wp-content/uploads/2019/10/VKM-Nr.491-Dt-24.07.2024-LBR.pdf"
+        }
+      ],
+      "severity": "major"
+    },
+    {
+      "id": "ai-review-albania-2025-patient-costs",
+      "kind": "ai",
+      "status": "context",
+      "summary": "New source evidence checked on 7 October updates the earlier 6 October evidence-gap assessment below. The recovered Gabrani study supports a concern about out-of-pocket costs, but does not alone establish a direct contradiction of the WHO mental-health profile. Its December 2018 survey covers adults with several chronic conditions in Fier and Diber; the analysed group comprised 898 people who had consulted a provider in the preceding eight weeks. Table 2 distinguishes paying for all drugs (38%), at least one drug (49%) and receiving all drugs free (13%). Those mixed-condition results cannot be treated as a national percentage for mental-health patients or for the particular listed medicines. The reviewer’s criticism remains intact; the mental-health subgroup, WHO reporting basis and exemptions need further comparison. The reviewer cites Figure 1 for a proportion above 75%; that figure is a box plot of medicine expenditure by condition, and does not directly show the percentage paying for medication or consultations.",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.1"
+      ],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        }
+      ],
+      "scope": "This identified reviewer argument and exact January 2025 bodies only.",
+      "publication": {
+        "title": "Analysis of the Home Office CIN on mental health in Albania",
+        "url": "https://miclu.org/assets/uploads/Analysis-of-the-Home-Office-CIN-on-Mental-Health-version-3.pdf#page=9",
+        "location": "PDF physical page 9"
+      },
+      "responseSearch": "No specific published Home Office response found in the MiCLU toolkit, curated IAGCI directory or bounded GOV.UK/publisher search checked 7 October 2026. This is a search limit, not proof that no response exists.",
+      "evidenceLinks": [
+        {
+          "title": "Original Gabrani study · methods and Table 2, published August 2022",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272221"
+        }
+      ]
+    },
+    {
+      "id": "published-comment-colombia-2025-un-report-attribution",
+      "kind": "external",
+      "status": "context",
+      "collapsible": true,
+      "summary": "PDF page 127 · Proposed attribution of High Commissioner reports to the UN Verification Mission",
+      "author": "Robert Karl (personal capacity)",
+      "organisation": "IAGCI / Independent Chief Inspector of Borders and Immigration",
+      "publishedAt": "2026-06-02",
+      "publication": {
+        "title": "IAGCI review of Afghanistan and Colombia (December 2025)",
+        "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=127",
+        "location": "Physical PDF page 127"
+      },
+      "evidence": {
+        "quote": "be attributed to the UN Verification Mission in Colombia, for clarity.",
+        "url": "https://assets.publishing.service.gov.uk/media/6a2016cedbcb60fc6ccb29b0/Inspection_report_on_Home_Office_country_of_origin_information_on_Afghanistan_and_Colombia__December_2025_.pdf#page=127",
+        "title": "Reviewer’s words · extract",
+        "publicDisplayApproved": true,
+        "rightsBasis": "Crown copyright, Open Government Licence v3.0; original licence on physical PDF page 4; nested third-party quotations excluded."
+      },
+      "response": "Accepted. We will standardise the citations of the UN Verification Commission reports when we update the CPINs as a result of this review, and these will be attributed to the UN Verification Mission in Colombia.",
+      "responseIsExcerpt": true,
+      "targets": [
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "c4777bfda6c52e63",
+          "textSha": "2f64bc51c409d8f484d495128331a6b6fd9f6f8c00aaacf47cdc5c1e5ec90d89"
+        },
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "ff49e1b1c39f2224",
+          "textSha": "551b35c1e3a55c4806f0e1d643006ac4676f36d07c9ac4c539ceb64591fd4742"
+        }
+      ],
+      "scope": "Reviewer recommendation and published response; the quoted report title and other nested third-party wording are excluded from this excerpt."
+    },
+    {
+      "id": "ai-review-colombia-2025-un-report-attribution",
+      "kind": "ai",
+      "status": "context",
+      "summary": "The proposed reattribution is disputed by the original report cover. A/HRC/55/23, dated 12 July 2024, explicitly identifies the report as that of the United Nations High Commissioner for Human Rights. It is not a report of the UN Verification Mission. The January 2025 CIN already distinguishes the OHCHR human-rights report from the Verification Mission’s separate March 2024 report. The Home Office’s acceptance above does not resolve this institutional distinction. This comparison concerns the identified 2024 report only, rather than every UN report or the wider protection assessment. The official-document URL was unavailable to collection; an ecoi.net mirror of the original UN document was checked, without claiming byte identity with an unavailable official download.",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "reviewOf": [
+        "published-comment-colombia-2025-un-report-attribution"
+      ],
+      "targets": [
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "c4777bfda6c52e63",
+          "textSha": "2f64bc51c409d8f484d495128331a6b6fd9f6f8c00aaacf47cdc5c1e5ec90d89"
+        },
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "ff49e1b1c39f2224",
+          "textSha": "551b35c1e3a55c4806f0e1d643006ac4676f36d07c9ac4c539ceb64591fd4742"
+        }
+      ],
+      "scope": "Separate AI assessment of the reviewer recommendation and Home Office response.",
+      "sourceCopyUrl": "https://www.ecoi.net/en/file/local/2115963/g2402454.pdf#page=1",
+      "sourceLocation": "Original UN document A/HRC/55/23 · physical page 1 · cover, date and institutional attribution checked with Poppler.",
+      "evidenceLinks": [
+        {
+          "title": "UN catalogue · A/HRC/55/23 bibliographic author and date",
+          "url": "https://digitallibrary.un.org/record/4063228?ln=en"
+        }
+      ]
+    },
+    {
+      "id": "ai-albania-children-2025-duplicate-and",
+      "kind": "ai",
+      "status": "issue",
+      "severity": "minor",
+      "summary": "Paragraph 13.5.5 duplicates “and” inside its quotation (“and and administered”). The cited original study has a single “and” on physical page 82 (printed page 69), confirmed visually and by independent Poppler text. This is a minor transcription typo; the administrative attribution and substantive claim are not changed.",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:children-unaccompanied",
+          "editionId": "2a5cc2ab512e525c",
+          "textSha": "732fafd93a538a5c9379fdf0c5be94ba6c754520fec3651eb96a24aa85945206",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "13.5.5",
+              "quote": "13.5.5 A 2020 report on social services in Albania noted there were 3 state-run residential homes for children without parental care in the Municipality of Shko"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.taskproject.eu/wp-content/uploads/2020/12/WP1.2_BookSS.pdf#page=82",
+      "sourceLocation": "Original source physical page 82 / printed page 69; paragraph on the home for children aged 16–18."
     }
   ]
 }

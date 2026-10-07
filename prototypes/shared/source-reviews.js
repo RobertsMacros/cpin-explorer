@@ -114,7 +114,7 @@ function evidenceHtml(r) {
   if (!e?.quote || e.publicDisplayApproved !== true || typeof e.rightsBasis !== "string" || !e.rightsBasis.trim() || !httpUrl(e.url)) return "";
   return `<div class="sr-evidence"><p class="field-label">${esc(e.title || "Source passage")}</p><blockquote>${esc(e.quote)}</blockquote><p>${esc([e.author, e.location].filter(Boolean).join(" · "))}</p>${link(e.url, "Read full source")}</div>`;
 }
-export function recordHtml(r, previous = false) {
+export function recordHtml(r, previous = false, followups = []) {
   const kind = { ai: "AI review", external: "Published review", manual: "Private human review · self-reported" }[r.kind] || "Review";
   const impact = ["issue", "possible-issue", "criticism"].includes(r.status) ? ({ major: " · Major", minor: " · Minor" }[r.severity] || " · Severity not assigned") + (r.status === "criticism" ? " concern" : " error") : "";
   const body = `<p class="sr-meta">${esc(kind)}${impact}${previous ? " · previous entry" : ""}</p>
@@ -123,29 +123,51 @@ export function recordHtml(r, previous = false) {
     ${r.status === "context" ? `<p class="sr-meta">${r.kind === "ai" ? "Scoped context comparison" : "Attributed review context"} · no independent factual verdict.</p>` : ""}
     ${r.summaryDetail ? `<p>${esc(r.summaryDetail)}</p>` : ""}
     <p class="sr-meta">${esc([r.author, r.organisation, date(r.reviewedAt || r.publishedAt)].filter(Boolean).join(" · "))}</p>
-    ${r.response ? `<p><strong>Home Office response${r.responseIsExcerpt ? " · extract" : ""}:</strong> ${esc(r.response)}</p>` : ""}
     ${r.publication ? `<p>${link(r.publication.url, r.publication.title || "Read published review")}${r.publication.location ? ` · ${esc(r.publication.location)}` : ""}</p>` : ""}
     ${r.sourceCopyUrl ? `<p class="sr-meta">${link(r.sourceCopyUrl, "Source checked")}${r.sourceLocation ? ` · ${esc(r.sourceLocation)}` : ""}</p>` : ""}
     ${Array.isArray(r.reviewPages) ? `<nav class="sr-page-links" aria-label="Pages in this review section">${r.reviewPages.map((p) => link(p.url, `Page ${p.page}`)).filter(Boolean).join(" · ")}</nav>` : ""}
-    ${evidenceHtml(r)}`;
+    ${evidenceHtml(r)}
+    ${r.response ? `<section class="sr-response" data-review-kind="home-office"><p><strong>Home Office response${r.responseIsExcerpt ? " · extract" : ""}</strong></p><p>${esc(r.response)}</p><p class="sr-meta">Published reply; this does not settle the reviewer's criticism.</p>${r.publication ? link(r.publication.url, "Read response in the published review") : ""}</section>` : ""}
+    ${followups.length ? `<section class="sr-review-followups" data-review-kind="ai"><p class="field-label">AI assessment of this review</p><p class="sr-meta">The published review above is retained unchanged.</p>${followups.map((a) => recordHtml(a)).join("")}</section>` : ""}
+    ${r.reviewOf?.length ? '<p class="sr-meta">Separate AI follow-up on the published review; it does not replace the reviewer’s words.</p>' : ""}
+    ${(r.evidenceLinks || []).length ? `<p>${r.evidenceLinks.map((e) => link(e.url, e.title || "Evidence")).join(" · ")}</p>` : ""}
+    ${r.responseSearch ? `<p class="sr-meta">${esc(r.responseSearch)}</p>` : ""}`;
   return r.collapsible === true ? `<details class="sr-record sr-comment"><summary>${esc(r.summary || "Published comment")}</summary>${body}</details>` : `<article class="sr-record">${body}</article>`;
+}
+export function linkedReviewAssessments(records, target) {
+  const keys = ["country", "series", "editionId", "textSha"];
+  const scoped = (r) => (r.targets || (r.target ? [r.target] : [])).some((t) =>
+    /^[a-f0-9]{16,64}$/.test(t.editionId || "") && /^[a-f0-9]{64}$/.test(t.textSha || "")
+    && keys.every((key) => t[key] && t[key] === target[key]));
+  const published = records.filter((r) => r.kind === "external" && scoped(r));
+  const byReview = new Map(published.map((r) => [r.id, []]));
+  const linked = new Set();
+  for (const r of records.filter((r) => r.kind === "ai" && scoped(r))) {
+    for (const id of Array.isArray(r.reviewOf) ? r.reviewOf : []) {
+      if (!byReview.has(id)) continue;
+      byReview.get(id).push(r); linked.add(r);
+    }
+  }
+  return { byReview, linked };
 }
 export function reportPanelHtml(target, records, reviews, { unavailable = false, loading = false, passage = false } = {}) {
   const exact = reportReviews(reviews, target), background = backgroundReviews(reviews, target);
-  const ai = records.filter((r) => r.kind === "ai"), followups = applicationChecks(reviews, target);
+  const { byReview, linked } = linkedReviewAssessments(records, target);
+  const ai = records.filter((r) => r.kind === "ai" && !linked.has(r)), followups = applicationChecks(reviews, target);
   const directory = (rs) => rs.map((r) => `<article class="sr-record"><p>${link(r.url, r.title)}</p><p class="sr-meta">${esc((r.publishers || []).join(" / "))} · ${esc(r.publishedAt || "Date not recorded")}${r.reviewedEdition?.label ? " · " + esc(r.reviewedEdition.label) : ""}</p>${r.summary ? `<p>${esc(r.summary)}</p>` : ""}${(r.relatedUrls || []).map((u) => link(u, "Related publication / response")).join(" · ")}</article>`).join("");
   return `<div class="source-reviews sr-report-panel">
     <p class="sr-scope">${passage ? "This passage in this exact edition only." : "This exact edition only."} Published criticism and AI assessment are separate; neither is a verdict on the whole report.</p>
     ${loading ? '<p role="status">Loading reviews…</p>' : ""}${unavailable ? '<p role="status">Some review records could not be loaded.</p>' : ""}
     <section class="sr-review-group" data-review-kind="external"><h3>Published reviews</h3>
-      ${records.filter((r) => r.kind === "external").map((r) => recordHtml(r)).join("")}
+      ${records.filter((r) => r.kind === "external").map((r) => recordHtml(r, false, byReview.get(r.id) || [])).join("")}
       ${exact.length ? `<details open><summary>Reviews of this edition (${exact.length})</summary>${directory(exact)}</details>` : passage ? "" : '<p class="sr-meta">No whole-report review mapped to this edition.</p>'}
       ${background.length ? `<details><summary>Other country reviews (${background.length})</summary><p class="sr-meta">Different editions or contextual publications; applicability to this edition is not established.</p>${directory(background)}</details>` : ""}
     </section>
     <section class="sr-review-group" data-review-kind="ai"><h3>AI review</h3>
       ${ai.map((r) => recordHtml(r)).join("")}
       ${followups.map((r) => recordHtml({ ...r, summary: r.summary, publication: r.publication || { url: r.reviewUrl, title: r.reviewTitle } })).join("")}
-      ${ai.length || followups.length || loading || unavailable ? "" : `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
+      ${linked.size ? '<p class="sr-meta">AI assessments of published reviews appear beneath the reviewer and any published Home Office response above.</p>' : ""}
+      ${ai.length || linked.size || followups.length || loading || unavailable ? "" : `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
     </section>
     <section class="sr-review-group" data-review-kind="manual"><h3>Manual additions</h3><p class="sr-meta">Independent human notes can be added in a footnote overlay and are kept ${accountStore.state.user?.approved ? "privately in your account" : "in this browser"}. They are optional and do not approve or replace AI findings.</p></section>
   </div>`;
@@ -153,7 +175,8 @@ export function reportPanelHtml(target, records, reviews, { unavailable = false,
 export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], countryReviews = [], matchingCopies = [], directoryUnavailable = false } = {}) {
   const active = activeRecords(records), old = records.filter((r) => r.kind === "manual" && !active.includes(r));
   const manual = active.find((r) => r.kind === "manual");
-  const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai");
+  const { byReview, linked } = linkedReviewAssessments(active, target);
+  const published = active.filter((r) => r.kind === "external"), ai = active.filter((r) => r.kind === "ai" && !linked.has(r));
   const followups = applicationChecks([...editionReviews, ...countryReviews], target);
   const states = { note: "Private note", checked: "Checked this citation", "minor-issue": "Minor error · yellow flag", "major-issue": "Major error · red flag" };
   const editorStatus = manual?.status === "issue" ? (manual.severity ? `${manual.severity}-issue` : "issue") : manual?.status;
@@ -166,7 +189,7 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
     <section class="sr-review-group" data-review-kind="external"><h3 class="sr-group-heading">Published reviews</h3>
       ${publicLoading ? '<p class="sr-meta">Loading published reviews…</p>' : ""}
       ${publicUnavailable ? '<p class="sr-meta">Published reviews could not be loaded.</p>' : ""}
-      ${published.length ? published.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No published review recorded for this citation.</p>' : ""}
+      ${published.length ? published.map((r) => recordHtml(r, false, byReview.get(r.id) || [])).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No published review recorded for this citation.</p>' : ""}
       ${directoryUnavailable ? '<p class="sr-meta">The published-review directory could not be loaded.</p>' : ""}
       ${editionReviews.length ? `<details class="sr-report-reviews"><summary>Reviews of this report edition (${editionReviews.length})</summary>
         <p class="sr-meta">These reviews concern the whole report. Their arguments have not been independently assessed here, or mapped to this citation.</p>
@@ -182,7 +205,9 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
     <section class="sr-review-group" data-review-kind="ai"><h3 class="sr-group-heading">AI review</h3>
       ${publicLoading ? '<p class="sr-meta">Loading AI review records…</p>' : ""}
       ${publicUnavailable ? '<p class="sr-meta">AI review records could not be loaded.</p>' : ""}
-      ${ai.length ? ai.map((r) => recordHtml(r)).join("") : !publicLoading && !publicUnavailable ? '<p class="sr-meta">No AI review recorded for this citation.</p>' : ""}
+      ${ai.map((r) => recordHtml(r)).join("")}
+      ${linked.size ? '<p class="sr-meta">AI assessments of published reviews appear beneath the reviewer and any published Home Office response above.</p>' : ""}
+      ${ai.length || linked.size || followups.length || publicLoading || publicUnavailable ? "" : '<p class="sr-meta">No AI review recorded for this citation.</p>'}
       ${followups.length ? `<details class="sr-review-followups"><summary>Published-review follow-up for this edition (${followups.length})</summary>
         <p class="sr-meta">Scoped AI comparisons with published reviews. These do not check every citation.</p>
         ${followups.map((a) => `<article class="sr-record"><p class="sr-meta">${["major", "minor"].includes(a.severity) ? badgeHtml([{kind:"ai",status:"possible-issue",severity:a.severity}]) + " " : ""}${esc(a.assessment)} · ${esc(a.scope)}</p>

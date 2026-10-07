@@ -65,7 +65,15 @@ test("public passage records have stable IDs and contain no private evidence pat
   }
   assert.ok([...quotes.values()].every(n=>n<=25));
   assert.ok(data.records.some(r=>r.id==="published-passage-miclu-blood-feuds-2023-2.5.3"));
-  assert.equal(data.records.filter(r=>r.kind==="ai"&&r.status==="context").length,32);
+  assert.equal(data.records.filter(r=>r.kind==="ai"&&r.status==="context"&&r.id.startsWith("context-")).length,32);
+  const retained = new Map(data.records.map(r=>[r.id,r]));
+  for (const r of data.records.filter(r=>r.reviewOf?.length)) {
+    assert.equal(r.kind,"ai");
+    for (const id of r.reviewOf) {
+      const human=retained.get(id); assert.equal(human?.kind,"external");
+      assert.ok(r.targets.every(t=>human.targets.some(h=>sameEdition(t,h))));
+    }
+  }
   const colombia=data.records.find(r=>r.id==="ai-colombia-2025-police-violence-motive");
   assert.equal(colombia.kind,"ai");assert.equal(colombia.severity,"major");
   assert.equal(colombia.targets.length,2);

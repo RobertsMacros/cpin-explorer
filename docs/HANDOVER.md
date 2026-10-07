@@ -23,6 +23,19 @@ bug-report email or automatically trusted because someone registers it. Do not
 ask for his password in chat or overwrite authentication tables manually. Read
 [the activation record](accounts.md) before further account work.
 
+## Reviewer preservation and contextual evidence, 7 October 2026
+
+Read [the 7 October evidence record](reviews/2026-10-07-contextual-evidence.md).
+All 529 earlier public records remain unchanged; the whitelist now has 534
+(486 external / 48 AI), including 252 separately labelled Home Office replies.
+The full-record preservation manifest prevents silent changes to published
+reviewers. Presentation is reviewer, then published Home Office reply, then
+separate AI assessment. Seven further exact-source question comparisons and
+Albania/Colombia evidence checks are scoped progress; contextual coverage and
+historical-version gaps remain open. Combined checks pass 414 Python, 356
+JavaScript tests and 56 ephemeral workerd/D1 checks. Canonical CPIN bodies are unchanged. Do not rerun the complete
+mechanical corpus or treat candidates/accepted recommendations as factual verdicts.
+
 ## Overnight reviews and hardened rerun, 6 October 2026
 
 The owner requested overnight progress. Read [the active checkpoint](reviews/2026-10-06-overnight-review.md) before starting work. The v3 full mechanical run is complete: 116,125 screened, zero pending/errors, 7,949 candidate blocks and 2,223 distinct questions (43 direct / 245 aligned / 1,935 metadata). Do not rerun or treat these as confirmed errors. The public whitelist has 529 records, including 433 newly prepared licensed comments and two new major scoped AI findings. The Myanmar original is recovered; one ARC/UWE full-file gap remains. Code 827ddeb is live with 413 Python/346 JavaScript checks passing on GitHub. Three live review assets match the build; private evidence paths return 404. The completion heartbeat is paused and the private plan is updated.
