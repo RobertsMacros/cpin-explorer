@@ -1,6 +1,12 @@
-# Optional approved accounts — local implementation, 6 October 2026
+# Optional approved accounts
 
-This implementation is in the separate `feature/approved-accounts` worktree, based on `71208f6`. It has not been merged, pushed or deployed. The live site and the other chat's scrape remain independent.
+## Activation checkpoint, 7 October 2026
+
+The owner authorised activation and supplied the approval-owner address privately. The implementation was reconciled with main `2456d66` in the separate `feature/approved-accounts` worktree. All newer reader/review changes remain intact. Production D1 `cpin-explorer-accounts` has both migrations applied, and the authentication secret is stored only in Cloudflare. The owner still needs to register a password before operator promotion. Publication and live verification are in progress.
+
+Reconciled checks: **413 Python tests, 355 JavaScript tests and 56 workerd/D1 checks passed**, including a repeat of the backend checks under Node 24. Retained body/PDF/image integrity and current-collection completeness passed with zero problems. The production deployment dry run includes the real D1 binding. All six main page footers now credit [COBE by Shu Ding](https://github.com/shuding/cobe); its licence notice remains intact.
+
+The following records the local implementation prepared on 6 October, based on `71208f6`. Earlier undeployed statements below describe that dated validation run.
 
 ## Behaviour
 

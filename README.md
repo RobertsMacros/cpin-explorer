@@ -23,10 +23,11 @@ It has three parts:
 
 ## Status
 
-**6 October 2026: optional approved accounts prepared locally.**
-The isolated `feature/approved-accounts` branch adds password pages, individual
-owner approval and private account saves. It is not merged or live. Read
-[the implementation, checks and activation steps](docs/accounts.md).
+**7 October 2026: optional approved accounts activation.**
+Password pages, individual owner approval and private account saves have been
+reconciled with the latest published reviews. Production storage is configured;
+publication and live verification are in progress. The owner must register their
+own password before operator promotion. Read [the implementation and activation record](docs/accounts.md).
 
 
 **6 October 2026: edition-scoped published and AI review integration.**
