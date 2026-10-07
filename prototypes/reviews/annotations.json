@@ -22400,6 +22400,45 @@
       "sourceCopyUrl": "https://web.archive.org/web/20211112110223id_/https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf",
       "sourceLocation": "Original nine-page commentary, archived 12 November 2021; indexed content digest and retained SHA256 verified.",
       "scope": "Edition and selected passage applicability established; abridged review quotations are not certified as full verbatim transcriptions. Wider contextual/legal merits remain unresolved; original commentary remains above this AI follow-up."
+    },
+    {
+      "id": "ai-colombia-executive-summary-recovered-20261007",
+      "kind": "ai",
+      "status": "context",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "Evidence update: the originally cited Colombia Diversa executive summary has now been recovered from its April 2024 archive capture. Page 12 reports 107 victims across 97 police-violence cases; page 15 establishes a prejudice motive in at least 12 cases involving 18 victims, and leaves motive undetermined in 72 cases. This directly supports the existing limited attribution finding for paragraph 2.1.10 in these two editions. It does not establish that only 18 victims experienced prejudice or decide the overall protection assessment. The earlier AI review remains as the record of evidence available at that time.",
+      "sourceCopyUrl": "https://web.archive.org/web/20240420014243id_/https://colombiadiversa.org/c-diversa/wp-content/uploads/2023/11/Resumen-ejecutivo-Informe-Colombia-Diversa.pdf#page=15",
+      "sourceLocation": "Original cited executive-summary URL, Internet Archive capture 20 April 2024; 28-page December 2023 publication. Original cover, page 12 totals and page 15 motive/uncertainty checked visually and with raw PyMuPDF and independent Poppler. SHA-256 9d375991459746f419a8ba323778075dcb3e874882930ef19dcf08cf59fe4967; archive payload digest matches.",
+      "targets": [
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "c4777bfda6c52e63",
+          "textSha": "2f64bc51c409d8f484d495128331a6b6fd9f6f8c00aaacf47cdc5c1e5ec90d89",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.1.10",
+              "quote": "2.1.10 LGBTI persons can face obstacles in gaining access to justice and can face issues with the police due to their sexual orientation and gender identity. In 2022, Colombia Diversa’s recorded 107 victims of ‘police violence’ motivated by prejudice against the victim’s sexual o"
+            }
+          ]
+        },
+        {
+          "country": "colombia",
+          "series": "note:actors-protection",
+          "editionId": "ff49e1b1c39f2224",
+          "textSha": "551b35c1e3a55c4806f0e1d643006ac4676f36d07c9ac4c539ceb64591fd4742",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.1.10",
+              "quote": "2.1.10 LGBTI persons can face obstacles in gaining access to justice and can face issues with the police due to their sexual orientation and gender identity. In 2022, Colombia Diversa’s recorded 107 victims of ‘police violence’ motivated by prejudice against the victim’s sexual o"
+            }
+          ]
+        }
+      ],
+      "scope": "Newly recovered original-source support for the existing police-violence motive finding; other statistics and the overall country assessment are outside this comparison."
     }
   ]
 }

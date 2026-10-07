@@ -28,6 +28,17 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: further historical source evidence.**
+A further 18 scoped comparisons are resolved: 48 of the original 54, with six
+still open. The original Colombia Diversa executive summary is recovered and
+supports the existing police-violence motive finding. One separate AI evidence
+update preserves all 562 earlier records; there are now 563 records and 99 visible
+AI assessments. Native Safari selection, footnote and source-link panels worked.
+The current manual quick sync succeeded without content changes; native Edge,
+physical iPhone and genuine scheduled changed-content publication remain pending.
+See [the evidence, checks and remaining gaps](docs/reviews/2026-10-07-historical-source-completion.md).
+
+
 **7 October 2026: human feedback on AI assessments.**
 Approve/disagree controls and optional notes are live across all 98 visible
 AI assessments, including legacy citation records and later-edition applications.
