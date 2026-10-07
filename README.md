@@ -28,15 +28,17 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
-**7 October 2026: further historical source evidence.**
-A further 20 scoped comparisons are resolved: 50 of the original 54, with four
-still open. The original Colombia Diversa executive summary is recovered and
-supports the existing police-violence motive finding. One separate AI evidence
-update preserves all 562 earlier records; there are now 563 records and 99 visible
-AI assessments. Native Safari selection, footnote and source-link panels worked.
-The current manual quick sync succeeded without content changes; native Edge,
-physical iPhone and genuine scheduled changed-content publication remain pending.
-See [the evidence, checks and remaining gaps](docs/reviews/2026-10-07-historical-source-completion.md).
+**7 October 2026: historical source and evidence-gap follow-up.**
+51 of the original 54 scoped comparisons are resolved; Nigeria THE, Pakistan's
+VPN guide and China Minghui remain open. Two new separate AI context notes add
+recovered HUDO evidence and Albanian medicine exemptions, preserving all 563
+earlier records. There are 565 annotations and 101 visible AI assessments; no
+new confirmed error flag is added. Today's genuine scheduled sync succeeded
+without content changes and correctly skipped deployment. Edge installation is
+authorised and underway; physical iPhone access and a genuine scheduled
+changed-content publication remain pending.
+See [the latest evidence and limits](docs/reviews/2026-10-07-final-source-device-followup.md).
+
 
 
 **7 October 2026: human feedback on AI assessments.**

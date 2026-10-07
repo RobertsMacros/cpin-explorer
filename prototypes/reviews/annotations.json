@@ -22439,6 +22439,73 @@
         }
       ],
       "scope": "Newly recovered original-source support for the existing police-violence motive finding; other statistics and the overall country assessment are outside this comparison."
+    },
+    {
+      "id": "ai-sudan-nuba-hudo-evidence-recovered-20261007",
+      "kind": "ai",
+      "status": "context",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "A verified July 2020 archive copy of HUDO’s original appeal uses Albardab for the village and describes more than 2,000 people displaced. EASO’s response, completed on 1 July 2020, uses El Berdab and cites HUDO and the same Dabanga article. The CPIN prints El Berdan. These sources support the spelling concern, but the historical Dabanga quotation has not been recovered: this is an evidence update, not a confirmed place-name or displacement error. The proposed minor flag remains withheld.",
+      "sourceCopyUrl": "https://web.archive.org/web/20200712101409id_/https://hudocentre.org/miserable-conditions-of-the-recently-displaced-people-in-kadogli/",
+      "sourceLocation": "HUDO original appeal, July 2020 HTML archive capture; SHA-256 e17f34cb7c27d13f683d44aab795c0d9728738084dab555cd470337e3390e9b8; indexed payload digest verified. EASO query Q15-2020, completed 1 July 2020, physical page 4, checked with raw PyMuPDF, independent Poppler and rendering. The supplementary HUDO PDF uses Albardab, but its archive digest could not be verified.",
+      "targets": [
+        {
+          "country": "sudan",
+          "series": "note:nuba",
+          "editionId": "7d63e73add5ea4b2",
+          "textSha": "31d4cb515f289977429ff2b5acf170bb94a3fadd44af4728f24db1207d27ad54",
+          "anchors": [
+            {
+              "type": "sentence",
+              "quote": "Another report by Radio Dabanga in May 2020 noted that ‘more than 2,000 people who fled their homes in El Berdan village near Kadugli"
+            }
+          ]
+        }
+      ],
+      "scope": "Source-name variants and recovery of the underlying HUDO appeal; no overall factual approval."
+    },
+    {
+      "id": "ai-review-albania-fund-exemptions-20261007",
+      "kind": "ai",
+      "status": "context",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.2"
+      ],
+      "summary": "New evidence on exemptions: Albania’s health insurance fund says eligible insured categories are exempt from direct payment for first-choice reimbursed medicines, and describes a no-co-payment route for registered chronic diagnoses. This means a medicine price table alone does not settle what an eligible patient must pay. The undated response refers to the July 2024 list and is hosted under a 2025 path; its wording has not been established as the version available before this CPIN. Its referenced attached medicine list is absent from the one-page PDF. This does not establish access for every patient, every brand or actual mental-health payments. The reviewer’s criticism and earlier AI assessments remain intact.",
+      "sourceCopyUrl": "https://fsdksh.gov.al/wp-content/uploads/2025/04/Pergjigje-nr-17.pdf#page=1",
+      "sourceLocation": "FSDKSH information-request response, question 2, original one-page Albanian PDF, read with raw PyMuPDF, independent Poppler and rendering. AI interpretation of Albanian text. SHA-256 2e325cf62086fd03efe7534d754d761a2e694e15fe0aed8a831f624933a024f9. Eligibility and prescribing limits remain material; this is not a Home Office response or an independent patient-outcome study.",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        }
+      ],
+      "scope": "Separate AI evidence follow-up to the attributed review. WHO’s original national return, condition-specific coverage, implementation and patient payments remain unresolved."
     }
   ]
 }
