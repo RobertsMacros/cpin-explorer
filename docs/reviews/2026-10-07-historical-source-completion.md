@@ -1,7 +1,7 @@
 # Further historical evidence and operational checks, 7 October 2026
 
-- Revisited all 24 remaining questions. **18 more scoped comparisons resolved;
-  48 of the original 54 are now resolved, with six still open.** No new factual
+- Revisited all 24 remaining questions. **19 more scoped comparisons resolved;
+  49 of the original 54 are now resolved, with five still open.** No new factual
   error group is established by this pass. Historical quotation matches do not
   approve the underlying country facts or current accuracy.
 - Verified archived payloads explain the Brazil 7.1 million quotation, J-PAL's
@@ -27,6 +27,11 @@
   The previous real scheduled change ran before deployment credentials were
   available. A genuine scheduled changed-content republish remains unobserved.
 
+The full September 2023 BKI page also resolves the partial alignment: the same
+named leaders and locations appear. The CPIN repairs malformed grammar and omits
+a connector. That literal quotation alteration does not demonstrate a personnel
+or role contradiction; no new factual flag is published.
+
 Still open:
 
 - Nigeria THE ranking: the recovered February 2024 page concerns the 2023
@@ -41,8 +46,6 @@ Still open:
 - China Minghui: no successful pre-publication capture returned. The title says
   23 and the retained body 25; both use lower bounds. Historical quotation fidelity
   remains unresolved, not a demonstrated contradiction.
-- India BKI: a digest-verified September 2023 source confirms malformed grammar
-  that the CPIN edits. This is not enough to establish a personnel/role error.
 - Original WHO Albanian national return, mental-health subgroup and exemptions,
   independent Sudan place-name evidence and a specific Albania Home Office reply
   remain missing. Earlier human reviews stay intact.
@@ -59,5 +62,5 @@ scripts and device evidence are retained in
 `data/source-evidence/goal-completion-2026-10-07/` and excluded from publication.
 
 The [Project coordination roadmap](https://chatgpt.com/space/page_39c39136789481918c7686224105a5c7)
-remains the current plan. This pass does not mark the six questions, wider source
+remains the current plan. This pass does not mark the five questions, wider source
 context or device/scheduled-publication requirements complete.
