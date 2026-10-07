@@ -3,6 +3,18 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Country-aware header globe, 7 October 2026
+
+The header mark follows the dashboard/report country and carries that view through
+Saved, Guide, About and Account. Returning to the dashboard prefers this tab's latest
+report country; explicit country routes, clearing the country and cross-country searches
+still take precedence. All 12 held former countries now have header-only positions in
+`config/countries.json`, generated into the licensed mini-globe data without changing
+the active collection or its main-globe markers. Tab icons retain their chosen opening view.
+Local checks pass 356 JavaScript tests and desktop/mobile country, navigation and
+reduced-motion checks. Static local checks have no account backend; account API 404s
+there are expected. Public source text and review records are unchanged.
+
 ## Approved accounts activated, 7 October 2026
 
 The owner authorised activation. Main `732562c` is live through GitHub Actions run

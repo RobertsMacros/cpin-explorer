@@ -1520,8 +1520,7 @@ addEventListener("cpin-account-change", updateSavedCount);
   query = s.q; q.value = s.q; view = s.view;
   pass.countries = new Set(s.countries); pass.kinds = new Set(s.kinds);
   if (s.q) loadIndex();
-  let initial = location.hash.slice(1);
-  if (!bySlug.has(initial) && !s.q) { try { initial = localStorage.getItem("cpin-last-country") || ""; } catch { initial = ""; } }
+  const initial = startCountry((slug) => bySlug.has(slug));
   if (bySlug.has(initial)) select(initial, { record: !location.hash });
   else render();
   // On a phone the results sit below the globe: a link that carries a search lands on them, as typing

@@ -49,6 +49,23 @@
     "yemen": {"iso_n3": "887", "iso_a2": "ye", "marker": [15.6, 48.0]},
     "zimbabwe": {"iso_n3": "716", "iso_a2": "zw", "marker": [-19.0, 29.8]}
   },
+  "historical_markers": {
+    "about": "Header globe positions for held former-country reports. These do not add countries to the current collection or the main globe's active markers.",
+    "countries": {
+      "angola": [-12.5, 18.5],
+      "botswana": [-22.0, 24.0],
+      "cameroon": [6.0, 12.5],
+      "liberia": [6.5, -9.5],
+      "malawi": [-13.5, 34.0],
+      "mali": [17.0, -4.0],
+      "mauritius": [-20.2, 57.5],
+      "moldova": [47.0, 28.5],
+      "morocco": [32.0, -6.0],
+      "north-korea": [40.0, 127.0],
+      "rwanda": [-2.0, 30.0],
+      "south-africa": [-29.0, 25.0]
+    }
+  },
   "feature_aliases": {},
   "boundary_patches": [
     {

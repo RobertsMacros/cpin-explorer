@@ -19,7 +19,7 @@ const TURN_MS = 620;
 const reduced = matchMedia("(prefers-reduced-motion: reduce)");
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 const known = (slug) => !!slug && Object.hasOwn(MARKERS, slug);
-const read = () => { try { return sessionStorage.getItem(STORE) || ""; } catch { return ""; } };
+const read = () => { try { return sessionStorage.getItem(STORE); } catch { return null; } };
 const write = (slug) => { try { sessionStorage.setItem(STORE, slug || ""); } catch {} };
 
 /**
@@ -30,7 +30,11 @@ const write = (slug) => { try { sessionStorage.setItem(STORE, slug || ""); } cat
 export function startCountry(has = known) {
   let slug = location.hash.slice(1);
   if (!has(slug) && !(new URLSearchParams(location.search).get("q") || "").trim()) {
-    try { slug = localStorage.getItem("cpin-last-country") || ""; } catch { slug = ""; }
+    // A report opened directly can be in a different country from the last dashboard visit.
+    slug = read();
+    if (slug === null) {
+      try { slug = localStorage.getItem("cpin-last-country") || ""; } catch { slug = ""; }
+    }
   }
   return has(slug) ? slug : null;
 }
@@ -120,7 +124,8 @@ function mountStandIn(canvas, slug) {
 const brand = document.querySelector(".brand");
 const markEl = brand?.querySelector(".brand-mark");
 const hint = brand?.dataset.mark;
-const first = hint === "start" ? startCountry() : hint === "country-param" ? new URLSearchParams(location.search).get("country") : null;
+// General pages carry the country through; an explicit report route or cleared dashboard wins.
+const first = hint === "start" ? startCountry() : hint === "country-param" ? new URLSearchParams(location.search).get("country") : read();
 
 /** The header mark: brandMark.show(slug | null). On a page without one, it does nothing. */
 export const brandMark = markEl ? mountMark(markEl) : { show() {}, country: null };
