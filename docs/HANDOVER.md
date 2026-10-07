@@ -8,12 +8,13 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 Read [the Sudan follow-up](reviews/2026-10-07-sudan-historical-quotation.md).
 Two 2020 captures of the exact Dabanga article now match the archive's indexed
 payload digests. They print El Berdab; the original CPIN PDF prints El Berdan.
-The last withheld private finding is prepared as a minor AI copying flag for
+The last withheld private finding is live as a minor AI copying flag for
 the exact December 2020 Sudan Nuba edition, footnote 17. It does not establish
 the real-world spelling or check the displacement account. All 566 earlier
 annotations remain unchanged. The separate 54-question queue is still 53
 resolved / one Minghui historical quotation pending. Follow the latest
-publication evidence before treating the prepared flag as live; preserve all
+publication evidence: run `37680895495` and Worker `563caedd-1f09-491e-8210-f84a56960c43`
+passed 21 live checks, with all 16 original draft groups now published. Preserve all
 human reviews, Home Office responses and earlier AI assessments.
 
 ## Human feedback on AI reviews, 7 October 2026

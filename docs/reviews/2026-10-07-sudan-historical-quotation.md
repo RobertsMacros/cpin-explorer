@@ -25,7 +25,7 @@ Printed paragraph 8.1.11, physical page 14, was rechecked in raw PyMuPDF text,
 independent Poppler text and the rendered original page. Footnote 17 links to
 the recovered article; its quotation resolves uniquely in the held edition.
 
-One minor AI flag, `ai-queue266-3940d1b4da13`, is prepared for this footnote.
+One minor AI flag, `ai-queue266-3940d1b4da13`, is published for this footnote.
 All 566 earlier annotation objects, including 489 external review/reply records,
 remain unchanged. The earlier AI context note is retained as history; the new
 assessment explicitly explains that the historical-source gap is now resolved.
@@ -42,7 +42,17 @@ scheduled publication remain separate. No paid calls or full-corpus rerun.
 
 Private source bytes, receipts, verification and release journals remain in
 `data/source-evidence/final-gaps-2026-10-07/source-resume/` and are excluded from
-the public build. Publication status is pending verification at this checkpoint.
+the public build. Publication is verified through the successful GitHub push-triggered release
+[37680895495](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37680895495),
+source `201dbf4e1fc0790fe8aba1325a98a6905c5fd6f2`, Worker
+`563caedd-1f09-491e-8210-f84a56960c43`. All 16 original draft IDs are now
+in the live catalogue; the earlier 566 records are identical. Full CI passed
+415 Python tests, 360 JavaScript tests and 91 ephemeral workerd/D1 checks.
+Twenty-one anonymous live checks passed, including exact bytes for all three
+review catalogues, all 103 feedback fingerprints, approved-account gates,
+desktop and 390px footnote panels, earlier AI context and private evidence 404s.
+The read-only production shared-feedback export has zero tasks. No genuine
+feedback/recheck cycle was manufactured.
 
 Local validation passes four Python exact-edition/anchor/preservation tests,
 25 relevant JavaScript tests and 16 rendered Edge-engine checks. The flag appears
@@ -59,3 +69,9 @@ intervention changed the selection, and the Mac subsequently locked before the
 ordinary-link check. No browser setting, private highlight, vote or account was
 written. This is a partial native check, not proof of every Edge menu setting or
 the user's original competing-highlighter configuration.
+
+The responsive helper was strengthened after visual inspection showed that
+resizing closes the overlay: it now reopens footnote 17 at 390px and requires
+the AI card to be visible before measuring it. The final screenshot shows the
+open panel and no horizontal overflow. This corrected a verification gap, not
+a product defect. A 390px engine test is not a physical iPhone check.
