@@ -15,6 +15,8 @@ def test_published_reviews_are_preserved_and_ai_followups_are_separate():
     records = json.loads((ROOT / 'prototypes/reviews/annotations.json').read_text())['records']
     by_id = {r['id']: r for r in records}
     baseline = json.loads((ROOT / 'config/published-review-preservation.json').read_text())['records']
+    assert set(baseline) == {r['id'] for r in records if r['kind'] == 'external'}, \
+        'Every published reviewer entry must have a preservation hash'
     for record_id, digest in baseline.items():
         record = by_id[record_id]
         assert record['kind'] == 'external'

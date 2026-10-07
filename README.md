@@ -28,6 +28,16 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: reviewer preservation and contextual source batch.**
+The live whitelist has 534 records (486 external / 48 AI), including 252
+Home Office reply extracts. All earlier reviewer records are preserved; replies
+appear before separately labelled AI follow-ups. Seven further exact-source
+questions are reconciled, with 266 initial direct/aligned questions still awaiting
+inspection before the earlier separate sample is deducted. Narrow Albania and
+Colombia findings do not establish full factual coverage. GitHub and live checks
+passed; [the dated record](docs/reviews/2026-10-07-contextual-evidence.md) retains
+source scope, access gaps and publication evidence.
+
 **7 October 2026: optional approved accounts activation.**
 Password pages, individual owner approval and private account saves have been
 reconciled with the latest published reviews and deployed to `cpin-explorer.co.uk`.

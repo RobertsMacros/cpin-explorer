@@ -35,6 +35,9 @@ Albania/Colombia evidence checks are scoped progress; contextual coverage and
 historical-version gaps remain open. Combined checks pass 414 Python, 356
 JavaScript tests and 56 ephemeral workerd/D1 checks. Canonical CPIN bodies are unchanged. Do not rerun the complete
 mechanical corpus or treat candidates/accepted recommendations as factual verdicts.
+This source batch is live in combined main `8fd4cfa`, GitHub run `37585706262`,
+Cloudflare version `7b53c497-932b-4a33-8269-6a601f4b4aa0`. Eight live assets
+match, account configuration remains present, and sampled private paths return 404.
 
 ## Overnight reviews and hardened rerun, 6 October 2026
 

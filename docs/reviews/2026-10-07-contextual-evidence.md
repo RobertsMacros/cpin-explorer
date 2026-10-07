@@ -60,7 +60,11 @@ sources' substantive claims or a new whole-corpus accuracy count.
 
 The initial v3 reconciliation's 273 direct/aligned questions without fully
 reusable dispositions remain a baseline. Separate samples must be reconciled by
-question ID before deriving a new pending count. The frozen inventory's 49,681
+question ID before deriving a new pending count. This batch's seven full IDs and
+exact occurrence records were then reconciled to that baseline, leaving 266
+awaiting questions (37 priority 1 / 229 priority 2). Earlier separately recorded
+samples have not been deducted. The baseline journal remains unchanged; the new
+reconciliation copy stays private. The frozen inventory's 49,681
 unavailable source-use receipts are not reduced by this small source batch.
 
 ## Retrieval and remaining gaps
@@ -83,7 +87,28 @@ checks, retaining the separately published account features. An initial Python r
 collector failures because free disk space fell below the 2 GiB guard; retained
 fixture receipts establish the stop reason. All 43 collector tests and then the
 complete suite passed on rerun without changing the production guard. Canonical
-integrity verification reports zero problems. The site builds to 7,895 files,
+integrity verification reports zero problems. After the newer attribution update,
+the site builds to 7,897 files,
 454 MB. Desktop and 390px Chromium checks verify review/reply/AI ordering and
 footnote overlay fit; these do not establish native Edge or physical iPhone
-behaviour. Publication evidence is recorded separately after deployment.
+behaviour.
+
+## Verified publication
+
+Source commit `52eb1c84fa4c22b1ef1eee997ffbc67f71412156` was pushed to main. The
+first deploy's tests passed, then a newer attribution merge superseded that job.
+The combined main `8fd4cfae639356888ba05d5c3b660b5de40f4a8f` passed GitHub run
+[37585706262](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37585706262)
+with 414 Python, 356 JavaScript and 56 ephemeral account checks. It deployed as
+Cloudflare version `7b53c497-932b-4a33-8269-6a601f4b4aa0`.
+
+Eight live review, reader, account and mark assets match the assembled build.
+The anonymous account probe remains configured at the primary origin. Two
+sampled private source-evidence paths return 404. Live desktop checks verify
+reviewer → Home Office reply → AI ordering and the scoped Albania medicines
+finding. The 390px footnote overlay fits, with the separate patient-costs
+assessment present and no app console errors. Native Edge/physical iPhone
+remain outside this check. The private plan was updated in place, retaining
+Hide completed and keeping Next/Evidence gap open. The last repository follow-up
+adds only documentation and an explicit check that every published reviewer has
+a preservation hash; that strengthened assertion passes locally.
