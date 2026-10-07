@@ -113,6 +113,17 @@ remain separate; neither is adopted automatically or attached to July 2024 editi
 
 ## Verification and operating limits
 
+The 6 October licensed-comment intake uses an explicit work/section manifest in
+`config/review-comment-scopes.json`. It checks held PDF and edition hashes,
+Crown/OGL licence pages, reviewer/response column roles and independent Poppler
+concordance. Temporary qpdf copies remove display rotation only; the original PDF
+text is also checked. Only short reviewer-owned prefixes before nested quotations
+are copied. Replies require an unmerged matching row and separate concordance.
+Ambiguous cells remain linked through physical page indexes. These selective
+excerpts are attributed context, not automatic factual findings or severity flags.
+Only an explicit, unique CPIN paragraph number gets an inline anchor. See the
+[overnight record](../reviews/2026-10-06-overnight-review.md) for counts and gaps.
+
 The local collector is covered by network-free fixtures for edition separation,
 candidate isolation, document-change retention, hash identity, request limits,
 host allowlists and HTTP-200 challenge refusals. The review renderer is checked
