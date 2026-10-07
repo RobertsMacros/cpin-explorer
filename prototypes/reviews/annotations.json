@@ -22550,6 +22550,39 @@
       "sourceCopyUrl": "https://web.archive.org/web/20240730213545id_/https://cdn.who.int/media/docs/default-source/mental-health/mental-health-atlas-2020-country-profiles/alb.pdf?sfvrsn=3212d7e5_6&download=true#page=2",
       "sourceLocation": "WHO Mental Health Atlas 2020, Albania Member State Profile, physical page 2, insurance table. Archive capture 30 July 2024; original PDF raw text, independent Poppler and rendered table agree. SHA-256 8360a50176023f3236c79fb895fe26b711dd56615b6ba8c20e17a07326521a3f; indexed SHA-1 payload digest 5S66DFV4KS3ODNHFOUPKMJSRRBQX324C matches the retained bytes.",
       "scope": "Separate AI evidence follow-up for the two exact January 2025 edition bodies. Published profile recovered; underlying country submission, implementation and individual patient payments remain unresolved."
+    },
+    {
+      "id": "ai-queue266-3940d1b4da13",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "sudan",
+          "series": "note:nuba",
+          "editionId": "7d63e73add5ea4b2",
+          "textSha": "31d4cb515f289977429ff2b5acf170bb94a3fadd44af4728f24db1207d27ad54",
+          "anchors": [
+            {
+              "type": "sentence",
+              "section": "8. Security and humanitarian situation in South Kordofan",
+              "quote": "more than 2,000 people who fled their homes in El Berdan village near Kadugli"
+            },
+            {
+              "type": "link",
+              "footnote": 17,
+              "quote": "Newly displaced in Sudan’s Nuba Mountains living rough",
+              "sourceUrl": "https://www.dabangasudan.org/en/all-news/article/newly-displaced-in-sudan-s-nuba-mountains-living-rough"
+            }
+          ]
+        }
+      ],
+      "summary": "The quotation in the December 2020 Sudan CPIN prints El Berdan; two verified 2020 archive copies of the cited Dabanga article print El Berdab. Both archived payloads match their indexed fingerprints. This is a minor place-name copying discrepancy in this exact edition. The displacement count is unchanged; the correct geographical spelling and the underlying events were not independently checked. This later evidence resolves the historical-source gap described in the earlier AI context note.",
+      "sourceCopyUrl": "https://web.archive.org/web/20200530081218id_/https://www.dabangasudan.org/en/all-news/article/newly-displaced-in-sudan-s-nuba-mountains-living-rough",
+      "sourceLocation": "CPIN printed paragraph 8.1.11, physical PDF page 14, checked in the original page image, raw PyMuPDF and independent Poppler text. Dabanga article dated 21 May 2020, archived 30 May and 29 November 2020; both SHA-1 payload digests match the archive index.",
+      "scope": "Minor quoted-name discrepancy in the December 2020 Sudan Nuba edition only; no factual approval of the underlying claim or real-world place spelling. Earlier reviewer and AI records remain unchanged."
     }
   ]
 }

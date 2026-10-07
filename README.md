@@ -28,6 +28,17 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: historical Sudan quotation recovered.**
+The last withheld private finding now has two digest-verified 2020 copies of
+the exact cited Dabanga article. Both say El Berdab; the December 2020 CPIN PDF
+prints El Berdan. One separately labelled minor AI flag targets that edition's
+footnote 17. All 566 earlier annotations remain unchanged; there are now 567
+annotations and 103 visible AI assessments. The separate 54-question queue
+remains 53 resolved / one historical Minghui quotation pending. Wider Albanian
+evidence, native device checks and changed-content scheduled publication retain
+their limits. Publication verification is recorded in
+[the Sudan follow-up](docs/reviews/2026-10-07-sudan-historical-quotation.md).
+
 **7 October 2026: historical source and evidence-gap follow-up.**
 53 of the original 54 scoped comparisons are resolved; China Minghui remains
 open. Nigeria’s exact October 2023 THE article and Pakistan’s April 2025 VPN

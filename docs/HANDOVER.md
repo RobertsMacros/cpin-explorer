@@ -3,6 +3,19 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Historical Sudan quotation, 7 October 2026
+
+Read [the Sudan follow-up](reviews/2026-10-07-sudan-historical-quotation.md).
+Two 2020 captures of the exact Dabanga article now match the archive's indexed
+payload digests. They print El Berdab; the original CPIN PDF prints El Berdan.
+The last withheld private finding is prepared as a minor AI copying flag for
+the exact December 2020 Sudan Nuba edition, footnote 17. It does not establish
+the real-world spelling or check the displacement account. All 566 earlier
+annotations remain unchanged. The separate 54-question queue is still 53
+resolved / one Minghui historical quotation pending. Follow the latest
+publication evidence before treating the prepared flag as live; preserve all
+human reviews, Home Office responses and earlier AI assessments.
+
 ## Human feedback on AI reviews, 7 October 2026
 
 Read [the feedback workflow](review-feedback.md). All 98 visible AI summaries
