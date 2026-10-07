@@ -29,14 +29,19 @@ code and standalone mark assets; other component credits remain separate.
 ## Status
 
 **7 October 2026: historical source and evidence-gap follow-up.**
-51 of the original 54 scoped comparisons are resolved; Nigeria THE, Pakistan's
-VPN guide and China Minghui remain open. Two new separate AI context notes add
-recovered HUDO evidence and Albanian medicine exemptions, preserving all 563
-earlier records. There are 565 annotations and 101 visible AI assessments; no
+53 of the original 54 scoped comparisons are resolved; China Minghui remains
+open. Nigeria’s exact October 2023 THE article and Pakistan’s April 2025 VPN
+guide now match their indexed payload digests. Three separate AI context notes add recovered HUDO evidence,
+Albanian medicine exemptions and WHO’s original published Albania profile,
+preserving all 563 earlier records. There are 566 annotations and 102 visible
+AI assessments; no
 new confirmed error flag is added. Today's genuine scheduled sync succeeded
-without content changes and correctly skipped deployment. Edge 154.0.4258.37 is installed and passes 42 live engine checks. Native Edge
+without content changes and correctly skipped deployment. Edge 154.0.4258.37 is installed and passes 45 live engine checks. Native Edge
 menu behaviour, physical iPhone access and a genuine scheduled changed-content
 publication remain pending.
+The additional WHO note is live through direct Cloudflare version `d0eabcf4`;
+local commit `3c0f2a2` passes 415 Python, 360 JavaScript and 91 ephemeral account
+checks. GitHub writes are currently failing; synchronising main remains pending.
 See [the latest evidence and limits](docs/reviews/2026-10-07-final-source-device-followup.md).
 
 

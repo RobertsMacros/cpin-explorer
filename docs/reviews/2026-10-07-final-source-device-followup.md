@@ -1,14 +1,14 @@
 # Historical source and evidence-gap follow-up, 7 October 2026
 
-- **51 of 54 scoped comparisons resolved.** The 19 May 2025 IPS salary-guide
+- **53 of 54 scoped comparisons resolved.** The 19 May 2025 IPS salary-guide
   capture matches the archive's indexed payload digest and retains the 2025 title,
   entry-level INR 56,100 and Director General INR 2,25,000. This resolves the
   rolling-title question, without certifying salary law, the separately cited
   exchange rates or the claimed June update date.
-- **Two separate AI context notes are live.** All 563 previous
+- **Three separate AI context notes are live.** All 563 previous
   annotation objects, including 489 original human-review extracts and responses,
-  remain unchanged. The catalogue now has 565 annotations (489 external, 76 AI)
-  and 101 visible AI assessments including legacy records and applications.
+  remain unchanged. The catalogue now has 566 annotations (489 external, 77 AI)
+  and 102 visible AI assessments including legacy records and applications.
   No new confirmed error flag is added.
 - **Sudan:** HUDO's original appeal is recovered from its 12 July 2020 HTML
   capture, with matching indexed payload digest. It uses Albardab and describes
@@ -49,11 +49,6 @@ Primary evidence links:
 
 Still pending:
 
-- Nigeria THE: the closest returned capture is the already checked 2023
-  Sub-Saharan ranking; it does not settle the cited 2024 world-ranking passage.
-- Pakistan VPN: the newly retrieved September 2025-title guide contains relevant
-  Pakistan wording, but its bytes do not match the indexed digest. It cannot
-  establish exact historical identity; no ban/title error is confirmed.
 - China Minghui: the availability API returned no capture. Two different lower
   bounds are not themselves a contradiction; historical quotation remains open.
 - WHO's original Albanian national return, condition-specific coverage and actual
@@ -70,9 +65,9 @@ returned 502. Those limits were honoured. No paid model calls, duplicate full
 corpus run, canonical edits, synthetic production votes or new schedules occurred.
 
 Four Python annotation, provenance and preservation tests and 25 relevant
-JavaScript tests passed. The private journal verification rehashes ten distinct
+JavaScript tests passed. The private journal verification rehashes twelve distinct
 raw archive payloads and preserves all 24 original follow-up question IDs and
-exact edition occurrences, with 21 scoped resolutions and three pending rows.
+exact edition occurrences, with 23 scoped resolutions and one pending row.
 Receipt bytes, scripts, readings and bounded-retrieval limits are retained under
 `data/source-evidence/final-gaps-2026-10-07/`; the current question journal is under
 `data/source-evidence/goal-completion-2026-10-07/`. These are excluded from builds.
@@ -110,3 +105,55 @@ plugin is unavailable. They do not establish interaction with Edge's native
 selection mini-menu or physical iPhone gestures. No production vote, saved
 highlight or account setting was changed. The latest native access attempt was
 blocked by the Mac lock, and iPhone Mirroring shows its authentication prompt.
+
+### Further historical recovery
+
+The 27 April 2025 [Pakistan VPN guide capture](https://web.archive.org/web/20250427033605id_/https://cybernews.com/best-vpn/vpn-for-grindr/) matches indexed SHA-1 digest
+`7CTTHD24P6MDPWD3IDG753O4XLYPHEH7` and retains the 2025 title and Pakistan FAQ.
+It resolves the source-version question, without certifying the actual blocking
+situation, VPN operation or the separately claimed October update date. The
+previous September capture’s digest failure remains in the private record.
+
+WHO’s [original published Albania profile, page 2](https://web.archive.org/web/20240730213545id_/https://cdn.who.int/media/docs/default-source/mental-health/mental-health-atlas-2020-country-profiles/alb.pdf?sfvrsn=3212d7e5_6&download=true#page=2)
+is recovered from its 30 July 2024 capture. The original three-page PDF matches
+indexed digest `5S66DFV4KS3ODNHFOUPKMJSRRBQX324C`, SHA-256
+`8360a50176023f3236c79fb895fe26b711dd56615b6ba8c20e17a07326521a3f`.
+Raw PyMuPDF, independent Poppler and the rendered page agree: its insurance
+questions concern the majority of patients. It reports no point-of-service
+payment for services and psychotropic medicines, and coverage for psychosis,
+bipolar disorder and depression. The CPIN uses a normally-insured qualification.
+The new separate AI context note preserves MiCLU’s original criticism and all
+565 previous annotations. This is the published profile, not the underlying
+national return or proof of individual patients’ actual costs. The wider gap
+remains open. No new error flag is added.
+
+### Direct publication and Nigeria source recovery
+
+GitHub rejected four pushes with remote Internal Server Error and Git database
+API writes failed before any ref update. The existing authenticated Cloudflare
+route published the tested local source snapshot instead: Worker version
+`d0eabcf4-01db-4477-b9e2-12befcc00603`, serving at https://cpin-explorer.co.uk.
+All 415 Python, 360 JavaScript and 91 ephemeral workerd/D1 checks pass. The dry
+run passed; before/after production bindings are identical, including the
+retained authentication secret name. No new resource, credential or schedule
+was created. The static build contains 7,904 files and no private source journals.
+
+All 102 live anonymous AI feedback fingerprints and exact catalogue bytes match.
+Forty-five read-only checks pass in installed Edge, including the new WHO card,
+source URL and approved-account sign-in gate. No runtime or console errors.
+Native Edge menus and physical iPhone remain untested because the Mac is locked.
+This is a manual direct publication; it does not close the real scheduled
+changed-content republish check. GitHub main still needs synchronising; a later
+deployment from its older snapshot could replace the new note until that happens.
+
+The [9 January 2024 THE capture](https://web.archive.org/web/20240109212233id_/https://www.timeshighereducation.com/student/best-universities/best-universities-nigeria)
+retains the exact article title, date metadata of 11 October 2023, Covenant and
+Ibadan at 801–1000 in the 2024 world-ranking column, the private Christian
+description and the cited higher-education wording. It matches indexed digest
+`SGKVTPRB6NASTR6TAZAE3GQUTKS6UBHL`, SHA-256
+`64e05111cde63d2a861fbb4853eedd14172e491b672a3a828bdbe789a35101ca`.
+This resolves question 39’s source-version/citation correspondence; it does not
+independently certify ranking methods, public ownership or the broader CPIN
+conclusion. The different February 2024 Sub-Saharan capture remains in the
+private history. China’s historical quotation and the wider original-source/
+implementation gaps remain open.
