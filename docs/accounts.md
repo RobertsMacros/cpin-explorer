@@ -48,6 +48,16 @@ or the registered profile. Browser security policy prevents the agent opening
 saved-autofill settings, so removal of those browser entries remains user work.
 Native Edge/iPhone and genuine cross-device private saving are separate checks.
 
+Published as main `0d61293` through successful GitHub run `37682230049`,
+Cloudflare version `0892a295-c507-4805-815a-c6e6bb16fec1`. GitHub passed 415 Python,
+362 JavaScript and 99 disposable workerd/D1 checks. Production migration 0004 is
+applied. Nine live checks confirm the account HTML and six assets match (including
+the other chat's review catalogue), accounts remain configured, and anonymous
+profile writes return 401. Live mobile/desktop headers render without overflow
+or console errors. Genuine owner sign-in is Robert's report; this browser was
+signed out, so the new greeting editor was checked with local tests, not his
+production credentials. Cross-device private saving remains a separate check.
+
 ## Passwords and reset links
 
 `web/accounts/auth.js` uses **Better Auth 1.7.7**, pinned in the lockfile, with its native D1 adapter, database sessions and rate limiter. Its installed licence is MIT. Passwords use its native asynchronous Node crypto scrypt; no custom password or session cryptography was added.
