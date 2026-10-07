@@ -8,9 +8,10 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 Read [the original-audit follow-up](reviews/2026-10-07-albania-state-audit.md).
 Two original state audits narrow the implementation gap but do not establish
 individual mental-health payments or recover the missing chronic list. One
-separate AI context record is prepared below the existing MiCLU review; all
-earlier records are unchanged. Check publication evidence before treating it
-as live. The original 54-question queue remains 53 resolved / one pending.
+separate AI context record is live below the existing MiCLU review; all
+567 earlier records are unchanged. Run `37687198729`, Worker `fe85c8dc-b429-49cd-8a9b-dd1c8520c029`,
+and 26 anonymous live checks confirm publication. There are 568 annotation records
+and 104 visible AI identities. The original 54-question queue remains 53 resolved / one pending.
 
 ## Browser scope correction, 7 October 2026
 

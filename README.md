@@ -28,6 +28,14 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: Albanian implementation evidence added.**
+Two original state audits narrow the reimbursement evidence gap. One separate
+AI context note is live below MiCLU’s existing review, preserving all 567 earlier
+records. There are now 568 records / 104 visible AI identities. CI passes
+415 Python, 362 JavaScript and 99 ephemeral account checks; 26 anonymous live
+checks pass. Historical quotation and individual-payment gaps remain.
+See [the audit evidence and release](docs/reviews/2026-10-07-albania-state-audit.md).
+
 **7 October 2026: browser scope corrected.**
 The reported highlighting/link-overlay issue is Edge on Windows. The Mac Edge
 checks recorded below are useful macOS evidence only; Windows remains untested.
