@@ -1,4 +1,5 @@
 import { accountAuth } from "./auth.js";
+import { completeRecheck, feedbackRead, feedbackWrite, recheckQueue } from "./review-feedback.js";
 
 const KINDS = new Set(["highlights", "pins", "reviews"]);
 const AUTH_PATHS = new Set(["/sign-up/email", "/sign-in/email", "/sign-out", "/get-session", "/reset-password", "/change-password"]);
@@ -96,7 +97,14 @@ export default {
         try { const { user } = await signedIn(auth, req, db); return reply({ configured: true, authOrigin:env.AUTH_ORIGIN, user }); }
         catch (e) { if (e.status === 401) return reply({ configured: true, authOrigin:env.AUTH_ORIGIN, user: null }); throw e; }
       }
+      if (path === "/api/review-feedback" && req.method === "GET") {
+        let reader = null;
+        try { reader = (await signedIn(auth, req, db)).user; } catch (e) { if (e.status !== 401) throw e; }
+        return reply(await feedbackRead(db, (url.searchParams.get("ids") || "").split(",").filter(Boolean), reader));
+      }
       const identity = await signedIn(auth, req, db); const { user } = identity;
+      const feedbackPath = path.match(/^\/api\/review-feedback\/([\w.-]{1,180})$/);
+      if (feedbackPath && req.method === "PUT") return reply(await feedbackWrite(db, user, feedbackPath[1], await body(req)));
       if (path === "/api/saved" && req.method === "GET") {
         approved(user);
         const rows = await db.prepare("SELECT kind, id, value, revision FROM saved_items WHERE user_id = ? ORDER BY kind, id").bind(user.id).all();
@@ -132,6 +140,8 @@ export default {
       }
       if (path.startsWith("/api/owner/")) {
         owner(identity);
+        if (path === "/api/owner/recheck-queue" && req.method === "GET") return reply(await recheckQueue(db, Number(url.searchParams.get("page") || 0)));
+        if (path === "/api/owner/recheck-result" && req.method === "POST") return reply(await completeRecheck(db, await body(req)));
         if (path === "/api/owner/accounts" && req.method === "GET") {
           const page=Number(url.searchParams.get("page") || 0);
           if(!Number.isSafeInteger(page) || page<0 || page>10000) fail("Invalid page.",400);
@@ -149,6 +159,7 @@ export default {
             db.prepare('UPDATE "user" SET approved=?,updatedAt=? WHERE id=? AND role<>\'owner\'').bind(data.approved ? 1 : 0, Date.now(), target.id),
             db.prepare('DELETE FROM session WHERE userId=?').bind(target.id),
             db.prepare('INSERT INTO approval_events (id,user_id,owner_id,approved,created_at) VALUES (?,?,?,?,?)').bind(crypto.randomUUID(),target.id,user.id,data.approved ? 1 : 0,Date.now()),
+            db.prepare('UPDATE review_feedback_epoch SET revision=revision+1 WHERE id=1'),
           ]);
           return reply({ approved: data.approved });
         }

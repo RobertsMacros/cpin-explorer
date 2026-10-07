@@ -27,6 +27,7 @@ import {
 import * as H from "../shared/highlights.js";
 import { accountStore } from "../shared/account-state.js";
 import * as Reviews from "../shared/source-reviews.js";
+import { mountReviewFeedback } from "../shared/review-feedback.js";
 import * as Annotations from "../shared/review-annotations.js";
 import { analyseBody, describePassage, FOOTNOTE_REF_SELECTOR, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
 import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
@@ -2348,6 +2349,7 @@ function placePop(anchorRect, { scroll = false } = {}) {
 function showPop(html, anchorRect, opts) {
   const wasHidden = pop.hidden;
   pop.innerHTML = html;
+  void mountReviewFeedback(pop, [...S.reviewRecords, ...S.annotations, ...Reviews.applicationChecks(S.reviewDirectory, reviewEdition())]);
   pop.hidden = false;
   placePop(anchorRect, opts);
   if (wasHidden) { pop.classList.remove("is-in"); void pop.offsetWidth; pop.classList.add("is-in"); }

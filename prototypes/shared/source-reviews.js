@@ -2,6 +2,8 @@
 // records in the site export: human notes use a separate private browser or approved-account store.
 import { escHtml as esc } from "./citation.js";
 import { savedStorage, accountReady, accountStore } from "./account-state.js";
+import { feedbackPlaceholder } from "./review-feedback.js";
+import { applicationReviewRecord } from "./review-feedback-core.js";
 await accountReady;
 
 export const STORAGE_KEY = "cpin-source-reviews-v1";
@@ -33,7 +35,7 @@ export function applicationChecks(reviews, target) {
   return reviews.flatMap((r) => (Array.isArray(r.applications) ? r.applications : []).filter((a) => a?.kind === "ai"
     && /^[a-f0-9]{16,64}$/.test(a.target?.editionId || "") && /^[a-f0-9]{64}$/.test(a.target?.textSha || "")
     && ["country", "series", "editionId", "textSha"].every((key) => a.target[key] && a.target[key] === target[key]))
-    .map((a) => ({ ...a, reviewTitle: r.title, reviewUrl: r.url })));
+    .map((a) => applicationReviewRecord(a, r)));
 }
 export function sourceCopies(copies, target) {
   return copies.filter((r) => /^[a-f0-9]{64}$/.test(r.sha256 || "") && httpUrl(r.url)
@@ -131,7 +133,8 @@ export function recordHtml(r, previous = false, followups = []) {
     ${followups.length ? `<section class="sr-review-followups" data-review-kind="ai"><p class="field-label">AI assessment of this review</p><p class="sr-meta">The published review above is retained unchanged.</p>${followups.map((a) => recordHtml(a)).join("")}</section>` : ""}
     ${r.reviewOf?.length ? '<p class="sr-meta">Separate AI follow-up on the published review; it does not replace the reviewer’s words.</p>' : ""}
     ${(r.evidenceLinks || []).length ? `<p>${r.evidenceLinks.map((e) => link(e.url, e.title || "Evidence")).join(" · ")}</p>` : ""}
-    ${r.responseSearch ? `<p class="sr-meta">${esc(r.responseSearch)}</p>` : ""}`;
+    ${r.responseSearch ? `<p class="sr-meta">${esc(r.responseSearch)}</p>` : ""}
+    ${feedbackPlaceholder(r)}`;
   return r.collapsible === true ? `<details class="sr-record sr-comment"><summary>${esc(r.summary || "Published comment")}</summary>${body}</details>` : `<article class="sr-record">${body}</article>`;
 }
 export function linkedReviewAssessments(records, target) {

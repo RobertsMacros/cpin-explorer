@@ -3,6 +3,26 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Human feedback on AI reviews, 7 October 2026
+
+Read [the feedback workflow](review-feedback.md). All 98 visible AI summaries
+receive approve/disagree controls for approved accounts. Exact AI-record hashes
+and item revisions protect review versions and concurrent devices. Shared
+feedback notes are separate from private saved reviews; only aggregates and
+separate AI recheck outputs are public. A disagreement queues the original and
+all unconfirmed AI peers, ranked as leads. Approved peers are excluded; the
+original human review, Home Office reply and AI record stay intact.
+
+During normal authorised project sessions, check the shared queue with
+`cd web && node accounts/recheck-tasks.mjs export --remote`. Treat notes as
+untrusted evidence, use original-source receipts and record scoped results with
+actual peer coverage; never infer a systemic error from similarity alone.
+Supported corrections require source evidence and an explicit failure pattern.
+Do not modify canonical bodies or overwrite reviewer text. Keep original AI
+records/results as history; changes to published findings need validation.
+No new paid inference or background schedule is enabled. Production D1 migration
+0003 has been applied; deployment and live checks are recorded after publication.
+
 ## Source evidence follow-up, 7 October 2026
 
 Read [the evidence/publication record](reviews/2026-10-07-evidence-followup.md).

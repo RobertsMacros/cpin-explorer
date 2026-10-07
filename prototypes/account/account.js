@@ -1,6 +1,7 @@
 import { api, accountReady, accountStore, SAVED_KEYS } from "../shared/account-state.js";
 import { escHtml as esc } from "../shared/citation.js";
 import { pinId } from "../shared/pins.js";
+import { reviewTargets } from "../shared/review-feedback-core.js";
 const root=document.querySelector("#accountContent"), params=new URLSearchParams(location.search);
 let view=params.get("view")||"login", resetToken=new URLSearchParams(location.hash.slice(1)).get("token")||"", ownerPage=0;
 if(resetToken) history.replaceState(null,"",location.pathname+location.search);
@@ -19,8 +20,8 @@ function render(){
       <p class="account-hint">Signing in uses an essential session cookie. Account saves do not depend on optional cookies or browser storage. Browser-only saves are separate and are copied only when you choose.</p>
       <p id="accountMessage" class="account-message" role="status"></p>
       <div id="conflicts">${s.conflicts.map(c=>`<div class="owner-row"><p>${esc(c.kind)} · ${esc(c.id)} changed on another device. Download your copy before resolving.</p><div class="account-actions"><button class="btn" data-resolve="${esc(c.key)}" data-keep="false">Use account copy</button><button class="btn" data-resolve="${esc(c.key)}" data-keep="true">Save this device’s change</button></div></div>`).join("")}</div></div>
-      ${s.user.role==="owner" ? '<section id="owner"><h2>Account approvals</h2><p>Check who owns the email address before approving. Approval allows private account saving; it does not mark their source reviews as correct.</p><div id="ownerAccounts">Loading account requests…</div></section>' : ""}`;
-    if(s.user.role==="owner")void loadOwner(); bind();return;
+      ${s.user.role==="owner" ? '<section id="owner"><h2>Account approvals</h2><p>Check who owns the email address before approving. Approval allows private account saving; it does not mark their source reviews as correct.</p><div id="ownerAccounts">Loading account requests…</div></section><section><h2>AI recheck queue</h2><p>Disagreements and their notes are separate from private saved reviews. A task includes the original AI review and unconfirmed peers; a queued task has not been checked yet.</p><div id="recheckQueue">Loading recheck queue…</div></section>' : ""}`;
+    if(s.user.role==="owner"){void loadOwner();void loadRechecks();} bind();return;
   }
   const reset=view==="reset",forgot=view==="forgot",signup=view==="signup",change=view==="password";
   const title=reset ? "Set a new password" : forgot ? "Password help" : signup ? "Request an account" : change ? "Change password" : "Sign in";
@@ -77,6 +78,20 @@ async function loadOwner(){
     container.querySelectorAll("[data-approval]").forEach(b=>b.addEventListener("click",async()=>{b.disabled=true;try{await api("/api/owner/approval",{userId:b.dataset.approval,approved:b.dataset.approved==="true"});await loadOwner();}catch(e){message(e.message,true);b.disabled=false;}}));
     container.querySelectorAll("[data-reset-user]").forEach(b=>b.addEventListener("click",async()=>{b.disabled=true;try{const r=await api("/api/owner/password-link",{userId:b.dataset.resetUser}),el=b.closest("article").querySelector("[data-reset-result]");el.replaceChildren();const a=document.createElement("a");a.className="reset-link";a.href=r.url;a.textContent=r.url;el.append(document.createTextNode("Private link · expires in 30 minutes. Share only with the verified account holder."),a);b.remove();}catch(e){message(e.message,true);b.disabled=false;}}));
   }catch(e){container.textContent=e.message;}
+}
+async function loadRechecks(page=0){
+  const container=document.querySelector("#recheckQueue");
+  try {
+    const data=await api(`/api/owner/recheck-queue?page=${page}`);
+    container.innerHTML=`<p>${data.total} pending AI recheck${data.total===1 ? "" : "s"}. Processed during Codex review sessions.</p><div class="account-actions"><button type="button" class="btn" data-recheck-refresh>Refresh queue</button><button type="button" class="btn" data-recheck-export ${data.tasks.length ? "" : "disabled"}>Download these AI tasks</button><button class="btn" data-recheck-page="${page-1}" ${page===0 ? "disabled" : ""}>Previous</button><button class="btn" data-recheck-page="${page+1}" ${(page+1)*10>=data.total ? "disabled" : ""}>Next</button></div>`+
+      data.tasks.map(task=>`<details class="owner-row"><summary>${esc(task.review.summary)}</summary><p>${task.feedback.length} disagreement${task.feedback.length===1 ? "" : "s"} · ${task.peers.length} unconfirmed peer reviews available; not yet investigated.</p>${task.feedback.map(f=>`<p><b>${esc(f.reason)}</b> — ${esc(f.note || "No explanation added.")}</p>`).join("")}${reviewTargets(task.review).map(t=>`<p><a href="../reader/?${esc(new URLSearchParams({country:t.country,series:t.series,edition:t.editionId}).toString())}">Open the exact ${esc(t.country)} edition</a></p>`).join("")}</details>`).join("");
+    container.querySelector('[data-recheck-refresh]').addEventListener('click',()=>void loadRechecks(page));
+    container.querySelectorAll('[data-recheck-page]').forEach(b=>b.addEventListener('click',()=>void loadRechecks(Number(b.dataset.recheckPage))));
+    container.querySelector('[data-recheck-export]').addEventListener('click',()=>{
+      const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));
+      a.href=url;a.download='cpin-ai-recheck-tasks-private.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    });
+  }catch(error){container.textContent=error.message;}
 }
 await accountReady;
 // Session cookies belong to the primary domain. Older public host links take
