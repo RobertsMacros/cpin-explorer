@@ -55,4 +55,12 @@ bytes and individual decisions stay in
 is the current plan. This record describes the completed bounded pass; it does
 not mark the remaining 24 questions, source gaps or wider contextual work done.
 
-Publication and live verification are recorded after deployment.
+Published main `bbeeb2aa282a040a01ac7a72fe9b9adfe9c5a3dd` through
+[successful GitHub run 37616250973](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37616250973),
+Cloudflare version `08457472-40ba-4730-a59c-78aa2422ff4e`. Live checks passed:
+16 asset/provenance/privacy checks, all 53 edition targets, 49 marker anchors and
+26 footnote interactions, with zero script errors. Three 390px overlays had no
+horizontal overflow. Reviewer → Home Office response → AI ordering passed on
+both recovered Rwanda editions. Dashboard content matches apart from its build
+timestamp; private journals return 404. Signed-out account capability remains
+configured; an authenticated account save was not repeated in this pass.

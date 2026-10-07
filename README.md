@@ -30,7 +30,7 @@ code and standalone mark assets; other component credits remain separate.
 
 **7 October 2026: publication and evidence follow-up.**
 All 54 unresolved comparisons received a bounded follow-up: 30 scoped resolutions,
-24 remaining questions. Twenty-one new AI finding groups are prepared, including
+24 remaining questions. Twenty-one new AI finding groups are live, including
 the original-survey proof of Ghana's reversed regional FGM figures; the Sudan
 place-name draft stays withheld. The two May 2022 Rwanda editions and the full
 ARC/UWE quantitative-risk review are recovered and mapped to their exact reports.
@@ -54,8 +54,7 @@ the body/anchor and reviewer-preservation checks; 356 JavaScript tests and the
 four targeted Python tests passed. `./cpin verify` reports zero problems.
 The candidate and validation journals are private in
 `data/source-evidence/draft-validation-2026-10-07/`. No new source retrieval,
-paid calls, canonical-text changes, push or deployment occurred. These findings
-and the reader compatibility repairs are not yet live; native Edge/iPhone checks
+paid calls, canonical-text changes, push or deployment occurred. This private-validation status was superseded by the publication above; native Edge/iPhone checks
 and wider contextual coverage remain separate.
 
 **7 October 2026: reviewer preservation and contextual source batch.**

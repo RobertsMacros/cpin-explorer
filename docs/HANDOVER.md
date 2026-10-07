@@ -7,6 +7,10 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 
 Read [the evidence/publication record](reviews/2026-10-07-evidence-followup.md).
 The original 54 gaps now have 30 scoped resolutions and 24 still unresolved.
+Main `bbeeb2a` is live through successful GitHub run `37616250973`, Cloudflare
+version `08457472-40ba-4730-a59c-78aa2422ff4e`. Sixteen live asset checks and all
+53 new edition targets passed, including 26 footnote overlays and reviewer/reply/AI
+ordering. Native Edge/iPhone and scheduled changed-content checks remain separate.
 The publication set preserves all earlier 534 records and adds 21 scoped AI flag
 groups, three attributed review extracts and four separate review follow-ups.
 The two exact May 2022 Rwanda editions and full ARC/UWE review are recovered;
