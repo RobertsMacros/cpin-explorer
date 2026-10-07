@@ -3,6 +3,15 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Albanian state-audit evidence, 7 October 2026
+
+Read [the original-audit follow-up](reviews/2026-10-07-albania-state-audit.md).
+Two original state audits narrow the implementation gap but do not establish
+individual mental-health payments or recover the missing chronic list. One
+separate AI context record is prepared below the existing MiCLU review; all
+earlier records are unchanged. Check publication evidence before treating it
+as live. The original 54-question queue remains 53 resolved / one pending.
+
 ## Browser scope correction, 7 October 2026
 
 Robert clarified that the reported highlighting and ordinary-link overlay issue

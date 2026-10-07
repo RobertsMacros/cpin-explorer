@@ -22583,6 +22583,48 @@
       "sourceCopyUrl": "https://web.archive.org/web/20200530081218id_/https://www.dabangasudan.org/en/all-news/article/newly-displaced-in-sudan-s-nuba-mountains-living-rough",
       "sourceLocation": "CPIN printed paragraph 8.1.11, physical PDF page 14, checked in the original page image, raw PyMuPDF and independent Poppler text. Dabanga article dated 21 May 2020, archived 30 May and 29 November 2020; both SHA-1 payload digests match the archive index.",
       "scope": "Minor quoted-name discrepancy in the December 2020 Sudan Nuba edition only; no factual approval of the underlying claim or real-world place spelling. Earlier reviewer and AI records remain unchanged."
+    },
+    {
+      "id": "ai-review-albania-state-audit-implementation-20261007",
+      "kind": "ai",
+      "status": "context",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.2"
+      ],
+      "summary": "Limited implementation evidence recovered: Albania’s September 2019 state audit records chronic-category reimbursement spending, while its May 2024 audit says diagnosis-level prescription data were not supplied despite repeated requests and recommends checking eligibility. These findings support some recorded reimbursement in practice, but do not establish free medicines for every mental-health condition or patient. The fund’s public register dates its separate response 17 to 7 July 2025, after this CPIN, despite the April directory in its URL. The original chronic-diagnosis list, medicine attachment and individual payments remain unresolved. This is an AI interpretation of Albanian originals; the human review and earlier AI assessments are preserved.",
+      "sourceCopyUrl": "https://klsh.org.al/wp-content/uploads/2025/02/Raport-perfundimtar-auditimi-i-ushtruar-ne-Fondin-e-Sigurimit-te-Detyrueshem-te-Kujdesit-Shendetesor.pdf#page=23",
+      "sourceLocation": "KLSH original May 2024 report, physical pages 23 and 117; SHA-256 501fd951768ddbbcac3030fc33ceef929192111d93c9b99b7151d09c85cfd3bd. September 2019 original, physical page 111; SHA-256 a8994445d2a9cb396bb9b8c180eababf99dc8c2b1bde3b5180b13ed60de53808. Both read as raw PDF text, independent Poppler and rendered pages. Additional original: https://www.klsh.org.al/wp-content/uploads/2025/02/Raport-mbi-Auditimin-e-ushtruar-ne-Fondin-e-Sigurimit-te-Detyrueshem-te-Kujdesit-Shendetesor-FSDKSH.pdf. FSDKSH register: https://fsdksh.gov.al/project/regjistri-kdi-2025/ (SHA-256 5f24de4660a809a8c9a6d7acbc674fb09e8ed7b682becc317f3800c60bfb35d6).",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "7.1.2",
+              "quote": "7.1.2 *Medicines included on the ‘List of drugs that are reimbursable from the Compulsory Health Care Insurance Fund’ are available to patients free of charge. "
+            }
+          ]
+        }
+      ],
+      "scope": "Separately labelled AI context below the attributed MiCLU review; category-level implementation evidence only. Current copies of dated reports do not establish the bytes available before January 2025. No Home Office response or WHO national return recovered; no new error flag."
     }
   ]
 }
