@@ -28,6 +28,36 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**7 October 2026: publication and evidence follow-up.**
+All 54 unresolved comparisons received a bounded follow-up: 30 scoped resolutions,
+24 remaining questions. Twenty-one new AI finding groups are prepared, including
+the original-survey proof of Ghana's reversed regional FGM figures; the Sudan
+place-name draft stays withheld. The two May 2022 Rwanda editions and the full
+ARC/UWE quantitative-risk review are recovered and mapped to their exact reports.
+The whitelist has 562 records (489 external / 73 AI), preserving all earlier 534
+records and their replies. WHO subgroup evidence and the exact Colombia summary
+remain unavailable. Checks pass 415 Python, 356 JavaScript and 56 workerd/D1 checks,
+with final anchors and desktop/mobile overlays verified. No paid calls or duplicate
+corpus run. See [the outcomes and limits](docs/reviews/2026-10-07-evidence-followup.md).
+
+**7 October 2026: private draft publication validation (local only).**
+All 16 draft finding groups were checked against held source evidence and exact
+edition identities. Fifteen minor typo/citation findings are prepared across
+16 distinct editions and 19 flag locations; the Sudan place-name discrepancy
+is withheld because its historical spelling is unresolved. The private candidate
+preserves all 534 current annotations, including 486 external reviews and their
+Home Office replies. Archived GOV.UK footnote markup now opens the review overlay,
+and findings on citation links appear in that footnote's panel. All 19 locations,
+source links and footnote panels passed local browser checks, including a 390px
+overlay and an edition-switch isolation check. The 549-record candidate passed
+the body/anchor and reviewer-preservation checks; 356 JavaScript tests and the
+four targeted Python tests passed. `./cpin verify` reports zero problems.
+The candidate and validation journals are private in
+`data/source-evidence/draft-validation-2026-10-07/`. No new source retrieval,
+paid calls, canonical-text changes, push or deployment occurred. These findings
+and the reader compatibility repairs are not yet live; native Edge/iPhone checks
+and wider contextual coverage remain separate.
+
 **7 October 2026: reviewer preservation and contextual source batch.**
 The live whitelist has 534 records (486 external / 48 AI), including 252
 Home Office reply extracts. All earlier reviewer records are preserved; replies

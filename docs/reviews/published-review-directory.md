@@ -1,6 +1,6 @@
 # Published country-report review directory
 
-Checked 2026-10-06. 9 publishers; 60 curated publications.
+Checked 2026-10-07. 9 publishers; 60 curated publications.
 
 Directory inclusion does not assess a whole publication. Selected, separately labelled AI follow-ups are available in the overlay. Dates below are publication dates, not the dates of the reports reviewed. A link’s inclusion does not certify its arguments or make them applicable to a newer edition.
 

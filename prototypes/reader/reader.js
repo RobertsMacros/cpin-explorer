@@ -28,7 +28,7 @@ import * as H from "../shared/highlights.js";
 import { accountStore } from "../shared/account-state.js";
 import * as Reviews from "../shared/source-reviews.js";
 import * as Annotations from "../shared/review-annotations.js";
-import { analyseBody, describePassage, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
+import { analyseBody, describePassage, FOOTNOTE_REF_SELECTOR, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
 import { decorateLinks, loadLinkStatus, summaryLine } from "../shared/link-status.js";
 import { linkToHeldNotes, repairAnchors } from "../shared/internal-links.js";
 import { formatDisplay } from "../shared/display-format.js";
@@ -2523,7 +2523,8 @@ function openFootnote(n, anchor, prefix = "") {
   const urls = [...new Set([...template.content.querySelectorAll("a[href]")].map((a) => Reviews.httpUrl(a.getAttribute("href"))).filter(Boolean))];
   const records = [...S.reviewRecords, ...privateReviews.load()];
   const annotations = Annotations.editionRecords(S.annotations, reviewEdition()).filter((r) => (S.reviewLocations.get(r.id) || [])
-    .some((c) => c.type === "footnote" && (c.el === anchor || c.el.contains(anchor))));
+    .some((c) => (c.type === "footnote" && (c.el === anchor || c.el.contains(anchor)))
+      || (!ambiguous && c.type === "link" && c.footnote === n)));
   const targets = (urls.length ? urls : [""]).map((sourceUrl) => ({ country: COUNTRY, series: SERIES, editionId: edition.id,
     textSha: edition.v.text_sha256, footnote: n, paragraph: context.para || "", section: context.section || "", sourceUrl }));
   popState = { kind: "fn", n, anchor, prefix, targets };
@@ -2579,7 +2580,7 @@ function goToFootnote(n, prefix = "") {
 $("#doc").addEventListener("click", (e) => {
   const reviewMarker = e.target.closest(".review-marker");
   if (reviewMarker) { e.preventDefault(); openPassageReviews(reviewMarker); return; }
-  const ref = e.target.closest('a[role="doc-noteref"], sup a.footnote');
+  const ref = e.target.closest(FOOTNOTE_REF_SELECTOR);
   if (ref) {
     e.preventDefault();
     const href = ref.getAttribute("href") || "";

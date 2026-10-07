@@ -21258,6 +21258,1148 @@
       ],
       "sourceCopyUrl": "https://www.taskproject.eu/wp-content/uploads/2020/12/WP1.2_BookSS.pdf#page=82",
       "sourceLocation": "Original source physical page 82 / printed page 69; paragraph on the home for children aged 16–18."
+    },
+    {
+      "id": "ai-queue266-c7be37579623",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "iraq",
+          "series": "note:blood-crimes-feuds-honour-iraq-tribal-violence",
+          "editionId": "954ae41eb48bee91",
+          "textSha": "284a43f99f5d56182457322e2d76e3bb3a23a6731a7341f652b61c94c10f5ab6",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 104,
+              "sourceUrl": "https://freedomhouse.org/country/iraq/freedom-world/2023",
+              "quote": "Freedom in the World 2022 – Iraq"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:blood-crimes-feuds-honour-iraq-tribal-violence",
+          "editionId": "331f1d5cec9f43a5",
+          "textSha": "6199c1c949235313ba278af49f9589f2089b2e842737970e44e174db52ae1291",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 104,
+              "sourceUrl": "https://freedomhouse.org/country/iraq/freedom-world/2023",
+              "quote": "Freedom in the World 2022 – Iraq"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:civil-documentation-internal-relocation-returns",
+          "editionId": "e99f1be0870e880c",
+          "textSha": "5a96caae814f20bde2122c2d12a164e28e4c1880193f9d1a126ecea28f652715",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 106,
+              "sourceUrl": "https://freedomhouse.org/country/iraq/freedom-world/2023",
+              "quote": "Freedom in the World 2022 – Iraq"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:civil-documentation-internal-relocation-returns",
+          "editionId": "06664025dea5ad24",
+          "textSha": "48d9ecf1a569ed043c82aad9bb68e91943d08aa793f40cdcb62e58bde46f5a0c",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 106,
+              "sourceUrl": "https://freedomhouse.org/country/iraq/freedom-world/2023",
+              "quote": "Freedom in the World 2022 – Iraq"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://freedomhouse.org/country/iraq/freedom-world/2023",
+      "summary": "The citation names Freedom in the World 2022, but its link identifies the 2023 Iraq report. This is a citation-title year mismatch; it does not establish an error in the underlying claim or reporting period.",
+      "sourceLocation": "Freedom House 2023 Iraq report: title and fixed-year URL.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-ce2ce1c02122",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "india",
+          "series": "note:actors-protection",
+          "editionId": "166e8ec0ff724c39",
+          "textSha": "347e549d52a875b789cdf9f1353a1b30628586e179db485b50f7caeef40320a7",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 96,
+              "sourceUrl": "https://www.amnesty.org/en/documents/act50/5418/2022/en/",
+              "quote": "Death sentences and executions 2022"
+            },
+            {
+              "type": "link",
+              "sourceUrl": "https://www.amnesty.org/en/documents/act50/5418/2022/en/",
+              "quote": "‘Death sentences and executions 2022’, May 2023. Last accessed: 19 June 2023"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.amnesty.org/en/documents/act50/5418/2022/en/",
+      "summary": "The citation naming Death sentences and executions 2022 links to Amnesty’s 2021 report (ACT 50/5418/2022). The 2022 in that document code is its publication year. Only the 2022 citation and its bibliography link are flagged; the adjacent 2021 citation is correctly linked.",
+      "sourceLocation": "Amnesty document landing page: report title and document code.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-0198239058de",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "nigeria",
+          "series": "note:internal-relocation",
+          "editionId": "4730e38e39f7c796",
+          "textSha": "b8965b6cb09a725e3707420ef3e8bc2999aa33ced42823482529a05929439783",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 504,
+              "paragraph": "20.11.3",
+              "section": "20. Ibadan and Oyo State",
+              "quote": "in out town of Oyo State",
+              "sourceUrl": "https://www.vanguardngr.com/2024/01/2-kidnapped-in-oyo-community/"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.vanguardngr.com/2024/01/2-kidnapped-in-oyo-community/",
+      "summary": "Paragraph 20.11.3 has “out town”; the held Vanguard article names Otu town. This is a narrow place-name copying typo, not a check of the kidnapping account.",
+      "sourceLocation": "Vanguard article body, 20 January 2024; held copy checked.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-14e5ca944d6c",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "sudan",
+          "series": "note:government-opposition",
+          "editionId": "802c75b9895ca098",
+          "textSha": "70a706587143cc8b8b59cec46d789e68a792e557b5c77666fa2dc61be4a26cee",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 67,
+              "paragraph": "4.7.2",
+              "section": "4.7 Resistance Committees",
+              "quote": "Asad bdelgadir",
+              "sourceUrl": "https://www.dabangasudan.org/en/all-news/article/sudan-s-resistance-committees-show-unity-against-corruption"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.dabangasudan.org/en/all-news/article/sudan-s-resistance-committees-show-unity-against-corruption",
+      "summary": "The original CPIN PDF has “Asad bdelgadir” and “civilian goverors”. The held Radio Dabanga article has Asad Abdelgadir and civilian governors. These are minor copying typos; committee membership and political conduct were not independently checked.",
+      "sourceLocation": "CPIN physical PDF page 35; Radio Dabanga article body, 25 August 2020.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-21bb4a74d59c",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "bangladesh",
+          "series": "note:actors-protection",
+          "editionId": "03af45c55826d452",
+          "textSha": "448c9d96561d10251d943b0c6341e3ead005d09d6ba3a5a38da5f09840b854c3",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 33,
+              "paragraph": "5.1.7",
+              "section": "5. Capabilities of law enforcement agencies",
+              "quote": "Even when complaints were led",
+              "sourceUrl": "https://www.fidh.org/IMG/pdf/bangladesh735a_web.pdf"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.fidh.org/IMG/pdf/bangladesh735a_web.pdf",
+      "summary": "The original CPIN PDF says “complaints were led”; the cited FIDH report says “complaints were filed”. The typo is visible in the original CPIN PDF, rather than introduced by Explorer extraction. The disappearance and investigation claims were not independently checked.",
+      "sourceLocation": "CPIN physical PDF page 16; FIDH source physical PDF page 57.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-29ec78344a57",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "nigeria",
+          "series": "note:internal-relocation",
+          "editionId": "4730e38e39f7c796",
+          "textSha": "b8965b6cb09a725e3707420ef3e8bc2999aa33ced42823482529a05929439783",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 198,
+              "paragraph": "12.5.2",
+              "section": "12. Education",
+              "quote": "bring digital earning",
+              "sourceUrl": "https://www.unicef.org/nigeria/press-releases/federal-ministry-education-and-unicef-celebrate-500000-registered-users-nigeria"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.unicef.org/nigeria/press-releases/federal-ministry-education-and-unicef-celebrate-500000-registered-users-nigeria",
+      "summary": "Paragraph 12.5.2 has “digital earning”; the held UNICEF press release says “digital learning”. This is a dropped-letter typo. Programme delivery was not independently checked.",
+      "sourceLocation": "UNICEF Nigeria press release body, 2 September 2023.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-2d9b85e5f3fa",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "burma",
+          "series": "note:bangladesh-rohingya",
+          "editionId": "9af70f7edeb2e0f5",
+          "textSha": "c489fbe41fdaae8e189cb7f652279bdded76a5ed1a0560fc747eebdfd0dcca86",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 185,
+              "paragraph": "16.3.10",
+              "section": "16. Rohingyas in Bangladesh",
+              "quote": "access to antenna tal",
+              "sourceUrl": "https://www.unfpa.org/updates/eight-years-rohingya-women-and-girls-need-world%E2%80%99s-support-more-ever"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.unfpa.org/updates/eight-years-rohingya-women-and-girls-need-world%E2%80%99s-support-more-ever",
+      "summary": "The quotation has “antenna tal”; the held UNFPA article says “antenatal”. This is a copying typo in the service name. The projected service-loss figures were not independently checked.",
+      "sourceLocation": "UNFPA article body, 25 August 2025.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-5a68bc4c0376",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:blood-feuds",
+          "editionId": "01643b820407e787",
+          "textSha": "17be204ed59591518fd81a62358f31d9d6c37a1b76a94cdce82041c4292ef07c",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 76,
+              "paragraph": "7.1.1",
+              "section": "7.1 Convictions for blood feud",
+              "quote": "took steps to to criminalize",
+              "sourceUrl": "https://riskbulletins.globalinitiative.net/see-obs-011/03-blood-feuds-in-albania-exploited-by-criminal-groups.html"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://riskbulletins.globalinitiative.net/see-obs-011/03-blood-feuds-in-albania-exploited-by-criminal-groups.html",
+      "summary": "Paragraph 7.1.1 repeats “to” in “took steps to to criminalize”. The held Global Initiative article has one “to”. This is a duplicated word; the legislation’s application and impact were not checked.",
+      "sourceLocation": "Global Initiative article body, 11 December 2021.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-64c1bd619e09",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "egypt",
+          "series": "note:opposition-state",
+          "editionId": "a361fa8720c6e94c",
+          "textSha": "518762c7924c4a41142e86b0a91679715ebacef8b7e55009fdc4416cbd0ccb83",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 51,
+              "paragraph": "10.1.9",
+              "section": "10. Treatment of actual or perceived government critics - general",
+              "quote": "Security agencies extensively survey",
+              "sourceUrl": "https://freedomhouse.org/country/egypt/freedom-world/2023"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://freedomhouse.org/country/egypt/freedom-world/2023",
+      "summary": "The quotation has “survey” where Freedom House’s 2023 Egypt report says “surveil”. This is a minor copied-word discrepancy; the surrounding account of monitoring and restrictions remains. Their prevalence and severity were not independently checked.",
+      "sourceLocation": "Freedom in the World 2023 Egypt report, section D4.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-6ff079b51c9d",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "syria",
+          "series": "note:alawites-excluding-minorities-religious",
+          "editionId": "28254b3cba0230d6",
+          "textSha": "b2d28a32cc27021e0193b92c583f9b4cca629d54e637c723457cb8276e6a10d0",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 100,
+              "paragraph": "9.7.7",
+              "section": "9. Druze",
+              "quote": "freedom of religious or belief",
+              "sourceUrl": "https://www.csw.org.uk/ourwork.htm"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.csw.org.uk/ourwork.htm",
+      "summary": "Paragraph 9.7.7 says “freedom of religious or belief”; CSW’s mission wording is “religion or belief”. This is a copying typo in the phrase, not an assessment of CSW’s work.",
+      "sourceLocation": "CSW Our Work page, mission statement; undated held copy.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-7ddd1fd56937",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "syria",
+          "series": "note:children",
+          "editionId": "a0faac83350dc012",
+          "textSha": "be0bceed3637e7afc6349f9973f397edd297652409894a7e7bd3c6bc766e45a0",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 82,
+              "paragraph": "12.1.9",
+              "section": "12. Violence against children",
+              "quote": "their distictive, brightly colored appearance",
+              "sourceUrl": "https://www.ecoi.net/en/file/local/2133997/rapport-syria-security-situation-return-documents-2025.pdf"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.ecoi.net/en/file/local/2133997/rapport-syria-security-situation-return-documents-2025.pdf",
+      "summary": "Paragraph 12.1.9 has “distictive”; the original DIS report says “distinctive”. This is a dropped-letter typo, not an independent assessment of landmine risk.",
+      "sourceLocation": "DIS Syria report, December 2025, physical PDF page 14.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-98f37e851150",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "bangladesh",
+          "series": "note:atheists-minorities-religious",
+          "editionId": "aa337958deb1a969",
+          "textSha": "d1c936f1775c3b32727d0ab215a161df399f87d142a156109821c1b4ac0e263a",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 246,
+              "paragraph": "12.6.4",
+              "section": "12. Societal treatment and inter-religious relations",
+              "quote": "women’s rights as much as for his atheistic views",
+              "sourceUrl": "https://fot.humanists.international/countries/asia-southern-asia/bangladesh/"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://fot.humanists.international/countries/asia-southern-asia/bangladesh/",
+      "summary": "The quotation repeats “much” in “as much for … as much as for”. The held Humanists International page has “as much for … as for”. This is a minor repeated-phrase defect. The historical webpage wording and underlying accounts of attacks were not independently established.",
+      "sourceLocation": "Humanists International Bangladesh page, paragraph naming Niladri Chatterjee; held current copy.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-9c868a7ccf0c",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "india",
+          "series": "note:affiliation-parties-political",
+          "editionId": "c9152b18f17de7b4",
+          "textSha": "c4983e8eb4360d43bf793cac07eadea425e1637a1e9ffc926498bb74697f6e7d",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 103,
+              "paragraph": "16.7.4",
+              "section": "16.7 Treatment of suspected Sikh separatists",
+              "quote": "search, search, seizure",
+              "sourceUrl": "https://www.deccanherald.com/india/badal-other-akali-leaders-briefly-detained-during-protest-over-centres-bsf-jurisdiction-order-1040631.html"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.deccanherald.com/india/badal-other-akali-leaders-briefly-detained-during-protest-over-centres-bsf-jurisdiction-order-1040631.html",
+      "summary": "The original CPIN PDF repeats “search” in “search, search, seizure”. The retained Deccan Herald article body has one “search”. That body is held in the page’s structured article metadata. This is a duplicated word, not a check of statutory BSF powers.",
+      "sourceLocation": "CPIN physical PDF page 33; Deccan Herald JSON-LD articleBody, 14 October 2021.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-edddd5da761b",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "iran",
+          "series": "note:christian-christians-converts",
+          "editionId": "f27eb7ba3e4a67d8",
+          "textSha": "aa6df70c925a20108741e213b8aa9b00260ea9565c73b1efb2b9f6cf0286c52e",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 301,
+              "paragraph": "10.7.1",
+              "section": "10. State attitudes and treatment",
+              "quote": "Section 610 threatening national security]",
+              "sourceUrl": "https://coi.euaa.europa.eu/administration/netherlands/PLib/General_Country_of_Origin_Information_Report_Iran_September_2023.pdf"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://coi.euaa.europa.eu/administration/netherlands/PLib/General_Country_of_Origin_Information_Report_Iran_September_2023.pdf",
+      "summary": "Paragraph 10.7.1 has an unmatched closing bracket after “threatening national security”. The added explanation is supported by the preceding bullet in the cited report; only the malformed bracket is flagged. The law and sentencing practice were not assessed.",
+      "sourceLocation": "BZ Iran report, September 2023: physical PDF page 89, printed page 77, adjacent section 610 bullet.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-queue266-fd5203e98152",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "sudan",
+          "series": "note:government-opposition",
+          "editionId": "802c75b9895ca098",
+          "textSha": "70a706587143cc8b8b59cec46d789e68a792e557b5c77666fa2dc61be4a26cee",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 113,
+              "paragraph": "6.3.3",
+              "section": "6.3 Enforced disappearances",
+              "quote": "insists on accurancy",
+              "sourceUrl": "https://www.dabangasudan.org/en/all-news/article/sudan-sovereign-council-must-ratify-un-convention-against-enforced-disappearances"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://www.dabangasudan.org/en/all-news/article/sudan-sovereign-council-must-ratify-un-convention-against-enforced-disappearances",
+      "summary": "The original CPIN PDF says “accurancy”; the held Radio Dabanga article says “accuracy”. This is a spelling typo, not an assessment of the investigating committee’s competence.",
+      "sourceLocation": "CPIN physical PDF page 46; Radio Dabanga article body, 4 December 2020.",
+      "scope": "Minor citation or copying defect in this exact edition only; no independent factual approval of the underlying claim."
+    },
+    {
+      "id": "ai-gap-ghanas-fgm-regions-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "major",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "The regional figures are reversed: the Ghana 2011 MICS survey gives Upper East 27.8% and Upper West 41.1% for women aged 15–49. This passage assigns them the other way round. The secondary report also contains the reversal, so this is an inherited source error rather than evidence of deliberate misquotation. It changes the regional prevalence comparison; it does not estimate present-day individual risk.",
+      "targets": [
+        {
+          "country": "ghana",
+          "series": "note:background-information-internal-relocation",
+          "editionId": "601342a1a19c2186",
+          "textSha": "8a73130b8857da0e47411da2a73ed06536a40b561d75cfad8f3953c2d70f4e2e",
+          "anchors": [
+            {
+              "type": "sentence",
+              "quote": "‘FGM is practised by several ethnic groups including the Kusasis, Frafras, Kassenas, Nankanis, Busangas, Wallas, Dagarbas, Builsas and Sisalas, who live mainly in the Upper East, Upper West and Northern regions of Ghana, and the migrant population in the south. As a result, the Upper East and Upper West have the highest prevalence of FGM, at 41.1% and 27.8% respectively (of women aged 15–49), and all other regions have a prevalence of less than 5%. The Volta region, along the east coast, has the lowest prevalence, at 0.4%. Women aged 15–49 who live in rural areas are more likely to undergo FGM (5.3%) than those living in urban areas (2.5%). The prevalence of FGM is inversely correlated with level of education and wealth, and 94.2% of women aged 15–49 who have heard of FGM believe the practice should be stopped. The prevalence of FGM among Muslim women aged 15–49 who have heard of FGM is 12%, among those practising traditional religions is 10% and among Roman Catholics is 5%.’"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://microdata.statsghana.gov.gh/index.php/catalog/88/download/365#page=131",
+      "sourceLocation": "Ghana MICS 2011, Table CP.6, printed pages 226–227 / physical PDF page 131; raw text, independent Poppler and rendered table.",
+      "scope": "Exact held edition and wording only. Interactive AI review; no global factual approval."
+    },
+    {
+      "id": "ai-gap-pakistan-bti-repeated-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "Paragraph 7.7.3 says BTI 2024 repeated the 2022 assertion. The corresponding clause changed from “do not have official sanction” to “do not have the means to sanction officials”. The shared legitimacy/dispute-resolution wording remains, but the clause is not a repetition. This flags the inaccurate attribution of unchanged wording, without deciding the legal powers of informal courts.",
+      "targets": [
+        {
+          "country": "pakistan",
+          "series": "note:actors-protection",
+          "editionId": "bae4ed14e349f480",
+          "textSha": "7bce70aa929bbaec41edcf989006659d9ab5e4985cb1c1b566168d6606607180",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.7.3",
+              "footnote": 169,
+              "quote": "The BTI 2024 repeated this assertion"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://bti-project.org/fileadmin/api/content/en/downloads/reports/country_report_2024_PAK.pdf#page=12",
+      "sourceLocation": "BTI Pakistan 2022 and 2024, physical page 12 in each; original PDF text and independent Poppler.",
+      "scope": "Exact held edition and wording only. Interactive AI review; no global factual approval."
+    },
+    {
+      "id": "ai-gap-vietnam-bti-footnotes-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "In this archived web body, footnote 16 follows a quotation introduced as the US State Department trafficking report, while footnote 32 follows a disabilities quotation that is absent from BTI 2024. Both footnotes instead name and link BTI 2024. These are citation associations in this particular web body; they do not establish that the quoted claims are false and do not apply to another edition or its differently numbered PDF.",
+      "targets": [
+        {
+          "country": "vietnam",
+          "series": "note:children-unaccompanied",
+          "editionId": "842c9804c4fb4d2d",
+          "textSha": "3914ba26f0f25eeebd32d585ebacd0cad6a894ea43ada31bd1e1f082c5bf8753",
+          "anchors": [
+            {
+              "type": "link",
+              "footnote": 16,
+              "quote": "BTI, ‘BTI 2024 Vietnam Country Report’, March 2024",
+              "sourceUrl": "https://bti-project.org/en/reports/country-report/VNM"
+            },
+            {
+              "type": "link",
+              "footnote": 32,
+              "quote": "BTI, ‘BTI 2024 Vietnam Country Report’, March 2024",
+              "sourceUrl": "https://bti-project.org/en/reports/country-report/VNM"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://bti-project.org/fileadmin/api/content/en/downloads/reports/country_report_2024_VNM.pdf",
+      "sourceLocation": "Archived web body, paragraphs 8.3.6 and section 9.3; actual footnotes 16 and 32. BTI 2024 original report checked for the attributed wording.",
+      "scope": "Exact held edition and wording only. Interactive AI review; no global factual approval."
+    },
+    {
+      "id": "ai-gap-ghana-hrw-threats-wording-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "The quotation changes “threats of harm” to “threats or harm”. The pre-publication archived article confirms the former wording. This is a minor quotation defect; both passages retain blackmail and violent reprisals, so this check does not challenge the wider account of persecution.",
+      "targets": [
+        {
+          "country": "ghana",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "55fa66af194bda7f",
+          "textSha": "d473bf744359ba8358e7808c57187508407d754a00355d9218d605a259c43011",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "12.15.12",
+              "footnote": 237,
+              "quote": "exposing them to threats or harm, blackmail, and violent reprisals"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://web.archive.org/web/20240425022654id_/https://www.hrw.org/news/2022/03/08/homophobia-feminist-issue",
+      "sourceLocation": "HRW article dated 8 March 2022; Internet Archive capture 25 April 2024, verified against its indexed content digest.",
+      "scope": "Exact held edition and wording only. Interactive AI review; no global factual approval."
+    },
+    {
+      "id": "ai-gap-afghanistan-pajhwok-wording-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "The source says “past decades” and joins the two conditions with “and”; these quotations use “past decade” and “or”. The October 2021 archived article confirms the differences. This is a minor quotation defect in these two held editions. The same CPIN paragraph acknowledges other deaths and incidents, so it does not establish a claim that the whole period was peaceful.",
+      "targets": [
+        {
+          "country": "afghanistan",
+          "series": "note:security-situation",
+          "editionId": "cc4b1fd4e2243cd2",
+          "textSha": "76aca0731556864cdee50d2c18eb3346e8a942882a6524c7da863302f9cfc3bc",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "5.4.3",
+              "footnote": 50,
+              "quote": "in the past decade in which no civilian was killed or injured or no conflict related incidents happened"
+            }
+          ]
+        },
+        {
+          "country": "afghanistan",
+          "series": "note:security-situation",
+          "editionId": "40fad59f9fe96d5f",
+          "textSha": "666db9a22e945e3d1910bcd63ace99fbe5c3e4da0853ebb0c3a7ee73fd7d2248",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "5.4.3",
+              "footnote": 41,
+              "quote": "in the past decade in which no civilian was killed or injured or no conflict related incidents happened"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://web.archive.org/web/20211003201604id_/https://pajhwok.com/2021/09/18/afghan-conflict-ends-but-economic-problems-surging/",
+      "sourceLocation": "Pajhwok article dated 18 September 2021; Internet Archive capture 3 October 2021, digest verified.",
+      "scope": "Exact held edition and wording only. Interactive AI review; no global factual approval."
+    },
+    {
+      "id": "published-asylos-rwanda-2022-legal-representation",
+      "kind": "external",
+      "status": "context",
+      "collapsible": true,
+      "summary": "Legal representation and capacity · Asylos, July 2022",
+      "author": "Asylos",
+      "organisation": "Asylos",
+      "publishedAt": "2022-07",
+      "publication": {
+        "title": "Commentary on Rwanda asylum system CPIN and assessment",
+        "url": "https://asylos.org/wp-content/uploads/2025/03/asylosrwandacommentaryfinal_3ba1b57d-65ca-44c7-8b18-68e20bf8be50.pdf#page=8",
+        "location": "Physical PDF page 8"
+      },
+      "evidence": {
+        "quote": "this assessment fails to reflect information found in the sources cited by the Home Office, but not selected for inclusion",
+        "url": "https://asylos.org/wp-content/uploads/2025/03/asylosrwandacommentaryfinal_3ba1b57d-65ca-44c7-8b18-68e20bf8be50.pdf#page=8",
+        "title": "Reviewer’s words · extract",
+        "publicDisplayApproved": true,
+        "rightsBasis": "20-word attributed extract from this work; link to the original commentary, not full republication."
+      },
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.2.2",
+              "quote": "2.2.2 The government does not provide legal assistance to asylum seekers during the first instance RSD process."
+            }
+          ]
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8"
+        }
+      ],
+      "scope": "Attributed criticism of the May 2022 publications, focusing on assessment paragraph 2.2.2. Not an independently established error or a whole-review merits assessment."
+    },
+    {
+      "id": "published-iagci-rwanda-2024-methodology",
+      "kind": "external",
+      "status": "context",
+      "collapsible": true,
+      "summary": "Research methodology and interview context · IAGCI review of May 2022 notes",
+      "author": "Stephanie Huber, as reported in the IAGCI meeting record",
+      "organisation": "IAGCI / Independent Chief Inspector of Borders and Immigration",
+      "publishedAt": "2024-09-09",
+      "publication": {
+        "title": "Inspection report on Home Office country of origin information on Rwanda (January 2024)",
+        "url": "https://assets.publishing.service.gov.uk/media/66dee1724e9dacea8a0aa664/Inspection_report_on_Home_Office_country_of_origin_information_on_Rwanda__January_2024_.pdf#page=13",
+        "location": "Physical PDF pages 13–14 / printed pages 8–9, paragraphs 2.5 and 2.10"
+      },
+      "evidence": {
+        "quote": "the omission of information on the context of meetings (for example, attendees, location, and details on how the meeting was arranged) was problematic",
+        "url": "https://assets.publishing.service.gov.uk/media/66dee1724e9dacea8a0aa664/Inspection_report_on_Home_Office_country_of_origin_information_on_Rwanda__January_2024_.pdf#page=13",
+        "title": "Published account of reviewer’s criticism · extract",
+        "publicDisplayApproved": true,
+        "rightsBasis": "Crown copyright, Open Government Licence v3.0; original report licence; nested third-party quotations excluded."
+      },
+      "response": "He accepted that the CPINs could have been more explicit about the methodology followed and the standards adhered to during the team’s research but did not accept that appropriate standards were not applied.",
+      "responseIsExcerpt": true,
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa"
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8"
+        }
+      ],
+      "scope": "A report-level methodological criticism of the May 2022 publications, and the Home Office reply from the same meeting record. The reply is not a response to Asylos and does not settle the criticism."
+    },
+    {
+      "id": "ai-followup-published-asylos-rwanda-2022-legal-representation",
+      "kind": "ai",
+      "status": "context",
+      "summary": "The recovered covers identify the May 2022 Version 1.0 assessment and asylum-system notes cited by this commentary. Paragraph 2.2.2 does acknowledge that government legal assistance is absent at first instance and says UNHCR/LAF can provide support. Asylos challenges whether the available capacity supports that assessment. This is a source-selection and capacity question, not proof that no legal support existed; a full merits check of the commentary remains open.",
+      "reviewOf": [
+        "published-asylos-rwanda-2022-legal-representation"
+      ],
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.2.2",
+              "quote": "2.2.2 The government does not provide legal assistance to asylum seekers during the first instance RSD process."
+            }
+          ]
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8"
+        }
+      ],
+      "sourceCopyUrl": "https://asylos.org/wp-content/uploads/2025/03/asylosrwandacommentaryfinal_3ba1b57d-65ca-44c7-8b18-68e20bf8be50.pdf#page=8",
+      "sourceLocation": "Physical PDF page 8",
+      "scope": "Separate AI follow-up below the original reviewer and any Home Office response; unresolved merits remain explicit."
+    },
+    {
+      "id": "ai-followup-published-iagci-rwanda-2024-methodology",
+      "kind": "ai",
+      "status": "context",
+      "summary": "The published meeting record includes both the methodological criticism and the Home Office reply. The reply accepts a need for clearer explanation but disputes failure to apply appropriate standards. The two May 2022 notes are now held and identified. This follow-up establishes edition applicability and the existence of a response, without deciding whether the research met appropriate standards.",
+      "reviewOf": [
+        "published-iagci-rwanda-2024-methodology"
+      ],
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa"
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8"
+        }
+      ],
+      "sourceCopyUrl": "https://assets.publishing.service.gov.uk/media/66dee1724e9dacea8a0aa664/Inspection_report_on_Home_Office_country_of_origin_information_on_Rwanda__January_2024_.pdf#page=13",
+      "sourceLocation": "Physical PDF pages 13–14 / printed pages 8–9, paragraphs 2.5 and 2.10",
+      "scope": "Separate AI follow-up below the original reviewer and any Home Office response; unresolved merits remain explicit."
+    },
+    {
+      "id": "ai-albania-who-reporting-basis-20261007",
+      "kind": "ai",
+      "status": "context",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.1"
+      ],
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        }
+      ],
+      "summary": "WHO describes Mental Health Atlas 2020 as compiling data provided by countries. That establishes the reporting basis, not independent verification of all Albanian mental-health entitlements or patient payments. The Gabrani study covers a mixed provider-using sample in two regions; its overall spending results do not by themselves settle the national mental-health subgroup. The original reviewer’s criticism remains above this follow-up; the underlying country return and subgroup evidence are still missing.",
+      "sourceCopyUrl": "https://www.who.int/publications/i/item/9789240036703",
+      "sourceLocation": "WHO Mental Health Atlas 2020 publication description; Gabrani study methods, Table 2 and Figure 1 retained separately.",
+      "scope": "Reporting provenance established; clinical subgroup, exemptions and exact national coverage unresolved."
+    },
+    {
+      "id": "ai-gap-india-bbc-quotation-omission-20261007",
+      "kind": "ai",
+      "status": "possible-issue",
+      "severity": "minor",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "summary": "The quotation silently omits the BBC sentence saying Delhi police had not yet responded to Amnesty’s request. That sentence is present in the pre-publication archived article. This is an unmarked quotation omission; the CPIN retains the police denial and attribution of allegations, so this check does not establish a misleading overall account of the riots.",
+      "targets": [
+        {
+          "country": "india",
+          "series": "note:castes-minorities-religious-scheduled-tribes",
+          "editionId": "344f476b63bf8033",
+          "textSha": "c8b047f2ee8530f5c929611f5f630abdd5e6aba5215786304b3e4ff8877f127a",
+          "anchors": [
+            {
+              "type": "sentence",
+              "quote": "‘Indian police “committed serious human rights violations” during deadly religious riots in Delhi earlier this year, Amnesty International alleges. It said police beat protesters, tortured detainees and at times took part in riots with Hindu mobs. More than 40 people died when clashes broke out between Hindus and Muslims over a controversial citizenship law. Muslims bore the brunt, Amnesty said. The investigation corroborates the BBC’s reporting on incidents of police brutality and complicity during the riots in February, the deadliest in the city for decades. The police denied any wrongdoing.’"
+            }
+          ]
+        }
+      ],
+      "sourceCopyUrl": "https://web.archive.org/web/20211020085648id_/https://www.bbc.co.uk/news/world-asia-india-53891354",
+      "sourceLocation": "BBC article dated 28 August 2020; archived 20 October 2021, digest verified; opening paragraphs.",
+      "scope": "Minor quotation defect in this November 2021 held edition only; no country-risk verdict."
+    },
+    {
+      "id": "published-arc-uwe-quantitative-risk-2021",
+      "kind": "external",
+      "status": "context",
+      "collapsible": true,
+      "summary": "Quantitative risk assessment · ARC Foundation / UWE, November 2021",
+      "author": "ARC Foundation and Dr Christel Querton",
+      "organisation": "ARC Foundation / University of the West of England",
+      "publishedAt": "2021-11-12",
+      "publication": {
+        "title": "Commentary on quantitative assessments in CPINs",
+        "url": "https://web.archive.org/web/20211112110223id_/https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf#page=9",
+        "location": "Physical pages 1–2: eight named reports; pages 2–9: examples and recommendations; recommendation 5 on page 9"
+      },
+      "evidence": {
+        "quote": "CPINs should ensure a holistic assessment of country of origin information is undertaken and that quantitative data is not given undue weight",
+        "url": "https://web.archive.org/web/20211112110223id_/https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf#page=9",
+        "title": "Reviewer’s words · recommendation 5",
+        "publicDisplayApproved": true,
+        "rightsBasis": "22-word attributed extract; linked archived original, not full republication."
+      },
+      "targets": [
+        {
+          "country": "ghana",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "ee1f340f45d5bf10",
+          "textSha": "e129274356d82cc5bf732e7313ccf7c1e42f61801818a32a687fd83ebd7148f8",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.14",
+              "quote": "2.4.14 The evidence suggests that while elements of the government have used"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "4b6f3edbcf8c9ad9",
+          "textSha": "5d725acb2aff8419e125ed9f6732833a7fc43a02d67aa45f5b6f8fa02a61a847",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.11",
+              "quote": "2.4.11 Available evidence does not indicate that there is a systematic campaign"
+            }
+          ]
+        },
+        {
+          "country": "bangladesh",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "54b409aece9ab286",
+          "textSha": "c9fda3be2f2ab8bbc50a15cd8696da24807fb68b5315a3b277bee9783dcac58c",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.10",
+              "quote": "2.4.10 As a global comparison, a 2013 World Health Organization (WHO) report"
+            }
+          ]
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "a03dde9d4ce50e28",
+          "textSha": "059469e7e07d4e7aa4a916e1037a735e67e56f7f84bd3b67bc9274eedbe9d1c1",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.2",
+              "quote": "2.4.2 Women participate in the political process and are represented in government,"
+            }
+          ]
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "2e1bbde24046c081",
+          "textSha": "b996ca98aded2f44f7c1a9296bb43ccdf9363d19102e24f7dc3af9a2c170fc12",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.2",
+              "quote": "2.4.2 Women participate in the political process and are represented in government,"
+            }
+          ]
+        },
+        {
+          "country": "eritrea",
+          "series": "note:exit-illegal-national-service",
+          "editionId": "066a06246835facd",
+          "textSha": "5c948bc193eadf956231b2aadedaf08dce263c1fe7d1368798a5af950222b102",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.9",
+              "quote": "2.4.9 Laws exist which set out the conditions and length of service"
+            }
+          ]
+        },
+        {
+          "country": "china",
+          "series": "note:christian-groups-non-religious",
+          "editionId": "4e7860b952417e71",
+          "textSha": "457be17d4ff3e173c1fed67e247d8f928a9b585dc78432ec6c564297d1f3a5fc",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.23",
+              "quote": "2.4.23 The number of adherents of folk religions, Buddhism and Taoism in"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:minorities-religious",
+          "editionId": "387c21c9a173ce77",
+          "textSha": "66bef9dff683d897eaeae1f9606d2898ada5ae8080389e6819eb5d20ae74889b",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.9",
+              "quote": "2.4.9 Overall the country of origin information does not provide clear and"
+            }
+          ]
+        },
+        {
+          "country": "pakistan",
+          "series": "note:muslims-shia",
+          "editionId": "c2517188b44a5e02",
+          "textSha": "14b8769416eebd4c5895e85305c214f5144ca0623fdd0fe3f27fcc618ae08327",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.7",
+              "quote": "2.4.7 Relative to the size of the Shia population in Pakistan, Shia"
+            }
+          ]
+        }
+      ],
+      "scope": "Attributed methodological/legal criticism of the eight specifically named 2020–2021 reports, mapped to nine held publication bodies. It is not a numerical correction or independently verified legal conclusion. No Home Office response to this specific commentary was located in the bounded search."
+    },
+    {
+      "id": "ai-followup-arc-uwe-quantitative-risk-2021",
+      "kind": "ai",
+      "status": "context",
+      "reviewOf": [
+        "published-arc-uwe-quantitative-risk-2021"
+      ],
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "ghana",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "ee1f340f45d5bf10",
+          "textSha": "e129274356d82cc5bf732e7313ccf7c1e42f61801818a32a687fd83ebd7148f8",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.14",
+              "quote": "2.4.14 The evidence suggests that while elements of the government have used"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "4b6f3edbcf8c9ad9",
+          "textSha": "5d725acb2aff8419e125ed9f6732833a7fc43a02d67aa45f5b6f8fa02a61a847",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.11",
+              "quote": "2.4.11 Available evidence does not indicate that there is a systematic campaign"
+            }
+          ]
+        },
+        {
+          "country": "bangladesh",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "54b409aece9ab286",
+          "textSha": "c9fda3be2f2ab8bbc50a15cd8696da24807fb68b5315a3b277bee9783dcac58c",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.10",
+              "quote": "2.4.10 As a global comparison, a 2013 World Health Organization (WHO) report"
+            }
+          ]
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "a03dde9d4ce50e28",
+          "textSha": "059469e7e07d4e7aa4a916e1037a735e67e56f7f84bd3b67bc9274eedbe9d1c1",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.2",
+              "quote": "2.4.2 Women participate in the political process and are represented in government,"
+            }
+          ]
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "2e1bbde24046c081",
+          "textSha": "b996ca98aded2f44f7c1a9296bb43ccdf9363d19102e24f7dc3af9a2c170fc12",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.2",
+              "quote": "2.4.2 Women participate in the political process and are represented in government,"
+            }
+          ]
+        },
+        {
+          "country": "eritrea",
+          "series": "note:exit-illegal-national-service",
+          "editionId": "066a06246835facd",
+          "textSha": "5c948bc193eadf956231b2aadedaf08dce263c1fe7d1368798a5af950222b102",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.9",
+              "quote": "2.4.9 Laws exist which set out the conditions and length of service"
+            }
+          ]
+        },
+        {
+          "country": "china",
+          "series": "note:christian-groups-non-religious",
+          "editionId": "4e7860b952417e71",
+          "textSha": "457be17d4ff3e173c1fed67e247d8f928a9b585dc78432ec6c564297d1f3a5fc",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.23",
+              "quote": "2.4.23 The number of adherents of folk religions, Buddhism and Taoism in"
+            }
+          ]
+        },
+        {
+          "country": "iraq",
+          "series": "note:minorities-religious",
+          "editionId": "387c21c9a173ce77",
+          "textSha": "66bef9dff683d897eaeae1f9606d2898ada5ae8080389e6819eb5d20ae74889b",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.9",
+              "quote": "2.4.9 Overall the country of origin information does not provide clear and"
+            }
+          ]
+        },
+        {
+          "country": "pakistan",
+          "series": "note:muslims-shia",
+          "editionId": "c2517188b44a5e02",
+          "textSha": "14b8769416eebd4c5895e85305c214f5144ca0623fdd0fe3f27fcc618ae08327",
+          "anchors": [
+            {
+              "type": "paragraph",
+              "paragraph": "2.4.7",
+              "quote": "2.4.7 Relative to the size of the Shia population in Pakistan, Shia"
+            }
+          ]
+        }
+      ],
+      "summary": "The full nine-page commentary is now held, and the selected example passages are located in the mapped historical report bodies and original PDF text. Its argument concerns the weight and interpretation of population/prevalence statistics, the separation of seriousness from likelihood, and inference from missing reporting. Matching a number or quotation does not answer that argument. This follow-up verifies the review’s edition applicability and source passages; it does not independently settle the legal merits or carry criticism into a newer report.",
+      "sourceCopyUrl": "https://web.archive.org/web/20211112110223id_/https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf",
+      "sourceLocation": "Original nine-page commentary, archived 12 November 2021; indexed content digest and retained SHA256 verified.",
+      "scope": "Edition and selected passage applicability established; abridged review quotations are not certified as full verbatim transcriptions. Wider contextual/legal merits remain unresolved; original commentary remains above this AI follow-up."
     }
   ]
 }

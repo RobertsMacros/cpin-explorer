@@ -113,6 +113,13 @@ export async function loadNote(country, note) {
 /* ------------------------------------------------------------------ structure of a body (DOM) */
 
 const PARA_EXCLUDE = "table, .footnotes, li, blockquote, .info-notice, .call-to-action, .application-notice";
+// Archived GOV.UK bodies sometimes mark the anchor only with rel="footnote",
+// or put doc-noteref on its enclosing sup. Keep their original markup intact.
+export const FOOTNOTE_REF_SELECTOR = [
+  'a[role="doc-noteref"]', 'sup a.footnote',
+  'a[rel~="footnote"][href^="#fn"]', 'a[rel~="footnote"][href^="#old-fn"]',
+  'sup[role="doc-noteref"] a[href^="#"]',
+].join(", ");
 
 /**
  * Text offsets of a body's structure: numbered paragraphs, headings, footnote references and footnote
@@ -157,7 +164,7 @@ export function analyseBody(root) {
   anchors.sort((a, b) => a.at - b.at);
   sections.sort((a, b) => a.at - b.at);
   const twice = usedTwice(paras.map((p) => p.num));
-  const refs = [...root.querySelectorAll('a[role="doc-noteref"], sup a.footnote[href^="#fn"]')].map((a) => ({
+  const refs = [...root.querySelectorAll(FOOTNOTE_REF_SELECTOR)].map((a) => ({
     a, n: Number((a.getAttribute("href") || "").match(/(\d+)\s*$/)?.[1] || a.textContent.match(/\d+/)?.[0]),
     at: firstTextAt(a), len: a.textContent.trim().length,
   })).filter((r) => r.n && r.at != null).sort((x, y) => x.at - y.at);

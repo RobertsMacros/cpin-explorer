@@ -3,6 +3,19 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Source evidence follow-up, 7 October 2026
+
+Read [the evidence/publication record](reviews/2026-10-07-evidence-followup.md).
+The original 54 gaps now have 30 scoped resolutions and 24 still unresolved.
+The publication set preserves all earlier 534 records and adds 21 scoped AI flag
+groups, three attributed review extracts and four separate review follow-ups.
+The two exact May 2022 Rwanda editions and full ARC/UWE review are recovered;
+only their verified historical editions receive the comments. The Sudan spelling,
+WHO subgroup, exact Colombia summary and other historical gaps remain open.
+Use Project coordination → Roadmaps → CPIN Explorer as the current plan; the old
+source plan is an evidence archive. Do not rerun the full mechanical corpus or
+treat these scoped resolutions as factual approval. No paid calls were made.
+
 ## Country-aware header globe, 7 October 2026
 
 The header mark follows the dashboard/report country and carries that view through

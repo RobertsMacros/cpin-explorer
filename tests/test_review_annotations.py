@@ -37,6 +37,37 @@ def normalise(value):
     return ' '.join(value.split())
 
 
+def footnote_contexts(root, anchor):
+    """Include unnumbered quoted paragraphs after the numbered introduction."""
+    ps = root.xpath('//p')
+    contexts = []
+    for ref in root.xpath('//a[@href="#fn:' + str(anchor['footnote']) + '"]'):
+        parents = ref.xpath('ancestor::p[1]')
+        if not parents:
+            continue
+        end = ps.index(parents[0])
+        starts = [i for i, p in enumerate(ps[:end + 1]) if re.match(
+            re.escape(anchor['paragraph']) + r'(?:\s|\.)', normalise(p.text_content()))]
+        if starts:
+            run = ps[starts[-1]:end + 1]
+            if any(re.match(r'^\d+(?:\.\d+){2,}(?:\s|\.)', normalise(p.text_content()))
+                   for p in run[1:]):
+                continue
+            contexts.append(normalise(' '.join(p.text_content() for p in run)))
+    return contexts
+
+
+def test_footnote_context_includes_only_its_numbered_quote_run():
+    root = html.fromstring('''<div><p>4.7.1 Earlier introduction</p>
+      <p>Repeated wording</p><p>4.7.2 Current introduction</p>
+      <p>Repeated wording <a rel="footnote" href="#fn:67">67</a></p>
+      <p>4.7.3 Later wording</p></div>''')
+    anchor = {'paragraph': '4.7.2', 'footnote': 67}
+    assert footnote_contexts(root, anchor) == ['4.7.2 Current introduction Repeated wording 67']
+    assert footnote_contexts(root, {**anchor, 'paragraph': '4.7.1'}) == []
+    assert footnote_contexts(root, {**anchor, 'paragraph': '4.7.3'}) == []
+
+
 def test_public_annotations_match_the_held_body_and_unique_original_passage(tmp_path):
     records = json.loads((ROOT / 'prototypes/reviews/annotations.json').read_text())['records']
     # A fresh checkout has no ignored prototypes/data export. Build this test's
@@ -66,14 +97,10 @@ def test_public_annotations_match_the_held_body_and_unique_original_passage(tmp_
                     texts = [normalise(a.xpath('ancestor::p[1]')[0].text_content()) for a in candidates]
                 elif anchor['type'] == 'sentence':
                     texts = [normalise(p.text_content()) for p in root.xpath('//p')]
+                elif anchor['type'] == 'footnote':
+                    texts = footnote_contexts(root, anchor)
                 else:
                     candidates = [p for p in root.xpath('//p') if re.match(re.escape(anchor['paragraph']) + r'(?:\s|\.)', normalise(p.text_content()))]
-                    if anchor['type'] == 'footnote':
-                        # References can occur in an unnumbered quotation after
-                        # the numbered introduction, while retaining its pinpoint.
-                        candidates = [p for p in candidates if any(
-                            ref is not None and (p in ref.iterancestors() or p in ref.xpath('preceding::p'))
-                            for ref in root.xpath('//a[@href="#fn:' + str(anchor['footnote']) + '"]'))]
                     texts = [normalise(p.text_content()) for p in candidates]
                 assert sum(normalise(anchor['quote']) in text for text in texts) == 1, (record['id'], anchor)
 
@@ -81,8 +108,10 @@ def test_public_annotations_match_the_held_body_and_unique_original_passage(tmp_
 def test_directory_uses_corrected_scopes_and_retains_the_new_mirror():
     reviews = {r['id']: r for r in json.loads((ROOT / 'config/review-sources.json').read_text())['reviews']}
     thematic = reviews['arc-uwe-quantitative-risk-2021']
-    assert thematic['countries'] == ['ghana', 'iraq', 'bangladesh', 'namibia']
-    assert thematic['targets'] == []
+    assert set(thematic['countries']) == {'ghana', 'iraq', 'bangladesh', 'namibia', 'eritrea', 'china', 'pakistan'}
+    assert len(thematic['targets']) == 9  # Eight reports, including Namibia PDF and web bodies.
+    assert thematic['verifiedSnapshotSha'] == '7b9b1bd16a91a76255a6ab76be7762878d76747060ae465cb62b24d61f56009d'
+    assert all(t['mapping'] == 'edition-declaration-checked' for t in thematic['targets'])
     assert any('ecoi.net' in url for url in reviews['arc-sri-lanka-ffm-2020']['relatedUrls'])
     assert reviews['arc-sri-lanka-ffm-2020']['targets'][0]['editionId'] == '1ad495cdba0a2605'
     assert all(t['country'] in {'albania', 'pakistan'} for t in reviews['iagci-albania-pakistan-2024']['targets'])

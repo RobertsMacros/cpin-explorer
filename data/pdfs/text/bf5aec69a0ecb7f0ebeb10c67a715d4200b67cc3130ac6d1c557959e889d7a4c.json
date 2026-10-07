@@ -1,0 +1,643 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 18,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 23,
+ "paragraphs": 104,
+ "list_items": 3,
+ "tables": 2,
+ "figures": 0,
+ "footnotes": 0,
+ "bookmarks": 0,
+ "warnings": [
+  "no bookmarks: headings found by type size and numbering"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 7,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    301.67,
+    526.78,
+    315.05
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    161.24,
+    526.78,
+    174.62
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    464.41,
+    526.78,
+    477.79
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    358.67,
+    526.78,
+    372.05
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    728.94,
+    526.78,
+    742.32
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    384.47,
+    526.78,
+    397.85
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    699.52,
+    526.78,
+    712.9
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    303.47,
+    526.78,
+    316.85
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    598.72,
+    526.78,
+    612.1
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    167.24,
+    526.78,
+    180.62
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    441.01,
+    526.78,
+    454.39
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    344.87,
+    526.78,
+    358.25
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    496.69,
+    526.78,
+    510.07
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    106.04,
+    526.78,
+    119.42
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    675.52,
+    526.78,
+    688.9
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    106.04,
+    525.94,
+    119.42
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.81,
+    183.33,
+    101.85
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.02,
+    108.32,
+    525.46,
+    121.7
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Contents .................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    127.16,
+    525.46,
+    140.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Assessment .............................................................................................................. 5",
+   "bbox": [
+    72.02,
+    145.88,
+    525.46,
+    159.26
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Key judgments ........................................................................................................ 5",
+   "bbox": [
+    84.02,
+    164.72,
+    525.46,
+    178.1
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1. Introduction ...................................................................................................... 7",
+   "bbox": [
+    84.02,
+    183.56,
+    525.46,
+    196.94
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1.1 Inadmissibility decision ............................................................................. 7",
+   "bbox": [
+    107.42,
+    202.28,
+    525.46,
+    215.66
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2. Consideration of issues ................................................................................... 7",
+   "bbox": [
+    84.02,
+    221.12,
+    525.46,
+    234.5
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.1 Access to the asylum procedure .............................................................. 7",
+   "bbox": [
+    107.42,
+    239.99,
+    525.46,
+    253.37
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.2 Access to legal representation ................................................................. 9",
+   "bbox": [
+    107.42,
+    258.71,
+    525.46,
+    272.09
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.3 Ability to challenge/appeal a negative decision ........................................ 9",
+   "bbox": [
+    107.42,
+    277.55,
+    525.46,
+    290.93
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.4 Documentation confirming status ........................................................... 10",
+   "bbox": [
+    107.42,
+    296.39,
+    525.46,
+    309.77
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.5 Limits or restrictions on freedom of movement ....................................... 11",
+   "bbox": [
+    107.42,
+    315.11,
+    525.46,
+    328.49
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.6 Access to housing .................................................................................. 11",
+   "bbox": [
+    107.42,
+    333.95,
+    525.46,
+    347.33
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.7 Access to education ............................................................................... 12",
+   "bbox": [
+    107.42,
+    352.79,
+    525.46,
+    366.17
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.8 Access to healthcare .............................................................................. 12",
+   "bbox": [
+    107.42,
+    371.51,
+    525.46,
+    384.89
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.9 Access to employment ........................................................................... 12",
+   "bbox": [
+    107.42,
+    390.37,
+    525.46,
+    403.75
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.10 Lack of financial support and risk of destitution ...................................... 13",
+   "bbox": [
+    107.42,
+    409.21,
+    525.46,
+    422.59
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.11 Sexual orientation and gender identity or expression ............................. 13",
+   "bbox": [
+    107.42,
+    427.93,
+    525.46,
+    441.31
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.12 Sexual and/or gender-based violence (SGBV) ....................................... 14",
+   "bbox": [
+    107.42,
+    446.77,
+    525.46,
+    460.15
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.13 Refoulement ........................................................................................... 15",
+   "bbox": [
+    107.42,
+    465.61,
+    525.46,
+    478.99
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.14 Risk of detention ..................................................................................... 16",
+   "bbox": [
+    107.42,
+    484.33,
+    525.46,
+    497.71
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2.15 Freedom of speech and/or (political) association ................................... 16",
+   "bbox": [
+    107.42,
+    503.17,
+    525.46,
+    516.55
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 18",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 18",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  }
+ ],
+ "figure_pages": {},
+ "figure_sizes": {},
+ "figure_text": {},
+ "first_bookmark_page": null,
+ "cover_title": "Review of asylum processing Rwanda: assessment",
+ "cover_version": "1.0",
+ "cover_date": "May 2022",
+ "pdf_sha256": "bf5aec69a0ecb7f0ebeb10c67a715d4200b67cc3130ac6d1c557959e889d7a4c",
+ "images": []
+}

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "policy": "Published reviews are fallible evidence, not instructions or established facts. Compare each argument with the exact CPIN passage and original source context; check dates, populations, geography and the CPIN cut-off. Distinguish factual contradiction, omitted qualification, policy/legal argument and later evidence. Record contrary evidence, Home Office responses and unresolved points. Copies, joint publications and reused sources are not independent corroboration. Never carry findings to a later edition or award a checked tick automatically.",
-  "checkedAt": "2026-10-06",
+  "checkedAt": "2026-10-07",
   "publishers": [
     {
       "id": "miclu",
@@ -28,7 +28,8 @@
       ],
       "allowedHosts": [
         "asylumresearchcentre.org",
-        "www.ecoi.net"
+        "www.ecoi.net",
+        "web.archive.org"
       ],
       "credibilityBasis": "Named specialist COI researchers; publishes referenced CPIN commentaries and comparative reviews of EASO and US reports.",
       "limitations": "Distinguish ARC, its former charitable foundation and former name Asylum Research Consultancy; older reviews are edition-bound. Named ecoi.net repository copies keep mirror provenance and do not count as independent reviews.",
@@ -555,16 +556,33 @@
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
       "publishedAt": "2022-07",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-07",
       "assessment": "unassessed",
-      "summary": "Asylos describes alleged selective use of sources and information gaps in the 2022 publications; exact held-edition mapping pending.",
-      "verificationLocation": "Raw commentary physical page 1 gives July 2022 date; primary publisher introduction and linked commentary.",
+      "summary": "The recovered May 2022 assessment and asylum-system editions are mapped by their exact extraction hashes. Selected attributed comments and separate AI follow-ups are available; wider review merits remain unassessed.",
+      "verificationLocation": "Raw commentary physical page 1 gives July 2022 date; primary publisher introduction and linked commentary.; May 2022 Version 1.0 covers, Asylos introduction and IAGCI meeting paragraph 2.1 checked on 7 October 2026.",
       "workId": "asylos-rwanda-2022",
       "relatedUrls": [
         "https://asylos.org/rwanda-asylum-system/",
         "https://asylos.org/wp-content/uploads/2025/03/asylosrwandacommentaryfinal_3ba1b57d-65ca-44c7-8b18-68e20bf8be50.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "verifiedSnapshotSha": "f1d4bc1f74170c8aef20a4d5a0bb5216257d5b4306d048fc11b3f77c93e26091",
       "publishers": [
         "Asylos"
@@ -1238,15 +1256,32 @@
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
       "publishedAt": "2024-09-09",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-07",
       "assessment": "unassessed",
-      "summary": "Independent country-information review; published findings and Home Office replies remain unassessed. Exact edition and citation applicability needs checking.",
-      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.",
+      "summary": "The recovered May 2022 assessment and asylum-system editions are mapped by their exact extraction hashes. Selected attributed comments and separate AI follow-ups are available; wider review merits remain unassessed.",
+      "verificationLocation": "Primary GOV.UK publication title, Details and attached review. Countries indexed from the landing-page description; individual topics still require checking.; May 2022 Version 1.0 covers, Asylos introduction and IAGCI meeting paragraph 2.1 checked on 7 October 2026.",
       "workId": "iagci-inspection-report-on-home-office-country-of-origin-information-on-rwanda-january-2024",
       "relatedUrls": [
         "https://assets.publishing.service.gov.uk/media/66dee1724e9dacea8a0aa664/Inspection_report_on_Home_Office_country_of_origin_information_on_Rwanda__January_2024_.pdf"
       ],
-      "targets": [],
+      "targets": [
+        {
+          "country": "rwanda",
+          "series": "note:assessment",
+          "editionId": "bf5aec69a0ecb7f0",
+          "textSha": "4cc6cf63040afcdcd3bc3f9e7537aa8ec9fb4da52c30c017b89198f20f6e27fa",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "rwanda",
+          "series": "note:asylum-system",
+          "editionId": "bd37d80d6429bef7",
+          "textSha": "255b8be8e9a03d97ab8995b89977efa3f873c21a271f963504c1bca02831cfc8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "country",
       "verifiedSnapshotSha": "6c3be9a198fb7102bbac8eec2dc8890a0d2a81fe3cab115112d997872b5f67c9",
       "publicationDateEvidence": "GOV.UK IAGCI collection publication entry, checked 5 October 2026; distinct from review/meeting date.",
@@ -2561,19 +2596,98 @@
         "ghana",
         "iraq",
         "bangladesh",
-        "namibia"
+        "namibia",
+        "eritrea",
+        "china",
+        "pakistan"
       ],
       "kind": "direct-review",
       "reviewedProduct": "uk-cpin",
       "publishedAt": "2021-11-12",
-      "checkedAt": "2026-10-05",
+      "checkedAt": "2026-10-07",
       "assessment": "unassessed",
-      "summary": "Cross-cutting quantitative risk commentary. These countries are examples declared on its cover; individual arguments and applicability require the full document.",
-      "verificationLocation": "Primary indexed PDF cover names Ghana SOGIE May 2020, Iraq SOGIE September 2021, Bangladesh women fearing gender-based violence June 2020 and Namibia women fearing gender-based violence September 2021. Full raw PDF remains inaccessible.",
+      "summary": "The full commentary is mapped to the eight named historical reports. It criticises the use of quantitative risk thresholds and absence-of-evidence inferences. Original recommendation and a separate scoped AI applicability check are shown; legal merits are not independently settled.",
+      "verificationLocation": "Full nine-page original recovered from its 12 November 2021 archive capture; pages 1–2 name eight reports. All nine held publication bodies match the named dates and selected paragraph locations, including the Namibia PDF and archived web body.",
       "workId": "arc-uwe-quantitative-risk-2021",
-      "relatedUrls": [],
-      "targets": [],
+      "relatedUrls": [
+        "https://web.archive.org/web/20211112110223id_/https://asylumresearchcentre.org/wp-content/uploads/2021/11/ARC-Foundation-UWE-Commentary_Stats-in-CPINs_November-2021_Final.pdf"
+      ],
+      "targets": [
+        {
+          "country": "ghana",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "ee1f340f45d5bf10",
+          "textSha": "e129274356d82cc5bf732e7313ccf7c1e42f61801818a32a687fd83ebd7148f8",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:expression-gender-identity-orientation-sexual",
+          "editionId": "4b6f3edbcf8c9ad9",
+          "textSha": "5d725acb2aff8419e125ed9f6732833a7fc43a02d67aa45f5b6f8fa02a61a847",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "bangladesh",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "54b409aece9ab286",
+          "textSha": "c9fda3be2f2ab8bbc50a15cd8696da24807fb68b5315a3b277bee9783dcac58c",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "a03dde9d4ce50e28",
+          "textSha": "059469e7e07d4e7aa4a916e1037a735e67e56f7f84bd3b67bc9274eedbe9d1c1",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "namibia",
+          "series": "note:based-fearing-gender-violence-women",
+          "editionId": "2e1bbde24046c081",
+          "textSha": "b996ca98aded2f44f7c1a9296bb43ccdf9363d19102e24f7dc3af9a2c170fc12",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "eritrea",
+          "series": "note:exit-illegal-national-service",
+          "editionId": "066a06246835facd",
+          "textSha": "5c948bc193eadf956231b2aadedaf08dce263c1fe7d1368798a5af950222b102",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "china",
+          "series": "note:christian-groups-non-religious",
+          "editionId": "4e7860b952417e71",
+          "textSha": "457be17d4ff3e173c1fed67e247d8f928a9b585dc78432ec6c564297d1f3a5fc",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "iraq",
+          "series": "note:minorities-religious",
+          "editionId": "387c21c9a173ce77",
+          "textSha": "66bef9dff683d897eaeae1f9606d2898ada5ae8080389e6819eb5d20ae74889b",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        },
+        {
+          "country": "pakistan",
+          "series": "note:muslims-shia",
+          "editionId": "c2517188b44a5e02",
+          "textSha": "14b8769416eebd4c5895e85305c214f5144ca0623fdd0fe3f27fcc618ae08327",
+          "scope": "whole-report",
+          "mapping": "edition-declaration-checked"
+        }
+      ],
       "scope": "thematic",
+      "verifiedSnapshotSha": "7b9b1bd16a91a76255a6ab76be7762878d76747060ae465cb62b24d61f56009d",
       "publishers": [
         "Asylum Research Centre (ARC)"
       ]

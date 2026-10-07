@@ -1,0 +1,1676 @@
+{
+ "extractor": "pdftext-6",
+ "pages": 56,
+ "body_size": 12.0,
+ "body_font": "arial",
+ "headings": 52,
+ "paragraphs": 529,
+ "list_items": 57,
+ "tables": 6,
+ "figures": 4,
+ "footnotes": 225,
+ "bookmarks": 53,
+ "warnings": [
+  "page 4: bookmark not found in the text: 'Contents'"
+ ],
+ "omitted_furniture": [
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    256.07,
+    525.94,
+    269.45
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    429.01,
+    525.94,
+    442.39
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    429.58,
+    357.95,
+    525.94,
+    371.33
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    605.32,
+    525.94,
+    618.7
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    125.84,
+    526.78,
+    139.22
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    313.79,
+    525.94,
+    327.17
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    72.44,
+    525.94,
+    85.82
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    462.61,
+    525.94,
+    475.99
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    501.25,
+    525.94,
+    514.63
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    222.44,
+    525.94,
+    235.82
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    388.69,
+    525.94,
+    402.07
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    564.16,
+    526.78,
+    577.54
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    530.29,
+    525.94,
+    543.67
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    481.09,
+    525.94,
+    494.47
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    451.93,
+    525.94,
+    465.31
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    555.76,
+    526.78,
+    569.14
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    106.04,
+    525.94,
+    119.42
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    106.04,
+    525.94,
+    119.42
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    263.87,
+    525.94,
+    277.25
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    560.44,
+    525.94,
+    573.82
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    467.29,
+    525.94,
+    480.67
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    582.64,
+    525.94,
+    596.02
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    228.47,
+    525.94,
+    241.85
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    181.04,
+    525.94,
+    194.42
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    256.07,
+    526.78,
+    269.45
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    326.39,
+    525.94,
+    339.77
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    500.53,
+    525.94,
+    513.91
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    618.28,
+    525.94,
+    631.66
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    496.33,
+    525.94,
+    509.71
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    289.67,
+    525.94,
+    303.05
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    431.89,
+    525.94,
+    445.27
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    410.29,
+    525.94,
+    423.67
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    106.04,
+    526.78,
+    119.42
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    249.59,
+    525.94,
+    262.97
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    368.51,
+    526.78,
+    381.89
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    441.73,
+    526.78,
+    455.11
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    643.72,
+    526.78,
+    657.1
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "navigation",
+   "text": "Back to Contents",
+   "bbox": [
+    431.98,
+    443.41,
+    526.78,
+    456.79
+   ]
+  },
+  {
+   "page": 2,
+   "kind": "page number",
+   "text": "Page 2 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 3,
+   "kind": "page number",
+   "text": "Page 3 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "page number",
+   "text": "Page 4 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Contents",
+   "bbox": [
+    72.02,
+    72.81,
+    183.33,
+    101.85
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Preface ...................................................................................................................... 2",
+   "bbox": [
+    72.02,
+    108.32,
+    525.46,
+    121.7
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Contents .................................................................................................................... 4",
+   "bbox": [
+    72.02,
+    127.16,
+    525.46,
+    140.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "Country information on Rwanda’s asylum system ............................................... 6",
+   "bbox": [
+    72.02,
+    145.88,
+    525.46,
+    159.26
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1. Refugee overview and demographics .............................................................. 6",
+   "bbox": [
+    84.02,
+    164.72,
+    525.46,
+    178.1
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1.1 Persons seeking refuge in Rwanda .......................................................... 6",
+   "bbox": [
+    107.42,
+    183.56,
+    525.46,
+    196.94
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "1.2 Rwandan nationals returning to Rwanda .................................................. 8",
+   "bbox": [
+    107.42,
+    202.28,
+    525.46,
+    215.66
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "2. Asylum/refugee law ......................................................................................... 8",
+   "bbox": [
+    84.02,
+    221.12,
+    525.46,
+    234.5
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "3. Agencies responsible for refugees and asylum seekers .................................. 9",
+   "bbox": [
+    84.02,
+    239.99,
+    525.46,
+    253.37
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "3.1 Government agencies .............................................................................. 9",
+   "bbox": [
+    107.42,
+    258.71,
+    525.46,
+    272.09
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "3.2 Partnerships ........................................................................................... 10",
+   "bbox": [
+    107.42,
+    277.55,
+    525.46,
+    290.93
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4. Asylum process ............................................................................................. 11",
+   "bbox": [
+    84.02,
+    296.39,
+    525.46,
+    309.77
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.1 General commentary .............................................................................. 11",
+   "bbox": [
+    107.42,
+    315.11,
+    525.46,
+    328.49
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.2 Key stages of the process ...................................................................... 11",
+   "bbox": [
+    107.42,
+    333.95,
+    525.46,
+    347.33
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.3 Timelines ................................................................................................ 12",
+   "bbox": [
+    107.42,
+    352.79,
+    525.46,
+    366.17
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.4 Initial contact .......................................................................................... 13",
+   "bbox": [
+    107.42,
+    371.51,
+    525.46,
+    384.89
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.5 Information provided to asylum seekers ................................................. 13",
+   "bbox": [
+    107.42,
+    390.37,
+    525.46,
+    403.75
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.6 Post initial contact .................................................................................. 14",
+   "bbox": [
+    107.42,
+    409.21,
+    525.46,
+    422.59
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.7 Refugee Status Determination Committee ............................................. 15",
+   "bbox": [
+    107.42,
+    427.93,
+    525.46,
+    441.31
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.8 Legal representation ............................................................................... 18",
+   "bbox": [
+    107.42,
+    446.77,
+    525.46,
+    460.15
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.9 Use of interpreters/translators ................................................................ 20",
+   "bbox": [
+    107.42,
+    465.61,
+    525.46,
+    478.99
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.10 Notification of decisions .......................................................................... 21",
+   "bbox": [
+    107.42,
+    484.33,
+    525.46,
+    497.71
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.11 Ability to challenge a negative decision .................................................. 22",
+   "bbox": [
+    107.42,
+    503.17,
+    525.46,
+    516.55
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.12 Persons ineligible for refugee status ...................................................... 24",
+   "bbox": [
+    107.42,
+    522.01,
+    525.46,
+    535.39
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.13 Revocation of refugee status .................................................................. 24",
+   "bbox": [
+    107.42,
+    540.73,
+    525.46,
+    554.11
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "4.14 Decision outcomes and recognition rates ............................................... 25",
+   "bbox": [
+    107.42,
+    559.6,
+    525.46,
+    572.98
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "5. Failed asylum seekers ................................................................................... 27",
+   "bbox": [
+    84.02,
+    578.44,
+    525.46,
+    591.82
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "5.1 Alternative routes to remain in Rwanda .................................................. 27",
+   "bbox": [
+    107.42,
+    597.16,
+    525.46,
+    610.54
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "6. Immigration detention and returns ................................................................. 28",
+   "bbox": [
+    84.02,
+    616.0,
+    525.46,
+    629.38
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "6.1 Refoulement ........................................................................................... 28",
+   "bbox": [
+    107.42,
+    634.84,
+    525.46,
+    648.22
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "6.2 Immigration detention, deportation, and voluntary returns ..................... 28",
+   "bbox": [
+    107.42,
+    653.56,
+    525.46,
+    666.94
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "7. Documentation for asylum seekers and refugees .......................................... 30",
+   "bbox": [
+    84.02,
+    672.4,
+    525.46,
+    685.78
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "8. Accommodation for asylum seekers and refugees ........................................ 32",
+   "bbox": [
+    84.02,
+    691.24,
+    525.46,
+    704.62
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "8.1 Asylum seekers ...................................................................................... 32",
+   "bbox": [
+    107.42,
+    709.98,
+    525.46,
+    723.36
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "8.2 Camp based refugees ............................................................................ 32",
+   "bbox": [
+    107.42,
+    728.82,
+    525.46,
+    742.2
+   ]
+  },
+  {
+   "page": 4,
+   "kind": "contents",
+   "text": "8.3 Urban refugees ....................................................................................... 34",
+   "bbox": [
+    107.42,
+    747.54,
+    525.46,
+    760.92
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "page number",
+   "text": "Page 5 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "8.4 Emergency Transit Mechanism (Gashora) ............................................. 35",
+   "bbox": [
+    107.42,
+    72.44,
+    525.46,
+    85.82
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "9. Proposed alternative accommodation for relocated persons ......................... 36",
+   "bbox": [
+    84.02,
+    91.28,
+    525.46,
+    104.66
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "9.1 Context ................................................................................................... 36",
+   "bbox": [
+    107.42,
+    110.0,
+    525.46,
+    123.38
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "9.2 Kinigi Integrated Development Program Model Village .......................... 36",
+   "bbox": [
+    107.42,
+    128.84,
+    525.46,
+    142.22
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "9.3 Karama model village ............................................................................. 36",
+   "bbox": [
+    107.42,
+    147.68,
+    525.46,
+    161.06
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10. Refugee rights and access to services .......................................................... 38",
+   "bbox": [
+    84.02,
+    166.4,
+    525.46,
+    179.78
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.1 Education ............................................................................................... 38",
+   "bbox": [
+    107.42,
+    185.24,
+    525.46,
+    198.62
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.2 Health ..................................................................................................... 38",
+   "bbox": [
+    107.42,
+    204.08,
+    525.46,
+    217.46
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.3 Right to work .......................................................................................... 39",
+   "bbox": [
+    107.42,
+    222.8,
+    525.46,
+    236.18
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.4 Freedom of movement within the country............................................... 43",
+   "bbox": [
+    107.42,
+    241.67,
+    525.46,
+    255.05
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.5 Freedom to travel out of, and return to, the country ............................... 44",
+   "bbox": [
+    107.42,
+    260.51,
+    525.46,
+    273.89
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "10.6 Citizenship .............................................................................................. 45",
+   "bbox": [
+    107.42,
+    279.23,
+    525.46,
+    292.61
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "11. Rwandan asylum seekers in the UK and other countries .............................. 45",
+   "bbox": [
+    84.02,
+    298.07,
+    525.46,
+    311.45
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "11.1 Rwandan asylum seekers and refugees worldwide ................................ 45",
+   "bbox": [
+    107.42,
+    316.91,
+    525.46,
+    330.29
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "11.2 Rwandan asylum seekers in the UK ....................................................... 45",
+   "bbox": [
+    107.42,
+    335.63,
+    525.46,
+    349.01
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Bibliography ........................................................................................................... 46",
+   "bbox": [
+    72.02,
+    354.47,
+    525.46,
+    367.85
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Sources cited ........................................................................................................ 46",
+   "bbox": [
+    84.02,
+    373.31,
+    525.46,
+    386.69
+   ]
+  },
+  {
+   "page": 5,
+   "kind": "contents",
+   "text": "Sources consulted but not cited ............................................................................ 55",
+   "bbox": [
+    84.02,
+    392.05,
+    525.46,
+    405.43
+   ]
+  },
+  {
+   "page": 6,
+   "kind": "page number",
+   "text": "Page 6 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 7,
+   "kind": "page number",
+   "text": "Page 7 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 8,
+   "kind": "page number",
+   "text": "Page 8 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 9,
+   "kind": "page number",
+   "text": "Page 9 of 56",
+   "bbox": [
+    274.87,
+    801.76,
+    323.57,
+    810.73
+   ]
+  },
+  {
+   "page": 10,
+   "kind": "page number",
+   "text": "Page 10 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 11,
+   "kind": "page number",
+   "text": "Page 11 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 12,
+   "kind": "page number",
+   "text": "Page 12 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 13,
+   "kind": "page number",
+   "text": "Page 13 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 14,
+   "kind": "page number",
+   "text": "Page 14 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 15,
+   "kind": "page number",
+   "text": "Page 15 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 16,
+   "kind": "page number",
+   "text": "Page 16 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 17,
+   "kind": "page number",
+   "text": "Page 17 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 18,
+   "kind": "page number",
+   "text": "Page 18 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 19,
+   "kind": "page number",
+   "text": "Page 19 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 20,
+   "kind": "page number",
+   "text": "Page 20 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 21,
+   "kind": "page number",
+   "text": "Page 21 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 22,
+   "kind": "page number",
+   "text": "Page 22 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 23,
+   "kind": "page number",
+   "text": "Page 23 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 24,
+   "kind": "page number",
+   "text": "Page 24 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 25,
+   "kind": "page number",
+   "text": "Page 25 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 26,
+   "kind": "page number",
+   "text": "Page 26 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 27,
+   "kind": "page number",
+   "text": "Page 27 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 28,
+   "kind": "page number",
+   "text": "Page 28 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 29,
+   "kind": "page number",
+   "text": "Page 29 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 30,
+   "kind": "page number",
+   "text": "Page 30 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 31,
+   "kind": "page number",
+   "text": "Page 31 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 32,
+   "kind": "page number",
+   "text": "Page 32 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 33,
+   "kind": "page number",
+   "text": "Page 33 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 34,
+   "kind": "page number",
+   "text": "Page 34 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 35,
+   "kind": "page number",
+   "text": "Page 35 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 36,
+   "kind": "page number",
+   "text": "Page 36 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 37,
+   "kind": "page number",
+   "text": "Page 37 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 38,
+   "kind": "page number",
+   "text": "Page 38 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 39,
+   "kind": "page number",
+   "text": "Page 39 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 40,
+   "kind": "page number",
+   "text": "Page 40 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 41,
+   "kind": "page number",
+   "text": "Page 41 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 42,
+   "kind": "page number",
+   "text": "Page 42 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 43,
+   "kind": "page number",
+   "text": "Page 43 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 44,
+   "kind": "page number",
+   "text": "Page 44 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 45,
+   "kind": "page number",
+   "text": "Page 45 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 46,
+   "kind": "page number",
+   "text": "Page 46 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 47,
+   "kind": "page number",
+   "text": "Page 47 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 48,
+   "kind": "page number",
+   "text": "Page 48 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 49,
+   "kind": "page number",
+   "text": "Page 49 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 50,
+   "kind": "page number",
+   "text": "Page 50 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 51,
+   "kind": "page number",
+   "text": "Page 51 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 52,
+   "kind": "page number",
+   "text": "Page 52 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 53,
+   "kind": "page number",
+   "text": "Page 53 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 54,
+   "kind": "page number",
+   "text": "Page 54 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 55,
+   "kind": "page number",
+   "text": "Page 55 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  },
+  {
+   "page": 56,
+   "kind": "page number",
+   "text": "Page 56 of 56",
+   "bbox": [
+    272.59,
+    801.76,
+    325.73,
+    810.73
+   ]
+  }
+ ],
+ "figure_pages": {
+  "ec609628957c0e0f6924b7f9d5271989de4c6ea4ba9d09d8ee2373e77d32a5f3.jpg": 11,
+  "12cc82f21c10dac888cd801869b2cc6809e4376d6ac75c90318220c081cf12a2.jpg": 37,
+  "dcd117e0285a0944ed79d5a7fc48c26acaea450bd670432088a93febd2a202a9.jpg": 37,
+  "047926da4c453fd008c17dab1bb62094ebf22cafda92dc997c5362bae49117cf.jpg": 38
+ },
+ "figure_sizes": {
+  "ec609628957c0e0f6924b7f9d5271989de4c6ea4ba9d09d8ee2373e77d32a5f3.jpg": [
+   824,
+   536
+  ],
+  "12cc82f21c10dac888cd801869b2cc6809e4376d6ac75c90318220c081cf12a2.jpg": [
+   615,
+   406
+  ],
+  "dcd117e0285a0944ed79d5a7fc48c26acaea450bd670432088a93febd2a202a9.jpg": [
+   607,
+   411
+  ],
+  "047926da4c453fd008c17dab1bb62094ebf22cafda92dc997c5362bae49117cf.jpg": [
+   594,
+   403
+  ]
+ },
+ "figure_text": {
+  "ec609628957c0e0f6924b7f9d5271989de4c6ea4ba9d09d8ee2373e77d32a5f3.jpg": 0,
+  "12cc82f21c10dac888cd801869b2cc6809e4376d6ac75c90318220c081cf12a2.jpg": 0,
+  "dcd117e0285a0944ed79d5a7fc48c26acaea450bd670432088a93febd2a202a9.jpg": 0,
+  "047926da4c453fd008c17dab1bb62094ebf22cafda92dc997c5362bae49117cf.jpg": 0
+ },
+ "first_bookmark_page": 2,
+ "cover_title": "Review of asylum processing Rwanda: country information on the asylum system",
+ "cover_version": "1.0",
+ "cover_date": "May 2022",
+ "pdf_sha256": "bd37d80d6429bef7376400bfa65e28923f6a4599151d129240eae6c9159c8841",
+ "images": [
+  "047926da4c453fd008c17dab1bb62094ebf22cafda92dc997c5362bae49117cf.jpg",
+  "12cc82f21c10dac888cd801869b2cc6809e4376d6ac75c90318220c081cf12a2.jpg",
+  "dcd117e0285a0944ed79d5a7fc48c26acaea450bd670432088a93febd2a202a9.jpg",
+  "ec609628957c0e0f6924b7f9d5271989de4c6ea4ba9d09d8ee2373e77d32a5f3.jpg"
+ ]
+}
