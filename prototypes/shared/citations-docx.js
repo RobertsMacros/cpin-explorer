@@ -68,6 +68,9 @@ export const ATTRIBUTION = [
   { text: ". Contains public sector information licensed under the " },
   { text: "Open Government Licence v3.0", href: "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" },
   { text: `. ${APP_NAME} is an independent mirror, not affiliated with or endorsed by the Home Office.` },
+  { text: " Globe mark adapted from " },
+  { text: "COBE by Shu Ding", href: "https://github.com/shuding/cobe" },
+  { text: " (MIT)." },
 ];
 
 /* ------------------------------------------------------------------ text helpers */

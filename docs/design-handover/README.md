@@ -78,7 +78,7 @@ The few rules that are not straight copies are marked `generalised` in the file 
 
 ## 2. The look at a glance
 
-After the COBE globe site (cobe.vercel.app): a white page, one electric blue, square corners, thin
+Inspired by [Shu Ding’s COBE demo](https://cobe.vercel.app/): a white page, one electric blue, square corners, thin
 grey rules, small capital labels in a pixel font, and motion that eases.
 
 | | Light | Dark |
@@ -1045,6 +1045,15 @@ Keep the grammar and change the subject:
 ---
 
 ## 13. Fonts and licences
+
+The globe uses [COBE 2.0.1 by Shu Ding](https://github.com/shuding/cobe). Its
+miniature globe marks adapt COBE’s lattice and land map, and the visual style
+is inspired by its demo. Credit these uses in every main footer and the Word
+export; retain the full MIT notice in `prototypes/vendor/licenses/COBE-LICENSE.txt`
+and beside the standalone mark assets as `assets/cpin-explorer/COBE-LICENSE.txt`.
+The vendor and mark generators reproduce these notices. Do not attribute the
+whole application or Geist fonts to Shu Ding.
+
 
 | Family in CSS | File | Kind |
 | --- | --- | --- |

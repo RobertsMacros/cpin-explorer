@@ -1,3 +1,4 @@
+// Adapted from COBE by Shu Ding (MIT); full notice: ../vendor/licenses/COBE-LICENSE.txt.
 // The globe in miniature: the same dots in the same places as the start page's globe.
 //
 // COBE lays its dots on a spiral lattice (point j of n sits at height 1 − 2j/n, each a golden-ratio

@@ -63,7 +63,9 @@ It now lives in `~/Developer/cpin-explorer`. `./cpin` (puts `src/` on the path i
 7. **Honest claims.** One successful run shows a tested run, not sustained operation. Record real
    results, failures and limits in the README status section.
 8. Data is Crown copyright under the Open Government Licence v3.0; keep the attribution.
-9. **Globe: COBE (https://cobe.vercel.app), not globe.gl.** Owner's decision: COBE looks better
+9. **Globe: COBE (https://cobe.vercel.app), not globe.gl.** Credit Shu Ding for COBE,
+   the globe marks adapted from its lattice/map, and the visual inspiration from its demo.
+   Preserve the full MIT notices produced by the vendor/mark generators in shipped copies. Owner's decision: COBE looks better
    and globe.gl had performance problems. COBE draws a dotted globe with markers, not country
    shapes, so clicking a country means inverse-projecting the pointer to latitude/longitude and
    testing it against country outlines (e.g. d3-geo `geoContains`), with markers for the 47

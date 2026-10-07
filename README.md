@@ -21,6 +21,11 @@ It has three parts:
 3. **Comparison** (built, in the report page): a timeline slider across editions and inline or
    side-by-side redlines between any two of them.
 
+The globe uses [COBE by Shu Ding](https://github.com/shuding/cobe); the miniature
+globe marks adapt its lattice and land map. The visual style is inspired by
+[his COBE demo](https://cobe.vercel.app/). Full MIT notices accompany the vendor
+code and standalone mark assets; other component credits remain separate.
+
 ## Status
 
 **7 October 2026: optional approved accounts activation.**

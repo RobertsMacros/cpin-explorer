@@ -20,3 +20,12 @@ miniature of the globe's own view, which is what mark.svg now is.
 6 Oct clarification: the globe remains the logo. favicon.png is a 64 px fallback
 rendered with the installed sharp package from mark.svg in #2a3cf5. /favicon.ico
 redirects to that PNG for browser tab loaders that do not support SVG.
+
+Third-party attribution: the globe library and the lattice/land map used by the
+miniature marks come from COBE 2.0.1 by Shu Ding, https://github.com/shuding/cobe.
+COBE is copyright (c) 2021 Shu Ding, MIT; the full notice is in COBE-LICENSE.txt
+beside these assets and prototypes/vendor/licenses/COBE-LICENSE.txt. The canvas
+mark, SVG/PNG icons and Word-export mark adapt that globe; they are CPIN Explorer
+adaptations, rather than an assertion that Shu Ding created this application.
+The visual style is inspired by Shu Ding's COBE demo, https://cobe.vercel.app/.
+Geist fonts retain their separate Vercel/basement.studio attribution and licence.
