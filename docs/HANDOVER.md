@@ -10,7 +10,9 @@ Saved, Guide, About and Account. Returning to the dashboard prefers this tab's l
 report country; explicit country routes, clearing the country and cross-country searches
 still take precedence. All 12 held former countries now have header-only positions in
 `config/countries.json`, generated into the licensed mini-globe data without changing
-the active collection or its main-globe markers. Tab icons retain their chosen opening view.
+the active collection or its main-globe markers. The vendor generator versions the
+mini-globe data import by its content hash so one-day browser caches cannot retain
+old country positions. Tab icons retain their chosen opening view.
 Local checks pass 356 JavaScript tests and desktop/mobile country, navigation and
 reduced-motion checks. Static local checks have no account backend; account API 404s
 there are expected. Public source text and review records are unchanged.

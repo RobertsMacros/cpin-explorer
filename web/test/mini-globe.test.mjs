@@ -1,5 +1,6 @@
 // The globe in miniature (header mark, the big globe's stand-in): COBE's own lattice and land map.
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { focus, project } from "../../prototypes/shared/globe-math.js";
@@ -64,6 +65,9 @@ test("the generated data is in step with its sources (npm run vendor, npm run ma
     ...config.historical_markers.countries,
     ...Object.fromEntries(Object.entries(config.countries).map(([slug, c]) => [slug, c.marker])),
   }, "a header marker for current and held former countries, as in config/countries.json");
+  const dataVersion = createHash("sha256").update(readFileSync(here("../../prototypes/vendor/globe-mini-data.js"))).digest("hex").slice(0, 12);
+  const importer = readFileSync(here("../../prototypes/shared/mini-globe.js"), "utf8");
+  assert.ok(importer.includes(`globe-mini-data.js?v=${dataVersion}`), "cached country data is invalidated whenever the generated data changes");
   const svg = readFileSync(here("../../assets/cpin-explorer/mark.svg"), "utf8");
   const { dots } = markShapes({ size: 64, view: viewOf(HOME) });
   assert.equal(svg.match(/<circle /g).length, dots.length + 1, "mark.svg is the mark at its opening view: the ring and every dot");

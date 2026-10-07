@@ -6,7 +6,7 @@
 // sums on a 2D canvas, so the header mark, and the stand-in shown while the real globe starts up, are
 // the globe itself drawn small rather than a picture of one: turn them to a country and that country
 // is where it is on the big globe.
-import { LAND, MARKERS } from "../vendor/globe-mini-data.js";
+import { LAND, MARKERS } from "../vendor/globe-mini-data.js?v=8fe4081207fa";
 import { focus, toVector } from "./globe-math.js";
 
 export { MARKERS };
