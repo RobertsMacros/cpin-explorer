@@ -1,0 +1,5 @@
+.account-link { white-space: nowrap; font-size: .75rem; }
+.account-sync { position: fixed; z-index: 100; left: 1rem; bottom: 1rem; max-width: min(32rem,calc(100vw - 2rem)); border: 1px solid var(--line); background: var(--bg); color: var(--ink); padding: .7rem 1rem; font: .8rem var(--font-mono); box-shadow: 0 3px 18px #0002; }
+.account-sync a { margin-left: .6rem; }
+.account-sync[data-state="error"],.account-sync[data-state="conflict"] { border-color: var(--del); }
+@media(max-width:500px) { .account-link { padding-inline: .5rem; }.top-crumb { display: none; } }

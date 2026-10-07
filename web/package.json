@@ -12,9 +12,11 @@
     "docx": "node build-docx.mjs",
     "docx-samples": "node build-docx.mjs --samples",
     "site": "node build-site.mjs",
-    "deploy": "npm run site && wrangler deploy"
+    "deploy": "npm run site && wrangler deploy",
+    "test:accounts": "node test/accounts-runtime.mjs"
   },
   "dependencies": {
+    "better-auth": "1.7.7",
     "cobe": "2.0.1",
     "d3-geo": "3.1.1",
     "flag-icons": "^7.5.0",

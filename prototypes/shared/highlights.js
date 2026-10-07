@@ -5,9 +5,11 @@
 // records the edition it was made on (sha256 + version), so when GOV.UK publishes a new edition we
 // can tell whether the quoted words are still there.
 //
-// No login yet: records live in localStorage under "cpin-highlights-v1". Every access is wrapped,
+// Browser-only records use localStorage; approved accounts use the private account store. Every access is wrapped,
 // and an in-memory copy keeps the page working where storage is blocked.
 import { cleanQuote, formatCitation, formatPinpoint, formatSources, longDate, quoteOf, sourceOf, STYLE_NAMES } from "./citation.js";
+import { savedStorage, accountReady } from "./account-state.js";
+await accountReady;
 
 export const STORAGE_KEY = "cpin-highlights-v1";
 export const CONTEXT_CHARS = 32;
@@ -24,7 +26,7 @@ export function useStorage(storage) { storageOverride = storage; memory = null; 
 
 function storage() {
   if (storageOverride) return storageOverride;
-  try { return globalThis.localStorage ?? null; } catch { return null; }
+  try { return savedStorage() ?? null; } catch { return null; }
 }
 
 const isRecord = (r) => r && typeof r === "object" && typeof r.id === "string" && typeof r.quote === "string";
@@ -109,7 +111,8 @@ export function onHighlightsChange(callback) {
   const other = (e) => { if (e.key === null || e.key === STORAGE_KEY) { memory = null; callback(loadHighlights()); } };
   globalThis.addEventListener?.(CHANGE_EVENT, local);
   globalThis.addEventListener?.("storage", other);
-  return () => { globalThis.removeEventListener?.(CHANGE_EVENT, local); globalThis.removeEventListener?.("storage", other); };
+  globalThis.addEventListener?.("cpin-account-change", local);
+  return () => { globalThis.removeEventListener?.(CHANGE_EVENT, local); globalThis.removeEventListener?.("storage", other); globalThis.removeEventListener?.("cpin-account-change", local); };
 }
 
 /* ------------------------------------------------------------------ text anchoring */

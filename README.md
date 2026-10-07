@@ -23,6 +23,12 @@ It has three parts:
 
 ## Status
 
+**6 October 2026: optional approved accounts prepared locally.**
+The isolated `feature/approved-accounts` branch adds password pages, individual
+owner approval and private account saves. It is not merged or live. Read
+[the implementation, checks and activation steps](docs/accounts.md).
+
+
 **6 October 2026: edition-scoped published and AI review integration.**
 The reader now has an edition Reviews panel and small markers on precisely
 matched paragraphs, footnotes and bibliography links. Published reviewers' own

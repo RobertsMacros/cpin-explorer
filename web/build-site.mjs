@@ -13,7 +13,7 @@ const MAX_FILES = 20000;                  // and per deployment (free plan)
 
 // What the pages need, relative to the repo root.
 const INCLUDE = [
-  "prototypes/about",
+  "prototypes/about", "prototypes/account",
   "prototypes/dashboard", "prototypes/reader", "prototypes/saved", "prototypes/search", "prototypes/guide",
   "prototypes/redline-timeline", "prototypes/shared", "prototypes/vendor", "prototypes/data", "prototypes/reviews",
   "prototypes/package.json",

@@ -49,6 +49,7 @@ jobs:
         run: |
           npm ci
           npm test
+          npm run test:accounts
 
   check:
     runs-on: ubuntu-latest

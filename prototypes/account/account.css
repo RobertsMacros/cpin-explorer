@@ -1,0 +1,25 @@
+@import url('../shared/account-ui.css');
+.account-page { max-width: 42rem; margin: clamp(2rem,7vh,5rem) auto; padding: 0 1.2rem 3rem; min-height: 62vh; }
+.account-page h1 { font-family: var(--font-display); color: var(--blue); font-size: clamp(2.4rem,6vw,3.6rem); font-weight: 400; line-height: 1.1; margin: .6rem 0 1.3rem; }
+.account-page h2 { font-size: 1.3rem; font-weight: 500; margin-top: 2rem; }
+.account-page p { line-height: 1.6; }
+.account-card { border: 1px solid var(--line); padding: clamp(1.2rem,4vw,2rem); }
+.account-form { display: grid; gap: 1.2rem; margin-top: 1.6rem; }
+.account-form label { display: grid; gap: .5rem; font-family: var(--font-mono); font-size: .85rem; margin-bottom: .5rem; }
+.account-form input { box-sizing: border-box; width: 100%; min-height: 48px; padding: .75rem; border: 1px solid var(--line); border-radius: 0; background: var(--bg); color: var(--ink); font: 1rem var(--font-text); }
+.account-form input:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.password-field { display: flex; border: 1px solid var(--line); }
+.password-field input { border: 0; min-width: 0; }
+.password-field button { background: transparent; border: 0; border-left: 1px solid var(--line); color: var(--ink); font: .8rem var(--font-mono); padding: .7rem; min-width: 64px; cursor: pointer; }
+.account-hint { color: var(--ink-2); font-size: .85rem; margin: -.5rem 0 0; }
+.account-links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.4rem 0 0; }
+.account-message { min-height: 1.4rem; color: var(--ink); margin: .5rem 0; }
+.account-error { color: var(--del); }
+.account-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+.owner-row { border: 1px solid var(--line); padding: 1rem; margin: .8rem 0; overflow-wrap: anywhere; }
+.owner-row strong { display: block; }
+.owner-row .account-actions { margin-top: 1rem; }
+.reset-link { display: block; border: 1px solid var(--line); padding: .8rem; overflow-wrap: anywhere; margin-top: 1rem; }
+.account-page .btn { min-height: 44px; }
+.account-form .btn--primary { justify-content: center; }
+@media(max-width:500px) { .account-page { margin-top: 2rem; }.account-card{padding:1.2rem;} }

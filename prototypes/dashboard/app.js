@@ -3,6 +3,7 @@
 // report titles, the full text of the reports and, last, the glossary's terms.
 // Data: data.json, written by `./cpin export` from the scraper's store.
 import { createGlobe, feature, geoBounds, geoContains } from "../vendor/globe-deps.js";
+import { accountReady, savedStorage } from "../shared/account-state.js";
 import { brandMark, startCountry, startView } from "../shared/brand-mark.js";
 import { archiveName } from "../shared/archive-source.js";
 import { makeCountryLocator } from "../shared/country-locator.js";
@@ -1502,10 +1503,15 @@ addEventListener("pointerdown", (e) => {
 addEventListener("keydown", (e) => { if (e.key === "Escape" && checkPop && !checkPop.hidden) checkPop.hidden = true; });
 paintSync();
 (window.requestIdleCallback || ((fn) => setTimeout(fn, 1200)))(() => runCheck(), { timeout: 4000 });
-try {                                    // highlights are saved in this browser by the reader
-  const saved = JSON.parse(localStorage.getItem("cpin-highlights-v1") || "[]");
-  if (saved.length) $("#savedCount").textContent = saved.length;
-} catch {}
+function updateSavedCount() {
+  try {
+    const saved = JSON.parse(savedStorage()?.getItem("cpin-highlights-v1") || "[]");
+    $("#savedCount").textContent = saved.length || "";
+  } catch { $("#savedCount").textContent = ""; }
+}
+// Account loading does not delay the globe or public report list.
+void accountReady.then(updateSavedCount);
+addEventListener("cpin-account-change", updateSavedCount);
 
 // Opening: a search carried in the address (?q=, and links to the old search page land here), else
 // keep your place: reopen the country you were last looking at (the logo and back links come here).

@@ -25,6 +25,7 @@ import {
   capFirst, escHtml as esc, formatCitation, formatPinpoint, pdfPinpoint, quoteOf, quoteWithCitation, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, STYLES, titleMonth,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
+import { accountStore } from "../shared/account-state.js";
 import * as Reviews from "../shared/source-reviews.js";
 import * as Annotations from "../shared/review-annotations.js";
 import { analyseBody, describePassage, parseBody, snapToParaNumber, trimNextParaNumber } from "../shared/note-source.js";
@@ -2406,7 +2407,7 @@ function openHighlight(id, anchorEl, point) {
       ${sources.length ? `<details class="sources"${sources.length <= 3 ? " open" : ""}><summary>Sources cited in this passage · ${sources.length}</summary><ol>${sources.map((s) =>
         `<li><b>[${s.n}]</b><span>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.text)}</a>` : esc(s.text)}</span></li>`).join("")}</ol></details>` : ""}
       <div><label class="field-label" for="popComment"><span class="eyebrow">Private note</span><span class="saved-flag" id="popSaved">Saved</span></label>
-        <textarea class="comment" id="popComment" placeholder="Only kept in this browser. Why it matters, which issue it goes to…">${esc(rec.comment || "")}</textarea></div>
+        <textarea class="comment" id="popComment" placeholder="${accountStore.state.user?.approved ? "Private to your account." : "Only kept in this browser."} Why it matters, which issue it goes to…">${esc(rec.comment || "")}</textarea></div>
       <div class="pop-actions">
         <button type="button" class="btn btn--primary" data-act="copy-both">${ICON.quote}Copy quote + citation</button>
         <button type="button" class="btn" data-act="copy-cite">${ICON.copy}Copy citation</button>
@@ -2556,7 +2557,7 @@ pop.addEventListener("submit", (e) => {
     const saved = privateReviews.save(target, values);
     const { n, anchor, prefix } = popState;
     openFootnote(n, anchor, prefix);
-    toast(saved.persisted ? "Private review saved in this browser" : "Browser storage unavailable: review kept for this session only");
+    toast(accountStore.state.user?.approved ? "Saving private review to your account…" : saved.persisted ? "Private review saved in this browser" : "Browser storage unavailable: review kept for this session only");
   } catch (error) { result.textContent = error.message; }
 });
 function sanitizeFootnote(html) {

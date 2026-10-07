@@ -1,6 +1,8 @@
 // A review belongs to one edition and one use of a source. Never put private
-// records in the site export: the first human-note store is this browser only.
+// records in the site export: human notes use a separate private browser or approved-account store.
 import { escHtml as esc } from "./citation.js";
+import { savedStorage, accountReady, accountStore } from "./account-state.js";
+await accountReady;
 
 export const STORAGE_KEY = "cpin-source-reviews-v1";
 const TARGET_FIELDS = ["country", "series", "editionId", "textSha", "footnote", "paragraph", "section", "sourceUrl"];
@@ -51,14 +53,14 @@ export function reviewStatus(records) {
   for (const [severity, tone] of [["major", "red"], ["minor", "yellow"]]) {
     const finding = issues.find((r) => r.severity === severity);
     if (finding) {
-      const by = { ai: "AI review", external: "Published reviewer’s finding", manual: "Local reviewer’s finding" }[finding.kind];
+      const by = { ai: "AI review", external: "Published reviewer’s finding", manual: "Private reviewer’s finding" }[finding.kind];
       return { tone, symbol: "⚑", label: `${severity === "major" ? "Major" : "Minor"} ${finding.status === "criticism" ? "concern" : "error"} · ${by}` };
     }
   }
   // Older private entries have no severity. Keep the issue visible without
   // inventing an impact assessment or allowing a checked tick to hide it.
   if (issues.length) return { tone: "grey", symbol: "⚑", label: "Issue recorded · severity not assigned" };
-  if (active.some((r) => r.kind === "manual" && r.status === "checked" && r.author?.trim())) return { tone: "green", symbol: "✓", label: "Marked checked locally" };
+  if (active.some((r) => r.kind === "manual" && r.status === "checked" && r.author?.trim())) return { tone: "green", symbol: "✓", label: "Marked checked · private review" };
   return { tone: "grey", symbol: "○", label: active.some((r) => r.kind === "ai" && r.status === "no-issue") ? "AI review · no issue found in this check" : active.length ? "Review context recorded" : "No review recorded" };
 }
 export function badgeHtml(records) {
@@ -66,7 +68,7 @@ export function badgeHtml(records) {
   return `<span class="source-review-badge sr-${s.tone}" role="img" aria-label="${esc(s.label)}" title="${esc(s.label)}"><span aria-hidden="true">${s.symbol}</span></span>`;
 }
 
-export function createPrivateStore(getStorage = () => globalThis.localStorage) {
+export function createPrivateStore(getStorage = savedStorage) {
   let journal = null;
   let persistFailed = false;
   function load() {
@@ -140,7 +142,7 @@ export function reportPanelHtml(target, records, reviews, { unavailable = false,
       ${records.filter((r) => r.kind === "ai").map((r) => recordHtml(r)).join("") || `<p class="sr-meta">No AI review recorded for this ${passage ? "passage" : "edition"}.</p>`}
       ${applicationChecks(reviews, target).map((r) => recordHtml({ ...r, summary: r.summary, publication: r.publication || { url: r.reviewUrl, title: r.reviewTitle } })).join("")}
     </section>
-    <section class="sr-review-group" data-review-kind="manual"><h3>Manual additions</h3><p class="sr-meta">Independent human notes can be added in a footnote overlay and are kept in this browser. They are optional and do not approve or replace AI findings.</p></section>
+    <section class="sr-review-group" data-review-kind="manual"><h3>Manual additions</h3><p class="sr-meta">Independent human notes can be added in a footnote overlay and are kept ${accountStore.state.user?.approved ? "privately in your account" : "in this browser"}. They are optional and do not approve or replace AI findings.</p></section>
   </div>`;
 }
 export function panelHtml(target, records, { publicUnavailable = false, publicLoading = false, editionReviews = [], countryReviews = [], matchingCopies = [], directoryUnavailable = false } = {}) {
@@ -192,10 +194,10 @@ export function panelHtml(target, records, { publicUnavailable = false, publicLo
     ${old.length ? `<details><summary>Previous human entries (${old.length})</summary>${old.map((r) => recordHtml(r, true)).join("")}</details>` : ""}
     ${validTarget(target) ? `<details class="sr-editor"><summary>${manual ? "Update private review" : "Add private human review"}</summary>
     <form class="sr-form" data-review-source="${esc(target.sourceUrl || "")}">
-      <p class="sr-meta">Only kept in this browser. Names and organisations are self-reported; this is not a team sign-off.</p>
+      <p class="sr-meta">Kept ${accountStore.state.user?.approved ? "privately in your account" : "in this browser"}. Names and organisations are self-reported; this is not a team sign-off.</p>
       <label>Your name<input name="author" required maxlength="120" autocomplete="name" value="${esc(manual?.author || "")}"></label>
       <label>Organisation (optional)<input name="organisation" maxlength="120" value="${esc(manual?.organisation || "")}"></label>
-      <label>Status<select name="status">${Object.entries(states).map(([v, label]) => `<option value="${v}"${editorStatus === v ? " selected" : ""}>${esc(label)}</option>`).join("")}</select></label>
+      <label>Status<select name="status" aria-label="Status">${Object.entries(states).map(([v, label]) => `<option value="${v}"${editorStatus === v ? " selected" : ""}>${esc(label)}</option>`).join("")}</select></label>
       <label>What you checked or found<textarea name="comment" required maxlength="4000" rows="3">${esc(manual?.comment || "")}</textarea></label>
       <label>Source passage (optional)<textarea name="excerpt" maxlength="4000" rows="4" placeholder="Paste the relevant passage for comparison here">${esc(manual?.excerpt || "")}</textarea></label>
       <button type="submit" class="btn">Save private review</button><p class="sr-form-result" role="status"></p>

@@ -1,12 +1,13 @@
 // CPIN Explorer · saved highlights across every note, grouped by country and note, each with its
 // citation (OSCOLA or tribunal), the sources it cites, a private note and a staleness check against
-// the edition now held. Records live in this browser (localStorage "cpin-highlights-v1").
+// the edition now held. Records use the private account or browser-only storage bridge.
 import { drawDotFlag, hydrateFlags } from "../shared/dot-flag.js";
 import { fetchJson } from "../shared/fetch-json.js";
 import {
   capFirst, escHtml as esc, formatCitation, formatPinpoint, longDate, monthLabel, quoteOf, quoteWithCitation, sourceOf, STYLE_HINTS, STYLE_LABELS, STYLE_NAMES, titleMonth, pdfPinpoint,
 } from "../shared/citation.js";
 import * as H from "../shared/highlights.js";
+import { accountStore } from "../shared/account-state.js";
 import { createPinStore, pinId, pinHref, STORAGE_KEY as PINS_KEY } from "../shared/pins.js";
 const pins = createPinStore();
 import { analyseBody, describePassage, parseBody, paths } from "../shared/note-source.js";
@@ -51,7 +52,7 @@ function render() {
       <div><span class="numeral">${recs.length}</span><span class="eyebrow">${recs.length === 1 ? "Highlight" : "Highlights"}</span></div>
       <div><span class="numeral">${notes}</span><span class="eyebrow">${notes === 1 ? "Note" : "Notes"}</span></div>
       <div><span class="numeral">${groups.length}</span><span class="eyebrow">${groups.length === 1 ? "Country" : "Countries"}</span></div></div>
-      <p class="sv-local" style="--i:5">Kept in this browser only (there are no accounts yet). Download a copy to keep them safe.</p>` : ""}`;
+      <p class="sv-local" style="--i:5">${accountStore.state.user?.approved ? "Saved to your account when the saving indicator completes. Download a copy whenever you need one." : "Kept in this browser only. Sign in with an approved account to save across devices."}</p>` : ""}`;
   $("#tools").hidden = !recs.length;
   setStyle(style, { persist: false, rerender: false });
   $("#groups").innerHTML = recs.length ? groups.map(countryHtml).join("") : emptyHtml();
@@ -71,7 +72,7 @@ function renderPins() {
     return `<li><a href="${esc(pinHref(p))}">${esc(label)}</a><button class="btn" type="button" data-unpin="${esc(pinId(p))}" aria-label="Unpin ${esc(label)}">Unpin</button></li>`;
   };
   root.innerHTML = `<h2 class="sv-section-title" id="pinsHeading">Pinned countries &amp; reports</h2>
-    <p class="sv-local">Kept in this browser only. Account syncing is not available yet. Report pins open the latest edition held here.</p>
+    <p class="sv-local">${accountStore.state.user?.approved ? "Saved to your account." : "Kept in this browser only. An approved account can save these across devices."} Report pins open the latest edition held here.</p>
     ${!data ? '<p>The catalogue could not be loaded. Reload to add pins.</p>' : ""}
     <div class="pin-form"><div><label for="pinCountry">Country</label><select id="pinCountry"><option value="">Choose a country</option>${countryOptions}</select><button class="btn" type="button" id="pinCountryAdd" disabled>Pin country</button></div>
       <div><label for="pinReport">Report</label><select id="pinReport" disabled><option value="">Choose a country first</option></select><button class="btn" type="button" id="pinReportAdd" disabled>Pin report</button></div></div>
@@ -170,7 +171,7 @@ function itemHtml(r) {
     ${sources.length ? `<details class="sources"${sources.length <= 3 ? " open" : ""}><summary>Sources cited in this passage · ${sources.length}</summary><ol>${sources.map((s) =>
       `<li><b>[${s.n}]</b><span>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.text)}</a>` : esc(s.text)}</span></li>`).join("")}</ol></details>` : ""}
     <div class="sv-note-field"><label class="field-label" for="c-${esc(r.id)}"><span class="eyebrow">Private note</span><span class="saved-flag">Saved</span></label>
-      <textarea class="comment" id="c-${esc(r.id)}" data-hid="${esc(r.id)}" placeholder="Only kept in this browser.">${esc(r.comment || "")}</textarea></div>
+      <textarea class="comment" id="c-${esc(r.id)}" data-hid="${esc(r.id)}" placeholder="${accountStore.state.user?.approved ? "Private to your account." : "Only kept in this browser."}">${esc(r.comment || "")}</textarea></div>
     <div class="sv-actions">
       <button type="button" class="btn btn--primary" data-act="copy-both">Copy quote + citation</button>
       <button type="button" class="btn" data-act="copy-cite">Copy citation</button>

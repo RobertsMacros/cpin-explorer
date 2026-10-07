@@ -1,3 +1,5 @@
+// Account controls load independently of the miniature globe.
+if (typeof document !== "undefined") void import("./account-ui.js");
 // The header mark, and the globe's stand-in on the start page: both the globe in miniature (mini-globe.js).
 //
 // The mark shows the globe's opening view until a country is in hand (one open on the start page, a

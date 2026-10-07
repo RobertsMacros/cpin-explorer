@@ -1,4 +1,6 @@
-// Country/report shortcuts are separate from edition-bound highlights. No account sync yet.
+import { savedStorage, accountReady } from "./account-state.js";
+await accountReady;
+// Country/report shortcuts are separate from edition-bound highlights.
 export const STORAGE_KEY = "cpin-pins-v1";
 const slug = /^[a-z0-9-]+$/;
 const series = /^[\w:.-]+$/;
@@ -22,7 +24,7 @@ const normalise = (list) => {
   }).map(p => ({ type:p.type, country:p.country, ...(p.type === "report" ? {series:p.series} : {}),
     countryName:String(p.countryName || p.country), topic:String(p.topic || ""), kind:String(p.kind || ""), createdAt:String(p.createdAt || "") }));
 };
-export function createPinStore(getStorage = () => globalThis.localStorage) {
+export function createPinStore(getStorage = savedStorage) {
   let memory = [], failed = false;
   function load() {
     if (!failed) {
