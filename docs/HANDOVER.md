@@ -3,6 +3,17 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Browser scope correction, 7 October 2026
+
+Robert clarified that the reported highlighting and ordinary-link overlay issue
+is in **Edge on Windows**. Edge installation, headless rendering and native menu
+checks performed here were on macOS; they do not verify or resolve the Windows
+issue. The outstanding test is Windows Edge with its own selection/highlighting
+controls enabled: select report text, use Explorer highlights, and open both
+ordinary source-link and footnote overlays. Physical iPhone and genuine scheduled
+changed-content publication remain separate. Mac authentication is not the
+Windows blocker; access to the Windows session is currently unverified.
+
 ## Historical Sudan quotation, 7 October 2026
 
 Read [the Sudan follow-up](reviews/2026-10-07-sudan-historical-quotation.md).
