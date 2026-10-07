@@ -113,6 +113,24 @@ remain separate; neither is adopted automatically or attached to July 2024 editi
 
 ## Verification and operating limits
 
+### Preserve the published review and separate later assessments
+
+Published reviewers' entries are retained unchanged. The preservation manifest
+`config/published-review-preservation.json` pins the complete existing external
+records, including wording, authorship, scope and replies. New AI assessments are
+separate records with `reviewOf` references and exact edition/text hashes. Tests
+reject missing, rewritten or cross-edition reviewer associations. A deliberate
+editorial correction requires a separately recorded reason; an AI disagreement
+or a Home Office acceptance cannot rewrite the reviewer entry or its baseline.
+
+The overlay shows the reviewer's original excerpt first, any published Home
+Office response underneath, and the linked AI assessment below that. The response
+remains attributed evidence rather than an accuracy verdict. When no response is
+found, a bounded search note names its scope and date; it is not proof of absence.
+An unrelated response to another review cannot substitute for a missing reply.
+Earlier AI assessments remain dated records when new evidence supports a further
+assessment. Private human additions remain a separate browser-local journal.
+
 The 6 October licensed-comment intake uses an explicit work/section manifest in
 `config/review-comment-scopes.json`. It checks held PDF and edition hashes,
 Crown/OGL licence pages, reviewer/response column roles and independent Poppler

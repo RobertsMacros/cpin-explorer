@@ -364,6 +364,7 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .sr-review-group { border-top: 1px solid var(--line); margin-top: .8rem; padding-top: .65rem; }
 .sr-group-heading { margin: 0 0 .45rem; font-family: var(--font-mono); font-size: .8rem; font-weight: 500; }
 .sr-record { margin: .7rem 0; padding: .55rem; background: var(--bg); border: 1px solid var(--line); }
+.sr-response, .sr-record > .sr-review-followups { border-top: 1px solid var(--line); margin-top: .7rem; padding-top: .6rem; }
 .sr-comment > summary { cursor: pointer; font-size: .82rem; color: var(--blue); overflow-wrap: anywhere; }
 .sr-page-links { font-family: var(--font-mono); font-size: .74rem; line-height: 2; overflow-wrap: anywhere; }
 .sr-evidence blockquote { margin: .5rem 0; padding-left: .7rem; border-left: 2px solid var(--blue); white-space: pre-wrap; overflow-wrap: anywhere; }
