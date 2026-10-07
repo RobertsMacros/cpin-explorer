@@ -22506,6 +22506,50 @@
         }
       ],
       "scope": "Separate AI evidence follow-up to the attributed review. WHO’s original national return, condition-specific coverage, implementation and patient payments remain unresolved."
+    },
+    {
+      "kind": "ai",
+      "status": "context",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.1"
+      ],
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-07",
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        }
+      ],
+      "id": "ai-review-albania-who-original-profile-recovered-20261007",
+      "summary": "Original WHO profile recovered: the insurance table describes how the majority of people with mental-health conditions pay, and reports no payment at the point of service for both services and psychotropic medicines. It also reports national insurance or reimbursement coverage for psychosis, bipolar disorder and depression. This supports the CPIN’s normally-insured qualification, but does not establish universal free access or actual payments for every patient. The published country profile is now available; the underlying national return and condition-specific implementation evidence are still missing. MiCLU’s criticism and earlier AI assessments remain intact.",
+      "sourceCopyUrl": "https://web.archive.org/web/20240730213545id_/https://cdn.who.int/media/docs/default-source/mental-health/mental-health-atlas-2020-country-profiles/alb.pdf?sfvrsn=3212d7e5_6&download=true#page=2",
+      "sourceLocation": "WHO Mental Health Atlas 2020, Albania Member State Profile, physical page 2, insurance table. Archive capture 30 July 2024; original PDF raw text, independent Poppler and rendered table agree. SHA-256 8360a50176023f3236c79fb895fe26b711dd56615b6ba8c20e17a07326521a3f; indexed SHA-1 payload digest 5S66DFV4KS3ODNHFOUPKMJSRRBQX324C matches the retained bytes.",
+      "scope": "Separate AI evidence follow-up for the two exact January 2025 edition bodies. Published profile recovered; underlying country submission, implementation and individual patient payments remain unresolved."
     }
   ]
 }

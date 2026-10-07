@@ -29,10 +29,12 @@ code and standalone mark assets; other component credits remain separate.
 ## Status
 
 **7 October 2026: historical source and evidence-gap follow-up.**
-51 of the original 54 scoped comparisons are resolved; Nigeria THE, Pakistan's
-VPN guide and China Minghui remain open. Two new separate AI context notes add
-recovered HUDO evidence and Albanian medicine exemptions, preserving all 563
-earlier records. There are 565 annotations and 101 visible AI assessments; no
+52 of the original 54 scoped comparisons are resolved; Nigeria THE and China
+Minghui remain open. Pakistan’s April 2025 VPN guide now matches its indexed
+payload digest. Three separate AI context notes add recovered HUDO evidence,
+Albanian medicine exemptions and WHO’s original published Albania profile,
+preserving all 563 earlier records. There are 566 annotations and 102 visible
+AI assessments; no
 new confirmed error flag is added. Today's genuine scheduled sync succeeded
 without content changes and correctly skipped deployment. Edge 154.0.4258.37 is installed and passes 42 live engine checks. Native Edge
 menu behaviour, physical iPhone access and a genuine scheduled changed-content

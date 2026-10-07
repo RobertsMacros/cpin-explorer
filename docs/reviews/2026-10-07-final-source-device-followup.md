@@ -1,14 +1,14 @@
 # Historical source and evidence-gap follow-up, 7 October 2026
 
-- **51 of 54 scoped comparisons resolved.** The 19 May 2025 IPS salary-guide
+- **52 of 54 scoped comparisons resolved.** The 19 May 2025 IPS salary-guide
   capture matches the archive's indexed payload digest and retains the 2025 title,
   entry-level INR 56,100 and Director General INR 2,25,000. This resolves the
   rolling-title question, without certifying salary law, the separately cited
   exchange rates or the claimed June update date.
-- **Two separate AI context notes are live.** All 563 previous
+- **Three separate AI context notes are prepared; the first two are already live.** All 563 previous
   annotation objects, including 489 original human-review extracts and responses,
-  remain unchanged. The catalogue now has 565 annotations (489 external, 76 AI)
-  and 101 visible AI assessments including legacy records and applications.
+  remain unchanged. The catalogue now has 566 annotations (489 external, 77 AI)
+  and 102 visible AI assessments including legacy records and applications.
   No new confirmed error flag is added.
 - **Sudan:** HUDO's original appeal is recovered from its 12 July 2020 HTML
   capture, with matching indexed payload digest. It uses Albardab and describes
@@ -51,9 +51,6 @@ Still pending:
 
 - Nigeria THE: the closest returned capture is the already checked 2023
   Sub-Saharan ranking; it does not settle the cited 2024 world-ranking passage.
-- Pakistan VPN: the newly retrieved September 2025-title guide contains relevant
-  Pakistan wording, but its bytes do not match the indexed digest. It cannot
-  establish exact historical identity; no ban/title error is confirmed.
 - China Minghui: the availability API returned no capture. Two different lower
   bounds are not themselves a contradiction; historical quotation remains open.
 - WHO's original Albanian national return, condition-specific coverage and actual
@@ -70,9 +67,9 @@ returned 502. Those limits were honoured. No paid model calls, duplicate full
 corpus run, canonical edits, synthetic production votes or new schedules occurred.
 
 Four Python annotation, provenance and preservation tests and 25 relevant
-JavaScript tests passed. The private journal verification rehashes ten distinct
+JavaScript tests passed. The private journal verification rehashes eleven distinct
 raw archive payloads and preserves all 24 original follow-up question IDs and
-exact edition occurrences, with 21 scoped resolutions and three pending rows.
+exact edition occurrences, with 22 scoped resolutions and two pending rows.
 Receipt bytes, scripts, readings and bounded-retrieval limits are retained under
 `data/source-evidence/final-gaps-2026-10-07/`; the current question journal is under
 `data/source-evidence/goal-completion-2026-10-07/`. These are excluded from builds.
@@ -110,3 +107,24 @@ plugin is unavailable. They do not establish interaction with Edge's native
 selection mini-menu or physical iPhone gestures. No production vote, saved
 highlight or account setting was changed. The latest native access attempt was
 blocked by the Mac lock, and iPhone Mirroring shows its authentication prompt.
+
+### Further historical recovery
+
+The 27 April 2025 [Pakistan VPN guide capture](https://web.archive.org/web/20250427033605id_/https://cybernews.com/best-vpn/vpn-for-grindr/) matches indexed SHA-1 digest
+`7CTTHD24P6MDPWD3IDG753O4XLYPHEH7` and retains the 2025 title and Pakistan FAQ.
+It resolves the source-version question, without certifying the actual blocking
+situation, VPN operation or the separately claimed October update date. The
+previous September capture’s digest failure remains in the private record.
+
+WHO’s [original published Albania profile, page 2](https://web.archive.org/web/20240730213545id_/https://cdn.who.int/media/docs/default-source/mental-health/mental-health-atlas-2020-country-profiles/alb.pdf?sfvrsn=3212d7e5_6&download=true#page=2)
+is recovered from its 30 July 2024 capture. The original three-page PDF matches
+indexed digest `5S66DFV4KS3ODNHFOUPKMJSRRBQX324C`, SHA-256
+`8360a50176023f3236c79fb895fe26b711dd56615b6ba8c20e17a07326521a3f`.
+Raw PyMuPDF, independent Poppler and the rendered page agree: its insurance
+questions concern the majority of patients. It reports no point-of-service
+payment for services and psychotropic medicines, and coverage for psychosis,
+bipolar disorder and depression. The CPIN uses a normally-insured qualification.
+The new separate AI context note preserves MiCLU’s original criticism and all
+565 previous annotations. This is the published profile, not the underlying
+national return or proof of individual patients’ actual costs. The wider gap
+remains open. No new error flag is added.
