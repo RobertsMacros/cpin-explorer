@@ -143,8 +143,8 @@ Forty-five read-only checks pass in installed Edge, including the new WHO card,
 source URL and approved-account sign-in gate. No runtime or console errors.
 Native Edge menus and physical iPhone remain untested because the Mac is locked.
 This is a manual direct publication; it does not close the real scheduled
-changed-content republish check. GitHub main still needs synchronising; a later
-deployment from its older snapshot could replace the new note until that happens.
+changed-content republish check. GitHub synchronisation was subsequently recovered through its connector, as
+recorded below; the older-snapshot replacement risk from this failure is closed.
 
 The [9 January 2024 THE capture](https://web.archive.org/web/20240109212233id_/https://www.timeshighereducation.com/student/best-universities/best-universities-nigeria)
 retains the exact article title, date metadata of 11 October 2023, Covenant and
@@ -157,3 +157,32 @@ independently certify ranking methods, public ownership or the broader CPIN
 conclusion. The different February 2024 Sub-Saharan capture remains in the
 private history. China’s historical quotation and the wider original-source/
 implementation gaps remain open.
+
+### GitHub publication recovered
+
+The GitHub connector accepted the same blobs and exact tested tree
+`ada010629074ef90d44af2b9d56d13d78591e4f3` as local snapshot `2b6f1b2`.
+Its main update to `3426f2ce406bbc092c733ff1d872ca4dff3e1865` was a
+non-forced fast-forward guarded by the expected previous head `553d6db`.
+The original local source/documentation commits remain on
+`codex/verified-direct-release-20261007`; the working main checkout matches
+remote main. No publication permissions, branch protections or workflow
+configuration were changed.
+
+[Normal deployment 37643909749](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37643909749)
+succeeded with 415 Python, 360 JavaScript and 91 ephemeral workerd/D1 checks,
+publishing Worker `2c4d050b-1016-4c96-9c74-1c7427f59cd9`. Thirteen subsequent
+live GET checks confirm exact catalogue bytes, all 102 anonymous AI feedback
+fingerprints, existing account configuration and private-journal exclusion.
+All 565 previous annotation objects are unchanged; the catalogue contains 566.
+Nine additional read-only installed-Edge checks confirm the WHO note and source
+link in footnote 74 of both exact January 2025 bodies, the retained earlier
+AI context and the 390px overlay bounds. The screenshot was inspected.
+
+The real scheduled run still reports no content change; this push/connector
+publication does not establish scheduled changed-content republishing. The Mac
+remains locked, preventing native Edge and physical iPhone checks. China’s
+historical Minghui quotation, underlying WHO country return/implementation,
+original Dabanga wording and the specific Albania Home Office response remain
+open. No processing error, paid call, canonical rewrite or synthetic public
+vote was introduced. These remaining gaps prevent whole-task completion.

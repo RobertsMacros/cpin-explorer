@@ -40,8 +40,9 @@ without content changes and correctly skipped deployment. Edge 154.0.4258.37 is 
 menu behaviour, physical iPhone access and a genuine scheduled changed-content
 publication remain pending.
 The additional WHO note is live through direct Cloudflare version `d0eabcf4`;
-local commit `3c0f2a2` passes 415 Python, 360 JavaScript and 91 ephemeral account
-checks. GitHub writes are currently failing; synchronising main remains pending.
+the tested source snapshot passes 415 Python, 360 JavaScript and 91 ephemeral
+account checks. GitHub publication recovered through its connector: main
+`3426f2c`, successful run `37643909749`, Worker `2c4d050b`.
 See [the latest evidence and limits](docs/reviews/2026-10-07-final-source-device-followup.md).
 
 
