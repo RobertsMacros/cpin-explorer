@@ -53,7 +53,8 @@ Still open:
   independent Sudan place-name evidence and a specific Albania Home Office reply
   remain missing. Earlier human reviews stay intact.
 - Native Edge is not installed; installation confirmation is pending. Physical
-  iPhone Mirroring is locked; user unlock is pending. Genuine scheduled publication
+  iPhone verification needs user unlock/connect; Mirroring was locked and its
+  window was later unavailable. Genuine scheduled publication
   needs a real changed-content run, rather than artificial data changes.
 
 The original evidence update is live in [GitHub deployment 37628567718](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37628567718),
@@ -63,8 +64,11 @@ Twenty-four anonymous live checks verified catalogue byte equality, all 99 AI
 feedback fingerprints, both exact Colombia editions and private-journal exclusion.
 A later visual check found internal panel overflow from long evidence hashes. The
 reader CSS now lets review content shrink and wrap; proposed-CSS checks at 390px
-and 1440px show no panel or internal overflow. Live verification of that small
-repair is recorded separately after deployment. No synthetic production vote
+and 1440px show no panel or internal overflow. The repair is live in [GitHub deployment 37631464953](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37631464953),
+Cloudflare version `6f192cc6-db98-4f40-8757-8c37a4bebe78`. Thirty anonymous live
+checks passed, including exact reader CSS, all review catalogues, all 99 feedback
+fingerprints, both Colombia editions, and desktop/390px internal panel overflow.
+Its CI also passed 415 Python tests, 360 JavaScript tests and 91 workerd/D1 checks. No synthetic production vote
 was submitted.
 
 Four annotation/provenance/preservation tests and 25 relevant JavaScript tests
