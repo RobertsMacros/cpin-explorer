@@ -12,6 +12,10 @@
 .password-field input { border: 0; min-width: 0; }
 .password-field button { background: transparent; border: 0; border-left: 1px solid var(--line); color: var(--ink); font: .8rem var(--font-mono); padding: .7rem; min-width: 64px; cursor: pointer; }
 .account-hint { color: var(--ink-2); font-size: .85rem; margin: -.5rem 0 0; }
+.browser-preference h2 { margin: 2rem 0 .8rem; }
+.browser-preference label { display: flex; align-items: flex-start; gap: .55rem; line-height: 1.5; cursor: pointer; }
+.browser-preference input[type="checkbox"] { flex: none; width: 1rem; height: 1rem; margin: .2rem 0 0; accent-color: var(--blue); }
+.browser-preference .account-hint { margin: .65rem 0 0; }
 .account-links { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1.4rem 0 0; }
 .account-message { min-height: 1.4rem; color: var(--ink); margin: .5rem 0; }
 .account-error { color: var(--del); }
