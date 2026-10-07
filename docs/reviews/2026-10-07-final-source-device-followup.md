@@ -5,7 +5,7 @@
   entry-level INR 56,100 and Director General INR 2,25,000. This resolves the
   rolling-title question, without certifying salary law, the separately cited
   exchange rates or the claimed June update date.
-- **Two separate AI context notes prepared for publication.** All 563 previous
+- **Two separate AI context notes are live.** All 563 previous
   annotation objects, including 489 original human-review extracts and responses,
   remain unchanged. The catalogue now has 565 annotations (489 external, 76 AI)
   and 101 visible AI assessments including legacy records and applications.
@@ -59,10 +59,10 @@ Still pending:
 - WHO's original Albanian national return, condition-specific coverage and actual
   payment/implementation data; the exact historical Dabanga wording; a specific
   Home Office response to MiCLU's mental-health review.
-- Edge installation and testing, physical iPhone access, and an actual
-  changed-content scheduled sync-to-publication event. Installation was explicitly
-  authorised in this turn. Native computer use reports the Mac locked, and the
-  user has been asked to unlock it for iPhone Mirroring.
+- Native Edge menu/highlighter interaction, physical iPhone access, and an actual
+  changed-content scheduled sync-to-publication event. Edge is now installed and
+  its engine checks pass. Native computer use reports the Mac locked; Mirroring
+  explicitly requires Touch ID or the Mac login. The user has been asked to unlock it.
 
 The additional public archive API found the IPS and HUDO captures. Common Crawl's
 robots restrictions prevented automated index access; WHO's API robots endpoint
@@ -80,3 +80,33 @@ Receipt bytes, scripts, readings and bounded-retrieval limits are retained under
 The [Project coordination roadmap](https://chatgpt.com/space/page_39c39136789481918c7686224105a5c7)
 remains the sole current plan. These results do not close wider source context or
 physical/scheduled publication verification.
+
+Publication is verified: main `9b97d68ee1a108630843e9f6615af53c651a855c`,
+[deployment 37638339915](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37638339915),
+Cloudflare version `6fa08555-8a32-46dc-af51-4c300138b9c0`. CI passed all 415
+Python tests, 360 JavaScript tests and 91 ephemeral workerd/D1 checks. The local
+static build passed with 7,904 files (454 MB).
+
+Microsoft Edge **154.0.4258.37** is installed from its official Microsoft package
+through Homebrew. Its installer SHA-256 matches the published cask hash and the
+app identifies Microsoft Corporation (`UBF8T346G9`). Ordinary deep code-signature
+verification passes. Strict verification objects to Finder metadata on
+`mac_addons.so`; attempted metadata removal was denied and all original extended
+attributes, including quarantine and provenance, remain unchanged. The official
+installer scratch file was removed after installation; no unrelated cache was cleared.
+
+**42 read-only live checks passed in the installed Edge engine**, including all
+101 anonymous AI fingerprints, exact catalogue/CSS bytes, both retained Colombia
+editions, desktop and 390px panel bounds, actual mouse-drag selection and the
+Explorer toolbar, footnote review overlay, external-link click preview, both new
+exact-edition context notes and approved-account sign-in gates, plus private
+journal exclusion. There were no runtime or console warnings/errors. Thirty-eight
+Chrome checks also passed. Screenshots were inspected for the selection toolbar
+and source preview. Browser instances closed cleanly and the task temp-folder
+count is zero.
+
+These are **headless engine checks** using regular Playwright because the Browser
+plugin is unavailable. They do not establish interaction with Edge's native
+selection mini-menu or physical iPhone gestures. No production vote, saved
+highlight or account setting was changed. The latest native access attempt was
+blocked by the Mac lock, and iPhone Mirroring shows its authentication prompt.

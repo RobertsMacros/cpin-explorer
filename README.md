@@ -34,9 +34,9 @@ VPN guide and China Minghui remain open. Two new separate AI context notes add
 recovered HUDO evidence and Albanian medicine exemptions, preserving all 563
 earlier records. There are 565 annotations and 101 visible AI assessments; no
 new confirmed error flag is added. Today's genuine scheduled sync succeeded
-without content changes and correctly skipped deployment. Edge installation is
-authorised and underway; physical iPhone access and a genuine scheduled
-changed-content publication remain pending.
+without content changes and correctly skipped deployment. Edge 154.0.4258.37 is installed and passes 42 live engine checks. Native Edge
+menu behaviour, physical iPhone access and a genuine scheduled changed-content
+publication remain pending.
 See [the latest evidence and limits](docs/reviews/2026-10-07-final-source-device-followup.md).
 
 
