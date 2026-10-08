@@ -3,6 +3,32 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Albanian original study supplements, 8 October 2026
+
+Read [the subgroup evidence and release](reviews/2026-10-08-albania-study-supplements.md).
+Original PLOS S1/S2 files allow bounded, independently reproduced counts for
+respondents reporting mental disorders. The December 2018 regional survey
+does not establish national coverage, named treatment or exemption eligibility.
+One separately labelled AI context record is live below the original MiCLU
+review on the same two January 2025 bodies; all 568 earlier objects are unchanged.
+There are now 569 records / 105 visible AI identities. Run `37833094232`, Worker
+`bd72c07e-2a93-4d75-bced-15c85331ec6b`, passed 415 Python, 362 JavaScript and
+99 ephemeral account checks, followed by 30 anonymous live checks.
+
+The package-index refresh fixes the observed Poppler installation failure and
+is also applied to daily sync. Scheduled run `37785692320` found the collection
+unchanged and skipped deployment; genuine changed-content scheduled publication
+remains pending. Windows Edge remains untested. The gaming PC is connected to
+Codex, but this chat's computer controls target macOS. Native iPhone access
+could not be checked while the Mac was locked. Do not substitute Mac rendering
+or viewport checks for either physical-device test.
+
+The WHO completed national return, original chronic/medicine attachments,
+named-condition/medicine actual-payment and eligibility evidence, and specific
+Home Office reply remain unlocated. Partial subgroup recovery does not complete
+the missing-evidence milestone. The original 54-question queue remains 53
+resolved / one historical Minghui wording question pending.
+
 ## Albanian state-audit evidence, 7 October 2026
 
 Read [the original-audit follow-up](reviews/2026-10-07-albania-state-audit.md).

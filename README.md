@@ -28,6 +28,18 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**8 October 2026: original Albanian study supplements recovered.**
+A separate AI context note now adds regional mental-health subgroup payment
+counts below MiCLU’s existing review on the two exact January 2025 bodies.
+All 568 earlier records are retained; there are now 569 records / 105 visible
+AI identities. CI passes 415 Python, 362 JavaScript and 99 ephemeral account
+checks; 30 anonymous live checks pass. The new data narrow the payment-evidence
+gap but do not establish national coverage, named treatments or eligibility.
+See [sources, calculations and limits](docs/reviews/2026-10-08-albania-study-supplements.md).
+Windows Edge remains untested: the gaming PC is connected to Codex, but this
+chat exposes Mac controls only. Native iPhone access is unavailable while the
+Mac is locked. Today's scheduled sync found no changes and skipped deployment.
+
 **7 October 2026: Albanian implementation evidence added.**
 Two original state audits narrow the reimbursement evidence gap. One separate
 AI context note is live below MiCLU’s existing review, preserving all 567 earlier

@@ -40,10 +40,22 @@ negative values. The dictionary has a diabetes-variable spelling discrepancy:
 matches exactly. The original files remain intact; no individual rows are republished.
 
 One separate AI context record, `ai-review-albania-gabrani-mental-subgroup-20261008`,
-is prepared for the two exact January 2025 edition bodies, paragraph 7.1.1 and
+is live for the two exact January 2025 edition bodies, paragraph 7.1.1 and
 footnote 74. All 568 earlier annotation objects are retained, including the human
 review and earlier AI assessments. No new error flag, canonical change or paid call.
-Publication is pending validation and live verification.
+Publication passed in GitHub run `37833094232`, Worker version
+`bd72c07e-2a93-4d75-bced-15c85331ec6b`. CI passed 415 Python tests,
+362 JavaScript tests and 99 disposable workerd/D1 checks. Thirty anonymous live
+checks confirm exact catalogue bytes, all 105 visible AI identities, both exact
+edition report panels and footnote 74, and retained human-first ordering.
+The 390-pixel layout checks use macOS Edge's engine; they do not verify Windows
+Edge or a physical iPhone. There are now 569 annotation records.
+
+The first deployment failed before tests because stale runner package indexes
+referenced unavailable Poppler packages. Both deployment jobs and the sync job
+now refresh the package index before installation; the retry passed. Today's
+scheduled sync, run `37785692320`, found the collection unchanged and skipped
+deployment. It is not evidence of scheduled changed-content publication.
 
 The WHO national return, original chronic/medicine attachments, named-condition
 and named-medicine payment evidence, and a specific Home Office reply remain
