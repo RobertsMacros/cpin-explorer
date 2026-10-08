@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-10-07",
+  "checkedAt": "2026-10-08",
   "records": [
     {
       "id": "context-b9d040e0958d7518372d",
@@ -22625,6 +22625,60 @@
         }
       ],
       "scope": "Separately labelled AI context below the attributed MiCLU review; category-level implementation evidence only. Current copies of dated reports do not establish the bytes available before January 2025. No Home Office response or WHO national return recovered; no new error flag."
+    },
+    {
+      "id": "ai-review-albania-gabrani-mental-subgroup-20261008",
+      "kind": "ai",
+      "status": "context",
+      "author": "Codex interactive AI",
+      "reviewedAt": "2026-10-08",
+      "reviewOf": [
+        "published-passage-miclu-albania-mental-health-7.1.1"
+      ],
+      "summary": "The published study supplements now allow a mental-health subgroup check. Of 898 respondents in Fier and Diber in December 2018, 38 reported a mental disorder: 32 recorded drug spending and 20 consultation spending. Of the 23 who reported no other listed condition, 18 recorded drug spending and 13 consultation spending. These are unweighted descriptive counts calculated from S1 Data using S2’s mental-disorder and cost definitions, rather than national estimates or the percentages shown in the paper. The costs relate to chronic-condition care; the supplements do not identify diagnoses, medicines, reimbursement eligibility or private versus public provision for these rows. They support a limited concern about actual reported payments among respondents with mental disorders, but cannot alone disprove WHO’s majority-based national profile or establish every patient’s entitlement. The article describes an eight-week recall; the codebook says 4/8 weeks. Current supplement retrieval does not prove the precise bytes available before this CPIN. The original human review and earlier AI assessments remain intact.",
+      "sourceCopyUrl": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0272221.s001",
+      "sourceLocation": "Gabrani, Schindler and Wyss (2022), original PLOS S1 CSV (898 rows; v4127 mental-disorder indicator, v57 consultation cost, v59a drug cost) and S2 codebook, sheet codebook, rows 18 and 23–26. SHA-256: S1 a2c9cc64e3577b4e39db88774379512e7faf861f66af66e9ac741674c79ce6dd; S2 643ab62c42d752a20584f1fe6bd71208ccf8107fdea0662e8f79633d58636c48. Independent pandas and standard-library CSV counts agree; the 898-row sample, 786 insured and rounded overall 36% consultation / 88% drug-payment rates reproduce the paper. The codebook’s diabetes label v3122 differs from CSV v4122; no column was renamed.",
+      "evidenceLinks": [
+        {
+          "title": "Original study and methods",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272221"
+        },
+        {
+          "title": "Published S2 variable dictionary",
+          "url": "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0272221.s002"
+        }
+      ],
+      "targets": [
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "7906ab730b9fc824",
+          "textSha": "1fdf7131d6a4bb360a02f628636cd9e1032040d62c5a3bc0994435852adc24f6",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        },
+        {
+          "country": "albania",
+          "series": "note:healthcare-mental",
+          "editionId": "aa4cdfd9fb8a2dbf",
+          "textSha": "a386cbb9da4e58ecb102dbdd9332426b1cbff028ec021c6007f9ca413f290a5a",
+          "anchors": [
+            {
+              "type": "footnote",
+              "paragraph": "7.1.1",
+              "quote": "7.1.1 The World Health Organisation ‘Mental Health Atlas 2020: Albania country profile’, published 8 October 2021, advised that patients pay nothing for mental ",
+              "footnote": 74
+            }
+          ]
+        }
+      ],
+      "scope": "Separate AI calculation for two exact January 2025 edition bodies, paragraph 7.1.1 / footnote 74. Regional 2018 self-reported expenditure only; no named medicine, exemption, national 2020 coverage or WHO country return established. No new error flag or change to human criticism."
     }
   ]
 }
