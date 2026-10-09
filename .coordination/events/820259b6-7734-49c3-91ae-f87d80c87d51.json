@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "820259b6-7734-49c3-91ae-f87d80c87d51",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "3497964b-47a8-44ae-8d62-9b3fd0faa573",
+  "parent_event_ids": [
+    "e04e97e2-9e16-4f08-a659-2f10c3198ba9"
+  ],
+  "status": "blocked",
+  "title": "Evaluate bounded local-model trial",
+  "scope": "Evaluate bounded local-model trial; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "occurred_at": "2026-10-08T20:18:26.561641+00:00",
+  "summary": "Conservative existing reuse groups measured; read-only Windows hardware inventory and bounded trial contract prepared. No hardware measurement or model run claimed.",
+  "evidence": [
+    {
+      "kind": "report",
+      "ref": "docs/methods/local-model-trial.md",
+      "result": "116125 linked blocks / 104251 computation groups; substantive 93404 / 83321; eight-case trial contract"
+    }
+  ],
+  "remaining": [
+    "Observe gaming PC GPU/VRAM/RAM and existing runtime",
+    "Select and execute one bounded eight-case trial; verify quoted evidence and unresolved outcomes"
+  ],
+  "blockers": [
+    "This chat has no Windows command surface; connected gaming-PC chats were not interrupted or messaged."
+  ]
+}

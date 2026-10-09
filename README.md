@@ -28,6 +28,16 @@ code and standalone mark assets; other component credits remain separate.
 
 ## Status
 
+**9 October 2026: checked release prepared.** Windows Edge's bottom selection
+bar matches the exact patch checked on the PC; Robert reports the issue done
+and defers retesting. Twenty selected Gaza uses yielded eleven scoped grey AI
+notes and nine unresolved evidence gaps. There are 580 annotations and 61
+curated publications, with all previous objects preserved. Fresh checks pass:
+413 Python (two skipped), 362 JavaScript and 99 disposable account checks.
+See [the checked release](docs/reviews/2026-10-09-checked-release.md). Physical iPhone, actual changed-content scheduled
+publication, account-refresh/sync races and wider evidence remain separate.
+
+
 **8 October 2026: original Albanian study supplements recovered.**
 A separate AI context note now adds regional mental-health subgroup payment
 counts below MiCLU’s existing review on the two exact January 2025 bodies.

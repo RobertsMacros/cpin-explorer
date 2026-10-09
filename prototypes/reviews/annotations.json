@@ -22679,6 +22679,303 @@
         }
       ],
       "scope": "Separate AI calculation for two exact January 2025 edition bodies, paragraph 7.1.1 / footnote 74. Regional 2018 self-reported expenditure only; no named medicine, exemption, national 2020 coverage or WHO country return established. No new error flag or change to human criticism."
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-16",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The quotation retains the 26 June 2026 Gaza geography and 65% land-area denominator. The omitted continuation concerns coordination for humanitarian organisations and prohibited sea access; it does not reverse the quoted resident restriction. This is no issue in the checked quotation, not verification of the underlying military/access data.",
+      "sourceCopyUrl": "https://www.ochaopt.org/content/humanitarian-situation-report-26-june-2026",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 1f69b92162cba6d8a79d76b27bfcc2105e2cd97858c5816795b2010fb5174439",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 16,
+              "paragraph": "8.1.9",
+              "quote": "8.1.9 A ‘Humanitarian Situation Report’ published on 26 June 2026 by the UN Office for the Coordinat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-65",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The CPIN retains both the absence of significant economic recovery and the conditional small-scale activity. The omitted passage gives examples of early agricultural recovery; the source continues with inaccessible cropland and import constraints. Those qualifications are consistent with the limited claim. This does not validate the source estimates independently.",
+      "sourceCopyUrl": "https://www.fao.org/newsroom/detail/food-security-and-child-nutrition-crises-persist-in-gaza-despite-fragile-gains-due-to-increased-humanitarian-assistance-and-commercial-traffic/en",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 340d90d8a63dbd537bc12e8ecc05111fe0d66c6e10ed7e42b222c7bf9f43a7f0",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 65,
+              "paragraph": "9.2.9",
+              "quote": "9.2.9 On 23 July 2026, the Food and Agriculture Organization of the United Nations (FAO) published a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-83",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The page explicitly labels these as GHO launch estimates on 8 December 2025. The CPIN uses the Gaza population, not the larger current OPT planning total shown elsewhere on the page. The source date/population scope is retained; no fresh population estimate is established.",
+      "sourceCopyUrl": "https://humanitarianaction.info/document/global-humanitarian-overview-2026/article/middle-east-and-north-africa-4",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 0df11250ec9e6487a522693bd651b84ce3c5f1e71d34ba485ca58287cbc1ee1f",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 83,
+              "paragraph": "10.1.2",
+              "quote": "10.1.2 On 8 December 2025, Humanitarian Action, a platform produced by OCHA which ‘provides a compre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-110",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The CPIN reproduces the Gaza headline in the 14 January update. Nearly and almost remain attached to the estimates. The full source describes continuing casualties alongside some aid improvements; the quotation does not turn the approximate risk estimate into a count of actual flooding deaths.",
+      "sourceCopyUrl": "https://www.ochaopt.org/content/humanitarian-situation-update-353-gaza-strip",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 e01eff01d0d1a83e5ecdc5bc91d2f9759a08f71744707dc209d50af5e6639f8b",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 110,
+              "paragraph": "10.2.8",
+              "quote": "10.2.8 On 14 January 2026, OCHA published ‘Humanitarian Situation Update #353’ which stated: ‘Heavy "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-131",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "Both quoted source bullets are present: dependence on trucked water and continuing disease despite approximately 2,000 treated sites. The omitted intervening bullet concerns shelter and heat; it does not connect pest treatment causally to rising disease. The CPIN retains the water/funding limitations and an approximate treatment count, not a population count.",
+      "sourceCopyUrl": "https://www.ochaopt.org/content/humanitarian-situation-report-12-june-2026",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 03de69e5f4ba298f78f6a6840401c77aada1c3808b89a837dcad68f40176b3c4",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 131,
+              "paragraph": "10.3.9",
+              "quote": "10.3.9 The OCHA humanitarian situation report for 12 June 2026, published on 13 June 2026, stated: ‘"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-140",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "World Bank physical page 15 / printed page 12 distinguishes pre-conflict Gaza 63.7% from West Bank 11.7%, then describes post-conflict poverty as nearly universal at least over the short term. The CPIN explicitly dates the latter to May 2024. Independent Poppler and the rendered original agree. This is faithful use of the stated estimates, not a new September 2026 poverty measurement.",
+      "sourceCopyUrl": "https://thedocs.worldbank.org/en/doc/ce9fed0d3bb295f0363d690224d1cd39-0280012024/original/Palestinian-Econ-Upd-May2024-FINAL-ENGLISH-Only.pdf",
+      "sourceLocation": "Physical page 15 / printed page 12; SHA-256 78f4cc88098433758ff90e424248b76509c19fa82023e2e8959e212f5fa730a4",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 140,
+              "paragraph": "10.4.1",
+              "quote": "10.4.1 On 23 May 2024, the World Bank published an update on the ‘Impacts of the Conflict in the Mid"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-150",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The launch estimate refers to the Gaza governorate in August 2025. The CPIN preserves that narrower geography, historical date and improvements qualification; it does not claim all Gaza remained in famine at publication. Later FAO/WFP statements concern different dates and do not by themselves contradict this historical quotation.",
+      "sourceCopyUrl": "https://humanitarianaction.info/document/global-humanitarian-overview-2026/article/middle-east-and-north-africa-4",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 0df11250ec9e6487a522693bd651b84ce3c5f1e71d34ba485ca58287cbc1ee1f",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 150,
+              "paragraph": "10.5.4",
+              "quote": "10.5.4 The Global Humanitarian Overview 2026, published by Humanitarian Action on 8 December 2025, s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-152",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The December WFP-hosted joint release attributes the quotation to Rein Paulsen and retains the need for supplies and funding. Its surrounding text says famine had been pushed back but gains were fragile. The CPIN quote preserves a conditional restart, not proof of restored production or self-sufficiency.",
+      "sourceCopyUrl": "https://www.wfp.org/news/un-agencies-welcome-news-famine-has-been-pushed-back-gaza-strip-warn-fragile-gains-could-be",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 5383cd0e7499de7275d396a9ec5194d12e3eedc0ea1e4a7ee2f922b6afd02aa8",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 152,
+              "paragraph": "10.5.6",
+              "quote": "‘… [Additionally,] “Gaza’s farmers, herders and fishers are ready to restart food production, but th"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-154",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The CPIN reproduces the dated 2 April Gaza headline, retaining nearly and the family denominator. The body describes cooking-gas and access constraints. Later July figures use other dates and measures; this quotation does not assert an exact 50% or a permanent rate.",
+      "sourceCopyUrl": "https://www.ochaopt.org/content/humanitarian-situation-report-2-april-2026",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 0da85b7f54f15793c4b6d6599227fded8d7b55184755733a5288d090b16595bc",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 154,
+              "paragraph": "10.5.8",
+              "quote": "10.5.8 The OCHA humanitarian situation report of 2 April 2026 stated: ‘In Gaza, cooking gas shortage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-158",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The CPIN preserves the joint July release’s improvements, fragility and continuing shortfalls, rather than presenting worsening alone. The removed detail identifies expanded assistance and commercial activity. The source’s current/projected IPC figures are not substituted for the distinct April–June period cited in the previous paragraph. The underlying IPC attachment remains unavailable.",
+      "sourceCopyUrl": "https://www.fao.org/newsroom/detail/food-security-and-child-nutrition-crises-persist-in-gaza-despite-fragile-gains-due-to-increased-humanitarian-assistance-and-commercial-traffic/en",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 340d90d8a63dbd537bc12e8ecc05111fe0d66c6e10ed7e42b222c7bf9f43a7f0",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 158,
+              "paragraph": "10.5.10",
+              "quote": "‘… [T]he United Nations cautioned that the progress, driven largely by expanded access to humanitari"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-review-gaza-202609-source-use-162",
+      "kind": "ai",
+      "status": "no-issue",
+      "author": "Codex interactive AI review",
+      "reviewedAt": "2026-10-08",
+      "summary": "The publicly held ReliefWeb key findings explicitly give food CPI: -2% month on month, -84% year on year and +102.2% versus September 2023. These differ from the neighbouring all-items CPI figures; the CPIN correctly keeps food as the measure and retains all three comparison periods. This checks the accessible publisher summary, not the unavailable full-report methodology.",
+      "sourceCopyUrl": "https://reliefweb.int/report/occupied-palestinian-territory/wfp-palestine-food-security-analysis-market-monitor-palestine-july-2026",
+      "sourceLocation": "Held publisher text; quotation located with neighbouring qualifications; SHA-256 55977e90e7ca9886410ce326837c3a6fa32bfaae6af0b1e6032f2315bc485399",
+      "scope": "Selected source use only. Held-copy quotation, context, date, geography and denominator check; historical payload identity and underlying facts are not independently verified.",
+      "targets": [
+        {
+          "country": "palestine",
+          "series": "note:gaza-humanitarian-situation",
+          "editionId": "c769bfa4982ca24f",
+          "textSha": "db3340c44ca6c9f14379c2a4ca65c9e3b9a1ceb2a9a8ac3ad6728fdebeb7e029",
+          "anchors": [
+            {
+              "type": "footnote",
+              "footnote": 162,
+              "paragraph": "10.5.13",
+              "quote": "10.5.13 The July 2026 WFP report added: ‘Food CPI … witnessed a decrease in Gaza by 2 percent in Jun"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

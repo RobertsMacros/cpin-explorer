@@ -2045,6 +2045,9 @@ const recById = (id) => H.loadHighlights().find((r) => r.id === id) || null;
 
 const tool = $("#seltool");
 let pointerIsDown = false, programmatic = false;
+// Edge's Windows selection menu occupies the space immediately above a selection. Keep the
+// Explorer actions clear of it; other desktop browsers retain the contextual placement.
+const windowsEdge = /Windows NT/i.test(navigator.userAgent) && /Edg\//.test(navigator.userAgent);
 // The tool eases out before it goes: toolGoing is "hide" while it does, or "move" while the touch sheet changes
 // edge. On a touch screen the dock comes back only once the sheet has gone (see the note on taps below).
 const TOOL_OUT = 180, DOCK_BACK = 420;
@@ -2083,12 +2086,21 @@ function showTool(info) {
   tool.hidden = false;
   tool.classList.remove("is-out");
   tool.classList.toggle("is-touch", touch);
+  tool.classList.toggle("is-windows-edge", !touch && windowsEdge);
   $("#dock").classList.toggle("is-hidden", touch);
   if (!touch) {
     tool.classList.remove("is-top");
     const rects = [...info.range.getClientRects()].filter((x) => x.width > 1 && x.height > 1);
     const first = rects[0] || info.range.getBoundingClientRect(), last = rects[rects.length - 1] || first;
     const w = tool.offsetWidth, h = tool.offsetHeight, gap = 12;
+    if (windowsEdge) {
+      tool.classList.remove("is-below");
+      tool.style.left = `${Math.max(10, (innerWidth - w) / 2)}px`;
+      tool.style.top = "";
+      tool.style.setProperty("--ox", "50%");
+      if (!shown) { tool.classList.remove("is-in"); void tool.offsetWidth; tool.classList.add("is-in"); }
+      return;
+    }
     const below = first.top - h - gap < headOffset();
     const anchor = below ? last : first;
     const cx = below ? anchor.left + Math.min(anchor.width, 260) / 2 : (first.left + Math.min(first.width, 260) / 2);

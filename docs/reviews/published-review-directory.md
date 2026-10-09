@@ -1,6 +1,6 @@
 # Published country-report review directory
 
-Checked 2026-10-07. 9 publishers; 60 curated publications.
+Checked 2026-10-08. 9 publishers; 61 curated publications.
 
 Directory inclusion does not assess a whole publication. Selected, separately labelled AI follow-ups are available in the overlay. Dates below are publication dates, not the dates of the reports reviewed. A link’s inclusion does not certify its arguments or make them applicable to a newer edition.
 
@@ -68,5 +68,6 @@ The repeatable collector and assessment rules are in [the method](../methods/pub
 | [Uganda: historical country information and guidance IAGCI review](<https://www.gov.uk/government/publications/uganda-country-information-and-guidance-iagci-review>) | IAGCI / Independent Chief Inspector of Borders and Immigration | 2016-12-02 | uganda | direct-review · uk-cig |
 | [UNHCR Guidance Note on Albania](<https://www.refworld.org/policy/countrypos/unhcr/2026/en/151369>) | UN High Commissioner for Refugees (UNHCR) | 2026-02 | albania | context · country-evidence |
 | [Derek Tonkin: commentary on the January 2026 Rohingya CPIN](<https://www.networkmyanmar.org/ESW/Files/HO-Jan2026.pdf>) | Network Myanmar / Derek Tonkin | 2026-02-21 | burma | direct-review · uk-cpin |
+| [The Impact of ‘Safe Country’ Concepts on Women Seeking Asylum in the UK](<https://asylos.org/wp-content/uploads/2026/02/FINAL_Safe-Country-Report-10-February-2026.pdf>) | Asylos | 2026-01 | Cross-cutting; country applicability needs checking | context · uk-cpin |
 
 Copies, joint publications, alternate formats and corrigenda are linked to their parent work in the machine-readable directory. General country evidence and practitioner toolkits are labelled as context, not direct audits.

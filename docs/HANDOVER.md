@@ -3,6 +3,17 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Checked release, 9 October 2026
+
+**9 October 2026: checked release prepared.** Windows Edge's bottom selection
+bar matches the exact patch checked on the PC; Robert reports the issue done
+and defers retesting. Twenty selected Gaza uses yielded eleven scoped grey AI
+notes and nine unresolved evidence gaps. There are 580 annotations and 61
+curated publications, with all previous objects preserved. Fresh checks pass:
+413 Python (two skipped), 362 JavaScript and 99 disposable account checks.
+See [the checked release](reviews/2026-10-09-checked-release.md). Physical iPhone, actual changed-content scheduled
+publication, account-refresh/sync races and wider evidence remain separate.
+
 ## Albanian original study supplements, 8 October 2026
 
 Read [the subgroup evidence and release](reviews/2026-10-08-albania-study-supplements.md).
