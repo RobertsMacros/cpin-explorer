@@ -5,12 +5,14 @@ constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touchi
 
 ## Checked release, 9 October 2026
 
-**9 October 2026: checked release prepared.** Windows Edge's bottom selection
+**9 October 2026: checked release published.** Windows Edge's bottom selection
 bar matches the exact patch checked on the PC; Robert reports the issue done
 and defers retesting. Twenty selected Gaza uses yielded eleven scoped grey AI
 notes and nine unresolved evidence gaps. There are 580 annotations and 61
 curated publications, with all previous objects preserved. Fresh checks pass:
 413 Python (two skipped), 362 JavaScript and 99 disposable account checks.
+GitHub run `37958137182` then passed 415 Python, 362 JavaScript and 99 account
+checks; deployment and 37 anonymous live checks passed.
 See [the checked release](reviews/2026-10-09-checked-release.md). Physical iPhone, actual changed-content scheduled
 publication, account-refresh/sync races and wider evidence remain separate.
 

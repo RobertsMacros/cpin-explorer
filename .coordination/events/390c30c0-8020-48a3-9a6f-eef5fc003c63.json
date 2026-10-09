@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "390c30c0-8020-48a3-9a6f-eef5fc003c63",
+  "task_id": "e81a52fb-8306-46a6-942c-d5aa44d25165",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "6b8e85cf-c40e-412d-ba94-eb7367bc4d33",
+  "parent_event_ids": [
+    "76b0feb5-6547-48da-a592-3e079d436f0d"
+  ],
+  "status": "done",
+  "title": "Publish checked Explorer changes to main",
+  "scope": "Apply the saved Windows Edge toolbar patch, validate pending review additions and publish checked changes to main through existing deployment. No whole-project or physical-device completion.",
+  "roadmap_id": "cpin-explorer",
+  "milestone_ids": [],
+  "occurred_at": "2026-10-09T16:25:46.339036+00:00",
+  "summary": "Checked changes pushed to main. Existing GitHub deployment succeeds; exact Windows patch and review assets verified live. No fresh native Windows or physical iPhone acceptance claimed.",
+  "evidence": [
+    {
+      "kind": "commit",
+      "ref": "266626932beac7895a7ad90a8f145aaf42b1eefd",
+      "result": "Windows toolbar and bounded source/review batch published to main"
+    },
+    {
+      "kind": "test",
+      "ref": "https://github.com/RobertsMacros/cpin-explorer/actions/runs/37958137182",
+      "result": "415 Python, 362 JavaScript, 99 synthetic account checks; successful Worker deployment"
+    },
+    {
+      "kind": "report",
+      "ref": "docs/reviews/2026-10-09-checked-release.md",
+      "result": "37 live checks and exact remaining limits"
+    }
+  ],
+  "remaining": [],
+  "blockers": []
+}

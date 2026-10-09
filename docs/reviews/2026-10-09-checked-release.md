@@ -49,7 +49,15 @@ assets, older-edition exclusion, thematic context, mobile panel fit and toolbar
 placement. A transient extra-context page-load timeout was retained in the
 private journal; the subsequent bounded check succeeded without a product change.
 
-Publication and live checks are recorded separately after the main push.
+Implementation `266626932beac7895a7ad90a8f145aaf42b1eefd` was pushed to main.
+GitHub [run 37958137182](https://github.com/RobertsMacros/cpin-explorer/actions/runs/37958137182)
+succeeded: 415 Python, 362 JavaScript and 99 disposable account checks. Worker
+`b727c631-7501-408e-a2f8-2af986dfeb1d` was published. Thirty-seven anonymous live
+checks passed: exact toolbar/review asset bytes, all 116 AI feedback identities,
+eleven Gaza footnote cards, thematic context, older-edition exclusion, narrow
+panel fit and private evidence exclusion. No production feedback was written.
+The local browser result has 39 passing checks, with Windows-UA placement and
+Mac placement distinguished from original native Windows evidence.
 
 ## Remaining limits
 
