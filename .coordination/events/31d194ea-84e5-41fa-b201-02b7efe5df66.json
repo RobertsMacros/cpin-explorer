@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "31d194ea-84e5-41fa-b201-02b7efe5df66",
+  "actor_id": "b56bfb11-7384-469a-a233-292506bb8f8b",
+  "task_id": "90f1c6dd-d006-4a54-b9d1-1a24f2b8a413",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Coding model download and Claude handover",
+  "scope": "Download and verify free coding model locally; reconcile and publish safe CPIN repository handover; retain all private trial data outside GitHub.",
+  "criteria": [
+    "Download and verify free coding model locally; reconcile and publish safe CPIN repository handover; retain all private trial data outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "done",
+  "summary": "Coding weights downloaded and pinned hash verified locally; safe CPIN handover pushed. Coding performance unmeasured and CPIN suitability remains blocked.",
+  "occurred_at": "2026-10-10T14:48:36.121Z",
+  "parent_event_ids": [
+    "093bb2e7-aab8-4c62-b270-42b9213fba35"
+  ],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [
+    {
+      "kind": "commit",
+      "ref": "890346954f6c0aa3c1a9b4a487f982657f267055",
+      "result": "Implementation revision recorded"
+    },
+    {
+      "kind": "report",
+      "ref": ".coordination/reports/2db9dfee-6691-4738-913a-f83fcbabfe2f.json",
+      "result": "Exact-scope verification report; collector must check it"
+    }
+  ],
+  "user_input": null,
+  "work_ref": "890346954f6c0aa3c1a9b4a487f982657f267055",
+  "work_branch": "codex/claude-local-model-handover",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

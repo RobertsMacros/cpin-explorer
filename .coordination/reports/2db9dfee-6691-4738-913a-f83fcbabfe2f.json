@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "protocol": "coordination-verification/v1",
+  "repository": "RobertsMacros/cpin-explorer",
+  "task_id": "90f1c6dd-d006-4a54-b9d1-1a24f2b8a413",
+  "scope": "Download and verify free coding model locally; reconcile and publish safe CPIN repository handover; retain all private trial data outside GitHub.",
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "implementation_sha": "890346954f6c0aa3c1a9b4a487f982657f267055",
+  "remaining": [],
+  "blockers": [],
+  "criteria": [
+    {
+      "text": "Download and verify free coding model locally",
+      "status": "passed",
+      "evidence": "Pinned revision 5b379ec4bf71bafecb5f9081ad28b19939128988; 8988111072 bytes; SHA256 2946d28c9e1bb2bcae6d42e8678863a31775df6f740315c7d7e6d6b6411f5937 verified; original Apache 2.0 licence retained. No inference performed.",
+      "verification_scope": "local"
+    },
+    {
+      "text": "Reconcile and publish safe CPIN repository handover",
+      "status": "passed",
+      "evidence": "Commit 890346954f6c0aa3c1a9b4a487f982657f267055 pushed to codex/claude-local-model-handover, merged current origin/main; git diff --check passed. Private weights, trial inputs, keys and outputs remain outside Git. Trial suitability remains blocked.",
+      "verification_scope": "published"
+    }
+  ]
+}
