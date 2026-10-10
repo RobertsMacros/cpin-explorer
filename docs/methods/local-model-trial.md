@@ -1,3 +1,19 @@
+# Windows handover update — 10 October 2026
+
+The private local trial has now run. The original eight-case 4B test passed six cases and failed both evidence-gap controls. A separately authorised stronger-model test covered twelve cases with Qwen3-8B and Mistral-7B reviewing every output. Both matched ten calibration labels, but missed a planted negation and confused two statistical indicators. The reviewer accepted the primary errors. Suitability remains blocked; no expansion is authorised.
+
+An independent program checked all twenty-four completed answers; its 339 adversarial checks passed. This gate verifies structure and supplied evidence correspondence, not semantic truth. Private inputs, separate calibration keys, source objects, prompts, outputs, journals and failures remain outside this repository. Do not publish them or feed calibration labels into a model.
+
+Observed PC: Ryzen 5 3600, approximately 16 GiB RAM, Radeon RX 5700 with 8176 MiB graphics memory. Portable llama.cpp build 11146 is retained locally. Nonmapped Vulkan loading resolved observed memory pressure; two stopped attempts remain preserved.
+
+The owner has authorised downloading Qwen2.5-Coder-14B-Instruct Q4_K_M for future coding work. This does not authorise another CPIN inference trial. Download completion and hash verification must be read from its private receipt. Coding performance is unmeasured.
+
+Carry CPIN trial task `c68a14fe-62cd-4eb2-b229-934e9ab96c29` and milestone `cpin-local`. Its latest local trial event is `2ebe6398-533f-43de-9c1e-5619210ba54c`, blocked. Use the shared reporting protocol before further work. No source retrieval, public AI flags, deployment or scheduled service was performed by these trials.
+
+The earlier preparation notes below are historical; their statements about unobserved Windows hardware and no completed inference have been superseded by this update.
+
+---
+
 # Bounded local-model trial
 
 The optional `cpin-local` stage has not run a model. On 10 October, the gaming
