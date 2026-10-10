@@ -187,6 +187,11 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   ("residents16"); a year with a footnote number run on to it ("201916") is an
   unproven marker shape and stays `unable`. A figure quoted without the unit
   that follows it ("65" from "65%") is still located.
+- A paragraph that opens with a quotation mark is one quotation only when it
+  also ends with the closing mark and no second quotation opens inside it.
+  Otherwise each quotation in it is picked out and checked separately; before,
+  such a paragraph was read as one run from its first mark to its last and was
+  never located.
 - A single-quoted quotation is not ended by an apostrophe inside it
   ("the territory's population"): where the supposed closing mark is followed
   directly by a letter, the longer reading is taken if it closes, on a mark not

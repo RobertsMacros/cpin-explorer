@@ -169,7 +169,12 @@ def quotations(text):
     if text.startswith(('‘', '“')):
         close = '’' if text[0] == '‘' else '”'
         end = text.rfind(close)
-        if end > 0:
+        # The paragraph is one quotation only if it also ends with the closing
+        # mark and no second quotation opens inside it; otherwise each
+        # quotation is picked out separately below.
+        whole = end > 0 and not text[end + 1:].strip(' .,;:)') and not re.search(
+            close + r'(?!\w)[^' + text[0] + r']*' + text[0], text[1:end])
+        if whole:
             found.append(text[1:end])
     if not found:
         at = 0

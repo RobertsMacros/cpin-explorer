@@ -163,3 +163,15 @@ def test_more_shapes_of_a_longer_number():
         assert m.find_whole(text, needle) < 0, needle
     for needle in ('4 000 people', '−5 degrees', '4.5 million', 'in 2025-26', 'ratio of 4/5', 'people at'):
         assert m.find_whole(text, needle) >= 0, needle
+
+
+def test_a_paragraph_opening_with_a_quotation_may_hold_more_than_one():
+    first = 'The agency reported that 281 people returned to their homes during the period.'
+    second = 'Most of the displaced families were still living in temporary shelters at the end of the year.'
+    o, c = chr(0x2018), chr(0x2019)
+    assert m.quotations(o + first + c + '[footnote 4] It added: ' + o + second + c + '[footnote 5]') == [first, second]
+    assert m.quotations(o + first[:-1] + ',' + c + ' the minister said, adding that the agency' + c + 's figures were provisional.') == [first[:-1] + ',']
+    # A single quotation filling the paragraph, with a nested quotation of the other kind, is still one.
+    nested = 'The source described ' + chr(0x201c) + 'voluntary returns' + chr(0x201d) + ' as unreliable and stated that the numbers were estimates.'
+    assert m.quotations(o + nested + c + '[footnote 8]') == [nested]
+    assert m.quotations(o + first + c + '.') == [first]
