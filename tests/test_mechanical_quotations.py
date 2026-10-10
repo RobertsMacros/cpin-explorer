@@ -48,8 +48,12 @@ def test_brackets_never_produce_a_finding_of_their_own():
     base = ('The detailed country survey, which was carried out by the national statistics office with support from two international '
             'agencies, found that 281 people from the village returned to their original homes during the reporting period')
     for edited in (base.replace('homes', 'homes [5]'), base.replace('village', 'village[s]'), base.replace('during the', 'during [a]'),
-                   base.replace('281 people', '281 [individuals]'), base.replace('returned to', '[went back] to')):
+                   base.replace('returned to', '[went back] to')):
         assert candidates(edited, SURVEY) == set(), edited
+    # ... but a substitution is left unassessed, never passed as formatting.
+    checks = m.quotation_checks('‘' + base.replace('returned to', '[went back] to') + '’', doc(SURVEY), URL)
+    assert [c['state'] for c in checks if c['rule'] == 'quotation-near-match'] == ['unable']
+    assert m.near_quote(m.normal(SURVEY), base.replace('homes', 'homes [5]')) is None
 
 
 def test_a_bracket_never_hides_a_figure_or_a_negation():
@@ -62,8 +66,26 @@ def test_a_bracket_never_hides_a_figure_or_a_negation():
     negated = SURVEY.replace('returned to', 'did not return to')
     for edited in (base.replace('returned to', 'did return [sic] to'), base.replace('village returned', 'village [sic] did return')):
         assert 'changed-negation' in candidates(edited, negated), edited
-    # The quoting author's own bracket replacing a figure is reported too: a reviewer decides.
+    # The quoting author's own bracket replacing a figure or unit is reported too: a reviewer decides.
     assert 'changed-number' in candidates(base.replace('281 people', '[many] people'), SURVEY)
+    assert 'changed-unit' in candidates(base.replace('281 people', '281 [individuals]'), SURVEY)
+    # Number words, scale words, qualifiers and contractions beside a bracket are judged as they would be without it.
+    scaled = SURVEY.replace('281 people', 'at least 281 thousand people').replace('returned', 'won’t return')
+    quoted = base.replace('281 people', 'at least 281 thousand people').replace('returned', 'won’t return')
+    assert 'changed-unit' in candidates(quoted.replace('281 thousand', '281 million [sic]'), scaled)
+    assert 'changed-qualifier' in candidates(quoted.replace('at least', 'at most [sic]'), scaled)
+    hidden = m.quotation_checks('‘' + quoted.replace('won’t return', 'will [sic] return') + '’', doc(scaled), URL)
+    assert [c['state'] for c in hidden if c['rule'] == 'quotation-near-match'] == ['unable']
+    words = SURVEY.replace('281 people', 'twelve people')
+    assert 'changed-number' in candidates(base.replace('281 people', 'twenty [sic] people'), words)
+
+
+def test_a_figure_cut_off_at_the_quotations_full_stop_is_reported():
+    stem = 'Officials said that most of the displaced families from the northern districts were still living in shelters and that the total was '
+    for tail, rule in (('4 000.', 'changed-number'), ('4 million.', 'changed-unit'), ('4 per cent.', 'changed-unit'), ('4 at most.', 'changed-qualifier')):
+        assert rule in candidates(stem + '4.', stem + tail + ' Next came 99 more.'), tail
+    # A quotation that simply stops mid-sentence, without a full stop of its own, claims nothing about what follows.
+    assert candidates(stem + '4', stem + '4 at most. Next came 99 more.') <= {'quotation-near-match'}
 
 
 def test_a_negation_cut_off_at_the_quotations_full_stop_is_reported():
@@ -86,6 +108,12 @@ def test_apostrophes_extend_a_quotation_only_when_that_is_safe():
     assert m.quotations('The ‘Jama’at group said ‘' + real + '’ on Monday.') == [real]
     long = 'the agency reported that most of the people in the territory’s north were displaced'
     assert m.quotations('It said ‘' + long + '’ last week.') == [long]
+    # The longer reading never runs into a double-quoted quotation or closes on an apostrophe.
+    double = 'the army’s soldiers didn’t leave the city until the following month'
+    assert m.quotations('The ‘Jama’at’s leader told reporters: “' + double + '” yesterday.') == [double]
+    assert m.quotations('It called them ‘terrorists’and said “' + double + '” on Monday.') == [double]
+    assert m.quotations('The ‘Ba’ath’s leader told reporters: "' + double + '" yesterday.') == [double]
+    assert m.quotations('It called them ‘terrorists’and said they didn’t go, adding ‘' + real + '’.') == [real]
 
 
 def test_a_bracket_does_not_excuse_a_change_elsewhere():

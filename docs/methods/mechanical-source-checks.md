@@ -156,25 +156,29 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   a word (`[T]he`) is restored; every other bracket (`[2026]`, `[sic]`,
   `[the areas]`, `village[s]`) is set aside before alignment and listed with
   the result. If the quotation is then in the source word for word, nothing is
-  raised. A difference directly beside a bracket is treated as the author's
-  substitution and is not a wording candidate, unless either side of it carries
-  a figure or a negation: those are always reported, so a bracket can never
-  hide one, and a reviewer decides whether the bracket explains it. A
-  difference anywhere else keeps its ordinary state.
+  raised. Numbers, negations, qualifiers and units are judged on the remaining
+  words exactly as they would be without the bracket, so a bracket cannot hide
+  a change in any of them; where the author's bracket itself replaces a figure
+  or unit, that is reported too and a reviewer decides. Wording that differs
+  only directly beside a bracket, with none of those changed, is recorded as
+  `unable`: it is neither a wording candidate nor a formatting-only result.
 - When the first or last four words are themselves changed, the window is
   anchored on the other end alone. At the unanchored end only as many source
   words are compared as the quotation has there, so text beyond the quoted
-  span is never read as a difference. Two narrow exceptions: a percentage
-  written out in the source (below), and a negation that the quotation cuts
-  off at its own full stop ("… and 40 did." where the source continues
-  "did not."). The 0.90 similarity floor and the requirement for one clearly
-  best alignment are unchanged.
+  span is not read as a difference. Two exceptions at the end of a quotation:
+  a percentage written out in the source (below); and, where the quotation
+  closes with its own full stop while the source's sentence runs on
+  ("… the total was 4." against "4 million.", "did." against "did not."),
+  the source is read to its own full stop, because the words cut off are what
+  is being looked for. A quotation that stops without a full stop claims
+  nothing about what follows. The 0.90 similarity floor and the requirement
+  for one clearly best alignment are unchanged.
 - "84 percent", "84 per cent" and "84%" are the same unit. A figure that loses
   its percentage altogether is still a unit question.
 - A single-quoted quotation is not ended by an apostrophe inside it
   ("the territory's population"): where the supposed closing mark is followed
-  directly by a letter, the longer reading is taken if it closes before another
-  quotation opens.
+  directly by a letter, the longer reading is taken if it closes, on a mark not
+  itself followed by a letter, before any other quotation mark opens.
 
 Still not aligned, and therefore left `unable` with no candidate: a quotation or
 segment of fewer than twelve words; a quotation of more than 300 words; a

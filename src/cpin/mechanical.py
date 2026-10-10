@@ -160,7 +160,7 @@ def doi_values(text):
 
 
 QUOTED = re.compile(r'“([^”]+)”|‘([^’]+)’|"([^\"]+)"')
-QUOTED_WITH_APOSTROPHES = re.compile(r'‘((?:[^‘’]|’(?=\w))+)’')
+QUOTED_WITH_APOSTROPHES = re.compile(r'‘((?:[^‘’“”"]|’(?=\w))+)’(?!\w)')
 
 
 def quotations(text):
@@ -230,9 +230,10 @@ def trim_window(words, window, forward, reverse=False):
         return window[:d]
     # The unanchored end differs. Keep only as many source words as the
     # quotation has there, so nothing beyond the quoted span is compared. Two
-    # exceptions: "202.2%" is read against "102.2 percent", and a negation the
-    # quotation cuts off at its own full stop ("did." against "did not.") is
-    # kept, because dropping it is exactly the change being looked for.
+    # exceptions: "202.2%" is read against "102.2 percent"; and where the
+    # quotation closes its sentence while the source's sentence runs on ("did."
+    # against "did not.", "4." against "4 million."), the source is read to its
+    # own full stop, because the words cut off are exactly what is looked for.
     bare = lambda i: window[i].strip('.,;:')
     stop, written_out = c, any('%' in word for word in words[a:b])
     if written_out and reverse:
@@ -242,10 +243,9 @@ def trim_window(words, window, forward, reverse=False):
     if written_out and not reverse:
         while stop < d and bare(stop) in PERCENT_WORDS:
             stop += 1
-    # Only where the quotation ends its sentence and the source's sentence runs on.
-    runs_on = not reverse and c < stop < d and words[b - 1][-1:] in '.!?' and window[stop - 1][-1:] not in '.!?,;:'
-    if runs_on and NEGATION.fullmatch(bare(stop)):
-        stop += 1
+    if not reverse and c < stop and words[b - 1][-1:] in '.!?':
+        while stop < d and window[stop - 1][-1:] not in '.!?':
+            stop += 1
     return window[:stop]
 
 
@@ -319,25 +319,16 @@ def near_quote(text, quote):
     best = ranked[0]
     best['differences'] = []
     source_words = best['excerpt'].split()
-    compared = []
     for tag, a, b, c, d in SequenceMatcher(None, words, source_words, autojunk=False).get_opcodes():
         if tag == 'equal':
-            compared += words[a:b]
             continue
-        # A difference beside a bracket is taken as the quoting author's
-        # substitution, unless either side carries a figure or a negation:
-        # those are always reported, whoever introduced them.
-        sides = ' '.join(words[a:b] + source_words[c:d])
-        editorial = any(a - 1 <= mark <= b + 1 for mark in marks) and not NUMBER.search(sides) and not NEGATION.search(sides)
+        # A difference beside a bracket may be the quoting author's own
+        # substitution. It is marked, never explained away.
+        editorial = any(a - 1 <= mark <= b + 1 for mark in marks)
         best['differences'].append({'quoted': ' '.join(words[a:b]), 'source': ' '.join(source_words[c:d]),
                                     **({'atInsertion': True} if editorial else {})})
-        compared += source_words[c:d] if editorial else words[a:b]
     if insertions:
-        # Figures, negations and units are judged with those substitutions
-        # neutralised, so a bracket never produces a changed-* finding itself.
-        q = ' '.join(compared)
-        best.update(editorialInsertions=insertions, comparedQuote=q,
-                    editorialOnly=all(d.get('atInsertion') for d in best['differences']))
+        best.update(editorialInsertions=insertions, editorialOnly=all(d.get('atInsertion') for d in best['differences']))
     best['changed'] = {k: regex.findall(q) != regex.findall(best['excerpt'])
                        for k, regex in [('number', NUMBER), ('negation', NEGATION), ('qualifier', QUALIFIER), ('unit', UNIT)]}
     quoted_values, source_values = quantity_texts(q, best['excerpt'])
@@ -967,7 +958,7 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
             if near:
                 if piece != quote:
                     near['segment'] = piece
-                q_values, s_values = quantity_texts(near.get('comparedQuote') or normal(piece), near['excerpt'])
+                q_values, s_values = quantity_texts(normal(piece), near['excerpt'])
                 copied_markers = []
                 for item in doc.get('furniture', []):
                     if 'marker' not in item or not item.get('after'):
@@ -1023,11 +1014,12 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
                 independent = doc['kind'] != 'pdf' or bool(second_near and second_near['differences'] == near['differences'])
                 state = 'observation' if typography_only else 'candidate' if independent and not second_exact else 'unable'
                 # Wording that differs only beside the quoting author's own brackets
-                # is an observation; any difference elsewhere keeps its state.
-                if state == 'candidate' and near.get('editorialOnly'):
-                    state = 'observation'
+                # is neither a finding nor a clean result: it stays unassessed.
+                bracket_only = near.get('editorialOnly') and not any(near['changed'].values())
+                if bracket_only:
+                    state = 'unable'
                 checks.append({'rule': 'quotation-near-match', 'state': state, **base, **near,
-                               'reason': 'formatting-only difference; literal wording and context remain separate' if typography_only else 'independent reader has quoted text: extraction artefact' if second_exact else 'similar text; independent/context/identity validation remains required'})
+                               'reason': 'differs only beside editorial brackets; the substitution is not assessed' if bracket_only else 'formatting-only difference; literal wording and context remain separate' if typography_only else 'independent reader has quoted text: extraction artefact' if second_exact else 'similar text; independent/context/identity validation remains required'})
                 if near['numberFormatOnly']:
                     checks.append({'rule': 'quotation-number-format', 'state': 'observation' if independent else 'unable', **base,
                                    'reason': 'derived numeral-format comparison only; no literal match or contextual approval', 'differences': near['differences']})
