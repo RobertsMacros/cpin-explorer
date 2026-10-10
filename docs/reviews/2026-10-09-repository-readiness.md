@@ -1,5 +1,41 @@
 # Repository readiness review, 9 October 2026
 
+## Current follow-up, 10 October 2026
+
+Robert requested the account checks and scheduled-publication work, deferred
+Windows Edge/physical-iPhone browser QA from this chat, and moved the publisher,
+Gaza and local-model work to separate chats. The 9 October observations below
+are retained as history, not the current queue.
+
+- **Storage query:** about 15 GiB is now available on the Mac. The earlier
+  ENOSPC reading described local drive storage, not Discord. No cleanup was
+  performed during this follow-up.
+- **Accounts:** the refresh repair is already published in `1b00c82730e73e488755a225b28984ec0418fbd6`.
+  Fifteen account-state/profile tests and 99 disposable workerd/D1 checks passed
+  again. They cover cross-session persistence, conflicts, user isolation,
+  approval/revocation, reset-session invalidation and failure handling. Live
+  account-module bytes match; anonymous saves and owner administration return
+  401. Genuine cross-device acceptance is pending the account holder's check.
+- **Scheduled publication:** the existing repair is published in the same
+  implementation. Eleven publication/workflow tests passed again. Three further
+  controlled checks ran the workflow's actual commit shell step against local
+  disposable Git remotes: a quiet day leaves deployment unset; independently
+  concurrent content publishes with both histories and `changed=true`; a conflict
+  leaves deployment unset and preserves a valid recovery bundle and patch.
+  The first extra check lacked GitHub's configured Python executable locally;
+  supplying the existing virtual environment fixed that harness setup failure.
+  No canonical source content was altered or new release deployed.
+- **Deferred:** Windows Edge and physical-iPhone browser QA are removed from this
+  chat's current queue. This is deferral, not a new claim of device acceptance.
+- **Other chats:** research/publisher/Gaza/model work is left untouched.
+
+The genuine scheduled run `38052646081` succeeded, but found unchanged content
+and skipped deployment. Thus controlled publication is checked; a naturally
+changed-content scheduled republish remains separately unverified. No duplicate
+run, fake source change, new monitor or additional model work was started.
+Current evidence is also in the existing
+[repair/publication report](2026-10-10-reliability-and-gaza.md).
+
 Bounded review of current account state, release/sync workflows, handover,
 research backlog and concurrent work. This is not an exhaustive security,
 performance or factual-source audit. No implementation or deployment performed.
@@ -49,7 +85,7 @@ performance or factual-source audit. No implementation or deployment performed.
   Committed annotations: 569; working annotations at observation: 580.
   Those 11 additions are working drafts, not a verified new live release.
 
-## Next steps, in order
+## Priorities recorded on 9 October (superseded above)
 
 1. Free disk space, then fix the account-refresh race and verify genuine
    cross-device saves, conflicting edits, approval/revocation and failure states.

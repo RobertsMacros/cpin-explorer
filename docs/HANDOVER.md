@@ -1,4 +1,59 @@
-# Handover: CPIN Explorer, 4 October 2026
+# Current handover for Claude Code, 10 October 2026
+
+Use the existing `cpin-explorer` checkout on `main`. Read `CLAUDE.md`,
+`AGENTS.md`, this current section and the linked reports before changing anything.
+The dated notes below preserve history; newer scoped results supersede older
+claims of unfinished work. Do not rerun scraping or model trials just to prepare
+this handover.
+
+## Current publication and checks
+
+- The account-refresh and concurrent-sync repairs are already on `main` and live
+  at `1b00c82730e73e488755a225b28984ec0418fbd6`. The release passed 421 Python,
+  366 JavaScript and 99 disposable account checks. See
+  [the release report](reviews/2026-10-10-reliability-and-gaza.md).
+- This chat subsequently repeated 11 publication/workflow checks, 15 account
+  state/profile checks and 99 disposable account checks. Three additional local
+  checks exercised the actual workflow commit step, including concurrent pushes
+  and conflict recovery. See [the follow-up review](reviews/2026-10-09-repository-readiness.md).
+- Anonymous live account endpoints and the deployed account-module bytes were
+  checked. Genuine second-device acceptance remains pending: pin a country on
+  one device and confirm it appears in Saved after signing in on another.
+- Scheduled run `38052646081` succeeded with unchanged content and correctly
+  skipped deployment. A genuine changed-content scheduled republish remains
+  unverified. Windows Edge and physical-iPhone QA are deferred by the owner.
+
+## Separate local-model work
+
+The other chat has pushed its own handover to branch
+`codex/claude-local-model-handover` (latest observed `8903469`). Read that branch's
+`docs/methods/local-model-trial.md` and latest task events before continuing it;
+its newer Windows observations supersede the older preparation notes below.
+The bounded trials exposed missed negation, statistical-indicator and evidence-gap
+controls. Suitability remains blocked and no bulk expansion is authorised.
+Private trial receipts establish download state; do not infer completion from a
+handover or transfer process alone. Preserve task
+`c68a14fe-62cd-4eb2-b229-934e9ab96c29` and milestone `cpin-local`.
+
+## Local evidence and outstanding ownership
+
+Private source evidence, downloaded PDFs, account secrets, generated site data
+and `.local/` checks remain outside Git. On this Mac, reuse the existing checkout
+and retained evidence. A fresh clone requires the documented rebuild steps;
+it will not contain those private files. Never commit them to fill that gap.
+
+Account follow-up task `4c10c974-10d2-4555-aec5-aedf76992c3a` remains blocked
+on genuine second-device acceptance, under actor
+`60d3b2a1-df8a-4890-8e65-dc76ab44be56`. Read the shared claim before taking
+ownership. Publication of this handover does not complete that account check,
+model suitability or the whole project. Existing research and evidence gaps
+remain scoped to their exact report editions; mechanical candidates are not
+confirmed factual errors or grounds for automatic public flags.
+
+---
+
+## Historical handover: 4 October 2026
+
 
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.

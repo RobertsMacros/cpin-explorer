@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "event_id": "fcf21a0e-ab04-4c4c-aa3f-bde83e081d9a",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "d91b26a0-b19c-4818-8f64-49764953b476",
+  "parent_event_ids": [
+    "8ac87edb-b987-4ce3-beab-37227a5e8ea1"
+  ],
+  "status": "blocked",
+  "title": "Evaluate bounded local-model trial",
+  "scope": "Evaluate bounded local-model trial; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "occurred_at": "2026-10-10T09:21:20.365189+00:00",
+  "summary": "Observed Mac is feasible and installed runtime verified. Weight transfer stopped after slow downloads; no model inference. Private eight-case evidence packet and fallback handover passed hash/extraction read-back checks. Gaming PC is optional, not established necessary.",
+  "evidence": [
+    {
+      "kind": "report",
+      "ref": "docs/methods/local-model-trial.md",
+      "result": "Existing frozen eight-case contract retained; no model trial outcome claimed."
+    }
+  ],
+  "remaining": [
+    "Obtain complete verified model weights locally",
+    "Execute one eight-case run and inspect exact quotations, scope and calibration outcomes"
+  ],
+  "blockers": [
+    "Complete verified local model weights are unavailable after a slow bounded transfer."
+  ]
+}
