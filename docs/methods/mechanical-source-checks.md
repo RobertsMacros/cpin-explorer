@@ -145,6 +145,15 @@ the same number somewhere in a document. Numerical changes in PDFs do not become
 candidates without independent agreement. Ellipsis qualification flags identify
 words in omitted spans; they do not judge the omissions' materiality.
 
+Near-quote alignment covers a quotation whose only ellipses are at its start or
+end: those mark where the quotation was cut, so the words between are aligned as
+usual. A quotation with an ellipsis inside it, or with a square-bracket insertion,
+is still not aligned when its exact wording is not located: a changed number or
+negation there is not raised and the quotation stays `unable`. Quotations under
+twelve words, and changes within the first or last four words, are likewise not
+aligned. Results stored before 10 October 2026 predate the start/end handling;
+they are unchanged until a separately authorised run.
+
 The 450-block Syria/Afghanistan source-format pilots completed without processing
 errors. All 345 Python tests pass, including interrupted/resumed result reuse,
 changed-byte invalidation, paragraph versus source-pinpoint changes, ambiguous

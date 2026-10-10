@@ -46,6 +46,22 @@ def test_near_match_exposes_number_and_negation_but_not_ambiguous_alignment():
     assert m.near_quote('218 ' + m.normal('An unrelated article has different subject matter and timeframe.'), quote) is None
 
 
+def test_edge_ellipsis_quotation_still_exposes_changed_number_and_negation():
+    source = 'Restricted areas in the territory now take up 65 per cent of the land; most of them are off limits for residents, while aid groups need permits.'
+    faithful = 'Restricted areas in the territory now take up 65 per cent of the land; most of them are off limits for residents …'
+    assert m.locate(m.normal(source), faithful)['state'] == 'pass'
+    number = m.quotation_checks('‘' + faithful.replace('65', '95') + '’[footnote 16]', doc(source), 'https://example.org/source')
+    assert any(c['rule'] == 'changed-number' and c['state'] == 'candidate' for c in number)
+    assert not any(c['rule'] == 'changed-negation' for c in number)
+    negation = m.quotation_checks('‘… ' + faithful.replace('are off', 'are not off') + '’', doc(source), 'https://example.org/source')
+    assert any(c['rule'] == 'changed-negation' and c['state'] == 'candidate' for c in negation)
+    assert not any(c['rule'] == 'changed-number' for c in negation)
+    # An omission inside the quotation, or an editorial insertion, is still not aligned.
+    inner = 'Restricted areas in the territory now take up 95 per cent of the land … most of them are off limits for residents'
+    assert m.near_quote(m.normal(source), inner) is None
+    assert m.near_quote(m.normal(source), faithful.replace('65', '95').replace('them', '[the areas]')) is None
+
+
 def test_leading_source_marker_does_not_crash_or_hide_changed_number():
     quote = 'The detailed survey found that 218 people returned to their original homes during the reporting period.'
     source = quote.replace('218', '281')

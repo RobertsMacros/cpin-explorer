@@ -198,6 +198,9 @@ def locate(text, quote):
 
 def near_quote(text, quote):
     """Only compare a short window bracketed by exact first/last four tokens."""
+    # A leading or trailing ellipsis marks where the quotation was cut, not an
+    # omission inside it, so the words between can still be aligned.
+    quote = re.sub(r'^(?:\s|…|\.{3})+|(?:\s|…|\.{3})+$', '', quote)
     q = normal(quote)
     if '…' in quote or '...' in quote or '[' in quote or len(q.split()) < 12:
         return None
