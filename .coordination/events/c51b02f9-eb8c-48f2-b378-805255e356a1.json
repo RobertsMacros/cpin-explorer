@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "event_id": "c51b02f9-eb8c-48f2-b378-805255e356a1",
+  "task_id": "d00338ea-dd01-47ca-83bf-696a0cd391b5",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "46e721fa-d69f-42b4-98e1-6c198f353fd3",
+  "parent_event_ids": [
+    "42640968-43ed-4cec-99d3-2c885789b959"
+  ],
+  "status": "done",
+  "title": "Guard saved-highlight refresh ordering",
+  "scope": "Prevent stale or overlapping account refreshes replacing newer edits; test delayed read/edit, stale read errors and overlapping responses.",
+  "roadmap_id": "cpin-explorer",
+  "milestone_ids": [],
+  "occurred_at": "2026-10-10T08:54:48.150652+00:00",
+  "summary": "Saved-item refresh races repaired, including completed writes, overlapping reads and obsolete errors; exact module deployed and read back.",
+  "evidence": [
+    {
+      "kind": "commit",
+      "ref": "1b00c82730e73e488755a225b28984ec0418fbd6",
+      "result": "Exact bounded implementation/source-follow-up scope; earlier reviews, replies and CPIN text unchanged."
+    },
+    {
+      "kind": "test",
+      "ref": "docs/reviews/2026-10-10-reliability-and-gaza.md",
+      "result": "421 Python, 366 JavaScript, 99 disposable account checks; nine source-use follow-ups with explicit limits."
+    },
+    {
+      "kind": "report",
+      "ref": "https://github.com/RobertsMacros/cpin-explorer/actions/runs/38038893857",
+      "result": "Successful publication and 38 anonymous live checks. Not a physical-device, signed-in cross-device or scheduled changed-content check."
+    }
+  ],
+  "remaining": [],
+  "blockers": []
+}

@@ -95,3 +95,18 @@ hardware and installed runtime have not been observed from this Mac chat.
 Its archived chat can be read, but no remote command surface is available here.
 Hardware capture and the actual eight-case model run remain pending access;
 no model, weights or runtime have been installed and no trial result is claimed.
+
+## Publication verified
+
+Implementation `1b00c82730e73e488755a225b28984ec0418fbd6` is on main.
+[Release run 38038893857](https://github.com/RobertsMacros/cpin-explorer/actions/runs/38038893857)
+passed 421 Python, 366 JavaScript and 99 disposable account checks and deployed
+Worker `94c01ac0-16e4-434b-9864-5aa6947749df`. Thirty-eight anonymous live checks
+passed, including exact account-module bytes, unchanged review catalogue bytes,
+all 116 anonymous AI record fingerprints, desktop footnote overlays, 390px
+panel layout, exact-edition separation and private-evidence exclusions. The
+existing rendering harness was reused with a new private output destination.
+This is Mac Edge rendering and public read-only verification; no fresh Windows
+or physical-iPhone test, production account save, feedback vote or genuine
+scheduled changed-content cycle is claimed. The sync repair is published on
+GitHub; its reconciliation/recovery paths were exercised in isolated Git repos.
