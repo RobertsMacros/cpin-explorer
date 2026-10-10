@@ -147,28 +147,46 @@ words in omitted spans; they do not judge the omissions' materiality.
 
 Near-quote alignment runs whenever a quotation's exact wording is not located:
 
-- An ellipsis at the start or end marks where the quotation was cut, and is
-  ignored. An ellipsis inside it divides the quotation into segments; each
-  segment whose exact wording is absent is aligned on its own, and a candidate
-  records both the whole quotation and the segment concerned.
-- Square brackets are the quoting author's. A bracketed capital (`[T]he`) is
-  restored and any other bracketed insertion (`[2026]`, `[the areas]`) is set
-  aside before alignment and listed with the result. Wording that differs only
-  around such an insertion is an observation; a changed number, negation,
-  qualifier or unit in the same quotation is still a candidate.
+- An ellipsis is written "…", "..." or either of those in round or square
+  brackets. At the start or end it marks where the quotation was cut, and is
+  ignored. Inside, it divides the quotation into segments; each segment whose
+  exact wording is absent is aligned on its own, and a candidate records both
+  the whole quotation and the segment concerned.
+- Square brackets are the quoting author's. A bracketed capital at the start of
+  a word (`[T]he`) is restored; every other bracket (`[2026]`, `[sic]`,
+  `[the areas]`, `village[s]`) is set aside before alignment and listed with
+  the result. If the quotation is then in the source word for word, nothing is
+  raised. A difference directly beside a bracket is treated as the author's
+  substitution and is not a wording candidate, unless either side of it carries
+  a figure or a negation: those are always reported, so a bracket can never
+  hide one, and a reviewer decides whether the bracket explains it. A
+  difference anywhere else keeps its ordinary state.
 - When the first or last four words are themselves changed, the window is
-  anchored on the other end alone, bounded by the quotation's length and cut at
-  the end of the source's own sentence. The 0.90 similarity floor and the
-  requirement for one clearly best alignment are unchanged.
+  anchored on the other end alone. At the unanchored end only as many source
+  words are compared as the quotation has there, so text beyond the quoted
+  span is never read as a difference. Two narrow exceptions: a percentage
+  written out in the source (below), and a negation that the quotation cuts
+  off at its own full stop ("… and 40 did." where the source continues
+  "did not."). The 0.90 similarity floor and the requirement for one clearly
+  best alignment are unchanged.
 - "84 percent", "84 per cent" and "84%" are the same unit. A figure that loses
   its percentage altogether is still a unit question.
+- A single-quoted quotation is not ended by an apostrophe inside it
+  ("the territory's population"): where the supposed closing mark is followed
+  directly by a letter, the longer reading is taken if it closes before another
+  quotation opens.
 
 Still not aligned, and therefore left `unable` with no candidate: a quotation or
 segment of fewer than twelve words; a quotation of more than 300 words; a
-segment whose first and last four words are both changed; and any source with
-no held, readable copy. Paraphrase is not examined at all. Results stored before
-10 October 2026 predate these rules; they are unchanged until a separately
-authorised run, which would raise candidates the earlier runs could not.
+segment whose first and last four words are both changed; a plural possessive
+("families' homes") inside a single-quoted quotation, which still ends it
+early; and any source with no held, readable copy. Paraphrase is not examined
+at all. Results stored before 10 October 2026 predate these rules; they are
+unchanged until a separately authorised run, which would raise candidates the
+earlier runs could not. Every rule above was checked against generated cases
+for unchanged behaviour on plain quotations: apart from the percentage
+equivalence, a quotation with no ellipsis and no brackets whose first and last
+four words are found gives the same result as before.
 
 The 450-block Syria/Afghanistan source-format pilots completed without processing
 errors. All 345 Python tests pass, including interrupted/resumed result reuse,

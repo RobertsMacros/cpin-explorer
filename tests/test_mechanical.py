@@ -26,6 +26,16 @@ def test_outer_quote_retains_nested_quotation_and_source_markers_are_separate():
     assert m.citation('Publisher, Long country report title, 1 March 2025 (paragraph 3.1.2)')['paragraphs'] == ['3.1.2']
 
 
+def test_apostrophe_inside_a_quotation_does_not_end_it():
+    text = ('The report stated: ‘Most of the territory’s population, about 2.1 million people, still needs regular assistance.’[footnote 3] '
+            'It added that ‘the agency didn’t reach the northern districts for several weeks after the roads were closed’.')
+    assert m.quotations(text) == ['Most of the territory’s population, about 2.1 million people, still needs regular assistance.',
+                                  'the agency didn’t reach the northern districts for several weeks after the roads were closed']
+    source = 'Most of the territory’s population, about 1.2 million people, still needs regular assistance.'
+    checks = m.quotation_checks(text, doc(source), 'https://example.org/source')
+    assert any(c['rule'] == 'changed-number' and c['state'] == 'candidate' for c in checks)
+
+
 def test_ellipsis_preserves_omitted_qualification_and_order():
     source = m.normal('The first passage has enough words. At least 20 cases were unverified. The last passage also has enough words.')
     q = 'The first passage has enough words.…The last passage also has enough words.'
