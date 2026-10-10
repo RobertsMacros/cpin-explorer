@@ -476,11 +476,11 @@ def test_empty_scope_reports_failure_instead_of_false_completion(tmp_path):
 
 
 def test_lock_collision_keeps_existing_job_untouched(tmp_path):
-    import fcntl
+    from cpin.filelock import lock_exclusive
     inventory,output,sha,edition=fixture(tmp_path)
     write_json(output/'job.json',{'state':'running','pid':12345})
     with (output/'run.lock').open('a') as lock:
-        fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        lock_exclusive(lock)
         with pytest.raises(BlockingIOError): runner.run(inventory,output)
         assert json.loads((output/'job.json').read_text())=={'state':'running','pid':12345}
     assert runner.run(inventory,output)['remaining']==0

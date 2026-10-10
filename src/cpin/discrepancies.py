@@ -158,7 +158,8 @@ def page(all_notes: list[dict]) -> str:
     numbered = [block for block in (_numbering(n) for n in all_notes) if block]
     w = summary["wording"]
     point = lambda p: f'{p["share"]:.3%} ({p["words"]:,} words)' if p else "none"
-    made = datetime.now(timezone.utc).strftime("%-d %B %Y")
+    made = datetime.now(timezone.utc)
+    made = f"{made.day} {made:%B %Y}"    # "%-d" is not available on Windows
     return f"""<!doctype html>
 <html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex"><title>Web version and PDF: where they differ</title><style>{STYLE}</style></head>

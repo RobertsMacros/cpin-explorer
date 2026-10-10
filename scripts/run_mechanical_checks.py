@@ -6,7 +6,6 @@ retain occurrences independently of shared computations and permit restarts.
 """
 import argparse
 import csv
-import fcntl
 import hashlib
 import json
 import math
@@ -22,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'src'))
 from cpin import mechanical as mc
+from cpin.filelock import lock_exclusive
 from cpin.source_collect import cached_records, inventory_paths
 from cpin.store import atomic_write, now_iso, read_json, write_json
 
@@ -251,7 +251,7 @@ def run(inventory, output, caches=(), country=None, limit=None, max_hours=10, ma
     output.mkdir(parents=True, exist_ok=True)
     lock = (output / 'run.lock').open('a')
     try:
-        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        lock_exclusive(lock)
     except BaseException:
         lock.close()
         raise
