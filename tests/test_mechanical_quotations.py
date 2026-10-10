@@ -145,3 +145,21 @@ def test_a_quotation_is_never_located_inside_a_longer_number_or_word():
     assert m.locate(m.normal(stem + '24,000 people in all.'), 'most of the displaced families from the northern districts were still living in shelters and that the total was 24')['state'] == 'unable'
     # Hyphenated compounds and possessives are still found.
     assert m.find_whole('access-restricted areas in gaza’s north', 'restricted areas in gaza') == 7
+
+
+def test_glued_footnote_numbers_are_not_a_different_quotation():
+    quote = 'Officials said that most of the displaced families from the northern districts were still living in shelters and residents'
+    assert candidates(quote, quote + '16, who left.') == set()
+    assert candidates(quote, 'Intro. 16' + quote + ', who left.') == set()
+    year = quote.replace('and residents', 'in 2019')
+    checks = m.quotation_checks('‘' + year + '’', doc(year + '¹⁶ and later.'), URL)
+    assert not [c for c in checks if c['state'] == 'candidate']
+    assert 'changed-number' in candidates(year, year.replace('2019', '2009') + ' and later.')
+
+
+def test_more_shapes_of_a_longer_number():
+    text = m.normal('There were 4 000 people at −5 degrees and 4.5 million in 2025-26, a ratio of 4/5.')
+    for needle in ('000 people', '5 degrees', '.5 million', 'in 2025', 'ratio of 4', 'were 4'):
+        assert m.find_whole(text, needle) < 0, needle
+    for needle in ('4 000 people', '−5 degrees', '4.5 million', 'in 2025-26', 'ratio of 4/5', 'people at'):
+        assert m.find_whole(text, needle) >= 0, needle

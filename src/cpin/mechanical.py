@@ -190,18 +190,31 @@ def quotations(text):
 
 
 def find_whole(text, needle, start=0, end=None):
-    """str.find that never lands inside a longer word or number.
+    """str.find that never lands inside a longer word or a longer number.
 
-    "65 per cent" is not found in "165 per cent", "4." is not found in
-    "4.5 million" and "000 people" is not found in "4,000 people".
+    "65 per cent" is not found in "165 per cent", "4." not in "4.5 million",
+    "000 people" not in "4,000 people" or "4 000 people", "5 degrees" not in
+    "-5 degrees", and "in 2025" not in "in 2025-26". A letter beside a digit
+    is not a longer word: sources glue footnote numbers to words
+    ("residents16"), and that is not a different quotation.
     """
     end = len(text) if end is None else end
+    head, tail = needle[:1], needle[-1:]
     pos = text.find(needle, start, end)
     while pos >= 0:
-        before, after = text[max(0, pos - 2):pos], text[pos + len(needle):pos + len(needle) + 2]
-        inside = (needle[:1].isalnum() and (before[-1:].isalnum() or (needle[:1].isdigit() and re.fullmatch(r'\d[.,]', before)))) or (
-            needle[-1:].isalnum() and (after[:1].isalnum() or (needle[-1:].isdigit() and re.fullmatch(r'[.,]\d', after)))) or (
-            re.search(r'\d[.,]$', needle) and after[:1].isdigit())
+        before, after = text[max(0, pos - 2):pos], text[pos + len(needle):pos + len(needle) + 5]
+        inside = (head.isalpha() and before[-1:].isalpha()) or (tail.isalpha() and after[:1].isalpha())
+        if head.isdigit():
+            # 165, 4.5 / 4,000, 4 000 people, -5 and −5
+            inside = inside or bool(re.search(r'\d$|\d[.,]$', before)) or bool(
+                re.search(r'\d $', before) and re.match(r'\d{3}(?!\d)', needle)) or bool(re.search(r'(?:^|\s)[-−]$', before))
+        if head == '.' and needle[1:2].isdigit():
+            inside = inside or before[-1:].isdigit()
+        if tail.isdigit():
+            # 165, 4.5 / 4,000, 4 000, 4-5 / 4/5 / 4:5 / 4·5 / 4’000 / 10^6
+            inside = inside or bool(re.match(r'\d|[.,]\d|[-–/:·’\'^]\d| \d{3}(?!\d)', after))
+        if re.search(r'\d[.,]$', needle):
+            inside = inside or after[:1].isdigit()
         if not inside:
             return pos
         pos = text.find(needle, pos + 1, end)
@@ -689,6 +702,9 @@ def marker_shaped_difference(near):
         if re.sub(r'\[\d{1,4}\]', '', s) == q and s != q:
             continue
         if q and re.search(r'[A-Za-z][.!?][\'\"]?$', q) and s.startswith(q) and re.fullmatch(r'\d{1,4}', s[len(q):]):
+            continue
+        # A year with a footnote number run straight on to it ("2019" against "201916").
+        if re.fullmatch(r'(?:19|20)\d{2}', q) and s.startswith(q) and re.fullmatch(r'\d{1,3}[.,;:]?', s[len(q):]):
             continue
         return False
     return bool(near['differences'])

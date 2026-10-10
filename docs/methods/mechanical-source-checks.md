@@ -180,8 +180,13 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   its percentage altogether is still a unit question.
 - Quoted wording is located only as whole words and whole numbers: "65 per
   cent" is not found inside "165 per cent", nor "4." inside "4.5 million", nor
-  "000 people" inside "4,000 people". Such a quotation is then aligned like any
-  other unlocated one, and the difference in the figure is a candidate.
+  "000 people" inside "4,000 people" or "4 000 people", nor "in 2025" inside
+  "in 2025-26". Such a quotation is then aligned like any other unlocated one,
+  and the difference in the figure is a candidate. A letter beside a digit is
+  not a longer word, because sources run footnote numbers on to words
+  ("residents16"); a year with a footnote number run on to it ("201916") is an
+  unproven marker shape and stays `unable`. A figure quoted without the unit
+  that follows it ("65" from "65%") is still located.
 - A single-quoted quotation is not ended by an apostrophe inside it
   ("the territory's population"): where the supposed closing mark is followed
   directly by a letter, the longer reading is taken if it closes, on a mark not
