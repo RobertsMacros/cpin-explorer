@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "protocol": "coordination-verification/v1",
+  "repository": "RobertsMacros/cpin-explorer",
+  "task_id": "d5684398-abd3-4413-a851-1724b1b636a1",
+  "scope": "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks.",
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "implementation_sha": "00a3222ef8c0528989b4196dc5b4d10bf45d1087",
+  "remaining": [],
+  "blockers": [],
+  "criteria": [
+    {
+      "text": "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks.",
+      "status": "passed",
+      "verification_scope": "published",
+      "evidence": "GitHub main exactly matched 00a3222ef8c0528989b4196dc5b4d10bf45d1087 after push. Reviewed handover, readiness follow-up and coordination notes published; all local branch tips have remote coverage. Older account and direct-release branches saved separately. Git status clean; changed-path check excludes private caches, evidence and secrets. Handover retains pending account/device/scheduled and separate model boundaries."
+    }
+  ]
+}
