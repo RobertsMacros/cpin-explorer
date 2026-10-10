@@ -3,6 +3,19 @@
 For whoever picks this up next (written for Codex). Read `AGENTS.md` first: its rules are the project's
 constitution. Then `README.md`, then `docs/methods/pdf-and-web.md` before touching anything that reads a PDF.
 
+## Reliability and evidence follow-up, 10 October 2026
+
+- Saved-item refresh ordering and concurrent daily-sync publication are repaired;
+  421 Python, 366 JavaScript and 99 disposable account checks pass.
+- Nine Gaza gaps followed up: two comparisons resolved, two partly answered,
+  five unresolved. No new confirmed factual errors or public flags.
+- Original human reviews, Home Office replies and earlier AI records are unchanged.
+- Gaming-PC hardware and eight-case trial await a remote command surface.
+- Genuine scheduled changed-content publication and physical iPhone checks remain.
+
+See [the repair and evidence report](reviews/2026-10-10-reliability-and-gaza.md).
+Publication of these repairs is recorded there separately from local checks.
+
 ## Checked release, 9 October 2026
 
 **9 October 2026: checked release published.** Windows Edge's bottom selection

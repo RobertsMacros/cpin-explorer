@@ -27,3 +27,37 @@ test("sign-in reinitialises a previously signed-out account and loads existing s
   await s.initialise();assert.equal(s.state.status,"signed-out");
   signedIn=true;await s.initialise();assert.equal(s.state.status,"saved");assert.deepEqual(s.values("highlights"),[item]);assert.equal(f.writes.length,0);
 });
+
+const deferred=()=>{let resolve,reject;const promise=new Promise((a,b)=>{resolve=a;reject=b;});return{promise,resolve,reject};};
+test("a refresh cannot replace an edit that finishes saving during its read",async()=>{
+  const f=fixture([{kind:"highlights",id:item.id,value:item,revision:1}]),read=deferred();let delay=false;
+  const s=createAccountStore((path,data)=>path==="/api/saved"&&delay?read.promise:f.request(path,data));
+  await s.initialise();delay=true;const refresh=s.refresh();
+  s.replace("highlights",[{...item,quote:"New saved text"}]);await s.flush();
+  read.resolve({items:[{kind:"highlights",id:item.id,value:item,revision:1}]});await refresh;
+  assert.equal(s.values("highlights")[0].quote,"New saved text");assert.equal(s.state.status,"saved");assert.equal(s.hasPending(),false);
+  s.replace("highlights",[{...item,quote:"Next edit"}]);assert.equal(await s.flush(),true);
+  assert.equal(f.db.get("highlights/h1").revision,3);
+});
+test("overlapping refreshes apply only the newest request even when replies reverse",async()=>{
+  const f=fixture(),a=deferred(),b=deferred();let reads=[];
+  const s=createAccountStore((path,data)=>path==="/api/saved"&&reads.length?reads.shift().promise:f.request(path,data));
+  await s.initialise();reads=[a,b];const first=s.refresh(),second=s.refresh();
+  b.resolve({items:[{kind:"highlights",id:item.id,value:{...item,quote:"Newer remote edit"},revision:2}]});await second;
+  a.resolve({items:[{kind:"highlights",id:item.id,value:item,revision:1}]});await first;
+  assert.equal(s.values("highlights")[0].quote,"Newer remote edit");assert.equal(s.state.error,"");
+});
+test("an obsolete refresh failure cannot turn a successful newer save into an error",async()=>{
+  const f=fixture(),read=deferred();let delay=false;
+  const s=createAccountStore((path,data)=>path==="/api/saved"&&delay?read.promise:f.request(path,data));
+  await s.initialise();delay=true;const old=s.refresh();s.replace("highlights",[item]);await s.flush();
+  read.reject(new Error("Old read timed out"));await old;
+  assert.equal(s.state.status,"saved");assert.equal(s.state.error,"");assert.deepEqual(s.values("highlights"),[item]);
+});
+test("account reinitialisation invalidates the previous session's refresh",async()=>{
+  const f=fixture(),read=deferred();let delay=false,approved=true;
+  const s=createAccountStore((path,data)=>path==="/api/account"?{configured:true,user:{...user,approved}}:path==="/api/saved"&&delay?read.promise:f.request(path,data));
+  await s.initialise();delay=true;const old=s.refresh();approved=false;await s.initialise();
+  read.resolve({items:[{kind:"highlights",id:item.id,value:item,revision:1}]});await old;
+  assert.equal(s.state.status,"pending");assert.deepEqual(s.values("highlights"),[]);assert.throws(()=>s.replace("highlights",[item]),/Approved/);
+});

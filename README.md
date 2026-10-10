@@ -17,7 +17,7 @@ It has three parts:
 2. **Site** (`prototypes/`, built): a static site with a COBE globe, a panel per country, one page
    per report that keeps GOV.UK's formatting and links, saved highlights with citations, and search
    within a country and across all of them. Live at
-   <https://cpin-explorer.robert-m-w-stevens.workers.dev> (public, but marked noindex).
+   <https://cpin-explorer.co.uk> (public, but marked noindex).
 3. **Comparison** (built, in the report page): a timeline slider across editions and inline or
    side-by-side redlines between any two of them.
 
@@ -27,6 +27,19 @@ globe marks adapt its lattice and land map. The visual style is inspired by
 code and standalone mark assets; other component credits remain separate.
 
 ## Status
+
+**10 October 2026: reliability repairs and Gaza follow-up.**
+
+- Saved-item refreshes preserve newer edits; daily sync safely reconciles
+  independent pushes and retains failed publication for recovery.
+- 421 Python, 366 JavaScript and 99 disposable account checks pass.
+- Nine Gaza gaps followed up: two comparisons resolved, two partly answered,
+  five unresolved; no new public flags or changes to original reviews/replies.
+- Gaming-PC hardware and the eight-case trial await remote command access.
+- Genuine scheduled changed-content publication and physical iPhone remain.
+
+See [evidence, recovery and limits](docs/reviews/2026-10-10-reliability-and-gaza.md).
+Deployment is recorded separately from these local checks in that report.
 
 **9 October 2026: checked release published.** Windows Edge's bottom selection
 bar matches the exact patch checked on the PC; Robert reports the issue done

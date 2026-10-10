@@ -1,7 +1,8 @@
 # Bounded local-model trial
 
-The optional `cpin-local` stage has not run a model. The gaming PC is connected
-to Codex, but this Mac chat has no Windows command or browser surface. Its GPU,
+The optional `cpin-local` stage has not run a model. On 10 October, the gaming
+PC's archived Codex chat was readable, but this Mac chat had no remote command
+surface and the available project inventory contained only local Mac projects. Its GPU,
 VRAM, RAM and available inference runtime remain unobserved. Cyberpunk settings
 are not a hardware measurement. Run the read-only inventory in that Windows
 session before selecting or downloading anything:
