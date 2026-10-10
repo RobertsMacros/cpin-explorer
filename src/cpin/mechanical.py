@@ -196,34 +196,82 @@ def locate(text, quote):
             'excerpt': text[max(0, locations[0][0] - 180):locations[-1][1] + 180][:3000]}
 
 
+def trim_window(words, window, forward):
+    """Cut a one-anchor source window back to the words the quotation aligns with."""
+    if not forward:
+        return trim_window(words[::-1], window[::-1], True)[::-1]
+    tag, a, b, c, d = SequenceMatcher(None, words, window, autojunk=False).get_opcodes()[-1]
+    if tag == 'insert':
+        return window[:c]
+    if tag == 'replace':
+        # The quotation's last words differ: keep the source up to the end of
+        # its own sentence, so "202.2%." is compared with "102.2 percent.".
+        stop = next((i + 1 for i in range(c + b - a - 1, d) if re.search(r'''[.;:!?]["')\]]*$''', window[i])), c + b - a)
+        return window[:stop]
+    return window[:d]
+
+
+def near_pieces(text, quote):
+    """Parts of an unlocated quotation to align: each segment between ellipses
+    whose exact wording is absent, or the whole quotation when it has none."""
+    parts = [p.strip() for p in re.split(r'…|\.{3}', quote) if p.strip()]
+    return [quote] if len(parts) < 2 else [p for p in parts if normal(p) not in text]
+
+
 def near_quote(text, quote):
-    """Only compare a short window bracketed by exact first/last four tokens."""
+    """Only compare a short window bracketed by exact first/last four tokens.
+
+    When the first or last four tokens are themselves changed, the window is
+    anchored on the other end alone and bounded by the quotation's length.
+    """
     # A leading or trailing ellipsis marks where the quotation was cut, not an
     # omission inside it, so the words between can still be aligned.
     quote = re.sub(r'^(?:\s|…|\.{3})+|(?:\s|…|\.{3})+$', '', quote)
-    q = normal(quote)
-    if '…' in quote or '...' in quote or '[' in quote or len(q.split()) < 12:
+    # Editorial brackets are the quoting author's, never the source's: a
+    # replaced capital is restored and an inserted word or year is set aside.
+    plain = re.sub(r'\[(\w)\]', r'\1', quote)
+    insertions = re.findall(r'\[[^\]]*\]', plain)
+    q = normal(re.sub(r'\s*\[[^\]]*\]', '', plain))
+    if '…' in quote or '...' in quote or len(q.split()) < 12:
         return None
     words = q.split()
     first, last = ' '.join(words[:4]), ' '.join(words[-4:])
     candidates = {}
+    reach = max(500, int(len(q) * 1.5))
+
+    def consider(candidate, pos):
+        ratio = SequenceMatcher(None, words, candidate.split(), autojunk=False).ratio()
+        q_values, s_values = quantity_texts(q, candidate)
+        ratio = max(ratio, SequenceMatcher(None, format_words(q_values).split(), format_words(s_values).split(), autojunk=False).ratio())
+        if ratio >= .90 and candidate != q:
+            candidates[candidate] = {'excerpt': candidate, 'offset': pos, 'similarity': round(ratio, 4)}
+
     pos = text.find(first)
     for _ in range(12):
         if pos < 0:
             break
-        end = text.find(last, pos + len(first), min(len(text), pos + max(500, int(len(q) * 1.5))))
+        end = text.find(last, pos + len(first), min(len(text), pos + reach))
         if end >= 0:
-            candidate = text[pos:end + len(last)]
-            ratio = SequenceMatcher(None, words, candidate.split(), autojunk=False).ratio()
-            q_values, s_values = quantity_texts(q, candidate)
-            ratio = max(ratio, SequenceMatcher(None, format_words(q_values).split(), format_words(s_values).split(), autojunk=False).ratio())
-            if ratio >= .90 and candidate != q:
-                candidates[candidate] = {'excerpt': candidate, 'offset': pos, 'similarity': round(ratio, 4)}
+            consider(text[pos:end + len(last)], pos)
         pos = text.find(first, pos + len(first))
+    if not candidates:
+        for anchor, forward in ((first, True), (last, False)):
+            pos = text.find(anchor)
+            for _ in range(12):
+                if pos < 0:
+                    break
+                span = text[pos:pos + reach] if forward else text[max(0, pos + len(anchor) - reach):pos + len(anchor)]
+                window = span.split()[:len(words) + 6] if forward else span.split()[-(len(words) + 6):]
+                kept = trim_window(words, window, forward)
+                if len(kept) >= 8:
+                    consider(' '.join(kept), pos)
+                pos = text.find(anchor, pos + len(anchor))
     ranked = sorted(candidates.values(), key=lambda x: x['similarity'], reverse=True)
     if not ranked or (len(ranked) > 1 and ranked[0]['similarity'] - ranked[1]['similarity'] < .03):
         return None
     best = ranked[0]
+    if insertions:
+        best['editorialInsertions'] = insertions
     best['differences'] = []
     source_words = best['excerpt'].split()
     for tag, a, b, c, d in SequenceMatcher(None, words, source_words, autojunk=False).get_opcodes():
@@ -242,12 +290,16 @@ def near_quote(text, quote):
         a, b = re.findall(r'\w+', difference['quoted']), re.findall(r'\w+', difference['source'])
         if len(a) == len(b) == 1 and a[0] not in unit_words and b[0] in unit_words and SequenceMatcher(None, a[0], b[0]).ratio() >= .85:
             unit_q = re.sub(r'\b' + re.escape(a[0]) + r'\b', b[0], unit_q)
-    best['changed']['unit'] = numerical_units(unit_q) != numerical_units(source_values) or any(
+    # "84 percent", "84 per cent" and "84%" are one unit written three ways; a
+    # figure that loses its percentage altogether is still a unit question.
+    sign = lambda t: re.sub(r'(?<=\d)\s*(?:per cent|percent)\b', '%', t)
+    unit_q, signed_source = sign(unit_q), sign(source_values)
+    best['changed']['unit'] = numerical_units(unit_q) != numerical_units(signed_source) or any(
         number_values(d['quoted']) and number_values(d['quoted']) == number_values(d['source'])
-        and numerical_units(d['quoted']) != numerical_units(d['source']) for d in best['differences'])
-    if number_values(unit_q) == number_values(source_values):
-        best['changed']['unit'] |= quantity_units(unit_q) != quantity_units(source_values)
-    best['formatEquivalent'] = format_words(quoted_values) == format_words(source_values)
+        and numerical_units(sign(d['quoted'])) != numerical_units(sign(d['source'])) for d in best['differences'])
+    if number_values(unit_q) == number_values(signed_source):
+        best['changed']['unit'] |= quantity_units(unit_q) != quantity_units(signed_source)
+    best['formatEquivalent'] = format_words(sign(quoted_values)) == format_words(signed_source)
     return best
 
 
@@ -849,10 +901,12 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
             if NUMBER.search(quote):
                 checks.append({'rule': 'figure-context', 'state': 'pass', **base,
                                'reason': 'figures within located quotation; source validity/context remains unassessed'})
-        else:
-            near = near_quote(doc.get('comparisonNorm', doc['norm']), quote)
+        for piece in ([] if match['state'] == 'pass' else near_pieces(doc.get('comparisonNorm', doc['norm']), quote)):
+            near = near_quote(doc.get('comparisonNorm', doc['norm']), piece)
             if near:
-                q_values, s_values = quantity_texts(normal(quote), near['excerpt'])
+                if piece != quote:
+                    near['segment'] = piece
+                q_values, s_values = quantity_texts(normal(piece), near['excerpt'])
                 copied_markers = []
                 for item in doc.get('furniture', []):
                     if 'marker' not in item or not item.get('after'):
@@ -882,8 +936,8 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
                     checks.append({'rule': 'quotation-unit-scope', 'state': 'unable', **base,
                                    'reason': 'percent sign missing in one aligned passage; numerical digits unchanged only if separately established, contextual scale unresolved'})
                 second_text = doc.get('secondComparison', doc['second'])
-                second_exact = doc['kind'] == 'pdf' and second_text is not None and locate(second_text, quote)['state'] == 'pass'
-                omitted = [a for a in re.findall(r'\((?:e-?mail|personal communication|interview)[^()]*\b(?:19|20)\d{2}\)', near['excerpt'], re.I) if a not in normal(quote)]
+                second_exact = doc['kind'] == 'pdf' and second_text is not None and locate(second_text, piece)['state'] == 'pass'
+                omitted = [a for a in re.findall(r'\((?:e-?mail|personal communication|interview)[^()]*\b(?:19|20)\d{2}\)', near['excerpt'], re.I) if a not in normal(piece)]
                 if omitted:
                     for attribution in omitted:
                         s_values = s_values.replace(attribution, '')
@@ -894,7 +948,7 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
                 if raw_text:
                     for insertion in editorial_citations(raw_text, footnotes):
                         content = insertion['text'][1:-1]
-                        if any(u != url for u in insertion['supportingUrls']) and re.fullmatch(r'[\d., ]+\s*(?:gbp|usd|eur|£|\$|€)', content, re.I) and insertion['text'] in normal(quote) and insertion['text'] not in near['excerpt']:
+                        if any(u != url for u in insertion['supportingUrls']) and re.fullmatch(r'[\d., ]+\s*(?:gbp|usd|eur|£|\$|€)', content, re.I) and insertion['text'] in normal(piece) and insertion['text'] not in near['excerpt']:
                             additions.append(insertion)
                     if additions:
                         for insertion in additions:
@@ -903,10 +957,14 @@ def quotation_checks(text, doc, url, raw_text=None, footnotes=()):
                         near['changed']['unit'] = numerical_units(q_values) != numerical_units(s_values)
                         checks.append({'rule': 'editorial-insertion', 'state': 'unable', **base, 'insertions': additions,
                                        'reason': 'separately footnoted conversion; amount and conversion basis have not been verified'})
-                typography_only = (near['formatEquivalent'] or re.findall(r'\w+', normal(quote)) == re.findall(r'\w+', near['excerpt'])) and not any(near['changed'].values())
-                second_near = near_quote(second_text, quote) if doc['kind'] == 'pdf' and second_text is not None and not second_exact else None
+                typography_only = (near['formatEquivalent'] or re.findall(r'\w+', normal(piece)) == re.findall(r'\w+', near['excerpt'])) and not any(near['changed'].values())
+                second_near = near_quote(second_text, piece) if doc['kind'] == 'pdf' and second_text is not None and not second_exact else None
                 independent = doc['kind'] != 'pdf' or bool(second_near and second_near['differences'] == near['differences'])
                 state = 'observation' if typography_only else 'candidate' if independent and not second_exact else 'unable'
+                # Wording that differs only where the quoting author bracketed a
+                # replacement is an observation; changed figures and negations below still stand.
+                if state == 'candidate' and near.get('editorialInsertions') and not any(near['changed'].values()):
+                    state = 'observation'
                 checks.append({'rule': 'quotation-near-match', 'state': state, **base, **near,
                                'reason': 'formatting-only difference; literal wording and context remain separate' if typography_only else 'independent reader has quoted text: extraction artefact' if second_exact else 'similar text; independent/context/identity validation remains required'})
                 if near['numberFormatOnly']:

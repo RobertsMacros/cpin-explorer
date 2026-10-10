@@ -56,10 +56,62 @@ def test_edge_ellipsis_quotation_still_exposes_changed_number_and_negation():
     negation = m.quotation_checks('‘… ' + faithful.replace('are off', 'are not off') + '’', doc(source), 'https://example.org/source')
     assert any(c['rule'] == 'changed-negation' and c['state'] == 'candidate' for c in negation)
     assert not any(c['rule'] == 'changed-number' for c in negation)
-    # An omission inside the quotation, or an editorial insertion, is still not aligned.
+    # near_quote itself never spans an omission; quotation_checks aligns each segment.
     inner = 'Restricted areas in the territory now take up 95 per cent of the land … most of them are off limits for residents'
     assert m.near_quote(m.normal(source), inner) is None
-    assert m.near_quote(m.normal(source), faithful.replace('65', '95').replace('them', '[the areas]')) is None
+
+
+def rules(checks, state='candidate'):
+    return {c['rule'] for c in checks if c['state'] == state}
+
+
+def test_internal_ellipsis_aligns_each_unlocated_segment():
+    source = ('The detailed country survey found that 281 people did not return to their original homes during the reporting period. '
+              'Officials said the estimate was provisional. Aid agencies reported that most displaced families were still living in '
+              'temporary shelters at the end of the year.')
+    quote = ('The detailed country survey found that 281 people did not return to their original homes during the reporting period. … '
+             'Aid agencies reported that most displaced families were still living in temporary shelters at the end of the year.')
+    faithful = m.quotation_checks('‘' + quote + '’', doc(source), 'https://example.org/source')
+    assert not {'changed-number', 'changed-negation', 'quotation-near-match'} & rules(faithful)
+    number = m.quotation_checks('‘' + quote.replace('281', '218') + '’', doc(source), 'https://example.org/source')
+    assert 'changed-number' in rules(number) and 'changed-negation' not in rules(number)
+    changed = next(c for c in number if c['rule'] == 'changed-number')
+    assert changed['quoted'] == quote.replace('281', '218') and changed['evidence']['segment'].startswith('The detailed country survey')
+    negation = m.quotation_checks('‘' + quote.replace('were still living', 'were not still living') + '’', doc(source), 'https://example.org/source')
+    assert 'changed-negation' in rules(negation) and 'changed-number' not in rules(negation)
+    # A segment too short to align uniquely stays unassessed rather than guessed.
+    short = 'The survey found 218 people … Aid agencies reported that most displaced families were still living in temporary shelters at the end of the year.'
+    assert not {'changed-number', 'quotation-near-match'} & rules(m.quotation_checks('‘' + short + '’', doc(source), 'https://example.org/source'))
+
+
+def test_bracket_insertions_and_a_changed_last_figure_are_still_aligned():
+    source = ('The general index fell by 1.9 percent in June compared to May. Food prices also witnessed a decrease in the region by 2 percent '
+              'in June compared to May, and an even larger decrease compared to the previous June by 84 percent. However, the index remained '
+              'higher than pre-crisis levels by 102.2 percent. Flour prices remained stable during the first half of the month.')
+    quote = ('Food prices … witnessed a decrease in the region by 2 percent in June compared to May [2026], and an even larger decrease '
+             'compared to the previous June by 84 percent. However, the index remained higher than pre-crisis levels by 102.2 percent.')
+    faithful = m.quotation_checks('‘' + quote + '’', doc(source), 'https://example.org/source')
+    assert not {'changed-number', 'changed-negation', 'changed-unit', 'quotation-near-match'} & rules(faithful)
+    # A percent sign for the word is formatting, not a changed unit or wording.
+    signed = m.quotation_checks('‘' + quote.replace('102.2 percent', '102.2%') + '’', doc(source), 'https://example.org/source')
+    assert not {'changed-number', 'changed-unit', 'quotation-near-match'} & rules(signed)
+    altered = m.quotation_checks('‘' + quote.replace('102.2 percent', '202.2%') + '’', doc(source), 'https://example.org/source')
+    assert 'changed-unit' not in rules(altered)
+    assert 'changed-number' in rules(altered)
+    evidence = next(c for c in altered if c['rule'] == 'changed-number')['evidence']
+    assert {'quoted': '202.2%.', 'source': '102.2 percent.'} in evidence['differences'] and evidence['editorialInsertions'] == ['[2026]']
+    # A replaced capital is typography; the bracket itself is never a wording candidate.
+    capital = '[A]nd an even larger decrease compared to the previous June by 48 percent. However, the index remained higher than pre-crisis levels by 102.2 percent.'
+    assert 'changed-number' in rules(m.quotation_checks('‘' + capital + '’', doc(source), 'https://example.org/source'))
+    replaced = quote.replace('the index remained', '[it] remained')
+    assert not {'changed-number', 'quotation-near-match'} & rules(m.quotation_checks('‘' + replaced + '’', doc(source), 'https://example.org/source'))
+
+
+def test_a_change_in_the_first_words_is_aligned_from_the_other_end():
+    source = 'Roads were closed for a week. Nearly 65 per cent of the land in the territory is now restricted, and most of it remains closed to ordinary residents. Schools reopened later.'
+    quote = 'Nearly 95 per cent of the land in the territory is now restricted, and most of it remains closed to ordinary residents.'
+    assert 'changed-number' in rules(m.quotation_checks('‘' + quote + '’', doc(source), 'https://example.org/source'))
+    assert m.near_quote(m.normal('An unrelated article has different subject matter and a different timeframe altogether, closed to ordinary residents.'), quote) is None
 
 
 def test_leading_source_marker_does_not_crash_or_hide_changed_number():

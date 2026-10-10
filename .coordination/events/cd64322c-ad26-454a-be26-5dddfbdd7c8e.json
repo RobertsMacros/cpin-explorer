@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "cd64322c-ad26-454a-be26-5dddfbdd7c8e",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "8023105d-65b9-4bac-8ed9-db93778d8895",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Mechanical screen: internal ellipses, bracket insertions and end-of-quote changes",
+  "scope": "Owner request: extend the no-model quotation screen to quotations with an ellipsis in the middle, and close the adjacent gaps that hide the same errors (square-bracket editorial insertions; a change in the first or last words of a quotation). Regression tests; local test run; method note. No corpus rerun, no change to stored results or public flags; push only on the owner’s word.",
+  "criteria": [
+    "Owner request: extend the no-model quotation screen to quotations with an ellipsis in the middle, and close the adjacent gaps that hide the same errors (square-bracket editorial insertions; a change in the first or last words of a quotation). Regression tests; local test run; method note. No corpus rerun, no change to stored results or public flags; push only on the owner’s word."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "Mechanical screen: internal ellipses, bracket insertions and end-of-quote changes",
+  "occurred_at": "2026-10-10T17:38:03.013Z",
+  "parent_event_ids": [],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "cd484b2dcb0c48e6dcd1dba008319ec6fcfb72bf",
+  "work_branch": "claude/quotation-edge-ellipsis",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

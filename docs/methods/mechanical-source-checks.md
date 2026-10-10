@@ -145,14 +145,30 @@ the same number somewhere in a document. Numerical changes in PDFs do not become
 candidates without independent agreement. Ellipsis qualification flags identify
 words in omitted spans; they do not judge the omissions' materiality.
 
-Near-quote alignment covers a quotation whose only ellipses are at its start or
-end: those mark where the quotation was cut, so the words between are aligned as
-usual. A quotation with an ellipsis inside it, or with a square-bracket insertion,
-is still not aligned when its exact wording is not located: a changed number or
-negation there is not raised and the quotation stays `unable`. Quotations under
-twelve words, and changes within the first or last four words, are likewise not
-aligned. Results stored before 10 October 2026 predate the start/end handling;
-they are unchanged until a separately authorised run.
+Near-quote alignment runs whenever a quotation's exact wording is not located:
+
+- An ellipsis at the start or end marks where the quotation was cut, and is
+  ignored. An ellipsis inside it divides the quotation into segments; each
+  segment whose exact wording is absent is aligned on its own, and a candidate
+  records both the whole quotation and the segment concerned.
+- Square brackets are the quoting author's. A bracketed capital (`[T]he`) is
+  restored and any other bracketed insertion (`[2026]`, `[the areas]`) is set
+  aside before alignment and listed with the result. Wording that differs only
+  around such an insertion is an observation; a changed number, negation,
+  qualifier or unit in the same quotation is still a candidate.
+- When the first or last four words are themselves changed, the window is
+  anchored on the other end alone, bounded by the quotation's length and cut at
+  the end of the source's own sentence. The 0.90 similarity floor and the
+  requirement for one clearly best alignment are unchanged.
+- "84 percent", "84 per cent" and "84%" are the same unit. A figure that loses
+  its percentage altogether is still a unit question.
+
+Still not aligned, and therefore left `unable` with no candidate: a quotation or
+segment of fewer than twelve words; a quotation of more than 300 words; a
+segment whose first and last four words are both changed; and any source with
+no held, readable copy. Paraphrase is not examined at all. Results stored before
+10 October 2026 predate these rules; they are unchanged until a separately
+authorised run, which would raise candidates the earlier runs could not.
 
 The 450-block Syria/Afghanistan source-format pilots completed without processing
 errors. All 345 Python tests pass, including interrupted/resumed result reuse,
