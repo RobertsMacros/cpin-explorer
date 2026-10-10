@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "event_id": "a75a5ce8-7279-43b5-9c30-74f866379298",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "46e721fa-d69f-42b4-98e1-6c198f353fd3",
+  "parent_event_ids": [
+    "820259b6-7734-49c3-91ae-f87d80c87d51"
+  ],
+  "status": "blocked",
+  "title": "Evaluate bounded local-model trial",
+  "scope": "Evaluate bounded local-model trial; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "occurred_at": "2026-10-10T08:54:48.152485+00:00",
+  "summary": "Eight frozen inputs checked against retained source bytes and separate calibration labels. Archived PC chat is readable, but no remote command surface is exposed; hardware and model run remain unobserved.",
+  "evidence": [
+    {
+      "kind": "commit",
+      "ref": "1b00c82730e73e488755a225b28984ec0418fbd6",
+      "result": "Hardware-access boundary and bounded trial contract documented."
+    },
+    {
+      "kind": "report",
+      "ref": "docs/reviews/2026-10-10-reliability-and-gaza.md",
+      "result": "No paid calls, model installation or trial result claimed."
+    }
+  ],
+  "remaining": [
+    "Observe gaming PC GPU/VRAM/RAM and existing runtime",
+    "Execute one eight-case local-model trial and verify every quoted passage, unresolved outcome and calibration result"
+  ],
+  "blockers": [
+    "Gaming PC remote command access is unavailable in this chat."
+  ]
+}

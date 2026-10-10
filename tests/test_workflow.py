@@ -49,6 +49,18 @@ def test_a_quiet_day_makes_no_commit():
     assert "grep -qv '^data/runs.jsonl$'" in commit["text"]
 
 
+def test_failed_publication_has_a_recoverable_bundle_and_patch():
+    workflow = WORKFLOW.read_text()
+    commit = next(s for s in steps() if s["name"] == "Commit data changes")
+    assert 'git diff --cached --binary' in commit['text']
+    assert 'scripts/publish_sync.py' in commit['text']
+    recovery = next(s for s in steps() if s['name'] == 'Retain unpublished sync for recovery')
+    assert "failure() && steps.commit.outcome == 'failure'" in recovery['text']
+    assert 'actions/upload-artifact@v4' in recovery['text']
+    assert "fetch-depth: 0" in workflow
+    assert "if: github.ref == 'refs/heads/main'" in workflow
+
+
 def test_a_failed_sync_or_verification_cannot_publish_retained_data():
     deploy = WORKFLOW.read_text().split("\n  deploy:\n", 1)[1]
     assert "needs.sync.result == 'success'" in deploy

@@ -23,18 +23,23 @@ concurrency:
 
 jobs:
   sync:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Recovery bundles and lossless merges require complete ancestry.
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - run: pip install -e ".[dev]"
       # pdftotext: the second reader of PDFs that `cpin compare` puts every difference to (docs/methods/pdf-and-web.md).
-      - run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends poppler-utils
       - run: pytest -q
 
       # Mirrored PDFs and images are not in git. Keep them between runs: a file is asked "changed since?"
@@ -90,12 +95,23 @@ jobs:
           git add data
           # A quiet day only appends to runs.jsonl; don't make a commit for that alone.
           if git diff --cached --name-only | grep -qv '^data/runs.jsonl$'; then
+            mkdir -p "$RUNNER_TEMP/cpin-sync-recovery"
+            git diff --cached --binary > "$RUNNER_TEMP/cpin-sync-recovery/changes.patch"
             git commit -m "data: sync $(date -u +%F)"
-            git push
+            python scripts/publish_sync.py --recovery "$RUNNER_TEMP/cpin-sync-recovery"
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "No content changes."
           fi
+
+      - name: Retain unpublished sync for recovery
+        if: failure() && steps.commit.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: unpublished-sync-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/cpin-sync-recovery/
+          if-no-files-found: error
+          retention-days: 7
 
       # After the commit: one image that will not download, or one PDF that fails, must not hold back
       # every later day's data while the fault lasts. It fails the job here instead.

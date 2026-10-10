@@ -14,7 +14,7 @@ export async function api(path, data, method = "POST") {
 }
 
 export function createAccountStore(request = api, changed = () => {}) {
-  const rows = new Map(), pending = new Map(); let running = null, sequence = 0;
+  const rows = new Map(), pending = new Map(); let running = null, sequence = 0, refreshSequence = 0;
   const state = { configured: false, user: null, loaded: false, status: "loading", error: "", conflicts: [] };
   function notify() { state.conflicts = [...pending].filter(([,p]) => p.conflict).map(([key,p]) => ({key,kind:p.kind,id:p.id})); changed(state); }
   function values(kind) { return [...rows.values()].filter(r=>r.kind===kind && r.value!==null).map(r=>r.value); }
@@ -54,13 +54,24 @@ export function createAccountStore(request = api, changed = () => {}) {
   }
   async function refresh() {
     if (pending.size || running) return;
+    const requestId=++refreshSequence, generation=sequence, account=state.user;
+    // An edit may finish saving while this read is in flight. Pending writes alone
+    // cannot detect that; keep both mutation and read ordering until the response.
+    const current=()=>requestId===refreshSequence && generation===sequence &&
+      account===state.user && !pending.size && !running;
     try {
-      const result=await request("/api/saved"); rows.clear();
+      const result=await request("/api/saved");
+      if (!current()) return;
+      rows.clear();
       for (const row of result.items) rows.set(`${row.kind}/${row.id}`,row);
       state.loaded=true; state.status="saved"; state.error=""; notify();
-    } catch(e) {state.status="error";state.error=e.message;notify();throw e;}
+    } catch(e) {
+      if (!current()) return;
+      state.status="error";state.error=e.message;notify();throw e;
+    }
   }
   async function initialise() {
+    ++refreshSequence; // A prior account read must not land during a new sign-in check.
     try {
       const result=await request("/api/account"); Object.assign(state,result);
       state.status=result.user?.approved ? "loading" : result.user ? "pending" : "signed-out";
@@ -70,6 +81,7 @@ export function createAccountStore(request = api, changed = () => {}) {
   }
   function resolve(key, keepLocal) {
     const item=pending.get(key); if (!item?.conflict) return;
+    ++sequence;
     const current=item.conflict; rows.get(key).revision=current.revision;
     if (keepLocal) delete item.conflict;
     else { rows.get(key).value=current.value; pending.delete(key); }

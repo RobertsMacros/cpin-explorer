@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "checkedAt": "2026-10-07",
+  "checkedAt": "2026-10-08",
   "policy": "Publisher inclusion establishes provenance and relevant expertise, not correctness. All merits remain unassessed until evidence is compared. New discoveries are private candidates, never automatic source flags.",
   "publishers": [
     {
@@ -41,7 +41,8 @@
       "identityUrl": "https://asylos.org/about-us/",
       "discoveryUrls": [
         "https://asylos.org/category/projects/",
-        "https://asylos.org/category/news/"
+        "https://asylos.org/category/news/",
+        "https://asylos.org/impact-safe-country-women-seeking-asylum-uk/"
       ],
       "allowedHosts": [
         "asylos.org"
@@ -2972,6 +2973,37 @@
           }
         }
       ]
+    },
+    {
+      "id": "asylos-wirl-safe-countries-women-2026",
+      "publisherIds": [
+        "asylos"
+      ],
+      "coAuthors": [
+        "Women in Refugee Law (WiRL) / Christel Querton",
+        "Emily Wilbourn (Asylos)"
+      ],
+      "title": "The Impact of ‘Safe Country’ Concepts on Women Seeking Asylum in the UK",
+      "url": "https://asylos.org/wp-content/uploads/2026/02/FINAL_Safe-Country-Report-10-February-2026.pdf",
+      "countries": [
+        "albania",
+        "india",
+        "rwanda"
+      ],
+      "kind": "context",
+      "reviewedProduct": "uk-cpin",
+      "publishedAt": "2026-01",
+      "checkedAt": "2026-10-08",
+      "assessment": "unassessed",
+      "summary": "Christel Querton and Emily Wilbourn examine gender-sensitive country information and safe-country decisions, drawing on a September 2025 roundtable. Their Albania, India and Rwanda examples and recommendations are thematic context, not verified errors in a particular held edition. Whole-publication merits and applicability remain unassessed.",
+      "verificationLocation": "Original PDF physical pages 1–2 identify authors/date and method; pages 14–17 examine COI quality and country examples; pages 22–23 contain recommendations. Original SHA-256 checked and independent Poppler reading agrees.",
+      "workId": "asylos-wirl-safe-countries-women-2026",
+      "relatedUrls": [
+        "https://asylos.org/impact-safe-country-women-seeking-asylum-uk/"
+      ],
+      "targets": [],
+      "scope": "thematic",
+      "verifiedSnapshotSha": "7d55d2f5bd58c8f780621cd30d254242e2ecb37c5e5206b8fa3fd323b483b566"
     }
   ]
 }

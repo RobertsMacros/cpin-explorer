@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "event_id": "a8e60a82-6d16-4435-b84b-42437cdcad1d",
+  "task_id": "a2d0797f-dd2b-4f4a-ad84-1ad0a233f751",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "3497964b-47a8-44ae-8d62-9b3fd0faa573",
+  "parent_event_ids": [
+    "ef85e6a9-1fc5-4250-9013-e5085ad1ce66"
+  ],
+  "status": "working",
+  "title": "Shared review workflow and publisher discovery",
+  "scope": "Shared review workflow and publisher discovery; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-human"
+  ],
+  "occurred_at": "2026-10-09T16:16:51.435177+00:00",
+  "summary": "One original Asylos/WiRL thematic publication verified and curated; existing 60 publication objects preserved. Read-only shared queue export succeeds with zero tasks. Bounded publisher search, not exhaustive.",
+  "evidence": [
+    {
+      "kind": "report",
+      "ref": "docs/reviews/2026-10-09-checked-release.md",
+      "result": "Bounded batch and remaining scope"
+    }
+  ],
+  "remaining": [
+    "Genuine user feedback and recheck cycle remains unverified",
+    "Further publisher discovery and wider operation remain open"
+  ],
+  "blockers": []
+}

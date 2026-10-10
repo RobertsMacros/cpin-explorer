@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "event_id": "4dfa97d2-6cf0-4474-996a-16c8546aed65",
+  "task_id": "f1f5a5e0-4bd4-4b9d-95b0-4635d7a83495",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "3497964b-47a8-44ae-8d62-9b3fd0faa573",
+  "parent_event_ids": [
+    "9892d494-1447-4510-a1d6-1ef9edca7cfe"
+  ],
+  "status": "working",
+  "title": "Expand contextual checks in recent editions",
+  "scope": "Expand contextual checks in recent editions; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-wider-contextual-coverage"
+  ],
+  "occurred_at": "2026-10-08T20:34:29.138092+00:00",
+  "summary": "Starting a bounded 20-use contextual batch in the newest held September 2026 Gaza edition; source copies and missing underlying attachments remain distinct.",
+  "evidence": [],
+  "remaining": [
+    "Expand contextual checks in recent editions"
+  ],
+  "blockers": []
+}

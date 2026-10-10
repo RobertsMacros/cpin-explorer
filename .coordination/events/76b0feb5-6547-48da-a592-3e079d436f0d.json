@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "event_id": "76b0feb5-6547-48da-a592-3e079d436f0d",
+  "task_id": "e81a52fb-8306-46a6-942c-d5aa44d25165",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "6b8e85cf-c40e-412d-ba94-eb7367bc4d33",
+  "parent_event_ids": [],
+  "status": "working",
+  "title": "Publish checked Explorer changes to main",
+  "scope": "Apply the saved Windows Edge toolbar patch, validate pending review additions and publish checked changes to main through existing deployment. No whole-project or physical-device completion.",
+  "roadmap_id": "cpin-explorer",
+  "milestone_ids": [],
+  "occurred_at": "2026-10-09T16:12:02.777846+00:00",
+  "summary": "Remote documentation reconciled; exact Windows patch recovered from original successful native check. Release validation in progress.",
+  "evidence": [],
+  "remaining": [
+    "Validate changes and push main",
+    "Verify existing deployment"
+  ],
+  "blockers": []
+}

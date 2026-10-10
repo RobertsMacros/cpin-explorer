@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "event_id": "e04e97e2-9e16-4f08-a659-2f10c3198ba9",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "3497964b-47a8-44ae-8d62-9b3fd0faa573",
+  "parent_event_ids": [],
+  "status": "working",
+  "title": "Evaluate bounded local-model trial",
+  "scope": "Evaluate bounded local-model trial; exact incoming stage only, no paid calls or bulk semantic run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "occurred_at": "2026-10-08T20:09:08.817314+00:00",
+  "summary": "Authorised stage accepted; current checkout reconciled with origin/main.",
+  "evidence": [],
+  "remaining": [
+    "Evaluate bounded local-model trial"
+  ],
+  "blockers": []
+}

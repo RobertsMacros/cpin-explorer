@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "event_id": "09288810-8b39-4e31-9f5b-fc84b58eafe4",
+  "task_id": "fffffa2a-baad-43e2-8d67-f7b578597510",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "46e721fa-d69f-42b4-98e1-6c198f353fd3",
+  "parent_event_ids": [],
+  "status": "working",
+  "title": "Recover concurrent daily-sync publication",
+  "scope": "Keep fetched data commits recoverable; reconcile independent main pushes safely, refuse conflicts without discarding source history, and test publication ordering.",
+  "roadmap_id": "cpin-explorer",
+  "milestone_ids": [],
+  "occurred_at": "2026-10-10T08:24:36.615556+00:00",
+  "summary": "Authorised by the user; implementation and bounded source follow-up in progress.",
+  "evidence": [],
+  "remaining": [
+    "Keep fetched data commits recoverable; reconcile independent main pushes safely, refuse conflicts without discarding source history, and test publication ordering."
+  ],
+  "blockers": []
+}
