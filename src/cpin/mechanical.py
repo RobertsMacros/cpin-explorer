@@ -189,6 +189,25 @@ def quotations(text):
     return list(dict.fromkeys(q for q in found if 8 <= len(q.split()) <= 300))[:6]
 
 
+def find_whole(text, needle, start=0, end=None):
+    """str.find that never lands inside a longer word or number.
+
+    "65 per cent" is not found in "165 per cent", "4." is not found in
+    "4.5 million" and "000 people" is not found in "4,000 people".
+    """
+    end = len(text) if end is None else end
+    pos = text.find(needle, start, end)
+    while pos >= 0:
+        before, after = text[max(0, pos - 2):pos], text[pos + len(needle):pos + len(needle) + 2]
+        inside = (needle[:1].isalnum() and (before[-1:].isalnum() or (needle[:1].isdigit() and re.fullmatch(r'\d[.,]', before)))) or (
+            needle[-1:].isalnum() and (after[:1].isalnum() or (needle[-1:].isdigit() and re.fullmatch(r'[.,]\d', after)))) or (
+            re.search(r'\d[.,]$', needle) and after[:1].isdigit())
+        if not inside:
+            return pos
+        pos = text.find(needle, pos + 1, end)
+    return -1
+
+
 def locate(text, quote):
     parts = [normal(p).strip() for p in re.split(ELLIPSIS, quote) if normal(p).strip()]
     if not parts or any(len(p.split()) < 4 for p in parts):
@@ -196,7 +215,7 @@ def locate(text, quote):
     at = 0
     locations = []
     for part in parts:
-        pos = text.find(part, at)
+        pos = find_whole(text, part, at)
         if pos < 0:
             return {'state': 'unable', 'reason': 'quoted wording not located; not proof of absence'}
         locations.append((pos, pos + len(part)))
@@ -255,7 +274,7 @@ def near_pieces(text, quote):
     """Parts of an unlocated quotation to align: each segment between ellipses
     whose exact wording is absent, or the whole quotation when it has none."""
     parts = [p.strip() for p in re.split(ELLIPSIS, quote) if p.strip()]
-    return [quote] if len(parts) < 2 else [p for p in parts if normal(p) not in text]
+    return [quote] if len(parts) < 2 else [p for p in parts if find_whole(text, normal(p)) < 0]
 
 
 def near_quote(text, quote):
@@ -294,18 +313,18 @@ def near_quote(text, quote):
             candidates[candidate] = {'excerpt': candidate, 'offset': pos, 'similarity': round(ratio, 4)}
         return candidate == q
 
-    pos = text.find(first)
+    pos = find_whole(text, first)
     for _ in range(12):
         if pos < 0:
             break
-        end = text.find(last, pos + len(first), min(len(text), pos + reach))
+        end = find_whole(text, last, pos + len(first), min(len(text), pos + reach))
         # Apart from its brackets the quotation is in the source word for word.
         if end >= 0 and consider(text[pos:end + len(last)], pos):
             return None
-        pos = text.find(first, pos + len(first))
+        pos = find_whole(text, first, pos + len(first))
     if not candidates:
         for anchor, forward in ((first, True), (last, False)):
-            pos = text.find(anchor)
+            pos = find_whole(text, anchor)
             for _ in range(200):
                 if pos < 0:
                     break
@@ -318,7 +337,7 @@ def near_quote(text, quote):
                 if ran_on and ' '.join(kept) in candidates:
                     # The quotation closes its sentence here; the source's sentence continues.
                     candidates[' '.join(kept)]['sentenceRunsOn'] = ' '.join(ran_on)
-                pos = text.find(anchor, pos + len(anchor))
+                pos = find_whole(text, anchor, pos + len(anchor))
     ranked = sorted(candidates.values(), key=lambda x: x['similarity'], reverse=True)
     if not ranked or (len(ranked) > 1 and ranked[0]['similarity'] - ranked[1]['similarity'] < .03):
         return None

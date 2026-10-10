@@ -178,6 +178,10 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   for one clearly best alignment are unchanged.
 - "84 percent", "84 per cent" and "84%" are the same unit. A figure that loses
   its percentage altogether is still a unit question.
+- Quoted wording is located only as whole words and whole numbers: "65 per
+  cent" is not found inside "165 per cent", nor "4." inside "4.5 million", nor
+  "000 people" inside "4,000 people". Such a quotation is then aligned like any
+  other unlocated one, and the difference in the figure is a candidate.
 - A single-quoted quotation is not ended by an apostrophe inside it
   ("the territory's population"): where the supposed closing mark is followed
   directly by a letter, the longer reading is taken if it closes, on a mark not

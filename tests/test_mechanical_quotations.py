@@ -131,3 +131,17 @@ def test_many_repeats_of_the_anchor_do_not_hide_a_changed_first_figure():
     source = filler + 'Nearly 65 per cent of the land in the territory is now restricted, and most of it remains closed to ordinary residents.'
     quote = 'Nearly 95 per cent of the land in the territory is now restricted, and most of it remains closed to ordinary residents.'
     assert 'changed-number' in candidates(quote, source)
+
+
+def test_a_quotation_is_never_located_inside_a_longer_number_or_word():
+    source = 'Restricted zones now cover 165 per cent of the land in the territory that was restricted before, and most of it remains closed to ordinary residents.'
+    quote = '65 per cent of the land in the territory that was restricted before, and most of it remains closed to ordinary residents.'
+    assert m.locate(m.normal(source), quote)['state'] == 'unable'
+    assert 'changed-number' in candidates(quote, source)
+    assert m.locate(m.normal(source.replace('165', '65')), quote)['state'] == 'pass'
+    stem = 'Officials said that most of the displaced families from the northern districts were still living in shelters and that the total was '
+    assert m.locate(m.normal(stem + '4.5 million. Next came 99 more.'), stem + '4.')['state'] == 'unable'
+    assert 'changed-number' in candidates(stem + '4.', stem + '4.5 million. Next came 99 more.')
+    assert m.locate(m.normal(stem + '24,000 people in all.'), 'most of the displaced families from the northern districts were still living in shelters and that the total was 24')['state'] == 'unable'
+    # Hyphenated compounds and possessives are still found.
+    assert m.find_whole('access-restricted areas in gaza’s north', 'restricted areas in gaza') == 7
