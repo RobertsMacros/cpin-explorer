@@ -175,3 +175,17 @@ def test_a_paragraph_opening_with_a_quotation_may_hold_more_than_one():
     nested = 'The source described ' + chr(0x201c) + 'voluntary returns' + chr(0x201d) + ' as unreliable and stated that the numbers were estimates.'
     assert m.quotations(o + nested + c + '[footnote 8]') == [nested]
     assert m.quotations(o + first + c + '.') == [first]
+
+
+def test_final_review_shapes():
+    # A count straight after a year is not a spaced thousand.
+    text = m.normal('In 2019 150 people were killed, and on 5 May 2019 150 others left; 12 000 stayed.')
+    assert m.find_whole(text, '150 people were killed') >= 0 and m.find_whole(text, 'on 5 may 2019') >= 0
+    assert m.find_whole(text, '000 stayed') < 0 and m.find_whole(text, '; 12') < 0
+    # A plural possessive does not end a quotation that opens the paragraph and is followed by narrative.
+    o, c = chr(0x2018), chr(0x2019)
+    quote = 'The agency said the soldiers' + c + ' vehicles left the villages' + c + ' outskirts during the reporting period'
+    assert m.quotations(o + quote + c + ', reported the survey (p.4).') == [quote]
+    # Ten times a round figure is a changed number, not a footnote run on to a year.
+    stem = 'Officials said that most of the displaced families from the northern districts were still living in shelters, numbering '
+    assert 'changed-number' in candidates(stem + '2000 in total.', stem + '20000 in total.')

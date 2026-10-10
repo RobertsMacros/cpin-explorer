@@ -187,11 +187,11 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   ("residents16"); a year with a footnote number run on to it ("201916") is an
   unproven marker shape and stays `unable`. A figure quoted without the unit
   that follows it ("65" from "65%") is still located.
-- A paragraph that opens with a quotation mark is one quotation only when it
-  also ends with the closing mark and no second quotation opens inside it.
-  Otherwise each quotation in it is picked out and checked separately; before,
-  such a paragraph was read as one run from its first mark to its last and was
-  never located.
+- A paragraph that opens with a quotation mark is read as one quotation, closing
+  at its last mark that is not an apostrophe inside a word, unless a second
+  quotation opens before that. In that case each quotation in the paragraph is
+  picked out and checked separately; before, such a paragraph was read as one
+  run from its first mark to its last and was never located.
 - A single-quoted quotation is not ended by an apostrophe inside it
   ("the territory's population"): where the supposed closing mark is followed
   directly by a letter, the longer reading is taken if it closes, on a mark not
@@ -200,8 +200,8 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
 Still not aligned, and therefore left `unable` with no candidate: a quotation or
 segment of fewer than twelve words; a quotation of more than 300 words; a
 segment whose first and last four words are both changed; a plural possessive
-("families' homes") inside a single-quoted quotation, which still ends it
-early; and any source with no held, readable copy. Paraphrase is not examined
+("families' homes") inside a single-quoted quotation in the middle of a
+paragraph, which still ends it early; and any source with no held, readable copy. Paraphrase is not examined
 at all. Results stored before 10 October 2026 predate these rules; they are
 unchanged until a separately authorised run, which would raise candidates the
 earlier runs could not. Every rule above was checked against generated cases
