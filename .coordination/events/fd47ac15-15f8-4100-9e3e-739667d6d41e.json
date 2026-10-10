@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "fd47ac15-15f8-4100-9e3e-739667d6d41e",
+  "actor_id": "60d3b2a1-df8a-4890-8e65-dc76ab44be56",
+  "task_id": "d5684398-abd3-4413-a851-1724b1b636a1",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Publish CPIN Claude Code handover",
+  "scope": "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks.",
+  "criteria": [
+    "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "done",
+  "summary": "Reviewed pending CPIN notes and Claude handover published to main; all local branch tips now have GitHub coverage. Private evidence retained locally and unfinished checks preserved.",
+  "occurred_at": "2026-10-10T14:51:03.930Z",
+  "parent_event_ids": [
+    "295febcc-ab9a-4444-b426-9923f8b8a694"
+  ],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [
+    {
+      "kind": "commit",
+      "ref": "00a3222ef8c0528989b4196dc5b4d10bf45d1087",
+      "result": "Implementation revision recorded"
+    },
+    {
+      "kind": "report",
+      "ref": ".coordination/reports/3532b7af-986a-451d-832b-52b8111c9b74.json",
+      "result": "Exact-scope verification report; collector must check it"
+    }
+  ],
+  "user_input": null,
+  "work_ref": "00a3222ef8c0528989b4196dc5b4d10bf45d1087",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

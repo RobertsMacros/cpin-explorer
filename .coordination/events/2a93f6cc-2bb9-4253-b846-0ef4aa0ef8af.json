@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "2a93f6cc-2bb9-4253-b846-0ef4aa0ef8af",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "14436257-bb4b-47f4-94a9-6dafb76ee8cd",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "General 8B model coding prompt comparison",
+  "scope": "Owner request: run the same generic non-CPIN coding prompt once on the already-held Qwen3-8B weights with reasoning enabled, under the same memory guards, and record speed, memory and the answer for comparison with the 14B coding weights. No CPIN inference, downloads, network service, publication or code changes; private receipts stay outside GitHub.",
+  "criteria": [
+    "Owner request: run the same generic non-CPIN coding prompt once on the already-held Qwen3-8B weights with reasoning enabled, under the same memory guards, and record speed, memory and the answer for comparison with the 14B coding weights. No CPIN inference, downloads, network service, publication or code changes; private receipts stay outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "General 8B model coding prompt comparison",
+  "occurred_at": "2026-10-10T15:15:09.874Z",
+  "parent_event_ids": [],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

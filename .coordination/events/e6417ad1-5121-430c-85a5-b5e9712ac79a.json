@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "e6417ad1-5121-430c-85a5-b5e9712ac79a",
+  "actor_id": "60d3b2a1-df8a-4890-8e65-dc76ab44be56",
+  "task_id": "4c10c974-10d2-4555-aec5-aedf76992c3a",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Account and sync follow-up verification",
+  "scope": "Verify the published account and sync reliability repairs, run account approval/revocation and cross-session checks, obtain genuine cross-device acceptance, check available disk storage, and defer device-browser QA from this chat. Do not perform the separate research/model work.",
+  "criteria": [
+    "Check current free disk space without deletion.",
+    "Verify controlled concurrent sync publication and recovery tests and the published repair.",
+    "Verify account approval, revocation and cross-session save tests; retain genuine cross-device acceptance as a separate required check.",
+    "Defer device-browser QA from the current chat queue and leave separate research work alone."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "Account and sync follow-up verification",
+  "occurred_at": "2026-10-10T12:52:17.699Z",
+  "parent_event_ids": [],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "77204051a00f9ea359f37003f0deda804ae098d2",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

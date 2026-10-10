@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "3fc1ba35-d62a-4295-b2a8-4148e98a4ae8",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "d95c31f2-a75c-45bb-836e-26cf9c59c348",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Small coding check of the held 8B model",
+  "scope": "Owner request to continue with the 8B: run eight generic non-CPIN Python coding tasks once each on the held Qwen3-8B weights with reasoning enabled, under memory guards, and score each answer by executing held tests. Record pass count, speed and memory. No retries, CPIN inference, downloads, network service, publication or repository code changes; private receipts stay outside GitHub.",
+  "criteria": [
+    "Owner request to continue with the 8B: run eight generic non-CPIN Python coding tasks once each on the held Qwen3-8B weights with reasoning enabled, under memory guards, and score each answer by executing held tests. Record pass count, speed and memory. No retries, CPIN inference, downloads, network service, publication or repository code changes; private receipts stay outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "Small coding check of the held 8B model",
+  "occurred_at": "2026-10-10T15:41:59.352Z",
+  "parent_event_ids": [
+    "3c7c69a2-bea3-4f2e-bb25-e9f20bc9261c"
+  ],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

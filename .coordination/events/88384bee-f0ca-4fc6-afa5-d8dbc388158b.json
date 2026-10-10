@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "88384bee-f0ca-4fc6-afa5-d8dbc388158b",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "2b4749a5-b415-4c15-b975-1bf3a118bdf8",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Mechanical screen: near-match for quotations with edge ellipses",
+  "scope": "Extend the no-model mechanical quotation screen so a quotation whose only ellipses are leading or trailing still gets the existing bounded near-match comparison, exposing changed numbers and negations as candidates. Add regression tests; run the Python test suite locally on a branch. No corpus rerun, no change to stored results or public flags, no push or deployment without the owner.",
+  "criteria": [
+    "Extend the no-model mechanical quotation screen so a quotation whose only ellipses are leading or trailing still gets the existing bounded near-match comparison, exposing changed numbers and negations as candidates. Add regression tests; run the Python test suite locally on a branch. No corpus rerun, no change to stored results or public flags, no push or deployment without the owner."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "blocked",
+  "summary": "Implemented and committed locally on branch claude/quotation-edge-ellipsis: quotations cut by a leading or trailing ellipsis now reach the bounded near-match, with a regression test and method note. Local Windows run: 418 passed, 4 failed; the same 4 fail without the change (Unix-only lock module and data not held in this checkout). No corpus rerun; stored results unchanged; not pushed.",
+  "occurred_at": "2026-10-10T15:49:43.813Z",
+  "parent_event_ids": [
+    "e0c4f24e-8583-4302-860a-47830ccf521d"
+  ],
+  "remaining": [
+    "Run the full suite on the usual Mac or CI environment; review and publish."
+  ],
+  "blockers": [],
+  "evidence": [],
+  "user_input": {
+    "action": "Say push to publish branch claude/quotation-edge-ellipsis for review, or decline.",
+    "category": "approval",
+    "why": "Project rule: commit, push and deploy only when the owner says push."
+  },
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

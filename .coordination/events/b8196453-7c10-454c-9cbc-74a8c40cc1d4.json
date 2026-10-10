@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "b8196453-7c10-454c-9cbc-74a8c40cc1d4",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "1537bb8d-7cca-4483-a953-2054327cb366",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Coding model guarded load and speed check",
+  "scope": "Take over from the private Windows handover: independently re-verify the downloaded coding weights, then load them once on the existing portable runtime with partial GPU offload and memory guards and record load feasibility, memory and speed on a generic non-CPIN coding prompt. No CPIN inference, downloads, network service, paid calls, publication or code changes; private receipts stay outside GitHub.",
+  "criteria": [
+    "Take over from the private Windows handover: independently re-verify the downloaded coding weights, then load them once on the existing portable runtime with partial GPU offload and memory guards and record load feasibility, memory and speed on a generic non-CPIN coding prompt. No CPIN inference, downloads, network service, paid calls, publication or code changes; private receipts stay outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "blocked",
+  "summary": "Coding weights independently re-hashed and match the pinned digest. Two single guarded load attempts (32 and 36 GPU layers) were both stopped by the available-RAM guard during loading with about 4 GiB RAM free; no output generated, so speed and coding quality remain unmeasured. Both stopped attempts preserved privately. CPIN trial task untouched and still blocked.",
+  "occurred_at": "2026-10-10T15:05:58.323Z",
+  "parent_event_ids": [
+    "2d6fd79e-a80f-483c-b3b8-4cfb615d26dc"
+  ],
+  "remaining": [
+    "Measure load and speed once memory is available or a smaller coding model is chosen."
+  ],
+  "blockers": [],
+  "evidence": [],
+  "user_input": {
+    "action": "Choose: retry the 14B load with the other desktop apps closed, or approve downloading a smaller coding model that fits the graphics card.",
+    "category": "decision",
+    "why": "The 14B weights need about 10 GiB across graphics memory and RAM; only about 11 GiB was free with other apps open, and closing apps or a new download is the owner’s call."
+  },
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

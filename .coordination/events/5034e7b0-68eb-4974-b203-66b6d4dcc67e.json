@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "5034e7b0-68eb-4974-b203-66b6d4dcc67e",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "bbc6c75b-88fe-4f5e-9425-8cd717208dc2",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "14B coding weights: layer split and coding check",
+  "scope": "Owner request: try different graphics-card layer splits for the held 14B coding weights under memory guards, then run the same eight generic non-CPIN Python tasks once each at the best split and score by executing held tests. No retries, CPIN inference, downloads, network service, publication or repository code changes; private receipts stay outside GitHub.",
+  "criteria": [
+    "Owner request: try different graphics-card layer splits for the held 14B coding weights under memory guards, then run the same eight generic non-CPIN Python tasks once each at the best split and score by executing held tests. No retries, CPIN inference, downloads, network service, publication or repository code changes; private receipts stay outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "done",
+  "summary": "14B coding weights load at every tested split with other desktop apps closed; best about 28 graphics-card layers at 6.8 tokens per second. Eight-task coding check at that split: 7 of 8 passed on held executed tests, one wrong answer. Same tasks on the 8B with reasoning: 4 of 8, the other four unanswered at the reasoning cap. Small single-run indication, not a benchmark. Private receipt held locally.",
+  "occurred_at": "2026-10-10T16:07:00.800Z",
+  "parent_event_ids": [
+    "a9db8a01-9ab8-4204-b140-91d010e07cd5"
+  ],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

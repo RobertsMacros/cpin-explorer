@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "295febcc-ab9a-4444-b426-9923f8b8a694",
+  "actor_id": "60d3b2a1-df8a-4890-8e65-dc76ab44be56",
+  "task_id": "d5684398-abd3-4413-a851-1724b1b636a1",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Publish CPIN Claude Code handover",
+  "scope": "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks.",
+  "criteria": [
+    "Publish outstanding safe CPIN project changes and current Claude Code handover to GitHub main, preserving private local evidence and accurately recording remaining checks."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "Publish CPIN Claude Code handover",
+  "occurred_at": "2026-10-10T14:48:46.683Z",
+  "parent_event_ids": [],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "77204051a00f9ea359f37003f0deda804ae098d2",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

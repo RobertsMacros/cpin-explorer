@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "7e859633-366d-4f35-84c9-65fdd673b535",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Reasoning-enabled retry of the private local-model trial",
+  "scope": "Owner extends the private local-model test: rerun the same twelve frozen cases once on the held Qwen3-8B primary with reasoning enabled, apply the existing independent evidence gate unchanged, score against the separate calibration key only after generation, and inspect every answer. No reviewer model, spot checking, automatic retries, paid calls, source retrieval, downloads, public flags, deployment or bulk run; earlier failed evidence retained.",
+  "criteria": [
+    "Owner extends the private local-model test: rerun the same twelve frozen cases once on the held Qwen3-8B primary with reasoning enabled, apply the existing independent evidence gate unchanged, score against the separate calibration key only after generation, and inspect every answer. No reviewer model, spot checking, automatic retries, paid calls, source retrieval, downloads, public flags, deployment or bulk run; earlier failed evidence retained."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "status": "blocked",
+  "summary": "Reasoning-enabled retry run once on all twelve frozen cases; every answer gated with the unchanged gate, scored after generation and inspected. Calibration 9/12 (10/12 without reasoning); structural gate 8/12 (6/12 without). The missed negation and the indicator confusion persist, a new abstention error appeared, and one wrong answer passes the gate. Earlier trials retained. Follows local trial event 2ebe6398.",
+  "occurred_at": "2026-10-10T15:35:28.922Z",
+  "parent_event_ids": [
+    "794cac6c-54e7-49a1-84a1-ce5a4e4815fa"
+  ],
+  "remaining": [
+    "Local-model suitability gate not met. Any further experiment needs a new scoped test contract from the owner."
+  ],
+  "blockers": [
+    "Unchanged reasoning failures with reasoning enabled; structural gate cannot detect a wrong answer built from exact quotes."
+  ],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

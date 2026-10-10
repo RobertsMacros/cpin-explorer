@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "9e17c7b0-3a06-4df4-ae38-c73867b0269e",
+  "actor_id": "362be669-4a55-47b0-8eba-940085064fac",
+  "task_id": "1537bb8d-7cca-4483-a953-2054327cb366",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Coding model guarded load and speed check",
+  "scope": "Take over from the private Windows handover: independently re-verify the downloaded coding weights, then load them once on the existing portable runtime with partial GPU offload and memory guards and record load feasibility, memory and speed on a generic non-CPIN coding prompt. No CPIN inference, downloads, network service, paid calls, publication or code changes; private receipts stay outside GitHub.",
+  "criteria": [
+    "Take over from the private Windows handover: independently re-verify the downloaded coding weights, then load them once on the existing portable runtime with partial GPU offload and memory guards and record load feasibility, memory and speed on a generic non-CPIN coding prompt. No CPIN inference, downloads, network service, paid calls, publication or code changes; private receipts stay outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "done",
+  "summary": "Owner chose a retry with other desktop apps closed. Third guarded attempt completed: 14B coding weights loaded with 32 GPU layers and generated 257 tokens at 5.4 tokens per second; lowest available RAM about 1.9 GiB; part of the graphics allocation spilled into shared memory. Two earlier stopped attempts preserved. Single generic prompt only, not a coding benchmark; its one answer contained a self-contradicting test. Private receipt held locally; no repository code, CPIN inference or publication.",
+  "occurred_at": "2026-10-10T15:12:24.730Z",
+  "parent_event_ids": [
+    "b8196453-7c10-454c-9cbc-74a8c40cc1d4"
+  ],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "21b6c29839cf5f6c1d289877a67a27770cc43bd5",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}
