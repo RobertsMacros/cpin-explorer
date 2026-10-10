@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "event_id": "2ebe6398-533f-43de-9c1e-5619210ba54c",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29",
+  "repository": "RobertsMacros/cpin-explorer",
+  "actor_id": "24beb60e-1a13-41f4-8a3a-9ef98bfd2549",
+  "parent_event_ids": [
+    "84cedbd9-5544-4608-9344-681afb0cd30b"
+  ],
+  "status": "blocked",
+  "title": "Full stronger-model test evaluated; suitability remains blocked",
+  "scope": "User extends private local-model test: stronger primary, independently launched robust programmatic gate, constrained evidence references and different model reviewing every test result. No spot checking, paid calls, source retrieval, public flags, deployment or bulk run.",
+  "roadmap_id": null,
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "occurred_at": "2026-10-10T12:05:08.796679+00:00",
+  "summary": "All12 cases generated and reviewed by two pinned model families;24 completed answers independently validated and manually inspected.339 gate checks pass. Both models miss a negation and conflate two indicators; reviewer approves the errors. No expansion. Two stopped resource attempts retained; nonmapped GPU loading resolves observed RAM pressure.",
+  "evidence": [
+    {
+      "kind": "test",
+      "ref": "private full-coverage evaluation receipt (unpublished)",
+      "result": "Primary10/12 calibration,6/12 structural passes; reviewer10/12 calibration,5/12 structural passes. Every case covered, no sampling. Independent gate worked; semantic suitability failed."
+    }
+  ],
+  "remaining": [
+    "Local-model suitability gate not met. Any further experiment must retain failed evidence and obtain a new scoped test contract."
+  ],
+  "blockers": [
+    "Primary reasoning failures and reviewer anchoring prevent trustworthy expansion."
+  ]
+}

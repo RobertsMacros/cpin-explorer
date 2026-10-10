@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "protocol": "project-coordination/v1",
+  "event_id": "b5b11709-d296-4a6e-b799-bda4ba351a5d",
+  "actor_id": "b56bfb11-7384-469a-a233-292506bb8f8b",
+  "task_id": "90f1c6dd-d006-4a54-b9d1-1a24f2b8a413",
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Coding model download and Claude handover",
+  "scope": "Download and verify free coding model locally; reconcile and publish safe CPIN repository handover; retain all private trial data outside GitHub.",
+  "criteria": [
+    "Download and verify free coding model locally; reconcile and publish safe CPIN repository handover; retain all private trial data outside GitHub."
+  ],
+  "roadmap_id": null,
+  "milestone_ids": [],
+  "status": "working",
+  "summary": "Coding model download and Claude handover",
+  "occurred_at": "2026-10-10T14:29:53.720Z",
+  "parent_event_ids": [],
+  "remaining": [],
+  "blockers": [],
+  "evidence": [],
+  "user_input": null,
+  "work_ref": "aab555e0b36bfeb8f54d78c4fdb92b99686269ec",
+  "work_branch": "main",
+  "implementation_published": false,
+  "reporter_version": "2026-10-10.2",
+  "diagnostic": false
+}

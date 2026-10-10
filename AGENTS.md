@@ -95,3 +95,9 @@ It now lives in `~/Developer/cpin-explorer`. `./cpin` (puts `src/` on the path i
     `ls -d "$(getconf DARWIN_USER_TEMP_DIR)"cpin-* 2>/dev/null | wc -l` should print 0.
 
 Front-end checks: `cd web && npm test` (projection maths and country picking against real borders).
+
+<!-- project-coordination:v1:start -->
+## Project coordination
+
+Read [.coordination/README.md](.coordination/README.md) at the start of substantive work. Leave immutable JSON breadcrumbs under `.coordination/events/` for material progress, blockers and verified completion. Reuse the exact incoming task/request and roadmap milestone IDs across chats. Write `done` only with evidence for the entire recorded scope; delivery, partial work and unverified deployment/device checks are not completion. Preserve other actors' records, existing project rules, consent, privacy and publication limits. This applies to Codex, Claude and other project agents; no Page connection or chat-to-chat message is needed.
+<!-- project-coordination:v1:end -->

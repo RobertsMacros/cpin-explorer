@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence": [
+    {
+      "result": "Eight cases and six held-evidence uses verified locally.",
+      "kind": "test",
+      "ref": "verify_packet.py"
+    }
+  ],
+  "actor_id": "0ba6b3bc-6adf-4c02-93ad-b0d2ac24b38b",
+  "roadmap_id": null,
+  "blockers": [],
+  "status": "working",
+  "remaining": [
+    "Verify weights; adapt Windows runner; execute once; inspect and score outputs"
+  ],
+  "occurred_at": "2026-10-10T09:54:33.9355234Z",
+  "parent_event_ids": [
+    "f8f3569a-82a1-424b-bdfa-6ac0b0f7b101"
+  ],
+  "scope": "Run and validate one frozen eight-case local-model trial; private only, no expansion or publication.",
+  "event_id": "0c997134-fa01-44cd-89eb-e96f8d4b3921",
+  "milestone_ids": [
+    "cpin-local"
+  ],
+  "repository": "RobertsMacros/cpin-explorer",
+  "title": "Private eight-case local-model trial",
+  "summary": "Owner supplied Mac stopping report confirming zero inference and frozen packet. Packet verifier passes. CPU-only portable llama.cpp b11146 selected for observed 16 GiB Windows host; data-weight download in progress.",
+  "task_id": "c68a14fe-62cd-4eb2-b229-934e9ab96c29"
+}

@@ -270,6 +270,13 @@ mark.hl:focus-visible { outline: 2px solid var(--blue); outline-offset: 1px; }
 .seltool.is-in { animation: tool-in var(--t) var(--ease) both; }
 .seltool.is-out { animation: tool-out var(--t-fast) var(--ease) both; pointer-events: none; }
 .seltool.is-below { transform-origin: var(--ox, 50%) 0; }
+.seltool.is-windows-edge {
+  position: fixed;
+  top: auto;
+  bottom: max(.75rem, env(safe-area-inset-bottom));
+  transform-origin: 50% 100%;
+}
+.seltool.is-windows-edge::after { display: none; }
 @keyframes tool-in { from { opacity: 0; transform: translateY(var(--tool-dy, .3rem)) scale(.96); filter: blur(3px); } }
 @keyframes tool-out { to { opacity: 0; transform: translateY(var(--tool-dy, .3rem)) scale(.96); filter: blur(3px); } }
 .seltool::after { content: ""; position: absolute; left: var(--ox, 50%); top: 100%; width: 1px; height: .55rem; background: var(--blue); }
