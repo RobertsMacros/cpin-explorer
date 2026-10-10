@@ -8,6 +8,16 @@ Observed PC: Ryzen 5 3600, approximately 16 GiB RAM, Radeon RX 5700 with 8176 Mi
 
 The owner has authorised downloading Qwen2.5-Coder-14B-Instruct Q4_K_M for future coding work. This does not authorise another CPIN inference trial. Download completion and hash verification must be read from its private receipt. Coding performance is unmeasured.
 
+## Later the same day (Claude Code)
+
+**Reasoning-enabled retry.** At the owner's request the same twelve frozen cases were run once on Qwen3-8B with reasoning enabled, using the frozen prompts with only the reasoning-off switches removed, the same gate unchanged and the key read only after generation. Calibration matched 9/12 (10/12 without reasoning); the structural gate accepted 8/12 (6/12 without). The missed negation and the confusion of two statistical indicators both persisted, and a new abstention error appeared. One wrong answer passed the gate because every quotation in it was exact: the gate checks quotation integrity, not reasoning. Suitability remains blocked. One sampled run per case; not an accuracy estimate.
+
+**Coding weights.** Qwen2.5-Coder-14B Q4_K_M was re-hashed and matches its pinned digest. It did not load with other desktop apps open (two attempts stopped by the available-RAM guard). With them closed it loads; the best measured split was about 28 graphics-card layers at 6.8 tokens per second, and more layers on the card were slower. On eight small generic Python tasks scored by executing held tests it passed 7. Qwen3-8B with reasoning passed 4 of the same 8 at 25–37 tokens per second and gave no answer on the other four, which hit the reasoning cap. These are single runs on small tasks, not a benchmark, and say nothing about CPIN use.
+
+**Related mechanical finding.** The no-model quotation screen skipped near-match alignment for any quotation containing an ellipsis; see branch `claude/quotation-edge-ellipsis`.
+
+The private trial folder sits inside the Codex desktop app's own storage on the Windows PC and would be removed if that app were uninstalled or reset.
+
 Carry CPIN trial task `c68a14fe-62cd-4eb2-b229-934e9ab96c29` and milestone `cpin-local`. Its latest local trial event is `2ebe6398-533f-43de-9c1e-5619210ba54c`, blocked. Use the shared reporting protocol before further work. No source retrieval, public AI flags, deployment or scheduled service was performed by these trials.
 
 The earlier preparation notes below are historical; their statements about unobserved Windows hardware and no completed inference have been superseded by this update.
