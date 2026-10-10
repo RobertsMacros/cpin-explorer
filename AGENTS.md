@@ -1,7 +1,7 @@
 # cpin-explorer: rules for agents
 
 A verbatim, versioned mirror of the Home Office's Country Policy and Information Notes (CPINs) on
-GOV.UK, built in three parts: the scraper (`src/cpin/`, Python), the site (not built yet), and the
+GOV.UK, built in three parts: the scraper (`src/cpin/`, Python), the site (`prototypes/`, built and deployed from `web/`), and the
 comparison layer (timeline and inline redlines). UK English throughout.
 
 ## Commands
@@ -18,6 +18,10 @@ comparison layer (timeline and inline redlines). UK English throughout.
 ./cpin status
 ```
 Setup: `python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"`, and `cd web && npm ci`.
+On Windows the same tests run with `python -m venv .venv`, `.venv\Scripts\python -m pip install -e ".[dev]"` and
+`set PYTHONUTF8=1` before `.venv\Scripts\python -m pytest -q` (files are read as UTF-8 only in that mode). The front-end
+tests need Node, which the Windows PC does not have installed. Private source evidence and generated site data are
+not in a fresh checkout on any machine.
 **Keep the repo out of iCloud-synced folders** (Documents, Desktop): with "Optimise Mac Storage", iCloud
 evicts files (including `.venv` and `node_modules`) and every read then hangs on a download; it also set a
 `hidden` flag on the editable install's `.pth` file, so Python 3.13+ ignored it ("No module named cpin").
