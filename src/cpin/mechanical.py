@@ -219,10 +219,11 @@ def percent_sign(text):
     return re.sub(r'(?<=\d)\s*(?:per cent|percent)\b', '%', text)
 
 
-def trim_window(words, window, forward, reverse=False):
+def trim_window(words, window, forward, reverse=False, ran_on=None):
     """Cut a one-anchor source window back to the words the quotation aligns with."""
     if not forward:
         return trim_window(words[::-1], window[::-1], True, reverse=True)[::-1]
+    ran_on = [] if ran_on is None else ran_on
     tag, a, b, c, d = SequenceMatcher(None, words, window, autojunk=False).get_opcodes()[-1]
     if tag == 'insert':
         return window[:c]
@@ -246,6 +247,7 @@ def trim_window(words, window, forward, reverse=False):
     if not reverse and c < stop and words[b - 1][-1:] in '.!?':
         while stop < d and window[stop - 1][-1:] not in '.!?':
             stop += 1
+            ran_on.append(window[stop - 1])
     return window[:stop]
 
 
@@ -309,9 +311,13 @@ def near_quote(text, quote):
                     break
                 span = text[pos:pos + reach] if forward else text[max(0, pos + len(anchor) - reach):pos + len(anchor)]
                 window = span.split()[:len(words) + 6] if forward else span.split()[-(len(words) + 6):]
-                kept = trim_window(words, window, forward)
+                ran_on = []
+                kept = trim_window(words, window, forward, ran_on=ran_on)
                 if len(kept) >= 8 and consider(' '.join(kept), pos):
                     return None
+                if ran_on and ' '.join(kept) in candidates:
+                    # The quotation closes its sentence here; the source's sentence continues.
+                    candidates[' '.join(kept)]['sentenceRunsOn'] = ' '.join(ran_on)
                 pos = text.find(anchor, pos + len(anchor))
     ranked = sorted(candidates.values(), key=lambda x: x['similarity'], reverse=True)
     if not ranked or (len(ranked) > 1 and ranked[0]['similarity'] - ranked[1]['similarity'] < .03):

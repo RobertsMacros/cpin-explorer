@@ -84,6 +84,8 @@ def test_a_figure_cut_off_at_the_quotations_full_stop_is_reported():
     stem = 'Officials said that most of the displaced families from the northern districts were still living in shelters and that the total was '
     for tail, rule in (('4 000.', 'changed-number'), ('4 million.', 'changed-unit'), ('4 per cent.', 'changed-unit'), ('4 at most.', 'changed-qualifier')):
         assert rule in candidates(stem + '4.', stem + tail + ' Next came 99 more.'), tail
+    cut = m.near_quote(m.normal(stem + '4 at most. Next came 99 more.'), stem + '4.')
+    assert cut['sentenceRunsOn'] == 'at most.'
     # A quotation that simply stops mid-sentence, without a full stop of its own, claims nothing about what follows.
     assert candidates(stem + '4', stem + '4 at most. Next came 99 more.') <= {'quotation-near-match'}
 

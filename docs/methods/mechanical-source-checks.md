@@ -170,7 +170,10 @@ Near-quote alignment runs whenever a quotation's exact wording is not located:
   closes with its own full stop while the source's sentence runs on
   ("… the total was 4." against "4 million.", "did." against "did not."),
   the source is read to its own full stop, because the words cut off are what
-  is being looked for. A quotation that stops without a full stop claims
+  is being looked for; the result records the words cut off (`sentenceRunsOn`),
+  so a reviewer can tell an early full stop from a changed quotation. In generated
+  faithful quotations ending this way roughly half raised a candidate, which is
+  the cost of not missing the other kind. A quotation that stops without a full stop claims
   nothing about what follows. The 0.90 similarity floor and the requirement
   for one clearly best alignment are unchanged.
 - "84 percent", "84 per cent" and "84%" are the same unit. A figure that loses
